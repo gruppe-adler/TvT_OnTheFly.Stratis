@@ -1,7 +1,7 @@
 hintSilent "Spawnpunkt auswählen.";
 openMap [true,false];
 if (side player == east) then {
-onMapSingleClick "[_pos] call teleportOpforGroup; onMapSingleClick ''; true";
+onMapSingleClick "[_pos] call teleportOpforGroup; [_pos] call createMarkerWest; onMapSingleClick ''; true";
 } else {
 onMapSingleClick "[_pos] call teleportBluforGroup; onMapSingleClick ''; true";
 };
@@ -19,13 +19,14 @@ teleportOpforGroup = {
 		_inner_marker setMarkerTypeLocal "hd_objective";
 		_inner_marker setMarkerColorLocal "ColorWEST";
 	};
+};
 
-	if (side player == west) then {
+createMarkerWest = {
+if (side player == west) then {
 		_inner_marker = createMarkerLocal ["blufor_marker", _pos];
 		_inner_marker setMarkerTypeLocal "hd_objective";
-		_inner_marker setMarkerColorLocal "ColorWEST";
+		_inner_marker setMarkerColorLocal "ColorEAST";
 	};
-
 };
 
 teleportBluforGroup = {
