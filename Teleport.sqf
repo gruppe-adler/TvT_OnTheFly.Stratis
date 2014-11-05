@@ -8,9 +8,9 @@ teleportOpforGroup = {
 	_pos = _this select 0;
 
 	if (side player == west && !OPFOR_TELEPORTED) then {
-		_inner_marker = createMarkerLocal ["blufor_marker", _pos];
-		_inner_marker setMarkerTypeLocal "hd_objective";
-		_inner_marker setMarkerColorLocal "ColorEAST";
+		_blufor_marker = createMarkerLocal ["blufor_marker", _pos];
+		_blufor_marker setMarkerTypeLocal "hd_objective";
+		_blufor_marker setMarkerColorLocal "ColorEAST";
 	};
 	
 	if (side player == east && !OPFOR_TELEPORTED) then {
@@ -20,13 +20,10 @@ teleportOpforGroup = {
 		OPFOR_TELEPORTED = TRUE;
 		publicVariable "OPFOR_TELEPORTED";
 
-		
-		_inner_marker = createMarkerLocal ["opfor_marker", _pos];
-		_inner_marker setMarkerTypeLocal "hd_objective";
-		_inner_marker setMarkerColorLocal "ColorWEST";
-		
+		_opfor_marker = createMarkerLocal ["opfor_marker", _pos];
+		_opfor_marker setMarkerTypeLocal "hd_objective";
+		_opfor_marker setMarkerColorLocal "ColorWEST";
 	};
-	
 
 	if (side player == west && OPFOR_TELEPORTED) then {
 	
@@ -34,9 +31,8 @@ teleportOpforGroup = {
 		openMap false;
 		BLUFOR_TELEPORTED = TRUE;
 		publicVariable "BLUFOR_TELEPORTED";
-		_inner_marker = createMarkerLocal ["blufor_marker_start", _pos];
-		_inner_marker setMarkerTypeLocal "hd_start";
-		_inner_marker setMarkerColorLocal "ColorWEST";
+		_blufor_marker_start = createMarkerLocal ["blufor_marker_start", _pos];
+		_blufor_marker_start setMarkerTypeLocal "hd_start";
+		_blufor_marker_start setMarkerColorLocal "ColorWEST";
 	};
-
 };
