@@ -4,7 +4,7 @@ overviewText="Aufständische gegen Bundeswehr"; //appears in overview and loadin
 onLoadName="TvT_OnTheFly"; //mission name for loading screen only
 overviewPicture=""; //mission picture for loading screen only
 onLoadMissionTime = True;
-respawn=3;
+respawn=1;
 respawnDelay = 0;
 disabledAI = 1;
 
