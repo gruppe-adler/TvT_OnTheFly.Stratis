@@ -7,4 +7,4 @@ publicVariable "BLUFOR_SPAWNED";
 OPFOR_SPAWNEND = FALSE;
 publicVariable "OPFOR_SPAWNEND";
 
-opfor_teleport = opfor_teamlead addAction["Teleport","teleport.sqf", opfor_teleport];
+opfor_teleport = opfor_teamlead addAction["Teleport","teleport.sqf"];

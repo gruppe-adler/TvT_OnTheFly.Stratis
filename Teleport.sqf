@@ -1,13 +1,23 @@
-teleportName = this select 0;
-
 player globalChat "Spawnpunkt auswählen.";
 openMap [true,false];
-onMapSingleClick "[teleportName] call teleportGroup; onMapSingleClick ''; true";
+if (side player == east) then {
+onMapSingleClick "[_pos] call teleportOpforGroup; onMapSingleClick ''; true";
+} else {
+onMapSingleClick "[_pos] call teleportBluforGroup; onMapSingleClick ''; true";
+};
 
-teleportGroup = {
-_teleportName2 = this select 0;
-{ _x setPos _pos } forEach units group player;
-player removeAction _teleportName2;
-openMap false;
-blufor_teleport = blufor_teamlead addAction["Teleport","teleport.sqf", blufor_teleport];
+
+teleportOpforGroup = {
+_pos = _this select 0;
+	{_x setPos _pos } forEach units group player;
+	player removeAction opfor_teleport;
+	openMap false;
+	blufor_teleport = blufor_teamlead addAction["Teleport","teleport.sqf", blufor_teleport];
+};
+
+teleportBluforGroup = {
+_pos = _this select 0;
+	{_x setPos _pos } forEach units group player;
+	player removeAction blufor_teleport;
+	openMap false;
 };
