@@ -20,6 +20,23 @@ teleportOpforGroup = {
 		_blufor_marker = createMarker ["blufor_marker", _pos];
 		_blufor_marker setMarkerType "hd_objective";
 		_blufor_marker setMarkerColor "ColorEAST";
+
+
+		createMarkerLocal [_inner_circle, [0,0]];
+
+		_inner_circle setMarkerShapeLocal "ELLIPSE";
+		_inner_circle setMarkerColorLocal "ColorBlack";
+		_inner_circle setMarkerSizeLocal [3000,3000];
+		_inner_circle setMarkerTypeLocal "Ellipse";
+	
+		_outer_circle setMarkerShapeLocal "ELLIPSE";
+		_outer_circle setMarkerColorLocal "ColorBlack";
+		_outer_circle setMarkerSizeLocal [6000,6000];
+		_outer_circle setMarkerTypeLocal "Ellipse";
+		
+		_blufor_marker = createMarker ["blufor_marker", _pos];
+		_blufor_marker setMarkerType "hd_objective";
+		_blufor_marker setMarkerColor "ColorEAST";
 	};
 	
 	if (side player == east && !OPFOR_TELEPORTED) then {
@@ -40,6 +57,9 @@ teleportOpforGroup = {
 	if (side player == west && OPFOR_TELEPORTED) then {
 	
 		{_x setPos _pos } forEach units group player;
+		_emptyPosition = _pos findEmptyPosition [0,100];
+		blufor_vehicle setPos _emptyPosition;
+
 		openMap false;
 		BLUFOR_TELEPORTED = TRUE;
 		publicVariable "BLUFOR_TELEPORTED";
