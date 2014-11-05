@@ -8,16 +8,17 @@ onMapSingleClick "[_pos] call teleportBluforGroup; onMapSingleClick ''; true";
 
 
 teleportOpforGroup = {
-_pos = _this select 0;
+	_pos = _this select 0;
 	{_x setPos _pos } forEach units group player;
-	opfor_teamlead removeAction opfor_teleport;
 	openMap false;
-	blufor_teleport = blufor_teamlead addAction["Teleport","teleport.sqf", blufor_teleport];
+	OPFOR_TELEPORTED = TRUE;
+	publicVariable "OPFOR_TELEPORTED";
 };
 
 teleportBluforGroup = {
-_pos = _this select 0;
+	_pos = _this select 0;
 	{_x setPos _pos } forEach units group player;
-	blufor_teamlead removeAction blufor_teleport;
 	openMap false;
+	BLUFOR_TELEPORTED = TRUE;
+	publicVariable "BLUFOR_TELEPORTED";
 };
