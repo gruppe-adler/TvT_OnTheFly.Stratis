@@ -23,6 +23,6 @@ plank_deploy_fortData = [
 ["Razor Wire",                          "Land_Razorwire_F",                     6,              0,                  360,            {}],
 ["Concrete wall long",                  "Land_CncWall4_F",                      8,              0,                  360,            {}],
 ["Bunker Tower",                        "Land_BagBunker_Tower_F",               10,             0,                  360,            {}],
-["Round Sandbag fence",					"Land_BagFence_Round_F",			   	4,				0,					360,			{}],
-["CamoNet"                              "CamoNet_OPFOR_big_F" 					4 				0 					360 			{}]
+["Round Sandbag fence",					"Land_BagFence_Round_F",			   	4,				180,				360,			{}],
+["CamoNet",                             "CamoNet_OPFOR_big_F", 					10, 			0, 					360, 			{}]
 ];
