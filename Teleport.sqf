@@ -13,6 +13,19 @@ teleportOpforGroup = {
 	openMap false;
 	OPFOR_TELEPORTED = TRUE;
 	publicVariable "OPFOR_TELEPORTED";
+
+	if (side player == east) then { 
+		_inner_marker = createMarkerLocal ["opfor_marker", _pos];
+		_inner_marker setMarkerTypeLocal "hd_objective";
+		_inner_marker setMarkerColorLocal "ColorWEST";
+	};
+
+	if (side player == west) then {
+		_inner_marker = createMarkerLocal ["blufor_marker", _pos];
+		_inner_marker setMarkerTypeLocal "hd_objective";
+		_inner_marker setMarkerColorLocal "ColorWEST";
+	};
+
 };
 
 teleportBluforGroup = {
@@ -21,4 +34,11 @@ teleportBluforGroup = {
 	openMap false;
 	BLUFOR_TELEPORTED = TRUE;
 	publicVariable "BLUFOR_TELEPORTED";
+
+	if (side player == west) then {
+	_inner_marker = createMarkerLocal ["blufor_marker_start", _pos];
+	_inner_marker setMarkerTypeLocal "hd_start";
+	_inner_marker setMarkerColorLocal "ColorWEST";
+	};
+
 };
