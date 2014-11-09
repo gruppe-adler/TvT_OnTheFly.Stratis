@@ -8,6 +8,7 @@ blufor_spawnDistanceMax = 5000;
 
 // win conditions
 winConditionBlufor = ({alive _x && side _x == east} count playableUnits)== 0;
+winConditionOpfor = ({alive _x && side _x == west} count playableUnits)== 0;
 
 opfor_teleport = opfor_teamlead addAction["Teleport",{[[[false], "teleport.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && !OPFOR_TELEPORTED"];
 blufor_teleport = blufor_teamlead addAction["Teleport",{[[[false], "teleport.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && !BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
@@ -22,3 +23,27 @@ if (side player == east) then
 };
 
 if (isServer) then { setDate [2035, 6, 24, (paramsArray select 0), 1]; };	//Zeit
+
+[] spawn {
+	
+	while{true} do {
+    sleep 10;
+    if (winConditionBlufor) then {
+       forceEnd;
+   	 };
+	};
+
+
+};
+
+[] spawn {
+	
+	while{true} do {
+    sleep 10;
+    if (winConditionOpfor) then {
+       forceEnd;
+   	 };
+	};
+
+
+};
