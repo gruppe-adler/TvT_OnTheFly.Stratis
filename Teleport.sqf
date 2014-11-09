@@ -42,7 +42,8 @@ teleportOpforGroup = {
 	if (side player == east && !OPFOR_TELEPORTED) then {
 
 		
-		{_x setPos _pos } forEach units group player;
+		{_emptyPosition_unit = _pos findEmptyPosition [0,50];
+		_x setPos _emptyPosition_unit; sleep 0.1;  } forEach units group player;
 		openMap false;
 		
 
@@ -56,9 +57,15 @@ teleportOpforGroup = {
 
 	if (side player == west && OPFOR_TELEPORTED) then {
 	
-		{_x setPos _pos } forEach units group player;
-		_emptyPosition = _pos findEmptyPosition [0,100];
-		blufor_vehicle setPos _emptyPosition;
+		// entfernung marker zu spawnpunkt zu klein oder groß?
+		if ((_pos distance getMarkerPos "opfor_marker") < 3000 || (_pos distance getMarkerPos "opfor_marker") > 3000) exitWith {hintSilent "Too close or too far away from Objective."};
+
+		// teleport und gucken, ob posi frei ist
+		{_emptyPosition_unit = _pos findEmptyPosition [0,50];
+		_x setPos _emptyPosition_unit; sleep 0.1; } forEach units group player;
+		sleep 0.5;
+		_emptyPosition_vehicle = _pos findEmptyPosition [0,100,"B_Truck_01_covered_F"];
+		blufor_vehicle setPos _emptyPosition_vehicle;
 
 		openMap false;
 		BLUFOR_TELEPORTED = TRUE;
