@@ -22,17 +22,3 @@ if (side player == east) then
 };
 
 if (isServer) then { setDate [2035, 6, 24, (paramsArray select 0), 1]; };	//Zeit
-
-[] spawn 
-     {
-         exitloop = false;
-         sleep 1;
-         
-        switch (winConditionBlufor) do {
-       	exitloop = true;   			
-		};
-
-		
-
-		if (exitloop) exitWith { forceEnd; };
- };

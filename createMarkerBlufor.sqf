@@ -11,14 +11,14 @@ _inner_marker setMarkerTypeLocal "mil_unknown";
 _inner_marker setMarkerColorLocal "ColorEast";
 _inner_marker setMarkerShapeLocal "ELLIPSE";
 _inner_marker setMarkerSizeLocal [blufor_spawnDistanceMin, blufor_spawnDistanceMin];
-_inner_marker setMarkerBrush "Vertical";
+_inner_marker setMarkerBrushLocal "Vertical";
 
 _outer_marker = createMarkerLocal ["outer_marker", _pos];
 _outer_marker setMarkerTypeLocal "mil_unknown";
 _outer_marker setMarkerColorLocal "ColorEast";
 _outer_marker setMarkerShapeLocal "ELLIPSE";
 _outer_marker setMarkerSizeLocal [blufor_spawnDistanceMax, blufor_spawnDistanceMax];
-_outer_marker setMarkerBrush "Border";
+_outer_marker setMarkerBrushLocal "Border";
 
 
 []spawn {
