@@ -18,17 +18,19 @@ teleportOpforGroup = {
 
 	if (side player == west && !OPFOR_TELEPORTED) then {
 
-		_inner_circle = createMarker ["inner_circle", _pos];
+
+		createMarkerLocal [_inner_circle, _pos];
 		_inner_circle setMarkerShapeLocal "ELLIPSE";
 		_inner_circle setMarkerColorLocal "ColorBlack";
-		_inner_circle setMarkerSizeLocal [1000,1000];
+		_inner_circle setMarkerSizeLocal [blufor_spawnDistanceMin,blufor_spawnDistanceMin];
 		_inner_circle setMarkerTypeLocal "Ellipse";
 		_inner_circle setMarkerBrushLocal "SolidBorder";
+		_varname setMarkerTextLocal "Hostage cellphone signal";
 	
-		_outer_circle = createMarker ["outer_circle", _pos];
+		createMarkerLocal [_outer_circle, _pos];
 		_outer_circle setMarkerShapeLocal "ELLIPSE";
 		_outer_circle setMarkerColorLocal "ColorBlack";
-		_outer_circle setMarkerSizeLocal [5000,5000];
+		_outer_circle setMarkerSizeLocal [blufor_spawnDistanceMax,blufor_spawnDistanceMax];
 		_outer_circle setMarkerTypeLocal "Ellipse";
 		_outer_circle setMarkerBrushLocal "SolidBorder";
 		
@@ -56,8 +58,9 @@ teleportOpforGroup = {
 	if (side player == west && OPFOR_TELEPORTED) then {
 	
 		// entfernung marker zu spawnpunkt zu klein oder groß?
-		if (_pos distance (getMarkerPos "opfor_marker") < blufor_spawnDistanceMin) exitWith {hintSilent "Too close from Objective."};
-		if (_pos distance (getMarkerPos "opfor_marker") > blufor_spawnDistanceMax) exitWith {hintSilent "Too far away from Objective."};
+		_distance = _pos distance (getMarkerPos "opfor_marker");
+		if (_distance < blufor_spawnDistanceMin) exitWith {hintSilent format ["Too close from Objective (%1 m). Must be at least %2.", _distance, blufor_spawnDistanceMin];};
+		if (_distance > blufor_spawnDistanceMax) exitWith {hintSilent format ["Too far away from Objective (%1 m). Must be at max %2.", _distance, blufor_spawnDistanceMax];};
 
 		// teleport und gucken, ob posi frei ist
 		{_emptyPosition_unit = _pos findEmptyPosition [0,50];
