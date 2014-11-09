@@ -17,22 +17,20 @@ teleportOpforGroup = {
 	_pos = _this select 0;
 
 	if (side player == west && !OPFOR_TELEPORTED) then {
-		_blufor_marker = createMarker ["blufor_marker", _pos];
-		_blufor_marker setMarkerType "hd_objective";
-		_blufor_marker setMarkerColor "ColorEAST";
 
-
-		createMarkerLocal [_inner_circle, [0,0]];
-
+		_inner_circle = createMarker ["inner_circle", _pos];
 		_inner_circle setMarkerShapeLocal "ELLIPSE";
 		_inner_circle setMarkerColorLocal "ColorBlack";
-		_inner_circle setMarkerSizeLocal [3000,3000];
+		_inner_circle setMarkerSizeLocal [1000,1000];
 		_inner_circle setMarkerTypeLocal "Ellipse";
+		_inner_circle setMarkerBrush "Border";
 	
+		_outer_circle = createMarker ["outer_circle", _pos];
 		_outer_circle setMarkerShapeLocal "ELLIPSE";
 		_outer_circle setMarkerColorLocal "ColorBlack";
-		_outer_circle setMarkerSizeLocal [6000,6000];
+		_outer_circle setMarkerSizeLocal [5000,5000];
 		_outer_circle setMarkerTypeLocal "Ellipse";
+		_outer_circle setMarkerBrush "Border";
 		
 		_blufor_marker = createMarker ["blufor_marker", _pos];
 		_blufor_marker setMarkerType "hd_objective";
@@ -58,7 +56,7 @@ teleportOpforGroup = {
 	if (side player == west && OPFOR_TELEPORTED) then {
 	
 		// entfernung marker zu spawnpunkt zu klein oder groß?
-		if ((_pos distance getMarkerPos "opfor_marker") < 3000 || (_pos distance getMarkerPos "opfor_marker") > 3000) exitWith {hintSilent "Too close or too far away from Objective."};
+		if ((_pos distance getMarkerPos "opfor_marker") < 1000 || (_pos distance getMarkerPos "opfor_marker") > 3000) exitWith {hintSilent "Too close or too far away from Objective."};
 
 		// teleport und gucken, ob posi frei ist
 		{_emptyPosition_unit = _pos findEmptyPosition [0,50];
