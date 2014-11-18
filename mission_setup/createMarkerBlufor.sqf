@@ -1,8 +1,9 @@
 _pos = _this select 0;
 
-if (side player != west) exitWith {};
+if (!(side player == west)) exitWith {};
 
-if (bluforMarkerDrawn != nil) exitWith {};
+//if (bluforMarkerDrawn != nil) exitWith {};
+if (bluforMarkerDrawn) exitWith {};
 
 bluforMarkerDrawn = true;
 

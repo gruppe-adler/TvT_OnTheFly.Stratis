@@ -13,7 +13,8 @@ class Mission
 		"task_force_radio_items",
 		"A3_Modules_F_Curator_Environment",
 		"A3_Modules_F_Events",
-		"A3_Soft_F_HEMTT"
+		"A3_Soft_F_HEMTT",
+		"aia_desert_e_config"
 	};
 	addOnsAuto[]=
 	{
@@ -27,7 +28,7 @@ class Mission
 		"task_force_radio_items",
 		"A3_Modules_F_Curator_Environment",
 		"A3_Modules_F_Events",
-		"A3_Soft_F_HEMTT"
+		"aia_desert_e_config"
 	};
 	randomSeed=11087059;
 	class Intel
@@ -57,7 +58,7 @@ class Mission
 				items=8;
 				class Item0
 				{
-					position[]={320.61365,32.7575,292.53406};
+					position[]={1899.2208,44.52737,126.13574};
 					azimut=-44.291058;
 					id=0;
 					side="WEST";
@@ -72,7 +73,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={327.68436,32.317039,292.44656};
+					position[]={1906.2915,44.654751,126.04825};
 					azimut=-44.291058;
 					id=1;
 					side="WEST";
@@ -83,7 +84,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={320.52631,32.714184,285.46344};
+					position[]={1899.1335,44.57769,119.06512};
 					azimut=-44.291058;
 					id=2;
 					side="WEST";
@@ -94,7 +95,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={334.75467,31.753054,292.35907};
+					position[]={1913.3618,44.78207,125.96075};
 					azimut=-44.291058;
 					id=3;
 					side="WEST";
@@ -104,7 +105,7 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={320.43887,32.777611,278.39291};
+					position[]={1899.046,44.538456,111.9946};
 					azimut=-44.291058;
 					id=4;
 					side="WEST";
@@ -114,7 +115,7 @@ class Mission
 				};
 				class Item5
 				{
-					position[]={341.82568,31.166384,292.27188};
+					position[]={1920.4329,44.809547,125.87357};
 					azimut=-44.291058;
 					id=5;
 					side="WEST";
@@ -125,7 +126,7 @@ class Mission
 				};
 				class Item6
 				{
-					position[]={320.35141,32.610809,271.32254};
+					position[]={1898.9586,44.490341,104.92422};
 					azimut=-44.291058;
 					id=6;
 					side="WEST";
@@ -135,7 +136,7 @@ class Mission
 				};
 				class Item7
 				{
-					position[]={348.89594,31.014549,292.1842};
+					position[]={1927.5031,44.804291,125.78589};
 					azimut=-44.291058;
 					id=7;
 					side="WEST";
@@ -636,23 +637,17 @@ class Mission
 			};
 		};
 	};
-	class Vehicles
-	{
-		items=1;
-		class Item0
-		{
-			position[]={335.7981,31.938124,280.07703};
-			azimut=-46.041313;
-			id=21;
-			side="EMPTY";
-			vehicle="B_Truck_01_transport_F";
-			skill=0.60000002;
-			text="blufor_vehicle";
-		};
-	};
 };
 class Intro
 {
+	addOns[]=
+	{
+		"aia_desert_e_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_desert_e_config"
+	};
 	randomSeed=12222512;
 	class Intel
 	{
@@ -673,6 +668,14 @@ class Intro
 };
 class OutroWin
 {
+	addOns[]=
+	{
+		"aia_desert_e_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_desert_e_config"
+	};
 	randomSeed=6553887;
 	class Intel
 	{
@@ -693,6 +696,14 @@ class OutroWin
 };
 class OutroLoose
 {
+	addOns[]=
+	{
+		"aia_desert_e_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_desert_e_config"
+	};
 	randomSeed=2655982;
 	class Intel
 	{

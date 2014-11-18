@@ -14,19 +14,19 @@ onMapSingleClick "[_pos] call teleportOpforGroup; onMapSingleClick ''; true";
 
 
 teleportOpforGroup = {
-	_pos = _this select 0;
+	pos = _this select 0;
 
-	[[[_pos],"createMarkerBlufor.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+	[[[pos],"mission_setup\createMarkerBlufor.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 
 	if (side player == east && !OPFOR_TELEPORTED) then {
 
 		
-		{_emptyPosition_unit = _pos findEmptyPosition [0,50];
+		{_emptyPosition_unit = pos findEmptyPosition [0,50];
 		_x setPos _emptyPosition_unit;  } forEach units group player;
 		openMap false;
 		
 
-		_opfor_marker = createMarker ["opfor_marker", _pos];
+		_opfor_marker = createMarker ["opfor_marker", pos];
 		_opfor_marker setMarkerType "hd_objective";
 		_opfor_marker setMarkerColor "ColorWEST";
 
@@ -37,29 +37,30 @@ teleportOpforGroup = {
 	if (side player == west && OPFOR_TELEPORTED) then {
 	
 		// entfernung marker zu spawnpunkt zu klein oder groß?
-		_distance = _pos distance (getMarkerPos "opfor_marker");
+		_distance = pos distance (getMarkerPos "opfor_marker");
 		if (_distance < blufor_spawnDistanceMin) exitWith {hintSilent format ["Too close to Objective (%1 m). Must be at least %2.", floor(_distance), blufor_spawnDistanceMin];
-		player execVM "teleport.sqf";};
+		player execVM "mission_setup\teleport.sqf";};
 		if (_distance > blufor_spawnDistanceMax) exitWith {hintSilent format ["Too far away from Objective (%1 m). Must be at max %2.", floor(_distance), blufor_spawnDistanceMax];
-		player execVM "teleport.sqf";
+		player execVM "mission_setup\teleport.sqf";
 		};
 
 		// teleport und gucken, ob posi frei ist
 		{
-		_emptyPosition_unit = _pos findEmptyPosition [5,60];
+		_emptyPosition_unit = pos findEmptyPosition [5,60];
 		_x setPos _emptyPosition_unit; 
 		} forEach units group player;
 		
-		_emptyPosition_vehicle = _pos findEmptyPosition [15,60,"B_Truck_01_covered_F"];
+		
+		Choose_Vehicle = blufor_teamlead addAction["<t color=""#93E352"">" + "Choose Vehicle",{[[[pos], "mission_setup\choose_vehicle.sqf",nil,6,false,false,"",true],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"]; 
 		
 
-		blufor_vehicle setPos _emptyPosition_vehicle;
+		
 
 		openMap false;
 		BLUFOR_TELEPORTED = TRUE;
 		publicVariable "BLUFOR_TELEPORTED";
 
-		_blufor_marker_start = createMarkerLocal ["blufor_marker_start", _pos];
+		_blufor_marker_start = createMarkerLocal ["blufor_marker_start", pos];
 		_blufor_marker_start setMarkerTypeLocal "hd_start";
 		_blufor_marker_start setMarkerColorLocal "ColorWEST";
 	};

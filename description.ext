@@ -6,7 +6,7 @@ overviewPicture=""; //mission picture for loading screen only
 onLoadMissionTime = True;
 respawn=1;
 respawnDelay = 0;
-disabledAI = 1;
+disabledAI = 0; //1
 enableDebugConsole = 1;
 
 #include "plank\plank.h"
