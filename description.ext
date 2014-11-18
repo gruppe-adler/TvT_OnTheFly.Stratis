@@ -4,8 +4,8 @@ overviewText="Aufständische gegen Bundeswehr"; //appears in overview and loadin
 onLoadName="TvT_OnTheFly"; //mission name for loading screen only
 overviewPicture=""; //mission picture for loading screen only
 onLoadMissionTime = True;
-respawn=1;
-respawnDelay = 0;
+respawn=3;
+respawnDelay = 3;
 disabledAI = 0; //1
 enableDebugConsole = 1;
 
@@ -33,7 +33,7 @@ class Params
 	{
 		title = "Restrict Vehicle for BLUFOR to HEMTT";
 		values[] = {0,1};
-		texts[] = {"Restrict to HEMTT, No Restriction"};
+		texts[] = {"Restrict to HEMTT", "No Restriction"};
 		default = 1;
 	};
 
@@ -42,7 +42,7 @@ class Params
 		title = "Allowed Spawn Distance Minimum BLUFOR";
 		values[] = {1000,2000,3000};
 		texts[] = {"1km","2km","3km"};
-		default = 2000;
+		default = 1000;
 	};
 
 	class AllowedSpawnDistanceMaximum

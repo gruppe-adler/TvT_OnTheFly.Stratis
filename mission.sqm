@@ -57,7 +57,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=18;
+		items=19;
 		class Item0
 		{
 			side="WEST";
@@ -931,6 +931,40 @@ class Mission
 					skill=0.60000002;
 				};
 			};
+		};
+		class Item18
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={71.598091,31.878225,169.11023};
+					id=28;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="respawn_helper";
+				};
+			};
+		};
+	};
+	class Markers
+	{
+		items=2;
+		class Item0
+		{
+			position[]={224.53658,33.426571,213.17761};
+			name="respawn_west";
+			type="Empty";
+		};
+		class Item1
+		{
+			position[]={224.53661,33.330502,192.14026};
+			name="respawn_east";
+			type="Empty";
 		};
 	};
 	class Sensors

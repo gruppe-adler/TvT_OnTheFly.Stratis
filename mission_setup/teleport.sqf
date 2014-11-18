@@ -16,6 +16,7 @@ onMapSingleClick "[_pos] call teleportOpforGroup; onMapSingleClick ''; true";
 teleportOpforGroup = {
 	pos = _this select 0;
 
+	// doesnt work correctly in SP tests
 	[[[pos],"mission_setup\createMarkerBlufor.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 
 	if (side player == east && !OPFOR_TELEPORTED) then {
@@ -25,10 +26,12 @@ teleportOpforGroup = {
 		_x setPos _emptyPosition_unit;  } forEach units group player;
 		openMap false;
 		
-		// DONT NEED NO MARKER WHEN WE HAVE SECTORS
-		//_opfor_marker = createMarker ["opfor_marker", pos];
-		//_opfor_marker setMarkerType "hd_objective";
-		//_opfor_marker setMarkerColor "ColorWEST";
+		
+		_opfor_marker = createMarker ["opfor_marker", pos];
+		_opfor_marker setMarkerType "hd_objective";
+		_opfor_marker setMarkerColor "ColorWEST";
+		// with sector module, marker is only needed for getting position
+		_opfor_marker setMarkerAlpha 0;
 
 		OPFOR_TELEPORTED = TRUE;
 		publicVariable "OPFOR_TELEPORTED";
@@ -36,11 +39,13 @@ teleportOpforGroup = {
 		// move task to new destination
 		sector_trigger setPos pos;
 		["sector_moduleWEST", pos] call BIS_fnc_taskSetDestination;
+
 	};
 
 	if (side player == west && OPFOR_TELEPORTED) then {
 	
 		// entfernung marker zu spawnpunkt zu klein oder groß?
+		// pos ist hier ein anderes pos als oben!
 		_distance = pos distance (getMarkerPos "opfor_marker");
 		if (_distance < blufor_spawnDistanceMin) exitWith {hintSilent format ["Too close to Objective (%1 m). Must be at least %2.", floor(_distance), blufor_spawnDistanceMin];
 		player execVM "mission_setup\teleport.sqf";};

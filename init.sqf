@@ -1,6 +1,7 @@
 // spawn teleports done?
 OPFOR_TELEPORTED = false;
 BLUFOR_TELEPORTED = false;
+firstspawn = false;
 
 if (isServer) then {
 	MISSION_COMPLETED = false;
