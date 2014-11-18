@@ -28,6 +28,30 @@ class Params
 		texts[] = {"00:00","01:00","02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"};
 		default = 12;
 	};
+
+	class AllowedVehicles
+	{
+		title = "Restrict Vehicle for BLUFOR to HEMTT";
+		values[] = {0,1};
+		texts[] = {"Restrict to HEMTT, No Restriction"};
+		default = 1;
+	};
+
+	class AllowedSpawnDistanceMinimum
+	{
+		title = "Allowed Spawn Distance Minimum BLUFOR";
+		values[] = {1000,2000,3000};
+		texts[] = {"1km","2km","3km"};
+		default = 2000;
+	};
+
+	class AllowedSpawnDistanceMaximum
+	{
+		title = "Allowed Spawn Distance Maximum BLUFOR";
+		values[] = {4000,5000,6000};
+		texts[] = {"4km","5km","6km"};
+		default = 4000;
+	};
 };
 
 

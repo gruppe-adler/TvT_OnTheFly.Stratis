@@ -17,7 +17,8 @@ class Mission
 		"aia_desert_e_config",
 		"A3_Missions_F_Curator",
 		"A3_Modules_F",
-		"A3_Modules_F_Multiplayer"
+		"A3_Modules_F_Multiplayer",
+		"A3_Modules_F_Intel"
 	};
 	addOnsAuto[]=
 	{
@@ -34,6 +35,7 @@ class Mission
 		"A3_Missions_F_Curator",
 		"A3_Modules_F",
 		"A3_Modules_F_Multiplayer",
+		"A3_Modules_F_Intel",
 		"aia_desert_e_config"
 	};
 	randomSeed=11087059;
@@ -55,7 +57,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=16;
+		items=18;
 		class Item0
 		{
 			side="WEST";
@@ -582,7 +584,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={34.65583,29.708601,170.8844};
+					position[]={45.548775,29.777176,142.05054};
 					class args
 					{
 						items=2;
@@ -605,6 +607,8 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+					syncId=3;
+					synchronizations[]={12};
 				};
 			};
 		};
@@ -616,7 +620,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={34.668739,29.716812,159.56409};
+					position[]={95.286476,30.90719,144.86511};
 					class args
 					{
 						items=2;
@@ -639,6 +643,8 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+					syncId=4;
+					synchronizations[]={11};
 				};
 			};
 		};
@@ -657,8 +663,8 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=3;
-					synchronizations[]={6,7,5};
+					syncId=5;
+					synchronizations[]={8,9,7};
 				};
 			};
 		};
@@ -676,8 +682,8 @@ class Mission
 					vehicle="LocationArea_F";
 					leader=1;
 					skill=0.60000002;
-					syncId=4;
-					synchronizations[]={7,8};
+					syncId=6;
+					synchronizations[]={9,10};
 				};
 			};
 		};
@@ -695,8 +701,8 @@ class Mission
 					vehicle="SideBLUFOR_F";
 					leader=1;
 					skill=0.60000002;
-					syncId=5;
-					synchronizations[]={3};
+					syncId=7;
+					synchronizations[]={5};
 				};
 			};
 		};
@@ -714,8 +720,8 @@ class Mission
 					vehicle="SideOPFOR_F";
 					leader=1;
 					skill=0.60000002;
-					syncId=6;
-					synchronizations[]={3};
+					syncId=8;
+					synchronizations[]={5};
 				};
 			};
 		};
@@ -751,13 +757,13 @@ class Mission
 						};
 						class Item3
 						{
-							value="if (this select 1 == west) then {MISSION_COMPLETED = TRUE; publicVariable ""MISSION_COMPLETED"";};";
+							value="if ((_this select 1) == west) then { [] execVM ""objectives\blufor_captures.sqf"";};";
 							parentCls="ModuleSector_F";
 							typeName="OnOwnerChange";
 						};
 						class Item4
 						{
-							value="0";
+							value="1";
 							parentCls="ModuleSector_F";
 							typeName="OwnerLimit";
 						};
@@ -775,7 +781,7 @@ class Mission
 						};
 						class Item7
 						{
-							value="Insurgents HQ";
+							value="Seize";
 							parentCls="ModuleSector_F";
 							typeName="TaskTitle";
 						};
@@ -828,15 +834,108 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=7;
-					synchronizations[]={3,4};
+					text="sector_module";
+					syncId=9;
+					synchronizations[]={5,6};
+				};
+			};
+		};
+		class Item16
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={46.148811,30.524775,168.97424};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="1";
+							parentCls="ModuleHQ_F";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="STR_A3_CfgHQIdentities_Base_0";
+							parentCls="ModuleHQ_F";
+							typeName="Callsign";
+						};
+						class Item2
+						{
+							value="";
+							parentCls="ModuleHQ_F";
+							typeName="CallsignCustom";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleHQ_F";
+							typeName="Identity";
+						};
+					};
+					id=26;
+					side="LOGIC";
+					vehicle="ModuleHQ_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item17
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={94.827812,30.852858,168.97461};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="0";
+							parentCls="ModuleHQ_F";
+							typeName="Side";
+						};
+						class Item1
+						{
+							value="STR_A3_CfgHQIdentities_Base_0";
+							parentCls="ModuleHQ_F";
+							typeName="Callsign";
+						};
+						class Item2
+						{
+							value="";
+							parentCls="ModuleHQ_F";
+							typeName="CallsignCustom";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleHQ_F";
+							typeName="Identity";
+						};
+					};
+					id=27;
+					side="LOGIC";
+					vehicle="ModuleHQ_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
 				};
 			};
 		};
 	};
 	class Sensors
 	{
-		items=1;
+		items=3;
 		class Item0
 		{
 			position[]={384.51285,32.416599,357.61414};
@@ -849,8 +948,38 @@ class Mission
 			class Effects
 			{
 			};
+			synchronizations[]={6};
+			syncId=10;
+		};
+		class Item1
+		{
+			position[]={96.11232,31.033094,126.48865};
+			a=0;
+			b=0;
+			activationBy="ALPHA";
+			interruptable=1;
+			age="UNKNOWN";
+			expCond="";
+			class Effects
+			{
+			};
 			synchronizations[]={4};
-			syncId=8;
+			syncId=11;
+		};
+		class Item2
+		{
+			position[]={45.943607,29.844145,128.09253};
+			a=0;
+			b=0;
+			activationBy="ALPHA";
+			interruptable=1;
+			age="UNKNOWN";
+			expCond="";
+			class Effects
+			{
+			};
+			synchronizations[]={3};
+			syncId=12;
 		};
 	};
 };

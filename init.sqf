@@ -3,13 +3,23 @@ OPFOR_TELEPORTED = false;
 BLUFOR_TELEPORTED = false;
 
 if (isServer) then {
+	MISSION_COMPLETED = false;
+	publicVariable "MISSION_COMPLETED";
 	bluforMarkerDrawn = false;
 	publicVariable "bluforMarkerDrawn";
+	RESTRICTED_VEHICLES = false;
+	publicVariable "RESTRICTED_VEHICLES";
+
 };
 
 // spawn distances from objective min/max
-blufor_spawnDistanceMin = 1000;
-blufor_spawnDistanceMax = 5000;
+if ((paramsArray select 1) == 0) then {
+	RESTRICTED_VEHICLES = true;
+	publicVariable "RESTRICTED_VEHICLES";
+};
+
+blufor_spawnDistanceMin = (paramsArray select 2);
+blufor_spawnDistanceMax = (paramsArray select 3);
 
 opfor_teleport = opfor_teamlead addAction["<t color=""#93E352"">" + "Spawnpunkt wählen",{[[[false], "mission_setup\teleport.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && !OPFOR_TELEPORTED"];
 blufor_teleport = blufor_teamlead addAction["<t color=""#93E352"">" + "Spawnpunkt wählen",{[[[false], "mission_setup\teleport.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && !BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];

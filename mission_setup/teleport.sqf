@@ -25,13 +25,17 @@ teleportOpforGroup = {
 		_x setPos _emptyPosition_unit;  } forEach units group player;
 		openMap false;
 		
-		sector_trigger setPos pos;
-		_opfor_marker = createMarker ["opfor_marker", pos];
-		_opfor_marker setMarkerType "hd_objective";
-		_opfor_marker setMarkerColor "ColorWEST";
+		// DONT NEED NO MARKER WHEN WE HAVE SECTORS
+		//_opfor_marker = createMarker ["opfor_marker", pos];
+		//_opfor_marker setMarkerType "hd_objective";
+		//_opfor_marker setMarkerColor "ColorWEST";
 
 		OPFOR_TELEPORTED = TRUE;
 		publicVariable "OPFOR_TELEPORTED";
+
+		// move task to new destination
+		sector_trigger setPos pos;
+		["sector_moduleWEST", pos] call BIS_fnc_taskSetDestination;
 	};
 
 	if (side player == west && OPFOR_TELEPORTED) then {
