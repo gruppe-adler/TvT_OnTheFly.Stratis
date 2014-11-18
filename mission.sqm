@@ -71,7 +71,7 @@ class Mission
 					id=0;
 					side="WEST";
 					vehicle="B_Soldier_SL_F";
-					player="PLAYER COMMANDER";
+					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
@@ -167,7 +167,7 @@ class Mission
 					id=8;
 					side="EAST";
 					vehicle="CAF_AG_EEUR_R_AK47";
-					player="PLAY CDG";
+					player="PLAYER COMMANDER";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
@@ -955,8 +955,8 @@ class Mission
 		class Item0
 		{
 			position[]={383.17856,32.379513,356.94702};
-			a=30;
-			b=30;
+			a=4;
+			b=4;
 			activationBy="ANY";
 			interruptable=1;
 			age="UNKNOWN";

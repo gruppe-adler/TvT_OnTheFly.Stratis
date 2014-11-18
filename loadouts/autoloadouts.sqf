@@ -18,6 +18,7 @@ private ["_loadouts"];
 _loadouts = _this;
  
 if ((!isServer) and (!isDedicated)) exitWith {};
+
  
 getNewlyJoinedPlayers = {
 private ["_isSet", "_result"];

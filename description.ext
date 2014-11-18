@@ -7,7 +7,7 @@ onLoadMissionTime = True;
 respawn=3;
 respawnDelay = 3;
 disabledAI = 0; //1
-enableDebugConsole = 1;
+enableDebugConsole = 2;
 
 #include "plank\plank.h"
 

@@ -2,7 +2,7 @@ comment "Exported from Arsenal by nomisum";
 
 private ["_unit"];
 _unit = _this select 0;
-IF(!local _unit) exitwith {};
+//IF(!local _unit) exitwith {};
 
 comment "Remove existing items";
 removeAllWeapons _unit;
