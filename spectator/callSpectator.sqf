@@ -1,0 +1,1 @@
+[player] call BIS_fnc_cameraOld;

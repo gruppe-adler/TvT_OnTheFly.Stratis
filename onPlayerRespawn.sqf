@@ -1,9 +1,22 @@
 _unit = _this select 0;
 
 if (!firstspawn) exitWith{firstspawn = true;};
+removeHeadgear _unit:
+removeGoggles _unit;
+removeVest _unit;
+removeBackpack _unit;
+removeUniform _unit;
+removeAllWeapons _unit:
+removeAllAssignedItems _unit;
 
-_unit setPos [getPos sector_trigger select 0, getPos sector_trigger select 1, 200];
+// join civilian side, because end trigger relies on side
+[player] joinSilent (createGroup civilian);
+// set position above objective
+_unit attachTo [respawn_helper];
+// make invisible
 hideObjectGlobal _unit;
-_unit enablesimulation false;
+
+_unit addAction ["<t color='#d18d1f'>Activate Spectator Cam</t> (right click to exit)", "spectator\callSpectator.sqf"];
+// make floating
+// start spec cam
 [player] call BIS_fnc_cameraOld;
-_unit addAction ["<t color='#d18d1f'>Activate Spectator Cam</t> (right click to exit)", {[player] call BIS_fnc_cameraOld;}];

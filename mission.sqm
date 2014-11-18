@@ -57,7 +57,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=19;
+		items=18;
 		class Item0
 		{
 			side="WEST";
@@ -695,7 +695,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={409.33426,31.88781,223.37634};
+					position[]={407.99997,31.954733,212.70203};
 					id=23;
 					side="LOGIC";
 					vehicle="SideBLUFOR_F";
@@ -932,24 +932,6 @@ class Mission
 				};
 			};
 		};
-		class Item18
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={71.598091,31.878225,169.11023};
-					id=28;
-					side="LOGIC";
-					vehicle="Logic";
-					leader=1;
-					skill=0.60000002;
-					text="respawn_helper";
-				};
-			};
-		};
 	};
 	class Markers
 	{
@@ -972,7 +954,7 @@ class Mission
 		items=3;
 		class Item0
 		{
-			position[]={384.51285,32.416599,357.61414};
+			position[]={383.17856,32.379513,356.94702};
 			a=30;
 			b=30;
 			activationBy="ANY";
