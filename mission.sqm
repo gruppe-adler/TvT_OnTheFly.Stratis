@@ -14,7 +14,10 @@ class Mission
 		"A3_Modules_F_Curator_Environment",
 		"A3_Modules_F_Events",
 		"A3_Soft_F_HEMTT",
-		"aia_desert_e_config"
+		"aia_desert_e_config",
+		"A3_Missions_F_Curator",
+		"A3_Modules_F",
+		"A3_Modules_F_Multiplayer"
 	};
 	addOnsAuto[]=
 	{
@@ -28,6 +31,9 @@ class Mission
 		"task_force_radio_items",
 		"A3_Modules_F_Curator_Environment",
 		"A3_Modules_F_Events",
+		"A3_Missions_F_Curator",
+		"A3_Modules_F",
+		"A3_Modules_F_Multiplayer",
 		"aia_desert_e_config"
 	};
 	randomSeed=11087059;
@@ -49,7 +55,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=11;
+		items=16;
 		class Item0
 		{
 			side="WEST";
@@ -635,6 +641,216 @@ class Mission
 					skill=0.60000002;
 				};
 			};
+		};
+		class Item11
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={383.78769,31.389662,247.00305};
+					id=21;
+					side="LOGIC";
+					vehicle="ModuleMPTypeSectorControl_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=3;
+					synchronizations[]={6,7,5};
+				};
+			};
+		};
+		class Item12
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={383.12677,30.543133,287.08667};
+					id=22;
+					side="LOGIC";
+					vehicle="LocationArea_F";
+					leader=1;
+					skill=0.60000002;
+					syncId=4;
+					synchronizations[]={7,8};
+				};
+			};
+		};
+		class Item13
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={409.33426,31.88781,223.37634};
+					id=23;
+					side="LOGIC";
+					vehicle="SideBLUFOR_F";
+					leader=1;
+					skill=0.60000002;
+					syncId=5;
+					synchronizations[]={3};
+				};
+			};
+		};
+		class Item14
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={361.38196,31.188242,219.94934};
+					id=24;
+					side="LOGIC";
+					vehicle="SideOPFOR_F";
+					leader=1;
+					skill=0.60000002;
+					syncId=6;
+					synchronizations[]={3};
+				};
+			};
+		};
+		class Item15
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={406.7261,31.349552,260.96094};
+					class args
+					{
+						items=15;
+						class Item0
+						{
+							value="Insurgents HQ";
+							parentCls="ModuleSector_F";
+							typeName="Name";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleSector_F";
+							typeName="Designation";
+						};
+						class Item2
+						{
+							value="0";
+							parentCls="ModuleSector_F";
+							typeName="ScoreReward";
+						};
+						class Item3
+						{
+							value="if (this select 1 == west) then {MISSION_COMPLETED = TRUE; publicVariable ""MISSION_COMPLETED"";};";
+							parentCls="ModuleSector_F";
+							typeName="OnOwnerChange";
+						};
+						class Item4
+						{
+							value="0";
+							parentCls="ModuleSector_F";
+							typeName="OwnerLimit";
+						};
+						class Item5
+						{
+							value="0";
+							parentCls="ModuleSector_F";
+							typeName="DefaultOwner";
+						};
+						class Item6
+						{
+							value="3";
+							parentCls="ModuleSector_F";
+							typeName="TaskOwner";
+						};
+						class Item7
+						{
+							value="Insurgents HQ";
+							parentCls="ModuleSector_F";
+							typeName="TaskTitle";
+						};
+						class Item8
+						{
+							value="Seize and eliminate enemy presence";
+							parentCls="ModuleSector_F";
+							typeName="TaskDescription";
+						};
+						class Item9
+						{
+							value="1";
+							parentCls="ModuleSector_F";
+							typeName="CostInfantry";
+						};
+						class Item10
+						{
+							value="0.1";
+							parentCls="ModuleSector_F";
+							typeName="CostWheeled";
+						};
+						class Item11
+						{
+							value="0.1";
+							parentCls="ModuleSector_F";
+							typeName="CostTracked";
+						};
+						class Item12
+						{
+							value="0";
+							parentCls="ModuleSector_F";
+							typeName="CostWater";
+						};
+						class Item13
+						{
+							value="2";
+							parentCls="ModuleSector_F";
+							typeName="CostAir";
+						};
+						class Item14
+						{
+							value="2";
+							parentCls="ModuleSector_F";
+							typeName="CostPlayers";
+						};
+					};
+					id=25;
+					side="LOGIC";
+					vehicle="ModuleSector_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=7;
+					synchronizations[]={3,4};
+				};
+			};
+		};
+	};
+	class Sensors
+	{
+		items=1;
+		class Item0
+		{
+			position[]={384.51285,32.416599,357.61414};
+			a=30;
+			b=30;
+			activationBy="ANY";
+			interruptable=1;
+			age="UNKNOWN";
+			name="sector_trigger";
+			class Effects
+			{
+			};
+			synchronizations[]={4};
+			syncId=8;
 		};
 	};
 };

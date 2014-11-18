@@ -25,7 +25,7 @@ teleportOpforGroup = {
 		_x setPos _emptyPosition_unit;  } forEach units group player;
 		openMap false;
 		
-
+		sector_trigger setPos pos;
 		_opfor_marker = createMarker ["opfor_marker", pos];
 		_opfor_marker setMarkerType "hd_objective";
 		_opfor_marker setMarkerColor "ColorWEST";

@@ -7,7 +7,7 @@ winConditionOpfor = ({side _x == west} count playableUnits) + ({side _x == west}
 	
 	while{true} do {
     sleep 3;
-    if (winConditionBlufor) then {
+    if (winConditionBlufor || MISSION_COMPLETED) then {
       if (side player == west) then {
        endMission "END1";
        hintSilent "BLUFOR WINS. Mission ends now.";
