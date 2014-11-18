@@ -40,9 +40,7 @@ teleportOpforGroup = {
 		sector_trigger setPos pos;
 		["sector_moduleWEST", pos] call BIS_fnc_taskSetDestination;
 
-		respawn_helper = [getPosATL sector_trigger, 180, "Land_HelipadEmpty_F", ""] call bis_fnc_spawnvehicle;
-		respawn_helper setPosATL [[(getPosATL sector_trigger select 0),(getPosATL sector_trigger select 1), 200]];
-		respawn_helper enableSimulationGlobal false;
+		
 	};
 
 	if (side player == west && OPFOR_TELEPORTED) then {
@@ -63,7 +61,7 @@ teleportOpforGroup = {
 		} forEach units group player;
 		
 		
-		Choose_Vehicle = blufor_teamlead addAction["<t color=""#93E352"">" + "Choose Vehicle",{[[[pos], "mission_setup\choose_vehicle.sqf",nil,6,false,false,"",true],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"]; 
+		choose_vehicle = blufor_teamlead addAction["<t color=""#93E352"">" + "Choose Vehicle",{[[[pos], "mission_setup\choose_vehicle.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
 		
 
 		
@@ -75,5 +73,8 @@ teleportOpforGroup = {
 		_blufor_marker_start = createMarkerLocal ["blufor_marker_start", pos];
 		_blufor_marker_start setMarkerTypeLocal "hd_start";
 		_blufor_marker_start setMarkerColorLocal "ColorWEST";
+
+		respawn_helper = "Land_Can_V3_F" createVehicle [(getPos sector_trigger select 0),(getPos sector_trigger select 1),0];
+		respawn_helper enableSimulationGlobal false;
 	};
 };

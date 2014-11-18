@@ -12,7 +12,7 @@ removeAllAssignedItems _unit;
 // join civilian side, because end trigger relies on side
 [player] joinSilent (createGroup civilian);
 // set position above objective
-_unit attachTo [respawn_helper];
+_unit attachTo [respawn_helper,[0,0,200]];
 // make invisible
 hideObjectGlobal _unit;
 
