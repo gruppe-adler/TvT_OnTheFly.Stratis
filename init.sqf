@@ -1,7 +1,11 @@
+// global options
+TROPENTARN = true;
+
 // spawn teleports done?
 OPFOR_TELEPORTED = false;
 BLUFOR_TELEPORTED = false;
 firstspawn = false;
+
 
 if (isServer) then {
 	MISSION_COMPLETED = false;
@@ -12,6 +16,17 @@ if (isServer) then {
 	publicVariable "RESTRICTED_VEHICLES";
 
 };
+
+
+// loadout call - giving each unit the appropriate sqf file
+// B_Soldier_SL_F = NATO SQUADLEADER
+//
+[
+
+ ["B_Soldier_SL_F", "blufor_squadleader"],
+ ["B_soldier_AR_F", "blufor_mggunner"]
+
+] execVM "loadouts\autoloadouts.sqf";
 
 // spawn distances from objective min/max
 if ((paramsArray select 1) == 0) then {
