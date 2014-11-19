@@ -23,8 +23,6 @@ if (isServer) then {
 //
 [
 
- ["B_Soldier_SL_F", "blufor_squadleader"],
- ["B_soldier_AR_F", "blufor_mggunner"],
  ["O_Soldier_LAT_F", "opfor_rpg"],
  ["O_recon_LAT_F", "opfor_rpg"],
  ["O_soldierU_LAT_F", "opfor_rpg"],

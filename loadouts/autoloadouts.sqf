@@ -60,8 +60,8 @@ tryLoadout = {
 			],
 			"BIS_fnc_execVM",
 			 _unit,
-			false,
-			true
+			 true,
+			 true
 		] call BIS_fnc_MP;
 	};
 };
