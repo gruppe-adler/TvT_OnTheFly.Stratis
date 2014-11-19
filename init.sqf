@@ -1,5 +1,5 @@
 // global options
-TROPENTARN = true;
+TROPENTARN = false;
 
 // spawn teleports done?
 OPFOR_TELEPORTED = false;
@@ -33,10 +33,10 @@ if (isServer) then {
  ["O_recon_medic_F", "opfor_medic"],
  ["O_soldierU_medic_F", "opfor_medic"],
  ["O_G_medic_F", "opfor_medic"],
- ["O_G_Soldier_M_F", "opfor_m14"],
- ["O_soldier_M_F", "opfor_m14"],
- ["O_recon_M_F", "opfor_m14"],
- ["O_soldierU_M_F", "opfor_m14"],
+ ["O_G_Soldier_exp_F", "opfor_m14"],
+ ["O_soldier_exp_F", "opfor_m14"],
+ ["O_recon_exp_F", "opfor_m14"],
+ ["O_soldierU_exp_F", "opfor_m14"],
  ["O_G_Soldier_AR_F", "opfor_pkm"],
  ["O_Soldier_AR_F", "opfor_pkm"],
  ["O_soldierU_AR_F", "opfor_pkm"],
@@ -66,14 +66,21 @@ if (isServer) then {
  
 ] execVM "loadouts\autoloadouts.sqf";
 
-// spawn distances from objective min/max
+// restriction of vehicles for blufor
 if ((paramsArray select 1) == 0) then {
 	RESTRICTED_VEHICLES = true;
 	publicVariable "RESTRICTED_VEHICLES";
 };
 
-blufor_spawnDistanceMin = (paramsArray select 2);
-blufor_spawnDistanceMax = (paramsArray select 3);
+// tropentarn or flecktarn?
+if ((paramsArray select 2) == 1) then {
+	TROPENTARN = false;
+	publicVariable "TROPENTARN";
+};
+
+
+blufor_spawnDistanceMin = (paramsArray select 3);
+blufor_spawnDistanceMax = (paramsArray select 4);
 
 // respawn helper object, will be moved to objective location in teleport.sqf
 opfor_teleport = opfor_teamlead addAction["<t color=""#93E352"">" + "Spawnpunkt wählen",{[[[false], "mission_setup\teleport.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && !OPFOR_TELEPORTED"];

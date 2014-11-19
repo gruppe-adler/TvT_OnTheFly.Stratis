@@ -37,6 +37,14 @@ class Params
 		default = 1;
 	};
 
+	class UniformCamo
+	{
+		title = "Forces";
+		values[] = {0,1};
+		texts[] = {"Flecktarn/Eastern Rebels","Tropentarn/Taliban"};
+		default = 1;
+	};
+
 	class AllowedSpawnDistanceMinimum
 	{
 		title = "Allowed Spawn Distance Minimum BLUFOR";

@@ -173,12 +173,13 @@ class Mission
 					rank="SERGEANT";
 					skill=0.5;
 					text="opfor_teamlead";
+					description="Boss";
 					syncId=1;
 					synchronizations[]={2};
 				};
 				class Item1
 				{
-					position[]={293.34506,34.687386,362.17676};
+					position[]={293.34506,34.8437,360.8175};
 					azimut=163.319;
 					id=9;
 					side="EAST";
@@ -186,10 +187,11 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
+					description="Rifleman";
 				};
 				class Item2
 				{
-					position[]={256.9599,36.536953,376.85864};
+					position[]={255.37396,36.504047,374.81958};
 					azimut=163.319;
 					id=10;
 					side="EAST";
@@ -197,10 +199,11 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
+					description="AT-Specialist";
 				};
 				class Item3
 				{
-					position[]={245.38078,36.385204,363.14185};
+					position[]={244.92766,35.973976,357.70447};
 					azimut=163.319;
 					id=11;
 					side="EAST";
@@ -208,10 +211,11 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
+					description="Team Leader";
 				};
 				class Item4
 				{
-					position[]={273.819,35.86726,378.12598};
+					position[]={272.45966,35.882549,377.89941};
 					azimut=163.319;
 					id=12;
 					side="EAST";
@@ -219,10 +223,11 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
+					description="Rifleman";
 				};
 				class Item5
 				{
-					position[]={288.7446,35.050735,369.73596};
+					position[]={288.40472,35.100582,368.48987};
 					azimut=163.319;
 					id=13;
 					side="EAST";
@@ -230,10 +235,11 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
+					description="Rifleman";
 				};
 				class Item6
 				{
-					position[]={281.79016,35.488899,375.0603};
+					position[]={281.45032,35.448719,373.92761};
 					azimut=163.319;
 					id=14;
 					side="EAST";
@@ -241,10 +247,11 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
+					description="Rifleman";
 				};
 				class Item7
 				{
-					position[]={265.23074,36.237473,378.19446};
+					position[]={263.64481,36.175694,377.51477};
 					azimut=163.319;
 					id=15;
 					side="EAST";
@@ -252,10 +259,11 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
+					description="Doc";
 				};
 				class Item8
 				{
-					position[]={244.34523,35.755215,350.87427};
+					position[]={244.11867,35.783745,347.70251};
 					azimut=163.319;
 					id=16;
 					side="EAST";
@@ -263,17 +271,19 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
+					description="MG-Gunner";
 				};
 				class Item9
 				{
-					position[]={250.47992,36.730316,371.55359};
+					position[]={248.55414,36.615963,368.04199};
 					azimut=163.319;
 					id=17;
 					side="EAST";
-					vehicle="O_soldier_M_F";
+					vehicle="O_soldier_exp_F";
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
+					description="Marksman";
 				};
 			};
 		};
