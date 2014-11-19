@@ -1,3 +1,5 @@
+this = _this select 0;
+
 comment "Exported from Arsenal by nomisum";
 
 comment "Remove existing items";
@@ -36,4 +38,3 @@ comment "Add items";
 this linkItem "ItemMap";
 this linkItem "ItemCompass";
 this linkItem "ItemWatch";
-this linkItem "tf_pnr1000a";

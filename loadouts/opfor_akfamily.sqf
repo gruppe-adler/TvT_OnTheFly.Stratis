@@ -1,3 +1,5 @@
+this = _this select 0;
+
 comment "Exported from Arsenal by nomisum";
 
 comment "Remove existing items";
@@ -18,19 +20,19 @@ ak74family =
 "hlc_rifle_aks74u"] call BIS_fnc_selectRandom;
 
 randUniform = 
-["U_CAF_AG_EEUR_FATIGUES_01
-U_CAF_AG_EEUR_FATIGUES_01a,
-U_CAF_AG_EEUR_FATIGUES_02,
-U_CAF_AG_EEUR_FATIGUES_02a,
-U_CAF_AG_EEUR_FATIGUES_03,
-U_CAF_AG_EEUR_FATIGUES_03a,
-U_CAF_AG_EEUR_FATIGUES_03b,
-U_CAF_AG_EEUR_FATIGUES_03c"] call BIS_fnc_selectRandom;
+["U_CAF_AG_EEUR_FATIGUES_01",
+"U_CAF_AG_EEUR_FATIGUES_01a",
+"U_CAF_AG_EEUR_FATIGUES_02",
+"U_CAF_AG_EEUR_FATIGUES_02a",
+"U_CAF_AG_EEUR_FATIGUES_03",
+"U_CAF_AG_EEUR_FATIGUES_03a",
+"U_CAF_AG_EEUR_FATIGUES_03b",
+"U_CAF_AG_EEUR_FATIGUES_03c"] call BIS_fnc_selectRandom;
 
 randHeadGearFleck = 
-["H_CAF_AG_BEANIE,
-H_CAF_AG_BOONIE_01,
-H_CAF_AG_BOONIE_02"] call BIS_fnc_selectRandom;
+["H_CAF_AG_BEANIE",
+"H_CAF_AG_BOONIE_01",
+"H_CAF_AG_BOONIE_02"] call BIS_fnc_selectRandom;
 
 
 comment "Add containers";
@@ -56,4 +58,3 @@ comment "Add items";
 this linkItem "ItemMap";
 this linkItem "ItemCompass";
 this linkItem "ItemWatch";
-this linkItem "tf_pnr1000a";

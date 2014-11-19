@@ -25,6 +25,10 @@ if (isServer) then {
 
  ["B_Soldier_SL_F", "blufor_squadleader"],
  ["B_soldier_AR_F", "blufor_mggunner"],
+ ["O_Soldier_LAT_F", "opfor_rpg"],
+ ["O_recon_LAT_F", "opfor_rpg"],
+ ["O_soldierU_LAT_F", "opfor_rpg"],
+ ["O_G_Soldier_LAT_F", "opfor_rpg"],
  ["O_medic_F", "opfor_medic"],
  ["O_recon_medic_F", "opfor_medic"],
  ["O_soldierU_medic_F", "opfor_medic"],
@@ -88,7 +92,7 @@ if (isServer) then { setDate [2035, 6, 24, (paramsArray select 0), 1]; };	//Zeit
 
 [] execVM "objectives\detect_all_dead.sqf";
 
-if (isServer || isDedicated) then {
+if ((isServer) || (isDedicated)) then {
 
 respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger select 0),(getPos sector_trigger select 1),0];
 [respawn_helper, false] call AGM_Drag_fnc_makeDraggable;
@@ -99,7 +103,7 @@ respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger sele
 
 			_pos =  [(getPosATL respawn_helper select 0), (getPosATL respawn_helper select 1), 0];
 			sector_trigger setPosATL _pos;
-			["sector_moduleWEST", pos] call BIS_fnc_taskSetDestination;
+			["sector_moduleWEST", _pos] call BIS_fnc_taskSetDestination;
 			sleep 1;
 			};
 		};

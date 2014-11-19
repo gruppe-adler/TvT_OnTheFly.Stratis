@@ -18,13 +18,14 @@ class Mission
 		"A3_Missions_F_Curator",
 		"A3_Modules_F",
 		"A3_Modules_F_Multiplayer",
-		"A3_Modules_F_Intel"
+		"A3_Modules_F_Intel",
+		"A3_Characters_F_OPFOR"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
-		"caf_ag_faction_afr_p",
+		"A3_Characters_F_OPFOR",
 		"agm_explosives",
 		"agm_interaction",
 		"agm_medical",
@@ -159,14 +160,14 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=4;
+				items=10;
 				class Item0
 				{
 					position[]={267.66962,36.06258,348.91992};
 					azimut=163.319;
 					id=8;
 					side="EAST";
-					vehicle="CAF_AG_EEUR_R_AK47";
+					vehicle="O_officer_F";
 					player="PLAYER COMMANDER";
 					leader=1;
 					rank="SERGEANT";
@@ -177,33 +178,99 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={300.95917,33.538376,383.23291};
+					position[]={293.34506,34.687386,362.17676};
 					azimut=163.319;
 					id=9;
 					side="EAST";
-					vehicle="CAF_AG_EEUR_R_AK47";
+					vehicle="O_Soldier_F";
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
 				};
 				class Item2
 				{
-					position[]={249.9798,39.156651,388.82813};
+					position[]={256.9599,36.536953,376.85864};
 					azimut=163.319;
 					id=10;
 					side="EAST";
-					vehicle="CAF_AG_EEUR_R_AK47";
+					vehicle="O_Soldier_LAT_F";
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
 				};
 				class Item3
 				{
-					position[]={238.16754,37.767002,368.31213};
+					position[]={245.38078,36.385204,363.14185};
 					azimut=163.319;
 					id=11;
 					side="EAST";
-					vehicle="CAF_AG_EEUR_R_AK47";
+					vehicle="O_Soldier_TL_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.5;
+				};
+				class Item4
+				{
+					position[]={273.819,35.86726,378.12598};
+					azimut=163.319;
+					id=12;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.5;
+				};
+				class Item5
+				{
+					position[]={288.7446,35.050735,369.73596};
+					azimut=163.319;
+					id=13;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.5;
+				};
+				class Item6
+				{
+					position[]={281.79016,35.488899,375.0603};
+					azimut=163.319;
+					id=14;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.5;
+				};
+				class Item7
+				{
+					position[]={265.23074,36.237473,378.19446};
+					azimut=163.319;
+					id=15;
+					side="EAST";
+					vehicle="O_medic_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.5;
+				};
+				class Item8
+				{
+					position[]={244.34523,35.755215,350.87427};
+					azimut=163.319;
+					id=16;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.5;
+				};
+				class Item9
+				{
+					position[]={250.47992,36.730316,371.55359};
+					azimut=163.319;
+					id=17;
+					side="EAST";
+					vehicle="O_soldier_M_F";
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
@@ -235,7 +302,7 @@ class Mission
 							typeName="PunishNonSpecialists";
 						};
 					};
-					id=12;
+					id=18;
 					side="LOGIC";
 					vehicle="AGM_ModuleExplosive";
 					leader=1;
@@ -269,7 +336,7 @@ class Mission
 							typeName="ShowNamesForAI";
 						};
 					};
-					id=13;
+					id=19;
 					side="LOGIC";
 					vehicle="AGM_ModuleInteraction";
 					leader=1;
@@ -363,7 +430,7 @@ class Mission
 							typeName="EnableOverdosing";
 						};
 					};
-					id=14;
+					id=20;
 					side="LOGIC";
 					vehicle="AGM_ModuleMedical";
 					leader=1;
@@ -409,7 +476,7 @@ class Mission
 							typeName="MaxDamageRepair";
 						};
 					};
-					id=15;
+					id=21;
 					side="LOGIC";
 					vehicle="AGM_ModuleRepair";
 					leader=1;
@@ -473,7 +540,7 @@ class Mission
 							typeName="same_lr_frequencies_for_side";
 						};
 					};
-					id=16;
+					id=22;
 					side="LOGIC";
 					vehicle="tfar_ModuleTaskForceRadioEnforceUsage";
 					leader=1;
@@ -537,7 +604,7 @@ class Mission
 							typeName="LrFreq";
 						};
 					};
-					id=17;
+					id=23;
 					side="LOGIC";
 					vehicle="tfar_ModuleTaskForceRadio";
 					leader=1;
@@ -567,7 +634,7 @@ class Mission
 							typeName="TimeMultiplier";
 						};
 					};
-					id=18;
+					id=24;
 					side="LOGIC";
 					vehicle="ModuleTimeMultiplier_F";
 					leader=1;
@@ -601,7 +668,7 @@ class Mission
 							typeName="Sentence";
 						};
 					};
-					id=19;
+					id=25;
 					side="LOGIC";
 					vehicle="ModuleGenericRadio_F";
 					leader=1;
@@ -637,7 +704,7 @@ class Mission
 							typeName="Sentence";
 						};
 					};
-					id=20;
+					id=26;
 					side="LOGIC";
 					vehicle="ModuleGenericRadio_F";
 					leader=1;
@@ -657,7 +724,7 @@ class Mission
 				class Item0
 				{
 					position[]={383.78769,31.389662,247.00305};
-					id=21;
+					id=27;
 					side="LOGIC";
 					vehicle="ModuleMPTypeSectorControl_F";
 					leader=1;
@@ -677,7 +744,7 @@ class Mission
 				class Item0
 				{
 					position[]={383.12677,30.543133,287.08667};
-					id=22;
+					id=28;
 					side="LOGIC";
 					vehicle="LocationArea_F";
 					leader=1;
@@ -696,7 +763,7 @@ class Mission
 				class Item0
 				{
 					position[]={407.99997,31.954733,212.70203};
-					id=23;
+					id=29;
 					side="LOGIC";
 					vehicle="SideBLUFOR_F";
 					leader=1;
@@ -715,7 +782,7 @@ class Mission
 				class Item0
 				{
 					position[]={361.38196,31.188242,219.94934};
-					id=24;
+					id=30;
 					side="LOGIC";
 					vehicle="SideOPFOR_F";
 					leader=1;
@@ -828,7 +895,7 @@ class Mission
 							typeName="CostPlayers";
 						};
 					};
-					id=25;
+					id=31;
 					side="LOGIC";
 					vehicle="ModuleSector_F";
 					leader=1;
@@ -877,7 +944,7 @@ class Mission
 							typeName="Identity";
 						};
 					};
-					id=26;
+					id=32;
 					side="LOGIC";
 					vehicle="ModuleHQ_F";
 					leader=1;
@@ -923,7 +990,7 @@ class Mission
 							typeName="Identity";
 						};
 					};
-					id=27;
+					id=33;
 					side="LOGIC";
 					vehicle="ModuleHQ_F";
 					leader=1;
