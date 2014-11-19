@@ -24,8 +24,42 @@ if (isServer) then {
 [
 
  ["B_Soldier_SL_F", "blufor_squadleader"],
- ["B_soldier_AR_F", "blufor_mggunner"]
-
+ ["B_soldier_AR_F", "blufor_mggunner"],
+ ["O_medic_F", "opfor_medic"],
+ ["O_recon_medic_F", "opfor_medic"],
+ ["O_soldierU_medic_F", "opfor_medic"],
+ ["O_G_medic_F", "opfor_medic"],
+ ["O_G_Soldier_M_F", "opfor_m14"],
+ ["O_soldier_M_F", "opfor_m14"],
+ ["O_recon_M_F", "opfor_m14"],
+ ["O_soldierU_M_F", "opfor_m14"],
+ ["O_G_Soldier_AR_F", "opfor_pkm"],
+ ["O_Soldier_AR_F", "opfor_pkm"],
+ ["O_soldierU_AR_F", "opfor_pkm"],
+ ["O_Soldier_AAR_F", "opfor_pkm"],
+ ["O_soldierU_AAR_F", "opfor_pkm"],
+ ["O_G_Soldier_TL_F", "opfor_l1a1"],
+ ["O_soldierU_F", "opfor_l1a1"],
+ ["O_Soldier_TL_F", "opfor_l1a1"],
+ ["O_recon_TL_F", "opfor_l1a1"],
+ ["O_soldierU_TL_F", "opfor_l1a1"],
+ ["O_G_officer_F", "opfor_l1a1"],
+ ["O_officer_F", "opfor_l1a1"],
+ ["O_Soldier_TL_F", "opfor_l1a1"],
+ ["O_recon_TL_F", "opfor_l1a1"],
+ ["O_soldierU_TL_F", "opfor_l1a1"],
+ ["O_G_Soldier_GL_F", "opfor_akfamily"],
+ ["O_Soldier_GL_F", "opfor_akfamily"],
+ ["O_SoldierU_GL_F", "opfor_akfamily"],
+ ["O_G_Soldier_F", "opfor_akfamily"],
+ ["O_G_Soldier_lite_F", "opfor_akfamily"],
+ ["O_Soldier_F", "opfor_akfamily"],
+ ["O_Soldier_lite_F", "opfor_akfamily"],
+ ["O_soldierU_F", "opfor_akfamily"],
+ ["O_soldierU_A_F", "opfor_akfamily"],
+ ["O_G_Soldier_A_F", "opfor_akfamily"],
+ ["O_Soldier_A_F", "opfor_akfamily"]
+ 
 ] execVM "loadouts\autoloadouts.sqf";
 
 // spawn distances from objective min/max
