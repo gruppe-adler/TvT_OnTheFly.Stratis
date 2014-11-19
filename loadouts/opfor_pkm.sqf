@@ -107,3 +107,4 @@ comment "Add items";
 this linkItem "ItemMap";
 this linkItem "ItemCompass";
 this linkItem "ItemWatch";
+this linkItem "tf_anprc154";

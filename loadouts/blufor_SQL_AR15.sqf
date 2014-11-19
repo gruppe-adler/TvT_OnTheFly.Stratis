@@ -1,3 +1,5 @@
+this = _this select 0;
+
 comment "Exported from Arsenal by XiviD";
 
 comment "Remove existing items";
@@ -11,9 +13,17 @@ removeHeadgear this;
 removeGoggles this;
 
 comment "Add containers";
+if (TROPENTARN) then {
+this forceAddUniform "ARC_GER_Tropentarn_Uniform";
+} else {
 this forceAddUniform "ARC_GER_Flecktarn_Uniform";
+};
 for "_i" from 1 to 2 do {this addItemToUniform "hlc_30rnd_556x45_EPR";};
+if (TROPENTARN) then {
+this addVest "ARC_GER_Tropentarn_Plate_Carrier_H";
+} else {
 this addVest "ARC_GER_Flecktarn_Plate_Carrier_H";
+};
 this addItemToVest "AGM_EarBuds";
 for "_i" from 1 to 2 do {this addItemToVest "AGM_CableTie";};
 for "_i" from 1 to 3 do {this addItemToVest "11Rnd_45ACP_Mag";};
@@ -23,7 +33,11 @@ this addItemToVest "AGM_HandFlare_White";
 this addItemToVest "B_IR_Grenade";
 for "_i" from 1 to 2 do {this addItemToVest "Chemlight_blue";};
 for "_i" from 1 to 7 do {this addItemToVest "hlc_30rnd_556x45_EPR";};
+if (TROPENTARN) then {
+this addHeadgear "ARC_GER_Tropentarn_Helmet";
+} else {
 this addHeadgear "ARC_GER_Flecktarn_Helmet";
+};
 
 comment "Add weapons";
 this addWeapon "hlc_rifle_bcmjack";
@@ -36,7 +50,6 @@ comment "Add items";
 this linkItem "ItemMap";
 this linkItem "ItemCompass";
 this linkItem "AGM_Altimeter";
-this linkItem "tf_anprc152_2";
 this linkItem "ItemGPS";
 this linkItem "NVGoggles_OPFOR";
-
+this linkItem "tf_anprc152";

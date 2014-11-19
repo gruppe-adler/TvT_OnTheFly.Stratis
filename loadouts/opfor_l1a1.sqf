@@ -108,3 +108,4 @@ this linkItem "ItemMap";
 this linkItem "ItemCompass";
 this linkItem "ItemWatch";
 this linkItem "ItemGPS";
+this linkItem "tf_anprc154";

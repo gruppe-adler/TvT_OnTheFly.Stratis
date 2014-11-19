@@ -1,3 +1,5 @@
+this = _this select 0;
+
 comment "Exported from Arsenal by XiviD";
 
 comment "Remove existing items";
@@ -11,10 +13,18 @@ removeHeadgear this;
 removeGoggles this;
 
 comment "Add containers";
+if (TROPENTARN) then {
+this forceAddUniform "ARC_GER_Tropentarn_Uniform";
+} else {
 this forceAddUniform "ARC_GER_Flecktarn_Uniform";
+};
 this addItemToUniform "hlc_30Rnd_9x19_B_MP5";
 this addItemToUniform "hlc_30Rnd_9x19_GD_MP5";
+if (TROPENTARN) then {
+this addVest "ARC_GER_Tropentarn_Plate_Carrier_H";
+} else {
 this addVest "ARC_GER_Flecktarn_Plate_Carrier_H";
+};
 this addItemToVest "AGM_EarBuds";
 for "_i" from 1 to 2 do {this addItemToVest "AGM_CableTie";};
 for "_i" from 1 to 4 do {this addItemToVest "AGM_Bandage";};
@@ -26,12 +36,20 @@ this addItemToVest "B_IR_Grenade";
 for "_i" from 1 to 2 do {this addItemToVest "Chemlight_blue";};
 for "_i" from 1 to 2 do {this addItemToVest "hlc_30Rnd_9x19_B_MP5";};
 for "_i" from 1 to 4 do {this addItemToVest "hlc_30Rnd_9x19_GD_MP5";};
+if (TROPENTARN) then {
+this addBackpack "ARC_GER_Backpack_Tropentarn_Med";
+} else {
 this addBackpack "ARC_GER_Backpack_Flecktarn_Med";
+};
 for "_i" from 1 to 80 do {this addItemToBackpack "AGM_Bandage";};
 for "_i" from 1 to 20 do {this addItemToBackpack "AGM_Morphine";};
 for "_i" from 1 to 19 do {this addItemToBackpack "AGM_Epipen";};
 for "_i" from 1 to 2 do {this addItemToBackpack "AGM_Bloodbag";};
+if (TROPENTARN) then {
+this addHeadgear "ARC_GER_Tropentarn_Helmet_simple";
+} else {
 this addHeadgear "ARC_GER_Flecktarn_Helmet_simple";
+};
 
 comment "Add weapons";
 this addWeapon "hlc_smg_mp5a4";
@@ -43,6 +61,5 @@ comment "Add items";
 this linkItem "ItemMap";
 this linkItem "ItemCompass";
 this linkItem "AGM_Altimeter";
-this linkItem "tf_anprc152_2";
 this linkItem "NVGoggles_OPFOR";
-
+this linkItem "tf_anprc152";
