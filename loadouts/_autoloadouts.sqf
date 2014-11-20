@@ -52,7 +52,7 @@ tryLoadout = {
 	_loadoutScriptPath = "loadouts\" + _loadoutFileName + ".sqf";
 
 	if (_type == _loadOutClass) then {
-		diag_log format ["applying loadout %1 for %2 (%3) ...", _loadoutScriptPath, name _unit, _loadOutClass];
+		diag_log format ["applying loadout %1 for %2 (%3, %4) ...", _loadoutScriptPath, name _unit, _loadOutClass];
 		[
 			[
 				[_unit],
@@ -72,6 +72,7 @@ setLoadout = {
 	diag_log format ["searching for loadout for %2 (%1)...", _type, name _this];
 	{
 		[_x, _this] call tryLoadout;
+
 	} forEach _loadouts;
 };
 
@@ -81,10 +82,5 @@ onPlayersConnected = {
 	} forEach ([] call getNewlyJoinedPlayers);
 };
 
-[
-	"autoloadout_handler",
-	"onPlayerConnected",
-	onPlayersConnected
-] call BIS_fnc_addStackedEventHandler;
 
 [] call onPlayersConnected;
