@@ -63,7 +63,7 @@ respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger sele
 		while {true} do {
 			if ((OPFOR_TELEPORTED) && (BLUFOR_TELEPORTED)) then {
 
-			_pos =  getPosATL respawn_helper;
+			_pos =  [(getPosATL respawn_helper select 0), (getPosATL respawn_helper select 1), 0];
 			sector_trigger setPosATL _pos;
 			["sector_moduleWEST", _pos] call BIS_fnc_taskSetDestination;
 			sleep 1;
