@@ -30,7 +30,7 @@ _unit addAction["<t color='#d18d1f'>Activate Spectator Cam</t> (right click to e
 // _unit doesnt seem to work on dedicated?! trying player
 [player] spawn {while {true} do {
 	_obj = _this select 0;
-	_respawn_above_objective = [(getPosATL respawn_helper select 0), (getPosATL respawn_helper select 1), 200];
+	_respawn_above_objective = [(getPosATL sector_trigger select 0), (getPosATL sector_trigger select 1), 200];
 		while {true} do {
 		_obj setvelocity [0,0,0];
 		_obj setPosATL _respawn_above_objective;
