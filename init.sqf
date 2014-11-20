@@ -17,10 +17,6 @@ if (isServer) then {
 
 };
 
-
-// loadout call - giving each unit the appropriate sqf file
-[] execVM "loadouts\_loadoutMapping.sqf";
-
 // restriction of vehicles for blufor
 if ((paramsArray select 1) == 0) then {
 	RESTRICTED_VEHICLES = true;
@@ -71,3 +67,7 @@ respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger sele
 		};
 	};
 };
+
+waitUntil {BIS_fnc_init}; 
+// loadout call - giving each unit the appropriate sqf file
+[] execVM "loadouts\_loadoutMapping.sqf";
