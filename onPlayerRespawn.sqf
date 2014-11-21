@@ -18,7 +18,7 @@ removeAllAssignedItems _unit;
 
 // make invisible
 fnc_hide = {
-(_this select 0) hideObject (_this select 1);
+(_this select 0) hideObjectGlobal (_this select 1);
 };
 
 [[_unit, true],"fnc_hide", true, false, true] call BIS_fnc_MP; 
