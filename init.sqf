@@ -68,6 +68,8 @@ respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger sele
 	};
 };
 
-waitUntil {BIS_fnc_init}; 
+
 // loadout call - giving each unit the appropriate sqf file
-[] execVM "loadouts\_loadoutMapping.sqf";
+if !(isDedicated) then { 
+[] execVM "loadouts\_client.sqf";
+};
