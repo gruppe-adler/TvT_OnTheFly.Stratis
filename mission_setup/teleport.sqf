@@ -22,7 +22,7 @@ teleportOpforGroup = {
 	if (side player == east && !OPFOR_TELEPORTED) then {
 
 		
-		{_emptyPosition_unit = pos findEmptyPosition [0,50];
+		{_emptyPosition_unit = pos findEmptyPosition [10,50];
 		_x setPos _emptyPosition_unit;  } forEach units group player;
 		openMap false;
 		
@@ -59,7 +59,7 @@ teleportOpforGroup = {
 
 		// teleport und gucken, ob posi frei ist
 		{
-		_emptyPosition_unit = pos findEmptyPosition [5,60];
+		_emptyPosition_unit = pos findEmptyPosition [10,50];
 		_x setPos _emptyPosition_unit; 
 		} forEach units group player;
 		
