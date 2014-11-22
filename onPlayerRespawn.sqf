@@ -23,7 +23,7 @@ fnc_hide = {
 
 [[_unit, true],"fnc_hide", true, true, true] call BIS_fnc_MP; 
 
-_unit addAction["<t color='#d18d1f'>Activate Spectator Cam</t> (right click to exit)",{[[[_unit], "spectator\callSpectator.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, false, "","_this == _target"];
+_unit addAction["<t color='#d18d1f'>Activate Spectator Cam</t> (right click to exit)","spectator\callSpectator.sqf", _Args, 1, false, false, "","_this == _target"];
 
 
 // make floating forever

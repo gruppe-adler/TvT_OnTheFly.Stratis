@@ -78,7 +78,7 @@ comment "Add containers";
 if (TROPENTARN) then {
 [[{}, this forceAddUniform randUniformTaliban], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 } else {
-[[{}, this forceAddUniform randUniformEastern], "BIS_fnc_spawn", true] call BIS_fnc_MP;;
+[[{}, this forceAddUniform randUniformEastern], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 };
 for "_i" from 1 to 2 do {this addItemToUniform "16Rnd_9x21_Mag";};
 for "_i" from 1 to 4 do {this addItemToUniform "AGM_Bandage";};
@@ -195,7 +195,7 @@ comment "Add containers";
 if (TROPENTARN) then {
 [[{}, this forceAddUniform randUniformTaliban], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 } else {
-[[{}, this forceAddUniform randUniformEastern], "BIS_fnc_spawn", true] call BIS_fnc_MP;;
+[[{}, this forceAddUniform randUniformEastern], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 };
 for "_i" from 1 to 4 do {this addItemToUniform "AGM_Bandage";};
 for "_i" from 1 to 2 do {this addItemToUniform "16Rnd_9x21_Mag";};
@@ -314,7 +314,7 @@ comment "Add containers";
 if (TROPENTARN) then {
 [[{}, this forceAddUniform randUniformTaliban], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 } else {
-[[{}, this forceAddUniform randUniformEastern], "BIS_fnc_spawn", true] call BIS_fnc_MP;;
+[[{}, this forceAddUniform randUniformEastern], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 };
 for "_i" from 1 to 4 do {this addItemToUniform "AGM_Bandage";};
 this addItemToUniform "16Rnd_9x21_Mag";
@@ -430,7 +430,7 @@ comment "Add containers";
 if (TROPENTARN) then {
 [[{}, this forceAddUniform randUniformTaliban], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 } else {
-[[{}, this forceAddUniform randUniformEastern], "BIS_fnc_spawn", true] call BIS_fnc_MP;;
+[[{}, this forceAddUniform randUniformEastern], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 };
 for "_i" from 1 to 4 do {this addItemToUniform "AGM_Bandage";};
 for "_i" from 1 to 2 do {this addItemToUniform "16Rnd_9x21_Mag";};
@@ -551,7 +551,7 @@ comment "Add containers";
 if (TROPENTARN) then {
 [[{}, this forceAddUniform randUniformTaliban], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 } else {
-[[{}, this forceAddUniform randUniformEastern], "BIS_fnc_spawn", true] call BIS_fnc_MP;;
+[[{}, this forceAddUniform randUniformEastern], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 };
 for "_i" from 1 to 4 do {this addItemToUniform "AGM_Bandage";};
 this addItemToUniform "16Rnd_9x21_Mag";
@@ -676,7 +676,7 @@ comment "Add containers";
 if (TROPENTARN) then {
 [[{}, this forceAddUniform randUniformTaliban], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 } else {
-[[{}, this forceAddUniform randUniformEastern], "BIS_fnc_spawn", true] call BIS_fnc_MP;;
+[[{}, this forceAddUniform randUniformEastern], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 };
 for "_i" from 1 to 4 do {this addItemToUniform "AGM_Bandage";};
 this addItemToUniform "16Rnd_9x21_Mag";

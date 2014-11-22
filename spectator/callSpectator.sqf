@@ -1,3 +1,1 @@
-_unit = _this select 0;
-
-[_unit] call BIS_fnc_cameraOld;
+[player] call BIS_fnc_cameraOld;

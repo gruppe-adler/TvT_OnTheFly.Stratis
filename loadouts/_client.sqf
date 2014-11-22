@@ -21,7 +21,7 @@ waitUntil { !IsNull Player };
             case "B_Soldier_TL_F": {[player] call blufor_SQF_G3;};
             case "B_G_Soldier_TL_F": {[player] call blufor_SQF_G3;};
             case "B_recon_TL_F": {[player] call blufor_SQF_G3;};
-            case "B_soldier_SL_F": {[player] call blufor_SQF_G3;};
+            case "B_Soldier_SL_F": {[player] call blufor_SQF_G3;};
             case "B_G_Soldier_SL_F": {[player] call blufor_SQF_G3;};
             
 
