@@ -6,6 +6,8 @@ OPFOR_TELEPORTED = false;
 BLUFOR_TELEPORTED = false;
 firstspawn = false;
 
+setTimeMultiplier (paramsArray select 5);
+
 
 if (isServer) then {
 	MISSION_COMPLETED = false;

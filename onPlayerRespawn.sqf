@@ -40,6 +40,13 @@ _unit addAction["<t color='#d18d1f'>Activate Spectator Cam</t> (right click to e
 	};
 };
 
-sleep 2;
+sleep 1;
 // start spec cam
 [_unit] call BIS_fnc_cameraOld;
+
+(findDisplay 46) displayAddEventHandler ["MouseButtonDown", "if (_this select 1 == 1) then {call mouseclickhint};"];
+
+mouseclickhint = {
+	
+	['Rechtsklick beendet die Cam. Starte sie über Mausrad neu.'] call AGM_Core_fnc_displayTextStructured;
+};

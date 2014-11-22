@@ -60,6 +60,12 @@ class Params
 		texts[] = {"4km","5km","6km"};
 		default = 4000;
 	};
+
+	class Zeitbeschleunigung
+	{
+		title = "Zeitbeschleunigung";
+		values[] = {1,2,4,8,12};
+		texts[] = {"normal","2h in 1h","4h in 1h","8h in 1h","12h in 1h"};
+		default = 4;
+	};
 };
-
-

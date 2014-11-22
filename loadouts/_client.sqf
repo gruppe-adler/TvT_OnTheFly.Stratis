@@ -89,5 +89,3 @@ waitUntil { !IsNull Player };
             case "O_Soldier_A_F": {[player] call opfor_akfamily;};
             };
        };
-
-};  

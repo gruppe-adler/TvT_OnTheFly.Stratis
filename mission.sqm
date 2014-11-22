@@ -31,7 +31,6 @@ class Mission
 		"agm_medical",
 		"agm_logistics",
 		"task_force_radio_items",
-		"A3_Modules_F_Curator_Environment",
 		"A3_Modules_F_Events",
 		"A3_Missions_F_Curator",
 		"A3_Modules_F",
@@ -58,7 +57,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=18;
+		items=17;
 		class Item0
 		{
 			side="WEST";
@@ -77,7 +76,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.5;
 					text="blufor_teamlead";
-					description="Team Leader (G3)";
+					description="Team Leader (G3) (must be selected)";
 					syncId=0;
 					synchronizations[]={2};
 				};
@@ -247,7 +246,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.5;
 					text="opfor_teamlead";
-					description="Boss";
+					description="Boss (must be selected)";
 					syncId=1;
 					synchronizations[]={2};
 				};
@@ -707,34 +706,6 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={60.478912,30.463835,242.86365};
-					class args
-					{
-						items=1;
-						class Item0
-						{
-							value="12";
-							parentCls="ModuleTimeMultiplier_F";
-							typeName="TimeMultiplier";
-						};
-					};
-					id=30;
-					side="LOGIC";
-					vehicle="ModuleTimeMultiplier_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item9
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
 					position[]={45.548775,29.777176,142.05054};
 					class args
 					{
@@ -752,7 +723,7 @@ class Mission
 							typeName="Sentence";
 						};
 					};
-					id=31;
+					id=30;
 					side="LOGIC";
 					vehicle="ModuleGenericRadio_F";
 					leader=1;
@@ -763,7 +734,7 @@ class Mission
 				};
 			};
 		};
-		class Item10
+		class Item9
 		{
 			side="LOGIC";
 			class Vehicles
@@ -788,7 +759,7 @@ class Mission
 							typeName="Sentence";
 						};
 					};
-					id=32;
+					id=31;
 					side="LOGIC";
 					vehicle="ModuleGenericRadio_F";
 					leader=1;
@@ -796,6 +767,26 @@ class Mission
 					skill=0.60000002;
 					syncId=4;
 					synchronizations[]={11};
+				};
+			};
+		};
+		class Item10
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={383.78769,31.389662,247.00305};
+					id=32;
+					side="LOGIC";
+					vehicle="ModuleMPTypeSectorControl_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=5;
+					synchronizations[]={8,9,7};
 				};
 			};
 		};
@@ -807,15 +798,14 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={383.78769,31.389662,247.00305};
+					position[]={383.12677,30.543133,287.08667};
 					id=33;
 					side="LOGIC";
-					vehicle="ModuleMPTypeSectorControl_F";
+					vehicle="LocationArea_F";
 					leader=1;
-					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=5;
-					synchronizations[]={8,9,7};
+					syncId=6;
+					synchronizations[]={9,10};
 				};
 			};
 		};
@@ -827,14 +817,14 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={383.12677,30.543133,287.08667};
+					position[]={407.99997,31.954733,212.70203};
 					id=34;
 					side="LOGIC";
-					vehicle="LocationArea_F";
+					vehicle="SideBLUFOR_F";
 					leader=1;
 					skill=0.60000002;
-					syncId=6;
-					synchronizations[]={9,10};
+					syncId=7;
+					synchronizations[]={5};
 				};
 			};
 		};
@@ -846,27 +836,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={407.99997,31.954733,212.70203};
-					id=35;
-					side="LOGIC";
-					vehicle="SideBLUFOR_F";
-					leader=1;
-					skill=0.60000002;
-					syncId=7;
-					synchronizations[]={5};
-				};
-			};
-		};
-		class Item14
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
 					position[]={361.38196,31.188242,219.94934};
-					id=36;
+					id=35;
 					side="LOGIC";
 					vehicle="SideOPFOR_F";
 					leader=1;
@@ -876,7 +847,7 @@ class Mission
 				};
 			};
 		};
-		class Item15
+		class Item14
 		{
 			side="LOGIC";
 			class Vehicles
@@ -979,7 +950,7 @@ class Mission
 							typeName="CostPlayers";
 						};
 					};
-					id=37;
+					id=36;
 					side="LOGIC";
 					vehicle="ModuleSector_F";
 					leader=1;
@@ -991,7 +962,7 @@ class Mission
 				};
 			};
 		};
-		class Item16
+		class Item15
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1028,7 +999,7 @@ class Mission
 							typeName="Identity";
 						};
 					};
-					id=38;
+					id=37;
 					side="LOGIC";
 					vehicle="ModuleHQ_F";
 					leader=1;
@@ -1037,7 +1008,7 @@ class Mission
 				};
 			};
 		};
-		class Item17
+		class Item16
 		{
 			side="LOGIC";
 			class Vehicles
@@ -1074,7 +1045,7 @@ class Mission
 							typeName="Identity";
 						};
 					};
-					id=39;
+					id=38;
 					side="LOGIC";
 					vehicle="ModuleHQ_F";
 					leader=1;
