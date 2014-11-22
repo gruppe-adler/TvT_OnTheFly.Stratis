@@ -1,9 +1,6 @@
-/*loadouts\loadouts_blufor.sqf*/
-
-blufor_AR15_1 = 
-{
+blufor_AR15_1 = {
   
-	//[[{}, this forceAddUniform "Uniform Classname Here"], "BIS_fnc_spawn", true] call BIS_fnc_MP; //attention to the syntax here. This, and only this syntax worked for me, even with other resources showing differently
+	
 	this = _this select 0;
 
 	comment "Exported from Arsenal by XiviD";
@@ -18,16 +15,16 @@ blufor_AR15_1 =
 	removeHeadgear this;
 	removeGoggles this;
 
-	sleep 0.3;
+	
 
 	randomAR = ["hlc_rifle_bcmjack","hlc_rifle_RU556","hlc_rifle_RU5562"] call BIS_fnc_selectRandom;
 
 	comment "Add containers";
 
 	if (TROPENTARN) then {
-	[[{}, this forceAddUniform "ARC_GER_Tropentarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	} else {
-	[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;;
+		[[{}, this forceAddUniform "ARC_GER_Tropentarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+		} else {
+		[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	};
 
 	for "_i" from 1 to 2 do {this addItemToUniform "AGM_Bandage";};
@@ -47,9 +44,9 @@ blufor_AR15_1 =
 	this addItemToVest "B_IR_Grenade";
 	for "_i" from 1 to 2 do {this addItemToVest "Chemlight_blue";};
 	if (TROPENTARN) then {
-	this addHeadgear "ARC_GER_Tropentarn_Helmet_simple";
-	} else {
-	this addHeadgear "ARC_GER_Flecktarn_Helmet_simple";
+		this addHeadgear "ARC_GER_Tropentarn_Helmet_simple";
+		} else {
+		this addHeadgear "ARC_GER_Flecktarn_Helmet_simple";
 	};
 
 	comment "Add weapons";
@@ -67,10 +64,8 @@ blufor_AR15_1 =
 
 };
 
-blufor_G3_1 = 
-{
+blufor_G3_1 = {
   
-	//[[{}, this forceAddUniform "Uniform Classname Here"], "BIS_fnc_spawn", true] call BIS_fnc_MP; //attention to the syntax here. This, and only this syntax worked for me, even with other resources showing differently
 	this = _this select 0;
 
 	comment "Exported from Arsenal by XiviD";
@@ -85,7 +80,7 @@ blufor_G3_1 =
 	removeHeadgear this;
 	removeGoggles this;
 
-	sleep 0.3;
+	
 
 	randomG3 = ["hlc_rifle_g3ka4","hlc_rifle_g3ka4"] call BIS_fnc_selectRandom;
 
@@ -94,7 +89,7 @@ blufor_G3_1 =
 	if (TROPENTARN) then {
 	[[{}, this forceAddUniform "ARC_GER_Tropentarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	} else {
-	[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;;
+	[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	};
 	this addItemToUniform "hlc_20rnd_762x51_b_G3";
 	this addItemToUniform "hlc_20rnd_762x51_T_G3";
@@ -153,13 +148,13 @@ blufor_Medic_MP5A4 =
 	removeHeadgear this;
 	removeGoggles this;
 
-	sleep 0.3;
+	
 
 	comment "Add containers";
 	if (TROPENTARN) then {
 	[[{}, this forceAddUniform "ARC_GER_Tropentarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	} else {
-	[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;;
+	[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	};
 	this addItemToUniform "hlc_30Rnd_9x19_B_MP5";
 	this addItemToUniform "hlc_30Rnd_9x19_GD_MP5";
@@ -227,13 +222,13 @@ blufor_Medic_MP5SD =
 	removeHeadgear this;
 	removeGoggles this;
 
-	sleep 0.3;
+	
 
 	comment "Add containers";
 	if (TROPENTARN) then {
 	[[{}, this forceAddUniform "ARC_GER_Tropentarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	} else {
-	[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;;
+	[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	};
 	for "_i" from 1 to 2 do {this addItemToUniform "hlc_30Rnd_9x19_GD_MP5";};
 	if (TROPENTARN) then {
@@ -298,12 +293,13 @@ blufor_MG_M60 = {
 	removeHeadgear this;
 	removeGoggles this;
 
-	sleep 0.3;
+	
 
 	comment "Add containers";
+	if (TROPENTARN) then {
 	[[{}, this forceAddUniform "ARC_GER_Tropentarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	} else {
-	[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;;
+	[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	};
 	this addItemToUniform "11Rnd_45ACP_Mag";
 	if (TROPENTARN) then {
@@ -359,9 +355,10 @@ blufor_MM_M14 = {
 	removeGoggles this;
 
 	comment "Add containers";
+	if (TROPENTARN) then {
 	[[{}, this forceAddUniform "ARC_GER_Tropentarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	} else {
-	[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;;
+	[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	};
 	this addItemToUniform "hlc_20Rnd_762x51_B_M14";
 	this addItemToUniform "hlc_20Rnd_762x51_T_M14";
@@ -416,12 +413,13 @@ blufor_SQF_G3 = {
 	removeHeadgear this;
 	removeGoggles this;
 
-	sleep 0.3;
+	
 
 	comment "Add containers";
+	if (TROPENTARN) then {
 	[[{}, this forceAddUniform "ARC_GER_Tropentarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	} else {
-	[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;;
+	[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	};
 	for "_i" from 1 to 2 do {this addItemToUniform "AGM_Bandage";};
 	this addItemToUniform "hlc_20rnd_762x51_b_G3";
@@ -481,12 +479,13 @@ blufor_SQL_AR15 = {
 	removeHeadgear this;
 	removeGoggles this;
 
-	sleep 0.3;
+	
 
 	comment "Add containers";
+	if (TROPENTARN) then {
 	[[{}, this forceAddUniform "ARC_GER_Tropentarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	} else {
-	[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;;
+	[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	};
 	for "_i" from 1 to 2 do {this addItemToUniform "hlc_30rnd_556x45_EPR";};
 	if (TROPENTARN) then {

@@ -22,6 +22,8 @@ waitUntil { !IsNull Player };
             case "B_G_Soldier_TL_F": {[player] call blufor_SQF_G3;};
             case "B_recon_TL_F": {[player] call blufor_SQF_G3;};
             case "B_soldier_SL_F": {[player] call blufor_SQF_G3;};
+            case "B_G_Soldier_SL_F": {[player] call blufor_SQF_G3;};
+            
 
             case "B_G_Soldier_GL_F": {[player] call blufor_G3_1;};
             case "B_Soldier_GL_F": {[player] call blufor_G3_1;};
@@ -87,5 +89,6 @@ waitUntil { !IsNull Player };
             case "O_soldierU_A_F": {[player] call opfor_akfamily;};
             case "O_G_Soldier_A_F": {[player] call opfor_akfamily;};
             case "O_Soldier_A_F": {[player] call opfor_akfamily;};
+            default { hintSilent "something went wrong with loadout -.O"};
             };
        };

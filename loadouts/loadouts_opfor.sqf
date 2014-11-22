@@ -14,7 +14,7 @@ removeBackpack this;
 removeHeadgear this;
 removeGoggles this;
 
-sleep 0.3;
+
 
 randUniformEastern = 
 ["U_CAF_AG_EEUR_FATIGUES_01",
@@ -189,7 +189,7 @@ removeBackpack this;
 removeHeadgear this;
 removeGoggles this;
 
-sleep 0.3;
+
 
 comment "Add containers";
 if (TROPENTARN) then {
@@ -308,7 +308,7 @@ removeBackpack this;
 removeHeadgear this;
 removeGoggles this;
 
-sleep 0.3;
+
 
 comment "Add containers";
 if (TROPENTARN) then {
@@ -424,7 +424,7 @@ removeBackpack this;
 removeHeadgear this;
 removeGoggles this;
 
-sleep 0.3;
+
 
 comment "Add containers";
 if (TROPENTARN) then {
@@ -545,7 +545,7 @@ removeBackpack this;
 removeHeadgear this;
 removeGoggles this;
 
-sleep 0.3;
+
 
 comment "Add containers";
 if (TROPENTARN) then {
@@ -606,7 +606,7 @@ removeBackpack this;
 removeHeadgear this;
 removeGoggles this;
 
-sleep 0.3;
+
 
 ak74family = 
 ["hlc_rifle_ak74",
