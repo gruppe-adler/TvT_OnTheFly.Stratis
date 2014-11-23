@@ -46,11 +46,15 @@ enableSentences false;														//Autospotten
 if (player == opfor_teamlead) then 												
 {
 [player, [0, 1, 3, 0, 0, 0, 0, 0, 3, 1]] call plank_deploy_fnc_init;
+player setVariable ["buildReady", false];
+buildReadyAction1 = player addAction["<t color='#ff5555'>End Placement</t>",{player setVariable ["buildReady", true]; player removeAction buildReadyAction1;}];
 };
 
 if (player == opfor_engi) then 												
 {
 [player, [1, 0, 3, 0, 0, 0, 0, 0, 3, 0]] call plank_deploy_fnc_init;
+player setVariable ["buildReady", false];
+buildReadyAction2 = player addAction["<t color='#ff5555'>End Placement</t>",{player setVariable ["buildReady", true]; player removeAction buildReadyAction2;}];
 };
 
 if (isServer) then { setDate [2035, 6, 24, (paramsArray select 0), 1]; };	//Zeit

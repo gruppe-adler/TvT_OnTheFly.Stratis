@@ -70,9 +70,7 @@ teleportOpforGroup = {
 		BLUFOR_TELEPORTED = TRUE;
 		publicVariable "BLUFOR_TELEPORTED";
 
-		_blufor_marker_start = createMarkerLocal ["blufor_marker_start", pos];
-		_blufor_marker_start setMarkerTypeLocal "hd_start";
-		_blufor_marker_start setMarkerColorLocal "ColorWEST";
+		[[[],"mission_setup\blufor_spawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 
 	};
 };

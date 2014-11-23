@@ -182,7 +182,7 @@ plank_deploy_fnc_addFortificationAction = {
     FUN_ARGS_3(_unit,_count,_fortIndex);
 
     if (_count > 0 && {_unit getVariable ["plank_deploy_fortIndex", -1] != _fortIndex}) then {
-        _unit addAction [format ["Place %1 (%2 left)", GET_FORT_DISPLAY_NAME(_fortIndex), _count], "plank\place_fort_action.sqf", [_fortIndex], _fortIndex + 50, false, false, "", "driver _target == _this"];
+        _unit addAction [format ["Place %1 (%2 left)", GET_FORT_DISPLAY_NAME(_fortIndex), _count], "plank\place_fort_action.sqf", [_fortIndex], _fortIndex + 50, false, false, "", "driver _target == _this && !(_target getVariable['buildReady',true])"];
     };
 };
 
