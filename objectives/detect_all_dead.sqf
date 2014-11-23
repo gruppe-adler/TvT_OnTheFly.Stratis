@@ -6,7 +6,7 @@
 [] spawn {
 	
 	while{true} do {
-	winConditionBlufor = (({side _x == east} count playableUnits) == 0);
+	winConditionBlufor = (({side _x == east} count playableUnits) + ({side _x == east} count switchableUnits) == 0); 
     sleep 3;
     if (winConditionBlufor || MISSION_COMPLETED) then {
       if (side player == west) then {
@@ -32,7 +32,7 @@
 [] spawn {
 	
 	while{true} do {
-	winConditionOpfor = (({side _x == west} count playableUnits)  == 0);
+	winConditionOpfor = (({side _x == west} count playableUnits)  + ({side _x == west} count switchableUnits) == 0); 
     sleep 3;
     if (winConditionOpfor) then {
     	if (side player == east) then {
