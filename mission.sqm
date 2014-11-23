@@ -12,13 +12,11 @@ class Mission
 		"agm_logistics",
 		"task_force_radio_items",
 		"A3_Modules_F_Curator_Environment",
-		"A3_Modules_F_Events",
 		"A3_Soft_F_HEMTT",
 		"aia_desert_e_config",
 		"A3_Missions_F_Curator",
 		"A3_Modules_F",
 		"A3_Modules_F_Multiplayer",
-		"A3_Modules_F_Intel",
 		"A3_Characters_F_OPFOR"
 	};
 	addOnsAuto[]=
@@ -31,11 +29,9 @@ class Mission
 		"agm_medical",
 		"agm_logistics",
 		"task_force_radio_items",
-		"A3_Modules_F_Events",
 		"A3_Missions_F_Curator",
 		"A3_Modules_F",
 		"A3_Modules_F_Multiplayer",
-		"A3_Modules_F_Intel",
 		"aia_desert_e_config"
 	};
 	randomSeed=11087059;
@@ -57,7 +53,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=17;
+		items=13;
 		class Item0
 		{
 			side="WEST";
@@ -246,7 +242,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.5;
 					text="opfor_teamlead";
-					description="Boss (must be selected)";
+					description="Boss (FAL) (must be selected)";
 					syncId=1;
 					synchronizations[]={2};
 				};
@@ -260,7 +256,7 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
-					description="Rifleman";
+					description="Rifleman (AK)";
 				};
 				class Item2
 				{
@@ -272,7 +268,7 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
-					description="AT-Specialist";
+					description="AT-Specialist (AKM+RPG)";
 				};
 				class Item3
 				{
@@ -284,7 +280,7 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
-					description="Team Leader";
+					description="Team Leader (FAL)";
 				};
 				class Item4
 				{
@@ -296,7 +292,7 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
-					description="Rifleman";
+					description="Rifleman (AK)";
 				};
 				class Item5
 				{
@@ -308,7 +304,7 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
-					description="Rifleman";
+					description="Rifleman (AK)";
 				};
 				class Item6
 				{
@@ -320,7 +316,7 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
-					description="Rifleman";
+					description="Rifleman (AK)";
 				};
 				class Item7
 				{
@@ -332,7 +328,8 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
-					description="Doc";
+					text="opfor_engi";
+					description="Doc (AKS74U)";
 				};
 				class Item8
 				{
@@ -344,7 +341,7 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
-					description="MG-Gunner";
+					description="MG-Gunner (PKM)";
 				};
 				class Item9
 				{
@@ -356,7 +353,7 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
-					description="Marksman";
+					description="Marksman (M14)";
 				};
 			};
 		};
@@ -706,31 +703,15 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={45.548775,29.777176,142.05054};
-					class args
-					{
-						items=2;
-						class Item0
-						{
-							value="1";
-							parentCls="ModuleGenericRadio_F";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="SentGenCmdSeize";
-							parentCls="ModuleGenericRadio_F";
-							typeName="Sentence";
-						};
-					};
+					position[]={383.78769,31.389662,247.00305};
 					id=30;
 					side="LOGIC";
-					vehicle="ModuleGenericRadio_F";
+					vehicle="ModuleMPTypeSectorControl_F";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
 					syncId=3;
-					synchronizations[]={12};
+					synchronizations[]={6,7,5};
 				};
 			};
 		};
@@ -742,31 +723,14 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={95.286476,30.90719,144.86511};
-					class args
-					{
-						items=2;
-						class Item0
-						{
-							value="0";
-							parentCls="ModuleGenericRadio_F";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="SentGenCmdDefend";
-							parentCls="ModuleGenericRadio_F";
-							typeName="Sentence";
-						};
-					};
+					position[]={383.12677,30.543133,287.08667};
 					id=31;
 					side="LOGIC";
-					vehicle="ModuleGenericRadio_F";
+					vehicle="LocationArea_F";
 					leader=1;
-					lock="UNLOCKED";
 					skill=0.60000002;
 					syncId=4;
-					synchronizations[]={11};
+					synchronizations[]={7,8};
 				};
 			};
 		};
@@ -778,15 +742,14 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={383.78769,31.389662,247.00305};
+					position[]={407.99997,31.954733,212.70203};
 					id=32;
 					side="LOGIC";
-					vehicle="ModuleMPTypeSectorControl_F";
+					vehicle="SideBLUFOR_F";
 					leader=1;
-					lock="UNLOCKED";
 					skill=0.60000002;
 					syncId=5;
-					synchronizations[]={8,9,7};
+					synchronizations[]={3};
 				};
 			};
 		};
@@ -798,56 +761,18 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={383.12677,30.543133,287.08667};
-					id=33;
-					side="LOGIC";
-					vehicle="LocationArea_F";
-					leader=1;
-					skill=0.60000002;
-					syncId=6;
-					synchronizations[]={9,10};
-				};
-			};
-		};
-		class Item12
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={407.99997,31.954733,212.70203};
-					id=34;
-					side="LOGIC";
-					vehicle="SideBLUFOR_F";
-					leader=1;
-					skill=0.60000002;
-					syncId=7;
-					synchronizations[]={5};
-				};
-			};
-		};
-		class Item13
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
 					position[]={361.38196,31.188242,219.94934};
-					id=35;
+					id=33;
 					side="LOGIC";
 					vehicle="SideOPFOR_F";
 					leader=1;
 					skill=0.60000002;
-					syncId=8;
-					synchronizations[]={5};
+					syncId=6;
+					synchronizations[]={3};
 				};
 			};
 		};
-		class Item14
+		class Item12
 		{
 			side="LOGIC";
 			class Vehicles
@@ -950,107 +875,15 @@ class Mission
 							typeName="CostPlayers";
 						};
 					};
-					id=36;
+					id=34;
 					side="LOGIC";
 					vehicle="ModuleSector_F";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
 					text="sector_module";
-					syncId=9;
-					synchronizations[]={5,6};
-				};
-			};
-		};
-		class Item15
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={46.148811,30.524775,168.97424};
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="1";
-							parentCls="ModuleHQ_F";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="STR_A3_CfgHQIdentities_Base_0";
-							parentCls="ModuleHQ_F";
-							typeName="Callsign";
-						};
-						class Item2
-						{
-							value="";
-							parentCls="ModuleHQ_F";
-							typeName="CallsignCustom";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="ModuleHQ_F";
-							typeName="Identity";
-						};
-					};
-					id=37;
-					side="LOGIC";
-					vehicle="ModuleHQ_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item16
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={94.827812,30.852858,168.97461};
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="0";
-							parentCls="ModuleHQ_F";
-							typeName="Side";
-						};
-						class Item1
-						{
-							value="STR_A3_CfgHQIdentities_Base_0";
-							parentCls="ModuleHQ_F";
-							typeName="Callsign";
-						};
-						class Item2
-						{
-							value="";
-							parentCls="ModuleHQ_F";
-							typeName="CallsignCustom";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="ModuleHQ_F";
-							typeName="Identity";
-						};
-					};
-					id=38;
-					side="LOGIC";
-					vehicle="ModuleHQ_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
+					syncId=7;
+					synchronizations[]={3,4};
 				};
 			};
 		};
@@ -1073,7 +906,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=3;
+		items=1;
 		class Item0
 		{
 			position[]={383.17856,32.379513,356.94702};
@@ -1086,38 +919,8 @@ class Mission
 			class Effects
 			{
 			};
-			synchronizations[]={6};
-			syncId=10;
-		};
-		class Item1
-		{
-			position[]={96.11232,31.033094,126.48865};
-			a=0;
-			b=0;
-			activationBy="ALPHA";
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="";
-			class Effects
-			{
-			};
 			synchronizations[]={4};
-			syncId=11;
-		};
-		class Item2
-		{
-			position[]={45.943607,29.844145,128.09253};
-			a=0;
-			b=0;
-			activationBy="ALPHA";
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="";
-			class Effects
-			{
-			};
-			synchronizations[]={3};
-			syncId=12;
+			syncId=8;
 		};
 	};
 };
