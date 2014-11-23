@@ -15,8 +15,8 @@ plank_deploy_fortData = [
 
 // Action text                      |  Classname                            |  Distance     |  Direction     |  Direction Range  |  Code
 //--------------------------------------------------------------------------------------------------------------------------------------
-["Small bunker",                        "Land_BagBunker_Small_F",               6,              180,                360,            {}],
-["Bunker",                              "Land_BagBunker_Large_F",               8.5,            180,                60,             {}],
+["Dirt-Trench",                        	"Fort_EnvelopeSmall",            	    4,              0,                  360,            {}],
+["Dirt-Wall",                           "Fort_EnvelopeBig,                      4,              0,                  360,            {}],
 ["Wide Sandbag fence",                  "Land_BagFence_Long_F",                 4,              0,                  360,            {}],
 ["H-Barrier watch tower",               "Land_HBarrierTower_F",                 15,             0,                  360,            {}],
 ["Short Sandbag fence",                 "Land_BagFence_Short_F",                3,              0,                  360,            {}],
