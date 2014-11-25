@@ -706,3 +706,5 @@ this linkItem "ItemWatch";
 this linkItem "tf_anprc154";
 
 };
+
+loadouts_processed = true;
