@@ -655,19 +655,19 @@ class Mission
 						};
 						class Item2
 						{
-							value="tf_rt1523g";
+							value="";
 							parentCls="tfar_ModuleTaskForceRadio";
 							typeName="LRradio";
 						};
 						class Item3
 						{
-							value="tf_anprc152";
+							value="tf_anprc154";
 							parentCls="tfar_ModuleTaskForceRadio";
 							typeName="Radio";
 						};
 						class Item4
 						{
-							value="tf_rf7800str";
+							value="";
 							parentCls="tfar_ModuleTaskForceRadio";
 							typeName="RiflemanRadio";
 						};

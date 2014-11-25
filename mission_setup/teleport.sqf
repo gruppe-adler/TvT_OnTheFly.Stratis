@@ -59,7 +59,8 @@ teleportOpforGroup = {
 
 		// teleport und gucken, ob posi frei ist
 		{
-		_emptyPosition_unit = pos findEmptyPosition [10,50];
+
+		_emptyPosition_unit = pos findEmptyPosition [5,150];
 		_x setPos _emptyPosition_unit; 
 		} forEach units group player;
 		
@@ -70,7 +71,7 @@ teleportOpforGroup = {
 		BLUFOR_TELEPORTED = TRUE;
 		publicVariable "BLUFOR_TELEPORTED";
 
-		[[[],"mission_setup\blufor_spawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+		[[[pos],"mission_setup\blufor_spawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 
 	};
 };
