@@ -17,7 +17,9 @@ class Mission
 		"A3_Missions_F_Curator",
 		"A3_Modules_F",
 		"A3_Modules_F_Multiplayer",
-		"A3_Characters_F_OPFOR"
+		"A3_Characters_F_OPFOR",
+		"A3_Supplies_F_Heli_CargoNets",
+		"A3_Structures_F_Civ_InfoBoards"
 	};
 	addOnsAuto[]=
 	{
@@ -32,6 +34,9 @@ class Mission
 		"A3_Missions_F_Curator",
 		"A3_Modules_F",
 		"A3_Modules_F_Multiplayer",
+		"A3_Soft_F_HEMTT",
+		"A3_Supplies_F_Heli_CargoNets",
+		"A3_Structures_F_Civ_InfoBoards",
 		"aia_desert_e_config"
 	};
 	randomSeed=11087059;
@@ -886,6 +891,46 @@ class Mission
 					synchronizations[]={3,4};
 				};
 			};
+		};
+	};
+	class Vehicles
+	{
+		items=3;
+		class Item0
+		{
+			position[]={265.62689,36.073284,322.51086};
+			azimut=163.319;
+			id=35;
+			side="EMPTY";
+			vehicle="B_Truck_01_covered_F";
+			leader=1;
+			lock="LOCKED";
+			skill=0.5;
+			text="spectator_vehicle";
+		};
+		class Item1
+		{
+			position[]={275.98175,35.670845,334.93628};
+			azimut=163.319;
+			id=36;
+			side="EMPTY";
+			vehicle="B_CargoNet_01_ammo_F";
+			leader=1;
+			skill=0.5;
+			init="clearWeaponCargoGlobal this; clearItemCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this;null = [this] execVM ""loadouts\virtual_arsenal_init.sqf"";";
+			description="Boss (FAL) (must be selected)";
+		};
+		class Item2
+		{
+			position[]={274.27094,35.397308,323.95728};
+			azimut=163.319;
+			id=37;
+			side="EMPTY";
+			vehicle="Land_MapBoard_F";
+			leader=1;
+			skill=0.5;
+			text="whiteboard";
+			init="this addaction [""<t color=""""#93E352"""">"" + ""End Mission now"",{endMission ""END1"";}];";
 		};
 	};
 	class Markers

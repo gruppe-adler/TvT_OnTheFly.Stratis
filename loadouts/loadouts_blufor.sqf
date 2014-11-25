@@ -380,7 +380,7 @@ blufor_MM_M14 = {
 	if (TROPENTARN) then {
 	this addHeadgear "ARC_GER_Tropentarn_booniehat";
 	} else {
-	this addHeadgear "ARC_GER_Tropentarn_booniehat";
+	this addHeadgear "ARC_GER_Flecktarn_booniehat";
 	};
 
 	comment "Add weapons";

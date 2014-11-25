@@ -3,17 +3,18 @@ waitUntil { !isNull player };
         loadouts_processed = false;
         waitUntil { time > 1 };
 
-        hintSilent format ["client sqf loaded, faction of player is %1",faction player];
+        
         switch (faction player) do {
                case "BLU_F":
                {[] call compile preprocessFile "loadouts\loadouts_blufor.sqf";};
                case "OPF_F":
                {[] call compile preprocessFile "loadouts\loadouts_opfor.sqf";};
-               default {hintSilent "ERROR: player is neither OPFOR nor BLUFOR?!";};
+               default {["ERROR: player is neither OPFOR nor BLUFOR?!",typeOf player] call BIS_fnc_logFormat;};
               };
     
             waitUntil {loadouts_processed};
-            hintSilent format ["loadouts processsed for player %1",typeOf player];
+            
+            ["loadouts processed for player %1",typeOf player] call BIS_fnc_logFormat;
             
             switch (typeOf player) do {
 
@@ -91,9 +92,9 @@ waitUntil { !isNull player };
             case "O_soldierU_A_F": {[player] call opfor_akfamily;};
             case "O_G_Soldier_A_F": {[player] call opfor_akfamily;};
             case "O_Soldier_A_F": {[player] call opfor_akfamily;};
-            default { hintSilent "ERROR: something went wrong with loadout -.O";};
+            default {  ["class %1 not found in matching list",typeOf player] call BIS_fnc_logFormat;};
     
-     } else { hintSilent "ERROR: player is not local.. why?";};
-
      };
+
+     } else { ["player %1 is not local to itself -.-", player] call BIS_fnc_logFormat;};
     
