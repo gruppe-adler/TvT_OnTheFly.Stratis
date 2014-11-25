@@ -1,6 +1,6 @@
 waitUntil { !isNull player };
       if (local player) then {
-        
+        loadouts_processed = false;
         waitUntil { time > 1 };
 
         switch (faction player) do {
