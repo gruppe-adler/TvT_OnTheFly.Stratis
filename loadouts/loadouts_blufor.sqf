@@ -524,3 +524,5 @@ blufor_SQL_AR15 = {
 	this linkItem "tf_anprc152";
 
 };
+
+loadouts_processed = true;
