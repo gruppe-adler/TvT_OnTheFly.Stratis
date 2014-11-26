@@ -5,5 +5,13 @@ if (player == blufor_teamlead) then {
 };
 
 if (isServer || isDedicated) then {
-respawn_helper setPos _pos;
+
+	[_pos] spawn { 
+		_pos = _this select 0;
+		while {true} do {
+				sleep 0.5;
+				if (!isNil "respawn_helper") exitWith { respawn_helper setPos _pos; };
+						};
+  	};
 };
+
