@@ -465,6 +465,7 @@ this addHeadgear randHeadGearEastern;
 
 comment "Add weapons";
 this addWeapon "hlc_rifle_M14";
+this addPrimaryWeaponItem "hlc_optic_artel_m14";
 this addWeapon "hgun_Rook40_F";
 
 comment "Add items";

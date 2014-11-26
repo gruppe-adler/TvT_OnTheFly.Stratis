@@ -394,6 +394,7 @@ blufor_MM_M14 = {
 
 	comment "Add weapons";
 	this addWeapon "hlc_rifle_m14dmr";
+	this addPrimaryWeaponItem "hlc_optic_artel_m14";
 	this addWeapon "hgun_Pistol_heavy_01_F";
 
 	comment "Add items";

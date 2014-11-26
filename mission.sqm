@@ -907,6 +907,7 @@ class Mission
 			lock="LOCKED";
 			skill=0.5;
 			text="spectator_vehicle";
+			init="this addEventHandler [""HandleDamage"", {false}];";
 		};
 		class Item1
 		{
