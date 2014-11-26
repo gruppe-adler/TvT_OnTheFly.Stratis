@@ -22,8 +22,18 @@ teleportOpforGroup = {
 	if (side player == east && !OPFOR_TELEPORTED) then {
 
 		
-		{_emptyPosition_unit = pos findEmptyPosition [10,50];
-		_x setPos _emptyPosition_unit;  } forEach units group player;
+		{
+
+		_centre = [ pos, random 5 , random 360 ] call BIS_fnc_relPos;
+		_spawn_area = [];
+		_max_distance = 50;
+		while{ count _spawn_area < 1 } do
+		{
+		    _spawn_area = _centre findEmptyPosition[ 2 , _max_distance , "B_static_AT_F" ];
+		    _max_distance = _max_distance + 10;
+		};
+		//_emptyPosition_unit = pos findEmptyPosition [10,50];
+		_x setPos _spawn_area;  } forEach units group player;
 		openMap false;
 		
 		
@@ -60,9 +70,16 @@ teleportOpforGroup = {
 		// teleport und gucken, ob posi frei ist
 		{
 
-		_emptyPosition_unit = pos findEmptyPosition [5,150];
-		_x setPos _emptyPosition_unit; 
-		} forEach units group player;
+		_centre = [ pos, random 5 , random 360 ] call BIS_fnc_relPos;
+		_spawn_area = [];
+		_max_distance = 50;
+		while{ count _spawn_area < 1 } do
+		{
+		    _spawn_area = _centre findEmptyPosition[ 2 , _max_distance , "B_static_AT_F" ];
+		    _max_distance = _max_distance + 10;
+		};
+		//_emptyPosition_unit = pos findEmptyPosition [10,50];
+		_x setPos _spawn_area;  } forEach units group player;
 		
 		
 		choose_vehicle = blufor_teamlead addAction["<t color=""#93E352"">" + "Choose Vehicle",{[[[pos], "mission_setup\choose_vehicle.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
