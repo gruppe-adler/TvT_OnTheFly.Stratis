@@ -62,6 +62,7 @@ blufor_AR15_1 = {
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
 
+	player setVariable ["dontHaveLoadout",false];
 };
 
 blufor_G3_1 = {
@@ -127,6 +128,8 @@ blufor_G3_1 = {
 	this linkItem "NVGoggles_OPFOR";
 
 	this linkItem "tf_anprc152";
+
+	player setVariable ["dontHaveLoadout",false];
 
 };
 
@@ -202,6 +205,8 @@ blufor_Medic_MP5A4 =
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
 
+	player setVariable ["dontHaveLoadout",false];
+
 };
 
 
@@ -274,6 +279,8 @@ blufor_Medic_MP5SD =
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
 
+	player setVariable ["dontHaveLoadout",false];
+
 };
 
 
@@ -335,6 +342,8 @@ blufor_MG_M60 = {
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
 
+	player setVariable ["dontHaveLoadout",false];
+
 };
 
 
@@ -393,6 +402,8 @@ blufor_MM_M14 = {
 	this linkItem "AGM_Altimeter";
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
+
+	player setVariable ["dontHaveLoadout",false];
 
 };
 
@@ -460,6 +471,8 @@ blufor_SQF_G3 = {
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
 
+	player setVariable ["dontHaveLoadout",false];
+
 };
 
 
@@ -522,6 +535,8 @@ blufor_SQL_AR15 = {
 	this linkItem "ItemGPS";
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
+
+	player setVariable ["dontHaveLoadout",false];
 
 };
 

@@ -6,10 +6,13 @@ OPFOR_TELEPORTED = false;
 BLUFOR_TELEPORTED = false;
 firstspawn = false;
 
-setTimeMultiplier (paramsArray select 5);
+player setVariable ["dontHaveLoadout",true];
+loadoutNotfallSchalter = player addAction["<t color=""#93E352"">" + "Loadout setzen",{[[[], "loadouts\_client.sqf"],"BIS_fnc_execVM",player,false] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && _this getVariable 'dontHaveLoadout'"];
 
 
 if (isServer) then {
+	setTimeMultiplier (paramsArray select 5);
+
 	MISSION_COMPLETED = false;
 	publicVariable "MISSION_COMPLETED";
 	bluforMarkerDrawn = false;
@@ -17,7 +20,7 @@ if (isServer) then {
 	RESTRICTED_VEHICLES = false;
 	publicVariable "RESTRICTED_VEHICLES";
 
-};
+
 
 // restriction of vehicles for blufor
 if ((paramsArray select 1) == 0) then {
@@ -29,6 +32,7 @@ if ((paramsArray select 1) == 0) then {
 if ((paramsArray select 2) == 1) then {
 	TROPENTARN = true;
 	publicVariable "TROPENTARN";
+};
 };
 
 
