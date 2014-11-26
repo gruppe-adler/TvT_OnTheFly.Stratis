@@ -11,7 +11,7 @@
     if (winConditionBlufor || MISSION_COMPLETED) exitWith {
     	pos = getPos whiteboard;
       if (side player == west) then {
-       endMission "END1";
+       
        hintSilent "BLUFOR WINS. Mission ends now.";
 		sleep 1;
 		hintSilent "BLUFOR WINS. Mission ends now..";

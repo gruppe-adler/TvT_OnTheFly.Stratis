@@ -4,6 +4,12 @@ if (!firstspawn) exitWith{firstspawn = true;};
 
 if (!local _unit) exitWith {};
 
+if (winConditionOpfor || winConditionBlufor || MISSION_COMPLETED) exitWith {
+	pos = getPos whiteboard;
+	_emptyPosition_unit = pos  findEmptyPosition [5,100];
+	player setPos _emptyPosition_unit;  
+};
+
 
 //removeAllWeapons _unit:
 
