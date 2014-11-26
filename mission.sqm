@@ -895,7 +895,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=3;
+		items=4;
 		class Item0
 		{
 			position[]={265.62689,36.073284,322.51086};
@@ -911,7 +911,7 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={275.98175,35.670845,334.93628};
+			position[]={1892.5431,44.449451,131.83801};
 			azimut=163.319;
 			id=36;
 			side="EMPTY";
@@ -919,7 +919,6 @@ class Mission
 			leader=1;
 			skill=0.5;
 			init="clearWeaponCargoGlobal this; clearItemCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this;null = [this] execVM ""loadouts\virtual_arsenal_init.sqf"";";
-			description="Boss (FAL) (must be selected)";
 		};
 		class Item2
 		{
@@ -932,6 +931,17 @@ class Mission
 			skill=0.5;
 			text="whiteboard";
 			init="this addaction [""<t color=""""#93E352"""">"" + ""End Mission now"",{endMission ""END1"";}];";
+		};
+		class Item3
+		{
+			position[]={275.98175,35.670845,334.93628};
+			azimut=163.319;
+			id=38;
+			side="EMPTY";
+			vehicle="B_CargoNet_01_ammo_F";
+			leader=1;
+			skill=0.5;
+			init="clearWeaponCargoGlobal this; clearItemCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this;null = [this] execVM ""loadouts\virtual_arsenal_init.sqf"";";
 		};
 	};
 	class Markers
