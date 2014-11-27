@@ -80,9 +80,11 @@ if (TROPENTARN) then {
 } else {
 [[{}, this forceAddUniform randUniformEastern], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 };
-for "_i" from 1 to 2 do {this addItemToUniform "16Rnd_9x21_Mag";};
-for "_i" from 1 to 4 do {this addItemToUniform "AGM_Bandage";};
+this addItemToUniform "16Rnd_9x21_Mag";
+this addItemToUniform "hlc_30Rnd_762x39_t_ak";
+for "_i" from 1 to 3 do {this addItemToUniform "AGM_Bandage";};
 this addVest "V_TacVest_oli";
+for "_i" from 1 to 3 do {this addItemToVest "hlc_30Rnd_762x39_t_ak";};
 for "_i" from 1 to 6 do {this addItemToVest "AGM_HandFlare_Red";};
 for "_i" from 1 to 3 do {this addItemToVest "SmokeShellPurple";};
 for "_i" from 1 to 3 do {this addItemToVest "SmokeShell";};
@@ -93,8 +95,7 @@ this addItemToBackpack "AGM_CableTie";
 this addItemToBackpack "AGM_EarBuds";
 this addItemToBackpack "caf_PG7V";
 this addItemToBackpack "caf_OG7";
-this addItemToBackpack "hlc_30Rnd_762x39_t_ak";
-for "_i" from 1 to 3 do {this addItemToBackpack "hlc_30rnd_762x39_s_ak";};
+for "_i" from 1 to 7 do {this addItemToBackpack "hlc_30Rnd_762x39_t_ak";};
 if (TROPENTARN) then {
 this addHeadgear randHeadGearTaliban;
 } else {
@@ -321,11 +322,11 @@ if (TROPENTARN) then {
 [[{}, this forceAddUniform randUniformEastern], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 };
 for "_i" from 1 to 4 do {this addItemToUniform "AGM_Bandage";};
+this addItemToUniform "hlc_30Rnd_545x39_EP_ak";
 this addItemToUniform "16Rnd_9x21_Mag";
 this addVest "V_TacVest_khk";
-for "_i" from 1 to 10 do {this addItemToVest "AGM_Bandage";};
-for "_i" from 1 to 6 do {this addItemToVest "AGM_HandFlare_Red";};
-for "_i" from 1 to 3 do {this addItemToVest "hlc_30Rnd_545x39_EP_ak";};
+for "_i" from 1 to 4 do {this addItemToVest "AGM_HandFlare_Red";};
+for "_i" from 1 to 7 do {this addItemToVest "hlc_30Rnd_545x39_EP_ak";};
 this addItemToVest "hlc_30Rnd_545x39_t_ak";
 this addBackpack "ARC_PL_Backpack_Carryall_Pantera";
 for "_i" from 1 to 80 do {this addItemToBackpack "AGM_Bandage";};
