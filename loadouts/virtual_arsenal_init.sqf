@@ -43,4 +43,4 @@ _availableWeapons = [
 [_crate,((backpackCargo _crate) + _availableBackpacks)] call BIS_fnc_addVirtualBackpackCargo;
 [_crate,((itemCargo _crate) + _availableHeadgear + _availableItems + _availableUniforms + _availableVests)] call BIS_fnc_addVirtualItemCargo;
 [_crate,(magazineCargo _crate)] call BIS_fnc_addVirtualMagazineCargo;
-[_crate,(weaponCargo _crate)] call BIS_fnc_addVirtualWeaponCargo;
+[_crate,(weaponCargo _crate) + _availableWeapons] call BIS_fnc_addVirtualWeaponCargo;
