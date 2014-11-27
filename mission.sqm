@@ -918,7 +918,7 @@ class Mission
 			vehicle="B_CargoNet_01_ammo_F";
 			leader=1;
 			skill=0.5;
-			init="clearWeaponCargoGlobal this; clearItemCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this;null = [this] execVM ""loadouts\virtual_arsenal_init.sqf"";";
+			init="clearWeaponCargoGlobal this; clearItemCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this;null = [this] execVM ""loadouts\virtual_arsenal_init_blufor.sqf"";";
 		};
 		class Item2
 		{
@@ -941,7 +941,7 @@ class Mission
 			vehicle="B_CargoNet_01_ammo_F";
 			leader=1;
 			skill=0.5;
-			init="clearWeaponCargoGlobal this; clearItemCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this;null = [this] execVM ""loadouts\virtual_arsenal_init.sqf"";";
+			init="clearWeaponCargoGlobal this; clearItemCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this;null = [this] execVM ""loadouts\virtual_arsenal_init_opfor.sqf"";";
 		};
 	};
 	class Markers
