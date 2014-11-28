@@ -20,20 +20,20 @@ if (isServer) then {
 	RESTRICTED_VEHICLES = false;
 	publicVariable "RESTRICTED_VEHICLES";
 
+};
 
-
+if (!isServer) then {
 // restriction of vehicles for blufor
 if ((paramsArray select 1) == 0) then {
 	RESTRICTED_VEHICLES = true;
-	publicVariable "RESTRICTED_VEHICLES";
 };
 
 // tropentarn or flecktarn?
 if ((paramsArray select 2) == 1) then {
 	TROPENTARN = true;
-	publicVariable "TROPENTARN";
 };
 };
+
 
 
 blufor_spawnDistanceMin = (paramsArray select 3);
