@@ -590,7 +590,7 @@ class Mission
 						};
 						class Item1
 						{
-							value="1";
+							value="0";
 							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
 							typeName="RiflemanRadio";
 						};
