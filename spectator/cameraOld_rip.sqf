@@ -1,7 +1,5 @@
 //--- Classic camera script, enhanced by Karel Moricky, 2010/03/19
 //--- pimped for his needs by nomisum, 2014/11/30
-playableUnitsSelector = 0;
-playersLeftUnits = [];
 
 if (!isNil "BIS_DEBUG_CAM") exitwith {};
 
@@ -9,6 +7,10 @@ if (!isNil "BIS_DEBUG_CAM") exitwith {};
 if (isnil "BIS_DEBUG_CAM_ISFLIR") then {
 	BIS_DEBUG_CAM_ISFLIR = isclass (configfile >> "cfgpatches" >> "A3_Data_F");
 };
+
+playableUnitsSelector = 0;
+playersLeftUnits = [];
+	
 
 BIS_DEBUG_CAM_MAP = false;
 BIS_DEBUG_CAM_VISION = 0;
@@ -32,12 +34,14 @@ _pX = _ppos select 0;
 _pY = _ppos select 1;
 _pZ = _ppos select 2;
 
+
+
 _pHeight = getTerrainHeightASL [_pX, _pY];
 if (_pHeight < 0) then {_pZ = _pZ + _pHeight};
 
 private ["_local"];
-_posRespawnHelperX = getPos respawn_helper select 0;
-_posRespawnHelperY = getPos respawn_helper select 1;
+_posRespawnHelperX = getPos sector_trigger select 0;
+_posRespawnHelperY = getPos sector_trigger select 1;
 _local = "camera" camCreate [_posRespawnHelperX + 100, _posRespawnHelperY, _pZ + 40];
 BIS_DEBUG_CAM = _local;
 _local camCommand "MANUAL ON";
@@ -47,7 +51,7 @@ showCinemaBorder false;
 
 
 //BIS_DEBUG_CAM setDir direction (vehicle player);
-BIS_DEBUG_CAM camPrepareTarget getPos respawn_helper; 
+BIS_DEBUG_CAM camPrepareTarget getPos sector_trigger; 
 BIS_DEBUG_CAM camcommitprepared 0;
 //BIS_DEBUG_CAM setDir direction (respawn_helper);
 
@@ -143,23 +147,30 @@ _keyDown = (finddisplay 46) displayaddeventhandler ["keydown","
 _mousezchanged = (finddisplay 46) displayaddeventhandler ["mousezchanged","_this call onScrollWheelChange"];
 
 onScrollWheelChange = {
+	
 
-	playersLeftUnits = playableUnits + switchableUnits;
+	if (!isMultiplayer) then {
+	playersLeftUnits = switchableUnits;
+	} else {
+	playersLeftUnits = playableUnits;};
+	
 	playersLeftCount = ({side _x != civilian} count playersLeftUnits);
 
+	// wenn am ende der fahnenstange angekommen, bleib da
 	if (playableUnitsSelector > playersLeftCount) then {playableUnitsSelector = playersLeftCount};
 	
 	{ if (side _x == civilian) then {playersLeftUnits = playersLeftUnits - [_x]};} forEach playersLeftUnits;
 	
     // scroll wheel down
     if ((_this select 1) < 0) then {
+
+    // wenn am ende der fahnenstange angekommen, bleib da
 	if (playableUnitsSelector > 1) then {playableUnitsSelector = playableUnitsSelector -1;
 	} else {
 	playableUnitsSelector = 0;
 	};
-	if (EDITOR_MODE) then {
+	
 	currentSpecUnit = playersLeftUnits select playableUnitsSelector;
-	} else {playersLeftUnits select playableUnitsSelector};
 	
     text1 = format ["%1<br /><t color='#ffcc00'>%2</t>", name currentSpecUnit, side currentSpecUnit];
     [text1] call AGM_Core_fnc_displayTextStructured;
@@ -178,13 +189,14 @@ onScrollWheelChange = {
 	// scroll wheel up      
     if ((_this select 1) > 0) then {
 
+	// wenn am ende der fahnenstange angekommen, bleib da
     if (playableUnitsSelector < (playersLeftCount - 1)) then {playableUnitsSelector = playableUnitsSelector +1;
     } else {
 	playableUnitsSelector = playersLeftCount - 1;
 	};
-	if (EDITOR_MODE) then {
+	
 	currentSpecUnit = playersLeftUnits select playableUnitsSelector;
-	} else {playersLeftUnits select playableUnitsSelector};
+
    
 	text2 = format ["%1<br /><t color='#ffcc00'>%2</t>", name currentSpecUnit, side currentSpecUnit];
     [text2] call AGM_Core_fnc_displayTextStructured;

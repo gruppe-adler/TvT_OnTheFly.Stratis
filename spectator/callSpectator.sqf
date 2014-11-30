@@ -1,4 +1,5 @@
-player call cameraOldPimped;
+_unit = _this select 0;
+_unit call cameraOldPimped;
 _text = format ["<t size='0.7'>* auf dem Numpad für FreeLook<br />Mausrad switcht Player<br />Rechtsklick beendet Cam</t>",""];
 [_text] call AGM_Core_fnc_displayTextStructured;
 //private "_camera";

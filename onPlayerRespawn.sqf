@@ -24,7 +24,7 @@ _unit addAction["<t color='#d18d1f'>Activate Spectator Cam</t> (right click to e
 sleep 0.1;
 _unit moveInCargo spectator_vehicle;
 // start spec cam
-[player] execVM "spectator\callSpectator.sqf";
+[_unit] execVM "spectator\callSpectator.sqf";
 
 (findDisplay 46) displayAddEventHandler ["MouseButtonDown", "if (_this select 1 == 1) then {call mouseclickhint};"];
 
