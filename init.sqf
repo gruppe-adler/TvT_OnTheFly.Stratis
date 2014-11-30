@@ -6,6 +6,11 @@ OPFOR_TELEPORTED = false;
 BLUFOR_TELEPORTED = false;
 firstspawn = false;
 
+EDITOR_MODE = false; // check if test is in editor/singleplayer
+if (!isMultiplayer) then {
+	EDITOR_MODE = true;
+};
+
 player setVariable ["dontHaveLoadout",true];
 loadoutNotfallSchalter = player addAction["<t color=""#93E352"">" + "Loadout setzen",{[[[], "loadouts\_client.sqf"],"BIS_fnc_execVM",player,false] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && _this getVariable 'dontHaveLoadout'"];
 
@@ -44,6 +49,7 @@ opfor_teleport = opfor_teamlead addAction["<t color=""#93E352"">" + "Spawnpunkt 
 blufor_teleport = blufor_teamlead addAction["<t color=""#93E352"">" + "Spawnpunkt wählen",{[[[false], "mission_setup\teleport.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && !BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
 
 call compile preprocessFileLineNumbers "plank\plank_init.sqf";				//Plank
+cameraOldPimped = compile preprocessFile "spectator\cameraOld_rip.sqf";	
 
 enableSentences false;														//Autospotten
 

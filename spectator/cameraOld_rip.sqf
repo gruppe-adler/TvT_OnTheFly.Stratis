@@ -1,4 +1,7 @@
 //--- Classic camera script, enhanced by Karel Moricky, 2010/03/19
+//--- pimped for his needs by nomisum, 2014/11/30
+playableUnitsSelector = 0;
+playersLeftUnits = [];
 
 if (!isNil "BIS_DEBUG_CAM") exitwith {};
 
@@ -33,21 +36,28 @@ _pHeight = getTerrainHeightASL [_pX, _pY];
 if (_pHeight < 0) then {_pZ = _pZ + _pHeight};
 
 private ["_local"];
-_local = "camera" camCreate [_pX, _pY, _pZ + 2];
+_posRespawnHelperX = getPos respawn_helper select 0;
+_posRespawnHelperY = getPos respawn_helper select 1;
+_local = "camera" camCreate [_posRespawnHelperX + 100, _posRespawnHelperY, _pZ + 40];
 BIS_DEBUG_CAM = _local;
 _local camCommand "MANUAL ON";
-_local camCommand "INERTIA OFF";
+_local camCommand "INERTIA ON";
 _local cameraEffect ["INTERNAL", "BACK"];
 showCinemaBorder false;
-BIS_DEBUG_CAM setDir direction (vehicle player);
+
+
+//BIS_DEBUG_CAM setDir direction (vehicle player);
+BIS_DEBUG_CAM camPrepareTarget getPos respawn_helper; 
+BIS_DEBUG_CAM camcommitprepared 0;
+//BIS_DEBUG_CAM setDir direction (respawn_helper);
 
 
 //--- Marker
 BIS_DEBUG_CAM_MARKER = createmarkerlocal ["BIS_DEBUG_CAM_MARKER",_ppos];
 BIS_DEBUG_CAM_MARKER setmarkertypelocal "mil_start";
-BIS_DEBUG_CAM_MARKER setmarkercolorlocal "colorpink";
+BIS_DEBUG_CAM_MARKER setmarkercolorlocal "ColorWhite";
 BIS_DEBUG_CAM_MARKER setmarkersizelocal [.75,.75];
-BIS_DEBUG_CAM_MARKER setmarkertextlocal "BIS_DEBUG_CAM";
+BIS_DEBUG_CAM_MARKER setmarkertextlocal "Your Spectator Cam";
 
 
 //--- Key Down
@@ -129,8 +139,70 @@ _keyDown = (finddisplay 46) displayaddeventhandler ["keydown","
 	};
 "];
 
+
+_mousezchanged = (finddisplay 46) displayaddeventhandler ["mousezchanged","_this call onScrollWheelChange"];
+
+onScrollWheelChange = {
+
+	playersLeftUnits = playableUnits + switchableUnits;
+	playersLeftCount = ({side _x != civilian} count playersLeftUnits);
+
+	if (playableUnitsSelector > playersLeftCount) then {playableUnitsSelector = playersLeftCount};
+	
+	{ if (side _x == civilian) then {playersLeftUnits = playersLeftUnits - [_x]};} forEach playersLeftUnits;
+	
+    // scroll wheel down
+    if ((_this select 1) < 0) then {
+	if (playableUnitsSelector > 1) then {playableUnitsSelector = playableUnitsSelector -1;
+	} else {
+	playableUnitsSelector = 0;
+	};
+	if (EDITOR_MODE) then {
+	currentSpecUnit = playersLeftUnits select playableUnitsSelector;
+	} else {playersLeftUnits select playableUnitsSelector};
+	
+    text1 = format ["%1<br /><t color='#ffcc00'>%2</t>", name currentSpecUnit, side currentSpecUnit];
+    [text1] call AGM_Core_fnc_displayTextStructured;
+	BIS_DEBUG_CAM camcommand 'manual off';
+	BIS_DEBUG_CAM campreparefocus [-1,1];
+	if (EDITOR_MODE) then {
+	BIS_DEBUG_CAM camPrepareTarget getPos (playersLeftUnits select playableUnitsSelector);
+	} else {
+	BIS_DEBUG_CAM camPrepareTarget getPos (playersLeftUnits select playableUnitsSelector);
+	};
+	BIS_DEBUG_CAM camcommitprepared 0;
+	BIS_DEBUG_CAM camcommand 'manual on';
+    };
+
+
+	// scroll wheel up      
+    if ((_this select 1) > 0) then {
+
+    if (playableUnitsSelector < (playersLeftCount - 1)) then {playableUnitsSelector = playableUnitsSelector +1;
+    } else {
+	playableUnitsSelector = playersLeftCount - 1;
+	};
+	if (EDITOR_MODE) then {
+	currentSpecUnit = playersLeftUnits select playableUnitsSelector;
+	} else {playersLeftUnits select playableUnitsSelector};
+   
+	text2 = format ["%1<br /><t color='#ffcc00'>%2</t>", name currentSpecUnit, side currentSpecUnit];
+    [text2] call AGM_Core_fnc_displayTextStructured;
+	BIS_DEBUG_CAM camcommand 'manual off';
+	BIS_DEBUG_CAM campreparefocus [-1,1];
+	if (EDITOR_MODE) then {
+	BIS_DEBUG_CAM camPrepareTarget getPos (playersLeftUnits select playableUnitsSelector);
+	} else {
+	BIS_DEBUG_CAM camPrepareTarget getPos (playersLeftUnits select playableUnitsSelector);
+	};
+	BIS_DEBUG_CAM camcommitprepared 0;
+	BIS_DEBUG_CAM camcommand 'manual on';
+    };
+	
+};  
+
 //--- Mouse wheel moving
-_mousezchanged = (finddisplay 46) displayaddeventhandler ["mousezchanged","
+/*_mousezchanged = (finddisplay 46) displayaddeventhandler ["mousezchanged","
 	_n = _this select 1;
 	BIS_DEBUG_CAM_FOCUS = BIS_DEBUG_CAM_FOCUS + _n/10;
 	if (_n > 0 && BIS_DEBUG_CAM_FOCUS < 0) then {BIS_DEBUG_CAM_FOCUS = 0};
@@ -139,7 +211,7 @@ _mousezchanged = (finddisplay 46) displayaddeventhandler ["mousezchanged","
 	BIS_DEBUG_CAM campreparefocus [BIS_DEBUG_CAM_FOCUS,1];
 	BIS_DEBUG_CAM camcommitprepared 0;
 	BIS_DEBUG_CAM camcommand 'manual on';
-"];
+"];*/
 
 _map_mousebuttonclick = ((finddisplay 12) displayctrl 51) ctrladdeventhandler ["mousebuttonclick","
 	_button = _this select 1;

@@ -666,7 +666,7 @@ class Mission
 						};
 						class Item3
 						{
-							value="tf_anprc154";
+							value="";
 							parentCls="tfar_ModuleTaskForceRadio";
 							typeName="Radio";
 						};
