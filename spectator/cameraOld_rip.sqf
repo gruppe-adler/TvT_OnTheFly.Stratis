@@ -176,12 +176,9 @@ onScrollWheelChange = {
     [text1] call AGM_Core_fnc_displayTextStructured;
 	BIS_DEBUG_CAM camcommand 'manual off';
 	BIS_DEBUG_CAM campreparefocus [-1,1];
-	if (EDITOR_MODE) then {
 	BIS_DEBUG_CAM camPrepareTarget getPos (playersLeftUnits select playableUnitsSelector);
-	} else {
 	BIS_DEBUG_CAM camPrepareTarget getPos (playersLeftUnits select playableUnitsSelector);
-	};
-	BIS_DEBUG_CAM camcommitprepared 0;
+	BIS_DEBUG_CAM camcommitprepared 3;
 	BIS_DEBUG_CAM camcommand 'manual on';
     };
 
@@ -202,12 +199,9 @@ onScrollWheelChange = {
     [text2] call AGM_Core_fnc_displayTextStructured;
 	BIS_DEBUG_CAM camcommand 'manual off';
 	BIS_DEBUG_CAM campreparefocus [-1,1];
-	if (EDITOR_MODE) then {
 	BIS_DEBUG_CAM camPrepareTarget getPos (playersLeftUnits select playableUnitsSelector);
-	} else {
 	BIS_DEBUG_CAM camPrepareTarget getPos (playersLeftUnits select playableUnitsSelector);
-	};
-	BIS_DEBUG_CAM camcommitprepared 0;
+	BIS_DEBUG_CAM camcommitprepared 3;
 	BIS_DEBUG_CAM camcommand 'manual on';
     };
 	

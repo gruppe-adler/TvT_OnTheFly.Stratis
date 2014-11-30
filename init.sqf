@@ -71,8 +71,6 @@ if (!isNil "opfor_engi") then {
 
 if (isServer) then { setDate [2035, 6, 24, (paramsArray select 0), 1]; };	//Zeit
 
-[] execVM "objectives\detect_all_dead.sqf";
-
 if ((isServer) || (isDedicated)) then {
 
 respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger select 0),(getPos sector_trigger select 1),0];
@@ -95,6 +93,7 @@ respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger sele
 // loadout call - giving each unit the appropriate sqf file
 if !(isDedicated) then { 
 [] execVM "loadouts\_client.sqf";
+[] execVM "objectives\detect_all_dead.sqf";
 };
 
 // Intro Gruppe Adler   

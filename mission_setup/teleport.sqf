@@ -33,7 +33,9 @@ teleportOpforGroup = {
 		    _max_distance = _max_distance + 10;
 		};
 		//_emptyPosition_unit = pos findEmptyPosition [10,50];
-		_x setPos _spawn_area;  } forEach units group player;
+		_x setPos _spawn_area;  
+		} forEach units group player;
+		[[[east],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 		openMap false;
 		
 		
@@ -51,6 +53,8 @@ teleportOpforGroup = {
 		["sector_moduleWEST", pos] call BIS_fnc_taskSetDestination;
 		
 		[[[pos],"mission_setup\respawn_helper.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+		
+		choose_vehicle_opfor = opfor_teamlead addAction["<t color=""#93E352"">" + "Spawn Vehicle",{[[[pos], "mission_setup\choose_opfor_vehicle.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED && !RESTRICTED_VEHICLES"];
 		
 	};
 
@@ -80,15 +84,18 @@ teleportOpforGroup = {
 		};
 		//_emptyPosition_unit = pos findEmptyPosition [10,50];
 		_x setPos _spawn_area;  } forEach units group player;
+		[[[west],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+
 		
 		
-		choose_vehicle = blufor_teamlead addAction["<t color=""#93E352"">" + "Choose Vehicle",{[[[pos], "mission_setup\choose_vehicle.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
+		choose_vehicle_blufor = blufor_teamlead addAction["<t color=""#93E352"">" + "Choose Vehicle",{[[[pos], "mission_setup\choose_blufor_vehicle.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
 		
 		openMap false;
 		BLUFOR_TELEPORTED = TRUE;
 		publicVariable "BLUFOR_TELEPORTED";
 
 		[[[pos],"mission_setup\blufor_spawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+
 
 	};
 };
