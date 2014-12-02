@@ -12,3 +12,6 @@ if (RESTRICTED_VEHICLES) exitWith {};
 
  createVehicleTactical = opfor_teamlead addAction["<t color=""#93E352"">" + "Spawn Tactical",
  {[vehicle_position,vehicle_classname_tactical,east] execVM "mission_setup\spawnVehicle.sqf";}, _Args, 1, false, true, "","_this == _target"];
+
+ createVehicleTactical = opfor_teamlead addAction["<t color=""#93E352"">" + "Spawn Mortar",
+ {[vehicle_position,"mortar",east] execVM "mission_setup\spawnVehicle.sqf";}, _Args, 1, false, true, "","_this == _target"];
