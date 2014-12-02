@@ -16,6 +16,8 @@ _spawn_area6 = [];
 _max_distance = 50;
 _min_distance_items = 5;
 _max_distance_items = 20;
+_vehicle_classname_mortar_tube = "O_Mortar_01_support_F";
+_vehicle_classname_mortar_weapon = "O_Mortar_01_weapon_F";
 
 if (isDedicated) exitWith {};
 
@@ -48,7 +50,23 @@ if (player == opfor_teamlead) then {["Vehicle spawned."] call AGM_Core_fnc_displ
 		    _max_distance = _max_distance + 10;
 		};
 
+	if (_vehicle == "mortar") exitWith {
+		while{ count _spawn_area2 < 1 } do
+		{
+		    _spawn_area2 = _centre2 findEmptyPosition[ _min_distance_items , _max_distance_items , "O_Mortar_01_support_F" ];
+		    _max_distance_items = _max_distance_items + 10;
+		};
+			while{ count _spawn_area3 < 1 } do
+		{
+		    _spawn_area3 = _centre3 findEmptyPosition[ _min_distance_items , _max_distance_items , "O_Mortar_01_weapon_F" ];
+		    _max_distance_items = _max_distance_items + 10;
+		};
+	_veh2 = _vehicle_classname_mortar_tube createVehicle _spawn_area2;
+	_veh3 = _vehicle_classname_mortar_weapon createVehicle _spawn_area3;
+	};
+	
 	_veh2 = _vehicle createVehicle _spawn_area;
+	
 	sleep 0.1;
 
 	_veh2 setHit ["wheel_1_1_steering", 1]; 
