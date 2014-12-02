@@ -59,6 +59,7 @@ blufor_AR15_1 = {
 	this linkItem "ItemMap";
 	this linkItem "ItemCompass";
 	this linkItem "AGM_Altimeter";
+	this linkItem "ItemGPS"
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
 
@@ -125,6 +126,7 @@ blufor_G3_1 = {
 	this linkItem "ItemMap";
 	this linkItem "ItemCompass";
 	this linkItem "AGM_Altimeter";
+	this linkItem "ItemGPS";
 	this linkItem "NVGoggles_OPFOR";
 
 	this linkItem "tf_anprc152";
@@ -202,6 +204,7 @@ blufor_Medic_MP5A4 =
 	this linkItem "ItemMap";
 	this linkItem "ItemCompass";
 	this linkItem "AGM_Altimeter";
+	this linkItem "ItemGPS";
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
 
@@ -276,6 +279,7 @@ blufor_Medic_MP5SD =
 	this linkItem "ItemMap";
 	this linkItem "ItemCompass";
 	this linkItem "AGM_Altimeter";
+	this linkItem "ItemGPS";
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
 
@@ -339,6 +343,7 @@ blufor_MG_M60 = {
 	this linkItem "ItemMap";
 	this linkItem "ItemCompass";
 	this linkItem "AGM_Altimeter";
+	this linkItem "ItemGPS";
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
 
@@ -401,6 +406,7 @@ blufor_MM_M14 = {
 	this linkItem "ItemMap";
 	this linkItem "ItemCompass";
 	this linkItem "AGM_Altimeter";
+	this linkItem "ItemGPS";
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
 
