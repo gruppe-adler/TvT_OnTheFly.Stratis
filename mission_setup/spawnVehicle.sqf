@@ -42,6 +42,7 @@ if (player == opfor_teamlead) then {["Vehicle spawned."] call AGM_Core_fnc_displ
 	
 	if (!RESTRICTED_VEHICLES) then {
 	player removeAction createVehicleTactical;
+	player removeAction createVehicleMortar;
 	};
 
 	while{ count _spawn_area < 1 } do
