@@ -12,7 +12,7 @@ _inner_marker setMarkerTypeLocal "mil_unknown";
 _inner_marker setMarkerColorLocal "ColorEast";
 _inner_marker setMarkerShapeLocal "ELLIPSE";
 _inner_marker setMarkerSizeLocal [blufor_spawnDistanceMin, blufor_spawnDistanceMin];
-_inner_marker setMarkerBrushLocal "Vertical";
+_inner_marker setMarkerBrushLocal "SolidBorder";
 
 _outer_marker = createMarkerLocal ["outer_marker", _pos];
 _outer_marker setMarkerTypeLocal "mil_unknown";
