@@ -21,11 +21,11 @@ waitUntil { !isNull player };
             case "B_G_officer_F": {[player] call blufor_SQL_AR15;};
             case "B_officer_F": {[player] call blufor_SQL_AR15;};
 
-            case "B_Soldier_TL_F": {[player] call blufor_SQF_G3;};
-            case "B_G_Soldier_TL_F": {[player] call blufor_SQF_G3;};
-            case "B_recon_TL_F": {[player] call blufor_SQF_G3;};
-            case "B_Soldier_SL_F": {[player] call blufor_SQF_G3;};
-            case "B_G_Soldier_SL_F": {[player] call blufor_SQF_G3;};
+            case "B_Soldier_TL_F": {[player] call blufor_SQL_AR15;};
+            case "B_G_Soldier_TL_F": {[player] call blufor_SQL_AR15;};
+            case "B_recon_TL_F": {[player] call blufor_SQL_AR15;};
+            case "B_Soldier_SL_F": {[player] call blufor_SQL_AR15;};
+            case "B_G_Soldier_SL_F": {[player] call blufor_SQL_AR15;};
             
 
             case "B_G_Soldier_GL_F": {[player] call blufor_G3_1;};
