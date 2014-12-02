@@ -369,8 +369,7 @@ blufor_MM_M14 = {
 	} else {
 	[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	};
-	this addItemToUniform "hlc_20Rnd_762x51_B_M14";
-	this addItemToUniform "hlc_20Rnd_762x51_T_M14";
+	for "_i" from 1 to 3 do {this addItemToUniform "20Rnd_762x51_Mag";};
 	if (TROPENTARN) then {
 	this addVest "ARC_GER_Tropentarn_Plate_Carrier_H";
 	} else {
@@ -384,8 +383,8 @@ blufor_MM_M14 = {
 	this addItemToVest "AGM_HandFlare_White";
 	this addItemToVest "B_IR_Grenade";
 	for "_i" from 1 to 2 do {this addItemToVest "Chemlight_blue";};
-	for "_i" from 1 to 2 do {this addItemToVest "hlc_20Rnd_762x51_B_M14";};
-	for "_i" from 1 to 4 do {this addItemToVest "hlc_20Rnd_762x51_T_M14";};
+	for "_i" from 1 to 2 do {this addItemToVest "20Rnd_762x51_Mag";};
+	for "_i" from 1 to 4 do {this addItemToVest "20Rnd_762x51_Mag";};
 	if (TROPENTARN) then {
 	this addHeadgear "ARC_GER_Tropentarn_booniehat";
 	} else {
@@ -393,8 +392,9 @@ blufor_MM_M14 = {
 	};
 
 	comment "Add weapons";
-	this addWeapon "hlc_rifle_m14dmr";
-	this addPrimaryWeaponItem "hlc_optic_artel_m14";
+	this addWeapon "srifle_EBR_F";
+	this addPrimaryWeaponItem "optic_Hamr";
+	this addPrimaryWeaponItem "AGM_muzzle_mzls_B";
 	this addWeapon "hgun_Pistol_heavy_01_F";
 
 	comment "Add items";
