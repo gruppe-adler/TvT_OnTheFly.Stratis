@@ -16,8 +16,7 @@ _spawn_area6 = [];
 _max_distance = 50;
 _min_distance_items = 5;
 _max_distance_items = 20;
-_vehicle_classname_mortar_tube = "O_Mortar_01_support_F";
-_vehicle_classname_mortar_weapon = "O_Mortar_01_weapon_F";
+_vehicle_classname_mortar = "O_G_Mortar_01_F";
 
 if (isDedicated) exitWith {};
 
@@ -54,16 +53,11 @@ if (player == opfor_teamlead) then {["Vehicle spawned."] call AGM_Core_fnc_displ
 	if (_vehicle == "mortar") exitWith {
 		while{ count _spawn_area2 < 1 } do
 		{
-		    _spawn_area2 = _centre2 findEmptyPosition[ _min_distance_items , _max_distance_items , "O_Mortar_01_support_F" ];
+		    _spawn_area2 = _centre2 findEmptyPosition[ _min_distance_items , _max_distance_items , "O_G_Mortar_01_F" ];
 		    _max_distance_items = _max_distance_items + 10;
 		};
-			while{ count _spawn_area3 < 1 } do
-		{
-		    _spawn_area3 = _centre3 findEmptyPosition[ _min_distance_items , _max_distance_items , "O_Mortar_01_weapon_F" ];
-		    _max_distance_items = _max_distance_items + 10;
-		};
-	_veh2 = _vehicle_classname_mortar_tube createVehicle _spawn_area2;
-	_veh3 = _vehicle_classname_mortar_weapon createVehicle _spawn_area3;
+	_veh2 = _vehicle_classname_mortar createVehicle _spawn_area2;
+	_veh2 setVehicleAmmo 0.1;
 	};
 	
 	_veh2 = _vehicle createVehicle _spawn_area;
@@ -94,24 +88,24 @@ if (player == opfor_teamlead) then {["Vehicle spawned."] call AGM_Core_fnc_displ
 		};
 	_spareWheel1 = "AGM_SpareWheel" createVehicle _spawn_area3;
 
-	while{ count _spawn_area4 < 1 } do
+	while{ count _spawn_area3 < 1 } do
 		{
-		    _spawn_area4 = _centre4 findEmptyPosition[ _min_distance_items , _max_distance_items , "AGM_SpareWheel" ];
+		    _spawn_area3 = _centre4 findEmptyPosition[ _min_distance_items , _max_distance_items , "AGM_SpareWheel" ];
 		    _max_distance_items = _max_distance_items + 10;
 		};
-	_spareWheel2 = "AGM_SpareWheel" createVehicle _spawn_area4;
+	_spareWheel2 = "AGM_SpareWheel" createVehicle _spawn_area3;
 
-	while{ count _spawn_area5 < 1 } do
+	while{ count _spawn_area3 < 1 } do
 		{
-		    _spawn_area5 = _centre5 findEmptyPosition[ _min_distance_items , _max_distance_items , "AGM_SpareWheel" ];
+		    _spawn_area3 = _centre5 findEmptyPosition[ _min_distance_items , _max_distance_items , "AGM_SpareWheel" ];
 		    _max_distance_items = _max_distance_items + 10;
 		};
-	_spareWheel3 = "AGM_SpareWheel" createVehicle _spawn_area5;
+	_spareWheel3 = "AGM_SpareWheel" createVehicle _spawn_area3;
 
-	while{ count _spawn_area6 < 1 } do
+	while{ count _spawn_area3 < 1 } do
 		{
-		    _spawn_area6 = _centre6 findEmptyPosition[ _min_distance_items , _max_distance_items , "AGM_SpareWheel" ];
+		    _spawn_area3 = _centre6 findEmptyPosition[ _min_distance_items , _max_distance_items , "AGM_SpareWheel" ];
 		    _max_distance_items = _max_distance_items + 10;
 		};
-	_spareWheel4 = "AGM_SpareWheel" createVehicle _spawn_area6;
+	_spareWheel4 = "AGM_SpareWheel" createVehicle _spawn_area3;
 };
