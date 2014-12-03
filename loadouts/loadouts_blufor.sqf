@@ -59,7 +59,7 @@ blufor_AR15_1 = {
 	this linkItem "ItemMap";
 	this linkItem "ItemCompass";
 	this linkItem "AGM_Altimeter";
-	this linkItem "ItemGPS"
+	this linkItem "ItemGPS";
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
 
