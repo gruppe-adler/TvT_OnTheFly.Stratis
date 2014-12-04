@@ -161,8 +161,7 @@ blufor_Medic_MP5A4 =
 	} else {
 	[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	};
-	this addItemToUniform "hlc_30Rnd_9x19_B_MP5";
-	this addItemToUniform "hlc_30Rnd_9x19_GD_MP5";
+    for "_i" from 1 to 2 do {this addItemToUniform "hlc_30rnd_556x45_EPR";};
 	if (TROPENTARN) then {
 	this addVest "ARC_GER_Tropentarn_Plate_Carrier_H";
 	} else {
@@ -177,17 +176,17 @@ blufor_Medic_MP5A4 =
 	this addItemToVest "AGM_HandFlare_White";
 	this addItemToVest "B_IR_Grenade";
 	for "_i" from 1 to 2 do {this addItemToVest "Chemlight_blue";};
-	for "_i" from 1 to 2 do {this addItemToVest "hlc_30Rnd_9x19_B_MP5";};
-	for "_i" from 1 to 4 do {this addItemToVest "hlc_30Rnd_9x19_GD_MP5";};
+    for "_i" from 1 to 8 do {this addItemToVest "hlc_30rnd_556x45_EPR";};
 	if (TROPENTARN) then {
 	this addBackpack "ARC_GER_Backpack_Tropentarn_Med";
 	} else {
 	this addBackpack "ARC_GER_Backpack_Flecktarn_Med";
 	};
-	for "_i" from 1 to 80 do {this addItemToBackpack "AGM_Bandage";};
-	for "_i" from 1 to 20 do {this addItemToBackpack "AGM_Morphine";};
-	for "_i" from 1 to 19 do {this addItemToBackpack "AGM_Epipen";};
+	for "_i" from 1 to 60 do {this addItemToBackpack "AGM_Bandage";};
+	for "_i" from 1 to 15 do {this addItemToBackpack "AGM_Morphine";};
+	for "_i" from 1 to 25 do {this addItemToBackpack "AGM_Epipen";};
 	for "_i" from 1 to 2 do {this addItemToBackpack "AGM_Bloodbag";};
+    for "_i" from 1 to 2 do {this addItemToBackpack "hlc_30rnd_556x45_EPR";};
 	if (TROPENTARN) then {
 	this addHeadgear "ARC_GER_Tropentarn_Helmet_simple";
 	} else {
@@ -195,7 +194,7 @@ blufor_Medic_MP5A4 =
 	};
 
 	comment "Add weapons";
-	this addWeapon "hlc_smg_mp5a4";
+	this addWeapon "hlc_rifle_bcmjack";
 	this addPrimaryWeaponItem "acc_pointer_IR";
 	this addPrimaryWeaponItem "optic_ACO_grn_smg";
 	this addWeapon "hgun_Pistol_heavy_01_F";

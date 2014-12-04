@@ -172,7 +172,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.40000001;
-					description="Medic (MP5A4)";
+					description="Medic (BCM)";
 				};
 				class Item9
 				{
