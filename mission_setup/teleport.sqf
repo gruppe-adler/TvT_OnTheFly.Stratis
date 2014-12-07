@@ -1,19 +1,20 @@
 if (side player == east && !OPFOR_TELEPORTED) then {
 ["Spawnpunkt wählen"] call AGM_Core_fnc_displayTextStructured;
-openMap [true,false];
+openMap [true,true];
 
 onMapSingleClick "[_pos] call teleportOpforGroup; onMapSingleClick ''; true";
 };
 
 if (side player == west && OPFOR_TELEPORTED) then {
 ["Spawnpunkt wählen"] call AGM_Core_fnc_displayTextStructured;
-openMap [true,false];
+openMap [true,true];
 
 onMapSingleClick "[_pos] call teleportOpforGroup; onMapSingleClick ''; true";
 };
 
 
 teleportOpforGroup = {
+openMap [false,false];
 	pos = _this select 0;
 
 	// doesnt work correctly in SP tests
@@ -21,22 +22,10 @@ teleportOpforGroup = {
 
 	if (side player == east && !OPFOR_TELEPORTED) then {
 
+		[[[east,pos],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 		
-		{
-
-		_centre = [ pos, random 5 , random 360 ] call BIS_fnc_relPos;
-		_spawn_area = [];
-		_max_distance = 50;
-		while{ count _spawn_area < 1 } do
-		{
-		    _spawn_area = _centre findEmptyPosition[ 2 , _max_distance , "B_static_AT_F" ];
-		    _max_distance = _max_distance + 10;
-		};
-		//_emptyPosition_unit = pos findEmptyPosition [10,50];
-		_x setPos _spawn_area;  
-		} forEach units group player;
-		[[[east],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
-		openMap false;
+		
+		openMap [false,false];
 		
 		
 		_opfor_marker = createMarker ["opfor_marker", pos];
@@ -59,6 +48,7 @@ teleportOpforGroup = {
 	};
 
 	if (side player == west && OPFOR_TELEPORTED) then {
+		openMap [false,false];
 	
 		// entfernung marker zu spawnpunkt zu klein oder groß?
 		// pos ist hier ein anderes pos als oben!
@@ -72,25 +62,13 @@ teleportOpforGroup = {
 
 
 		// teleport und gucken, ob posi frei ist
-		{
-
-		_centre = [ pos, random 5 , random 360 ] call BIS_fnc_relPos;
-		_spawn_area = [];
-		_max_distance = 50;
-		while{ count _spawn_area < 1 } do
-		{
-		    _spawn_area = _centre findEmptyPosition[ 2 , _max_distance , "B_static_AT_F" ];
-		    _max_distance = _max_distance + 10;
-		};
-		//_emptyPosition_unit = pos findEmptyPosition [10,50];
-		_x setPos _spawn_area;  } forEach units group player;
-		[[[west],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+		[[[west,pos],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+		
 
 		
 		
 		choose_vehicle_blufor = blufor_teamlead addAction["<t color=""#93E352"">" + "Choose Vehicle",{[[[pos], "mission_setup\choose_blufor_vehicle.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
 		
-		openMap false;
 		BLUFOR_TELEPORTED = TRUE;
 		publicVariable "BLUFOR_TELEPORTED";
 

@@ -11,8 +11,7 @@ if (winConditionOpfor || winConditionBlufor || MISSION_COMPLETED) exitWith {
 };
 
 
-//removeAllWeapons _unit:
-
+removeAllWeapons player:
 removeAllActions player;
 // join civilian side, because end trigger relies on side
 [_unit] joinSilent (createGroup civilian);

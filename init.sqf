@@ -73,6 +73,8 @@ if (isServer) then { setDate [2035, 6, 24, (paramsArray select 0), 1]; };	//Zeit
 
 if ((isServer) || (isDedicated)) then {
 
+[] execVM "objectives\detect_all_dead.sqf";
+
 respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger select 0),(getPos sector_trigger select 1),0];
 [respawn_helper, false] call AGM_Drag_fnc_makeDraggable;
 
@@ -92,8 +94,8 @@ respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger sele
 
 // loadout call - giving each unit the appropriate sqf file
 if !(isDedicated) then { 
+[] execVM "mission_setup\helpBriefing.sqf";
 [] execVM "loadouts\_client.sqf";
-[] execVM "objectives\detect_all_dead.sqf";
 if (time > 10) then {
 	[player] execVM "onPlayerRespawn.sqf";
 	["Switched to Spectator because JIP"] call AGM_Core_fnc_displayTextStructured;
@@ -115,3 +117,22 @@ waitUntil {time > 3};
 	["<img size= '6' shadow='false' image='pic\gruppe-adler.paa'/><br/><t size='.9' color='#FFFFFF'>TvT@OnTheFly</t>",0,0,2,2] spawn BIS_fnc_dynamicText;
 };
 
+#include "\task_force_radio\functions\common.sqf";
+
+if ((isServer) or (isDedicated)) then {
+tf_no_auto_long_range_radio = true;
+publicVariable "tf_no_auto_long_range_radio";
+tf_same_sw_frequencies_for_side = true;
+publicVariable "tf_same_sw_frequencies_for_side";
+tf_same_lr_frequencies_for_side = true;
+publicVariable "tf_same_lr_frequencies_for_side";
+
+_settingsSwWest = false call TFAR_fnc_generateSwSettings;
+_settingsSwWest set [2, ["311","312","313","314","315","316","317","318 "]];
+tf_freq_west = _settingsSwWest;
+
+_settingsSwEast = false call TFAR_fnc_generateSwSettings;
+_settingsSwEast set [2, ["311","312","313","314","315","316","317","318 "]];
+tf_freq_east = _settingsSwEast;
+
+};

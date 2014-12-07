@@ -10,6 +10,8 @@ disabledAI = 0; //1
 enableDebugConsole = 2;
 
 #include "plank\plank.h"
+#include "GUI\defines.hpp"
+#include "GUI\dialog.hpp"
 
 class Header
 {
@@ -70,3 +72,16 @@ class Params
 	};
 };
 
+class CfgSounds
+{
+	sounds[] = {};
+	class beam
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "beam";
+		// filename, volume, pitch
+		sound[] = {"sounds\beam.ogg", 1, 1};
+		// subtitle delay in seconds, subtitle text 
+		titles[] = {1, ""};
+	};
+};
