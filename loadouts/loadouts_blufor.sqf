@@ -457,6 +457,13 @@ blufor_SQF_G3 = {
 	for "_i" from 1 to 3 do {this addItemToVest "hlc_20rnd_762x51_b_G3";};
 	for "_i" from 1 to 3 do {this addItemToVest "hlc_20rnd_762x51_T_G3";};
 	if (TROPENTARN) then {
+	this addBackpack "ARC_GER_Backpack_compact_Tropentarn";
+	} else {
+	this addBackpack "ARC_GER_Backpack_compact_Flecktarn";
+	};
+	for "_i" from 1 to 3 do {this addItemToBackpack "SLAMDirectionalMine_Wire_Mag";};
+	this addItemToBackpack "AGM_Clacker";
+	if (TROPENTARN) then {
 	this addHeadgear "ARC_GER_Tropentarn_Helmet";
 	} else {
 	this addHeadgear "ARC_GER_Flecktarn_Helmet";
@@ -521,6 +528,13 @@ blufor_SQL_AR15 = {
 	this addItemToVest "B_IR_Grenade";
 	for "_i" from 1 to 2 do {this addItemToVest "Chemlight_blue";};
 	for "_i" from 1 to 7 do {this addItemToVest "hlc_30rnd_556x45_EPR";};
+	if (TROPENTARN) then {
+	this addBackpack "ARC_GER_Backpack_compact_Tropentarn";
+	} else {
+	this addBackpack "ARC_GER_Backpack_compact_Flecktarn";
+	};
+	for "_i" from 1 to 3 do {this addItemToBackpack "SLAMDirectionalMine_Wire_Mag";};
+	this addItemToBackpack "AGM_Clacker";
 	if (TROPENTARN) then {
 	this addHeadgear "ARC_GER_Tropentarn_Helmet";
 	} else {
