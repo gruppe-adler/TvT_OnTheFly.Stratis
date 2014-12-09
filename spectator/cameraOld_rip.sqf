@@ -196,12 +196,13 @@ onScrollWheelChange = {
 
    
 	text2 = format ["%1<br /><t color='#ffcc00'>%2</t>", name currentSpecUnit, side currentSpecUnit];
-    [text2] call AGM_Core_fnc_displayTextStructured;
+    	[text2] call AGM_Core_fnc_displayTextStructured;
 	BIS_DEBUG_CAM camcommand 'manual off';
 	BIS_DEBUG_CAM campreparefocus [-1,1];
-	BIS_DEBUG_CAM camPrepareTarget getPos (playersLeftUnits select playableUnitsSelector);
-	BIS_DEBUG_CAM camPrepareTarget getPos (playersLeftUnits select playableUnitsSelector);
+	BIS_DEBUG_CAM camPrepareTarget getPosATL (playersLeftUnits select playableUnitsSelector);
+	//BIS_DEBUG_CAM camPreparePos getPosATL (playersLeftUnits select playableUnitsSelector);
 	BIS_DEBUG_CAM camcommitprepared 3;
+	waitUntil {camCommitted BIS_DEBUG_CAM};
 	BIS_DEBUG_CAM camcommand 'manual on';
     };
 	
