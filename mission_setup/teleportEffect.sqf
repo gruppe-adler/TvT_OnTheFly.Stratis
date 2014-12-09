@@ -16,5 +16,6 @@ _max_distance = 50;
 playSound "beam";
 titleCut ["", "BLACK OUT", 1];
 player setPos _spawn_area;
+BIS_DEBUG_CAM = nil;
 sleep 1.2;
 titleCut ["", "BLACK IN", 1];
