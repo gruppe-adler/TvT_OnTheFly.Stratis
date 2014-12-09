@@ -1,11 +1,11 @@
-if (side player == east && !OPFOR_TELEPORTED) then {
+if (player == opfor_teamlead && !OPFOR_TELEPORTED) then {
 ["Spawnpunkt wählen"] call AGM_Core_fnc_displayTextStructured;
 openMap [true,true];
 
 onMapSingleClick "[_pos] call teleportOpforGroup; onMapSingleClick ''; true";
 };
 
-if (side player == west && OPFOR_TELEPORTED) then {
+if (player == blufor_teamlead && OPFOR_TELEPORTED) then {
 ["Spawnpunkt wählen"] call AGM_Core_fnc_displayTextStructured;
 openMap [true,true];
 
@@ -20,7 +20,7 @@ openMap [false,false];
 	// doesnt work correctly in SP tests
 	[[[pos],"mission_setup\createMarkerBlufor.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 
-	if (side player == east && !OPFOR_TELEPORTED) then {
+	if (player == opfor_teamlead && !OPFOR_TELEPORTED) then {
 
 		[[[east,pos],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 		
@@ -47,7 +47,7 @@ openMap [false,false];
 		
 	};
 
-	if (side player == west && OPFOR_TELEPORTED) then {
+	if (player == blufor_teamlead && OPFOR_TELEPORTED) then {
 		openMap [false,false];
 	
 		// entfernung marker zu spawnpunkt zu klein oder groß?
