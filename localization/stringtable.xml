@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="TvT_OnTheFly_project">
+    <Package name="TvT_OnTheFly_package">
+        <Container name="mission setup">
+            <Key ID="str_GRAD_choose_spawn_location">
+                <Original>Choose Spawn Location</Original>
+                <English>Choose Spawn Location</English>
+                <German>Spawnpunkt wählen</German>
+            </Key>
+            <Key ID="str_GRAD_choose_vehicle">
+                 <Original>Choose Upgrade</Original>
+                <English>Choose Upgrade</English>
+                <German>Upgrade wählen</German>
+            </Key>
+        </Container>
+        <Container name="mission_end">
+            <Key ID="str_GRAD_winmsg_blufor">
+               <Original>Blufor wins. Mission ends now...</Original>
+                <English>Blufor wins. Mission ends now...e</English>
+                <German>Blufor gewinnt. Mission wird beendet...</German>
+            </Key>
+        </Container>
+    </Package>
+</Project>
