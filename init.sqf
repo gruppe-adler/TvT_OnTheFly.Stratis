@@ -96,10 +96,6 @@ respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger sele
 if !(isDedicated) then { 
 [] execVM "mission_setup\helpBriefing.sqf";
 [] execVM "loadouts\_client.sqf";
-if (time > 10) then {
-	[player] execVM "onPlayerRespawn.sqf";
-	["Switched to Spectator because JIP"] call AGM_Core_fnc_displayTextStructured;
-};
 };
 
 // Intro Gruppe Adler   
