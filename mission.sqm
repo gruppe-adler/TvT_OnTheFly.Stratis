@@ -743,7 +743,7 @@ class Mission
 						};
 						class Item14
 						{
-							value="0.5";
+							value="1";
 							parentCls="ModuleSector_F";
 							typeName="CostPlayers";
 						};
@@ -924,7 +924,7 @@ class Mission
 		items=2;
 		class Item0
 		{
-			position[]={383.17856,32.379513,356.94702};
+			position[]={269.87454,35.777966,329.07532};
 			a=4;
 			b=4;
 			activationBy="ANY";

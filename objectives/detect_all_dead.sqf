@@ -19,13 +19,13 @@
 		  spectator_vehicle setVehicleLock "UNLOCKED";
    
       whiteboard addAction["<t color=""#ff0000"">" + "End Mission now",{
-      sleep 1;
+      
       END_MISSION_TRIGGERED = true; publicVariable "END_MISSION_TRIGGERED";
-      [[["Mission ends now."],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+      [[[localize "str_GRAD_winmsg_opfor" + "."],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
       sleep 1;
-      [[["Mission ends now.."],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+      [[[localize "str_GRAD_winmsg_opfor" + ".."],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
       sleep 1;
-      [[["Mission ends now..."],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+      [[[localize "str_GRAD_winmsg_opfor" + "..."],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
       
       }, _Args, 1, false, false, "","!END_MISSION_TRIGGERED"];
 
@@ -37,7 +37,7 @@
 
    
     // end BIS cam
-    [{if (!isnull BIS_DEBUG_CAM) then {BIS_DEBUG_CAM = null;};},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
+    [{if (!isNil "BIS_DEBUG_CAM") then {BIS_DEBUG_CAM = null;};},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
     [[[west,pos],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
     [[[east,pos],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 		
@@ -52,13 +52,13 @@
       spectator_vehicle setVehicleLock "UNLOCKED";
 
       whiteboard addAction["<t color=""#ff0000"">" + "End Mission now",{
-      sleep 1;
+      
       END_MISSION_TRIGGERED = true; publicVariable "END_MISSION_TRIGGERED";
-      [[["Mission ends now."],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+      [[[localize "str_GRAD_winmsg_opfor" + "."],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
       sleep 1;
-      [[["Mission ends now.."],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+      [[[localize "str_GRAD_winmsg_opfor" + ".."],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
       sleep 1;
-      [[["Mission ends now..."],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+      [[[localize "str_GRAD_winmsg_opfor" + "..."],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
       
       }, _Args, 1, false, false, "","!END_MISSION_TRIGGERED"];
 
@@ -67,7 +67,7 @@
    removeAllWeapons _x;
    } 
    forEach playableUnits + switchableUnits;
-    [{if (!isnull BIS_DEBUG_CAM) then {BIS_DEBUG_CAM = null;};},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
+    [{if (!isNil "BIS_DEBUG_CAM") then {BIS_DEBUG_CAM = null;};},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
     [[[west,pos],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
     [[[east,pos],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
     

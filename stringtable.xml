@@ -15,9 +15,14 @@
         </Container>
         <Container name="mission_end">
             <Key ID="str_GRAD_winmsg_blufor">
-               <Original>Blufor wins. Mission ends now...</Original>
-                <English>Blufor wins. Mission ends now...e</English>
-                <German>Blufor gewinnt. Mission wird beendet...</German>
+               <Original>BLUFOR wins. Mission ends now</Original>
+                <English>BLUFOR wins. Mission ends now</English>
+                <German>BLUFOR gewinnt. Mission wird beendet</German>
+            </Key>
+             <Key ID="str_GRAD_winmsg_opfor">
+               <Original>OPFOR wins. Mission ends now</Original>
+                <English>OPFOR wins. Mission ends now</English>
+                <German>OPFOR gewinnt. Mission wird beendet</German>
             </Key>
         </Container>
     </Package>
