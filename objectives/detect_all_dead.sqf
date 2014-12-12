@@ -35,6 +35,9 @@
    } 
    forEach playableUnits + switchableUnits;
 
+   
+    // end BIS cam
+    [{if (!isnull BIS_DEBUG_CAM) then {BIS_DEBUG_CAM = null;};},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
     [[[west,pos],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
     [[[east,pos],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 		
@@ -64,7 +67,7 @@
    removeAllWeapons _x;
    } 
    forEach playableUnits + switchableUnits;
-
+    [{if (!isnull BIS_DEBUG_CAM) then {BIS_DEBUG_CAM = null;};},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
     [[[west,pos],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
     [[[east,pos],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
     
