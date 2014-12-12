@@ -64,8 +64,17 @@ openMap [false,false];
 		// teleport und gucken, ob posi frei ist
 		[[[west,pos],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 		
+		_spawn_area = [];
+		_max_distance = 40;
+		while{ count _spawn_area < 1 } do
+		{
+		    _spawn_area = pos findEmptyPosition[ 10 , _max_distance , "Land_Cargo_House_V1_F" ];
+		    _max_distance = _max_distance + 10;
+		};
 
-		
+		// create base building for blufor
+		_baseBuilding = "Land_Cargo_House_V1_F" createVehicle _spawn_area;
+		_baseBuilding addAction["<t color=""#ff0000"">" + "Declare Mission failed for BLUFOR",{BLUFOR_SURRENDERED = true; publicVariable "BLUFOR_SURRENDERED";}, _Args, 1, false, false, "","side _this == west && !BLUFOR_SURRENDERED"];
 		
 		choose_vehicle_blufor = blufor_teamlead addAction["<t color=""#93E352"">" + "Choose Vehicle",{[[[pos], "mission_setup\choose_blufor_vehicle.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
 		

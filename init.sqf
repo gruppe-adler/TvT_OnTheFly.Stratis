@@ -24,7 +24,10 @@ if (isServer) then {
 	publicVariable "bluforMarkerDrawn";
 	RESTRICTED_VEHICLES = false;
 	publicVariable "RESTRICTED_VEHICLES";
-
+	BLUFOR_SURRENDERED = false;
+	publicVariable "BLUFOR_SURRENDERED";
+	END_MISSION_TRIGGERED = false;
+	publicVariable "END_MISSION_TRIGGERED";
 };
 
 if (!isServer) then {

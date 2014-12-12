@@ -713,19 +713,19 @@ class Mission
 						};
 						class Item9
 						{
-							value="1";
+							value="0.5";
 							parentCls="ModuleSector_F";
 							typeName="CostInfantry";
 						};
 						class Item10
 						{
-							value="0.1";
+							value="0";
 							parentCls="ModuleSector_F";
 							typeName="CostWheeled";
 						};
 						class Item11
 						{
-							value="0.1";
+							value="0";
 							parentCls="ModuleSector_F";
 							typeName="CostTracked";
 						};
@@ -737,13 +737,13 @@ class Mission
 						};
 						class Item13
 						{
-							value="2";
+							value="0";
 							parentCls="ModuleSector_F";
 							typeName="CostAir";
 						};
 						class Item14
 						{
-							value="2";
+							value="0.5";
 							parentCls="ModuleSector_F";
 							typeName="CostPlayers";
 						};
@@ -890,7 +890,6 @@ class Mission
 			leader=1;
 			skill=0.5;
 			text="whiteboard";
-			init="this addaction [""<t color=""""#93E352"""">"" + ""End Mission now"",{END_MISSION_TRIGGERED = true; publicVariable ""END_MISSION_TRIGGERED"";}];";
 		};
 		class Item3
 		{
@@ -943,7 +942,9 @@ class Mission
 			position[]={275.3497,35.425587,318.85181};
 			a=0;
 			b=0;
-			interruptable=1;
+			timeoutMin=4;
+			timeoutMid=4;
+			timeoutMax=4;
 			type="END1";
 			age="UNKNOWN";
 			expCond="END_MISSION_TRIGGERED";

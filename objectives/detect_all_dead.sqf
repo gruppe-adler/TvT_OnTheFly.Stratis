@@ -17,8 +17,17 @@
     	sleep 3;
     	
 		  spectator_vehicle setVehicleLock "UNLOCKED";
-
-
+   
+      whiteboard addAction["<t color=""#ff0000"">" + "End Mission now",{
+      sleep 1;
+      END_MISSION_TRIGGERED = true; publicVariable "END_MISSION_TRIGGERED";
+      [[["Mission ends now."],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+      sleep 1;
+      [[["Mission ends now.."],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+      sleep 1;
+      [[["Mission ends now..."],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+      
+      }, _Args, 1, false, false, "","!END_MISSION_TRIGGERED"];
 
    {
    moveOut _x;
@@ -32,12 +41,23 @@
 	 	};
 
 
-    if (winConditionOpfor) exitWith {
+    if (winConditionOpfor || BLUFOR_SURRENDERED) exitWith {
       pos = getPos whiteboard;
-      ["<img size= '6' shadow='false' image='pic\gruppe-adler.paa'/><br/><t size='.7' color='#FFFFFF'>BLUFOR wins! </t><br /> <t size='.5'>Thank you for playing.<br /> You will now be teleported to Debriefing.</t>",0,0,3,2] spawn BIS_fnc_dynamicText;
+      ["<img size= '6' shadow='false' image='pic\gruppe-adler.paa'/><br/><t size='.7' color='#FFFFFF'>OPFOR wins! </t><br /> <t size='.5'>Thank you for playing.<br /> You will now be teleported to Debriefing.</t>",0,0,3,2] spawn BIS_fnc_dynamicText;
       sleep 3;
   
       spectator_vehicle setVehicleLock "UNLOCKED";
+
+      whiteboard addAction["<t color=""#ff0000"">" + "End Mission now",{
+      sleep 1;
+      END_MISSION_TRIGGERED = true; publicVariable "END_MISSION_TRIGGERED";
+      [[["Mission ends now."],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+      sleep 1;
+      [[["Mission ends now.."],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+      sleep 1;
+      [[["Mission ends now..."],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+      
+      }, _Args, 1, false, false, "","!END_MISSION_TRIGGERED"];
 
    {
    moveOut _x;
@@ -52,5 +72,4 @@
 
     
     };
-  };
 };
