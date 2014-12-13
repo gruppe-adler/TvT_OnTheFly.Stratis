@@ -4,10 +4,11 @@ if (!firstspawn) exitWith {firstspawn = true;};
 
 if (!local _unit) exitWith {};
 
-if (winConditionOpfor || winConditionBlufor || MISSION_COMPLETED) exitWith {
+if (winConditionOpfor || winConditionBlufor || BLUFOR_CAPTURED || BLUFOR_SURRENDERED) exitWith {
 	pos = getPos whiteboard;
 	_emptyPosition_unit = pos  findEmptyPosition [5,100];
-	player setPos _emptyPosition_unit;  
+	player setPos _emptyPosition_unit;
+	if (!isNil "BIS_DEBUG_CAM") then {BIS_DEBUG_CAM = null;};  
 };
 
 

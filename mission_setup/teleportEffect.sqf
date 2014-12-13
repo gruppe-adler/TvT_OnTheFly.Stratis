@@ -13,9 +13,10 @@ _max_distance = 50;
 
 		};
 
+waitUntil {count _spawn_area >= 1;};
 playSound "beam";
 titleCut ["", "BLACK OUT", 1];
-player setPos _spawn_area;
 BIS_DEBUG_CAM = nil;
 sleep 1.2;
+player setPos _spawn_area;
 titleCut ["", "BLACK IN", 1];

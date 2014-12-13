@@ -1,3 +1,8 @@
+if (OPFOR_TELEPORTED) then {
+	[player] execVM "onPlayerRespawn.sqf";
+	["Sorry, you joined too late. Spectate & enjoy!"] call AGM_Core_fnc_displayTextStructured;
+};
+
 // global options
 TROPENTARN = false;
 
@@ -18,6 +23,8 @@ loadoutNotfallSchalter = player addAction["<t color=""#93E352"">" + "Loadout set
 if (isServer) then {
 	setTimeMultiplier (paramsArray select 5);
 
+	BLUFOR_CAPTURED = false;
+	publicVariable "BLUFOR_CAPTURED";
 	MISSION_COMPLETED = false;
 	publicVariable "MISSION_COMPLETED";
 	bluforMarkerDrawn = false;

@@ -18,7 +18,6 @@ class Mission
 		"A3_Modules_F",
 		"A3_Modules_F_Multiplayer",
 		"A3_Characters_F_OPFOR",
-		"A3_Supplies_F_Heli_CargoNets",
 		"A3_Structures_F_Civ_InfoBoards",
 		"agm_respawn"
 	};
@@ -37,7 +36,6 @@ class Mission
 		"agm_respawn",
 		"task_force_radio_items",
 		"A3_Soft_F_HEMTT",
-		"A3_Supplies_F_Heli_CargoNets",
 		"A3_Structures_F_Civ_InfoBoards",
 		"aia_desert_e_config"
 	};
@@ -820,13 +818,13 @@ class Mission
 						};
 						class Item3
 						{
-							value="..::TFAR::..";
+							value="TFAR";
 							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
 							typeName="radio_channel_name";
 						};
 						class Item4
 						{
-							value="Tf2Ar4";
+							value="helium";
 							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
 							typeName="radio_channel_password";
 						};
@@ -855,7 +853,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=4;
+		items=2;
 		class Item0
 		{
 			position[]={265.62689,36.073284,322.51086};
@@ -871,36 +869,15 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={1892.5431,44.449451,131.83801};
-			azimut=163.319;
-			id=36;
-			side="EMPTY";
-			vehicle="B_CargoNet_01_ammo_F";
-			leader=1;
-			skill=0.5;
-			init="clearWeaponCargoGlobal this; clearItemCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this;null = [this] execVM ""loadouts\virtual_arsenal_init_blufor.sqf"";";
-		};
-		class Item2
-		{
 			position[]={274.27094,35.397308,323.95728};
 			azimut=163.319;
-			id=37;
+			id=36;
 			side="EMPTY";
 			vehicle="Land_MapBoard_F";
 			leader=1;
 			skill=0.5;
 			text="whiteboard";
-		};
-		class Item3
-		{
-			position[]={275.98175,35.670845,334.93628};
-			azimut=163.319;
-			id=38;
-			side="EMPTY";
-			vehicle="B_CargoNet_01_ammo_F";
-			leader=1;
-			skill=0.5;
-			init="clearWeaponCargoGlobal this; clearItemCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargoGlobal this;null = [this] execVM ""loadouts\virtual_arsenal_init_opfor.sqf"";";
+			init="this addAction[""Close Mission"", ""objectives\endmission.sqf"", nil, 6, True, True, """", ""!END_MISSION_TRIGGERED && MISSION_COMPLETED""];";
 		};
 	};
 	class Markers

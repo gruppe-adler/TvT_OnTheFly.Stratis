@@ -177,8 +177,7 @@ onScrollWheelChange = {
 	BIS_DEBUG_CAM camcommand 'manual off';
 	BIS_DEBUG_CAM campreparefocus [-1,1];
 	BIS_DEBUG_CAM camPrepareTarget getPos (playersLeftUnits select playableUnitsSelector);
-	BIS_DEBUG_CAM camPrepareTarget getPos (playersLeftUnits select playableUnitsSelector);
-	BIS_DEBUG_CAM camcommitprepared 3;
+	BIS_DEBUG_CAM camcommitprepared 0;
 	BIS_DEBUG_CAM camcommand 'manual on';
     };
 
