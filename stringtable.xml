@@ -6,11 +6,13 @@
                 <Original>Choose Spawn Location</Original>
                 <English>Choose Spawn Location</English>
                 <German>Spawnpunkt wählen</German>
+			<French>Choisir le point de spawn</French>
             </Key>
             <Key ID="str_GRAD_choose_vehicle">
                  <Original>Choose Upgrade</Original>
                 <English>Choose Upgrade</English>
                 <German>Upgrade wählen</German>
+			<French>S�lectionner un upgrade</French>
             </Key>
         </Container>
         <Container name="mission_end">
@@ -18,6 +20,7 @@
                <Original>Mission ends now</Original>
                 <English>Mission ends now</English>
                 <German>Mission wird beendet</German>
+			<French>Mission est fini</French>
             </Key>
         </Container>
     </Package>
