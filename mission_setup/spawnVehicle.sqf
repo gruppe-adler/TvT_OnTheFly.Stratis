@@ -64,10 +64,6 @@ if (player == opfor_teamlead) then {["Vehicle spawned."] call AGM_Core_fnc_displ
 	
 	sleep 0.1;
 
-	_veh2 setHit ["wheel_1_1_steering", 1]; 
-	_veh2 setHit ["wheel_1_2_steering", 1];
-	_veh2 setHit ["wheel_2_1_steering", 1];
-	_veh2 setHit ["wheel_2_2_steering", 1];
 	_veh2 setFuel 0;
 	if (_vehicle == "I_G_Offroad_01_armed_F") then {
 	_veh2 setVehicleAmmo 0.2;
