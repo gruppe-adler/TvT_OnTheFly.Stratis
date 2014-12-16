@@ -335,7 +335,7 @@ blufor_MG_M60 = {
 	this addHeadgear "H_Cap_headphones";
 
 	comment "Add weapons";
-	this addWeapon "hlc_lmg_m60";
+	this addWeapon "hlc_lmg_m60e4";
 	this addWeapon "hgun_Pistol_heavy_01_F";
 
 	comment "Add items";
