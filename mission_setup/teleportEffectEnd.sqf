@@ -4,6 +4,12 @@ _winner = _this select 2;
 
 if (side player != _side) exitWith {};
 
+if ((player getVariable ["AGM_Unconscious", False]) || (player getVariable ["AGM_isUnconscious", False])) then {
+	setPlayerRespawnTime 0;
+	forceRespawn player;
+
+};
+
 if (_winner == opfor) then {
  ["<img size= '6' shadow='false' image='pic\gruppe-adler.paa'/><br/><t size='.7' color='#FFFFFF'>OPFOR wins! </t><br /> <t size='.5'>Thank you for playing.<br /> You will now be teleported to Debriefing.</t>",0,0,3,2] spawn BIS_fnc_dynamicText;
       sleep 3;
@@ -30,7 +36,11 @@ titleCut ["", "BLACK OUT", 1];
 moveOut player;
 removeAllWeapons player;
 player setDamage 0;
+
 BIS_DEBUG_CAM = nil;
 sleep 1.2;
 player setPos _spawn_area;
+if (player != opfor_teamlead) then {
+player joinSilent opfor_teamlead;
+};
 titleCut ["", "BLACK IN", 1];

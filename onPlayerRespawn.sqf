@@ -6,8 +6,9 @@ if (!local _unit) exitWith {};
 
 if (winConditionOpfor || winConditionBlufor || BLUFOR_CAPTURED || BLUFOR_SURRENDERED) exitWith {
 	pos = getPos whiteboard;
-	_emptyPosition_unit = pos  findEmptyPosition [5,100];
+	_emptyPosition_unit = pos findEmptyPosition [5,100];
 	player setPos _emptyPosition_unit;
+	removeAllWeapons player:
 	if (!isNil "BIS_DEBUG_CAM") then {BIS_DEBUG_CAM = null;};  
 };
 

@@ -60,6 +60,7 @@ blufor_teleport = blufor_teamlead addAction["<t color=""#93E352"">" + localize "
 
 call compile preprocessFileLineNumbers "plank\plank_init.sqf";				//Plank
 cameraOldPimped = compile preprocessFile "spectator\cameraOld_rip.sqf";	
+cameraNewPimped = compile preprocessFile "spectator\camera_rip.sqf";	
 
 enableSentences false;														//Autospotten
 
@@ -92,20 +93,29 @@ respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger sele
 		while {true} do {
 			if ((OPFOR_TELEPORTED) && (BLUFOR_TELEPORTED)) then {
 
-			_pos =  [(getPosATL respawn_helper select 0), (getPosATL respawn_helper select 1), 0];
-			sector_trigger setPosATL _pos;
+			if (getPos respawn_helper select 0 < -900) then {
+			sector_trigger setPos getPos opfor_vehicle;
+			["sector_moduleWEST", getPos opfor_vehicle] call BIS_fnc_taskSetDestination;
+
+			} else 
+			{
+			_pos =  [(getPos respawn_helper select 0), (getPos respawn_helper select 1), 0];
+			sector_trigger setPos _pos;
 			["sector_moduleWEST", _pos] call BIS_fnc_taskSetDestination;
+
+
 			sleep 1;
 			};
 		};
 	};
 };
 
-
 // loadout call - giving each unit the appropriate sqf file
 if !(isDedicated) then { 
-[] execVM "mission_setup\helpBriefing.sqf";
-[] execVM "loadouts\_client.sqf";
+	[] execVM "mission_setup\adjustInitialSpawnPosition.sqf";
+	[] execVM "mission_setup\helpBriefing.sqf";
+	[] execVM "loadouts\_client.sqf";
+	
 };
 
 // Intro Gruppe Adler   
@@ -142,3 +152,8 @@ _settingsSwEast set [2, ["311","312","313","314","315","316","317","318 "]];
 tf_freq_east = _settingsSwEast;
 
 };
+
+AUSMD_markers = [];
+{_x addeventHandler ["Hit",{nul = [_this select 1,_this select 0] execVM "after_action_reporter\combat_engaged.sqf";}]} foreach allUnits;
+
+{if(leader (group _x) == _x) then {nul = [_x] execVM "after_action_reporter\movement.sqf";};} foreach allUnits;

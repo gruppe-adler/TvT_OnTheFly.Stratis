@@ -1,6 +1,7 @@
 //--- Classic camera script, enhanced by Karel Moricky, 2010/03/19
 //--- pimped for his needs by nomisum, 2014/11/30
 
+
 if (!isNil "BIS_DEBUG_CAM") exitwith {};
 
 //--- Is FLIR available
@@ -62,6 +63,35 @@ BIS_DEBUG_CAM_MARKER setmarkertypelocal "mil_start";
 BIS_DEBUG_CAM_MARKER setmarkercolorlocal "ColorWhite";
 BIS_DEBUG_CAM_MARKER setmarkersizelocal [.75,.75];
 BIS_DEBUG_CAM_MARKER setmarkertextlocal "Your Spectator Cam";
+
+
+
+
+[] spawn {
+	while {true} do {
+		sleep 0.1;
+		{player reveal _x} forEach allUnits;
+		if (isNull BIS_DEBUG_CAM) exitWith {};
+		
+		
+		
+		if (cursorTarget isKindOf "Man" && cursorTarget distance BIS_DEBUG_CAM < 30) then {
+			sideOfTarget = "";
+			nameOfTarget = name cursorTarget;
+			if (side cursorTarget == West) then {
+			sideOfTarget = '<t color="#008cda">BLUFOR</t>';
+			};
+			if (side cursorTarget== East) then {
+			sideOfTarget = '<t color="#c80000">OPFOR</t>';
+			};
+			text0 = format ["%1<br />%2", nameOfTarget, sideOfTarget];
+			[text0] call AGM_Core_fnc_displayTextStructured;	
+			sleep 1;
+			
+		};
+
+	};
+};
 
 
 //--- Key Down
@@ -164,45 +194,66 @@ onScrollWheelChange = {
     // scroll wheel down
     if ((_this select 1) < 0) then {
 
-    // wenn am ende der fahnenstange angekommen, bleib da
-	if (playableUnitsSelector > 1) then {playableUnitsSelector = playableUnitsSelector -1;
+	if (playableUnitsSelector > 0) then {playableUnitsSelector = playableUnitsSelector -1;
 	} else {
+	//playableUnitsSelector = playersLeftUnits -1;
 	playableUnitsSelector = 0;
 	};
-	
+
 	currentSpecUnit = playersLeftUnits select playableUnitsSelector;
-	
-    text1 = format ["%1<br /><t color='#ffcc00'>%2</t>", name currentSpecUnit, side currentSpecUnit];
-    [text1] call AGM_Core_fnc_displayTextStructured;
+
+   
+	sideOfTarget = "Unknown";
+	nameOfTarget = name currentSpecUnit;
+	if (side currentSpecUnit == WEST) then {sideOfTarget = '<t color="#008cda">BLUFOR</t>';};
+	if (side currentSpecUnit == EAST) then {sideOfTarget = '<t color="#c80000">OPFOR</t>';};
+	text1 = format ["%1<br />%2", nameOfTarget, sideOfTarget];
+	[text1] call AGM_Core_fnc_displayTextStructured;
 	BIS_DEBUG_CAM camcommand 'manual off';
-	BIS_DEBUG_CAM campreparefocus [-1,1];
-	BIS_DEBUG_CAM camPrepareTarget getPos (playersLeftUnits select playableUnitsSelector);
+	BIS_DEBUG_CAM camPrepareFocus [-1,1];
+	BIS_DEBUG_CAM camPrepareDir getDir currentSpecUnit;
+	BIS_DEBUG_CAM camPrepareTarget currentSpecUnit;
+	BIS_DEBUG_CAM camPreparePos getPos currentSpecUnit;
+	BIS_DEBUG_CAM camPrepareRelPos [0,0,10];
 	BIS_DEBUG_CAM camcommitprepared 0;
+	sleep 0.1;
 	BIS_DEBUG_CAM camcommand 'manual on';
-    };
+	  
+	};
 
 
 	// scroll wheel up      
     if ((_this select 1) > 0) then {
 
-	// wenn am ende der fahnenstange angekommen, bleib da
+   
+
+	
     if (playableUnitsSelector < (playersLeftCount - 1)) then {playableUnitsSelector = playableUnitsSelector +1;
-    } else {
+	} else {
+	
 	playableUnitsSelector = playersLeftCount - 1;
 	};
+
 	
 	currentSpecUnit = playersLeftUnits select playableUnitsSelector;
 
    
-	text2 = format ["%1<br /><t color='#ffcc00'>%2</t>", name currentSpecUnit, side currentSpecUnit];
-    	[text2] call AGM_Core_fnc_displayTextStructured;
+	sideOfTarget = "Unknown";
+	nameOfTarget = name currentSpecUnit;
+	if (side currentSpecUnit == WEST) then {sideOfTarget = '<t color="#008cda">BLUFOR</t>';};
+	if (side currentSpecUnit == EAST) then {sideOfTarget = '<t color="#c80000">OPFOR</t>';};
+	text2 = format ["%1<br />%2", nameOfTarget, sideOfTarget];
+	[text2] call AGM_Core_fnc_displayTextStructured;
 	BIS_DEBUG_CAM camcommand 'manual off';
-	BIS_DEBUG_CAM campreparefocus [-1,1];
-	BIS_DEBUG_CAM camPrepareTarget getPosATL (playersLeftUnits select playableUnitsSelector);
-	//BIS_DEBUG_CAM camPreparePos getPosATL (playersLeftUnits select playableUnitsSelector);
-	BIS_DEBUG_CAM camcommitprepared 3;
-	waitUntil {camCommitted BIS_DEBUG_CAM};
+	BIS_DEBUG_CAM camPrepareFocus [-1,1];
+	BIS_DEBUG_CAM camPrepareDir getDir currentSpecUnit;
+	BIS_DEBUG_CAM camPrepareTarget currentSpecUnit;
+	BIS_DEBUG_CAM camPreparePos getPos currentSpecUnit;
+	BIS_DEBUG_CAM camPrepareRelPos [0,0,10];
+	BIS_DEBUG_CAM camcommitprepared 0;
+	sleep 0.1;
 	BIS_DEBUG_CAM camcommand 'manual on';
+	
     };
 	
 };  
@@ -254,6 +305,7 @@ _map_mousebuttonclick = ((finddisplay 12) displayctrl 51) ctrladdeventhandler ["
 	};
 
 	player cameraEffect ["TERMINATE", "BACK"];
+	player switchCamera "internal";
 	deletemarkerlocal BIS_DEBUG_CAM_MARKER;
 	BIS_DEBUG_CAM = nil;
 	BIS_DEBUG_CAM_MAP = nil;
