@@ -110,10 +110,10 @@ if ((isServer) || (isDedicated)) then {
 		};
 	};
 };
-
+// call this on server too - because of whiteboard/truck
+//[] execVM "mission_setup\adjustInitialSpawnPosition.sqf";
 // loadout call - giving each unit the appropriate sqf file
 if !(isDedicated) then { 
-	[] execVM "mission_setup\adjustInitialSpawnPosition.sqf";
 	[] execVM "mission_setup\helpBriefing.sqf";
 	[] execVM "loadouts\_client.sqf";
 	
