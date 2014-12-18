@@ -84,27 +84,28 @@ if (isServer) then { setDate [2035, 6, 24, (paramsArray select 0), 1]; };	//Zeit
 
 if ((isServer) || (isDedicated)) then {
 
-[] execVM "objectives\detect_all_dead.sqf";
+	[] execVM "objectives\detect_all_dead.sqf";
 
-respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger select 0),(getPos sector_trigger select 1),0];
-[respawn_helper, false] call AGM_Drag_fnc_makeDraggable;
+	respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger select 0),(getPos sector_trigger select 1),0];
+	[respawn_helper, false] call AGM_Drag_fnc_makeDraggable;
 
-[] spawn {
+	[] spawn {
 		while {true} do {
 			if ((OPFOR_TELEPORTED) && (BLUFOR_TELEPORTED)) then {
 
-			if (getPos respawn_helper select 0 < -900) then {
-			sector_trigger setPos getPos opfor_vehicle;
-			["sector_moduleWEST", getPos opfor_vehicle] call BIS_fnc_taskSetDestination;
+				if (getPos respawn_helper select 0 < -900) then {
+					sector_trigger setPos getPos opfor_vehicle;
+					["sector_moduleWEST", getPos opfor_vehicle] call BIS_fnc_taskSetDestination;
 
-			} else 
-			{
-			_pos =  [(getPos respawn_helper select 0), (getPos respawn_helper select 1), 0];
-			sector_trigger setPos _pos;
-			["sector_moduleWEST", _pos] call BIS_fnc_taskSetDestination;
+				} else 
+				{
+					_pos =  [(getPos respawn_helper select 0), (getPos respawn_helper select 1), 0];
+					sector_trigger setPos _pos;
+					["sector_moduleWEST", _pos] call BIS_fnc_taskSetDestination;
 
 
-			sleep 1;
+					sleep 1;
+				};
 			};
 		};
 	};
