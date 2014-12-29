@@ -6,10 +6,21 @@ if (!local _unit) exitWith {};
 
 if (winConditionOpfor || winConditionBlufor || BLUFOR_CAPTURED || BLUFOR_SURRENDERED) exitWith {
 	pos = getPos whiteboard;
-	_emptyPosition_unit = pos findEmptyPosition [5,100];
-	player setPos _emptyPosition_unit;
+	[player,pos] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
 	removeAllWeapons player:
-	if (!isNil "BIS_DEBUG_CAM") then {BIS_DEBUG_CAM = null;};  
+	if (!isNil "BIS_DEBUG_CAM") then {BIS_DEBUG_CAM = nil;};  
+
+	if (winConditionOpfor || BLUFOR_SURRENDERED) then {
+ 	["<img size= '6' shadow='false' image='pic\gruppe-adler.paa'/><br/><t size='.7' color='#FFFFFF'>OPFOR wins! </t><br /> <t size='.5'>Thank you for playing.<br /> You will now be teleported to Debriefing.</t>",0,0,3,2] spawn BIS_fnc_dynamicText;
+      sleep 3;
+	};
+
+	if (winConditionBlufor || BLUFOR_CAPTURED) then {
+ 	["<img size= '6' shadow='false' image='pic\gruppe-adler.paa'/><br/><t size='.7' color='#FFFFFF'>BLUFOR wins! </t><br /> <t size='.5'>Thank you for playing.<br /> You will now be teleported to Debriefing.</t>",0,0,3,2] spawn BIS_fnc_dynamicText;
+      sleep 3;
+	};
+
+
 };
 
 
