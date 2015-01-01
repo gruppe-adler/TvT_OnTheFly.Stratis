@@ -18,8 +18,5 @@ if (_winner == blufor) then {
       sleep 3;
 };
 
-playSound "beam";
-titleCut ["", "BLACK OUT", 1];
 setPlayerRespawnTime 0;
 forceRespawn player;
-titleCut ["", "BLACK IN", 1];

@@ -20,7 +20,7 @@
     
    
     // end BIS cam
-    [{if (!isNil "BIS_DEBUG_CAM") then {BIS_DEBUG_CAM = null;};},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
+    [{if !(isNil "BIS_DEBUG_CAM") then {BIS_DEBUG_CAM = nil;};},"BIS_fnc_spawn",true,true] spawn BIS_fnc_MP;
     [[[west,pos,blufor],"mission_setup\teleportEffectEnd.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
     [[[east,pos,blufor],"mission_setup\teleportEffectEnd.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
     [] execVM "after_action_reporter\reveal.sqf";
@@ -38,7 +38,7 @@
 
 
   
-    [{if (!isNil "BIS_DEBUG_CAM") then {BIS_DEBUG_CAM = null;};},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
+    [{if !(isNil "BIS_DEBUG_CAM") then {BIS_DEBUG_CAM = nil;};},"BIS_fnc_spawn",true,true] spawn BIS_fnc_MP;
     [[[west,pos,opfor],"mission_setup\teleportEffectEnd.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
     [[[east,pos,opfor],"mission_setup\teleportEffectEnd.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
     [] execVM "after_action_reporter\reveal.sqf";
