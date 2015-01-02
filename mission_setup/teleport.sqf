@@ -43,7 +43,7 @@ openMap [false,false];
 		
 		[[[pos],"mission_setup\respawn_helper.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 		
-		choose_vehicle_opfor = opfor_teamlead addAction["<t color=""#93E352"">" + "Spawn Vehicle",{[[[pos], "mission_setup\choose_opfor_vehicle.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED && !RESTRICTED_VEHICLES"];
+		choose_vehicle_opfor = opfor_teamlead addAction["<t color=""#93E352"">" + "Spawn Vehicle",{[[[pos], "mission_setup\choose_opfor_vehicle.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
 		
 	};
 
