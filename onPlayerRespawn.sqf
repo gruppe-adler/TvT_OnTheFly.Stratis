@@ -6,9 +6,12 @@ if (!local _unit) exitWith {};
 
 if (winConditionOpfor || winConditionBlufor || BLUFOR_CAPTURED || BLUFOR_SURRENDERED) exitWith {
 	titleCut ["", "BLACK IN", 1];
+	if (!isNil "BIS_DEBUG_CAM") exitwith {BIS_DEBUG_CAM = nil;};
+
 	pos = getPos whiteboard;
 	[player,pos] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
 	removeAllWeapons player:
+	[_unit] joinSilent (createGroup civilian);
 	
 
 	if (winConditionOpfor || BLUFOR_SURRENDERED) then {
@@ -21,8 +24,6 @@ if (winConditionOpfor || winConditionBlufor || BLUFOR_CAPTURED || BLUFOR_SURREND
       sleep 3;
 	};
 	titleCut ["", "BLACK OUT", 1];
-	if (!isNil "BIS_DEBUG_CAM") then {BIS_DEBUG_CAM = nil;}; 
-
 
 };
 

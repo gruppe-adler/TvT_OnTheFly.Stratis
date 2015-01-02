@@ -35,6 +35,10 @@ if (isServer) then {
 	publicVariable "BLUFOR_SURRENDERED";
 	END_MISSION_TRIGGERED = false;
 	publicVariable "END_MISSION_TRIGGERED";
+
+	WINCONDITIONOPFOR = false;
+	WINCONDITIONBLUFOR = false;
+
 };
 
 if (!isServer) then {
@@ -96,6 +100,7 @@ if ((isServer) || (isDedicated)) then {
 				if (getPos respawn_helper select 0 < -900) then {
 					sector_trigger setPos getPos opfor_vehicle;
 					["sector_moduleWEST", getPos opfor_vehicle] call BIS_fnc_taskSetDestination;
+					sleep 1;
 
 				} else 
 				{
@@ -117,22 +122,32 @@ if !(isDedicated) then {
 	[] execVM "mission_setup\helpBriefing.sqf";
 	[] execVM "loadouts\_client.sqf";
 	
+
+
+	// Intro Gruppe Adler   
+
+	titleCut ["", "BLACK FADED", 999]; 
+	[] Spawn {
+
+	titleText ["","PLAIN"]; 
+	titleFadeOut 1;
+	sleep 2;
+
+	titleCut ["", "BLACK IN", 1];
+
+	waitUntil {time > 3};
+		["<img size= '6' shadow='false' image='pic\gruppe-adler.paa'/><br/><t size='.9' color='#FFFFFF'>TvT@OnTheFly</t>",0,0,2,2] spawn BIS_fnc_dynamicText;
+	};
+
 };
 
-// Intro Gruppe Adler   
+AUSMD_markers = [];
+{_x addeventHandler ["Hit",{nul = [_this select 1,_this select 0] execVM "after_action_reporter\combat_engaged.sqf";}]} foreach allUnits;
 
-titleCut ["", "BLACK FADED", 999]; 
-[] Spawn {
+{if(leader (group _x) == _x) then {nul = [_x] execVM "after_action_reporter\movement.sqf";};} foreach allUnits;
 
-titleText ["","PLAIN"]; 
-titleFadeOut 1;
-sleep 2;
 
-titleCut ["", "BLACK IN", 1];
-
-waitUntil {time > 3};
-	["<img size= '6' shadow='false' image='pic\gruppe-adler.paa'/><br/><t size='.9' color='#FFFFFF'>TvT@OnTheFly</t>",0,0,2,2] spawn BIS_fnc_dynamicText;
-};
+waitUntil {time > 5};
 
 #include "\task_force_radio\functions\common.sqf";
 
@@ -152,9 +167,6 @@ _settingsSwEast = false call TFAR_fnc_generateSwSettings;
 _settingsSwEast set [2, ["311","312","313","314","315","316","317","318 "]];
 tf_freq_east = _settingsSwEast;
 
+
+	
 };
-
-AUSMD_markers = [];
-{_x addeventHandler ["Hit",{nul = [_this select 1,_this select 0] execVM "after_action_reporter\combat_engaged.sqf";}]} foreach allUnits;
-
-{if(leader (group _x) == _x) then {nul = [_x] execVM "after_action_reporter\movement.sqf";};} foreach allUnits;

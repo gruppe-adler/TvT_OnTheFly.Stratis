@@ -69,9 +69,11 @@ BIS_DEBUG_CAM_MARKER setmarkertextlocal "Your Spectator Cam";
 
 [] spawn {
 	while {true} do {
-		sleep 0.1;
+		sleep 0.5;
 		{player reveal _x} forEach allUnits;
-		if (isNull BIS_DEBUG_CAM) exitWith {};
+		if (isNil "BIS_DEBUG_CAM") exitwith {};
+
+		
 		
 		
 		
@@ -216,7 +218,6 @@ onScrollWheelChange = {
 	BIS_DEBUG_CAM camPreparePos getPos currentSpecUnit;
 	BIS_DEBUG_CAM camPrepareRelPos [0,0,10];
 	BIS_DEBUG_CAM camcommitprepared 0;
-	sleep 0.1;
 	BIS_DEBUG_CAM camcommand 'manual on';
 	  
 	};
@@ -251,7 +252,6 @@ onScrollWheelChange = {
 	BIS_DEBUG_CAM camPreparePos getPos currentSpecUnit;
 	BIS_DEBUG_CAM camPrepareRelPos [0,0,10];
 	BIS_DEBUG_CAM camcommitprepared 0;
-	sleep 0.1;
 	BIS_DEBUG_CAM camcommand 'manual on';
 	
     };
@@ -301,7 +301,7 @@ _map_mousebuttonclick = ((finddisplay 12) displayctrl 51) ctrladdeventhandler ["
 
 	waituntil {
 		if (!isnull BIS_DEBUG_CAM) then {_lastpos = position BIS_DEBUG_CAM};
-		isNull BIS_DEBUG_CAM
+		isNull BIS_DEBUG_CAM || winConditionOpfor || winConditionBlufor || BLUFOR_CAPTURED || BLUFOR_SURRENDERED
 	};
 
 	player cameraEffect ["TERMINATE", "BACK"];
