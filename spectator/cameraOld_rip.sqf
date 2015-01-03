@@ -301,7 +301,7 @@ _map_mousebuttonclick = ((finddisplay 12) displayctrl 51) ctrladdeventhandler ["
 
 	waituntil {
 		if (!isnull BIS_DEBUG_CAM) then {_lastpos = position BIS_DEBUG_CAM};
-		isNull BIS_DEBUG_CAM || winConditionOpfor || winConditionBlufor || BLUFOR_CAPTURED || BLUFOR_SURRENDERED
+		isNull BIS_DEBUG_CAM || WINCONDITIONOPFOR || WINCONDITIONBLUFOR || BLUFOR_CAPTURED || BLUFOR_SURRENDERED
 	};
 
 	player cameraEffect ["TERMINATE", "BACK"];

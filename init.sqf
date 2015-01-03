@@ -9,6 +9,8 @@ TROPENTARN = false;
 // spawn teleports done?
 OPFOR_TELEPORTED = false;
 BLUFOR_TELEPORTED = false;
+WINCONDITIONOPFOR = false;
+WINCONDITIONBLUFOR = false;
 firstspawn = false;
 
 EDITOR_MODE = false; // check if test is in editor/singleplayer
@@ -36,8 +38,7 @@ if (isServer) then {
 	END_MISSION_TRIGGERED = false;
 	publicVariable "END_MISSION_TRIGGERED";
 
-	WINCONDITIONOPFOR = false;
-	WINCONDITIONBLUFOR = false;
+	
 
 };
 
