@@ -329,7 +329,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.5;
 					text="opfor_engi";
-					description="Doc (AKS74U)";
+					description="Doc (AKM)";
 				};
 				class Item8
 				{
@@ -341,7 +341,7 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
-					description="MG-Gunner (PKM)";
+					description="MG-Gunner (RPK-74)";
 				};
 				class Item9
 				{

@@ -200,23 +200,18 @@ if (TROPENTARN) then {
 } else {
 [[{}, this forceAddUniform randUniformEastern], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 };
-for "_i" from 1 to 4 do {this addItemToUniform "AGM_Bandage";};
+for "_i" from 1 to 15 do {this addItemToUniform "AGM_Bandage";};
 for "_i" from 1 to 2 do {this addItemToUniform "16Rnd_9x21_Mag";};
 this addVest "V_TacVest_khk";
-for "_i" from 1 to 10 do {this addItemToVest "AGM_Bandage";};
-for "_i" from 1 to 3 do {this addItemToVest "Chemlight_red";};
 for "_i" from 1 to 6 do {this addItemToVest "AGM_HandFlare_Red";};
 for "_i" from 1 to 2 do {this addItemToVest "MiniGrenade";};
-for "_i" from 1 to 2 do {this addItemToVest "SmokeShellPurple";};
-for "_i" from 1 to 2 do {this addItemToVest "SmokeShell";};
+for "_i" from 1 to 3 do {this addItemToVest "SmokeShellRed";};
 this addItemToVest "AGM_M84";
-this addItemToVest "CAF_100Rnd_762x54_PKM";
-this addBackpack "B_AssaultPack_mcamo";
+this addBackpack "B_Carryall_cbr";
 for "_i" from 1 to 5 do {this addItemToBackpack "AGM_Bandage";};
 this addItemToBackpack "AGM_EarBuds";
 this addItemToBackpack "AGM_CableTie";
-for "_i" from 1 to 3 do {this addItemToBackpack "MiniGrenade";};
-for "_i" from 1 to 6 do {this addItemToBackpack "CAF_100Rnd_762x54_PKM";};
+for "_i" from 1 to 7 do {this addItemToBackpack "hlc_75Rnd_762x39_m_rpk";};
 if (TROPENTARN) then {
 this addHeadgear randHeadGearTaliban;
 } else {
@@ -224,7 +219,7 @@ this addHeadgear randHeadGearEastern;
 };
 
 comment "Add weapons";
-this addWeapon "caf_pkm";
+this addWeapon "hlc_rifle_rpk";
 this addWeapon "hgun_Rook40_F";
 
 comment "Add items";
@@ -322,18 +317,18 @@ if (TROPENTARN) then {
 [[{}, this forceAddUniform randUniformEastern], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 };
 for "_i" from 1 to 4 do {this addItemToUniform "AGM_Bandage";};
-this addItemToUniform "hlc_30Rnd_545x39_EP_ak";
+this addItemToUniform "hlc_30Rnd_762x39_b_ak";
 this addItemToUniform "16Rnd_9x21_Mag";
 this addVest "V_TacVest_khk";
 for "_i" from 1 to 4 do {this addItemToVest "AGM_HandFlare_Red";};
-for "_i" from 1 to 7 do {this addItemToVest "hlc_30Rnd_545x39_EP_ak";};
-this addItemToVest "hlc_30Rnd_545x39_t_ak";
+for "_i" from 1 to 3 do {this addItemToVest "hlc_30Rnd_762x39_t_ak";};
+for "_i" from 1 to 3 do {this addItemToVest "hlc_30Rnd_762x39_b_ak";};
 this addBackpack "B_Carryall_mcamo";
 for "_i" from 1 to 80 do {this addItemToBackpack "AGM_Bandage";};
 for "_i" from 1 to 25 do {this addItemToBackpack "AGM_Morphine";};
 for "_i" from 1 to 25 do {this addItemToBackpack "AGM_Epipen";};
 for "_i" from 1 to 2 do {this addItemToBackpack "AGM_Bloodbag";};
-this addItemToBackpack "hlc_30Rnd_545x39_t_ak";
+this addItemToBackpack "hlc_30Rnd_762x39_b_ak";
 this addItemToBackpack "AGM_EarBuds";
 this addItemToBackpack "AGM_CableTie";
 if (TROPENTARN) then {
@@ -343,7 +338,7 @@ this addHeadgear randHeadGearEastern;
 };
 
 comment "Add weapons";
-this addWeapon "hlc_rifle_aks74u";
+this addWeapon "hlc_rifle_akm";
 this addWeapon "hgun_Rook40_F";
 
 comment "Add items";
