@@ -1,32 +1,34 @@
 private ['_islands', '_targetPositions', '_positionsForCurrentWorld', '_targetPosition'];
 
+// Please insert new islands alphabetically!
+
 islands = [
-	'Desert_E',
+	'Altis',
 	'bornholm',
-	'Woodland_ACR',
+	'Chernarus_Summer',
+	'Desert_E',
+	'IsolaDiCapraia',
 	'Sara',
 	'Sara_dbe1',
-	'takistan',
-	'Zargabad',
 	'Stratis',
-	'Chernarus_Summer',
+	'takistan',
 	'Panthera3',
-	'IsolaDiCapraia',
-	'Altis'
+	'Woodland_ACR',
+	'Zargabad'
 ];
 targetPositions = [
-	[ [1500,   50], [1900,   50], 'Desert_E' ],
+	[ [14300,16200], [14600, 16700], 'Altis']
 	[ [3000, 5400], [3900, 4900], 'bornholm' ], 
-	[ [7500, 7600], [7500, 7300], 'Woodland_ACR' ],
+	[ [4100,11000], [4860, 9740], 'Chernarus_Summer'],
+	[ [1500,   50], [1900,   50], 'Desert_E' ],
+	[ [1240,9450], [1240, 8450], 'IsolaDiCapraia'],
 	[ [18080,18535], [18200, 18060], 'Sara'],
 	[ [18080,18535], [18200, 18060], 'Sara_dbe1'],
-	[ [7700,1600], [8250, 2130], 'takistan'],
-	[ [3400,4320], [3400, 3600], 'Zargabad'],
 	[ [1540,5015], [1800, 6000], 'Stratis'],
-	[ [4100,11000], [4860, 9740], 'Chernarus_Summer'],
+	[ [7700,1600], [8250, 2130], 'takistan'],
 	[ [4080,7580], [4860, 7600], 'Panthera3'],
-	[ [1240,9450], [1240, 8450], 'IsolaDiCapraia'],
-	[ [14300,16200], [14600, 16700], 'Altis']
+	[ [7500, 7600], [7500, 7300], 'Woodland_ACR' ],
+	[ [3400,4320], [3400, 3600], 'Zargabad']
 ];
 
 
