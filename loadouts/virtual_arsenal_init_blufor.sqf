@@ -1,6 +1,6 @@
 //Init stuff
-_crate = _this select 0;
-["AmmoboxInit",[_crate,false,{true}]] spawn BIS_fnc_arsenal;
+//Init stuff
+[] spawn BIS_fnc_arsenal;
 
 _availableHeadgear = [
     "H_Cap_headphones",
