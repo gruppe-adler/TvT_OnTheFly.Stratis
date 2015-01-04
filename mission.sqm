@@ -878,7 +878,7 @@ class Mission
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
 			text="arsenal_blufor";
-			init="this addAction[""<t color='#ff1111'>Arsenal Box</t>"", ""mission_setup\virtual_arsenal_blufor.sqf"", [], 1000, false, true, """", ""player distance _this < 2""];";
+			init="clearWeaponCargoGlobal this; clearItemCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargo this; this addAction[""<t color='#ff1111'>Arsenal Box</t>"", ""mission_setup\virtual_arsenal_blufor.sqf"", [], 1000, false, true, """", ""player distance _this < 2""];";
 		};
 		class Item3
 		{
@@ -888,7 +888,7 @@ class Mission
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
 			text="arsenal_opfor";
-			init="this addAction[""<t color='#ff1111'>Arsenal Box</t>"", ""mission_setup\virtual_arsenal_opfor.sqf"", [], 1000, false, true, """", ""player distance _this < 2""];";
+			init="clearWeaponCargoGlobal this; clearItemCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargo this; this addAction[""<t color='#ff1111'>Arsenal Box</t>"", ""mission_setup\virtual_arsenal_opfor.sqf"", [], 1000, false, true, """", ""player distance _this < 2""];";
 		};
 	};
 	class Markers
