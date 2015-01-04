@@ -1,6 +1,6 @@
 if (OPFOR_TELEPORTED) then {
 	[player] execVM "onPlayerRespawn.sqf";
-	["Sorry, you joined too late. Spectate & enjoy!"] call AGM_Core_fnc_displayTextStructured;
+	[localize "str_GRAD_jip"] call AGM_Core_fnc_displayTextStructured;
 };
 
 // global options
@@ -17,10 +17,6 @@ EDITOR_MODE = false; // check if test is in editor/singleplayer
 if (!isMultiplayer) then {
 	EDITOR_MODE = true;
 };
-
-player setVariable ["dontHaveLoadout",true];
-loadoutNotfallSchalter = player addAction["<t color=""#93E352"">" + "Loadout setzen",{[[[], "loadouts\_client.sqf"],"BIS_fnc_execVM",player,false] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && _this getVariable 'dontHaveLoadout'"];
-
 
 if (isServer) then {
 	setTimeMultiplier (paramsArray select 5);
@@ -146,28 +142,3 @@ AUSMD_markers = [];
 {_x addeventHandler ["Hit",{nul = [_this select 1,_this select 0] execVM "after_action_reporter\combat_engaged.sqf";}]} foreach allUnits;
 
 {if(leader (group _x) == _x) then {nul = [_x] execVM "after_action_reporter\movement.sqf";};} foreach allUnits;
-
-
-waitUntil {time > 5};
-
-#include "\task_force_radio\functions\common.sqf";
-
-if ((isServer) or (isDedicated)) then {
-tf_no_auto_long_range_radio = true;
-publicVariable "tf_no_auto_long_range_radio";
-tf_same_sw_frequencies_for_side = true;
-publicVariable "tf_same_sw_frequencies_for_side";
-tf_same_lr_frequencies_for_side = true;
-publicVariable "tf_same_lr_frequencies_for_side";
-
-_settingsSwWest = false call TFAR_fnc_generateSwSettings;
-_settingsSwWest set [2, ["311","312","313","314","315","316","317","318 "]];
-tf_freq_west = _settingsSwWest;
-
-_settingsSwEast = false call TFAR_fnc_generateSwSettings;
-_settingsSwEast set [2, ["311","312","313","314","315","316","317","318 "]];
-tf_freq_east = _settingsSwEast;
-
-
-	
-};

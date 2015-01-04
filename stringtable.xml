@@ -6,13 +6,39 @@
                 <Original>Choose Spawn Location</Original>
                 <English>Choose Spawn Location</English>
                 <German>Spawnpunkt wÃ¤hlen</German>
-			<French>Choisir le point de spawn</French>
+				<French>Choisir le point de spawn</French>
             </Key>
             <Key ID="str_GRAD_choose_vehicle">
                  <Original>Choose Upgrade</Original>
                 <English>Choose Upgrade</English>
                 <German>Upgrade wÃ¤hlen</German>
-			<French>Sélectionner un upgrade</French>
+				<French>Sélectionner un upgrade</French>
+            </Key>
+            <Key ID="str_GRAD_jip">
+            	<Original>Sorry, you joined too late. Spectate & enjoy!</Original>
+                <English>Sorry, you joined too late. Spectate & enjoy!</English>
+                <German>Du bist zu spät und musst zuschauen!</German>
+				<French>Vous etez too late.</French>
+            </Key>
+            <Key ID="str_GRAD_spawnTooClose1">
+            	<Original>Sorry, Spawn too close</Original>
+                <English>Sorry, Spawn too close</English>
+                <German>Sorry, Spawnpunkt zu dicht</German>
+            </Key>
+             <Key ID="str_GRAD_spawnTooClose2">
+            	<Original>Must be at least</Original>
+                <English>Must be at least</English>
+                <German>Muss mindestens sein: </German>
+            </Key>
+            <Key ID="str_GRAD_spawnTooFar1">
+            	<Original>Sorry, Spawn too far away from objective</Original>
+                <English>Sorry, Spawn too far away from objective</English>
+                <German>Sorry, Spawnpunkt zu weit weg vom Ziel</German>
+            </Key>
+             <Key ID="str_GRAD_spawnTooFar2">
+            	<Original>Must be at max </Original>
+                <English>Must be at max </English>
+                <German>Darf höchstens sein: </German>
             </Key>
         </Container>
         <Container name="mission_end">
@@ -20,9 +46,50 @@
                <Original>Mission ends now</Original>
                 <English>Mission ends now</English>
                 <German>Mission wird beendet</German>
-			<French>Mission est fini</French>
+				<French>Mission est fini</French>
+            </Key>
+            <Key ID="str_GRAD_thankyouforplaying_opfor">
+               <Original>OPFOR wins!</Original>
+                <English>OPFOR wins!</English>
+                <German>OPFOR gewinnt!</German>
+            </Key>
+             <Key ID="str_GRAD_thankyouforplaying_blufor">
+               <Original>BLUFOR wins!</Original>
+                <English>BLUFOR wins!</English>
+                <German>BLUFOR gewinnt!</German>
+            </Key> 
+            <Key ID="str_GRAD_thankyouforplaying2">
+               <Original>Thank you for playing.</Original>
+                <English>Thank you for playing.</English>
+                <German>Danke fürs Spielen.</German>
+            </Key>
+              <Key ID="str_GRAD_thankyouforplaying3">
+               <Original>You will now be teleported to Debriefing.</Original>
+                <English>You will now be teleported to Debriefing.</English>
+                <German>Du wirst nun zum Debriefing teleportiert.</German>
             </Key>
         </Container>
+         <Container name="spectator">
+            <Key ID="str_GRAD_hint_endspectator">
+            	<Original>Right click exits cam. Start again with Mousewheel.</Original>
+                <English>Right click exits cam. Start again with Mousewheel.</English>
+                <German>Rechtsklick beendet die Cam. Starte sie über Mausrad neu.</German>
+            </Key>
+             <Key ID="str_GRAD_action_beginspectator1">
+            	<Original>Activate Spectator Cam</Original>
+                <English>Activate Spectator Cam</English>
+                <German>Zuschauer-Kamera aktivieren</German>
+            </Key>
+            <Key ID="str_GRAD_action_beginspectator2">
+            	<Original>(right click to exit)</Original>
+                <English>(right click to exit)</English>
+                <German>(Mit Rechtsklick verlassen)</German>
+            </Key>
+
+
+           
+        </Container>
+        
     </Package>
 </Project>
 

@@ -7,7 +7,8 @@ onLoadMissionTime = True;
 respawn=3;
 respawnDelay = 3;
 disabledAI = 0; //1
-enableDebugConsole = 2;
+enableDebugConsole = 1;
+loadScreen = "Pic\loading.paa"; 
 
 #include "plank\plank.h"
 #include "GUI\defines.hpp"
