@@ -60,9 +60,6 @@ _availableWeapons = [
     "SMA_SKS_F",
     "SMA_SKS_TAN_F"
 
-
-
-
 ];
 
 [_crate,((backpackCargo _crate) + _availableBackpacks)] call BIS_fnc_addVirtualBackpackCargo;
