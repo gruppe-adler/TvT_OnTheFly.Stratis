@@ -19,8 +19,13 @@ _availableBackpacks = [
 ];
 
 _availableItems = [
-"AGM_Earbuds",
-"tf_anprc152"];
+    "AGM_Earbuds",
+    "SMA_AIMPOINT",
+    "optic_Holosight",
+    "optic_ACO_grn",
+    "optic_ACO_red",
+    "tf_anprc152"
+];
 
 _availableVests = [
     "ARC_GER_Flecktarn_Plate_Carrier_H",
@@ -57,7 +62,11 @@ _availableWeapons = [
     "arifle_MX_F",
     "arifle_MX_Black_F",
     "SMA_SKS_F",
-    "SMA_SKS_TAN_F"
+    "SMA_SKS_TAN_F",
+    "hgun_Pistol_heavy_01_F",
+    "hlc_smg_mp5k",
+    "hgun_ACPC2_F"
+
 
 ];
 
