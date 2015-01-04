@@ -18,7 +18,9 @@ _availableHeadgear = [
 	"H_Hat_camo"
 ];
 
-_availableBackpacks = [];
+_availableBackpacks = [
+	this addBackpack "B_Carryall_mcamo";
+];
 
 _availableItems = [
 	"AGM_Earbuds",
@@ -29,7 +31,6 @@ _availableVests = [
     "V_TacVest_khk",
     "V_TacVest_oli",
     "V_I_G_resistanceLeader_F"
-
 ];
 
 _availableUniforms = [
