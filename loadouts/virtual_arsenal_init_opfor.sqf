@@ -69,11 +69,15 @@ _availableUniforms = [
 ];
 
 _availableWeapons = [
+	"hlc_rifle_L1A1SLR",
+	"hlc_rifle_FAL5061",
+	"hlc_rifle_ak47",
 	"hlc_rifle_ak74",
+	"hlc_rifle_ak74_dirty",
+	"hlc_rifle_akm",
 	"hlc_rifle_aks74",
 	"hlc_rifle_aks74u",
-	"hlc_rifle_L1A1SLR",
-	"hlc_rifle_akm"
+	"hlc_rifle_aek971"
 ];
 
 [_crate,((backpackCargo _crate) + _availableBackpacks)] call BIS_fnc_addVirtualBackpackCargo;
