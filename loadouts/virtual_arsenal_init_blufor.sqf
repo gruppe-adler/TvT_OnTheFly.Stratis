@@ -37,7 +37,32 @@ _availableWeapons = [
     "hlc_rifle_bcmjack",
     "hlc_rifle_RU556",
     "hlc_rifle_RU5562",
-    "hlc_rifle_g3ka4"
+    "SMA_AUG_A3_F",
+    "SMA_AUG_A3_MCAM_F",
+    "SMA_AUG_A3_KRYPT_F",
+    "hlc_rifle_M4",
+    "SMA_HK416afg",
+    "SMA_HK416vfg",
+    "SMA_HK417afg",
+    "SMA_HK417vfg",
+    "SMA_HK417_tanafg",
+    "SMA_HK417_tanvgf",
+    "SMA_HK417_16in_afg",
+    "SMA_HK417_16in_afg_tan",
+    "SMA_MK16",
+    "SMA_Mk16_black",
+    "SMA_Mk17",
+    "SMA_Mk17_black",
+    "SMA_STG_E4_F",
+    "SMA_STG_E4_BLACK_F",
+    "arifle_MX_F",
+    "arifle_MX_Black_F",
+    "SMA_SKS_F",
+    "SMA_SKS_TAN_F"
+
+
+
+
 ];
 
 [_crate,((backpackCargo _crate) + _availableBackpacks)] call BIS_fnc_addVirtualBackpackCargo;
