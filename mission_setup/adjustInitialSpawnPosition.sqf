@@ -87,8 +87,8 @@ if ((isDedicated) || (isServer)) then {
 	vehiclePosition_opfor = vehiclePositionsForCurrentWorld select 1;
 	
 	//hintSilent format["%1",vehiclePosition];
-	[whiteboard,vehiclePosition] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
-	[spectator_vehicle,vehiclePosition] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
-	[vehiclePosition_blufor,vehiclePosition] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
-	[vehiclePosition_opfor,vehiclePosition] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
+	[whiteboard,vehiclePosition_opfor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
+	[spectator_vehicle,vehiclePosition_opfor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
+	[arsenal_blufor,vehiclePosition_blufor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
+	[arsenal_opfor,vehiclePosition_opfor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
 };
