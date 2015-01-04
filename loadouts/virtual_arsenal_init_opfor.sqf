@@ -84,7 +84,8 @@ _availableWeapons = [
 	"hlc_rifle_akm",
 	"hlc_rifle_aks74",
 	"hlc_rifle_aks74u",
-	"hlc_rifle_aek971"
+	"hlc_rifle_aek971",
+	"hgun_ACPC2_F"
 ];
 
 [_crate,((backpackCargo _crate) + _availableBackpacks)] call BIS_fnc_addVirtualBackpackCargo;
