@@ -1,7 +1,7 @@
 _pos = _this select 0;
 
 if (side player != west) exitWith {
-	["BLUFOR spawned. OPFOR may now spawn their vehicle."] call AGM_Core_fnc_displayTextStructured;	
+	[localize "str_GRAD_hint_bluforSpawned"] call AGM_Core_fnc_displayTextStructured;	
 };
 
 _blufor_marker_start = createMarkerLocal ["blufor_marker_start", _pos];

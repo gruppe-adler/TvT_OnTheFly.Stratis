@@ -34,7 +34,7 @@ class Params
 
 	class AllowedVehicles
 	{
-		title = "Restrict Vehicle for BLUFOR to HEMTT";
+		title = localize "Restrict Vehicle for BLUFOR to HEMTT";
 		values[] = {0,1};
 		texts[] = {"Restrict to HEMTT", "No Restriction"};
 		default = 1;

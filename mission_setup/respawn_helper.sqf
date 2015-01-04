@@ -1,7 +1,7 @@
 _pos = _this select 0;
 
 if (side player == west) then {
-	["OPFOR spawned. BLUFOR may spawn now."] call AGM_Core_fnc_displayTextStructured;
+	[localize "str_GRAD_hint_opforSpawned"] call AGM_Core_fnc_displayTextStructured;
 };
 
 if (isServer || isDedicated) then {

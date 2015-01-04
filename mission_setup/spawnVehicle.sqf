@@ -24,21 +24,24 @@ if (player == blufor_teamlead) then {
 		    _max_distance = _max_distance + 10;
 		};
 
-blufor_vehicle = _vehicle createVehicle _spawn_area;
+	blufor_vehicle = _vehicle createVehicle _spawn_area;
 
-if (side player == west) then {["Vehicle spawned."] call AGM_Core_fnc_displayTextStructured;};
+
 	player removeAction createVehicleHEMTT; 
 	if (RESTRICTED_VEHICLES) exitWith {};
 	player removeAction createVehicleLittlebird;
+	[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
 };
 
-if (player == opfor_teamlead) then {["Vehicle spawned."] call AGM_Core_fnc_displayTextStructured;
+if (player == opfor_teamlead) then {
 	player removeAction createVehicleTransport; 
 	
 	if (!RESTRICTED_VEHICLES) then {
 	player removeAction createVehicleTactical;
 	player removeAction createVehicleMortar;
 	};
+
+
 
 	while{ count _spawn_area < 1 } do
 		{
@@ -54,6 +57,7 @@ if (player == opfor_teamlead) then {["Vehicle spawned."] call AGM_Core_fnc_displ
 		};
 	opfor_vehicle = _vehicle_classname_mortar createVehicle _spawn_area2;
 	opfor_vehicle setVehicleAmmo 0.1;
+	[localize "str_GRAD_mortarSpawned"] call AGM_Core_fnc_displayTextStructured;
 	};
 	
 	opfor_vehicle = _vehicle createVehicle _spawn_area;
@@ -63,6 +67,7 @@ if (player == opfor_teamlead) then {["Vehicle spawned."] call AGM_Core_fnc_displ
 	opfor_vehicle setFuel 0;
 	if (_vehicle == "I_G_Offroad_01_armed_F") then {
 	opfor_vehicle setVehicleAmmo 0.2;
+	[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
 	};
 
 

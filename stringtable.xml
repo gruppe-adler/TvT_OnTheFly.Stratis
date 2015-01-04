@@ -15,10 +15,9 @@
 				<French>Sélectionner un upgrade</French>
             </Key>
             <Key ID="str_GRAD_jip">
-            	<Original>Sorry, you joined too late. Spectate & enjoy!</Original>
-                <English>Sorry, you joined too late. Spectate & enjoy!</English>
+            	<Original>Sorry, you joined too late. Spectate and enjoy!</Original>
+                <English>Sorry, you joined too late. Spectate and enjoy!</English>
                 <German>Du bist zu spät und musst zuschauen!</German>
-				<French>Vous etez too late.</French>
             </Key>
             <Key ID="str_GRAD_spawnTooClose1">
             	<Original>Sorry, Spawn too close</Original>
@@ -40,6 +39,31 @@
                 <English>Must be at max </English>
                 <German>Darf höchstens sein: </German>
             </Key>
+             <Key ID="str_GRAD_hint_bluforSpawned">
+                <Original>BLUFOR spawned. OPFOR may now spawn vehicle.</Original>
+                <English>BLUFOR spawned. OPFOR may now spawn vehicle. </English>
+                <German>BLUFOR ist gespawned. OPFOR kann jetzt Fahrzeug spawnen.</German>
+            </Key>
+             <Key ID="str_GRAD_hint_opforSpawned">
+                <Original>OPFOR spawned. BLUFOR may spawn now.</Original>
+                <English>OPFOR spawned. BLUFOR may spawn now. </English>
+                <German>OPFOR ist gespawned. BLUFOR kann jetzt spawnen.</German>
+            </Key>
+             <Key ID="str_GRAD_endPlacement">
+                <Original>End Placement</Original>
+                <English>End Placement</English>
+                <German>Keine Objekte mehr platzieren</German>
+            </Key>
+             <Key ID="str_GRAD_vehicleSpawned">
+                <Original>Vehicle spawned</Original>
+                <English>Vehicle spawned</English>
+                <German>Fahrzeug gespawned</German>
+            </Key>
+             <Key ID="str_GRAD_mortarSpawned">
+                <Original>Mortar spawned</Original>
+                <English>Mortar spawned</English>
+                <German>Mörser gespawned</German>
+            </Key>         
         </Container>
         <Container name="mission_end">
             <Key ID="str_GRAD_winmsg">
@@ -63,10 +87,15 @@
                 <English>Thank you for playing.</English>
                 <German>Danke fürs Spielen.</German>
             </Key>
-              <Key ID="str_GRAD_thankyouforplaying3">
+            <Key ID="str_GRAD_thankyouforplaying3">
                <Original>You will now be teleported to Debriefing.</Original>
                 <English>You will now be teleported to Debriefing.</English>
                 <German>Du wirst nun zum Debriefing teleportiert.</German>
+            </Key>
+            <Key ID="str_GRAD_declareFailedBlufor">
+               <Original>Declare Mission failed for BLUFOR</Original>
+                <English>Declare Mission failed for BLUFOR</English>
+                <German>Mission für BLUFOR aufgeben</German>
             </Key>
         </Container>
          <Container name="spectator">
@@ -85,11 +114,6 @@
                 <English>(right click to exit)</English>
                 <German>(Mit Rechtsklick verlassen)</German>
             </Key>
-
-
-           
-        </Container>
-        
+        </Container>  
     </Package>
 </Project>
-
