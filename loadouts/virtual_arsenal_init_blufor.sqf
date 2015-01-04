@@ -1,5 +1,4 @@
 //Init stuff
-//Init stuff
 [] spawn BIS_fnc_arsenal;
 
 _availableHeadgear = [
