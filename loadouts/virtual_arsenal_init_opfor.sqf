@@ -28,8 +28,8 @@ _availableItems = [
 _availableVests = [
     "V_TacVest_khk",
     "V_TacVest_oli",
-    "V_I_G_resistanceLeader_F",
-    
+    "V_I_G_resistanceLeader_F"
+
 ];
 
 _availableUniforms = [
