@@ -878,7 +878,7 @@ class Mission
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
 			text="arsenal_blufor";
-			init="clearWeaponCargoGlobal this; clearItemCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargo this; this addAction[""<t color='#ff1111'>Arsenal Box</t>"", ""loadouts\virtual_arsenal_init_blufor.sqf"", [], 1000, false, true, """", ""player distance _this < 2""];";
+			init="clearWeaponCargoGlobal this; clearItemCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargo this; this addAction[""<t color='#ff1111'>Arsenal Box</t>"", ""loadouts\virtual_arsenal_init_blufor.sqf"", [], 1000, false, true, """", ""player distance _this < 2""]; this addItemCargoGlobal [""AGM_CableTie"", 10];  this addItemCargoGlobal [""SmokeShellBlue"", 30];  this addItemCargoGlobal [""AGM_Bandage"", 60];  this addItemCargoGlobal [""AGM_Morphine"", 20];  this additemcargoGlobal [""AGM_Epipen"", 10];  this addItemCargoGlobal [""AGM_Bloodbag"", 5];  this addItemCargoGlobal [""HandGrenade"", 16];  this addItemCargoGlobal [""AGM_HandFlare_Green"", 20];    this addweaponcargoglobal [""srifle_EBR_F"", 1];  this addmagazinecargoglobal [""20Rnd_762x51_Mag"", 6];  this addItemCargoGlobal [""optic_MRCO"", 1];  this addweaponcargoglobal [""hlc_lmg_M60E4"", 1];  this addmagazinecargoglobal [""hlc_100Rnd_762x51_M_M60E4"", 5];";
 		};
 		class Item3
 		{
@@ -888,7 +888,7 @@ class Mission
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
 			text="arsenal_opfor";
-			init="clearWeaponCargoGlobal this; clearItemCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargo this; this addAction[""<t color='#ff1111'>Arsenal Box</t>"", ""loadouts\virtual_arsenal_init_opfor.sqf"", [], 1000, false, true, """", ""player distance _this < 2""];";
+			init="clearWeaponCargoGlobal this; clearItemCargoGlobal this; clearMagazineCargoGlobal this; clearBackpackCargo this; this addAction[""<t color='#ff1111'>Arsenal Box</t>"", ""loadouts\virtual_arsenal_init_opfor.sqf"", [], 1000, false, true, """", ""player distance _this < 2""]; this addItemCargoGlobal [""AGM_CableTie"", 10];  this addItemCargoGlobal [""SmokeShellRed"", 30];  this addItemCargoGlobal [""AGM_Bandage"", 60];  this addItemCargoGlobal [""AGM_Morphine"", 20];  this additemcargoGlobal [""AGM_Epipen"", 10];  this addItemCargoGlobal [""AGM_Bloodbag"", 5];  this addItemCargoGlobal [""AGM_HandFlare_Red"", 20];  this addItemCargoGlobal [""HandGrenade"", 16];    this addweaponcargoglobal [""srifle_DMR_01_F"", 1];  this addmagazinecargoglobal [""10Rnd_762x51_Mag"", 9];  this addItemCargoGlobal [""optic_Arco"", 1];  this addweaponcargoglobal [""hlc_rifle_rpk"", 1];  this addmagazinecargoglobal [""hlc_75Rnd_762x39_m_rpk"", 7];";
 		};
 	};
 	class Markers

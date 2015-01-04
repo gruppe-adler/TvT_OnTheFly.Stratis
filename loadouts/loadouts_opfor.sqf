@@ -580,7 +580,6 @@ this addHeadgear randHeadGearTaliban;
 } else {
 this addHeadgear randHeadGearEastern;
 };
-this addGoggles "G_Spectacles_Tinted";
 
 comment "Add weapons";
 this addWeapon "hlc_rifle_L1A1SLR";
