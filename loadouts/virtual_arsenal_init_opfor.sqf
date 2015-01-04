@@ -19,7 +19,10 @@ _availableHeadgear = [
 ];
 
 _availableBackpacks = [
-	this addBackpack "B_Carryall_mcamo";
+	"B_Carryall_mcamo",
+	"B_AssaultPack_dgtl",
+	"B_Carryall_cbr",
+	"B_AssaultPack_khk"
 ];
 
 _availableItems = [
