@@ -19,7 +19,8 @@ class Mission
 		"A3_Characters_F_OPFOR",
 		"A3_Structures_F_Civ_InfoBoards",
 		"agm_respawn",
-		"agm_nametags"
+		"agm_nametags",
+		"A3_Supplies_F_Heli_CargoNets"
 	};
 	addOnsAuto[]=
 	{
@@ -36,6 +37,7 @@ class Mission
 		"agm_medical",
 		"A3_Soft_F_HEMTT",
 		"A3_Structures_F_Civ_InfoBoards",
+		"A3_Supplies_F_Heli_CargoNets",
 		"aia_desert_e_config"
 	};
 	randomSeed=11087059;
@@ -842,7 +844,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=2;
+		items=4;
 		class Item0
 		{
 			position[]={265.62689,36.073284,322.51086};
@@ -867,6 +869,26 @@ class Mission
 			skill=0.5;
 			text="whiteboard";
 			init="this addAction[""Close Mission"", ""objectives\endmission.sqf"", nil, 6, True, True, """", ""!END_MISSION_TRIGGERED && MISSION_COMPLETED""];";
+		};
+		class Item2
+		{
+			position[]={1895.7318,44.466782,127.76563};
+			id=36;
+			side="EMPTY";
+			vehicle="B_CargoNet_01_ammo_F";
+			skill=0.60000002;
+			text="arsenal_blufor";
+			init="null = [this] execVM ""mission_setup\virtual_arsenal_blufor.sqf"";";
+		};
+		class Item3
+		{
+			position[]={272.11636,35.601219,316.5426};
+			id=37;
+			side="EMPTY";
+			vehicle="B_CargoNet_01_ammo_F";
+			skill=0.60000002;
+			text="arsenal_opfor";
+			init="null = [this] execVM ""mission_setup\virtual_arsenal_opfor.sqf"";";
 		};
 	};
 	class Markers

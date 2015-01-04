@@ -27,6 +27,7 @@ openMap [false,false];
 		
 		openMap [false,false];
 		
+
 		
 		_opfor_marker = createMarker ["opfor_marker", pos];
 		_opfor_marker setMarkerType "hd_objective";
@@ -36,6 +37,8 @@ openMap [false,false];
 
 		OPFOR_TELEPORTED = TRUE;
 		publicVariable "OPFOR_TELEPORTED";
+
+		[arsenal_opfor, pos] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
 
 		// move task to new destination
 		sector_trigger setPos pos;
