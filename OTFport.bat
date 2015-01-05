@@ -1,4 +1,4 @@
-@set var=_v105
+@set var=_v106
 
 pushd "%~dp0.."
 
