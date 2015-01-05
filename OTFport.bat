@@ -10,6 +10,10 @@ xcopy /y /e /c ".//TvT_OnTheFly.Desert_E" "./TvT_OnTheFly%var%.bornholm\"
 del "./TvT_OnTheFly%var%.bornholm\.*"
 del "./TvT_OnTheFly%var%.bornholm\OTFport.bat"
 
+xcopy /y /e /c "./TvT_OnTheFly.Desert_E" "./TvT_OnTheFly%var%.Chernarus\"
+del "./TvT_OnTheFly%var%.Chernarus\.*"
+del "./TvT_OnTheFly%var%.Chernarus\OTFport.bat"
+
 xcopy /y /e /c "./TvT_OnTheFly.Desert_E" "./TvT_OnTheFly%var%.Chernarus_Summer\"
 del "./TvT_OnTheFly%var%.Chernarus_Summer\.*"
 del "./TvT_OnTheFly%var%.Chernarus_Summer\OTFport.bat"
