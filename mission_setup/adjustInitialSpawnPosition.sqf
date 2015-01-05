@@ -5,6 +5,7 @@ private ['_islands', '_targetPositions', '_positionsForCurrentWorld', '_targetPo
 // Readable List: 
 // Altis,
 // Bornholm,
+// Chernarus
 // Chernarus Summer,
 // Clafghan,
 // Desert,
@@ -26,6 +27,7 @@ private ['_islands', '_targetPositions', '_positionsForCurrentWorld', '_targetPo
 islands = [
 	'Altis',
 	'bornholm',
+	'Chernarus',
 	'Chernarus_Summer',
 	'clafghan',
 	'Desert_E',
@@ -47,6 +49,7 @@ islands = [
 targetPositions = [
 	[ [14300,16200], [14600, 16700], 'Altis'],
 	[ [3000, 5400], [3900, 4900], 'bornholm' ], 
+	[ [4100,11000], [4860, 9740], 'Chernarus'],
 	[ [4100,11000], [4860, 9740], 'Chernarus_Summer'],
 	[ [15550,920], [15850, 370], 'clafghan'],
 	[ [1500, 50], [1900, 50], 'Desert_E'],
