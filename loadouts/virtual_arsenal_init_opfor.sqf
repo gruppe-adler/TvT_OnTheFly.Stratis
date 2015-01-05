@@ -1,6 +1,8 @@
 //Init stuff
 [] spawn BIS_fnc_arsenal;
 
+_crate = _this select 0;
+
 _availableHeadgear = [
 	"H_CAF_AG_TURBAN",
 	"H_CAF_AG_PAKTOL",
