@@ -6,7 +6,7 @@ _centre = [ _position, random 10 , random 360 ] call BIS_fnc_relPos;
 
 while { count _positionlist < 1 } do
 		{
-		    _positionlist = _centre findEmptyPosition[ 10 , _max_distance , "B_Truck_01_transport_F"];
+		    _positionlist = _centre findEmptyPosition[ 2 , _max_distance , "B_Truck_01_transport_F"];
 		    _max_distance = _max_distance + 15;
 		};
 

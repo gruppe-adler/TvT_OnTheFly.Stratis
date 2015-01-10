@@ -1,6 +1,9 @@
 //Init stuff
 _crate = _this select 0;
-["AmmoboxInit",[_crate,false,{true}]] spawn BIS_fnc_arsenal;
+//["AmmoboxInit",[_crate,false,{true},false]] spawn BIS_fnc_arsenal;
+["Preload"] call BIS_fnc_arsenal;
+["AmmoboxInit",[_crate,false,{false}]] spawn BIS_fnc_arsenal;
+
 
 _availableHeadgear = [
 	"H_CAF_AG_TURBAN",
@@ -94,16 +97,21 @@ _availableWeapons = [
 [_crate,(magazineCargo _crate)] call BIS_fnc_addVirtualMagazineCargo;
 [_crate,(weaponCargo _crate) + _availableWeapons] call BIS_fnc_addVirtualWeaponCargo;
 
-_hasAction = _crate getVariable ["XLA_ArsenalAddActionPresent", false];
+
+removeAllActions _crate;
+_hasAction = _crate getVariable ["ArsenalPresent", false];
 
 if (!_hasAction) then {
-	[[_crate, ["<t color='#45B6EA'>Open Armoury",
+	[[_crate, ["<t color='#45B6EA'>Open Supply Box",
 	{
 		_box = _this select 0;
 		_unit = _this select 1;
+		
 		["Open",[nil,_box]] call bis_fnc_arsenal;
+		
+		
 	},
-	[],	6, true, false,	"", "true"]], "addAction",true] call BIS_fnc_MP;
+	[],	1000, true, false,	"", "_this distance _target < 3"]], "addAction",true] call BIS_fnc_MP;
 
-	_crate setVariable ["XLA_ArsenalAddActionPresent", true, true];
+	_crate setVariable ["ArsenalPresent", true, true];
 };

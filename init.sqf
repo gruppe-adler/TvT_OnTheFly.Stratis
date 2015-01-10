@@ -16,6 +16,7 @@ firstspawn = false;
 EDITOR_MODE = false; // check if test is in editor/singleplayer
 if (!isMultiplayer) then {
 	EDITOR_MODE = true;
+	{_x disableAI "MOVE";} forEach allUnits;
 };
 
 if (isServer) then {

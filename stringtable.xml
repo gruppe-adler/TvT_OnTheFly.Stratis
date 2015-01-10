@@ -13,21 +13,21 @@
                 <German>In dieser Mission wählen erst OPFOR, danach BLUFOR ihren beliebigen Startpunkt. BLUFOR hat einen Mindest-und einen Maximalabstand einzuhalten. Beide Seiten können jeweils ein Fahrzeug wählen, das sie einnmalig spawnen lassen. OPFOR kann außerdem Fortifications errichten (Leader + Medic). Das Missions-Setup wird von den jeweiligen Leadern im Mausradmenü ausgeführt.</German>
             </Key>      
             <Key ID="str_GRAD_spectatorhelp">
-                <Original>Hint for Spectator Cam <br />
-						<t size='1.2'>L</t> to turn off crosshair <br />
-						<t size='1.2'>* Numpad</t> to activate Freelook<br />
-						<t size='1.2'>Mausrad</t> to switch alive units (not unconscious) <br />
-						<t size='1.2'>N</t> for Nightvision/Infrared <br /></Original>
-                <English>Hint for Spectator Cam <br />
-						<t size='1.2'>L</t> to turn off crosshair <br />
-						<t size='1.2'>* Numpad</t> to activate Freelook<br />
-						<t size='1.2'>Mausrad</t> to switch alive units (not unconscious) <br />
-						<t size='1.2'>N</t> for Nightvision/Infrared <br /></English>
-                <German>Hinweise zur Spectator Cam: <br />
-						<t size='1.2'>L</t> um den Punkt abzuschalten <br />
-						<t size='1.2'>* Numpad</t> um FreeLook zu aktivieren<br />
-						<t size='1.2'>Mausrad</t> um lebende Einheiten durchzuschalten (ausser Ohnmächtige) <br />
-						<t size='1.2'>N</t> für Nightvision/Infrarot <br />
+                <Original>Hint for Spectator Cam &lt;br/&gt;
+						"L" to turn off crosshair &lt;br/&gt;
+						"Numpad" to activate Freelook&lt;br/&gt;
+						"Mousewheel" to switch alive units (not unconscious)&lt;br/&gt;
+						"N" for Nightvision/Infrared &lt;br/&gt;</Original>
+                <English>Hint for Spectator Cam &lt;br/&gt;
+						"L" to turn off crosshair &lt;br/&gt;
+						"Numpad" to activate Freelook&lt;br/&gt;
+						"Mousewheel" to switch alive units (not unconscious)&lt;br/&gt;
+						"N" for Nightvision/Infrared &lt;br/&gt;</English>
+                <German>Hinweise zur Spectator Cam: &lt;br/&gt;
+						"L" um den Punkt abzuschalten &lt;br/&gt;
+						"*" Numpad um FreeLook zu aktivieren&lt;br/&gt;
+						"Mausrad" um lebende Einheiten durchzuschalten (ausser Ohnmächtige) &lt;br/&gt;
+						"N" für Nightvision/Infrarot &lt;br/&gt;
 				</German>
             </Key>   
         </Container>

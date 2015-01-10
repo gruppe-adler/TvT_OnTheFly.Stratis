@@ -93,8 +93,12 @@ if ((isDedicated) || (isServer)) then {
 	[whiteboard,vehiclePosition_opfor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
 	sleep 0.1;
 	[spectator_vehicle,vehiclePosition_opfor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
-	sleep 0.2;
+	sleep 0.1;
 	[arsenal_blufor,vehiclePosition_blufor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
-	sleep 0.2;
+	sleep 0.1;
 	[arsenal_opfor,vehiclePosition_opfor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
+	sleep 0.1;
+	[extraweapons_blufor,vehiclePosition_blufor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
+	sleep 0.1;
+	[extraweapons_opfor,vehiclePosition_opfor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
 };
