@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Project name="TvT_OnTheFly_project">
     <Package name="TvT_OnTheFly_package">
+    	 <Container name="mission briefing">
+    	 	<Key ID="str_GRAD_story">
+                <Original>The terrorists want to build a dirty bomb and successfully gained a barrel with radioactive material. Secret Service is on their track and have prepared the barrel with a GPS-Logger to find their hideout. Now German Forces are tasked to secure the barrel and neutralize the threat.</Original>
+                <English>The terrorists want to build a dirty bomb and successfully gained a barrel with radioactive material. Secret Service is on their track and have prepared the barrel with a GPS-Logger to find their hideout. Now German Forces are tasked to secure the barrel and neutralize the threat.</English>
+                <German>Die Terroristen wollen eine schmutzige Bombe bauen und haben ein Fass mit radioaktivem Material beschafft. Der Geheimdienst ist ihnen aber auf der Spur und konnte das Fass mit einem GPS-Logger markieren, um ihren Unterschlupf ausfindig zu machen. Die Bundeswehr hat nun den Auftrag, das Fass sicherzustellen und die Gefahr zu neutralisieren.</German>
+            </Key>   
+            <Key ID="str_GRAD_briefing">
+                <Original>In this mission OPFOR and later BLUFOR can choose their spawn point. BLUFOR has to spawn in a certain radius around the objective. Both side can choose a vehicle which they can spawn once. Furthermore OPFOR can build fortifications (Boss + Doc). Mission setup is triggered by the leaders on scrollwheel-menu.</Original>
+                <English>In this mission OPFOR and later BLUFOR can choose their spawn point. BLUFOR has to spawn in a certain radius around the objective. Both side can choose a vehicle which they can spawn once. Furthermore OPFOR can build fortifications (Boss + Doc). Mission setup is triggered by the leaders on scrollwheel-menu.</English>
+                <German>In dieser Mission wählen erst OPFOR, danach BLUFOR ihren beliebigen Startpunkt. BLUFOR hat einen Mindest-und einen Maximalabstand einzuhalten. Beide Seiten können jeweils ein Fahrzeug wählen, das sie einnmalig spawnen lassen. OPFOR kann außerdem Fortifications errichten (Leader + Medic). Das Missions-Setup wird von den jeweiligen Leadern im Mausradmenü ausgeführt.</German>
+            </Key>      
+            <Key ID="str_GRAD_spectatorhelp">
+                <Original>Hint for Spectator Cam <br />
+						<t size='1.2'>L</t> to turn off crosshair <br />
+						<t size='1.2'>* Numpad</t> to activate Freelook<br />
+						<t size='1.2'>Mausrad</t> to switch alive units (not unconscious) <br />
+						<t size='1.2'>N</t> for Nightvision/Infrared <br /></Original>
+                <English>Hint for Spectator Cam <br />
+						<t size='1.2'>L</t> to turn off crosshair <br />
+						<t size='1.2'>* Numpad</t> to activate Freelook<br />
+						<t size='1.2'>Mausrad</t> to switch alive units (not unconscious) <br />
+						<t size='1.2'>N</t> for Nightvision/Infrared <br /></English>
+                <German>Hinweise zur Spectator Cam: <br />
+						<t size='1.2'>L</t> um den Punkt abzuschalten <br />
+						<t size='1.2'>* Numpad</t> um FreeLook zu aktivieren<br />
+						<t size='1.2'>Mausrad</t> um lebende Einheiten durchzuschalten (ausser Ohnmächtige) <br />
+						<t size='1.2'>N</t> für Nightvision/Infrarot <br />
+				</German>
+            </Key>   
+        </Container>
         <Container name="mission setup">
             <Key ID="str_GRAD_choose_spawn_location">
                 <Original>Choose Spawn Location</Original>

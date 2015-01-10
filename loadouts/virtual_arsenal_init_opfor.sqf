@@ -94,3 +94,16 @@ _availableWeapons = [
 [_crate,(magazineCargo _crate)] call BIS_fnc_addVirtualMagazineCargo;
 [_crate,(weaponCargo _crate) + _availableWeapons] call BIS_fnc_addVirtualWeaponCargo;
 
+_hasAction = _crate getVariable ["XLA_ArsenalAddActionPresent", false];
+
+if (!_hasAction) then {
+	[[_crate, ["<t color='#45B6EA'>Open Armoury",
+	{
+		_box = _this select 0;
+		_unit = _this select 1;
+		["Open",[nil,_box]] call bis_fnc_arsenal;
+	},
+	[],	6, true, false,	"", "true"]], "addAction",true] call BIS_fnc_MP;
+
+	_crate setVariable ["XLA_ArsenalAddActionPresent", true, true];
+};

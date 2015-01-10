@@ -34,9 +34,9 @@ class Params
 
 	class AllowedVehicles
 	{
-		title = localize "Restrict Vehicle for BLUFOR to HEMTT";
+		title = "Allowed Vehicles";
 		values[] = {0,1};
-		texts[] = {"Restrict to HEMTT", "No Restriction"};
+		texts[] = {"HEMTT / Transporter", "HEMTT, Littlebird / Transporter, Tactical, Mortar"};
 		default = 1;
 	};
 
@@ -66,7 +66,7 @@ class Params
 
 	class Zeitbeschleunigung
 	{
-		title = "Zeitbeschleunigung";
+		title = "Time Acceleration";
 		values[] = {1,2,4,8,12};
 		texts[] = {"normal","2h in 1h","4h in 1h","8h in 1h","12h in 1h"};
 		default = 4;
