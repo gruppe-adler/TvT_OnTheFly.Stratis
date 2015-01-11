@@ -900,7 +900,6 @@ class Mission
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			text="extraweapons_blufor";
-			init="null = [extraweapons_blufor] execVM ""loadouts\extraweapons_blufor.sqf"";";
 		};
 		class Item5
 		{
@@ -910,7 +909,6 @@ class Mission
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			text="extraweapons_opfor";
-			init="null = [extraweapons_opfor] execVM ""loadouts\extraweapons_opfor.sqf"";";
 		};
 	};
 	class Markers

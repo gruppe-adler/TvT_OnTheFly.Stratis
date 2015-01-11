@@ -87,6 +87,8 @@ if (isServer) then { setDate [2035, 6, 24, (paramsArray select 0), 1]; };	//Zeit
 if ((isServer) || (isDedicated)) then {
 
 	[] execVM "objectives\detect_all_dead.sqf";
+	[extraweapons_opfor] execVM "loadouts\extraweapons_opfor.sqf";
+	[extraweapons_blufor] execVM "loadouts\extraweapons_blufor.sqf";
 
 	respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger select 0),(getPos sector_trigger select 1),0];
 	[respawn_helper, false] call AGM_Drag_fnc_makeDraggable;
