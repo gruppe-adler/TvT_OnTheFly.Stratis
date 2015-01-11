@@ -1,6 +1,5 @@
 _crate_blufor = _this select 0;
 
-_hasHLC = true || isClass (configFile >> "CfgWeapons" >> "hlc_rifle_akm");
 
 
 clearWeaponCargoGlobal _crate_blufor; clearItemCargoGlobal _crate_blufor; clearMagazineCargoGlobal _crate_blufor; clearBackpackCargo _crate_blufor; 
@@ -17,7 +16,7 @@ _crate_blufor addweaponcargoglobal ["srifle_EBR_F", 1];
 _crate_blufor addmagazinecargoglobal ["20Rnd_762x51_Mag", 6]; 
 _crate_blufor addItemCargoGlobal ["optic_MRCO", 1];  
 
-if (_hasHLC) then {
+if (addOnsSMAandHLC) then {
 _crate_blufor addweaponcargoglobal ["hlc_lmg_M60E4", 1]; 
 _crate_blufor addmagazinecargoglobal ["hlc_100Rnd_762x51_M_M60E4", 5];
 };

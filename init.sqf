@@ -3,6 +3,14 @@ if (OPFOR_TELEPORTED) then {
 	[localize "str_GRAD_jip"] call AGM_Core_fnc_displayTextStructured;
 };
 
+// SMA + HLC support off = false
+if ((paramsArray select 6) == 0) then {
+	addOnsSMAandHLC = true;
+} else {
+	addOnsSMAandHLC = false;
+};
+
+
 // global options
 TROPENTARN = false;
 
@@ -120,7 +128,9 @@ if ((isServer) || (isDedicated)) then {
 // loadout call - giving each unit the appropriate sqf file
 if !(isDedicated) then { 
 	[] execVM "mission_setup\helpBriefing.sqf";
+	if (addOnsSMAandHLC) then {
 	[] execVM "loadouts\_client.sqf";
+	};
 	
 
 

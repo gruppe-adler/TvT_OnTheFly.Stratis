@@ -5,23 +5,20 @@ class Mission
 	{
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
-		"caf_ag_faction_afr_p",
-		"agm_interaction",
-		"agm_medical",
+		"A3_Characters_F_OPFOR",
 		"agm_logistics",
-		"task_force_radio_items",
-		"A3_Modules_F_Curator_Environment",
-		"A3_Soft_F_HEMTT",
-		"aia_desert_e_config",
 		"A3_Missions_F_Curator",
 		"A3_Modules_F",
 		"A3_Modules_F_Multiplayer",
-		"A3_Characters_F_OPFOR",
-		"A3_Structures_F_Civ_InfoBoards",
 		"agm_respawn",
+		"task_force_radio_items",
 		"agm_nametags",
+		"agm_medical",
+		"A3_Soft_F_HEMTT",
+		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Supplies_F_Heli_CargoNets",
-		"A3_Weapons_F_Ammoboxes"
+		"A3_Weapons_F_Ammoboxes",
+		"a3_map_stratis"
 	};
 	addOnsAuto[]=
 	{
@@ -40,9 +37,9 @@ class Mission
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Supplies_F_Heli_CargoNets",
 		"A3_Weapons_F_Ammoboxes",
-		"aia_desert_e_config"
+		"a3_map_stratis"
 	};
-	randomSeed=11087059;
+	randomSeed=7556201;
 	class Intel
 	{
 		timeOfChanges=1800.0002;
@@ -53,11 +50,13 @@ class Mission
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
-		year=2012;
-		month=6;
-		day=24;
-		startFogDecay=0.0049999999;
-		forecastFogDecay=0.0049999999;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
 	};
 	class Groups
 	{
@@ -70,7 +69,7 @@ class Mission
 				items=14;
 				class Item0
 				{
-					position[]={1899.2208,44.52737,126.13574};
+					position[]={1518.8093,5.5,5014.1636};
 					azimut=-44.2911;
 					id=0;
 					side="WEST";
@@ -84,7 +83,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1906.2915,44.654751,126.04825};
+					position[]={1525.8799,5.5,5014.0762};
 					azimut=-44.2911;
 					id=1;
 					side="WEST";
@@ -96,7 +95,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={1899.1335,44.57769,119.06512};
+					position[]={1518.7219,5.5,5007.0928};
 					azimut=-44.2911;
 					id=2;
 					side="WEST";
@@ -108,7 +107,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={1913.3618,44.78207,125.96075};
+					position[]={1532.9502,5.5,5013.9883};
 					azimut=-44.2911;
 					id=3;
 					side="WEST";
@@ -119,7 +118,7 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={1899.046,44.538456,111.9946};
+					position[]={1518.6345,5.5,5000.0225};
 					azimut=-44.2911;
 					id=4;
 					side="WEST";
@@ -130,7 +129,7 @@ class Mission
 				};
 				class Item5
 				{
-					position[]={1920.4329,44.809547,125.87357};
+					position[]={1540.0212,5.5,5013.9014};
 					azimut=-44.2911;
 					id=5;
 					side="WEST";
@@ -142,7 +141,7 @@ class Mission
 				};
 				class Item6
 				{
-					position[]={1903.4797,44.573887,98.594749};
+					position[]={1523.0681,5.5,4986.6226};
 					azimut=-44.2911;
 					id=6;
 					side="WEST";
@@ -153,7 +152,7 @@ class Mission
 				};
 				class Item7
 				{
-					position[]={1927.5031,44.804291,125.78589};
+					position[]={1547.0913,5.5,5013.8135};
 					azimut=-44.2911;
 					id=7;
 					side="WEST";
@@ -164,7 +163,7 @@ class Mission
 				};
 				class Item8
 				{
-					position[]={1898.8582,44.488335,105.02456};
+					position[]={1518.4465,5.5,4993.0522};
 					azimut=-44.2911;
 					id=8;
 					side="WEST";
@@ -175,7 +174,7 @@ class Mission
 				};
 				class Item9
 				{
-					position[]={1905.1284,44.760948,122.00342};
+					position[]={1524.7168,5.5,5010.0313};
 					azimut=-44.2911;
 					id=9;
 					side="WEST";
@@ -186,7 +185,7 @@ class Mission
 				};
 				class Item10
 				{
-					position[]={1907.7363,44.882748,118.68433};
+					position[]={1527.3247,5.5,5006.7119};
 					azimut=-44.2911;
 					id=10;
 					side="WEST";
@@ -197,7 +196,7 @@ class Mission
 				};
 				class Item11
 				{
-					position[]={1912.0044,44.87989,117.02454};
+					position[]={1531.5928,5.5,5005.0522};
 					azimut=-44.2911;
 					id=11;
 					side="WEST";
@@ -208,7 +207,7 @@ class Mission
 				};
 				class Item12
 				{
-					position[]={1905.6816,44.830315,114.49561};
+					position[]={1525.27,5.5,5002.5234};
 					azimut=-44.2911;
 					id=12;
 					side="WEST";
@@ -219,7 +218,7 @@ class Mission
 				};
 				class Item13
 				{
-					position[]={1913.9012,44.821072,121.29211};
+					position[]={1533.4897,5.5,5009.3198};
 					azimut=-44.2911;
 					id=13;
 					side="WEST";
@@ -238,12 +237,12 @@ class Mission
 				items=10;
 				class Item0
 				{
-					position[]={267.66962,36.06258,348.91992};
+					position[]={1804.3489,5.5,6000.3784};
 					azimut=163.319;
 					id=14;
 					side="EAST";
 					vehicle="O_officer_F";
-					player="PLAYER COMMANDER";
+					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
@@ -252,7 +251,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={293.34506,34.8437,360.8175};
+					position[]={1830.0243,5.5,6012.2759};
 					azimut=163.319;
 					id=15;
 					side="EAST";
@@ -264,7 +263,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={255.37396,36.504047,374.81958};
+					position[]={1792.0532,5.5,6026.2783};
 					azimut=163.319;
 					id=16;
 					side="EAST";
@@ -276,7 +275,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={244.92766,35.973976,357.70447};
+					position[]={1781.6069,5.5,6009.1631};
 					azimut=163.319;
 					id=17;
 					side="EAST";
@@ -288,7 +287,7 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={272.45966,35.882549,377.89941};
+					position[]={1809.1389,5.5,6029.3579};
 					azimut=163.319;
 					id=18;
 					side="EAST";
@@ -300,7 +299,7 @@ class Mission
 				};
 				class Item5
 				{
-					position[]={288.40472,35.100582,368.48987};
+					position[]={1825.084,5.5,6019.9482};
 					azimut=163.319;
 					id=19;
 					side="EAST";
@@ -312,7 +311,7 @@ class Mission
 				};
 				class Item6
 				{
-					position[]={281.45032,35.448719,373.92761};
+					position[]={1818.1295,5.5,6025.3862};
 					azimut=163.319;
 					id=20;
 					side="EAST";
@@ -324,7 +323,7 @@ class Mission
 				};
 				class Item7
 				{
-					position[]={263.64481,36.175694,377.51477};
+					position[]={1800.324,5.5,6028.9731};
 					azimut=163.319;
 					id=21;
 					side="EAST";
@@ -337,7 +336,7 @@ class Mission
 				};
 				class Item8
 				{
-					position[]={244.11867,35.783745,347.70251};
+					position[]={1780.7979,5.5,5999.1611};
 					azimut=163.319;
 					id=22;
 					side="EAST";
@@ -349,7 +348,7 @@ class Mission
 				};
 				class Item9
 				{
-					position[]={248.55414,36.615963,368.04199};
+					position[]={1785.2334,5.5,6019.5005};
 					azimut=163.319;
 					id=23;
 					side="EAST";
@@ -369,7 +368,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={33.65023,29.9282,222.82642};
+					position[]={1570.3295,0.19368044,5874.2847};
 					class args
 					{
 						items=4;
@@ -415,7 +414,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={383.78769,31.389662,247.00305};
+					position[]={1920.4669,5.5,5898.4614};
 					id=25;
 					side="LOGIC";
 					vehicle="ModuleMPTypeSectorControl_F";
@@ -435,7 +434,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={383.12677,30.543133,287.08667};
+					position[]={1919.8059,5.5,5938.5454};
 					id=26;
 					side="LOGIC";
 					vehicle="LocationArea_F";
@@ -454,7 +453,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={407.99997,31.954733,212.70203};
+					position[]={1944.6792,5.5,5864.1606};
 					id=27;
 					side="LOGIC";
 					vehicle="SideBLUFOR_F";
@@ -473,7 +472,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={361.38196,31.188242,219.94934};
+					position[]={1898.0612,5.5,5871.4077};
 					id=28;
 					side="LOGIC";
 					vehicle="SideOPFOR_F";
@@ -492,7 +491,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={406.7261,31.349552,260.96094};
+					position[]={1943.4053,5.7191539,5912.4194};
 					class args
 					{
 						items=15;
@@ -607,7 +606,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={34.122185,30.299143,294.71619};
+					position[]={1570.8014,-0.17943804,5946.1748};
 					class args
 					{
 						items=2;
@@ -641,7 +640,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={58.280586,32.403507,292.97278};
+					position[]={1594.9597,-0.025416009,5944.4312};
 					class args
 					{
 						items=7;
@@ -705,7 +704,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={34.225616,28.770679,262.43604};
+					position[]={1570.9048,0.039369553,5913.8945};
 					class args
 					{
 						items=3;
@@ -745,7 +744,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={33.555767,29.352823,242.60718};
+					position[]={1570.235,-0.15570445,5894.0659};
 					class args
 					{
 						items=14;
@@ -849,7 +848,7 @@ class Mission
 		items=6;
 		class Item0
 		{
-			position[]={265.62689,36.073284,322.51086};
+			position[]={1802.3062,5.5,5973.9692};
 			azimut=163.319;
 			id=34;
 			side="EMPTY";
@@ -862,7 +861,7 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={274.27094,35.397308,323.95728};
+			position[]={1810.9502,5.5,5975.416};
 			azimut=163.319;
 			id=35;
 			side="EMPTY";
@@ -874,7 +873,7 @@ class Mission
 		};
 		class Item2
 		{
-			position[]={1895.7318,44.466782,127.76563};
+			position[]={1515.3201,5.5,5015.7935};
 			id=36;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
@@ -884,7 +883,7 @@ class Mission
 		};
 		class Item3
 		{
-			position[]={272.11636,35.601219,316.5426};
+			position[]={1808.7955,5.5,5968.001};
 			id=37;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
@@ -894,7 +893,7 @@ class Mission
 		};
 		class Item4
 		{
-			position[]={1897.2504,44.458054,129.63977};
+			position[]={1516.8386,5.5,5017.6675};
 			id=38;
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
@@ -903,7 +902,7 @@ class Mission
 		};
 		class Item5
 		{
-			position[]={271.11737,35.566135,319.6748};
+			position[]={1807.7966,5.5,5971.1333};
 			id=39;
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
@@ -916,13 +915,13 @@ class Mission
 		items=2;
 		class Item0
 		{
-			position[]={224.53658,33.426571,213.17761};
+			position[]={1761.2158,5.5,5864.6362};
 			name="respawn_west";
 			type="Empty";
 		};
 		class Item1
 		{
-			position[]={224.53661,33.330502,192.14026};
+			position[]={1761.2158,5.5,5843.5986};
 			name="respawn_east";
 			type="Empty";
 		};
@@ -932,7 +931,7 @@ class Mission
 		items=2;
 		class Item0
 		{
-			position[]={269.87454,35.777966,329.07532};
+			position[]={1806.5537,5.5,5980.5337};
 			a=4;
 			b=4;
 			activationBy="ANY";
@@ -947,7 +946,7 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={275.3497,35.425587,318.85181};
+			position[]={1812.0289,5.5,5970.3105};
 			a=0;
 			b=0;
 			timeoutMin=4;
@@ -966,13 +965,13 @@ class Intro
 {
 	addOns[]=
 	{
-		"aia_desert_e_config"
+		"a3_map_stratis"
 	};
 	addOnsAuto[]=
 	{
-		"aia_desert_e_config"
+		"a3_map_stratis"
 	};
-	randomSeed=12222512;
+	randomSeed=7374295;
 	class Intel
 	{
 		timeOfChanges=1800.0002;
@@ -983,24 +982,26 @@ class Intro
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
-		year=2012;
-		month=6;
-		day=24;
-		startFogDecay=0.0049999999;
-		forecastFogDecay=0.0049999999;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
 	};
 };
 class OutroWin
 {
 	addOns[]=
 	{
-		"aia_desert_e_config"
+		"a3_map_stratis"
 	};
 	addOnsAuto[]=
 	{
-		"aia_desert_e_config"
+		"a3_map_stratis"
 	};
-	randomSeed=6553887;
+	randomSeed=16099618;
 	class Intel
 	{
 		timeOfChanges=1800.0002;
@@ -1011,24 +1012,26 @@ class OutroWin
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
-		year=2012;
-		month=6;
-		day=24;
-		startFogDecay=0.0049999999;
-		forecastFogDecay=0.0049999999;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
 	};
 };
 class OutroLoose
 {
 	addOns[]=
 	{
-		"aia_desert_e_config"
+		"a3_map_stratis"
 	};
 	addOnsAuto[]=
 	{
-		"aia_desert_e_config"
+		"a3_map_stratis"
 	};
-	randomSeed=2655982;
+	randomSeed=15472302;
 	class Intel
 	{
 		timeOfChanges=1800.0002;
@@ -1039,10 +1042,12 @@ class OutroLoose
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
-		year=2012;
-		month=6;
-		day=24;
-		startFogDecay=0.0049999999;
-		forecastFogDecay=0.0049999999;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
 	};
 };

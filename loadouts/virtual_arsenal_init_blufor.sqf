@@ -1,7 +1,35 @@
 //Init stuff
 _crate = _this select 0;
 ["Preload"] call BIS_fnc_arsenal;
+
+// exit script when sma and hlc is off
+// exit script when sma and hlc is off
+if !(addOnsSMAandHLC) exitWith {
+
+     ["AmmoboxInit",[_crate,true,{true}]] spawn BIS_fnc_arsenal; 
+     
+     removeAllActions _crate;
+    _hasAction = _crate getVariable ["ArsenalPresent", false];
+
+    if (!_hasAction) then {
+        [[_crate, ["<t color='#45B6EA'>" + localize "str_GRAD_openSupplyBox",
+        {
+            _box = _this select 0;
+            _unit = _this select 1;
+            
+            ["Open",[nil,_box]] call bis_fnc_arsenal;
+            
+            
+        },
+        [], 1000, true, false,  "", "_this distance _target < 3"]], "addAction",true,true] call BIS_fnc_MP;
+
+        _crate setVariable ["ArsenalPresent", true, true];
+    };
+
+};
+
 ["AmmoboxInit",[_crate,false,{false}]] spawn BIS_fnc_arsenal;
+
 
 _availableHeadgear = [
     "H_Cap_headphones",
@@ -68,9 +96,8 @@ _availableWeapons = [
     "hgun_Pistol_heavy_01_F",
     "hlc_smg_mp5k",
     "hgun_ACPC2_F"
-
-
-];
+    ];
+};
 
 [_crate,((backpackCargo _crate) + _availableBackpacks)] call BIS_fnc_addVirtualBackpackCargo;
 [_crate,((itemCargo _crate) + _availableHeadgear + _availableItems + _availableUniforms + _availableVests)] call BIS_fnc_addVirtualItemCargo;

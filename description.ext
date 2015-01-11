@@ -71,6 +71,13 @@ class Params
 		texts[] = {"normal","2h in 1h","4h in 1h","8h in 1h","12h in 1h"};
 		default = 4;
 	};
+	class SMAandHLC
+	{
+		title = "SMA and HLC Weapons?";
+		values[] = {0,1};
+		texts[] = {"YES","NO"};
+		default = 0;
+	};
 };
 
 class CfgSounds

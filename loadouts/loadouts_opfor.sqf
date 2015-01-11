@@ -1,24 +1,12 @@
 //check hlc depenendcy:
-_hasHLC = true || isClass (configFile >> "CfgWeapons" >> "hlc_rifle_akm");
-
-if (_hasHLC) then {
-	ak74family = 
+ak74family = 
 	["hlc_rifle_ak74",
 	"hlc_rifle_aks74",
 	"hlc_rifle_aks74u"
 	];
-	ak74family_magazine = "hlc_30Rnd_545x39_EP_AK";
-	ak47family_magazine = "hlc_30Rnd_762x39_t_ak";
-	} else {
-	ak47family = 
-	["CAF_AK47"
-	];
-	ak74family = 
-	["CAF_AK74"
-	];
-	ak74family_magazine = "CAF_30RND_545x39_AK";
-	ak47family_magazine = "CAF_30RND_762x39_AK";
-};
+
+ak74family_magazine = "hlc_30Rnd_545x39_EP_AK";
+ak47family_magazine = "hlc_30Rnd_762x39_t_ak";
 
 
 
