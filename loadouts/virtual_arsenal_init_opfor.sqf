@@ -31,7 +31,8 @@ _availableBackpacks = [
 
 _availableItems = [
 	"AGM_Earbuds",
-	"tf_fadak"
+	"tf_fadak",
+	"G_Squares_Tinted"
 ];
 
 _availableVests = [
@@ -102,7 +103,7 @@ removeAllActions _crate;
 _hasAction = _crate getVariable ["ArsenalPresent", false];
 
 if (!_hasAction) then {
-	[[_crate, ["<t color='#45B6EA'>Open Supply Box",
+	[[_crate, ["<t color='#45B6EA'>" + localize "str_GRAD_openSupplyBox",
 	{
 		_box = _this select 0;
 		_unit = _this select 1;

@@ -31,7 +31,12 @@
 				</German>
             </Key>   
         </Container>
-        <Container name="mission setup">
+        <Container name="mission setup">            
+            <Key ID="str_GRAD_openSupplyBox">
+                <Original>Open Supply Box</Original>
+                <English>Open Supply Box</English>
+                <German>Versorgungskiste öffnen</German>
+            </Key>
             <Key ID="str_GRAD_choose_spawn_location">
                 <Original>Choose Spawn Location</Original>
                 <English>Choose Spawn Location</English>
