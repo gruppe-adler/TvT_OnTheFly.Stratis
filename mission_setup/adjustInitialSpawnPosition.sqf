@@ -88,6 +88,7 @@ if ((isDedicated) || (isServer)) then {
 	vehiclePositionsForCurrentWorld = targetPositions select (islands find worldName);
 	vehiclePosition_blufor = vehiclePositionsForCurrentWorld select 0;
 	vehiclePosition_opfor = vehiclePositionsForCurrentWorld select 1;
+	weaponCachePosition_opfor = [-1000,-1000];
 	sleep 0.1;
 	//hintSilent format["%1",vehiclePosition];
 	[whiteboard,vehiclePosition_opfor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
@@ -96,9 +97,9 @@ if ((isDedicated) || (isServer)) then {
 	sleep 0.1;
 	[arsenal_blufor,vehiclePosition_blufor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
 	sleep 0.1;
-	[arsenal_opfor,vehiclePosition_opfor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
+	[arsenal_opfor,weaponCachePosition_opfor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
 	sleep 0.1;
 	[extraweapons_blufor,vehiclePosition_blufor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
 	sleep 0.1;
-	[extraweapons_opfor,vehiclePosition_opfor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
+	[extraweapons_opfor,weaponCachePosition_opfor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
 };

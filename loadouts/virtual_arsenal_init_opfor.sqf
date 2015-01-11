@@ -32,7 +32,10 @@ _availableBackpacks = [
 _availableItems = [
 	"AGM_Earbuds",
 	"tf_fadak",
-	"G_Squares_Tinted"
+	"G_Squares_Tinted",
+	"G_Aviator",
+	"G_Spectacles_Tinted",
+	"G_Spectacles"
 ];
 
 _availableVests = [

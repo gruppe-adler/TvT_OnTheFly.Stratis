@@ -39,6 +39,7 @@ openMap [false,false];
 		publicVariable "OPFOR_TELEPORTED";
 
 		[arsenal_opfor, pos] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
+		[extraweapons_opfor, pos] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
 
 		// move task to new destination
 		sector_trigger setPos pos;
