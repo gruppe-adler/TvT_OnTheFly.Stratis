@@ -2,8 +2,9 @@
 _crate = _this select 0;
 ["Preload"] call BIS_fnc_arsenal;
 
+waitUntil {time > 1};
 // exit script when sma and hlc is off
-if (!addOnsSMAandHLC) exitWith {
+if !(addOnsSMAandHLC) exitWith {
 
 	 ["AmmoboxInit",[_crate,true,{true}]] spawn BIS_fnc_arsenal; 
 	 

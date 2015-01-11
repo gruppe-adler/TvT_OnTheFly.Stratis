@@ -2,6 +2,7 @@ if (OPFOR_TELEPORTED) then {
 	[player] execVM "onPlayerRespawn.sqf";
 	[localize "str_GRAD_jip"] call AGM_Core_fnc_displayTextStructured;
 };
+addOnsSMAandHLC = false;
 
 // SMA + HLC support off = false
 if ((paramsArray select 6) == 0) then {
@@ -129,7 +130,7 @@ if ((isServer) || (isDedicated)) then {
 if !(isDedicated) then { 
 	[] execVM "mission_setup\helpBriefing.sqf";
 	if (addOnsSMAandHLC) then {
-	[] execVM "loadouts\_client.sqf";
+		[] execVM "loadouts\_client.sqf";
 	};
 	
 
