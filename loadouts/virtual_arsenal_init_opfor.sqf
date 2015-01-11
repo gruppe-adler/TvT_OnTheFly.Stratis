@@ -5,7 +5,6 @@ clearWeaponCargoGlobal _crate; clearItemCargoGlobal _crate; clearMagazineCargoGl
 
 ["Preload"] call BIS_fnc_arsenal;
 
-waitUntil {time > 1};
 // exit script when sma and hlc is off
 if !(addOnsSMAandHLC) exitWith {
 
@@ -48,7 +47,8 @@ _availableHeadgear = [
 	"H_CAF_AG_BOONIE_02",
 	"H_Watchcap_cbr",
 	"H_Shemag_olive_hs",
-	"H_Hat_camo"
+	"H_Hat_camo",
+	"H_Watchcap_blk"
 ];
 
 _availableBackpacks = [
@@ -64,7 +64,17 @@ _availableItems = [
 	"G_Squares_Tinted",
 	"G_Aviator",
 	"G_Spectacles_Tinted",
-	"G_Spectacles"
+	"G_Spectacles",
+	"Mask_M40_OD",
+	"Mask_M50",
+	"Mask_M40",
+	"L_Shemagh_Red",
+	"NeckTight_Tan",
+	"LBG_Shemagh_Gry",
+	"G_Balaclava_blk",
+	"G_Balaclava_oli",
+	"G_Bandanna_tan",
+	"G_Bandanna_oli"
 ];
 
 _availableVests = [

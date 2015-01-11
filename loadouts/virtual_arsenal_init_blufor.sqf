@@ -5,7 +5,6 @@ clearWeaponCargoGlobal _crate; clearItemCargoGlobal _crate; clearMagazineCargoGl
 
 ["Preload"] call BIS_fnc_arsenal;
 
-waitUntil {time > 1};
 // exit script when sma and hlc is off
 if !(addOnsSMAandHLC) exitWith {
 

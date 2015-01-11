@@ -88,7 +88,7 @@ if ((isDedicated) || (isServer)) then {
 	vehiclePositionsForCurrentWorld = targetPositions select (islands find worldName);
 	vehiclePosition_blufor = vehiclePositionsForCurrentWorld select 0;
 	vehiclePosition_opfor = vehiclePositionsForCurrentWorld select 1;
-	weaponCachePosition_opfor = [-1000,-1000];
+	weaponCachePosition_opfor = vehiclePosition_opfor;
 	sleep 0.1;
 	//hintSilent format["%1",vehiclePosition];
 	[whiteboard,vehiclePosition_opfor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";

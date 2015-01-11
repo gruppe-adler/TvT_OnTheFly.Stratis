@@ -247,7 +247,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.5;
 					text="opfor_teamlead";
-					description="Boss (must be selected - can build stuff)";
+					description="Boss (must be selected)";
 				};
 				class Item1
 				{
@@ -332,7 +332,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.5;
 					text="opfor_engi";
-					description="Doc (AK - can build stuff)";
+					description="Doc (AK)";
 				};
 				class Item8
 				{
@@ -414,7 +414,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1920.4669,5.5,5898.4614};
+					position[]={1842.5299,5.5,5886.6802};
 					id=25;
 					side="LOGIC";
 					vehicle="ModuleMPTypeSectorControl_F";
@@ -434,7 +434,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1919.8059,5.5,5938.5454};
+					position[]={1841.8689,5.5,5926.7642};
 					id=26;
 					side="LOGIC";
 					vehicle="LocationArea_F";
@@ -453,7 +453,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1944.6792,5.5,5864.1606};
+					position[]={1866.7422,5.5,5852.3794};
 					id=27;
 					side="LOGIC";
 					vehicle="SideBLUFOR_F";
@@ -472,7 +472,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1898.0612,5.5,5871.4077};
+					position[]={1820.1241,5.5,5859.6265};
 					id=28;
 					side="LOGIC";
 					vehicle="SideOPFOR_F";
@@ -491,7 +491,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1943.4053,5.7191539,5912.4194};
+					position[]={1865.4683,5.5,5900.6382};
 					class args
 					{
 						items=15;
@@ -848,7 +848,7 @@ class Mission
 		items=6;
 		class Item0
 		{
-			position[]={1802.3062,5.5,5973.9692};
+			position[]={1844.2902,5.2536268,6127.4043};
 			azimut=163.319;
 			id=34;
 			side="EMPTY";
@@ -861,7 +861,7 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={1810.9502,5.5,5975.416};
+			position[]={1852.9342,5.3323355,6128.8511};
 			azimut=163.319;
 			id=35;
 			side="EMPTY";
@@ -882,7 +882,7 @@ class Mission
 		};
 		class Item3
 		{
-			position[]={1808.7955,5.5,5968.001};
+			position[]={1850.7795,5.3208466,6121.436};
 			id=37;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
@@ -900,7 +900,7 @@ class Mission
 		};
 		class Item5
 		{
-			position[]={1807.7966,5.5,5971.1333};
+			position[]={1849.7806,5.311934,6124.5684};
 			id=39;
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
@@ -944,7 +944,7 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={1812.0289,5.5,5970.3105};
+			position[]={1846.2662,5.5,5990.2334};
 			a=0;
 			b=0;
 			timeoutMin=4;
