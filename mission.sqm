@@ -242,7 +242,7 @@ class Mission
 					id=14;
 					side="EAST";
 					vehicle="O_officer_F";
-					player="PLAY CDG";
+					player="PLAYER COMMANDER";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;

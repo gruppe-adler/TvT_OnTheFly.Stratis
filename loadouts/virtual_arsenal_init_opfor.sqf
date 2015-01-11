@@ -3,11 +3,11 @@ _crate = _this select 0;
 ["Preload"] call BIS_fnc_arsenal;
 
 // exit script when sma and hlc is off
-if !(addOnsSMAandHLC) exitWith {
+if (!addOnsSMAandHLC) exitWith {
 
 	 ["AmmoboxInit",[_crate,true,{true}]] spawn BIS_fnc_arsenal; 
 	 
-	 removeAllActions _crate;
+	removeAllActions _crate;
 	_hasAction = _crate getVariable ["ArsenalPresent", false];
 
 	if (!_hasAction) then {
@@ -120,7 +120,6 @@ _availableWeapons = [
 	"hlc_rifle_aek971",
 	"hgun_ACPC2_F"
 ];
-};
 
 [_crate,((backpackCargo _crate) + _availableBackpacks)] call BIS_fnc_addVirtualBackpackCargo;
 [_crate,((itemCargo _crate) + _availableHeadgear + _availableItems + _availableUniforms + _availableVests)] call BIS_fnc_addVirtualItemCargo;
