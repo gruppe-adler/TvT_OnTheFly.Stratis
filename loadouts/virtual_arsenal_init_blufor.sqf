@@ -1,5 +1,8 @@
 //Init stuff
 _crate = _this select 0;
+
+clearWeaponCargoGlobal _crate; clearItemCargoGlobal _crate; clearMagazineCargoGlobal _crate; clearBackpackCargo _crate; 
+
 ["Preload"] call BIS_fnc_arsenal;
 
 waitUntil {time > 1};
