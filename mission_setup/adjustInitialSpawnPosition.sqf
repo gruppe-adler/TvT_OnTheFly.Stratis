@@ -97,7 +97,7 @@ if ((isDedicated) || (isServer)) then {
 	sleep 0.1;
 	[arsenal_blufor,vehiclePosition_blufor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
 	sleep 0.1;
-	arsenal_opfor setpos weaponCachePosition_opfor;
+	arsenal_opfor setPos weaponCachePosition_opfor;
 	sleep 0.1;
 	[extraweapons_blufor,vehiclePosition_blufor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
 	sleep 0.1;
