@@ -120,7 +120,7 @@ if (!_hasAction) then {
 
         
     },
-    [], 1000, true, false,  "", "_this distance _target < 3"]], "addAction",true] call BIS_fnc_MP;
+    [], 1000, true, false,  "", "_this distance _target < 3"]], "addAction",true,true] call BIS_fnc_MP;
 
     _crate setVariable ["ArsenalPresent", true, true];
 };
