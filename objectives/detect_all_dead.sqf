@@ -32,7 +32,7 @@
        
         MISSION_COMPLETED = true; publicVariable "MISSION_COMPLETED";
         spectator_vehicle setVehicleLock "UNLOCKED";
-        WINCONDITIONOPFOR = true; publicVariable "WINCONDITIONBLUFOR";
+        WINCONDITIONOPFOR = true; publicVariable "WINCONDITIONOPFOR";
 
 
     
