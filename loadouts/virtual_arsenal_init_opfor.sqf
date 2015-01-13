@@ -3,8 +3,6 @@ _crate = _this select 0;
 
 clearWeaponCargoGlobal _crate; clearItemCargoGlobal _crate; clearMagazineCargoGlobal _crate; clearBackpackCargo _crate; 
 
-["Preload"] call BIS_fnc_arsenal;
-
 // exit script when sma and hlc is off
 if !(addOnsSMAandHLC) exitWith {
 
