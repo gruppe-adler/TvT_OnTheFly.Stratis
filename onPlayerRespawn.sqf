@@ -35,7 +35,7 @@ removeAllActions player;
 // set position above objective
 
 
-_unit addAction["<t color='#d18d1f'>' + localize 'str_GRAD_action_beginspectator1' + '</t>' + localize 'str_GRAD_action_beginspectator2'","spectator\callSpectator.sqf", _Args, 1, false, false, "","_this == _target || _this in _target"];
+_unit addAction["<t color='#d18d1f'>" + localize "str_GRAD_action_beginspectator1" + "</t>" + localize "str_GRAD_action_beginspectator2","spectator\callSpectator.sqf", _Args, 1, false, false, "","_this == _target || _this in _target"];
 
 sleep 0.1;
 _unit moveInCargo spectator_vehicle;
