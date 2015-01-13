@@ -131,6 +131,7 @@ if ((isServer) || (isDedicated)) then {
 // loadout call - giving each unit the appropriate sqf file
 if !(isDedicated) then { 
 	[] execVM "mission_setup\helpBriefing.sqf";
+	["Preload"] call BIS_fnc_arsenal;
 	if (addOnsSMAandHLC) then {
 		[] execVM "loadouts\_client.sqf";
 	};
