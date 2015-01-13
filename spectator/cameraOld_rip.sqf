@@ -187,6 +187,7 @@ onScrollWheelChange = {
 	playersLeftUnits = playableUnits;};
 	
 	playersLeftCount = ({side _x != civilian} count playersLeftUnits);
+// = ({_x getVariable ["isSpectator", false]} count playersLeftUnits);
 
 	// wenn am ende der fahnenstange angekommen, bleib da
 	if (playableUnitsSelector > playersLeftCount) then {playableUnitsSelector = playersLeftCount};
