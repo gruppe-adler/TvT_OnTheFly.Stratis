@@ -100,8 +100,7 @@ if ((isServer) || (isDedicated)) then {
 	[] execVM "objectives\detect_all_dead.sqf";
 	[extraweapons_opfor] execVM "loadouts\extraweapons_opfor.sqf";
 	[extraweapons_blufor] execVM "loadouts\extraweapons_blufor.sqf";
-	[arsenal_blufor] execVM "loadouts\virtual_arsenal_init_blufor.sqf";
-	[arsenal_opfor] execVM "loadouts\virtual_arsenal_init_opfor.sqf";
+	
 
 	respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger select 0),(getPos sector_trigger select 1),0];
 	[respawn_helper, false] call AGM_Drag_fnc_makeDraggable;
@@ -111,7 +110,7 @@ if ((isServer) || (isDedicated)) then {
 			if ((OPFOR_TELEPORTED) && (BLUFOR_TELEPORTED)) then {
 
 				if (getPos respawn_helper select 0 < -900) then {
-					sector_trigger setPos getPos opfor_vehicle;
+					sector_trigger setPos (getPos opfor_vehicle);
 					["sector_moduleWEST", getPos opfor_vehicle] call BIS_fnc_taskSetDestination;
 					sleep 1;
 
@@ -134,6 +133,8 @@ if ((isServer) || (isDedicated)) then {
 if !(isDedicated) then { 
 	[] execVM "mission_setup\helpBriefing.sqf";
 	["Preload"] call BIS_fnc_arsenal;
+	[arsenal_blufor] execVM "loadouts\virtual_arsenal_init_blufor.sqf";
+	[arsenal_opfor] execVM "loadouts\virtual_arsenal_init_opfor.sqf";
 	if (addOnsSMAandHLC) then {
 		[] execVM "loadouts\_client.sqf";
 	};

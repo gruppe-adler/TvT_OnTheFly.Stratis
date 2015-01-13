@@ -8,8 +8,8 @@ if (WINCONDITIONOPFOR || WINCONDITIONBLUFOR || BLUFOR_CAPTURED || BLUFOR_SURREND
 	cutText ["","BLACK OUT"];
 	if (!isNil "BIS_DEBUG_CAM") exitwith {BIS_DEBUG_CAM = nil;};
 
-	pos = getPos whiteboard;
-	[player,pos] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
+	_pos = getPos whiteboard;
+	[player,_pos] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
 	removeAllWeapons player;
 	[_unit] joinSilent (createGroup civilian);
 	cutText ["","BLACK IN"];

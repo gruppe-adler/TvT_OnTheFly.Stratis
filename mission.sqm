@@ -786,7 +786,7 @@ class Mission
 						};
 						class Item6
 						{
-							value="1";
+							value="0";
 							parentCls="AGM_ModuleMedical";
 							typeName="RequireDiagnosis";
 						};

@@ -3,15 +3,16 @@ _crate = _this select 0;
 
 clearWeaponCargoGlobal _crate; clearItemCargoGlobal _crate; clearMagazineCargoGlobal _crate; clearBackpackCargo _crate; 
 
+["AmmoboxInit",[_crate,false,{true}]] spawn BIS_fnc_arsenal;
+
 // exit script when sma and hlc is off
 if !(addOnsSMAandHLC) exitWith {
-
-     ["AmmoboxInit",[_crate,true,{true}]] spawn BIS_fnc_arsenal; 
      
-    removeAllActions _crate;
+    
     _hasAction = _crate getVariable ["ArsenalPresent", false];
 
     if (!_hasAction) then {
+        removeAllActions _crate;
         [[_crate, ["<t color='#45B6EA'>" + localize "str_GRAD_openSupplyBox",
         {
             _box = _this select 0;
@@ -28,7 +29,24 @@ if !(addOnsSMAandHLC) exitWith {
 
 };
 
-["AmmoboxInit",[_crate,false,{true}]] spawn BIS_fnc_arsenal;
+_hasAction = _crate getVariable ["ArsenalPresent", false];
+
+if (!_hasAction) then {
+    removeAllActions _crate;
+    [[_crate, ["<t color='#45B6EA'>" + localize "str_GRAD_openSupplyBox",
+    {
+        _box = _this select 0;
+        _unit = _this select 1;
+        
+        ["Open",[nil,_box,_unit]] call bis_fnc_arsenal;
+
+        
+    },
+    [], 1000, true, false,  "", "_this distance _target < 3"]], "addAction",true,true] call BIS_fnc_MP;
+
+    _crate setVariable ["ArsenalPresent", true, true];
+};
+
 
 
 _availableHeadgear = [
@@ -103,22 +121,3 @@ _availableWeapons = [
 [_crate,((itemCargo _crate) + _availableHeadgear + _availableItems + _availableUniforms + _availableVests)] call BIS_fnc_addVirtualItemCargo;
 [_crate,(magazineCargo _crate)] call BIS_fnc_addVirtualMagazineCargo;
 [_crate,(weaponCargo _crate) + _availableWeapons] call BIS_fnc_addVirtualWeaponCargo;
-
-
-removeAllActions _crate;
-_hasAction = _crate getVariable ["ArsenalPresent", false];
-
-if (!_hasAction) then {
-    [[_crate, ["<t color='#45B6EA'>" + localize "str_GRAD_openSupplyBox",
-    {
-        _box = _this select 0;
-        _unit = _this select 1;
-        
-        ["Open",[nil,_box,_unit]] call bis_fnc_arsenal;
-
-        
-    },
-    [], 1000, true, false,  "", "_this distance _target < 3"]], "addAction",true,true] call BIS_fnc_MP;
-
-    _crate setVariable ["ArsenalPresent", true, true];
-};
