@@ -3,31 +3,36 @@
     <Package name="TvT_OnTheFly_package">
     	 <Container name="mission briefing">
     	 	<Key ID="str_GRAD_story">
-                <Original>The terrorists want to build a dirty bomb and successfully gained a barrel with radioactive material. Secret Service is on their track and have prepared the barrel with a GPS-Logger to find their hideout. Now German Forces are tasked to secure the barrel and neutralize the threat.</Original>
-                <English>The terrorists want to build a dirty bomb and successfully gained a barrel with radioactive material. Secret Service is on their track and have prepared the barrel with a GPS-Logger to find their hideout. Now German Forces are tasked to secure the barrel and neutralize the threat.</English>
-                <German>Die Terroristen wollen eine schmutzige Bombe bauen und haben ein Fass mit radioaktivem Material beschafft. Der Geheimdienst ist ihnen aber auf der Spur und konnte das Fass mit einem GPS-Logger markieren, um ihren Unterschlupf ausfindig zu machen. Die Bundeswehr hat nun den Auftrag, das Fass sicherzustellen und die Gefahr zu neutralisieren.</German>
+                <Original>The terrorists want to build a dirty bomb and successfully gained a barrel with radioactive material. Secret Service is on their track and have prepared the barrel with a GPS-Logger to find their hideout. Now German Forces are tasked to neutralize the threat.</Original>
+                <English>The terrorists want to build a dirty bomb and successfully gained a barrel with radioactive material. Secret Service is on their track and have prepared the barrel with a GPS-Logger to find their hideout. Now German Forces are tasked to neutralize the threat.</English>
+                <German>Terroristen wollen eine schmutzige Bombe bauen und haben sich radioaktives Material beschafft. Der Geheimdienst ist ihnen aber auf der Spur und konnte das Behaeltnis mit einem GPS-Logger markieren, um ihren Unterschlupf ausfindig zu machen. Die Bundeswehr hat nun den Auftrag, die Gefahr zu neutralisieren.</German>
             </Key>   
             <Key ID="str_GRAD_briefing">
                 <Original>In this mission OPFOR and later BLUFOR can choose their spawn point. BLUFOR has to spawn in a certain radius around the objective. Both side can choose a vehicle which they can spawn once. Furthermore OPFOR can build fortifications (Boss + Doc). Mission setup is triggered by the leaders on scrollwheel-menu.</Original>
                 <English>In this mission OPFOR and later BLUFOR can choose their spawn point. BLUFOR has to spawn in a certain radius around the objective. Both side can choose a vehicle which they can spawn once. Furthermore OPFOR can build fortifications (Boss + Doc). Mission setup is triggered by the leaders on scrollwheel-menu.</English>
-                <German>In dieser Mission wählen erst OPFOR, danach BLUFOR ihren beliebigen Startpunkt. BLUFOR hat einen Mindest-und einen Maximalabstand einzuhalten. Beide Seiten können jeweils ein Fahrzeug wählen, das sie einnmalig spawnen lassen. OPFOR kann außerdem Fortifications errichten (Leader + Medic). Das Missions-Setup wird von den jeweiligen Leadern im Mausradmenü ausgeführt.</German>
+                <German>In dieser Mission waehlen erst OPFOR, danach BLUFOR ihren beliebigen Startpunkt. BLUFOR hat einen Mindest-und einen Maximalabstand einzuhalten. Beide Seiten können jeweils ein Fahrzeug waehlen, das sie einnmalig spawnen lassen. OPFOR kann ausserdem Stellungen errichten (Leader + Medic). Das Missions-Setup wird von den jeweiligen Leadern im Mausradmenue ausgeführt.</German>
             </Key>      
             <Key ID="str_GRAD_spectatorhelp">
                 <Original>Hint for Spectator Cam &lt;br/&gt;
 						"L" to turn off crosshair &lt;br/&gt;
 						"Numpad" to activate Freelook&lt;br/&gt;
-						"Mousewheel" to switch alive units (not unconscious)&lt;br/&gt;
-						"N" for Nightvision/Infrared &lt;br/&gt;</Original>
+						"Mousewheel" to switch alive units &lt;br/&gt;
+						"N" for Nightvision/Infrared &lt;br/&gt;
+                        "Space" to toggle camera smoothing
+                </Original>
                 <English>Hint for Spectator Cam &lt;br/&gt;
 						"L" to turn off crosshair &lt;br/&gt;
 						"Numpad" to activate Freelook&lt;br/&gt;
-						"Mousewheel" to switch alive units (not unconscious)&lt;br/&gt;
-						"N" for Nightvision/Infrared &lt;br/&gt;</English>
-                <German>Hinweise zur Spectator Cam: &lt;br/&gt;
+						"Mousewheel" to switch alive units &lt;br/&gt;
+						"N" for Nightvision/Infrared &lt;br/&gt;
+                        "Space" to toggle camera smoothing &lt;br/&gt;
+                </English>
+                <German>Hinweise zur Zuschauerkamera: &lt;br/&gt;
 						"L" um den Punkt abzuschalten &lt;br/&gt;
-						"*" Numpad um FreeLook zu aktivieren&lt;br/&gt;
-						"Mausrad" um lebende Einheiten durchzuschalten (ausser Ohnmächtige) &lt;br/&gt;
+						"*" Ziffernblock für volle Kamerakontrolle &lt;br/&gt;
+						"Mausrad" um lebende Einheiten durchzuschalten &lt;br/&gt;
 						"N" für Nightvision/Infrarot &lt;br/&gt;
+                        "Leertaste" um die Kamerabeschleunigung zu aendern &lt;br/&gt;
 				</German>
             </Key>   
         </Container>
@@ -35,24 +40,29 @@
             <Key ID="str_GRAD_openSupplyBox">
                 <Original>Open Supply Box</Original>
                 <English>Open Supply Box</English>
-                <German>Versorgungskiste öffnen</German>
+                <German>Versorgungskiste oeffnen</German>
+            </Key>
+            <Key ID="str_GRAD_spawn_on_water">
+                <Original>Spawn on water not possible</Original>
+                <English>Spawn on water not possible</English>
+                <German>Im Wasser spawnen unmoeglich</German>
             </Key>
             <Key ID="str_GRAD_choose_spawn_location">
                 <Original>Choose Spawn Location</Original>
                 <English>Choose Spawn Location</English>
-                <German>Spawnpunkt wÃ¤hlen</German>
+                <German>Spawnpunkt waehlen</German>
 				<French>Choisir le point de spawn</French>
             </Key>
             <Key ID="str_GRAD_choose_vehicle">
                  <Original>Choose Upgrade</Original>
                 <English>Choose Upgrade</English>
-                <German>Upgrade wÃ¤hlen</German>
+                <German>Upgrade waehlen</German>
 				<French>Sélectionner un upgrade</French>
             </Key>
             <Key ID="str_GRAD_jip">
             	<Original>Sorry, you joined too late. Spectate and enjoy!</Original>
                 <English>Sorry, you joined too late. Spectate and enjoy!</English>
-                <German>Du bist zu spät und musst zuschauen!</German>
+                <German>Du bist zu spaet und musst zuschauen!</German>
             </Key>
             <Key ID="str_GRAD_spawnTooClose1">
             	<Original>Sorry, Spawn too close</Original>
@@ -72,7 +82,7 @@
              <Key ID="str_GRAD_spawnTooFar2">
             	<Original>Must be at max </Original>
                 <English>Must be at max </English>
-                <German>Darf höchstens sein: </German>
+                <German>Darf hoechstens sein: </German>
             </Key>
              <Key ID="str_GRAD_hint_bluforSpawned">
                 <Original>BLUFOR spawned. OPFOR may now spawn vehicle.</Original>
@@ -88,6 +98,16 @@
                 <Original>End Placement</Original>
                 <English>End Placement</English>
                 <German>Keine Objekte mehr platzieren</German>
+            </Key>
+             <Key ID="str_GRAD_spawnHEMTT">
+                <Original>Spawn HEMTT</Original>
+                <English>Spawn HEMTT</English>
+                <German>Transport-LKW spawnen</German>
+            </Key>
+             <Key ID="str_GRAD_spawnLittlebird">
+                <Original>Spawn Littlebird</Original>
+                <English>Spawn Littlebird</English>
+                <German>Littlebird spawnen</German>
             </Key>
              <Key ID="str_GRAD_vehicleSpawned">
                 <Original>Vehicle spawned</Original>
@@ -142,7 +162,7 @@
              <Key ID="str_GRAD_action_beginspectator1">
             	<Original>Activate Spectator Cam</Original>
                 <English>Activate Spectator Cam</English>
-                <German>Zuschauer-Kamera aktivieren</German>
+                <German>Zuschauerkamera aktivieren</German>
             </Key>
             <Key ID="str_GRAD_action_beginspectator2">
             	<Original>(right click to exit)</Original>
