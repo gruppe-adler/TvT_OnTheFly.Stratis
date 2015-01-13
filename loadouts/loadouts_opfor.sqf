@@ -4,6 +4,10 @@ ak74family =
 	"hlc_rifle_aks74",
 	"hlc_rifle_aks74u"
 	];
+	
+ak47family = 
+	["hlc_rifle_ak47"
+	];
 
 ak74family_magazine = "hlc_30Rnd_545x39_EP_AK";
 ak47family_magazine = "hlc_30Rnd_762x39_t_ak";
