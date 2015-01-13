@@ -11,6 +11,7 @@ if (isnil "BIS_DEBUG_CAM_ISFLIR") then {
 
 playableUnitsSelector = 0;
 playersLeftUnits = [];
+camInertia = true;
 	
 
 BIS_DEBUG_CAM_MAP = false;
@@ -86,6 +87,9 @@ BIS_DEBUG_CAM_MARKER setmarkertextlocal "Your Spectator Cam";
 			if (side cursorTarget== East) then {
 			sideOfTarget = '<t color="#c80000">OPFOR</t>';
 			};
+			if (side cursorTarget== Civilian) then {
+			sideOfTarget = '<t color="#ffffff">Bewusstlos</t>';
+			};
 			text0 = format ["%1<br />%2", nameOfTarget, sideOfTarget];
 			[text0] call AGM_Core_fnc_displayTextStructured;	
 			sleep 1;
@@ -150,16 +154,14 @@ _keyDown = (finddisplay 46) displayaddeventhandler ["keydown","
 		};
 	};
 
-	if (_key == 55) then {
-		_worldpos = screentoworld [.5,.5];
-		if (_ctrl) then {
-			vehicle player setpos _worldpos;
+	if (_key == 57) then {
+		if (!camInertia) then {
+			BIS_DEBUG_CAM camCommand 'INERTIA ON';
+			camInertia = true;
 		} else {
-			copytoclipboard str _worldpos;
+			BIS_DEBUG_CAM camCommand 'INERTIA OFF';
+			camInertia = false;
 		};
-	};
-	if (_key == 83 && !isnil 'BIS_DEBUG_CAM_LASTPOS') then {
-		BIS_DEBUG_CAM setpos BIS_DEBUG_CAM_LASTPOS;
 	};
 
 	if (_key == 41) then {
@@ -186,74 +188,63 @@ onScrollWheelChange = {
 	} else {
 	playersLeftUnits = playableUnits;};
 	
-	playersLeftCount = ({side _x != civilian} count playersLeftUnits);
-// = ({_x getVariable ["isSpectator", false]} count playersLeftUnits);
+	//playersLeftCount = ({side _x != civilian} count playersLeftUnits);
+	playersLeftCount = ({!(name _x in SPECTATOR_LIST)} count playersLeftUnits);
 
 	// wenn am ende der fahnenstange angekommen, bleib da
 	if (playableUnitsSelector > playersLeftCount) then {playableUnitsSelector = playersLeftCount};
 	
-	{ if (side _x == civilian) then {playersLeftUnits = playersLeftUnits - [_x]};} forEach playersLeftUnits;
+	//{ if (side _x == civilian) then {playersLeftUnits = playersLeftUnits - [_x]};} forEach playersLeftUnits;
+	{ if (name _x in SPECTATOR_LIST) then {playersLeftUnits = playersLeftUnits - [_x]};} forEach playersLeftUnits;
 	
     // scroll wheel down
     if ((_this select 1) < 0) then {
 
-	if (playableUnitsSelector > 0) then {playableUnitsSelector = playableUnitsSelector -1;
-	} else {
-	//playableUnitsSelector = playersLeftUnits -1;
-	playableUnitsSelector = 0;
-	};
+		if (playableUnitsSelector > 0) then {playableUnitsSelector = playableUnitsSelector -1;
+		} else {
+		playableUnitsSelector = 0;
+		};
 
-	currentSpecUnit = playersLeftUnits select playableUnitsSelector;
-
-   
-	sideOfTarget = "Unknown";
-	nameOfTarget = name currentSpecUnit;
-	if (side currentSpecUnit == WEST) then {sideOfTarget = '<t color="#008cda">BLUFOR</t>';};
-	if (side currentSpecUnit == EAST) then {sideOfTarget = '<t color="#c80000">OPFOR</t>';};
-	text1 = format ["%1<br />%2", nameOfTarget, sideOfTarget];
-	[text1] call AGM_Core_fnc_displayTextStructured;
-	BIS_DEBUG_CAM camcommand 'manual off';
-	BIS_DEBUG_CAM camPrepareFocus [-1,1];
-	BIS_DEBUG_CAM camPrepareDir getDir currentSpecUnit;
-	BIS_DEBUG_CAM camPrepareTarget currentSpecUnit;
-	BIS_DEBUG_CAM camPreparePos getPos currentSpecUnit;
-	BIS_DEBUG_CAM camPrepareRelPos [0,0,10];
-	BIS_DEBUG_CAM camcommitprepared 0;
-	BIS_DEBUG_CAM camcommand 'manual on';
-	  
+		currentSpecUnit = playersLeftUnits select playableUnitsSelector;
+	   
+		sideOfTarget = "";
+		nameOfTarget = name currentSpecUnit;
+		if (side currentSpecUnit == WEST) then {sideOfTarget = '<t color="#008cda">BLUFOR</t>';};
+		if (side currentSpecUnit == EAST) then {sideOfTarget = '<t color="#c80000">OPFOR</t>';};
+		if (side currentSpecUnit == CIVILIAN) then {sideOfTarget = '<t color="#ffffff">bewusstlos</t>';};
+		text1 = format ["%1<br />%2", nameOfTarget, sideOfTarget];
+		[text1] call AGM_Core_fnc_displayTextStructured;
+		BIS_DEBUG_CAM camcommand 'manual off';
+		BIS_DEBUG_CAM camSetTarget currentSpecUnit;
+		BIS_DEBUG_CAM camSetRelPos [0,-5,5];
+		BIS_DEBUG_CAM camCommit 0;
+		BIS_DEBUG_CAM camcommand 'manual on';
+  
 	};
 
 
 	// scroll wheel up      
     if ((_this select 1) > 0) then {
 
-   
-
-	
-    if (playableUnitsSelector < (playersLeftCount - 1)) then {playableUnitsSelector = playableUnitsSelector +1;
-	} else {
-	
-	playableUnitsSelector = playersLeftCount - 1;
-	};
-
-	
-	currentSpecUnit = playersLeftUnits select playableUnitsSelector;
-
-   
-	sideOfTarget = "Unknown";
-	nameOfTarget = name currentSpecUnit;
-	if (side currentSpecUnit == WEST) then {sideOfTarget = '<t color="#008cda">BLUFOR</t>';};
-	if (side currentSpecUnit == EAST) then {sideOfTarget = '<t color="#c80000">OPFOR</t>';};
-	text2 = format ["%1<br />%2", nameOfTarget, sideOfTarget];
-	[text2] call AGM_Core_fnc_displayTextStructured;
-	BIS_DEBUG_CAM camcommand 'manual off';
-	BIS_DEBUG_CAM camPrepareFocus [-1,1];
-	BIS_DEBUG_CAM camPrepareDir getDir currentSpecUnit;
-	BIS_DEBUG_CAM camPrepareTarget currentSpecUnit;
-	BIS_DEBUG_CAM camPreparePos getPos currentSpecUnit;
-	BIS_DEBUG_CAM camPrepareRelPos [0,0,10];
-	BIS_DEBUG_CAM camcommitprepared 0;
-	BIS_DEBUG_CAM camcommand 'manual on';
+	    if (playableUnitsSelector < (playersLeftCount - 1)) then {playableUnitsSelector = playableUnitsSelector +1;
+		} else {
+		playableUnitsSelector = playersLeftCount - 1;
+		};
+		
+		currentSpecUnit = playersLeftUnits select playableUnitsSelector;
+	   
+		sideOfTarget = "";
+		nameOfTarget = name currentSpecUnit;
+		if (side currentSpecUnit == WEST) then {sideOfTarget = '<t color="#008cda">BLUFOR</t>';};
+		if (side currentSpecUnit == EAST) then {sideOfTarget = '<t color="#c80000">OPFOR</t>';};
+		if (side currentSpecUnit == CIVILIAN) then {sideOfTarget = '<t color="#ffffff">bewusstlos</t>';};
+		text2 = format ["%1<br />%2", nameOfTarget, sideOfTarget];
+		[text2] call AGM_Core_fnc_displayTextStructured;
+		BIS_DEBUG_CAM camcommand 'manual off';
+		BIS_DEBUG_CAM camSetTarget currentSpecUnit;
+		BIS_DEBUG_CAM camSetRelPos [0,-5,5];
+		BIS_DEBUG_CAM camCommit 0;
+		BIS_DEBUG_CAM camcommand 'manual on';
 	
     };
 	

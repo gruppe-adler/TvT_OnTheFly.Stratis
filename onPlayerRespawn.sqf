@@ -27,6 +27,8 @@ if (WINCONDITIONOPFOR || WINCONDITIONBLUFOR || BLUFOR_CAPTURED || BLUFOR_SURREND
 	
 };
 
+SPECTATOR_LIST = SPECTATOR_LIST + [name player];
+publicVariable "SPECTATOR_LIST";
 
 removeAllWeapons player:
 removeAllActions player;

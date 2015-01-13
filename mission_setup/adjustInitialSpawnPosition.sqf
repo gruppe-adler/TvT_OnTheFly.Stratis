@@ -46,35 +46,41 @@ islands = [
 	'xcam_prototype',
 	'Zargabad'
 ];
+// pos blufor, pos opfor, water around map?, name
 targetPositions = [
-	[ [14300,16200], [14600, 16700], 'Altis'],
-	[ [3000, 5400], [3900, 4900], 'bornholm' ], 
-	[ [4100,11000], [4860, 9740], 'Chernarus'],
-	[ [4100,11000], [4860, 9740], 'Chernarus_Summer'],
-	[ [15550,920], [15850, 370], 'clafghan'],
-	[ [1500, 50], [1900, 50], 'Desert_E'],
-	[ [7700, 1600], [8400, 2000], 'fata'],
-	[ [7777, 4280], [9200, 4280], 'FDF_Isle1_a'],
-	[ [1240, 9450], [1240, 8450], 'IsolaDiCapraia'],
-	[ [18080, 18535], [18200, 18060], 'Sara'],
-	[ [18080, 18535], [18200, 18060], 'Sara_dbe1'],
-	[ [9800, 4700], [9800, 3800], 'saru'],
-	[ [160, 640], [800, 135], 'Shapur_BAF'],
-	[ [1540, 5015], [1800, 6000], 'Stratis'],
-	[ [7700, 1600], [8250, 2130], 'takistan'],
-	[ [1100, 3200], [1700, 3000], 'Thirsk'],
-	[ [4080, 7580], [4860, 7600], 'Panthera3'],
-	[ [7500, 7600], [7500, 7300], 'Woodland_ACR'],
-	[ [4000, 4150], [4450, 3830], 'xcam_prototype'],
-	[ [3400, 4320], [3400, 3600], 'Zargabad']
+	[ [14300,16200], [14600, 16700], true, 'Altis'],
+	[ [3000, 5400], [3900, 4900], true, 'bornholm' ], 
+	[ [4100,11000], [4860, 9740], true, 'Chernarus'],
+	[ [4100,11000], [4860, 9740], true, 'Chernarus_Summer'],
+	[ [15550,920], [15850, 370], false, 'clafghan'],
+	[ [1500, 50], [1900, 50], false, 'Desert_E'],
+	[ [7700, 1600], [8400, 2000], false, 'fata'],
+	[ [7777, 4280], [9200, 4280], true, 'FDF_Isle1_a'],
+	[ [1240, 9450], [1240, 8450], true, 'IsolaDiCapraia'],
+	[ [18080, 18535], [18200, 18060], true, 'Sara'],
+	[ [18080, 18535], [18200, 18060], true, 'Sara_dbe1'],
+	[ [9800, 4700], [9800, 3800], true, 'saru'],
+	[ [160, 640], [800, 135], true, 'Shapur_BAF'],
+	[ [1540, 5015], [1800, 6000], true, 'Stratis'],
+	[ [7700, 1600], [8250, 2130], false, 'takistan'],
+	[ [1100, 3200], [1700, 3000], true, 'Thirsk'],
+	[ [4080, 7580], [4860, 7600], true, 'Panthera3'],
+	[ [7500, 7600], [7500, 7300], false, 'Woodland_ACR'],
+	[ [4000, 4150], [4450, 3830], true, 'xcam_prototype'],
+	[ [3400, 4320], [3400, 3600], false, 'Zargabad']
 ];
 
-
+alternativeSpawnsOutsideMap = [[0,-500],[-500,0]];
 
 
 if !(isDedicated) then {
 	waitUntil {player == player}; 
+	if (vehiclePositionsForCurrentWorld select 2) then {
 	playerPositionsForCurrentWorld = targetPositions select (islands find worldName);
+	} else {
+	playerPositionsForCurrentWorld = alternativeSpawnsOutsideMap
+	};
+
 	if (side player == blufor) then {
 		playerPosition = playerPositionsForCurrentWorld select 0;
 	} else {
@@ -86,9 +92,15 @@ if !(isDedicated) then {
 
 if ((isDedicated) || (isServer)) then {
 	vehiclePositionsForCurrentWorld = targetPositions select (islands find worldName);
+	if (vehiclePositionsForCurrentWorld select 2) then { 
 	vehiclePosition_blufor = vehiclePositionsForCurrentWorld select 0;
 	vehiclePosition_opfor = vehiclePositionsForCurrentWorld select 1;
 	weaponCachePosition_opfor = vehiclePositionsForCurrentWorld select 1;
+	else {
+	vehiclePosition_blufor = alternativeSpawnsOutsideMap select 0;
+	vehiclePosition_opfor = alternativeSpawnsOutsideMap select 1;
+	weaponCachePosition_opfor = alternativeSpawnsOutsideMap select 1;
+	};
 	sleep 0.1;
 	//hintSilent format["%1",vehiclePosition];
 	[whiteboard,vehiclePosition_opfor] execVM "mission_setup\teleportUnitToEmptySpot.sqf";

@@ -1,13 +1,13 @@
 if (player == opfor_teamlead && !OPFOR_TELEPORTED) then {
 [localize "str_GRAD_choose_spawn_location"] call AGM_Core_fnc_displayTextStructured;
-openMap [true,true];
+openMap [true,false];
 
 onMapSingleClick "[_pos] call teleportOpforGroup; onMapSingleClick ''; true";
 };
 
 if (player == blufor_teamlead && OPFOR_TELEPORTED) then {
 [localize "str_GRAD_choose_spawn_location"] call AGM_Core_fnc_displayTextStructured;
-openMap [true,true];
+openMap [true,false];
 
 onMapSingleClick "[_pos] call teleportOpforGroup; onMapSingleClick ''; true";
 };

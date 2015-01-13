@@ -28,7 +28,7 @@ if !(addOnsSMAandHLC) exitWith {
 
 };
 
-["AmmoboxInit",[_crate,false,{false}]] spawn BIS_fnc_arsenal;
+["AmmoboxInit",[_crate,false,{true}]] spawn BIS_fnc_arsenal;
 
 
 _availableHeadgear = [

@@ -43,6 +43,8 @@ if (isServer) then {
 	publicVariable "BLUFOR_SURRENDERED";
 	END_MISSION_TRIGGERED = false;
 	publicVariable "END_MISSION_TRIGGERED";
+	SPECTATOR_LIST = [];
+	publicVariable "SPECTATOR_LIST";
 
 	
 

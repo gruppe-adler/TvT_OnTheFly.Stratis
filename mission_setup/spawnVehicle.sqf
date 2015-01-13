@@ -71,11 +71,5 @@ if (player == opfor_teamlead) then {
 	};
 
 
-	while{ count _spawn_area2 < 1 } do
-		{
-		    _spawn_area2 = _centre2 findEmptyPosition[ _min_distance_items , _max_distance_items , "AGM_JerryCan" ];
-		    _max_distance_items = _max_distance_items + 10;
-		};
-	_jerrycan1 = "AGM_JerryCan" createVehicle _spawn_area2;
 
 };
