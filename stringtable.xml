@@ -14,25 +14,25 @@
             </Key>      
             <Key ID="str_GRAD_spectatorhelp">
                 <Original>Hint for Spectator Cam &lt;br/&gt;
-						"L" to turn off crosshair &lt;br/&gt;
-						"Numpad" to activate Freelook&lt;br/&gt;
-						"Mousewheel" to switch alive units &lt;br/&gt;
-						"N" for Nightvision/Infrared &lt;br/&gt;
-                        "Space" to toggle camera smoothing
+"L" to turn off crosshair &lt;br/&gt;
+"Numpad" to activate Freelook&lt;br/&gt;
+"Mousewheel" to switch alive units &lt;br/&gt;
+"N" for Nightvision/Infrared &lt;br/&gt;
+"Space" to toggle camera smoothing
                 </Original>
                 <English>Hint for Spectator Cam &lt;br/&gt;
-						"L" to turn off crosshair &lt;br/&gt;
-						"Numpad" to activate Freelook&lt;br/&gt;
-						"Mousewheel" to switch alive units &lt;br/&gt;
-						"N" for Nightvision/Infrared &lt;br/&gt;
-                        "Space" to toggle camera smoothing &lt;br/&gt;
+"L" to turn off crosshair &lt;br/&gt;
+"Numpad" to activate Freelook&lt;br/&gt;
+"Mousewheel" to switch alive units &lt;br/&gt;
+"N" for Nightvision/Infrared &lt;br/&gt;
+"Space" to toggle camera smoothing
                 </English>
                 <German>Hinweise zur Zuschauerkamera: &lt;br/&gt;
-						"L" um den Punkt abzuschalten &lt;br/&gt;
-						"*" Ziffernblock für volle Kamerakontrolle &lt;br/&gt;
-						"Mausrad" um lebende Einheiten durchzuschalten &lt;br/&gt;
-						"N" für Nightvision/Infrarot &lt;br/&gt;
-                        "Leertaste" um die Kamerabeschleunigung zu aendern &lt;br/&gt;
+"L" um den Punkt abzuschalten &lt;br/&gt;
+"*" Ziffernblock für volle Kamerakontrolle &lt;br/&gt;
+"Mausrad" um lebende Einheiten durchzuschalten &lt;br/&gt;
+"N" für Nightvision/Infrarot &lt;br/&gt;
+"Leertaste" um die Kamerabeschleunigung zu aendern
 				</German>
             </Key>   
         </Container>
