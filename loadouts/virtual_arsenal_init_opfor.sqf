@@ -9,9 +9,10 @@ clearWeaponCargoGlobal _crate; clearItemCargoGlobal _crate; clearMagazineCargoGl
 if !(addOnsSMAandHLC) exitWith {
 	
 	_hasAction = _crate getVariable ["ArsenalPresent", false];
+	removeAllActions _crate;
 
 	if (!_hasAction) then {
-		removeAllActions _crate;
+		
 		[[_crate, ["<t color='#45B6EA'>" + localize "str_GRAD_openSupplyBox",
 		{
 			_box = _this select 0;
@@ -29,9 +30,10 @@ if !(addOnsSMAandHLC) exitWith {
 
 
 _hasAction = _crate getVariable ["ArsenalPresent", false];
+removeAllActions _crate;
 
 if (!_hasAction) then {
-	removeAllActions _crate;
+	
 	[[_crate, ["<t color='#45B6EA'>" + localize "str_GRAD_openSupplyBox",
 	{
 		_box = _this select 0;
