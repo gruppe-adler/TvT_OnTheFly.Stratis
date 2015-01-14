@@ -76,8 +76,8 @@ alternativeSpawnsOutsideMap = [[-500,-500],[-500,-900]];
 if !(isDedicated) then {
 	waitUntil {player == player}; 
 	playerPositionsForCurrentWorld = targetPositions select (islands find worldName);
-	if !(playerPositionsForCurrentWorld select 2) then {
-	playerPositionsForCurrentWorld = alternativeSpawnsOutsideMap
+	if (playerPositionsForCurrentWorld select 2 == false) then {
+	playerPositionsForCurrentWorld = alternativeSpawnsOutsideMap;
 	};
 
 	if (side player == blufor) then {
@@ -91,7 +91,7 @@ if !(isDedicated) then {
 
 if ((isDedicated) || (isServer)) then {
 	vehiclePositionsForCurrentWorld = targetPositions select (islands find worldName);
-	if !(vehiclePositionsForCurrentWorld select 2) then { 
+	if (vehiclePositionsForCurrentWorld select 2 == false) then { 
 	vehiclePosition_blufor = vehiclePositionsForCurrentWorld select 0;
 	vehiclePosition_opfor = vehiclePositionsForCurrentWorld select 1;
 	weaponCachePosition_opfor = vehiclePositionsForCurrentWorld select 1;
