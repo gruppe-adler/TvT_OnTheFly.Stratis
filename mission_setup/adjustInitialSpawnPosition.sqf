@@ -26,7 +26,7 @@ private ['_islands', '_targetPositions', '_positionsForCurrentWorld', '_targetPo
 
 islands = [
 	'Altis',
-	'bornholm',
+	'Bornholm',
 	'Chernarus',
 	'Chernarus_Summer',
 	'clafghan',
@@ -49,7 +49,7 @@ islands = [
 // pos blufor, pos opfor, water around map?, name
 targetPositions = [
 	[ [14300,16200], [14600, 16700], true, 'Altis'],
-	[ [3000, 5400], [3900, 4900], true, 'bornholm' ], 
+	[ [3000, 5400], [3900, 4900], true, 'Bornholm' ], 
 	[ [4100,11000], [4860, 9740], true, 'Chernarus'],
 	[ [4100,11000], [4860, 9740], true, 'Chernarus_Summer'],
 	[ [15550,920], [15850, 370], false, 'clafghan'],
@@ -76,7 +76,7 @@ alternativeSpawnsOutsideMap = [[-500,-500],[-500,-900]];
 if !(isDedicated) then {
 	waitUntil {player == player}; 
 	playerPositionsForCurrentWorld = targetPositions select (islands find worldName);
-	if (playerPositionsForCurrentWorld select 2 == false) then {
+	if !(playerPositionsForCurrentWorld select 2) then {
 	playerPositionsForCurrentWorld = alternativeSpawnsOutsideMap;
 	};
 
@@ -91,7 +91,7 @@ if !(isDedicated) then {
 
 if ((isDedicated) || (isServer)) then {
 	vehiclePositionsForCurrentWorld = targetPositions select (islands find worldName);
-	if (vehiclePositionsForCurrentWorld select 2 == false) then { 
+	if !(vehiclePositionsForCurrentWorld select 2) then { 
 	vehiclePosition_blufor = vehiclePositionsForCurrentWorld select 0;
 	vehiclePosition_opfor = vehiclePositionsForCurrentWorld select 1;
 	weaponCachePosition_opfor = vehiclePositionsForCurrentWorld select 1;
