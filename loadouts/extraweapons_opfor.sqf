@@ -13,7 +13,6 @@ _crate_opfor addItemCargoGlobal ["AGM_HandFlare_Red", 20];
 _crate_opfor addItemCargoGlobal ["HandGrenade", 16];   
 _crate_opfor addweaponcargoglobal ["srifle_DMR_01_F", 1]; 
 _crate_opfor addmagazinecargoglobal ["10Rnd_762x51_Mag", 9];  
-_crate_opfor addItemCargoGlobal ["optic_Arco", 1]; 
 
 if (addOnsSMAandHLC) then {
 _crate_opfor addweaponcargoglobal ["hlc_rifle_rpk", 1]; 

@@ -92,13 +92,13 @@ if !(isDedicated) then {
 if ((isDedicated) || (isServer)) then {
 	vehiclePositionsForCurrentWorld = targetPositions select (islands find worldName);
 	if !(vehiclePositionsForCurrentWorld select 2) then { 
-	vehiclePosition_blufor = vehiclePositionsForCurrentWorld select 0;
-	vehiclePosition_opfor = vehiclePositionsForCurrentWorld select 1;
-	weaponCachePosition_opfor = vehiclePositionsForCurrentWorld select 1;
-	else {
 	vehiclePosition_blufor = alternativeSpawnsOutsideMap select 0;
 	vehiclePosition_opfor = alternativeSpawnsOutsideMap select 1;
 	weaponCachePosition_opfor = alternativeSpawnsOutsideMap select 1;
+	else {
+	vehiclePosition_blufor = vehiclePositionsForCurrentWorld select 0;
+	vehiclePosition_opfor = vehiclePositionsForCurrentWorld select 1;
+	weaponCachePosition_opfor = vehiclePositionsForCurrentWorld select 1;
 	};
 	sleep 0.1;
 	//hintSilent format["%1",vehiclePosition];

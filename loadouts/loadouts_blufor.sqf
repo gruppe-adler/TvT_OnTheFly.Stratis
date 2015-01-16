@@ -63,12 +63,12 @@ blufor_AR15_1 = {
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
 
-	player setVariable ["dontHaveLoadout",false];
+	
 };
 
 blufor_G3_1 = {
-  
-	this = _this select 0;
+
+ 	this = _this select 0;
 
 	comment "Exported from Arsenal by XiviD";
 
@@ -131,13 +131,11 @@ blufor_G3_1 = {
 
 	this linkItem "tf_anprc152";
 
-	player setVariable ["dontHaveLoadout",false];
+	
 
 };
 
-
-blufor_Medic_MP5A4 = 
-{
+blufor_Medic_MP5A4 = {
 
 	this = _this select 0;
 
@@ -207,85 +205,7 @@ blufor_Medic_MP5A4 =
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
 
-	player setVariable ["dontHaveLoadout",false];
-
-};
-
-
-blufor_Medic_MP5SD = 
-{
-
-	this = _this select 0;
-
-	comment "Exported from Arsenal by XiviD";
-
-	comment "Remove existing items";
-	removeAllWeapons this;
-	removeAllItems this;
-	removeAllAssignedItems this;
-	removeUniform this;
-	removeVest this;
-	removeBackpack this;
-	removeHeadgear this;
-	removeGoggles this;
-
-	
-
-	comment "Add containers";
-	if (TROPENTARN) then {
-	[[{}, this forceAddUniform "ARC_GER_Tropentarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	} else {
-	[[{}, this forceAddUniform "ARC_GER_Flecktarn_Uniform"], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	};
-	for "_i" from 1 to 2 do {this addItemToUniform "hlc_30Rnd_9x19_GD_MP5";};
-	if (TROPENTARN) then {
-	this addVest "ARC_GER_Tropentarn_Plate_Carrier_H";
-	} else {
-	this addVest "ARC_GER_Flecktarn_Plate_Carrier_H";
-	};
-	this addItemToVest "AGM_EarBuds";
-	for "_i" from 1 to 2 do {this addItemToVest "AGM_CableTie";};
-	for "_i" from 1 to 4 do {this addItemToVest "AGM_Bandage";};
-	for "_i" from 1 to 2 do {this addItemToVest "11Rnd_45ACP_Mag";};
-	this addItemToVest "HandGrenade";
-	for "_i" from 1 to 2 do {this addItemToVest "SmokeShellBlue";};
-	this addItemToVest "AGM_HandFlare_White";
-	this addItemToVest "B_IR_Grenade";
-	for "_i" from 1 to 2 do {this addItemToVest "Chemlight_blue";};
-	for "_i" from 1 to 3 do {this addItemToVest "hlc_30Rnd_9x19_B_MP5";};
-	for "_i" from 1 to 3 do {this addItemToVest "hlc_30Rnd_9x19_GD_MP5";};
-	if (TROPENTARN) then {
-	this addBackpack "ARC_GER_Backpack_Tropentarn_Med";
-	} else {
-	this addBackpack "ARC_GER_Backpack_Flecktarn_Med";
-	};
-	for "_i" from 1 to 80 do {this addItemToBackpack "AGM_Bandage";};
-	for "_i" from 1 to 20 do {this addItemToBackpack "AGM_Morphine";};
-	for "_i" from 1 to 19 do {this addItemToBackpack "AGM_Epipen";};
-	for "_i" from 1 to 2 do {this addItemToBackpack "AGM_Bloodbag";};
-	if (TROPENTARN) then {
-	this addHeadgear "ARC_GER_Tropentarn_Helmet_simple";
-	} else {
-	this addHeadgear "ARC_GER_Flecktarn_Helmet_simple";
-	};
-
-	comment "Add weapons";
-	this addWeapon "hlc_smg_mp5sd6";
-	this addPrimaryWeaponItem "optic_ACO_grn_smg";
-	this addWeapon "hgun_Pistol_heavy_01_F";
-
-	comment "Add items";
-	this linkItem "ItemMap";
-	this linkItem "ItemCompass";
-	this linkItem "AGM_Altimeter";
-	this linkItem "ItemGPS";
-	this linkItem "NVGoggles_OPFOR";
-	this linkItem "tf_anprc152";
-
-	player setVariable ["dontHaveLoadout",false];
-
-};
-
 
 blufor_MG_M60 = {
 
@@ -346,12 +266,9 @@ blufor_MG_M60 = {
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
 
-	player setVariable ["dontHaveLoadout",false];
+	
 
-};
-
-
-blufor_MM_M14 = {
+};blufor_MM_M14 = {
 
 	this = _this select 0;
 
@@ -409,12 +326,9 @@ blufor_MM_M14 = {
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
 
-	player setVariable ["dontHaveLoadout",false];
+	
 
-};
-
-
-blufor_SQF_G3 = {
+};blufor_SQF_G3 = {
 
 	this = _this select 0;
 
@@ -484,12 +398,9 @@ blufor_SQF_G3 = {
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
 
-	player setVariable ["dontHaveLoadout",false];
+	
 
-};
-
-
-blufor_SQL_AR15 = {
+};blufor_SQL_AR15 = {
 
 	this = _this select 0;
 
@@ -556,8 +467,6 @@ blufor_SQL_AR15 = {
 	this linkItem "NVGoggles_OPFOR";
 	this linkItem "tf_anprc152";
 
-	player setVariable ["dontHaveLoadout",false];
+	
 
 };
-
-loadouts_processed = true;

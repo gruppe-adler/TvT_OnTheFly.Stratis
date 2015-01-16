@@ -1,6 +1,5 @@
 waitUntil { !isNull player };
       if (local player) then {
-        loadouts_processed = false;
         waitUntil { time > 1 };
 
         
@@ -12,7 +11,6 @@ waitUntil { !isNull player };
                default {["ERROR: player is neither OPFOR nor BLUFOR?!",typeOf player] call BIS_fnc_logFormat;};
               };
     
-            waitUntil {loadouts_processed};
             
             ["loadouts processed for player %1",typeOf player] call BIS_fnc_logFormat;
             
@@ -32,7 +30,7 @@ waitUntil { !isNull player };
             case "B_Soldier_GL_F": {[player] call blufor_G3_1;};
 
             case "B_medic_F": {[player] call blufor_Medic_MP5A4;};
-            case "B_recon_medic_F": {[player] call blufor_Medic_MP5SD;};
+            case "B_recon_medic_F": {[player] call blufor_Medic_MP5A4;};
             case "B_G_medic_F": {[player] call blufor_Medic_MP5A4;};
 
             case "B_soldier_AAR_F": {[player] call blufor_MG_M60;};
