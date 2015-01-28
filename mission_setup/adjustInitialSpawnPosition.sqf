@@ -95,7 +95,7 @@ if ((isDedicated) || (isServer)) then {
 	vehiclePosition_blufor = alternativeSpawnsOutsideMap select 0;
 	vehiclePosition_opfor = alternativeSpawnsOutsideMap select 1;
 	weaponCachePosition_opfor = alternativeSpawnsOutsideMap select 1;
-	else {
+	} else {
 	vehiclePosition_blufor = vehiclePositionsForCurrentWorld select 0;
 	vehiclePosition_opfor = vehiclePositionsForCurrentWorld select 1;
 	weaponCachePosition_opfor = vehiclePositionsForCurrentWorld select 1;
