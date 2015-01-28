@@ -11,6 +11,8 @@ if (WINCONDITIONOPFOR || WINCONDITIONBLUFOR || BLUFOR_CAPTURED || BLUFOR_SURREND
 	
 	_pos = getPos whiteboard;
 	[player,_pos] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
+
+	[player, true] call TFAR_fnc_forceSpectator;
 	removeAllWeapons player;
 	[_unit] joinSilent (createGroup civilian);
 	cutText ["","BLACK IN"];

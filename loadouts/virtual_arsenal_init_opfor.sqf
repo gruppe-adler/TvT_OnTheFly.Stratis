@@ -3,50 +3,34 @@ _crate = _this select 0;
 
 clearWeaponCargoGlobal _crate; clearItemCargoGlobal _crate; clearMagazineCargoGlobal _crate; clearBackpackCargo _crate; 
 
-["AmmoboxInit",[_crate,false,{true}]] spawn BIS_fnc_arsenal; 
-// 1 all weapons, 2 condition for action
+removeAllActions _crate; //funzt nicht mit Inventar AddAction
+
+
 
 // exit script when sma and hlc is off
 if !(addOnsSMAandHLC) exitWith {
-	
-	_hasAction = _crate getVariable ["ArsenalPresent", false];
-	removeAllActions _crate;
+     
+    
+	   _crate addAction ['<t color=''#45B6EA''>Ammo</t>',
+	{
+	_box = _this select 0;
+	_unit = _this select 1;
+	["Open",[nil,_box]] call bis_fnc_arsenal; 
+	}];
 
-	if (!_hasAction) then {
-		
-		_crate addAction ["<t color='#45B6EA'>" + localize "str_GRAD_openSupplyBox",
-		{
-			_box = _this select 0;
-			_unit = _this select 1;
-			
-			["Open",[nil,_box]] call bis_fnc_arsenal;
-			
-			
-		},[],	1000, true, false,	"", "_this distance _target < 3"];
-		
-		
-
-		_crate setVariable ["ArsenalPresent", true, true];
-	};
 };
 
-
 _hasAction = _crate getVariable ["ArsenalPresent", false];
-removeAllActions _crate;
+
 
 if (!_hasAction) then {
-	
-	_crate addAction ["<t color='#45B6EA'>" + localize "str_GRAD_openSupplyBox",
-		{
-			_box = _this select 0;
-			_unit = _this select 1;
-			
-			["Open",[nil,_box]] call bis_fnc_arsenal;
-			
-			
-		},[],	1000, true, false,	"", "_this distance _target < 3"];
-
-	_crate setVariable ["ArsenalPresent", true, true];
+    
+	   _crate addAction ['<t color=''#45B6EA''>Ammo</t>',
+	{
+	_box = _this select 0;
+	_unit = _this select 1;
+	["Open",[nil,_box]] call bis_fnc_arsenal; 
+	}];
 };
 
 
