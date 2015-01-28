@@ -3,7 +3,8 @@ _crate = _this select 0;
 
 clearWeaponCargoGlobal _crate; clearItemCargoGlobal _crate; clearMagazineCargoGlobal _crate; clearBackpackCargo _crate; 
 
-["AmmoboxInit",[_crate,false,{false}]] spawn BIS_fnc_arsenal;
+["AmmoboxInit",[_crate,false,{true}]] spawn BIS_fnc_arsenal; 
+// 1 all weapons, 2 condition for action
 
 // exit script when sma and hlc is off
 if !(addOnsSMAandHLC) exitWith {
