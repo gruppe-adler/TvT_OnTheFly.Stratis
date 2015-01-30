@@ -132,6 +132,7 @@ if ((isServer) || (isDedicated)) then {
 [arsenal_opfor] execVM "loadouts\virtual_arsenal_init_opfor.sqf";
 if !(isDedicated) then { 
 	[] execVM "mission_setup\helpBriefing.sqf";
+	[] execVM "mission_setup\surrenderAction.sqf";
 	["Preload"] call BIS_fnc_arsenal;
 
 	
