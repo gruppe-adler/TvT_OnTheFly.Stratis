@@ -19,20 +19,23 @@ agm_surrender_action =
 
 
 GRAD_fnc_surrender = {
-	player switchMove "AmovPercMstpSrasWrflDnon_AwopPercMstpSoptWbinDnon";
-	sleep 0.85;
+	//player switchMove "AmovPercMstpSrasWrflDnon_AmovPercMstpSnonWnonDnon";
+	player action ["SwitchWeapon", player, player, 100];
+	sleep 2.2;
 	player switchMove "AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon";
-	sleep 0.95;
+	sleep 1;
 	player switchMove "AmovPercMstpSsurWnonDnon";
+	
 	player_surrendered = true;
 };
 
 GRAD_fnc_surrender_cancel = {
 	player switchMove "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
 	sleep 0.95;
-	player switchMove "AmovPercMstpSnonWnonDnon_AmovPercMstpSrasWrflDnon";
+	player action ["SwitchWeapon", player, player, 0];
 	sleep 2.3;
 	player switchMove "";
+
 	player_surrendered = false;
 };
 
