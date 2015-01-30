@@ -25,8 +25,10 @@ GRAD_fnc_surrender = {
 	player switchMove "AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon";
 	sleep 1;
 	player switchMove "AmovPercMstpSsurWnonDnon";
-	
 	player_surrendered = true;
+	
+};
+	
 };
 
 GRAD_fnc_surrender_cancel = {
@@ -35,42 +37,5 @@ GRAD_fnc_surrender_cancel = {
 	player action ["SwitchWeapon", player, player, 0];
 	sleep 2.3;
 	player switchMove "";
-
 	player_surrendered = false;
 };
-
-
-/*
-surrenderAction = player addAction ["Surrender", 
-	{
-	player switchMove "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
-	sleep 0.95;
-	player switchMove "AmovPercMstpSnonWnonDnon_AmovPercMstpSrasWrflDnon";
-	sleep 2.3;
-	player switchMove "";
-	player_surrendered = false;
-	},
-	_Args,
-	1000,
-	false,
-	true,
-	"",
-	"!player_surrendered"
-];
-
-abortSurrender = player addAction ["End Surrender", 
-		{
-		player switchMove "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
-		sleep 0.95;
-		player switchMove "AmovPercMstpSnonWnonDnon_AmovPercMstpSrasWrflDnon";
-		sleep 2.3;
-		player switchMove "";
-		player_surrendered = false;
-		},
-		_Args,
-		1000,
-		false,
-		true,
-		"",
-		"player_surrendered"
-];*/
