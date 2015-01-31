@@ -26,7 +26,6 @@ GRAD_fnc_surrender = {
 	sleep 1;
 	player switchMove "AmovPercMstpSsurWnonDnon";
 	player_surrendered = true;
-	playerPos = getPos player;
 };
 
 
