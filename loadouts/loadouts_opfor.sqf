@@ -158,18 +158,21 @@ opfor_pkm = {
 	} else {
 		[[{}, this forceAddUniform (randUniformEastern call BIS_fnc_selectRandom)], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	};
-	for "_i" from 1 to 15 do {this addItemToUniform "AGM_Bandage";};
-	for "_i" from 1 to 2 do {this addItemToUniform "16Rnd_9x21_Mag";};
+	this addItemToUniform "hlc_45Rnd_762x39_m_rpk";
 	this addVest "V_TacVest_khk";
-	for "_i" from 1 to 6 do {this addItemToVest "AGM_HandFlare_Red";};
+	for "_i" from 1 to 4 do {this addItemToVest "AGM_Morphine";};
+	for "_i" from 1 to 8 do {this addItemToVest "AGM_Bandage";};
+	this addItemToVest "AGM_EarBuds";
+	for "_i" from 1 to 2 do {this addItemToVest "AGM_CableTie";};
 	for "_i" from 1 to 2 do {this addItemToVest "MiniGrenade";};
-	for "_i" from 1 to 3 do {this addItemToVest "SmokeShellRed";};
-	this addItemToVest "CAF_100Rnd_762x54_PKM";
+	for "_i" from 1 to 2 do {this addItemToVest "9Rnd_45ACP_Mag";};
+	for "_i" from 1 to 4 do {this addItemToVest "SmokeShellRed";};
+	this addItemToVest "hlc_75Rnd_762x39_m_rpk";
 	this addBackpack "B_Carryall_cbr";
-	for "_i" from 1 to 5 do {this addItemToBackpack "AGM_Bandage";};
-	this addItemToBackpack "AGM_EarBuds";
-	this addItemToBackpack "AGM_CableTie";
-	for "_i" from 1 to 6 do {this addItemToBackpack "CAF_100Rnd_762x54_PKM";};
+	for "_i" from 1 to 11 do {this addItemToBackpack "AGM_Bandage";};
+	for "_i" from 1 to 5 do {this addItemToBackpack "AGM_CableTie";};
+	for "_i" from 1 to 2 do {this addItemToBackpack "AGM_Morphine";};
+	for "_i" from 1 to 9 do {this addItemToBackpack "hlc_75Rnd_762x39_m_rpk";};
 	if (TROPENTARN) then {
 		this addHeadgear (randHeadGearTaliban call BIS_fnc_selectRandom);
 	} else {
@@ -177,8 +180,9 @@ opfor_pkm = {
 	};
 
 	comment "Add weapons";
-	this addWeapon "caf_pkm";
-	this addWeapon "hgun_Rook40_F";
+	this addWeapon "hlc_rifle_rpk";
+	this addWeapon "hgun_ACPC2_F";
+	this addWeapon "Binocular";
 
 	comment "Add items";
 	this linkItem "ItemMap";
