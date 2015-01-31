@@ -11,13 +11,11 @@ while{count units _group > 0} do
 	local_recording = local_recording + [1];
 	_oldveh = vehicle _unit;
 	_pos = getpos _unit;
-	waitUntil{_unit distance _pos > 50};
 	_newveh = vehicle _unit;
-	if(!alive _unit) then {deletevehicle _unit; _unit = leader _group;};
-	_random = round(random 100000);
-	_marker = createMarker [format["movement_%1_%2",_random,_side],getpos _unit];
-	AUSMD_markers set [count AUSMD_markers,_marker];
-	_marker setMarkerSize [0.5,0.5];
+	if(!alive _unit) then {deletevehicle _unit;};
+
+	local_recording = local_recording + [];
+	
 	if(_side == west) then 
 	{
 		_marker setMarkerColor "ColorBlue";
@@ -47,3 +45,11 @@ while{count units _group > 0} do
 	_marker setMarkerAlpha 0;
 	sleep 2;
 };
+
+
+auswertung:
+_random = round(random 100000);
+	_marker = createMarker [format["movement_%1_%2",_random,_side],getpos _unit];
+	AUSMD_markers set [count AUSMD_markers,_marker];
+	_marker setMarkerSize [0.5,0.5];
+	
