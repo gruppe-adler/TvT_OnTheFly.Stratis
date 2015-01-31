@@ -109,18 +109,12 @@ if ((isServer) || (isDedicated)) then {
 		while {true} do {
 			if ((OPFOR_TELEPORTED) && (BLUFOR_TELEPORTED)) then {
 
-				if (getPos respawn_helper select 0 < -900) then {
-					sector_trigger setPos (getPos opfor_vehicle);
-					["sector_moduleWEST", getPos opfor_vehicle] call BIS_fnc_taskSetDestination;
-					sleep 1;
-
-				} else 
-				{
+				
 					_pos =  [(getPos respawn_helper select 0), (getPos respawn_helper select 1), 0];
 					sector_trigger setPos _pos;
 					["sector_moduleWEST", _pos] call BIS_fnc_taskSetDestination;
 					sleep 1;
-				};
+				
 			};
 		};
 	};
