@@ -26,6 +26,22 @@ GRAD_fnc_surrender = {
 	sleep 1;
 	player switchMove "AmovPercMstpSsurWnonDnon";
 	player_surrendered = true;
+	playerPos = getPos player;
+		_disableWASD = (finddisplay 46) displayaddeventhandler ["keydown","
+		_key = _this select 1;
+		_ctrl = _this select 3;
+
+		
+
+		if (_key == 17 || _key == 30 || _key == 31 || _key == 32) then {
+			player enableSimulation false;
+		};
+		"];
+		_disableMovement = (finddisplay 46) displayaddeventhandler ["keyup","
+		_key = _this select 1;
+		_ctrl = _this select 3;
+			player enableSimulation true;
+		"];
 	
 };
 
@@ -37,4 +53,6 @@ GRAD_fnc_surrender_cancel = {
 	sleep 2.3;
 	player switchMove "";
 	player_surrendered = false;
+	(finddisplay 46) displayremoveeventhandler ["keydown",_disableWASD];
+	(finddisplay 46) displayremoveeventhandler ["keyup",_disableMovement];
 };
