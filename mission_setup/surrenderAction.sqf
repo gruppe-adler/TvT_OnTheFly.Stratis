@@ -28,8 +28,7 @@ GRAD_fnc_surrender = {
 	player_surrendered = true;
 	
 };
-	
-};
+
 
 GRAD_fnc_surrender_cancel = {
 	player switchMove "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
