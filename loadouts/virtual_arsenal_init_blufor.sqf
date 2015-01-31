@@ -11,7 +11,7 @@ removeAllActions _crate; //funzt nicht mit Inventar AddAction
 if !(addOnsSMAandHLC) exitWith {
      
     
-	   _crate addAction ['<t color=''#45B6EA''>Ammo</t>',
+	   _crate addAction ['<t color=''#45B6EA''>' + (localize "str_GRAD_openSupplyBox") + '</t>',
 	{
 	_box = _this select 0;
 	_unit = _this select 1;
@@ -25,7 +25,7 @@ _hasAction = _crate getVariable ["ArsenalPresent", false];
 
 if (!_hasAction) then {
     
-	   _crate addAction ['<t color=''#45B6EA''>Ammo</t>',
+	   _crate addAction ['<t color=''#45B6EA''>' + (localize "str_GRAD_openSupplyBox") + '</t>',
 	{
 	_box = _this select 0;
 	_unit = _this select 1;
