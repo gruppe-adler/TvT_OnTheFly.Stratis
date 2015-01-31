@@ -12,9 +12,9 @@ while{count units _group > 0} do
 	_oldveh = vehicle _unit;
 	_pos = getpos _unit;
 	_newveh = vehicle _unit;
-	if(!alive _unit) then {deletevehicle _unit;};
+	//if(!alive _unit) then {deletevehicle _unit;};
 
-	local_recording = local_recording + [];
+	//local_recording = local_recording + [];
 	
 	if(_side == west) then 
 	{
@@ -29,6 +29,7 @@ while{count units _group > 0} do
 		_marker setMarkerColor "ColorRed";
 	};
 	_marker setMarkerShape "ICON";
+	
 	if(vehicle _unit == _unit) then 
 	{
 		_marker setMarkerType "mil_arrow";
@@ -46,10 +47,10 @@ while{count units _group > 0} do
 	sleep 2;
 };
 
-
+/*
 auswertung:
 _random = round(random 100000);
 	_marker = createMarker [format["movement_%1_%2",_random,_side],getpos _unit];
 	AUSMD_markers set [count AUSMD_markers,_marker];
 	_marker setMarkerSize [0.5,0.5];
-	
+*/	

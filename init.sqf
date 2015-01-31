@@ -133,6 +133,7 @@ if ((isServer) || (isDedicated)) then {
 if !(isDedicated) then { 
 	[] execVM "mission_setup\helpBriefing.sqf";
 	[] execVM "mission_setup\surrenderAction.sqf";
+	switchMoveEverywhere = compileFinal "_this select 0 switchMove (_this select 1);";
 	["Preload"] call BIS_fnc_arsenal;
 
 	
@@ -163,4 +164,4 @@ AUSMD_markers = [];
 {_x addeventHandler ["Hit",{nul = [_this select 1,_this select 0] execVM "after_action_reporter\combat_engaged.sqf";}]} foreach allUnits;
 
 {if(leader (group _x) == _x) then {nul = [_x] execVM "after_action_reporter\movement.sqf";};} foreach allUnits;
-{nul = [_x] execVM "after_action_reporter_pimped\movement.sqf";} foreach allUnits;
+//{nul = [_x] execVM "after_action_reporter_pimped\movement.sqf";} foreach allUnits;
