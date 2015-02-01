@@ -1,6 +1,6 @@
 local_recording_length = count local_recording;
 local_recording_counter = 0;
-local_recording_playback_speed = 2;
+local_recording_playback_speed = 0.1;
 current_markers = [];
 
 openMap [true,false];
@@ -9,9 +9,9 @@ while {true} do
 {
 	//diag_log format ["%1", (local_recording select 0) select 0];
 	current_recording_length = count ((local_recording) select local_recording_counter);
-	diag_log format ["%1 current, %2 target", local_recording_counter,local_recording_length];
+	//diag_log format ["%1 current, %2 target", local_recording_counter,local_recording_length];
 
-	hintSilent format ["%1 current, %2 target", local_recording_counter,local_recording_length];
+	//hintSilent format ["%1 current, %2 target", local_recording_counter,local_recording_length];
 
 	
 	for [{_i=0}, {_i<current_recording_length}, {_i=_i+1}] do
@@ -23,9 +23,7 @@ while {true} do
 		_unit = (((local_recording) select local_recording_counter) select _i) select 4;
 
 	
-		if (_unit == opfor_teamlead) then {
-		diag_log format ["%1 position, %2 _unit", _position,_unit];
-		};
+		
 
 		//_marker = createMarkerLocal [format["movement_%1_%2",_random,_side],_position];
 		_marker = createMarkerLocal [format["movement_%1",_unit],_position];
@@ -57,5 +55,5 @@ while {true} do
 	if (local_recording_counter == local_recording_length) exitWith {};
 	sleep local_recording_playback_speed;
 	{deleteMarkerLocal _x} forEach current_markers;
-	diag_log format ["CURRENT VALUES %1, counter is %2", (local_recording) select local_recording_counter, local_recording_counter];
+	//diag_log format ["CURRENT VALUES %1, counter is %2", (local_recording) select local_recording_counter, local_recording_counter];
 };

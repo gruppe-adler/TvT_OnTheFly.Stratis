@@ -87,7 +87,7 @@ openMap [false,false];
 		
 		BLUFOR_TELEPORTED = TRUE;
 		publicVariable "BLUFOR_TELEPORTED";
-
+		[[[],"after_action_reporter_pimped\movement.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 		[[[spawnpoint_mapclick],"mission_setup\blufor_spawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 	};
 };
