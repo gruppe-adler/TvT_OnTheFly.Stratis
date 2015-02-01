@@ -1,3 +1,5 @@
+// original script by austin_medic, pimped by nomisum
+
 {
 	_x setMarkerAlpha 1;
 } foreach AUSMD_markers;

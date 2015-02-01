@@ -5,7 +5,7 @@ if (OPFOR_TELEPORTED) then {
 addOnsSMAandHLC = false;
 
 // SMA + HLC support off = false
-if ((paramsArray select 6) == 0) then {
+if ((paramsArray select 7) == 0) then {
 	addOnsSMAandHLC = true;
 } else {
 	addOnsSMAandHLC = false;
@@ -29,7 +29,7 @@ if (!isMultiplayer) then {
 };
 
 if (isServer) then {
-	setTimeMultiplier (paramsArray select 5);
+	setTimeMultiplier (paramsArray select 6);
 
 	BLUFOR_CAPTURED = false;
 	publicVariable "BLUFOR_CAPTURED";
@@ -52,20 +52,20 @@ if (isServer) then {
 
 if (!isServer) then {
 // restriction of vehicles for blufor
-if ((paramsArray select 1) == 0) then {
+if ((paramsArray select 2) == 0) then {
 	RESTRICTED_VEHICLES = true;
 };
 
 // tropentarn or flecktarn?
-if ((paramsArray select 2) == 1) then {
+if ((paramsArray select 3) == 1) then {
 	TROPENTARN = true;
 };
 };
 
 
 
-blufor_spawnDistanceMin = (paramsArray select 3);
-blufor_spawnDistanceMax = (paramsArray select 4);
+blufor_spawnDistanceMin = (paramsArray select 4);
+blufor_spawnDistanceMax = (paramsArray select 5);
 
 // respawn helper object, will be moved to objective location in teleport.sqf
 opfor_teleport = opfor_teamlead addAction["<t color=""#93E352"">" + localize "str_GRAD_choose_spawn_location",{[[[false], "mission_setup\teleport.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && !OPFOR_TELEPORTED"];
@@ -127,6 +127,7 @@ if ((isServer) || (isDedicated)) then {
 if !(isDedicated) then { 
 	[] execVM "mission_setup\helpBriefing.sqf";
 	[] execVM "mission_setup\surrenderAction.sqf";
+	[] execVM "after_action_reporter_pimped\movement.sqf";
 	switchMoveEverywhere = compileFinal "_this select 0 switchMove (_this select 1);";
 	["Preload"] call BIS_fnc_arsenal;
 
@@ -159,3 +160,5 @@ AUSMD_markers = [];
 
 {if(leader (group _x) == _x) then {nul = [_x] execVM "after_action_reporter\movement.sqf";};} foreach allUnits;
 //{nul = [_x] execVM "after_action_reporter_pimped\movement.sqf";} foreach allUnits;
+
+[(paramsArray select 1)] execVM "ga_weather\ga_start_weather.sqf";
