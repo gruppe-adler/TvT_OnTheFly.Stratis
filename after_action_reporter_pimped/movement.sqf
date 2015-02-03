@@ -2,6 +2,7 @@
 local_recording = [];
 single_current_values = [];
 all_current_values = [];
+recording_speed = 1;
 
 //hint "movement initialized";
 while{!WINCONDITIONBLUFOR && !WINCONDITIONOPFOR} do
@@ -10,7 +11,7 @@ while{!WINCONDITIONBLUFOR && !WINCONDITIONOPFOR} do
 	{	_unit = _x;
 		_oldveh = vehicle _unit;
 		_pos = getpos _unit;
-		_kindof = "mil_arrow";
+		_kindof = "b_motor_inf";
 		_side = side (group _unit);
 		
 		_dir = (getDir _unit);
@@ -20,7 +21,11 @@ while{!WINCONDITIONBLUFOR && !WINCONDITIONOPFOR} do
 		
 		if(vehicle _unit == _unit) then 
 		{
-			_kindof =  "mil_dot";
+			_kindof =  "mil_triangle";
+		};
+		if(vehicle _unit isKindOf "Helicopter") then 
+		{
+			_kindof =  "b_air";
 		};
 		/*
 		_newveh = vehicle _unit;
@@ -36,7 +41,5 @@ while{!WINCONDITIONBLUFOR && !WINCONDITIONOPFOR} do
 	} forEach playableUnits;
 	local_recording = local_recording + [all_current_values];
 	all_current_values = [];
-	sleep 2;
-	
-
+	sleep recording_speed;
 };

@@ -869,7 +869,7 @@ class Mission
 			leader=1;
 			skill=0.5;
 			text="whiteboard";
-			init="this addAction[""Close Mission"", ""objectives\endmission.sqf"", nil, 6, True, True, """", ""!END_MISSION_TRIGGERED && MISSION_COMPLETED""];this addAction[""Show Replay"", ""after_action_reporter_pimped\reveal.sqf"", nil, 6, True, True, """", ""!END_MISSION_TRIGGERED && MISSION_COMPLETED""];";
+			init="this addAction[""Close Mission"", ""objectives\endmission.sqf"", nil, 6, True, True, """", ""!END_MISSION_TRIGGERED && MISSION_COMPLETED""];this addAction[""Show Replay"", ""after_action_reporter_pimped\reveal.sqf"", nil, 6, True, True, """", ""!END_MISSION_TRIGGERED && MISSION_COMPLETED && !did_replay""];";
 		};
 		class Item2
 		{

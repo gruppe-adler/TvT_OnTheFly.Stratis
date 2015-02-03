@@ -14,6 +14,7 @@ if ((paramsArray select 7) == 0) then {
 
 // global options
 TROPENTARN = false;
+did_replay = false;
 
 // spawn teleports done?
 OPFOR_TELEPORTED = false;

@@ -4,6 +4,7 @@ local_recording_playback_speed = 0.1;
 current_markers = [];
 
 openMap [true,false];
+did_replay = true;
 
 while {true} do 
 {
