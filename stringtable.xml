@@ -65,9 +65,9 @@
                 <German>Du bist zu spaet und musst zuschauen!</German>
             </Key>
             <Key ID="str_GRAD_spawnTooClose1">
-            	<Original>Sorry, Spawn too close</Original>
-                <English>Sorry, Spawn too close</English>
-                <German>Sorry, Spawnpunkt zu dicht</German>
+            	<Original>Sorry, Spawn too close </Original>
+                <English>Sorry, Spawn too close </English>
+                <German>Sorry, Spawnpunkt zu dicht </German>
             </Key>
              <Key ID="str_GRAD_spawnTooClose2">
             	<Original>Must be at least</Original>
@@ -152,6 +152,27 @@
                 <English>Declare Mission failed for BLUFOR</English>
                 <German>Mission für BLUFOR aufgeben</German>
             </Key>
+            <Key ID="str_GRAD_hint_playback_speed_hint">
+                <Original>Replay Speed: </Original>
+                <English>Replay Speed: </English>
+                <German>Replay Geschwindigkeit: </German>
+            </Key>
+             <Key ID="str_GRAD_hint_replay_started">
+                <Original>Replay started</Original>
+                <English>Replay started</English>
+                <German>Replay gestartet</German>
+            </Key>
+             <Key ID="str_GRAD_hint_replay_timestamp">
+                <Original>Ingame time: </Original>
+                <English>Ingame time: </English>
+                <German>Zeit im Spiel: </German>
+            </Key>
+             <Key ID="str_GRAD_hint_replay_finished">
+                <Original>Replay finished</Original>
+                <English>Replay finished</English>
+                <German>Replay beendet</German>
+            </Key>
+            
         </Container>
          <Container name="spectator">
             <Key ID="str_GRAD_hint_endspectator">

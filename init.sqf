@@ -136,7 +136,9 @@ if !(isDedicated) then {
 	if (addOnsSMAandHLC) then {
 		[] execVM "loadouts\_client.sqf";
 	};
+
 	
+
 
 
 	// Intro Gruppe Adler   

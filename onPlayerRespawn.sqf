@@ -25,7 +25,8 @@ if (WINCONDITIONOPFOR || WINCONDITIONBLUFOR || BLUFOR_CAPTURED || BLUFOR_SURREND
 	if (WINCONDITIONBLUFOR || BLUFOR_CAPTURED) then {
  	["<img size= '6' shadow='false' image='pic\gruppe-adler.paa'/><br/><t size='.7' color='#FFFFFF'>" + localize "str_GRAD_thankyouforplaying_blufor" + "</t><br /><t size='.5'>" + localize "str_GRAD_thankyouforplaying2" + "<br />" + localize "str_GRAD_thankyouforplaying3" + "</t>",0,0,3,2] spawn BIS_fnc_dynamicText;
       sleep 3;
-	};	
+	};
+	[] execVM "after_action_reporter_pimped\reveal.sqf";
 };
 
 [player, true] call TFAR_fnc_forceSpectator;
@@ -46,10 +47,3 @@ sleep 0.1;
 _unit moveInCargo spectator_vehicle;
 // start spec cam
 [_unit] execVM "spectator\callSpectator.sqf";
-
-(findDisplay 46) displayAddEventHandler ["MouseButtonDown", "if (_this select 1 == 1) then {call mouseclickhint};"];
-
-mouseclickhint = {
-	
-	[localize 'str_GRAD_hint_endspectator'] call AGM_Core_fnc_displayTextStructured;
-};

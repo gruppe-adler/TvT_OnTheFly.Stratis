@@ -1,19 +1,21 @@
+spawnpoint_mapclick = [];
+
 if (player == opfor_teamlead && !OPFOR_TELEPORTED) then {
 [localize "str_GRAD_choose_spawn_location"] call AGM_Core_fnc_displayTextStructured;
 openMap [true,false];
 
-onMapSingleClick "[_pos] call teleportOpforGroup; onMapSingleClick ''; true";
+onMapSingleClick "[_pos] call teleportGroup; onMapSingleClick ''; true";
 };
 
 if (player == blufor_teamlead && OPFOR_TELEPORTED) then {
 [localize "str_GRAD_choose_spawn_location"] call AGM_Core_fnc_displayTextStructured;
 openMap [true,false];
 
-onMapSingleClick "[_pos] call teleportOpforGroup; onMapSingleClick ''; true";
+onMapSingleClick "[_pos] call teleportGroup; onMapSingleClick ''; true";
 };
 
 
-teleportOpforGroup = {
+teleportGroup = {
 openMap [false,false];
 	spawnpoint_mapclick = _this select 0;
 
@@ -27,11 +29,6 @@ openMap [false,false];
 	if (player == opfor_teamlead && !OPFOR_TELEPORTED) then {
 
 		[[[east,spawnpoint_mapclick],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
-		
-		
-		openMap [false,false];
-		
-
 		
 		_opfor_marker = createMarker ["opfor_marker", spawnpoint_mapclick];
 		_opfor_marker setMarkerType "hd_objective";
@@ -51,7 +48,7 @@ openMap [false,false];
 		
 		[[[spawnpoint_mapclick],"mission_setup\respawn_helper.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 		
-		choose_vehicle_opfor = opfor_teamlead addAction["<t color=""#93E352"">" + localize "str_GRAD_choose_vehicle",{[[[spawnpoint_mapclick], "mission_setup\choose_opfor_vehicle.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
+		choose_vehicle_opfor = opfor_teamlead addAction["<t color=""#93E352"">" + localize "str_GRAD_choose_vehicle",{[[[choose_vehicle_opfor,spawnpoint_mapclick], "mission_setup\choose_vehicle.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
 	};
 
 	if (player == blufor_teamlead && OPFOR_TELEPORTED) then {
@@ -60,9 +57,9 @@ openMap [false,false];
 		// entfernung marker zu spawnpunkt zu klein oder groß?
 		// pos ist hier ein anderes pos als oben!
 		_distance = spawnpoint_mapclick distance (getMarkerPos "opfor_marker");
-		if (_distance < blufor_spawnDistanceMin) exitWith {hintSilent format [localize "str_GRAD_spawnTooClose1" + '(%1 m).' + localize "str_GRAD_spawnTooClose2" + '%2.', floor(_distance), blufor_spawnDistanceMin];
+		if (_distance < blufor_spawnDistanceMin) exitWith {hintSilent format [localize "str_GRAD_spawnTooClose1" + '(%1 m).' + localize "str_GRAD_spawnTooClose2" + ' %2.', floor(_distance), blufor_spawnDistanceMin];
 		player execVM "mission_setup\teleport.sqf";};
-		if (_distance > blufor_spawnDistanceMax) exitWith {hintSilent format [localize "str_GRAD_spawnTooFar1" + '(%1 m).' + localize "str_GRAD_spawnTooFar2" + '%2.', floor(_distance), blufor_spawnDistanceMax];
+		if (_distance > blufor_spawnDistanceMax) exitWith {hintSilent format [localize "str_GRAD_spawnTooFar1" + '(%1 m).' + localize "str_GRAD_spawnTooFar2" + ' %2.', floor(_distance), blufor_spawnDistanceMax];
 		player execVM "mission_setup\teleport.sqf";
 		};
 
@@ -83,7 +80,7 @@ openMap [false,false];
 		_baseBuilding = "Land_Cargo_House_V1_F" createVehicle _spawn_area;
 		_baseBuilding addAction["<t color=""#ff0000"">" + localize "str_GRAD_declareFailedBlufor",{BLUFOR_SURRENDERED = true; publicVariable "BLUFOR_SURRENDERED";}, _Args, 1, false, false, "","side _this == west && !BLUFOR_SURRENDERED"];
 		
-		choose_vehicle_blufor = blufor_teamlead addAction["<t color=""#93E352"">" + localize "str_GRAD_choose_vehicle",{[[[spawnpoint_mapclick], "mission_setup\choose_blufor_vehicle.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
+		choose_vehicle_blufor = blufor_teamlead addAction["<t color=""#93E352"">" + localize "str_GRAD_choose_vehicle",{[[[choose_vehicle_blufor,spawnpoint_mapclick], "mission_setup\choose_vehicle.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
 		
 		BLUFOR_TELEPORTED = TRUE;
 		publicVariable "BLUFOR_TELEPORTED";
