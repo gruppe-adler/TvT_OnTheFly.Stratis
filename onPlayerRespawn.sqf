@@ -26,7 +26,21 @@ if (WINCONDITIONOPFOR || WINCONDITIONBLUFOR || BLUFOR_CAPTURED || BLUFOR_SURREND
  	["<img size= '6' shadow='false' image='pic\gruppe-adler.paa'/><br/><t size='.7' color='#FFFFFF'>" + localize "str_GRAD_thankyouforplaying_blufor" + "</t><br /><t size='.5'>" + localize "str_GRAD_thankyouforplaying2" + "<br />" + localize "str_GRAD_thankyouforplaying3" + "</t>",0,0,3,2] spawn BIS_fnc_dynamicText;
       sleep 3;
 	};
+	
+	if (!did_replay) then {
+	hintsilent "Replay loading.";
+	sleep 0.2;
+	hintsilent "Replay loading..";
+	sleep 0.2;
+	hintsilent "Replay loading...";
+	sleep 0.2;
+	hintsilent "Replay loading....";
+	sleep 0.2;
+	hintsilent "Replay loading.....";
+	sleep 0.2;
+	hintsilent "Replay loaded.";
 	[] execVM "after_action_reporter_pimped\reveal.sqf";
+	};
 };
 
 [player, true] call TFAR_fnc_forceSpectator;

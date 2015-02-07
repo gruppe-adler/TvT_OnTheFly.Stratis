@@ -1,3 +1,5 @@
+did_replay = true;
+
 local_recording_length = count local_recording;
 local_recording_counter = 0;
 local_recording_playback_speed = 0.1;
@@ -16,7 +18,7 @@ playback_speeds = [ [0.04,"25x"],
 
 openMap [true,false];
 [localize 'str_GRAD_hint_replay_started'] call AGM_Core_fnc_displayTextStructured;
-did_replay = true;
+
 
 getDayTimeConverted = {
 	_getdaytime = _this select 0;
@@ -91,7 +93,7 @@ checkSpeedKey = {
 		{
 			case 199: {[-1] call playback_speed_hint;};
 			case 207: {[1] call playback_speed_hint;};
-			default {hintSilent "Some Other Key";}
+			default {}
 		};
 };
 replayKeyDown = (finddisplay 46) displayaddeventhandler ["keydown","
@@ -148,6 +150,7 @@ while {true} do
 	if (local_recording_counter == local_recording_length) exitWith {
 		[localize 'str_GRAD_hint_replay_finished'] call AGM_Core_fnc_displayTextStructured;
 	};
+	player removeEventHandler  ["keyDown", replayKeyDown];
 	sleep local_recording_playback_speed;
 	{deleteMarkerLocal _x} forEach current_markers;
 	//diag_log format ["CURRENT VALUES %1, counter is %2", (local_recording) select local_recording_counter, local_recording_counter];
