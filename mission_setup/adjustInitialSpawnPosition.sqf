@@ -10,6 +10,7 @@ private ['_islands', '_targetPositions', '_positionsForCurrentWorld', '_targetPo
 // Clafghan,
 // Desert,
 // Fatah,
+// Gorgona
 // Podagorsk,
 // Capraia,
 // Sarahni, 
@@ -32,6 +33,7 @@ islands = [
 	'clafghan',
 	'Desert_E',
 	'fata',
+	'Gorgona',
 	'FDF_Isle1_a',
 	'IsolaDiCapraia',
 	'Sara',
@@ -55,6 +57,7 @@ targetPositions = [
 	[ [15550,920], [15850, 370], false, 'clafghan'],
 	[ [1500, 50], [1900, 50], false, 'Desert_E'],
 	[ [7700, 1600], [8400, 2000], false, 'fata'],
+	[ [1300, 3100], [950, 1170], true, 'Gorgona'],
 	[ [7777, 4280], [9200, 4280], true, 'FDF_Isle1_a'],
 	[ [1240, 9450], [1240, 8450], true, 'IsolaDiCapraia'],
 	[ [18080, 18535], [18200, 18060], true, 'Sara'],

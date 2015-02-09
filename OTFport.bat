@@ -1,4 +1,4 @@
-@set var=_v164
+@set var=_v165
 
 pushd "%~dp0.."
 
@@ -25,6 +25,10 @@ del "./TvT_OnTheFly%var%.clafghan\OTFport.bat"
 xcopy /y /e /c "./TvT_OnTheFly.Stratis" "./TvT_OnTheFly%var%.fata\"
 del "./TvT_OnTheFly%var%.fata\.*"
 del "./TvT_OnTheFly%var%.fata\OTFport.bat"
+
+xcopy /y /e /c "./TvT_OnTheFly.Stratis" "./TvT_OnTheFly%var%.Gorgona\"
+del "./TvT_OnTheFly%var%.Gorgona\.*"
+del "./TvT_OnTheFly%var%.Gorgona\OTFport.bat"
 
 xcopy /y /e /c "./TvT_OnTheFly.Stratis" "./TvT_OnTheFly%var%.FDF_Isle1_a\"
 del "./TvT_OnTheFly%var%.FDF_Isle1_a\.*"
