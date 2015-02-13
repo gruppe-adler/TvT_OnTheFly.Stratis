@@ -125,21 +125,21 @@ while {true} do
 		if !(_kindof == "KIA") then {
 			_marker = createMarkerLocal [format["movement_%1",_unit],_position];
 			current_markers = current_markers + [_marker];
-			_marker setMarkerShape "ICON";
-			_marker setMarkerType _kindof;
-			_marker setMarkerPos _position;
-			_marker setMarkerDir _dir;
-			_marker setMarkerColor ([_side] call getSideMarkerColor);
+			_marker setMarkerShapeLocal "ICON";
+			_marker setMarkerTypeLocal _kindof;
+			_marker setMarkerPosLocal _position;
+			_marker setMarkerDirLocal _dir;
+			_marker setMarkerColorLocal ([_side] call getSideMarkerColor);
 		};
 		
 
 		if (_kindof == "KIA" && !(_unit in deadUnitMarkers)) then {
 			_marker_kia = createMarkerLocal [format["kia_%1",_unit],_position];
-			_marker_kia setMarkerShape "ICON";
-			_marker_kia setMarkerType _kindof;
-			_marker_kia setMarkerPos _position;
-			_marker_kia setMarkerDir _dir;
-			_marker_kia setMarkerColor ([_side] call getSideMarkerColor);
+			_marker_kia setMarkerShapeLocal "ICON";
+			_marker_kia setMarkerTypeLocal _kindof;
+			_marker_kia setMarkerPosLocal _position;
+			_marker_kia setMarkerDirLocal _dir;
+			_marker_kia setMarkerColorLocal ([_side] call getSideMarkerColor);
 			deadUnitMarkers = deadUnitMarkers + [_unit];
 		};
 		hintSilent format [localize "str_GRAD_hint_replay_timestamp" + " %1",_daytime];
