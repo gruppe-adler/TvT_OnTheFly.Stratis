@@ -68,16 +68,12 @@ _availableItems = [
 	"G_Aviator",
 	"G_Spectacles_Tinted",
 	"G_Spectacles",
-	"Mask_M40_OD",
-	"Mask_M50",
-	"Mask_M40",
-	"L_Shemagh_Red",
-	"NeckTight_Tan",
-	"LBG_Shemagh_Gry",
 	"G_Balaclava_blk",
 	"G_Balaclava_oli",
 	"G_Bandanna_tan",
-	"G_Bandanna_oli"
+	"G_Bandanna_oli",
+	"SMA_eotech552_3XUP",
+    "FHQ_acc_LLM01L"
 ];
 
 _availableVests = [
@@ -136,6 +132,8 @@ _availableWeapons = [
 	"hlc_rifle_aks74u",
 	"hlc_rifle_aek971",
 	"hgun_ACPC2_F",
+	"hlc_rifle_aku12",
+	"hlc_rifle_ak12",
 	"Binocular"
 ];
 
