@@ -58,7 +58,11 @@ _availableItems = [
     "optic_Holosight",
     "optic_ACO_grn",
     "optic_ACO_red",
-    "tf_anprc152"
+    "tf_anprc152",
+    "SMA_eotech552_3XDOWN",
+    "SMA_eotech552_3XDOWN_des",
+    "SMA_eotech552_3XDOWN_wdl",
+    "FHQ_acc_LLM01L"
 ];
 
 _availableVests = [

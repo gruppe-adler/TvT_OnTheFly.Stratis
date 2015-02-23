@@ -72,8 +72,10 @@ _availableItems = [
 	"G_Balaclava_oli",
 	"G_Bandanna_tan",
 	"G_Bandanna_oli",
-	"SMA_eotech552_3XUP",
-    "FHQ_acc_LLM01L"
+    "SMA_eotech552_3XDOWN",
+    "SMA_eotech552_3XDOWN_des",
+    "SMA_eotech552_3XDOWN_wdl",
+	"FHQ_acc_LLM01L"
 ];
 
 _availableVests = [
