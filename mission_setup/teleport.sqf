@@ -44,7 +44,7 @@ openMap [false,false];
 
 		// move task to new destination
 		sector_trigger setPos spawnpoint_mapclick;
-		["sector_moduleWEST", spawnpoint_mapclick] call BIS_fnc_taskSetDestination;
+		//["sector_moduleWEST", spawnpoint_mapclick] call BIS_fnc_taskSetDestination;
 		
 		[[[spawnpoint_mapclick],"mission_setup\respawn_helper.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 		

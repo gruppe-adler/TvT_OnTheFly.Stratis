@@ -113,7 +113,9 @@ if ((isServer) || (isDedicated)) then {
 				
 					_pos =  [(getPos respawn_helper select 0), (getPos respawn_helper select 1), 0];
 					sector_trigger setPos _pos;
-					["sector_moduleWEST", _pos] call BIS_fnc_taskSetDestination;
+					sector_module setPos _pos;
+					//["sector_moduleWEST",_pos] call BIS_fnc_taskSetDestination;
+
 					sleep 1;
 				
 			};

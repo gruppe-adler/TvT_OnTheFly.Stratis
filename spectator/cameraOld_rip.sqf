@@ -87,7 +87,7 @@ BIS_DEBUG_CAM_MARKER setmarkertextlocal "Your Spectator Cam";
 			if (side cursorTarget== East) then {
 			sideOfTarget = '<t color="#c80000">OPFOR</t>';
 			};
-			if (side cursorTarget== Civilian && !(name _x in SPECTATOR_LIST)) then {
+			if (side cursorTarget== Civilian && !(name cursorTarget in SPECTATOR_LIST)) then {
 			sideOfTarget = '<t color="#ffffff">Bewusstlos</t>';
 			};
 			text0 = format ["%1<br />%2", nameOfTarget, sideOfTarget];
