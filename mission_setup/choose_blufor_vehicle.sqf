@@ -1,6 +1,6 @@
 vehicle_position = _this select 0;
 
-player removeAction choose_vehicle_blufor; 
+removeAllActions blufor_teamlead;
 
 vehicle_classname_hemtt = "B_Truck_01_covered_F";
 vehicle_classname_littlebird = "B_Heli_Light_01_F";

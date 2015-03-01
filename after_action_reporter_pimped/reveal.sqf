@@ -2,10 +2,9 @@ did_replay = true;
 
 local_recording_length = count local_recording;
 local_recording_counter = 0;
-local_recording_playback_speed = 0.1;
 current_markers = [];
 deadUnitMarkers = [];
-playback_speed_x = 4;
+playback_speed_x = 0.5;
 playback_speeds = [ [0.04,"25x"],
 					[0.065,"15x"],
 					[0.1,"10x"],
@@ -17,7 +16,7 @@ playback_speeds = [ [0.04,"25x"],
 				];
 
 openMap [true,false];
-[localize 'str_GRAD_hint_replay_started'] call AGM_Core_fnc_displayTextStructured;
+[[[],"after_action_reporter_pimped\speedchange.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 
 
 getDayTimeConverted = {
@@ -53,6 +52,8 @@ playback_speed_hint = {
 	playback_speed_x = [playback_speed_x, playback_speeds] call checkArrayLength;
 	local_recording_playback_speed = (playback_speeds select playback_speed_x) select 0;
 	local_recording_playback_speed_text = (playback_speeds select playback_speed_x) select 1;
+	publicVariable "local_recording_playback_speed";
+	publicVariable "local_recording_playback_speed_text";
 
 	[localize 'str_GRAD_hint_playback_speed_hint' + local_recording_playback_speed_text] call AGM_Core_fnc_displayTextStructured;
 };

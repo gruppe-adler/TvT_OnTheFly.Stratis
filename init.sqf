@@ -23,6 +23,7 @@ WINCONDITIONOPFOR = false;
 WINCONDITIONBLUFOR = false;
 firstspawn = false;
 
+
 EDITOR_MODE = false; // check if test is in editor/singleplayer
 if (!isMultiplayer) then {
 	EDITOR_MODE = true;
@@ -46,6 +47,9 @@ if (isServer) then {
 	publicVariable "END_MISSION_TRIGGERED";
 	SPECTATOR_LIST = [];
 	publicVariable "SPECTATOR_LIST";
+	local_recording_playback_speed = 1;
+	publicVariable "local_recording_playback_speed";
+
 
 	
 

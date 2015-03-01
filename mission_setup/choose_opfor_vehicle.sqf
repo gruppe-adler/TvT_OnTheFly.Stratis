@@ -1,6 +1,6 @@
 vehicle_position = _this select 0;
 
-player removeAction choose_vehicle_opfor; 
+ removeAllActions opfor_teamlead;
 
 vehicle_classname_transport = "I_G_Van_01_transport_F";
 vehicle_classname_tactical = "I_G_Offroad_01_armed_F";
