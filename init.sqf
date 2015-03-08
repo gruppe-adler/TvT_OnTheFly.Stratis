@@ -47,11 +47,6 @@ if (isServer) then {
 	publicVariable "END_MISSION_TRIGGERED";
 	SPECTATOR_LIST = [];
 	publicVariable "SPECTATOR_LIST";
-	local_recording_playback_speed = 1;
-	publicVariable "local_recording_playback_speed";
-
-
-	
 
 };
 
@@ -170,3 +165,7 @@ if !(isDedicated) then {
 //{if(leader (group _x) == _x) then {nul = [_x] execVM "after_action_reporter\movement.sqf";};} foreach allUnits;
 
 [(paramsArray select 1)] execVM "ga_weather\ga_start_weather.sqf";
+if (isServer) then {
+waitUntil {OPFOR_TELEPORTED && BLUFOR_TELEPORTED};
+[] execVM "after_action_reporter_pimped\movement.sqf";
+};
