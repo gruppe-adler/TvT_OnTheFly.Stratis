@@ -1,3 +1,8 @@
+
+ENABLE_REPLAY = paramsArray select 7;
+IS_STREAMABLE = paramsArray select 8;
+
+
 if (OPFOR_TELEPORTED) then {
 	[player] execVM "onPlayerRespawn.sqf";
 	[localize "str_GRAD_jip"] call AGM_Core_fnc_displayTextStructured;
@@ -47,6 +52,12 @@ if (isServer) then {
 	publicVariable "END_MISSION_TRIGGERED";
 	SPECTATOR_LIST = [];
 	publicVariable "SPECTATOR_LIST";
+
+	SYSTEM_LOG_LEVEL = 0;
+	if (ENABLE_REPLAY == 1) then {
+	        execVM "export-missiondata.sqf";
+	};
+
 
 };
 

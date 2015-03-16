@@ -88,6 +88,22 @@ class Params
 		texts[] = {"YES","NO"};
 		default = 0;
 	};
+        class EnableReplay
+        {
+                title = "enable replay";
+                values[] = {0,1};
+                texts[] = {"no", "yes"};
+                default = 1;
+                isGlobal = 0;
+        };
+        class IsStreamable
+        {
+                title = "enable live stream (needs 'enable replay')";
+                values[] = {0,1};
+                texts[] = {"no","yes"};
+                default = 0;
+                isGlobal = 0;
+        };
 };
 
 class CfgSounds
