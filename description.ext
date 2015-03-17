@@ -8,7 +8,7 @@ respawn=3;
 respawnDelay = 3;
 disabledAI = 0; //1
 enableDebugConsole = 1;
-loadScreen = "Pic\loading.jpg"; 
+loadScreen = "Pic\loading.jpg";
 
 #include "plank\plank.h"
 #include "GUI\defines.hpp"
@@ -23,7 +23,7 @@ class Header
 
 
 class Params
-{	
+{
 	class TimeOfDay
 	{
 		title = "Time of Day";
@@ -38,7 +38,7 @@ class Params
 		title = "Weather Settings";
 		values[] = {0,1,2,3};
 		texts[] = {"SUNNY DAY","RAINY DAY","CLOUDY DAY","RANDOM WEATHER"};
-		default = 3;   
+		default = 3;
     };
 
 	class AllowedVehicles
@@ -80,7 +80,7 @@ class Params
 		texts[] = {"normal","2h in 1h","4h in 1h","8h in 1h","12h in 1h"};
 		default = 4;
 	};
-	
+
 	class SMAandHLC
 	{
 		title = "SMA and HLC Weapons?";
@@ -88,22 +88,22 @@ class Params
 		texts[] = {"YES","NO"};
 		default = 0;
 	};
-        class EnableReplay
-        {
-                title = "enable replay";
-                values[] = {0,1};
-                texts[] = {"no", "yes"};
-                default = 1;
-                isGlobal = 0;
-        };
-        class IsStreamable
-        {
-                title = "enable live stream (needs 'enable replay')";
-                values[] = {0,1};
-                texts[] = {"no","yes"};
-                default = 0;
-                isGlobal = 0;
-        };
+	class EnableReplay
+	{
+		title = "enable replay";
+		values[] = {0,1};
+		texts[] = {"no", "yes"};
+		default = 1;
+		isGlobal = 0;
+	};
+	class IsStreamable
+	{
+		title = "enable live stream (needs 'enable replay')";
+		values[] = {0,1};
+		texts[] = {"no","yes"};
+		default = 0;
+		isGlobal = 0;
+	};
 };
 
 class CfgSounds
@@ -115,7 +115,7 @@ class CfgSounds
 		name = "beam";
 		// filename, volume, pitch
 		sound[] = {"sounds\beam.ogg", 1, 1};
-		// subtitle delay in seconds, subtitle text 
+		// subtitle delay in seconds, subtitle text
 		titles[] = {1, ""};
 	};
 };
