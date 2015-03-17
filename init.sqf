@@ -1,6 +1,6 @@
 
-ENABLE_REPLAY = paramsArray select 7;
-IS_STREAMABLE = paramsArray select 8;
+ENABLE_REPLAY = paramsArray select 8;
+IS_STREAMABLE = paramsArray select 9;
 
 
 if (OPFOR_TELEPORTED) then {
@@ -52,13 +52,6 @@ if (isServer) then {
 	publicVariable "END_MISSION_TRIGGERED";
 	SPECTATOR_LIST = [];
 	publicVariable "SPECTATOR_LIST";
-
-	SYSTEM_LOG_LEVEL = 0;
-	if (ENABLE_REPLAY == 1) then {
-	        execVM "export-missiondata.sqf";
-	};
-
-
 };
 
 if (!isServer) then {
@@ -83,14 +76,14 @@ opfor_teleport = opfor_teamlead addAction["<t color=""#93E352"">" + localize "st
 blufor_teleport = blufor_teamlead addAction["<t color=""#93E352"">" + localize "str_GRAD_choose_spawn_location",{[[[false], "mission_setup\teleport.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && !BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
 
 call compile preprocessFileLineNumbers "plank\plank_init.sqf";				//Plank
-cameraOldPimped = compile preprocessFile "spectator\cameraOld_rip.sqf";	
-cameraNewPimped = compile preprocessFile "spectator\camera_rip.sqf";	
+cameraOldPimped = compile preprocessFile "spectator\cameraOld_rip.sqf";
+cameraNewPimped = compile preprocessFile "spectator\camera_rip.sqf";
 
 enableSentences false;														//Autospotten
 
 //abfangen ob slot belegt und dann ausführen der jeweiligen scripte
 if (!isNil "opfor_teamlead") then {
-	if (player == opfor_teamlead) then 												
+	if (player == opfor_teamlead) then
 	{
 		[opfor_teamlead] execVM "mission_setup\callPlank.sqf";
 	};
@@ -98,7 +91,7 @@ if (!isNil "opfor_teamlead") then {
 
 
 if (!isNil "opfor_engi") then {
-	if (player == opfor_engi) then 												
+	if (player == opfor_engi) then
 	{
 		[opfor_engi] execVM "mission_setup\callPlank.sqf";
 	};
@@ -111,7 +104,7 @@ if ((isServer) || (isDedicated)) then {
 	[] execVM "objectives\detect_all_dead.sqf";
 	[extraweapons_opfor] execVM "loadouts\extraweapons_opfor.sqf";
 	[extraweapons_blufor] execVM "loadouts\extraweapons_blufor.sqf";
-	
+
 
 	respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger select 0),(getPos sector_trigger select 1),0];
 	[respawn_helper, false] call AGM_Drag_fnc_makeDraggable;
@@ -120,14 +113,14 @@ if ((isServer) || (isDedicated)) then {
 		while {true} do {
 			if ((OPFOR_TELEPORTED) && (BLUFOR_TELEPORTED)) then {
 
-				
+
 					_pos =  [(getPos respawn_helper select 0), (getPos respawn_helper select 1), 0];
 					sector_trigger setPos _pos;
 					sector_module setPos _pos;
 					//["sector_moduleWEST",_pos] call BIS_fnc_taskSetDestination;
 
 					sleep 1;
-				
+
 			};
 		};
 	};
@@ -137,28 +130,28 @@ if ((isServer) || (isDedicated)) then {
 // loadout call - giving each unit the appropriate sqf file
 [arsenal_blufor] execVM "loadouts\virtual_arsenal_init_blufor.sqf";
 [arsenal_opfor] execVM "loadouts\virtual_arsenal_init_opfor.sqf";
-if !(isDedicated) then { 
+if !(isDedicated) then {
 	[] execVM "mission_setup\helpBriefing.sqf";
 	[] execVM "mission_setup\surrenderAction.sqf";
-	
+
 	switchMoveEverywhere = compileFinal "_this select 0 switchMove (_this select 1);";
 	["Preload"] call BIS_fnc_arsenal;
 
-	
+
 	if (addOnsSMAandHLC) then {
 		[] execVM "loadouts\_client.sqf";
 	};
 
-	
 
 
 
-	// Intro Gruppe Adler   
 
-	titleCut ["", "BLACK FADED", 999]; 
+	// Intro Gruppe Adler
+
+	titleCut ["", "BLACK FADED", 999];
 	[] Spawn {
 
-	titleText ["","PLAIN"]; 
+	titleText ["","PLAIN"];
 	titleFadeOut 1;
 	sleep 2;
 
@@ -176,7 +169,14 @@ if !(isDedicated) then {
 //{if(leader (group _x) == _x) then {nul = [_x] execVM "after_action_reporter\movement.sqf";};} foreach allUnits;
 
 [(paramsArray select 1)] execVM "ga_weather\ga_start_weather.sqf";
+
 if (isServer) then {
-waitUntil {OPFOR_TELEPORTED && BLUFOR_TELEPORTED};
-[] execVM "after_action_reporter_pimped\movement.sqf";
+	waitUntil {OPFOR_TELEPORTED && BLUFOR_TELEPORTED};
+
+	[] execVM "after_action_reporter_pimped\movement.sqf";
+
+	SYSTEM_LOG_LEVEL = 0;
+	if (ENABLE_REPLAY == 1) then {
+	        execVM "export-missiondata.sqf";
+	};
 };
