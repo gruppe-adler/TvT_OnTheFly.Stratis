@@ -1,6 +1,6 @@
 
-ENABLE_REPLAY = paramsArray select 7;
-IS_STREAMABLE = paramsArray select 8;
+ENABLE_REPLAY = paramsArray select 8;
+IS_STREAMABLE = paramsArray select 9;
 
 
 if (OPFOR_TELEPORTED) then {
@@ -52,13 +52,6 @@ if (isServer) then {
 	publicVariable "END_MISSION_TRIGGERED";
 	SPECTATOR_LIST = [];
 	publicVariable "SPECTATOR_LIST";
-
-	SYSTEM_LOG_LEVEL = 0;
-	if (ENABLE_REPLAY == 1) then {
-	        execVM "export-missiondata.sqf";
-	};
-
-
 };
 
 if (!isServer) then {
@@ -176,7 +169,12 @@ if !(isDedicated) then {
 //{if(leader (group _x) == _x) then {nul = [_x] execVM "after_action_reporter\movement.sqf";};} foreach allUnits;
 
 [(paramsArray select 1)] execVM "ga_weather\ga_start_weather.sqf";
+
 if (isServer) then {
-waitUntil {OPFOR_TELEPORTED && BLUFOR_TELEPORTED};
-[] execVM "after_action_reporter_pimped\movement.sqf";
+	waitUntil {OPFOR_TELEPORTED && BLUFOR_TELEPORTED};
+
+	SYSTEM_LOG_LEVEL = 0;
+	if (ENABLE_REPLAY == 1) then {
+	        execVM "export-missiondata.sqf";
+	};
 };
