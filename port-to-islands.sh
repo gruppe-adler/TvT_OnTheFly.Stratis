@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # change this to your local cpbo path
-cpbo_path="$1" || "./cpbo.exe"
+cpbo_path="$1"
+if [[ ! -f $cpbo_path ]]; then
+	cpbo_path="./cpbo.exe"
+fi
 
 
 ### AS AS USER, DONT EDIT BELOW THIS LINE ###
@@ -13,13 +16,16 @@ if [[ ! -f $cpbo_path ]]; then
 fi
 
 
-head=`git reflog --decorate -1`
+head=`git reflog --decorate -1 --no-color`
 
 # if possible, use current tag...
-version=`echo $head | grep -o -E 'tag: \w+' | sed -e 's/tag: //'`
+#version=`echo $head | grep -o -E 'tag: \w+' | sed -e 's/tag: //'`
+version=`echo $head | sed -re 's/^.*tag: ([0-9a-z\.\-]+).*$/\1/'`
+
 if [[ $version == "" ]]; then
 	# ...if not, use commit hash
-	version=`echo $head | grep --color=never -o -E '^[0-9a-f]+'`
+	#	version=`echo $head | grep --color=never -o -E '^[0-9a-f]+'`
+	version=`echo $head | sed -re 's/^([0-9a-f]+).*$/\1/g'`
 fi
 
 if [[ $version = "" ]]; then
