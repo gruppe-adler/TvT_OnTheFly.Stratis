@@ -164,10 +164,6 @@ if !(isDedicated) then {
 
 };
 
-//AUSMD_markers = [];
-//{_x addeventHandler ["Hit",{nul = [_this select 1,_this select 0] execVM "after_action_reporter\combat_engaged.sqf";}]} foreach allUnits;
-
-//{if(leader (group _x) == _x) then {nul = [_x] execVM "after_action_reporter\movement.sqf";};} foreach allUnits;
 
 [(paramsArray select 1)] execVM "ga_weather\ga_start_weather.sqf";
 
