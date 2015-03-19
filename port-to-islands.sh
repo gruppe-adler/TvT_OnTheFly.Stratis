@@ -22,11 +22,13 @@ head=`git reflog --decorate -1 --no-color`
 #version=`echo $head | grep -o -E 'tag: \w+' | sed -e 's/tag: //'`
 version=`echo $head | sed -re 's/^.*tag: ([0-9a-z\.\-]+).*$/\1/'`
 
-if [[ $version == "" ]]; then
+if [[ "$head" == "$version" ]]; then
 	# ...if not, use commit hash
 	#	version=`echo $head | grep --color=never -o -E '^[0-9a-f]+'`
 	version=`echo $head | sed -re 's/^([0-9a-f]+).*$/\1/g'`
 fi
+
+echo $version
 
 if [[ $version = "" ]]; then
 	echo "cant find tag OR commit hash. are you sure we're having a .git directory here?"
@@ -57,22 +59,29 @@ islands=(
 
 missionname="TvT_OnTheFly_$version"
 
+echo "$missionname"
+
+
 cwd=`pwd`
 
 builddir="$cwd/../tmp-build"
-tmpdir="$builddir/$tmpdir"
+tmpdir="$builddir/tmpdir"
+
+mkdir -p $builddir
 
 cp -r ./ $tmpdir
 rm $tmpdir/*.sh
 rm $tmpdir/*.bat
-rm -r $tmpdir/.*
+rm -fr $tmpdir/.git
 
 for island in "${islands[@]}"; do
-	islanddir="$builddir/$missionname"
+	islanddir="$builddir/$missionname.$island"
 	mv $tmpdir $islanddir
 	echo "building for $island...";
-	($cpbo_path -y -p $islanddir && echo "done") || echo "fail o.O"
+	$cpbo_path -y -p $islanddir > /dev/null
+	echo "done (probably)"
 	mv $islanddir $tmpdir
+
 
 done
 
