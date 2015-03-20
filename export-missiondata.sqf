@@ -1,8 +1,8 @@
 
-_logscript = compile preprocessFileLineNumbers "sock-rpc\log.sqf";
+_logscript = compile preprocessFileLineNumbers "vendor\sock-rpc\log.sqf";
 call _logscript;
 
-_sockscript = compile preprocessFileLineNumbers "sock-rpc\sock.sqf";
+_sockscript = compile preprocessFileLineNumbers "vendor\sock-rpc\sock.sqf";
 call _sockscript;
 
 diag_log "start pinging sock_rpc...";

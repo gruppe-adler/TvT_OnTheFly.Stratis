@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# change this to your local cpbo path, in case cpbo.exe isa not in the current dir
+# change this to your local cpbo path, in case cpbo.exe is not in the current dir
 cpbo_path="$1"
+missionname="TvT_OnTheFly"
 
 islands=(
 	Altis
@@ -49,17 +50,12 @@ if [[ "$head" == "$version" ]]; then
 	version=`echo $head | sed -re 's/^([0-9a-f]+).*$/\1/g'`
 fi
 
-echo $version
+echo "current version: $version"
 
-if [[ $version = "" ]]; then
+if [[ $version == "" ]]; then
 	echo "cant find tag OR commit hash. are you sure we're having a .git directory here?"
 	exit 2
 fi
-
-missionname="TvT_OnTheFly_$version"
-
-echo "$missionname"
-
 
 cwd=`pwd`
 
@@ -72,19 +68,25 @@ cp -r ./ $tmpdir
 rm $tmpdir/*.sh
 rm $tmpdir/*.bat
 rm -fr $tmpdir/.git
+rm $tmpdir/.gitattributes
 
+echo "building PBO...";
+$cpbo_path -y -p $tmpdir > /dev/null
+echo "done (probably)"
+
+pbofilename="${tmpdir}.pbo" 
+
+if [[ ! -f $pbofilename ]]; then
+	echo "örks"
+	exit 2
+fi
+
+echo "copying pbo for different islands..."
 for island in "${islands[@]}"; do
-	islanddir="$builddir/$missionname.$island"
-	mv $tmpdir $islanddir
-	echo "building for $island...";
-	$cpbo_path -y -p $islanddir > /dev/null
-	echo "done (probably)"
-	mv $islanddir $tmpdir
-
-
+	cp $pbofilename "${builddir}/${missionname}_${version}.${island}.pbo"
 done
 
-echo "done packing. clean up..."
+echo "done. clean up..."
 rm -r $tmpdir
 echo "plz see $builddir for pbo files"
 sleep 2
