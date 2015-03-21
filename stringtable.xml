@@ -6,12 +6,12 @@
                 <Original>The terrorists want to build a dirty bomb and successfully gained a barrel with radioactive material. Secret Service is on their track and have prepared the barrel with a GPS-Logger to find their hideout. Now German Forces are tasked to neutralize the threat.</Original>
                 <English>The terrorists want to build a dirty bomb and successfully gained a barrel with radioactive material. Secret Service is on their track and have prepared the barrel with a GPS-Logger to find their hideout. Now German Forces are tasked to neutralize the threat.</English>
                 <German>Terroristen wollen eine schmutzige Bombe bauen und haben sich radioaktives Material beschafft. Der Geheimdienst ist ihnen aber auf der Spur und konnte das Behaeltnis mit einem GPS-Logger markieren, um ihren Unterschlupf ausfindig zu machen. Die Bundeswehr hat nun den Auftrag, die Gefahr zu neutralisieren.</German>
-            </Key>   
+            </Key>
             <Key ID="str_GRAD_briefing">
                 <Original>In this mission OPFOR and later BLUFOR can choose their spawn point. BLUFOR has to spawn in a certain radius around the objective. Both side can choose a vehicle which they can spawn once. Furthermore OPFOR can build fortifications (Boss + Doc). Mission setup is triggered by the leaders on scrollwheel-menu.</Original>
                 <English>In this mission OPFOR and later BLUFOR can choose their spawn point. BLUFOR has to spawn in a certain radius around the objective. Both side can choose a vehicle which they can spawn once. Furthermore OPFOR can build fortifications (Boss + Doc). Mission setup is triggered by the leaders on scrollwheel-menu.</English>
-                <German>In dieser Mission waehlen erst OPFOR, danach BLUFOR ihren beliebigen Startpunkt. BLUFOR hat einen Mindest-und einen Maximalabstand einzuhalten. Beide Seiten können jeweils ein Fahrzeug waehlen, das sie einnmalig spawnen lassen. OPFOR kann ausserdem Stellungen errichten (Leader + Medic). Das Missions-Setup wird von den jeweiligen Leadern im Mausradmenue ausgeführt.</German>
-            </Key>      
+                <German>In dieser Mission waehlen erst OPFOR, danach BLUFOR ihren beliebigen Startpunkt. BLUFOR hat einen Mindest-und einen Maximalabstand einzuhalten. Beide Seiten kÃ¶nnen jeweils ein Fahrzeug waehlen, das sie einnmalig spawnen lassen. OPFOR kann ausserdem Stellungen errichten (Leader + Medic). Das Missions-Setup wird von den jeweiligen Leadern im Mausradmenue ausgefÃ¼hrt.</German>
+            </Key>
             <Key ID="str_GRAD_spectatorhelp">
                 <Original>Hint for Spectator Cam &lt;br/&gt;
 "L" to turn off crosshair &lt;br/&gt;
@@ -29,14 +29,14 @@
                 </English>
                 <German>Hinweise zur Zuschauerkamera: &lt;br/&gt;
 "L" um den Punkt abzuschalten &lt;br/&gt;
-"*" Ziffernblock für volle Kamerakontrolle &lt;br/&gt;
+"*" Ziffernblock fÃ¼r volle Kamerakontrolle &lt;br/&gt;
 "Mausrad" um lebende Einheiten durchzuschalten &lt;br/&gt;
-"N" für Nightvision/Infrarot &lt;br/&gt;
+"N" fÃ¼r Nightvision/Infrarot &lt;br/&gt;
 "Leertaste" um die Kamerabeschleunigung zu aendern
 				</German>
-            </Key>   
+            </Key>
         </Container>
-        <Container name="mission setup">            
+        <Container name="mission setup">
             <Key ID="str_GRAD_openSupplyBox">
                 <Original>Open Supply Box</Original>
                 <English>Open Supply Box</English>
@@ -57,7 +57,7 @@
                  <Original>Choose Upgrade</Original>
                 <English>Choose Upgrade</English>
                 <German>Upgrade waehlen</German>
-				<French>Sélectionner un upgrade</French>
+				<French>SÃ©lectionner un upgrade</French>
             </Key>
             <Key ID="str_GRAD_jip">
             	<Original>Sorry, you joined too late. Spectate and enjoy!</Original>
@@ -117,8 +117,8 @@
              <Key ID="str_GRAD_mortarSpawned">
                 <Original>Mortar spawned</Original>
                 <English>Mortar spawned</English>
-                <German>Mörser gespawned</German>
-            </Key>         
+                <German>MÃ¶rser gespawned</German>
+            </Key>
         </Container>
         <Container name="mission_end">
             <Key ID="str_GRAD_winmsg">
@@ -136,11 +136,11 @@
                <Original>BLUFOR wins!</Original>
                 <English>BLUFOR wins!</English>
                 <German>BLUFOR gewinnt!</German>
-            </Key> 
+            </Key>
             <Key ID="str_GRAD_thankyouforplaying2">
                <Original>Thank you for playing.</Original>
                 <English>Thank you for playing.</English>
-                <German>Danke fürs Spielen.</German>
+                <German>Danke fÃ¼rs Spielen.</German>
             </Key>
             <Key ID="str_GRAD_thankyouforplaying3">
                <Original>You will now be teleported to Debriefing.</Original>
@@ -150,7 +150,7 @@
             <Key ID="str_GRAD_declareFailedBlufor">
                <Original>Declare Mission failed for BLUFOR</Original>
                 <English>Declare Mission failed for BLUFOR</English>
-                <German>Mission für BLUFOR aufgeben</German>
+                <German>Mission fÃ¼r BLUFOR aufgeben</German>
             </Key>
             <Key ID="str_GRAD_hint_playback_speed_hint">
                 <Original>Replay Speed: </Original>
@@ -172,13 +172,13 @@
                 <English>Replay finished</English>
                 <German>Replay beendet</German>
             </Key>
-            
+
         </Container>
          <Container name="spectator">
             <Key ID="str_GRAD_hint_endspectator">
             	<Original>Right click exits cam. Start again with Mousewheel.</Original>
                 <English>Right click exits cam. Start again with Mousewheel.</English>
-                <German>Rechtsklick beendet die Cam. Starte sie über Mausrad neu.</German>
+                <German>Rechtsklick beendet die Cam. Starte sie Ã¼ber Mausrad neu.</German>
             </Key>
              <Key ID="str_GRAD_action_beginspectator1">
             	<Original>Activate Spectator Cam</Original>
@@ -190,6 +190,6 @@
                 <English>(right click to exit)</English>
                 <German>(Mit Rechtsklick verlassen)</German>
             </Key>
-        </Container>  
+        </Container>
     </Package>
 </Project>
