@@ -6,12 +6,5 @@ clearWeaponCargoGlobal _crate; clearItemCargoGlobal _crate; clearMagazineCargoGl
 removeAllActions _crate; //funzt nicht mit Inventar AddAction
 
 
-    
-       _crate addAction ['<t color=''#45B6EA''>' + (localize "str_GRAD_openSupplyBox") + '</t>',
-    {
-    _box = _this select 0;
-    _unit = _this select 1;
-    ["Open",[nil,_box]] call bis_fnc_arsenal; 
-    }];
 
-
+0 = ["AmmoboxInit",[_crate,true]] spawn BIS_fnc_arsenal;
