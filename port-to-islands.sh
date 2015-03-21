@@ -88,5 +88,6 @@ done
 
 echo "done. clean up..."
 rm -r $tmpdir
+rm $pbofilename
 echo "plz see $builddir for pbo files"
 sleep 2

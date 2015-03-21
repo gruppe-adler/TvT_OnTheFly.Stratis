@@ -1,14 +1,14 @@
 
 TIME_OF_DAY = paramsArray select 0;
 WEATHER_SETTING = paramsArray select 1;
-RESTRICTED_VEHICLES = paramsArray select 2;
+RESTRICTED_VEHICLES = (paramsArray select 2) == 1;
 UNIFORM_CAMO = paramsArray select 3;
 MINIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 4;
 MAXIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 5;
 TIME_ACCELERATION = paramsArray select 6;
-SMA_AND_HLC_WEAPONS = paramsArray select 7;
-ENABLE_REPLAY = paramsArray select 8;
-IS_STREAMABLE = paramsArray select 9;
+SMA_AND_HLC_WEAPONS = (paramsArray select 7) == 1;
+ENABLE_REPLAY = (paramsArray select 8) == 1;
+IS_STREAMABLE = (paramsArray select 9) == 1;
 
 if (OPFOR_TELEPORTED) then {
 	[player] execVM "onPlayerRespawn.sqf";
