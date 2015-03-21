@@ -34,19 +34,18 @@ class Params
 
 	class WeatherSetting
     {
-		//paramsArray[0]
 		title = "Weather Settings";
 		values[] = {0,1,2,3};
 		texts[] = {"SUNNY DAY","RAINY DAY","CLOUDY DAY","RANDOM WEATHER"};
 		default = 3;
     };
 
-	class AllowedVehicles
+	class RestrictedVehicles
 	{
 		title = "Allowed Vehicles";
-		values[] = {0,1};
+		values[] = {true, false};
 		texts[] = {"HEMTT / Transporter", "HEMTT, Littlebird / Transporter, Tactical, Mortar"};
-		default = 1;
+		default = false;
 	};
 
 	class UniformCamo
@@ -84,22 +83,22 @@ class Params
 	class SMAandHLC
 	{
 		title = "SMA and HLC Weapons?";
-		values[] = {0,1};
+		values[] = {true, false};
 		texts[] = {"YES","NO"};
-		default = 0;
+		default = true;
 	};
 	class EnableReplay
 	{
 		title = "enable replay";
-		values[] = {0,1};
+		values[] = {false, true};
 		texts[] = {"no", "yes"};
-		default = 1;
+		default = true;
 		isGlobal = 0;
 	};
 	class IsStreamable
 	{
 		title = "enable live stream (needs 'enable replay')";
-		values[] = {0,1};
+		values[] = {false, true};
 		texts[] = {"no","yes"};
 		default = 0;
 		isGlobal = 0;

@@ -1,21 +1,19 @@
 
+TIME_OF_DAY = paramsArray select 0;
+WEATHER_SETTING = paramsArray select 1;
+RESTRICTED_VEHICLES = paramsArray select 2;
+UNIFORM_CAMO = paramsArray select 3;
+MINIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 4;
+MAXIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 5;
+TIME_ACCELERATION = paramsArray select 6;
+SMA_AND_HLC_WEAPONS = paramsArray select 7;
 ENABLE_REPLAY = paramsArray select 8;
 IS_STREAMABLE = paramsArray select 9;
-
 
 if (OPFOR_TELEPORTED) then {
 	[player] execVM "onPlayerRespawn.sqf";
 	[localize "str_GRAD_jip"] call AGM_Core_fnc_displayTextStructured;
 };
-addOnsSMAandHLC = false;
-
-// SMA + HLC support off = false
-if ((paramsArray select 7) == 0) then {
-	addOnsSMAandHLC = true;
-} else {
-	addOnsSMAandHLC = false;
-};
-
 
 
 // global options
@@ -37,7 +35,7 @@ if (!isMultiplayer) then {
 };
 
 if (isServer) then {
-	setTimeMultiplier (paramsArray select 6);
+	setTimeMultiplier TIME_ACCELERATION;
 
 	BLUFOR_CAPTURED = false;
 	publicVariable "BLUFOR_CAPTURED";
@@ -45,7 +43,6 @@ if (isServer) then {
 	publicVariable "MISSION_COMPLETED";
 	bluforMarkerDrawn = false;
 	publicVariable "bluforMarkerDrawn";
-	RESTRICTED_VEHICLES = false;
 	publicVariable "RESTRICTED_VEHICLES";
 	BLUFOR_SURRENDERED = false;
 	publicVariable "BLUFOR_SURRENDERED";
@@ -56,21 +53,11 @@ if (isServer) then {
 };
 
 if (!isServer) then {
-// restriction of vehicles for blufor
-if ((paramsArray select 2) == 0) then {
-	RESTRICTED_VEHICLES = true;
+    // tropentarn or flecktarn?
+    if (UNIFORM_CAMO == 1) then {
+        TROPENTARN = true;
+    };
 };
-
-// tropentarn or flecktarn?
-if ((paramsArray select 3) == 1) then {
-	TROPENTARN = true;
-};
-};
-
-
-
-blufor_spawnDistanceMin = (paramsArray select 4);
-blufor_spawnDistanceMax = (paramsArray select 5);
 
 // respawn helper object, will be moved to objective location in teleport.sqf
 opfor_teleport = opfor_teamlead addAction["<t color=""#93E352"">" + localize "str_GRAD_choose_spawn_location",{[[[false], "mission_setup\teleport.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && !OPFOR_TELEPORTED"];
@@ -98,7 +85,7 @@ if (!isNil "opfor_engi") then {
 	};
 };
 
-if (isServer) then { setDate [2035, 6, 24, (paramsArray select 0), 1]; };	//Zeit
+if (isServer) then { setDate [2035, 6, 24, TIME_OF_DAY, 1]; };	//Zeit
 
 if ((isServer) || (isDedicated)) then {
 
@@ -139,7 +126,7 @@ if !(isDedicated) then {
 	["Preload"] call BIS_fnc_arsenal;
 
 
-	if (addOnsSMAandHLC) then {
+	if (SMA_AND_HLC_WEAPONS) then {
 		[] execVM "loadouts\_client.sqf";
 	};
 
@@ -165,7 +152,7 @@ if !(isDedicated) then {
 };
 
 
-[(paramsArray select 1)] execVM "ga_weather\ga_start_weather.sqf";
+[WEATHER_SETTING] execVM "ga_weather\ga_start_weather.sqf";
 
 if (isServer) then {
 	waitUntil {OPFOR_TELEPORTED && BLUFOR_TELEPORTED};
@@ -173,7 +160,7 @@ if (isServer) then {
 	[] execVM "after_action_reporter_pimped\movement.sqf";
 
 	SYSTEM_LOG_LEVEL = 0;
-	if (ENABLE_REPLAY == 1) then {
+	if (ENABLE_REPLAY) then {
 	        execVM "export-missiondata.sqf";
 	};
 };

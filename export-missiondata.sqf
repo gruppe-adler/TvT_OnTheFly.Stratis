@@ -26,7 +26,7 @@ if (isDedicated) then {
 
 	['missionStart', [missionName, worldName]] call sock_rpc;
 
-	if (IS_STREAMABLE == 1) then {
+	if (IS_STREAMABLE) then {
 		['setIsStreamable', [true]] call sock_rpc;
 	};
 

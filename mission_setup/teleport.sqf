@@ -29,7 +29,7 @@ openMap [false,false];
 	if (player == opfor_teamlead && !OPFOR_TELEPORTED) then {
 
 		[[[east,spawnpoint_mapclick],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
-		
+
 		_opfor_marker = createMarker ["opfor_marker", spawnpoint_mapclick];
 		_opfor_marker setMarkerType "hd_objective";
 		_opfor_marker setMarkerColor "ColorWEST";
@@ -45,22 +45,22 @@ openMap [false,false];
 		// move task to new destination
 		sector_trigger setPos spawnpoint_mapclick;
 		//["sector_moduleWEST", spawnpoint_mapclick] call BIS_fnc_taskSetDestination;
-		
+
 		[[[spawnpoint_mapclick],"mission_setup\respawn_helper.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
-		
+
 		//choose_vehicle_opfor = opfor_teamlead addAction["<t color=""#93E352"">" + localize "str_GRAD_choose_vehicle",{[[[choose_vehicle_opfor], "mission_setup\choose_vehicle.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
 		choose_vehicle_opfor = opfor_teamlead addAction["<t color=""#93E352"">" + localize "str_GRAD_choose_vehicle",{nul = [choose_vehicle_opfor] execVM "mission_setup\choose_vehicle.sqf"}, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
 	};
 
 	if (player == blufor_teamlead && OPFOR_TELEPORTED) then {
 		openMap [false,false];
-	
+
 		// entfernung marker zu spawnpunkt zu klein oder groß?
 		// pos ist hier ein anderes pos als oben!
 		_distance = spawnpoint_mapclick distance (getMarkerPos "opfor_marker");
-		if (_distance < blufor_spawnDistanceMin) exitWith {hintSilent format [localize "str_GRAD_spawnTooClose1" + '(%1 m).' + localize "str_GRAD_spawnTooClose2" + ' %2.', floor(_distance), blufor_spawnDistanceMin];
+		if (_distance < MINIMAL_BLUFOR_SPAWN_DISTANCE) exitWith {hintSilent format [localize "str_GRAD_spawnTooClose1" + '(%1 m).' + localize "str_GRAD_spawnTooClose2" + ' %2.', floor(_distance), MINIMAL_BLUFOR_SPAWN_DISTANCE];
 		player execVM "mission_setup\teleport.sqf";};
-		if (_distance > blufor_spawnDistanceMax) exitWith {hintSilent format [localize "str_GRAD_spawnTooFar1" + '(%1 m).' + localize "str_GRAD_spawnTooFar2" + ' %2.', floor(_distance), blufor_spawnDistanceMax];
+		if (_distance > MAXIMAL_BLUFOR_SPAWN_DISTANCE) exitWith {hintSilent format [localize "str_GRAD_spawnTooFar1" + '(%1 m).' + localize "str_GRAD_spawnTooFar2" + ' %2.', floor(_distance), MAXIMAL_BLUFOR_SPAWN_DISTANCE];
 		player execVM "mission_setup\teleport.sqf";
 		};
 
@@ -68,7 +68,7 @@ openMap [false,false];
 
 		// teleport und gucken, ob posi frei ist
 		[[[west,spawnpoint_mapclick],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
-		
+
 		_spawn_area = [];
 		_max_distance = 40;
 		while{ count _spawn_area < 1 } do
@@ -80,10 +80,10 @@ openMap [false,false];
 		// create base building for blufor
 		_baseBuilding = "Land_Cargo_House_V1_F" createVehicle _spawn_area;
 		_baseBuilding addAction["<t color=""#ff0000"">" + localize "str_GRAD_declareFailedBlufor",{BLUFOR_SURRENDERED = true; publicVariable "BLUFOR_SURRENDERED";}, _Args, 1, false, false, "","side _this == west && !BLUFOR_SURRENDERED"];
-		
+
 		//choose_vehicle_blufor = blufor_teamlead addAction["<t color=""#93E352"">" + localize "str_GRAD_choose_blufor_vehicle",{[[[choose_vehicle_blufor], "mission_setup\choose_vehicle.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
 		choose_vehicle_blufor = blufor_teamlead addAction["<t color=""#93E352"">" + localize "str_GRAD_choose_vehicle",{nul = [choose_vehicle_blufor] execVM "mission_setup\choose_vehicle.sqf"}, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
-		
+
 		BLUFOR_TELEPORTED = TRUE;
 		publicVariable "BLUFOR_TELEPORTED";
 		//[[[],"after_action_reporter_pimped\movement.sqf",nil,false],"BIS_fnc_execVM",true,false] spawn BIS_fnc_MP;
