@@ -69,6 +69,7 @@ rm $tmpdir/*.sh
 rm $tmpdir/*.bat
 rm -fr $tmpdir/.git
 rm $tmpdir/.gitattributes
+rm $tmpdir/.gitignore
 
 echo "building PBO...";
 $cpbo_path -y -p $tmpdir > /dev/null
