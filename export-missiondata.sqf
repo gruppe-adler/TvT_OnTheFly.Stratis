@@ -1,3 +1,4 @@
+diag_log "export-missiondata.sqf: start";
 
 _logscript = compile preprocessFileLineNumbers "vendor\sock-rpc\log.sqf";
 call _logscript;
@@ -5,7 +6,7 @@ call _logscript;
 _sockscript = compile preprocessFileLineNumbers "vendor\sock-rpc\sock.sqf";
 call _sockscript;
 
-diag_log "start pinging sock_rpc...";
+diag_log "export-missiondatat.sqf: ok. start pinging sock_rpc...";
 
 [] spawn {
 	while {true} do {
