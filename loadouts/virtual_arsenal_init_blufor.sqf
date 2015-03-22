@@ -5,6 +5,10 @@ clearWeaponCargoGlobal _crate; clearItemCargoGlobal _crate; clearMagazineCargoGl
 
 removeAllActions _crate; //funzt nicht mit Inventar AddAction
 
+["AmmoboxInit",[_crate, true, {true}]] spawn BIS_fnc_arsenal;
 
+_crate addAction ["Ausrüstung", {
+	["Open", true] spawn BIS_fnc_arsenal;
+}];
 
-0 = ["AmmoboxInit",[_crate,true]] spawn BIS_fnc_arsenal;
+diag_log "arsenal initialized";

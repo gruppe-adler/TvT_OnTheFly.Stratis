@@ -876,7 +876,7 @@ class Mission
 			position[]={1515.3201,5.5,5015.7935};
 			id=36;
 			side="EMPTY";
-			vehicle="B_CargoNet_01_ammo_F";
+			vehicle="AmmoCrates_NoInteractive_Large";
 			skill=0.60000002;
 			text="arsenal_blufor";
 		};
@@ -885,7 +885,7 @@ class Mission
 			position[]={1850.7795,5.3208466,6121.436};
 			id=37;
 			side="EMPTY";
-			vehicle="B_CargoNet_01_ammo_F";
+			vehicle="AmmoCrates_NoInteractive_Large";
 			skill=0.60000002;
 			text="arsenal_opfor";
 		};
