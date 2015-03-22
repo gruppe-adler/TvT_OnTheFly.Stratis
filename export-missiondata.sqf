@@ -32,7 +32,7 @@ if (isDedicated) then {
 	};
 
 	[] spawn {
-		while {(count allUnits > 0) and (ENABLE_REPLAY == 1)} do {
+		while {(count allUnits > 0) and (ENABLE_REPLAY)} do {
 			playersArray = [];
 			{
 				pos = (getPos _x) + [getDir _x];
