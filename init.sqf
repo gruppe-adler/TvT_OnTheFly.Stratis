@@ -130,10 +130,6 @@ if !(isDedicated) then {
 		[] execVM "loadouts\_client.sqf";
 	};
 
-
-
-
-
 	// Intro Gruppe Adler
 
 	titleCut ["", "BLACK FADED", 999];
@@ -148,7 +144,6 @@ if !(isDedicated) then {
 	waitUntil {time > 3};
 		["<img size= '6' shadow='false' image='pic\gruppe-adler.paa'/><br/><t size='.9' color='#FFFFFF'>TvT@OnTheFly</t>",0,0,2,2] spawn BIS_fnc_dynamicText;
 	};
-
 };
 
 
@@ -163,5 +158,4 @@ if (isServer) then {
 	};
 
 	[] execVM "after_action_reporter_pimped\movement.sqf";
-
 };
