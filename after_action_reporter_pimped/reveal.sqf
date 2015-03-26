@@ -79,20 +79,24 @@ getSideMarkerColor = {
 	
 	// CREATE EVERY UNIT MARKER ONLY ONCE
 	for [{_k=0}, {_k<=count players}, {_k=_k+1}] do {                    
-	_prepare_unit = ((((((local_recording) select 1) select 0) select _k) select 1) select 0);
-	_prepare_side = ((((((local_recording) select 1) select 0) select _k) select 1) select 1);
-	_prepare_pos = ((((((local_recording) select 1) select 0) select _k) select 1) select 1);
-	_prepare_dir = ((((((local_recording) select 1) select 0) select _k) select 1) select 2);
-	_prepare_kindof = ((((((local_recording) select 1) select 0) select _k) select 1) select 3);
-	_prepare_veh = ((((((local_recording) select 1) select 0) select _k) select 1) select 4);
+	_prepare_unit = ((((local_recording) select 0) select 1) select _k);
+	_prepare_side = (((((local_recording) select 0) select 1) select _k) select 0);
+	_prepare_pos = ((((((local_recording) select 0) select 1) select _k) select 1) select 1);
+	_prepare_dir = ((((((local_recording) select 0) select 1) select _k) select 1) select 2);
+	_prepare_kindof = ((((((local_recording) select 0) select 1) select _k) select 1) select 3);
+	_prepare_veh = ((((((local_recording) select 0) select 1) select _k) select 1) select 4);
+
+
+	//[current_daytime,[_unit, [_side,[_pos,_dir,_kindof,_veh]]]
+
 
 	_marker = createMarker [format["%1",_prepare_unit],_prepare_pos];
-	current_markers = current_markers + [_marker];
 	_marker setMarkerShape "ICON";
 	_marker setMarkerType _prepare_kindof;
 	_marker setMarkerPos _prepare_pos;
 	_marker setMarkerDir _prepare_dir;
 	_marker setMarkerColor ([_prepare_side] call getSideMarkerColor);
+	current_markers = current_markers + [_marker];
 	};
 
 
@@ -113,11 +117,14 @@ getSideMarkerColor = {
 			
 			{
 				_curMarker = current_markers select _x;
-				_pos = (((local_recording) select local_recording_counter) select _i) select 2;
-				_dir = (((local_recording) select local_recording_counter) select _i) select 3;
-				_kindof = (((local_recording) select local_recording_counter) select _i) select 4;
-				_veh = (((local_recording) select local_recording_counter) select _i) select 5;
-				
+				_pos = ((((((local_recording) select local_recording_counter) select 1) select 1) select 1) select 1);
+				_dir = ((((((local_recording) select local_recording_counter) select 1) select 1) select 1) select 2);
+				_kindof = ((((((local_recording) select local_recording_counter) select 1) select 1) select 1) select 3);
+				_veh= ((((((local_recording) select local_recording_counter) select 1) select 1) select 1) select 4);
+
+				//[current_daytime,[_unit, [_side,[_pos,_dir,_kindof,_veh]]]
+
+
 				_curMarker setMarkerPos _pos;
 				_curMarker setMarkerShape _kindof;
 				_curMarker setMarkerDir _dir;
