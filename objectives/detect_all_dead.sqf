@@ -1,5 +1,14 @@
 // win conditions, detected by server only
 
+moveEveryoneToWhiteboard = {
+    spectator_vehicle setVehicleLock "UNLOCKED";
+
+    _pos = getPos whiteboard;
+    [[[west, _pos, blufor], "mission_setup\teleportEffectEnd.sqf"], "BIS_fnc_execVM", true, true] spawn BIS_fnc_MP;
+    [[[east, _pos, blufor], "mission_setup\teleportEffectEnd.sqf"], "BIS_fnc_execVM", true, true] spawn BIS_fnc_MP;
+    [[[civilian, _pos, blufor], "mission_setup\teleportEffectEnd.sqf"], "BIS_fnc_execVM", true, true] spawn BIS_fnc_MP;
+};
+
 [] spawn {
     while {true} do {
         WINCONDITIONBLUFOR = (({side _x == east} count playableUnits) + ({side _x == east} count switchableUnits) == 0); 
@@ -8,30 +17,15 @@
         sleep 3;
 
         if (WINCONDITIONBLUFOR || BLUFOR_CAPTURED) exitWith {
-            pos = getPos whiteboard;
-        
             MISSION_COMPLETED = true; publicVariable "MISSION_COMPLETED";
             WINCONDITIONBLUFOR = true; publicVariable "WINCONDITIONBLUFOR";
-            
-            spectator_vehicle setVehicleLock "UNLOCKED";
-     
-            [[[west, pos, blufor], "mission_setup\teleportEffectEnd.sqf"], "BIS_fnc_execVM", true, true] spawn BIS_fnc_MP;
-            [[[east, pos, blufor], "mission_setup\teleportEffectEnd.sqf"], "BIS_fnc_execVM", true, true] spawn BIS_fnc_MP;
-            [[[civilian, pos, blufor], "mission_setup\teleportEffectEnd.sqf"], "BIS_fnc_execVM", true, true] spawn BIS_fnc_MP;
-            //[] execVM "after_action_reporter\reveal.sqf";
+            call moveEveryoneToWhiteboard;
         };
 
         if (WINCONDITIONOPFOR || BLUFOR_SURRENDERED) exitWith {
-            pos = getPos whiteboard;
-       
             MISSION_COMPLETED = true; publicVariable "MISSION_COMPLETED";
-            spectator_vehicle setVehicleLock "UNLOCKED";
             WINCONDITIONOPFOR = true; publicVariable "WINCONDITIONOPFOR";
-
-            [[[west,pos,opfor],"mission_setup\teleportEffectEnd.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
-            [[[east,pos,opfor],"mission_setup\teleportEffectEnd.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
-            [[[civilian,pos,opfor],"mission_setup\teleportEffectEnd.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
-            //[] execVM "after_action_reporter\reveal.sqf";
+            call moveEveryoneToWhiteboard;
         };
     };
 };
