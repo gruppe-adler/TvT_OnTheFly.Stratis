@@ -656,7 +656,7 @@ if (isServer) then {
 		[_box, (_availableGuns + _availableMagazines + _availableAttachments +_availableItems + _availableUniforms + _availableVests + _availableGoggles + _availableHeadgear),true,false] call  XLA_fnc_addVirtualItemCargo;
 		[_box, _availableMagazines,true,false] call XLA_fnc_addVirtualMagazineCargo;
 		[_box, (_availableGuns),true,false] call XLA_fnc_addVirtualWeaponCargo;	
-		[_box, [WEST_SIDE,FRIENDLY_SIDE],true,false] call XLA_fnc_addVirtualSideCargo;
+		//[_box, [WEST_SIDE,FRIENDLY_SIDE],true,false] call XLA_fnc_addVirtualSideCargo;
 
 		[_box, _blacklistGuns ,true,false] call XLA_fnc_addVirtualWeaponBlacklist;
 		[_box, _blacklistItems, true,false] call XLA_fnc_addVirtualItemBlacklist;

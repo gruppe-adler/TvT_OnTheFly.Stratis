@@ -18,7 +18,8 @@ class Mission
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Supplies_F_Heli_CargoNets",
 		"A3_Weapons_F_Ammoboxes",
-		"a3_map_stratis"
+		"a3_map_stratis",
+		"aia_misc_e_config"
 	};
 	addOnsAuto[]=
 	{
@@ -35,7 +36,7 @@ class Mission
 		"agm_medical",
 		"A3_Soft_F_HEMTT",
 		"A3_Structures_F_Civ_InfoBoards",
-		"A3_Supplies_F_Heli_CargoNets",
+		"aia_misc_e_config",
 		"A3_Weapons_F_Ammoboxes",
 		"a3_map_stratis"
 	};
@@ -879,6 +880,7 @@ class Mission
 			vehicle="AmmoCrates_NoInteractive_Large";
 			skill=0.60000002;
 			text="arsenal_blufor";
+			init="nul = this execVM ""loadouts\XLA_arsenal_blufor.sqf"";";
 		};
 		class Item3
 		{
@@ -888,6 +890,7 @@ class Mission
 			vehicle="AmmoCrates_NoInteractive_Large";
 			skill=0.60000002;
 			text="arsenal_opfor";
+			init="nul = this execVM ""loadouts\XLA_arsenal_opfor.sqf"";";
 		};
 		class Item4
 		{
