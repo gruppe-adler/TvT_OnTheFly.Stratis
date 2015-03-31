@@ -116,8 +116,7 @@ if ((isServer) || (isDedicated)) then {
 // call this on server too - because of whiteboard/truck
 [] execVM "mission_setup\adjustInitialSpawnPosition.sqf";
 // loadout call - giving each unit the appropriate sqf file
-[arsenal_blufor] execVM "loadouts\virtual_arsenal_init_blufor.sqf";
-[arsenal_opfor] execVM "loadouts\virtual_arsenal_init_opfor.sqf";
+
 if !(isDedicated) then {
 	[] execVM "mission_setup\helpBriefing.sqf";
 	[] execVM "mission_setup\surrenderAction.sqf";
