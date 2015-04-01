@@ -17,13 +17,15 @@ getPlayerArray = {
 	};
 
 	_status = 'unknown';
-	if (_x getVariable ["AGM_isUnconscious", false]) then {
-		_status = 'unconscious';
-	} else { if (alive _x) then {
-		_status = 'alive';
+	if (alive _x) then {
+		if (_x getVariable ["AGM_isUnconscious", false]) then {
+			_status = 'unconscious';
+		} else { 
+			_status = 'alive';
+		};
 	} else {
 		_status = 'dead';
-	};};
+	};
 
 	_vehicletype = 'unknown';
 	if (vehicle _x == _x) then {
