@@ -79,15 +79,19 @@ getSideMarkerColor = {
 	
 	// CREATE EVERY UNIT MARKER ONLY ONCE
 	for [{_k=0}, {_k<=count players}, {_k=_k+1}] do {                    
-	_prepare_unit = ((((local_recording) select 0) select 1) select _k);
+	_prepare_unit = ((((local_recording) select 1) select 1) select _k);
 	_prepare_side = (((((local_recording) select 0) select 1) select _k) select 0);
-	_prepare_pos = ((((((local_recording) select 0) select 1) select _k) select 1) select 1);
-	_prepare_dir = ((((((local_recording) select 0) select 1) select _k) select 1) select 2);
-	_prepare_kindof = ((((((local_recording) select 0) select 1) select _k) select 1) select 3);
-	_prepare_veh = ((((((local_recording) select 0) select 1) select _k) select 1) select 4);
+	_prepare_pos = ((((((local_recording) select 1) select 1) select _k) select 1);
+	_prepare_dir = ((((((local_recording) select 1) select 1) select _k) select 2);
+	_prepare_kindof = (((((local_recording) select 1) select 0) select _k) select 3);
+	_prepare_veh = (((((local_recording) select 1) select 1) select _k) select 4);
 
 
 	//[current_daytime,[_unit, [_side,[_pos,_dir,_kindof,_veh]]]
+//hintSilent format ["%1", ((((((local_recording) select 1) select 0) select 1) select 1) select 0)];
+
+//mil triangle:
+//hintSilent format ["%1", (((((local_recording) select 1) select 0) select 1) select 3)];
 
 
 	_marker = createMarker [format["%1",_prepare_unit],_prepare_pos];

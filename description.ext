@@ -37,14 +37,14 @@ class Params
 		title = "Weather Settings";
 		values[] = {0,1,2,3};
 		texts[] = {"SUNNY DAY","RAINY DAY","CLOUDY DAY","RANDOM WEATHER"};
-		default = 3;
+		default = 0;
     };
 
 	class RestrictedVehicles
 	{
-		title = "Allowed Vehicles";
+		title = "One of those vehicles for each side";
 		values[] = {true, false};
-		texts[] = {"HEMTT / Transporter", "HEMTT, Littlebird / Transporter, Tactical, Mortar"};
+		texts[] = {"HEMTT, Littlebird / Transporter, Tactical, Mortar","same but with additional APC / same but with additional At4 Launchers"};
 		default = false;
 	};
 

@@ -43,14 +43,15 @@ class Mission
 	randomSeed=7556201;
 	class Intel
 	{
-		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
-		startWind=0.1;
-		startWaves=0.1;
-		forecastWeather=0.30000001;
-		forecastWind=0.1;
-		forecastWaves=0.1;
-		forecastLightnings=0.1;
+		startWeather=0.84999996;
+		startWind=0;
+		forecastWeather=0.84999996;
+		forecastWind=0.099999994;
+		forecastWaves=0;
+		rainForced=1;
+		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
 		year=2035;
 		month=7;
 		day=6;
@@ -238,8 +239,9 @@ class Mission
 				items=10;
 				class Item0
 				{
-					position[]={1804.3489,5.5,6000.3784};
+					position[]={1804.2657,5.5,5996.0503};
 					azimut=163.319;
+					special="NONE";
 					id=14;
 					side="EAST";
 					vehicle="O_officer_F";
@@ -254,6 +256,7 @@ class Mission
 				{
 					position[]={1830.0243,5.5,6012.2759};
 					azimut=163.319;
+					special="NONE";
 					id=15;
 					side="EAST";
 					vehicle="O_Soldier_F";
@@ -266,6 +269,7 @@ class Mission
 				{
 					position[]={1792.0532,5.5,6026.2783};
 					azimut=163.319;
+					special="NONE";
 					id=16;
 					side="EAST";
 					vehicle="O_Soldier_LAT_F";
@@ -278,6 +282,7 @@ class Mission
 				{
 					position[]={1781.6069,5.5,6009.1631};
 					azimut=163.319;
+					special="NONE";
 					id=17;
 					side="EAST";
 					vehicle="O_Soldier_TL_F";
@@ -290,6 +295,7 @@ class Mission
 				{
 					position[]={1809.1389,5.5,6029.3579};
 					azimut=163.319;
+					special="NONE";
 					id=18;
 					side="EAST";
 					vehicle="O_Soldier_F";
@@ -302,6 +308,7 @@ class Mission
 				{
 					position[]={1825.084,5.5,6019.9482};
 					azimut=163.319;
+					special="NONE";
 					id=19;
 					side="EAST";
 					vehicle="O_Soldier_F";
@@ -314,6 +321,7 @@ class Mission
 				{
 					position[]={1818.1295,5.5,6025.3862};
 					azimut=163.319;
+					special="NONE";
 					id=20;
 					side="EAST";
 					vehicle="O_Soldier_F";
@@ -326,6 +334,7 @@ class Mission
 				{
 					position[]={1800.324,5.5,6028.9731};
 					azimut=163.319;
+					special="NONE";
 					id=21;
 					side="EAST";
 					vehicle="O_medic_F";
@@ -339,6 +348,7 @@ class Mission
 				{
 					position[]={1780.7979,5.5,5999.1611};
 					azimut=163.319;
+					special="NONE";
 					id=22;
 					side="EAST";
 					vehicle="O_Soldier_AR_F";
@@ -351,6 +361,7 @@ class Mission
 				{
 					position[]={1785.2334,5.5,6019.5005};
 					azimut=163.319;
+					special="NONE";
 					id=23;
 					side="EAST";
 					vehicle="O_soldier_exp_F";
@@ -880,7 +891,7 @@ class Mission
 			vehicle="AmmoCrates_NoInteractive_Large";
 			skill=0.60000002;
 			text="arsenal_blufor";
-			init="nul = this execVM ""loadouts\XLA_arsenal_blufor.sqf"";";
+			init="nul = this execVM ""loadouts\XLA_arsenal_blufor.sqf""; this allowDamage false;";
 		};
 		class Item3
 		{
@@ -890,7 +901,7 @@ class Mission
 			vehicle="AmmoCrates_NoInteractive_Large";
 			skill=0.60000002;
 			text="arsenal_opfor";
-			init="nul = this execVM ""loadouts\XLA_arsenal_opfor.sqf"";";
+			init="nul = this execVM ""loadouts\XLA_arsenal_opfor.sqf""; this allowDamage false;";
 		};
 		class Item4
 		{
