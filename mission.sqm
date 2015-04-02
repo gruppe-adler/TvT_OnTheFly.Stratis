@@ -17,7 +17,6 @@ class Mission
 		"A3_Soft_F_HEMTT",
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Supplies_F_Heli_CargoNets",
-		"A3_Weapons_F_Ammoboxes",
 		"a3_map_stratis",
 		"aia_misc_e_config"
 	};
@@ -37,7 +36,6 @@ class Mission
 		"A3_Soft_F_HEMTT",
 		"A3_Structures_F_Civ_InfoBoards",
 		"aia_misc_e_config",
-		"A3_Weapons_F_Ammoboxes",
 		"a3_map_stratis"
 	};
 	randomSeed=7556201;
@@ -857,7 +855,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=6;
+		items=4;
 		class Item0
 		{
 			position[]={1844.2902,5.2536268,6127.4043};
@@ -902,26 +900,6 @@ class Mission
 			skill=0.60000002;
 			text="arsenal_opfor";
 			init="nul = this execVM ""loadouts\XLA_arsenal_opfor.sqf""; this allowDamage false;";
-		};
-		class Item4
-		{
-			position[]={1516.8386,5.5,5017.6675};
-			id=38;
-			side="EMPTY";
-			vehicle="B_supplyCrate_F";
-			skill=0.60000002;
-			text="extraweapons_blufor";
-			init="this allowDamage false;";
-		};
-		class Item5
-		{
-			position[]={1849.7806,5.311934,6124.5684};
-			id=39;
-			side="EMPTY";
-			vehicle="B_supplyCrate_F";
-			skill=0.60000002;
-			text="extraweapons_opfor";
-			init="this allowDamage false;";
 		};
 	};
 	class Markers
