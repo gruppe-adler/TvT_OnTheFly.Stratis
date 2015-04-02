@@ -167,7 +167,7 @@ getSideMarkerColor = {
 			["Replay restarted."] call AGM_Core_fnc_displayTextStructured;	
 		};
 		
-		sleep 0.5;
+		sleep 0.1;
 		
 		//diag_log format ["CURRENT VALUES %1, counter is %2", (local_recording) select local_recording_counter, local_recording_counter];
 		};
