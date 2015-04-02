@@ -530,6 +530,13 @@ _tfarItems = [
 _availableGuns 				= [
 	"hlc_rifle_ak12",
 	"hlc_rifle_aku12",
+	"hlc_rifle_ak47",
+	"hlc_rifle_ak74",
+	"hlc_rifle_ak74_dirty",
+	"hlc_rifle_akm",
+	"hlc_rifle_aks74",
+	"hlc_rifle_aks74u",
+	"hlc_rifle_aek971",
 	"hgun_P07_F"
 	];
 _availableMagazines 	= [];
@@ -619,6 +626,10 @@ _availableMagazines = [
 	"hlc_30Rnd_545x39_EP_ak",
 	"hlc_30Rnd_545x39_t_ak",
 	"hlc_30Rnd_545x39_B_AK",
+	"hlc_30Rnd_762x39_b_ak",
+	"hlc_30Rnd_762x39_t_ak",
+	"hlc_45Rnd_762x39_m_rpk",
+	"hlc_45Rnd_762x39_t_rpk",
 	"16Rnd_9x21_Mag"
 ];
 
