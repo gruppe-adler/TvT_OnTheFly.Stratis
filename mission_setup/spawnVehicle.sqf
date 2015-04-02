@@ -78,7 +78,10 @@ if (_side == east) then {
 		clearMagazineCargoGlobal opfor_box; 
 		clearBackpackCargoGlobal opfor_box;
 		sleep 0.1;
-		opfor_box addweaponcargoglobal ["tf47_at4_heat", 5]; 
+		opfor_box addweaponcargoglobal ["tf47_at4_heat", 2];
+		opfor_box addweaponcargoglobal ["tf47_at4_hedp", 2];
+		opfor_box addweaponcargoglobal ["tf47_at4_hp", 2];
+		
 
 		[localize "str_GRAD_at4Spawned"] call AGM_Core_fnc_displayTextStructured;
 		player removeAction createVehicleAt4Box;

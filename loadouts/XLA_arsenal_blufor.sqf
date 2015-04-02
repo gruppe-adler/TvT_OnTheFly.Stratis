@@ -373,11 +373,11 @@ _CupGuns = [
 // -------------------------------------------------------------------
 _tfarItems = [
 	//Rifleman radios
-	"tf_rf7800str",
-	"tf_anprc152",			//NATO
+	//"tf_rf7800str",
+	"tf_anprc152"			//NATO
 	//"tf_pnr1000a",		//CSAT
 	//"tf_anprc154",		//AAF
-	"tf_microdagr"			//Used to program Rifleman Radios
+	//"tf_microdagr"			//Used to program Rifleman Radios
 ];
 // TFAR Backpacks are already handled by @XLA_FixedArsenal itself
 
@@ -541,11 +541,23 @@ _availableGuns 	= [
     "SMA_Mk16_black",
     "SMA_Mk17",
     "SMA_Mk17_black",
-    "hgun_P07_F"
+    "hgun_P07_F",
+    "Rangefinder",
+    "hgun_Rook40_F",
+    "hlc_smg_mp5k"
    ];
+
 _availableMagazines 	= [];
-_availableAttachments = [];
-_availableItems 			= [
+_availableAttachments = [ 
+	"SMA_eotech552",
+	"FHQ_acc_LLM01F",
+	"FHQ_acc_ANPEQ15_black",
+	"FHQ_optic_AC11704",
+	"FHQ_optic_AC11704_tan",
+	"FHQ_optic_MARS"
+	];
+
+_availableItems = [
 	"L_Shemagh_Gry",
 	"L_Shemagh_OD",
 	"L_Shemagh_Red",
@@ -597,7 +609,6 @@ _availableItems = [
 	"ItemMap",
 	"ItemCompass",
 	"ItemWatch",
-	"tf_anprc152",
 	"ItemGPS",
 	"AGM_NVG_Wide"
 ];
@@ -631,6 +642,10 @@ _availableMagazines = [
 "30Rnd_45ACP_Mag_SMG_01_Tracer_Green",
 "30Rnd_45ACP_Mag_SMG_01",
 "30Rnd_45ACP_Mag_SMG_01_Tracer_Green",
+"16Rnd_9x21_Mag",
+"hlc_30Rnd_9x19_B_MP5",
+"hlc_30Rnd_9x19_GD_MP5",
+"hlc_30Rnd_9x19_SD_MP5",
 "1Rnd_HE_Grenade_shell",
 "1Rnd_SmokeBlue_Grenade_shell",
 "1Rnd_SmokeGreen_Grenade_shell",
@@ -642,7 +657,20 @@ _availableMagazines = [
 "UGL_FlareYellow_F",
 "UGL_FlareWhite_F",
 "UGL_FlareCIR_F",
-"16Rnd_9x21_Mag"
+"HandGrenade",
+"SmokeShell",
+"SmokeShellYellow",
+"SmokeShellRed",
+"SmokeShellGreen",
+"SmokeShellPurple",
+"SmokeShellBlue",
+"SmokeShellOrange",
+"Chemlight_green",
+"Chemlight_red",
+"Chemlight_yellow",
+"Chemlight_blue",
+"B_IR_Grenade",
+"SLAMDirectionalMine_Wire_Mag"
 ];
 
 
