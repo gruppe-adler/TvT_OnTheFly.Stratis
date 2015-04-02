@@ -630,6 +630,10 @@ _availableMagazines = [
 	"hlc_30Rnd_762x39_t_ak",
 	"hlc_45Rnd_762x39_m_rpk",
 	"hlc_45Rnd_762x39_t_rpk",
+	"hlc_30Rnd_545x39_B_AK",
+	"hlc_30Rnd_545x39_t_ak",
+	"hlc_30Rnd_545x39_EP_ak",
+	"hlc_45Rnd_545x39_t_rpk",
 	"16Rnd_9x21_Mag"
 ];
 
