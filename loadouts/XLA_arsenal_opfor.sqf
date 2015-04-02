@@ -373,11 +373,11 @@ _CupGuns = [
 // -------------------------------------------------------------------
 _tfarItems = [
 	//Rifleman radios
-	"tf_rf7800str",
-	"tf_anprc152",			//NATO
+	//"tf_rf7800str",
+	//"tf_anprc152",			//NATO
 	//"tf_pnr1000a",		//CSAT
 	//"tf_anprc154",		//AAF
-	"tf_microdagr"			//Used to program Rifleman Radios
+	//"tf_microdagr"			//Used to program Rifleman Radios
 ];
 // TFAR Backpacks are already handled by @XLA_FixedArsenal itself
 
@@ -537,6 +537,7 @@ _availableGuns 				= [
 	"hlc_rifle_aks74",
 	"hlc_rifle_aks74u",
 	"hlc_rifle_aek971",
+	"Binocular",
 	"hgun_P07_F"
 	];
 _availableMagazines 	= [];
@@ -609,8 +610,17 @@ _availableItems = [
 	"ItemMap",
 	"ItemCompass",
 	"ItemWatch",
-	"tf_anprc152",
-	"ItemGPS"
+	"tf_fadak",
+	"ItemGPS",
+	"AGM_Earbuds",
+	"tf_fadak",
+	"L_Shemagh_Red",
+	"NeckTight_Tan",
+	"LBG_Shemagh_Gry",
+	"G_Balaclava_blk",
+	"G_Balaclava_oli",
+	"G_Bandanna_tan",
+	"G_Bandanna_oli"
 ];
 
 _availableBackpacks = [
@@ -662,7 +672,6 @@ _availableGuns = _availableGuns
 + _agm_medical_Weapons
 + _agm_overheating_Weapons
 + _agm_parachute_Weapons
-+ _agm_vector_Weapons
 + _agm_wind_Weapons;
 
 
