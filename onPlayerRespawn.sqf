@@ -61,4 +61,4 @@ _unit addAction["<t color='#d18d1f'>" + localize "str_GRAD_action_beginspectator
 sleep 0.1;
 _unit moveInCargo spectator_vehicle;
 // start spec cam
-[_unit] execVM "spectator\callSpectator.sqf";
+["forced"] spawn CSSA3_fnc_createSpectateDialog;

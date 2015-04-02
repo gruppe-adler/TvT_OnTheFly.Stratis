@@ -4,15 +4,22 @@ overviewText = "Aufständische gegen Bundeswehr"; //appears in overview and load
 onLoadName = "TvT_OnTheFly"; //mission name for loading screen only
 overviewPicture = ""; //mission picture for loading screen only
 onLoadMissionTime = True;
-respawn = 3;
 respawnDelay = 3; // NOTE: ar3play relies on this being slower than the ar3play loop!
 disabledAI = 0; //1
 enableDebugConsole = 1;
 loadScreen = "pic\loading.jpg";
 
+//respawnDelay = 9999999; // 9999999 or greater = No Respawn
+//Changes respawn, respawnDialog and respawnTemplates parameters.
+
+// IMPORTANT ABOVE PLANK
+#include "CSSA3\CSSA3_header.hpp"
+
 #include "plank\plank.h"
-#include "GUI\defines.hpp"
-#include "GUI\dialog.hpp"
+//#include "GUI\defines.hpp"  // cant be in, when cssa3_header.hpp is included!
+
+
+
 
 class Header
 {

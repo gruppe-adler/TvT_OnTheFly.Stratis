@@ -15,6 +15,8 @@ if (OPFOR_TELEPORTED) then {
 	[localize "str_GRAD_jip"] call AGM_Core_fnc_displayTextStructured;
 };
 
+[] execVM "CSSA3\CSSA3_init.sqf";
+
 
 // global options
 did_replay = false;
