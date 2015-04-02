@@ -40,7 +40,7 @@ class Params
 		default = 0;
     };
 
-	class RestrictedVehicles
+	class APCVSAT
 	{
 		title = "One of those vehicles for each side";
 		values[] = {0, 1};

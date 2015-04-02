@@ -30,11 +30,11 @@ if (_side == west) then {
 
 	// REMOVE SPAWN ACTIONS
 	
-	if (APC_VS_AT) exitWith {
+	if (!APC_VS_AT) exitWith {
 		player removeAction createVehicleHEMTT;
 		player removeAction createVehicleLittlebird;
-	[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
-	};
+		[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
+		};
 	player removeAction createVehicleAPC;
 	[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
 	
@@ -48,9 +48,7 @@ if (_side == east) then {
 	// REMOVE SPAWN ACTIONS
 	
 	
-	if (!APC_VS_AT) then {
-			
-	};
+		
 	player removeAction createVehicleTransport; 
 	player removeAction createVehicleTactical;
 	player removeAction createVehicleMortar;
