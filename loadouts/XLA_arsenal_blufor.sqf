@@ -527,8 +527,8 @@ _tfarItems = [
 // 		Combine lists
 // -------------------------------------------------------------------
 
-_availableGuns 				= [
- 	"SMA_Steyr_AUG_BLACK_F"
+_availableGuns 	= [
+ 	"SMA_Steyr_AUG_BLACK_F",
     "SMA_HK416afg",
     "SMA_HK416vfg",
     "SMA_HK417afg",

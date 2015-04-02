@@ -30,12 +30,13 @@ if (_side == west) then {
 
 	// REMOVE SPAWN ACTIONS
 	
-	if (RESTRICTED_VEHICLES) exitWith {
+	if (APC_VS_AT) exitWith {
 		player removeAction createVehicleHEMTT;
 		player removeAction createVehicleLittlebird;
 	[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
 	};
 	player removeAction createVehicleAPC;
+	[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
 	
 	
 };
@@ -47,7 +48,7 @@ if (_side == east) then {
 	// REMOVE SPAWN ACTIONS
 	
 	
-	if (!RESTRICTED_VEHICLES) then {
+	if (!APC_VS_AT) then {
 			
 	};
 	player removeAction createVehicleTransport; 
@@ -83,6 +84,7 @@ if (_side == east) then {
 		opfor_rpg_crate addweaponcargoglobal ["tf47_at4_heat", 5]; 
 
 		[localize "str_GRAD_at4Spawned"] call AGM_Core_fnc_displayTextStructured;
+		player removeAction createVehicleAt4Box;
 	};
 
 

@@ -43,9 +43,9 @@ class Params
 	class RestrictedVehicles
 	{
 		title = "One of those vehicles for each side";
-		values[] = {true, false};
-		texts[] = {"HEMTT, Littlebird / Transporter, Tactical, Mortar","same but with additional APC / same but with additional At4 Launchers"};
-		default = false;
+		values[] = {0, 1};
+		texts[] = {"HEMTT, Littlebird / Transporter, Tactical, Mortar","same but +APC / same but +At4 Launchers"};
+		default = 0;
 	};
 
 	class UniformCamo
