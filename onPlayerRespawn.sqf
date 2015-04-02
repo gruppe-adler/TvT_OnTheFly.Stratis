@@ -40,7 +40,7 @@ if (WINCONDITIONOPFOR || WINCONDITIONBLUFOR || BLUFOR_CAPTURED || BLUFOR_SURREND
 	sleep 0.2;
 	hintsilent "Replay loaded.";
 	[] execVM "after_action_reporter_pimped\reveal.sqf";
-	[] execVM "after_action_reporter_pimped\reveal_player.sqf";
+	//[] execVM "after_action_reporter_pimped\reveal_player.sqf";
 	};
 };
 
