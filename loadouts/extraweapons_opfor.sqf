@@ -1,7 +1,7 @@
 _crate_opfor = _this select 0;
 
 
-clearWeaponCargoGlobal _crate_opfor; clearItemCargoGlobal _crate_opfor; clearMagazineCargoGlobal _crate_opfor; clearBackpackCargo _crate_opfor;
+clearWeaponCargoGlobal _crate_opfor; clearItemCargoGlobal _crate_opfor; clearMagazineCargoGlobal _crate_opfor; clearBackpackCargoGlobal _crate_opfor;
 
 _crate_opfor addItemCargoGlobal ["AGM_CableTie", 10];
 _crate_opfor addItemCargoGlobal ["SmokeShellRed", 30];

@@ -29,12 +29,15 @@ if (_side == west) then {
 
 
 	// REMOVE SPAWN ACTIONS
-	player removeAction createVehicleHEMTT;
-
-	if (RESTRICTED_VEHICLES) exitWith {};
 	
-	player removeAction createVehicleLittlebird;
+	if (RESTRICTED_VEHICLES) exitWith {
+		player removeAction createVehicleHEMTT;
+		player removeAction createVehicleLittlebird;
 	[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
+	};
+	player removeAction createVehicleAPC;
+	
+	
 };
 
 
@@ -42,13 +45,15 @@ if (_side == west) then {
 if (_side == east) then {
 
 	// REMOVE SPAWN ACTIONS
-	player removeAction createVehicleTransport; 
+	
 	
 	if (!RESTRICTED_VEHICLES) then {
-		player removeAction createVehicleTactical;
-		player removeAction createVehicleMortar;
+			
 	};
-
+	player removeAction createVehicleTransport; 
+	player removeAction createVehicleTactical;
+	player removeAction createVehicleMortar;
+	
 	
 	// SPAWN MORTAR
 	if (_vehicle == "O_G_Mortar_01_F") exitWith {
@@ -60,6 +65,24 @@ if (_side == east) then {
 		opfor_vehicle = _vehicle createVehicle _spawn_area2;
 		opfor_vehicle setVehicleAmmo 0.1;
 		[localize "str_GRAD_mortarSpawned"] call AGM_Core_fnc_displayTextStructured;
+	};
+
+	if (_vehicle == "box_nato_wpslaunch_f") exitWith {
+		while{ count _spawn_area < 1} do {
+		_spawn_area = [_centre,5,_max_distance,3,0,0,0] call BIS_fnc_findSafePos;
+		_max_distance = _max_distance + 10;
+		};
+		[[[_spawn_area,_side],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+		opfor_box = _vehicle createVehicle _spawn_area;
+
+		clearWeaponCargoGlobal opfor_box; 
+		clearItemCargoGlobal opfor_box; 
+		clearMagazineCargoGlobal opfor_box; 
+		clearBackpackCargoGlobal opfor_box;
+
+		opfor_rpg_crate addweaponcargoglobal ["tf47_at4_heat", 5]; 
+
+		[localize "str_GRAD_at4Spawned"] call AGM_Core_fnc_displayTextStructured;
 	};
 
 

@@ -119,6 +119,11 @@
                 <English>Mortar spawned</English>
                 <German>Mörser gespawned</German>
             </Key>
+             <Key ID="str_GRAD_at4Spawned">
+                <Original>AT4 Crate spawned</Original>
+                <English>AT4 Crate spawned</English>
+                <German>AT4 Box gespawned</German>
+            </Key>
         </Container>
         <Container name="mission_end">
             <Key ID="str_GRAD_winmsg">

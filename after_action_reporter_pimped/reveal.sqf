@@ -37,7 +37,8 @@ checkArrayLength = {
 getSideMarkerColor = {
 	_mySide = _this select 0;
 
-	_result = "ColorCivilian";	
+	_result = "ColorCivilian";
+
 		if(_mySide == west) then 
 			{
 				_result = "ColorBLUFOR";
@@ -78,17 +79,17 @@ getSideMarkerColor = {
 					];
 	
 	// CREATE EVERY UNIT MARKER ONLY ONCE
-	for [{_k=0}, {_k<=count players}, {_k=_k+1}] do {                    
-	_prepare_unit = ((((local_recording) select 1) select 1) select _k);
-	_prepare_side = (((((local_recording) select 0) select 1) select _k) select 0);
-	_prepare_pos = ((((((local_recording) select 1) select 1) select _k) select 1);
-	_prepare_dir = ((((((local_recording) select 1) select 1) select _k) select 2);
-	_prepare_kindof = (((((local_recording) select 1) select 0) select _k) select 3);
-	_prepare_veh = (((((local_recording) select 1) select 1) select _k) select 4);
+	for [{_k=0}, {_k<count players}, {_k=_k+1}] do {                    
+	_prepare_unit = (((((local_recording) select 0) select 1) select _k) select 0);
+	_prepare_side = (((((local_recording) select 0) select 1) select _k) select 1);
+	_prepare_pos = (((((local_recording) select 0) select 1) select _k) select 2);
+	_prepare_dir = (((((local_recording) select 0) select 1) select _k) select 3);
+	_prepare_kindof = (((((local_recording) select 0) select 1) select _k) select 4);
+	_prepare_veh = (((((local_recording) select 0) select 1) select _k) select 5);
 
 
-	//[current_daytime,[_unit, [_side,[_pos,_dir,_kindof,_veh]]]
-//hintSilent format ["%1", ((((((local_recording) select 1) select 0) select 1) select 1) select 0)];
+	
+//single_current_values = [_unit,_side,_pos,_dir,_kindof,_veh];
 
 //mil triangle:
 //hintSilent format ["%1", (((((local_recording) select 1) select 0) select 1) select 3)];
@@ -103,36 +104,44 @@ getSideMarkerColor = {
 	current_markers = current_markers + [_marker];
 	};
 
+	sleep 1; //debug
 
 	while {true} do 
 	{
 		
-		current_recording_length = count ((local_recording) select local_recording_counter);
+		//current_recording_length = count ((local_recording) select local_recording_counter);
 		
 
 		
 
 		
-		for [{_j=0}, {_j<current_recording_length}, {_j=_j+1}] do
-		{
-			_daytime = [(((local_recording) select local_recording_counter) select _i) select 0] call getDayTimeConverted;
+		//for [{_j=0}, {_j<current_recording_length}, {_j=_j+1}] do {
+
+			_daytime = [(((local_recording) select local_recording_counter) select 0)] call getDayTimeConverted;
 			hintSilent format ["Replay Game Time" + " %1",_daytime];
 
-			
+			for [{_a=0}, {_a<count current_markers}, {_a=_a+1}] do
 			{
-				_curMarker = current_markers select _x;
-				_pos = ((((((local_recording) select local_recording_counter) select 1) select 1) select 1) select 1);
-				_dir = ((((((local_recording) select local_recording_counter) select 1) select 1) select 1) select 2);
-				_kindof = ((((((local_recording) select local_recording_counter) select 1) select 1) select 1) select 3);
-				_veh= ((((((local_recording) select local_recording_counter) select 1) select 1) select 1) select 4);
+				_curMarker = current_markers select _a;
+				_unit = (((((local_recording) select local_recording_counter) select 1) select _a) select 0);
+
+				_pos = [((((((local_recording) select local_recording_counter) select 1) select _a) select 2) select 0),((((((local_recording) select local_recording_counter) select 1) select _a) select 2) select 1)];
+
+
+				_dir = (((((local_recording) select local_recording_counter) select 1) select _a) select 3);
+				_kindof = (((((local_recording) select local_recording_counter) select 1) select _a) select 4);
+				_veh= (((((local_recording) select local_recording_counter) select 1) select _a) select 5);
 
 				//[current_daytime,[_unit, [_side,[_pos,_dir,_kindof,_veh]]]
 
+				//hintSilent format ["moving marker %1 to %2", _curMarker, _pos];
 
+				
 				_curMarker setMarkerPos _pos;
-				_curMarker setMarkerShape _kindof;
 				_curMarker setMarkerDir _dir;
-
+				_curMarker setMarkerType _kindof;
+				
+				//sleep 0.1;
 
 				if (_kindof == "KIA" && !(_unit in deadUnitMarkers)) then {
 					_marker_kia = createMarker [format["kia_%1",_unit],_position];
@@ -140,12 +149,13 @@ getSideMarkerColor = {
 					_marker_kia setMarkerType _kindof;
 					_marker_kia setMarkerPos _position;
 					_marker_kia setMarkerDir _dir;
-					_marker_kia setMarkerColor ([_side] call getSideMarkerColor);
+					_marker_kia setMarkerColor ([(((((local_recording) select local_recording_counter) select 1) select _a) select 1)] call getSideMarkerColor);
 					deadUnitMarkers = deadUnitMarkers + [_unit];
+
 				};
 				
-			} forEach current_markers;
-		};
+			};
+		//};
 
 		
 		local_recording_counter = local_recording_counter + local_recording_playback_speed;
@@ -157,7 +167,7 @@ getSideMarkerColor = {
 			["Replay restarted."] call AGM_Core_fnc_displayTextStructured;	
 		};
 		
-		sleep 1;
+		sleep 0.5;
 		
 		//diag_log format ["CURRENT VALUES %1, counter is %2", (local_recording) select local_recording_counter, local_recording_counter];
 		};

@@ -2,7 +2,7 @@ _crate_blufor = _this select 0;
 
 
 
-clearWeaponCargoGlobal _crate_blufor; clearItemCargoGlobal _crate_blufor; clearMagazineCargoGlobal _crate_blufor; clearBackpackCargo _crate_blufor;
+clearWeaponCargoGlobal _crate_blufor; clearItemCargoGlobal _crate_blufor; clearMagazineCargoGlobal _crate_blufor; clearBackpackCargoGlobal _crate_blufor;
 
 _crate_blufor addItemCargoGlobal ["AGM_CableTie", 10];
 _crate_blufor addItemCargoGlobal ["SmokeShellBlue", 30];

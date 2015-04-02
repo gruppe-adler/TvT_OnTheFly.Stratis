@@ -881,7 +881,7 @@ class Mission
 			leader=1;
 			skill=0.5;
 			text="whiteboard";
-			init="this addAction[""Close Mission"", ""objectives\endmission.sqf"", nil, 6, True, True, """", ""!END_MISSION_TRIGGERED && MISSION_COMPLETED""];";
+			init="this addAction[""Close Mission"", ""objectives\endmission.sqf"", nil, 6, True, True, """", ""!END_MISSION_TRIGGERED && MISSION_COMPLETED""]; this allowDamage false;";
 		};
 		class Item2
 		{
@@ -911,6 +911,7 @@ class Mission
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			text="extraweapons_blufor";
+			init="this allowDamage false;";
 		};
 		class Item5
 		{
@@ -920,6 +921,7 @@ class Mission
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			text="extraweapons_opfor";
+			init="this allowDamage false;";
 		};
 	};
 	class Markers

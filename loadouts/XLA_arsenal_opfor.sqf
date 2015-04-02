@@ -528,16 +528,9 @@ _tfarItems = [
 // -------------------------------------------------------------------
 
 _availableGuns 				= [
-"hlc_rifle_L1A1SLR",
-	"hlc_rifle_FAL5061",
-	"hlc_rifle_ak47",
-	"hlc_rifle_ak74",
-	"hlc_rifle_ak74_dirty",
-	"hlc_rifle_akm",
-	"hlc_rifle_aks74",
-	"hlc_rifle_aks74u",
-	"hlc_rifle_aek971",
-	"hgun_ACPC2_F"
+	"hlc_rifle_ak12",
+	"hlc_rifle_aku12",
+	"hgun_P07_F"
 	];
 _availableMagazines 	= [];
 _availableAttachments = [];
@@ -603,11 +596,30 @@ _availableHeadgear 		=  [
 	"H_Watchcap_blk"
 ];
 _availableGoggles  		= [];
+
+
+_availableItems = [
+	"ItemMap",
+	"ItemCompass",
+	"ItemWatch",
+	"tf_anprc152",
+	"ItemGPS"
+];
+
 _availableBackpacks = [
 	"B_Carryall_mcamo",
 	"B_AssaultPack_dgtl",
 	"B_Carryall_cbr",
 	"B_AssaultPack_khk"
+];
+
+_availableMagazines = [
+	"hlc_30Rnd_545x39_S_AK",
+	"hlc_45Rnd_545x39_t_rpk",
+	"hlc_30Rnd_545x39_EP_ak",
+	"hlc_30Rnd_545x39_t_ak",
+	"hlc_30Rnd_545x39_B_AK",
+	"16Rnd_9x21_Mag"
 ];
 
 _availableAttachments = _availableAttachments 
@@ -664,7 +676,7 @@ if (isServer) then {
 
 		// Start the arsenal on it
 		_addActionText = "<t color='#45B6EA'>" + localize "str_GRAD_openSupplyBox";
-		["AmmoboxInit",[_box,false,true,_addActionText,false]] spawn XLA_fnc_arsenal;
+		["AmmoboxInit",[_box,false,{true},_addActionText,false]] spawn XLA_fnc_arsenal;
 
 
 

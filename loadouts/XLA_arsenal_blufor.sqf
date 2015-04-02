@@ -528,13 +528,7 @@ _tfarItems = [
 // -------------------------------------------------------------------
 
 _availableGuns 				= [
- "hlc_rifle_bcmjack",
-    "hlc_rifle_RU556",
-    "hlc_rifle_RU5562",
-    "SMA_AUG_A3_F",
-    "SMA_AUG_A3_MCAM_F",
-    "SMA_AUG_A3_KRYPT_F",
-    "hlc_rifle_M4",
+ 	"SMA_Steyr_AUG_BLACK_F"
     "SMA_HK416afg",
     "SMA_HK416vfg",
     "SMA_HK417afg",
@@ -547,23 +541,44 @@ _availableGuns 				= [
     "SMA_Mk16_black",
     "SMA_Mk17",
     "SMA_Mk17_black",
-    "SMA_STG_E4_F",
-    "SMA_STG_E4_BLACK_F",
-    "arifle_MX_F",
-    "arifle_MX_Black_F",
-    "SMA_SKS_F",
-    "SMA_SKS_TAN_F",
-    "hgun_Pistol_heavy_01_F",
-    "hlc_smg_mp5k",
-    "hgun_ACPC2_F"
+    "hgun_P07_F"
    ];
 _availableMagazines 	= [];
 _availableAttachments = [];
-_availableItems 			= [];
-_availableUniforms 		= _3CB_uniforms;
+_availableItems 			= [
+	"L_Shemagh_Gry",
+	"L_Shemagh_OD",
+	"L_Shemagh_Red",
+	"L_Shemagh_Tan",
+	"L_shemagh_white",
+	"NeckTight_Dmaripat",
+	"NeckTight_Gry",
+	"NeckTight_OD",
+	"NeckTight_Red",
+	"NeckTight_Tan",
+	"NeckTight_white",
+	"G_Balaclava_blk",
+	"G_Balaclava_oli"
+];
+_availableUniforms = [
+	"ARC_GER_Tropentarn_Uniform_Light",
+	"ARC_GER_Flecktarn_Uniform_Light",
+	"GER_Tropentarn_Officer_Uniform",
+	"GER_Flecktarn_Officer_Uniform",
+	"ARC_GER_Tropentarn_Uniform_vest",
+	"ARC_GER_Flecktarn_Uniform_vest",
+	"ARC_GER_Tropentarn_Uniform_tshirt",
+	"ARC_GER_Flecktarn_Uniform_tshirt"
+];
 _availableVests = [
     "ARC_GER_Flecktarn_Plate_Carrier_H",
-    "ARC_GER_Tropentarn_Plate_Carrier_H"
+    "ARC_GER_Tropentarn_Plate_Carrier_H",
+    "ARC_GER_Flecktarn_PlateCarrier_1",
+    "ARC_GER_Tropentarn_PlateCarrier_1",
+    "ARC_GER_Flecktarn_PlateCarrier_2",
+    "ARC_GER_Tropentarn_PlateCarrier_2",
+    "ARC_GER_Tropentarn_Plate_Carrier",
+    "ARC_GER_Flecktarn_Plate_Carrier"
 ];
 _availableHeadgear = [
     "H_Cap_headphones",
@@ -572,15 +587,61 @@ _availableHeadgear = [
     "ARC_GER_Tropentarn_Helmet",
     "ARC_GER_Flecktarn_Helmet",
     "ARC_GER_Flecktarn_Helmet_simple",
-    "ARC_GER_Tropentarn_Helmet_simple"
+    "ARC_GER_Tropentarn_Helmet_simple",
+    "ARC_GER_Tropentarn_Helmet_Light",
+    "ARC_GER_Flecktarn_Helmet_Light"
 ];
 _availableGoggles  		= [];
+
+_availableItems = [
+	"ItemMap",
+	"ItemCompass",
+	"ItemWatch",
+	"tf_anprc152",
+	"ItemGPS",
+	"AGM_NVG_Wide"
+];
+
+
 _availableBackpacks = [
     "ARC_GER_Backpack_compact_Tropentarn",
     "ARC_GER_Backpack_Tropentarn_Med",
     "ARC_GER_Backpack_Flecktarn_Med",
-    "ARC_GER_Backpack_compact_Flecktarn"
+    "ARC_GER_Backpack_compact_Flecktarn",
+    "ARC_GER_Backpack_Tropentarn",
+    "ARC_GER_Backpack_Flecktarn",
+    "ARC_GER_Kitbag_compact_Tropentarn",
+    "ARC_GER_Kitbag_compact_Flecktarn",
+    "ARC_GER_Backpack_Carryall_Tropentarn",
+    "ARC_GER_Backpack_Carryall_Flecktarn"
 ];
+
+_availableMagazines = [
+"UGL_FlareRed_F",
+"UGL_FlareGreen_F",
+"SMA_30Rnd_556x45_M855A1_Tracer",
+"SMA_30Rnd_556x45_M855A1",
+"SMA_30Rnd_556x45_M855A1_IR",
+"SMA_30Rnd_556x45_Mk318",
+"SMA_30Rnd_556x45_Mk318_Tracer",
+"SMA_30Rnd_556x45_Mk318_IR",
+"SMA_30Rnd_556x45_Mk262",
+"SMA_30Rnd_556x45_Mk262_Tracer",
+"SMA_30Rnd_556x45_Mk262_IR",
+"1Rnd_HE_Grenade_shell",
+"1Rnd_SmokeBlue_Grenade_shell",
+"1Rnd_SmokeGreen_Grenade_shell",
+"1Rnd_SmokeOrange_Grenade_shell",
+"1Rnd_SmokePurple_Grenade_shell",
+"1Rnd_SmokeRed_Grenade_shell",
+"1Rnd_Smoke_Grenade_shell",
+"1Rnd_SmokeYellow_Grenade_shell",
+"UGL_FlareYellow_F",
+"UGL_FlareWhite_F",
+"UGL_FlareCIR_F",
+"16Rnd_9x21_Mag"
+];
+
 
 _availableAttachments = _availableAttachments 
 + _agm_ballistics_attachments;
@@ -636,7 +697,7 @@ if (isServer) then {
 
 		// Start the arsenal on it
 		_addActionText = "<t color='#45B6EA'>" + localize "str_GRAD_openSupplyBox";
-		["AmmoboxInit",[_box,false,true,_addActionText,false]] spawn XLA_fnc_arsenal;
+		["AmmoboxInit",[_box,false,{true},_addActionText,false]] spawn XLA_fnc_arsenal;
 
 
 

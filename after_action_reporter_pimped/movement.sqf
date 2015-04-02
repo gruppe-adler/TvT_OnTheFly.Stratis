@@ -81,16 +81,16 @@ while{!replay_end_condition} do
 
 
 		// current values: position, side, kindof
-		single_current_values = [_side,_pos,_dir,_kindof,_veh];
+		single_current_values = [_unit,_side,_pos,_dir,_kindof,_veh];
 
 		// prevent markers to render double on the same position (e.g. full team in vehicle)
 		if (!(_pos in all_current_values) && !(_veh in all_current_values)) then {
-			current_unit = [_unit, single_current_values];
-		all_current_values = all_current_values + [current_unit];
+			
+		all_current_values = all_current_values + [single_current_values];
 		};
-		current_unit = [];
+		
 	} forEach players;
-	local_recording = local_recording + [current_daytime,all_current_values];
+	local_recording = local_recording + [[current_daytime,all_current_values]];
 	all_current_values = [];
 	sleep recording_speed;
 
