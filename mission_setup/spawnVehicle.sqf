@@ -33,6 +33,8 @@ if (_side == west) then {
 	if (_vehicle == "B_APC_Tracked_01_CRV_F") exitWith {
 		player removeAction createVehicleAPC;
 		[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
+
+		[[[_spawn_area,_side],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 		
 		};
 	player removeAction createVehicleHEMTT;
@@ -52,9 +54,7 @@ if (_side == east) then {
 	
 	
 		
-	player removeAction createVehicleTransport; 
-	player removeAction createVehicleTactical;
-	player removeAction createVehicleMortar;
+	
 	
 	
 	// SPAWN MORTAR
@@ -67,6 +67,9 @@ if (_side == east) then {
 		opfor_vehicle = _vehicle createVehicle _spawn_area2;
 		opfor_vehicle setVehicleAmmo 0.1;
 		[localize "str_GRAD_mortarSpawned"] call AGM_Core_fnc_displayTextStructured;
+		player removeAction createVehicleTransport; 
+		player removeAction createVehicleTactical;
+		player removeAction createVehicleMortar;
 	};
 
 	if (_vehicle == "box_nato_wpslaunch_f") exitWith {
@@ -81,12 +84,16 @@ if (_side == east) then {
 		clearItemCargoGlobal opfor_box; 
 		clearMagazineCargoGlobal opfor_box; 
 		clearBackpackCargoGlobal opfor_box;
-
-		opfor_rpg_crate addweaponcargoglobal ["tf47_at4_heat", 5]; 
+		sleep 0.1;
+		opfor_box addweaponcargoglobal ["tf47_at4_heat", 5]; 
 
 		[localize "str_GRAD_at4Spawned"] call AGM_Core_fnc_displayTextStructured;
 		player removeAction createVehicleAt4Box;
+
+		[[[_spawn_area,_side],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 	};
+
+	
 
 
 	// SPAWN ANY OTHER OPFOR VEHICLE
@@ -100,6 +107,9 @@ if (_side == east) then {
 
 	// SET FUEL TO ZERO
 	opfor_vehicle setFuel 0;
+	player removeAction createVehicleTransport; 
+	player removeAction createVehicleTactical;
+	player removeAction createVehicleMortar;
 
 	[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
 	
