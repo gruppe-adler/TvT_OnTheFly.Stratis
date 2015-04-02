@@ -78,9 +78,13 @@ if (_side == east) then {
 		clearMagazineCargoGlobal opfor_box; 
 		clearBackpackCargoGlobal opfor_box;
 		sleep 0.1;
-		opfor_box addweaponcargoglobal ["tf47_at4_heat", 2];
-		opfor_box addweaponcargoglobal ["tf47_at4_hedp", 2];
-		opfor_box addweaponcargoglobal ["tf47_at4_hp", 2];
+		opfor_box addweaponcargoglobal ["tf47_m3maaws", 2];
+		opfor_box addweaponcargoglobal ["tf47_m3maaws_heat", 1];
+		opfor_box addweaponcargoglobal ["tf47_m3maaws_hedp", 1];
+		opfor_box addweaponcargoglobal ["tf47_m3maaws_he", 1];
+		opfor_box addweaponcargoglobal ["tf47_m3maaws_smoke", 4];
+		opfor_box addweaponcargoglobal ["tf47_m3maaws_illum", 4];
+
 		
 
 		[localize "str_GRAD_at4Spawned"] call AGM_Core_fnc_displayTextStructured;
