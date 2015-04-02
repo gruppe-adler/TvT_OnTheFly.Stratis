@@ -2,7 +2,7 @@
 TIME_OF_DAY = paramsArray select 0;
 WEATHER_SETTING = paramsArray select 1;
 APC_VS_AT = (paramsArray select 2) == 1;
-UNIFORM_CAMO = paramsArray select 3;
+TROPENTARN = (paramsArray select 3) == 1;
 MINIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 4;
 MAXIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 5;
 TIME_ACCELERATION = paramsArray select 6;
@@ -17,7 +17,6 @@ if (OPFOR_TELEPORTED) then {
 
 
 // global options
-TROPENTARN = false;
 did_replay = false;
 
 // spawn teleports done?
@@ -52,12 +51,6 @@ if (isServer) then {
 	publicVariable "SPECTATOR_LIST";
 };
 
-if (!isServer) then {
-    // tropentarn or flecktarn?
-    if (UNIFORM_CAMO == 1) then {
-        TROPENTARN = true;
-    };
-};
 
 // respawn helper object, will be moved to objective location in teleport.sqf
 opfor_teleport = opfor_teamlead addAction["<t color=""#93E352"">" + localize "str_GRAD_choose_spawn_location",{[[[false], "mission_setup\teleport.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && !OPFOR_TELEPORTED"];

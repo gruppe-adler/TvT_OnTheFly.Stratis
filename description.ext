@@ -48,7 +48,7 @@ class Params
 		default = 0;
 	};
 
-	class UniformCamo
+	class Tropentarn
 	{
 		title = "Forces";
 		values[] = {0,1};
