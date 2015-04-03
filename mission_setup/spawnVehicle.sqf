@@ -25,7 +25,7 @@ if (_side == west) then {
 	_max_distance = _max_distance + 10;
 	};
 	[[[_spawn_area,_side],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
-	blufor_vehicle = _vehicle createVehicle _spawn_area;
+	_blufor_vehicle = _vehicle createVehicle _spawn_area;
 
 
 	// REMOVE SPAWN ACTIONS
@@ -34,7 +34,7 @@ if (_side == west) then {
 		player removeAction createVehicleAPC;
 		[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
 		sleep 0.1;
-		_vehicle disableTIEquipment true;
+		_blufor_vehicle disableTIEquipment true;
 		};
 
 	player removeAction createVehicleHEMTT;
