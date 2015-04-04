@@ -144,10 +144,5 @@ if !(isDedicated) then {
 if (isServer) then {
 	waitUntil {OPFOR_TELEPORTED && BLUFOR_TELEPORTED};
 
-	SYSTEM_LOG_LEVEL = 0;
-	if (ENABLE_REPLAY) then {
-	        execVM "export-missiondata.sqf";
-	};
-
 	[] execVM "after_action_reporter_pimped\movement.sqf";
 };
