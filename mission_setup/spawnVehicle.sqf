@@ -30,7 +30,7 @@ if (_side == west) then {
 
 	// REMOVE SPAWN ACTIONS
 	
-	if (_vehicle == "B_APC_Tracked_01_CRV_F") exitWith {
+	if (_vehicle == "B_MBT_01_TUSK_F") exitWith {
 		player removeAction createVehicleAPC;
 		[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
 		sleep 0.1;

@@ -13,7 +13,7 @@ vehicle_classname_littlebird = "AH6_Flecktarn";
 };
 vehicle_classname_hemtt = "B_Truck_01_covered_F";
 vehicle_classname_at4_box = "box_nato_wpslaunch_f";
-vehicle_classname_apc = "B_APC_Tracked_01_CRV_F";
+vehicle_classname_apc = "B_MBT_01_TUSK_F";
 
 if (player == opfor_teamlead) then {
 	player removeAction choose_vehicle_opfor; 
