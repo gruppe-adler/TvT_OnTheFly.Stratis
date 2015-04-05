@@ -541,7 +541,13 @@ _availableGuns 				= [
 	"hgun_P07_F"
 	];
 _availableMagazines 	= [];
-_availableAttachments = [];
+_availableAttachments = [
+"SMA_eotech552_3XDOWN",
+	"SMA_eotech552_3XDOWN_wdl",
+	"SMA_eotech552_3XDOWN_des",
+	"optic_Hamr",
+ 	"optic_Aco"
+	];
 _availableItems 			= [];
 _availableUniforms = [
 	"U_CAF_AG_EEUR_FATIGUES_01",
@@ -644,7 +650,23 @@ _availableMagazines = [
 	"hlc_30Rnd_545x39_t_ak",
 	"hlc_30Rnd_545x39_EP_ak",
 	"hlc_45Rnd_545x39_t_rpk",
-	"16Rnd_9x21_Mag"
+	"16Rnd_9x21_Mag",
+	"SMA_20Rnd_762x51mm_M80A1_EPR"
+	"SMA_20Rnd_762x51mm_M80A1_EPR_Tracer",
+	"SMA_20Rnd_762x51mm_M80A1_EPR_IR",
+	"SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range",
+	"SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer",
+	"SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_IR",
+	"SMA_20Rnd_762x51mm_Mk319_Mod_0_Ball_Barrier",
+	"SMA_20Rnd_762x51mm_Mk319_Mod_0_Ball_Barrier_Tracer",
+	"SMA_20Rnd_762x51mm_Mk319_Mod_0_Ball_Barrier_IR",
+	"SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic",
+	"SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic_Tracer",
+	"SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic_IR",
+
+
+	"SMA_30Rnd_762x39_SKS",
+	"SMA_30Rnd_762x39_SKS_Red"
 ];
 
 _availableAttachments = _availableAttachments 
