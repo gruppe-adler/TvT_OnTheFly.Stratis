@@ -41,27 +41,31 @@ while{!replay_end_condition} do
 		
 		if(vehicle _unit == _unit) then 
 		{
-			_kindof =  _side_prefix + "grad_iconman_ca";
+			_kindof =  "mil_triangle";
 		};
 		if(vehicle _unit isKindOf "Car") then 
 		{
-			_kindof =  _side_prefix + "grad_iconcar_ca";
+			_kindof =  _side_prefix + "motor_inf";
 		};
 		if(vehicle _unit isKindOf "Plane") then 
 		{
-			_kindof =  _side_prefix + "grad_iconplane_ca";
+			_kindof =  _side_prefix + "plane";
 		};
 		if(vehicle _unit isKindOf "Helicopter") then 
 		{
-			_kindof =  _side_prefix + "grad_iconheli_ca";
+			_kindof =  _side_prefix + "air";
 		};
 		if((vehicle _unit isKindOf "Tank") && (_side != civilian)) then 
 		{
-			_kindof =  _side_prefix + "grad_icontank_ca";
+			_kindof =  _side_prefix + "armor";
 		};
 		if(vehicle _unit isKindOf "Ship") then 
 		{	
-			 _kindof =  _side_prefix + "grad_iconship_ca";
+			if (side _unit == civilian) then {
+			 _kindof =  _side_prefix + "ship";
+			} else {
+			_kindof =  _side_prefix + "naval";
+			};
 		};
 		if(vehicle _unit isKindOf "StaticMortar") then 
 		{
@@ -69,7 +73,7 @@ while{!replay_end_condition} do
 		};
 
 		if (_unit getVariable ["AGM_isUnconscious", false]) then {
-			_kindof = "grad_iconmanvirtual_ca";
+			_kindof = "loc_Hospital";
 		};
 		if(!alive _unit) then {
 			_kindof = "KIA";

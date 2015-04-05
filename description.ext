@@ -20,7 +20,6 @@ loadScreen = "pic\loading.jpg";
 
 
 
-
 class Header
 {
 	gameType = Seize;
