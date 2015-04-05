@@ -78,12 +78,9 @@ if (_side == east) then {
 		clearMagazineCargoGlobal opfor_box; 
 		clearBackpackCargoGlobal opfor_box;
 		sleep 0.1;
-		opfor_box addweaponcargoglobal ["tf47_m3maaws", 2];
-		opfor_box addweaponcargoglobal ["tf47_m3maaws_heat", 1];
-		opfor_box addweaponcargoglobal ["tf47_m3maaws_hedp", 1];
-		opfor_box addweaponcargoglobal ["tf47_m3maaws_he", 1];
-		opfor_box addweaponcargoglobal ["tf47_m3maaws_smoke", 4];
-		opfor_box addweaponcargoglobal ["tf47_m3maaws_illum", 4];
+		opfor_box addweaponcargoglobal ["launch_RPG32_F", 4];
+		opfor_box addweaponcargoglobal ["RPG32_F", 4];
+		opfor_box addweaponcargoglobal ["RPG32_HE_F", 4];
 
 		
 
