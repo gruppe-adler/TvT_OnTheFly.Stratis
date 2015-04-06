@@ -90,7 +90,9 @@ if (isServer || isDedicated) then {
 		//current_recording_length = count ((local_recording) select local_recording_counter);
 		//for [{_j=0}, {_j<current_recording_length}, {_j=_j+1}] do {
 		_daytime = [(((local_recording) select local_recording_counter) select 0)] call getDayTimeConverted;
-		hintSilent format ["Replay Game Time" + " %1",_daytime];
+		
+		//hintSilent format ["Replay Game Time" + " %1",_daytime];
+
 		//change : **** ((count current_markers) - 1)
 		for [{_a=0}, {_a<((count current_markers) - 1)}, {_a=_a+1}] do
 		{
@@ -119,11 +121,11 @@ if (isServer || isDedicated) then {
 		//};
 		local_recording_counter = local_recording_counter + local_recording_playback_speed;
 			if (local_recording_counter > local_recording_length) exitWith {
-			["Replay finished."] call AGM_Core_fnc_displayTextStructured;
+			[{["Replay finished."] call AGM_Core_fnc_displayTextStructured;},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
 			};
 		if (local_recording_counter < 0) then {
 			local_recording_playback_speed = 1;
-			["Replay restarted."] call AGM_Core_fnc_displayTextStructured;
+			[{["Replay restarted."] call AGM_Core_fnc_displayTextStructured;},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
 			};
 		sleep 0.1;
 		//diag_log format ["CURRENT VALUES %1, counter is %2", (local_recording) select local_recording_counter, local_recording_counter];
