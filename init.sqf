@@ -1,7 +1,7 @@
 
 TIME_OF_DAY = paramsArray select 0;
 WEATHER_SETTING = paramsArray select 1;
-APC_VS_AT = (paramsArray select 2) == 1;
+MBT_VS_AT = (paramsArray select 2) == 1;
 TROPENTARN = (paramsArray select 3) == 1;
 MINIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 4;
 MAXIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 5;
@@ -44,7 +44,7 @@ if (isServer) then {
 	publicVariable "MISSION_COMPLETED";
 	bluforMarkerDrawn = false;
 	publicVariable "bluforMarkerDrawn";
-	publicVariable "APC_VS_AT";
+	publicVariable "MBT_VS_AT";
 	BLUFOR_SURRENDERED = false;
 	publicVariable "BLUFOR_SURRENDERED";
 	END_MISSION_TRIGGERED = false;

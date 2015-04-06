@@ -50,7 +50,7 @@ class Params
 	{
 		title = "One of those vehicles for each side";
 		values[] = {0, 1};
-		texts[] = {"HEMTT, Littlebird / Transporter, Tactical, Mortar","same but +APC / same but +At4 Launchers"};
+		texts[] = {"HEMTT, Littlebird / Transporter, Tactical, Mortar","same but +MBT / same but +At4 Launchers"};
 		default = 0;
 	};
 

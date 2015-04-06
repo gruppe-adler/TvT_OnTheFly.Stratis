@@ -26,7 +26,7 @@ if (player == opfor_teamlead) then {
 	 createVehicleMortar = opfor_teamlead addAction["<t color=""#93E352"">" + "Spawn Mortar",
 	 {[vehicle_position,vehicle_classname_mortar,east] execVM "mission_setup\spawnVehicle.sqf";}, _Args, 1, false, true, "","_this == _target"];
 
-	if (!APC_VS_AT) exitWith {};
+	if (!MBT_VS_AT) exitWith {};
 
 	 createVehicleAt4Box= opfor_teamlead addAction["<t color=""#93E352"">" + "Spawn AT4 Box",
  	{[vehicle_position,vehicle_classname_at4_box,east] execVM "mission_setup\spawnVehicle.sqf";}, _Args, 1, false, true, "","_this == _target"];
@@ -41,9 +41,9 @@ if (player == blufor_teamlead) then {
  	createVehicleLittlebird = blufor_teamlead addAction["<t color=""#93E352"">" + "Spawn Littlebird",
  	{[vehicle_position,vehicle_classname_littlebird,west] execVM "mission_setup\spawnVehicle.sqf";}, _Args, 1, false, true, "","_this == _target"];
 
- 	if (!APC_VS_AT) exitWith {};
+ 	if (!MBT_VS_AT) exitWith {};
 
- 	createVehicleAPC = blufor_teamlead addAction["<t color=""#93E352"">" + "Spawn APC",
+ 	createVehicleAPC = blufor_teamlead addAction["<t color=""#93E352"">" + "Spawn MBT",
 	{[vehicle_position,vehicle_classname_apc,west] execVM "mission_setup\spawnVehicle.sqf";}, _Args, 1, false, true, "","_this == _target"];
 
 

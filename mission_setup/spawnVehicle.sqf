@@ -79,9 +79,14 @@ if (_side == east) then {
 		clearBackpackCargoGlobal opfor_box;
 		sleep 0.1;
 		opfor_box addweaponcargoglobal ["launch_RPG32_F", 4];
-		opfor_box addweaponcargoglobal ["RPG32_F", 4];
-		opfor_box addweaponcargoglobal ["RPG32_HE_F", 4];
+		opfor_box addmagazinecargoglobal ["RPG32_F", 4];
+		opfor_box addmagazinecargoglobal ["RPG32_HE_F", 4];
 
+		opfor_box addweaponcargoglobal ["tf47_at4_heat", 4];
+		opfor_box addmagazinecargoglobal ["tf47_at4_m_HEAT", 4];
+
+		opfor_box addmagazinecargoglobal ["ATMine_Range_Mag", 4];
+		
 		
 
 		[localize "str_GRAD_at4Spawned"] call AGM_Core_fnc_displayTextStructured;
