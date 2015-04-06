@@ -663,6 +663,18 @@ _availableMagazines = [
 	"SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic",
 	"SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic_Tracer",
 	"SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic_IR",
+	"HandGrenade",
+	"SmokeShell",
+	"SmokeShellYellow",
+	"SmokeShellRed",
+	"SmokeShellGreen",
+	"SmokeShellPurple",
+	"SmokeShellBlue",
+	"SmokeShellOrange",
+	"Chemlight_green",
+	"Chemlight_red",
+	"Chemlight_yellow",
+	"Chemlight_blue",
 
 
 	"SMA_30Rnd_762x39_SKS",
