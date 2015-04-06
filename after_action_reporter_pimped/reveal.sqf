@@ -1,4 +1,4 @@
-if (isServer) then {
+if (isServer || isDedicated) then {
 	did_replay = true;
 
 	{deleteMarker _x} forEach allMapMarkers;

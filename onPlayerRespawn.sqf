@@ -39,8 +39,9 @@ if (WINCONDITIONOPFOR || WINCONDITIONBLUFOR || BLUFOR_CAPTURED || BLUFOR_SURREND
 	hintsilent "Replay loading.....";
 	sleep 0.2;
 	hintsilent "Replay loaded.";
-	[] execVM "after_action_reporter_pimped\reveal.sqf";
-	//[] execVM "after_action_reporter_pimped\reveal_player.sqf";
+	
+	["after_action_reporter_pimped\reveal.sqf","BIS_fnc_execVM",true,true ] call BIS_fnc_MP;
+	[] execVM "after_action_reporter_pimped\reveal_player.sqf";
 	};
 };
 

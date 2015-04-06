@@ -55,10 +55,8 @@ checkSpeedKey = {
     If(_value > -2)then{    
     [_value] call playback_speed_hint;
     PV_playback_speed_hint = [_value];
-   publicVariable "PV_playback_speed_hint";
+    publicVariable "PV_playback_speed_hint";
     };
 };
 
-replayKeyDown = (finddisplay 46) displayaddeventhandler ["keydown","
-	[_this select 1] call checkSpeedKey;
-	"];
+//replayKeyDown = (finddisplay 46) displayaddeventhandler ["keydown","	[_this select 1] call checkSpeedKey;"];
