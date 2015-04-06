@@ -23,13 +23,13 @@ _3CB_vests = [
 	"STKR_Osprey_R",
 	"STKR_Osprey_G",
 	"STKR_Osprey_SL",
-	"STKR_Osprey_MG"	
+	"STKR_Osprey_MG"
 ];
 _3CB_helmets = [
 	"UK3CB_BAF_Helmet_HeliPilot_RN",
 	"STKR_MK7",
 	"STKR_MK7_Scrim",
-	"STKR_MK7_ScrimB"			
+	"STKR_MK7_ScrimB"
 ];
 _3CB_backpacks = [
 	"STKR_PackCom",
@@ -52,7 +52,7 @@ _3CB_backpacks = [
 	"UK3CB_Kitbag_mcamo_LMG",
 	"UK3CB_Kitbag_mcamo_EXP",
 	"UK3CB_Carryall_mcamo",
-	"UK3CB_Carryall_mcamo_MAT"		
+	"UK3CB_Carryall_mcamo_MAT"
 ];
 _3CB_guns = [
 	"STKR_HMNVS",
@@ -202,7 +202,7 @@ _agm_parachute_Weapons = [
 ];
 
 // -------------------------------------------------------------------
-// 		AGM Vector 
+// 		AGM Vector
 // -------------------------------------------------------------------
 _agm_vector_Weapons = [
 	"AGM_Vector",
@@ -210,7 +210,7 @@ _agm_vector_Weapons = [
 ];
 
 // -------------------------------------------------------------------
-// 		AGM Wind (Kestrel) 
+// 		AGM Wind (Kestrel)
 // -------------------------------------------------------------------
 _agm_wind_Weapons = [
 	"AGM_ItemKestrel"
@@ -381,7 +381,7 @@ _tfarItems = [
 ];
 // TFAR Backpacks are already handled by @XLA_FixedArsenal itself
 
-// Note that only adding the generic radios solves issues with 
+// Note that only adding the generic radios solves issues with
 // radios being 'shared' when saved and then loaded from the arsenal
 
 // -------------------------------------------------------------------
@@ -651,7 +651,7 @@ _availableMagazines = [
 	"hlc_30Rnd_545x39_EP_ak",
 	"hlc_45Rnd_545x39_t_rpk",
 	"16Rnd_9x21_Mag",
-	"SMA_20Rnd_762x51mm_M80A1_EPR"
+	"SMA_20Rnd_762x51mm_M80A1_EPR",
 	"SMA_20Rnd_762x51mm_M80A1_EPR_Tracer",
 	"SMA_20Rnd_762x51mm_M80A1_EPR_IR",
 	"SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range",
@@ -669,20 +669,20 @@ _availableMagazines = [
 	"SMA_30Rnd_762x39_SKS_Red"
 ];
 
-_availableAttachments = _availableAttachments 
+_availableAttachments = _availableAttachments
 + _agm_ballistics_attachments;
 
-_availableItems = _availableItems 
+_availableItems = _availableItems
 + _tfarItems;
 
-_availableMagazines = _availableMagazines 
+_availableMagazines = _availableMagazines
 + _agm_grenades_Magazines;
 + _agm_attach_Magazines
 + _agm_ballistics_Magazines;
 + _agm_disposable_Magazines;
 + _agm_explosives_Magazines;
 
-_availableGuns = _availableGuns 
+_availableGuns = _availableGuns
 + _agm_grenades_Weapons
 + _agm_attach_Weapons
 + _agm_disposable_Weapons
@@ -699,7 +699,7 @@ _availableGuns = _availableGuns
 
 if (isServer) then {
 
-	// Grab the parameter that was passed in. 
+	// Grab the parameter that was passed in.
 	// The box should have "this execVM <scriptname>" in it's init field.
 	_box = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
@@ -708,12 +708,12 @@ if (isServer) then {
 
 	 	hint "@XLA_FixedArsenal not found.";
 
-	} else {	
+	} else {
 
 		[_box, _availableBackpacks,true,false] call XLA_fnc_addVirtualBackpackCargo;
 		[_box, (_availableGuns + _availableMagazines + _availableAttachments +_availableItems + _availableUniforms + _availableVests + _availableGoggles + _availableHeadgear),true,false] call  XLA_fnc_addVirtualItemCargo;
 		[_box, _availableMagazines,true,false] call XLA_fnc_addVirtualMagazineCargo;
-		[_box, (_availableGuns),true,false] call XLA_fnc_addVirtualWeaponCargo;	
+		[_box, (_availableGuns),true,false] call XLA_fnc_addVirtualWeaponCargo;
 		//[_box, [WEST_SIDE,FRIENDLY_SIDE],true,false] call XLA_fnc_addVirtualSideCargo;
 
 		[_box, _blacklistGuns ,true,false] call XLA_fnc_addVirtualWeaponBlacklist;
