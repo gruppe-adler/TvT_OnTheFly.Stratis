@@ -538,7 +538,8 @@ _availableGuns 				= [
 	"hlc_rifle_aks74u",
 	"hlc_rifle_aek971",
 	"Binocular",
-	"hgun_P07_F"
+	"hgun_P07_F",
+	"srifle_DMR_06_olive_F"
 	];
 _availableMagazines 	= [];
 _availableAttachments = [
@@ -546,7 +547,9 @@ _availableAttachments = [
 	"SMA_eotech552_3XDOWN_wdl",
 	"SMA_eotech552_3XDOWN_des",
 	"optic_Hamr",
- 	"optic_Aco"
+ 	"optic_Aco",
+ 	"bipod_03_F_oli",
+ 	"optic_KHS_old"
 	];
 _availableItems 			= [];
 _availableUniforms = [
@@ -678,7 +681,8 @@ _availableMagazines = [
 
 
 	"SMA_30Rnd_762x39_SKS",
-	"SMA_30Rnd_762x39_SKS_Red"
+	"SMA_30Rnd_762x39_SKS_Red",
+	"20Rnd_762x51_Mag"
 ];
 
 _availableAttachments = _availableAttachments

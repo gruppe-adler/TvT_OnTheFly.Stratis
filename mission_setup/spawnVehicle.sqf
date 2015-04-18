@@ -24,22 +24,24 @@ if (_side == west) then {
 	_spawn_area = [_centre,5,_max_distance,3,0,0,0] call BIS_fnc_findSafePos;
 	_max_distance = _max_distance + 10;
 	};
-	[[[_spawn_area,_side],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+	
 	_blufor_vehicle = _vehicle createVehicle _spawn_area;
 
 
 	// REMOVE SPAWN ACTIONS
 	
-	if (_vehicle == "B_MBT_01_TUSK_F") exitWith {
-		player removeAction createVehicleAPC;
+	if (_vehicle == "Leopard_2A6_Fleck" || _vehicle == "Leopard_2A6_Tarn") exitWith {
+		player removeAction createVehicleMBT;
 		[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
 		sleep 0.1;
 		_blufor_vehicle disableTIEquipment true;
+		[[[_spawn_area,_side,2],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 		};
 
 	player removeAction createVehicleHEMTT;
 	player removeAction createVehicleLittlebird;
 	[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
+	[[[_spawn_area,_side,1],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 
 	
 	
@@ -56,7 +58,7 @@ if (_side == east) then {
 		_spawn_area2 = [_centre2,5,_max_distance,3,0,0,0] call BIS_fnc_findSafePos;
 		_max_distance = _max_distance + 10;
 		};
-		[[[_spawn_area2,_side],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+		[[[_spawn_area2,_side,1],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 		opfor_vehicle = _vehicle createVehicle _spawn_area2;
 		opfor_vehicle setVehicleAmmo 0.1;
 		[localize "str_GRAD_mortarSpawned"] call AGM_Core_fnc_displayTextStructured;
@@ -86,13 +88,18 @@ if (_side == east) then {
 		opfor_box addmagazinecargoglobal ["tf47_at4_m_HEAT", 4];
 
 		opfor_box addmagazinecargoglobal ["ATMine_Range_Mag", 4];
+		opfor_box addmagazinecargoglobal ["IEDUrbanSmall_Remote_Mag", 1];
+		opfor_box addmagazinecargoglobal ["IEDLandSmall_Remote_Mag", 1];
+		opfor_box addmagazinecargoglobal ["AGM_DeadManSwitch", 2];
+		
+
 		
 		
 
 		[localize "str_GRAD_at4Spawned"] call AGM_Core_fnc_displayTextStructured;
 		player removeAction createVehicleAt4Box;
 
-		[[[_spawn_area,_side],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+		[[[_spawn_area,_side,2],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 	};
 
 	
@@ -103,7 +110,7 @@ if (_side == east) then {
 		_spawn_area = [_centre,5,_max_distance,3,0,0,0] call BIS_fnc_findSafePos;
 		_max_distance = _max_distance + 10;
 		};
-		[[[_spawn_area,_side],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+		[[[_spawn_area,_side,1],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 		opfor_vehicle = _vehicle createVehicle _spawn_area;
 	sleep 0.1;
 

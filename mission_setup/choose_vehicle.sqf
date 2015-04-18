@@ -8,12 +8,14 @@ vehicle_classname_tactical = "I_G_Offroad_01_armed_F";
 vehicle_classname_mortar = "O_G_Mortar_01_F";
 if (TROPENTARN) then {
 vehicle_classname_littlebird = "MH6_Tropentarn";
+vehicle_classname_mbt = "Leopard_2A6_Tarn";
 } else {
 vehicle_classname_littlebird = "MH6_Flecktarn";	
+vehicle_classname_mbt = "Leopard_2A6_Fleck";
 };
 vehicle_classname_hemtt = "B_Truck_01_covered_F";
 vehicle_classname_at4_box = "box_nato_wpslaunch_f";
-vehicle_classname_apc = "B_MBT_01_TUSK_F";
+
 
 if (player == opfor_teamlead) then {
 	player removeAction choose_vehicle_opfor; 
@@ -43,8 +45,8 @@ if (player == blufor_teamlead) then {
 
  	if (!MBT_VS_AT) exitWith {};
 
- 	createVehicleAPC = blufor_teamlead addAction["<t color=""#93E352"">" + "Spawn MBT",
-	{[vehicle_position,vehicle_classname_apc,west] execVM "mission_setup\spawnVehicle.sqf";}, _Args, 1, false, true, "","_this == _target"];
+ 	createVehicleMBT = blufor_teamlead addAction["<t color=""#93E352"">" + "Spawn MBT",
+	{[vehicle_position,vehicle_classname_mbt,west] execVM "mission_setup\spawnVehicle.sqf";}, _Args, 1, false, true, "","_this == _target"];
 
 
 };

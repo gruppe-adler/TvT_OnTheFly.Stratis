@@ -545,13 +545,21 @@ _availableGuns 	= [
     "Rangefinder",
     "hgun_Rook40_F",
     "hlc_smg_mp5k",
-    "hlc_lmg_M60E4"
+    "hlc_lmg_M60E4",
+    "srifle_DMR_06_olive_F",
+    "MMG_01_base_F",
+	"MMG_01_hex_ACRO_LP_F",
+	"MMG_01_hex_F",
+	"MMG_01_tan_F",
+	"srifle_DMR_03_F",
+	"srifle_DMR_03_tan_F"
    ];
 
 _availableMagazines 	= [];
 _availableAttachments = [
 	"FHQ_acc_LLM01F",
 	"FHQ_acc_ANPEQ15_black",
+	"FHQ_acc_ANPEQ15",
 	"FHQ_optic_AC11704",
 	"FHQ_optic_AC11704_tan",
 	"FHQ_optic_MARS",
@@ -569,7 +577,11 @@ _availableAttachments = [
 	"SMA_supp1b_556",
  	"SMA_Silencer_556",
  	"optic_Hamr",
- 	"optic_Aco"
+ 	"optic_Aco",
+ 	"bipod_01_F_blk",
+ 	"bipod_01_F_snd",
+ 	"optic_KHS_blk",
+ 	"optic_KHS_tan"
 	];
 
 _availableItems = [
@@ -704,7 +716,12 @@ _availableMagazines = [
 
 
 	"SMA_30Rnd_762x39_SKS",
-	"SMA_30Rnd_762x39_SKS_Red"
+	"SMA_30Rnd_762x39_SKS_Red",
+	"130Rnd_338_Mag",
+	"150Rnd_93x64_Mag",
+	"20Rnd_762x51_Mag",
+	"DemoCharge_Remote_Mag",
+	"AGM_M26_Clacker"
 ];
 
 

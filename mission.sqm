@@ -35,7 +35,7 @@ class Mission
 		"agm_medical",
 		"A3_Soft_F_HEMTT",
 		"A3_Structures_F_Civ_InfoBoards",
-		"aia_misc_e_config",
+		"A3_Supplies_F_Heli_CargoNets",
 		"a3_map_stratis"
 	};
 	randomSeed=7556201;
@@ -886,20 +886,20 @@ class Mission
 			position[]={1515.3201,5.5,5015.7935};
 			id=36;
 			side="EMPTY";
-			vehicle="AmmoCrates_NoInteractive_Large";
+			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
 			text="arsenal_blufor";
-			init="nul = this execVM ""loadouts\XLA_arsenal_blufor.sqf""; this allowDamage false;";
+			init="nul = this execVM ""loadouts\XLA_arsenal_blufor.sqf""; this allowDamage false; clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearBackpackCargoGlobal this; clearMagazineCargoGlobal this;";
 		};
 		class Item3
 		{
 			position[]={1850.7795,5.3208466,6121.436};
 			id=37;
 			side="EMPTY";
-			vehicle="AmmoCrates_NoInteractive_Large";
+			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
 			text="arsenal_opfor";
-			init="nul = this execVM ""loadouts\XLA_arsenal_opfor.sqf""; this allowDamage false;";
+			init="nul = this execVM ""loadouts\XLA_arsenal_opfor.sqf""; this allowDamage false; clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearBackpackCargoGlobal this; clearMagazineCargoGlobal this;";
 		};
 	};
 	class Markers

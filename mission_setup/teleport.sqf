@@ -40,7 +40,7 @@ openMap [false,false];
 		publicVariable "OPFOR_TELEPORTED";
 
 		[arsenal_opfor, spawnpoint_mapclick] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
-		[extraweapons_opfor, spawnpoint_mapclick] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
+		//[extraweapons_opfor, spawnpoint_mapclick] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
 
 		// move task to new destination
 		sector_trigger setPos spawnpoint_mapclick;
