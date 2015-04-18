@@ -12,6 +12,7 @@ islands=(
 	FDF_Isle1_a
 	Gorgona
 	IsolaDiCapraia
+	Kunduz
 	Panthera3
 	Sara_dbe1
 	Shapur_BAF

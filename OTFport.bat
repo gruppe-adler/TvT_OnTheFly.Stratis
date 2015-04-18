@@ -38,6 +38,10 @@ xcopy /y /e /c "./TvT_OnTheFly.Stratis" "./TvT_OnTheFly%var%.IsolaDiCapraia\"
 del "./TvT_OnTheFly%var%.IsolaDiCapraia\.*"
 del "./TvT_OnTheFly%var%.IsolaDiCapraia\OTFport.bat"
 
+xcopy /y /e /c "./TvT_OnTheFly.Stratis" "./TvT_OnTheFly%var%.Kunduz\"
+del "./TvT_OnTheFly%var%.Kunduz\.*"
+del "./TvT_OnTheFly%var%.Kunduz\OTFport.bat"
+
 xcopy /y /e /c "./TvT_OnTheFly.Stratis" "./TvT_OnTheFly%var%.Sara\"
 del "./TvT_OnTheFly%var%.Sara\.*"
 del "./TvT_OnTheFly%var%.Sara\OTFport.bat"
