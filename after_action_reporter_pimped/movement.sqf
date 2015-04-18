@@ -41,7 +41,8 @@ while{!replay_end_condition} do
 		
 		if(vehicle _unit == _unit) then 
 		{
-			_kindof =  _side_prefix + "grad_iconman_ca";
+		_icon = getText(configFile >> "CfgVehicles" >> typeOf _unit >> "icon");
+			_kindof =  _side_prefix + "grad_" + _icon + "_ca";
 		};
 		if(vehicle _unit isKindOf "Car") then 
 		{
@@ -69,7 +70,7 @@ while{!replay_end_condition} do
 		};
 
 		if (_unit getVariable ["AGM_isUnconscious", false]) then {
-			_kindof = "grad_iconmanvirtual_ca";
+			_kindof = _side_prefix + "grad_iconmanvirtual_ca";
 		};
 		if(!alive _unit) then {
 			_kindof = "KIA";

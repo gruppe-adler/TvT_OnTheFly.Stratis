@@ -90,7 +90,7 @@ if (_side == east) then {
 		opfor_box addmagazinecargoglobal ["ATMine_Range_Mag", 4];
 		opfor_box addmagazinecargoglobal ["IEDUrbanSmall_Remote_Mag", 1];
 		opfor_box addmagazinecargoglobal ["IEDLandSmall_Remote_Mag", 1];
-		opfor_box addmagazinecargoglobal ["AGM_DeadManSwitch", 2];
+		
 		
 
 		
