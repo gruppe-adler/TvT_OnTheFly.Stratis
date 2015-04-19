@@ -144,5 +144,5 @@ if !(isDedicated) then {
 if (isServer) then {
 	waitUntil {OPFOR_TELEPORTED && BLUFOR_TELEPORTED};
 
-	[] execVM "after_action_reporter_pimped\movement.sqf";
+	[] execVM "after_action_reporter_pimped\movement_vanilla.sqf";
 };
