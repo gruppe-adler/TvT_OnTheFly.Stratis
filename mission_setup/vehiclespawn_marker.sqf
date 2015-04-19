@@ -4,6 +4,8 @@ _pos = _this select 0;
 _side = _this select 1;
 _type = _this select 2;
 
+_color = "ColorBLUFOR";
+
 if (side player != _side) exitWith {};
 
 if (_side == west) then {
