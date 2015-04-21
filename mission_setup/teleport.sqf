@@ -1,14 +1,22 @@
 spawnpoint_mapclick = [];
 
 if (player == opfor_teamlead && !OPFOR_TELEPORTED) then {
-[localize "str_GRAD_choose_spawn_location"] call AGM_Core_fnc_displayTextStructured;
+if (!IS_VANILLA) then {
+	[localize "str_GRAD_choose_spawn_location"] call AGM_Core_fnc_displayTextStructured;
+	} else {
+	hintSilent format [localize "str_GRAD_choose_spawn_location"];
+};
 openMap [true,false];
 
 onMapSingleClick "[_pos] call teleportGroup; onMapSingleClick ''; true";
 };
 
 if (player == blufor_teamlead && OPFOR_TELEPORTED) then {
-[localize "str_GRAD_choose_spawn_location"] call AGM_Core_fnc_displayTextStructured;
+if (!IS_VANILLA) then {
+	[localize "str_GRAD_choose_spawn_location"] call AGM_Core_fnc_displayTextStructured;
+	} else {
+	hintSilent format [localize "str_GRAD_choose_spawn_location"];
+};
 openMap [true,false];
 
 onMapSingleClick "[_pos] call teleportGroup; onMapSingleClick ''; true";
@@ -20,7 +28,12 @@ openMap [false,false];
 	spawnpoint_mapclick = _this select 0;
 
 	if (surfaceIsWater [(spawnpoint_mapclick select 0),(spawnpoint_mapclick select 1)]) exitWith {
-       [localize "str_GRAD_spawn_on_water"] call AGM_Core_fnc_displayTextStructured;
+       
+       if (!IS_VANILLA) then {
+		[localize "str_GRAD_spawn_on_water"] call AGM_Core_fnc_displayTextStructured;
+		} else {
+		hintSilent format [localize "str_GRAD_spawn_on_water"];
+		};
    	};
 
 	// doesnt work correctly in SP tests

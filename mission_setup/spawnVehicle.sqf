@@ -30,9 +30,13 @@ if (_side == west) then {
 
 	// REMOVE SPAWN ACTIONS
 	
-	if (_vehicle == "Leopard_2A6_Fleck" || _vehicle == "Leopard_2A6_Tarn") exitWith {
+	if (_vehicle == "Leopard_2A6_Fleck" || _vehicle == "Leopard_2A6_Tarn" || _vehicle == "B_MBT_01_TUSK_F") exitWith {
 		player removeAction createVehicleMBT;
-		[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
+		if (!IS_VANILLA) then {
+			[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
+		} else {
+			hintSilent format [localize "str_GRAD_vehicleSpawned"];
+		};
 		sleep 0.1;
 		_blufor_vehicle disableTIEquipment true;
 		[[[_spawn_area,_side,2],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
@@ -40,7 +44,11 @@ if (_side == west) then {
 
 	player removeAction createVehicleHEMTT;
 	player removeAction createVehicleLittlebird;
-	[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
+	if (!IS_VANILLA) then {
+			[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
+		} else {
+			hintSilent format [localize "str_GRAD_vehicleSpawned"];
+		};
 	[[[_spawn_area,_side,1],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 
 	
@@ -61,7 +69,12 @@ if (_side == east) then {
 		[[[_spawn_area2,_side,1],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 		opfor_vehicle = _vehicle createVehicle _spawn_area2;
 		opfor_vehicle setVehicleAmmo 0.1;
-		[localize "str_GRAD_mortarSpawned"] call AGM_Core_fnc_displayTextStructured;
+		if (!IS_VANILLA) then {
+			[localize "str_GRAD_mortarSpawned"] call AGM_Core_fnc_displayTextStructured;
+		} else {
+			hintSilent format [localize "str_GRAD_mortarSpawned"];
+		};
+		
 		player removeAction createVehicleTransport; 
 		player removeAction createVehicleTactical;
 		player removeAction createVehicleMortar;
@@ -92,11 +105,15 @@ if (_side == east) then {
 		opfor_box addmagazinecargoglobal ["IEDLandSmall_Remote_Mag", 1];
 		
 		
-
+		if (!IS_VANILLA) then {
+			[localize "str_GRAD_at4Spawned"] call AGM_Core_fnc_displayTextStructured;
+		} else {
+			hintSilent format [localize "str_GRAD_at4Spawned"];
+		};
 		
 		
 
-		[localize "str_GRAD_at4Spawned"] call AGM_Core_fnc_displayTextStructured;
+		
 		player removeAction createVehicleAt4Box;
 
 		[[[_spawn_area,_side,2],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
@@ -120,6 +137,10 @@ if (_side == east) then {
 	player removeAction createVehicleTactical;
 	player removeAction createVehicleMortar;
 
-	[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
+	if (!IS_VANILLA) then {
+			[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
+		} else {
+			hintSilent format [localize "str_GRAD_vehicleSpawned"];
+	};
 	
 };

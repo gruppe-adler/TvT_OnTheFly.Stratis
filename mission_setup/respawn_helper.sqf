@@ -1,7 +1,11 @@
 _pos = _this select 0;
 
 if (side player == west) then {
+	if (!IS_VANILLA) then {
 	[localize "str_GRAD_hint_opforSpawned"] call AGM_Core_fnc_displayTextStructured;
+	} else {
+	hintSilent format [localize "str_GRAD_hint_opforSpawned"];
+	};
 };
 
 if (isServer || isDedicated) then {

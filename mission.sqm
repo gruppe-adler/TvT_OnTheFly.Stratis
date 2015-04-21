@@ -6,33 +6,24 @@ class Mission
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
 		"A3_Characters_F_OPFOR",
-		"agm_logistics",
 		"A3_Missions_F_Curator",
 		"A3_Modules_F",
 		"A3_Modules_F_Multiplayer",
-		"agm_respawn",
 		"task_force_radio_items",
-		"agm_nametags",
-		"agm_medical",
 		"A3_Soft_F_HEMTT",
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Supplies_F_Heli_CargoNets",
-		"a3_map_stratis",
-		"aia_misc_e_config"
+		"a3_map_stratis"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
 		"A3_Characters_F_OPFOR",
-		"agm_logistics",
 		"A3_Missions_F_Curator",
 		"A3_Modules_F",
 		"A3_Modules_F_Multiplayer",
-		"agm_respawn",
 		"task_force_radio_items",
-		"agm_nametags",
-		"agm_medical",
 		"A3_Soft_F_HEMTT",
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Supplies_F_Heli_CargoNets",
@@ -60,7 +51,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=12;
+		items=8;
 		class Item0
 		{
 			side="WEST";
@@ -378,41 +369,15 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1570.3295,0.19368044,5874.2847};
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="10";
-							parentCls="AGM_ModuleRepair";
-							typeName="TimeRepair";
-						};
-						class Item1
-						{
-							value="10";
-							parentCls="AGM_ModuleRepair";
-							typeName="TimeWheelRepair";
-						};
-						class Item2
-						{
-							value="10";
-							parentCls="AGM_ModuleRepair";
-							typeName="TimeTrackRepair";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="AGM_ModuleRepair";
-							typeName="MaxDamageRepair";
-						};
-					};
+					position[]={1842.5299,5.5,5886.6802};
 					id=24;
 					side="LOGIC";
-					vehicle="AGM_ModuleRepair";
+					vehicle="ModuleMPTypeSectorControl_F";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+					syncId=0;
+					synchronizations[]={3,4,2};
 				};
 			};
 		};
@@ -424,15 +389,14 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1842.5299,5.5,5886.6802};
+					position[]={1841.8689,5.5,5926.7642};
 					id=25;
 					side="LOGIC";
-					vehicle="ModuleMPTypeSectorControl_F";
+					vehicle="LocationArea_F";
 					leader=1;
-					lock="UNLOCKED";
 					skill=0.60000002;
-					syncId=0;
-					synchronizations[]={3,4,2};
+					syncId=1;
+					synchronizations[]={4,5};
 				};
 			};
 		};
@@ -444,14 +408,14 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1841.8689,5.5,5926.7642};
+					position[]={1866.7422,5.5,5852.3794};
 					id=26;
 					side="LOGIC";
-					vehicle="LocationArea_F";
+					vehicle="SideBLUFOR_F";
 					leader=1;
 					skill=0.60000002;
-					syncId=1;
-					synchronizations[]={4,5};
+					syncId=2;
+					synchronizations[]={0};
 				};
 			};
 		};
@@ -463,27 +427,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1866.7422,5.5,5852.3794};
-					id=27;
-					side="LOGIC";
-					vehicle="SideBLUFOR_F";
-					leader=1;
-					skill=0.60000002;
-					syncId=2;
-					synchronizations[]={0};
-				};
-			};
-		};
-		class Item6
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
 					position[]={1820.1241,5.5,5859.6265};
-					id=28;
+					id=27;
 					side="LOGIC";
 					vehicle="SideOPFOR_F";
 					leader=1;
@@ -493,7 +438,7 @@ class Mission
 				};
 			};
 		};
-		class Item7
+		class Item6
 		{
 			side="LOGIC";
 			class Vehicles
@@ -596,7 +541,7 @@ class Mission
 							typeName="CostPlayers";
 						};
 					};
-					id=29;
+					id=28;
 					side="LOGIC";
 					vehicle="ModuleSector_F";
 					leader=1;
@@ -608,41 +553,7 @@ class Mission
 				};
 			};
 		};
-		class Item8
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={1570.8014,-0.17943804,5946.1748};
-					class args
-					{
-						items=2;
-						class Item0
-						{
-							value="1";
-							parentCls="AGM_ModuleRespawn";
-							typeName="SavePreDeathGear";
-						};
-						class Item1
-						{
-							value="0";
-							parentCls="AGM_ModuleRespawn";
-							typeName="RemoveDeadBodiesDisonncected";
-						};
-					};
-					id=30;
-					side="LOGIC";
-					vehicle="AGM_ModuleRespawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item9
+		class Item7
 		{
 			side="LOGIC";
 			class Vehicles
@@ -697,155 +608,9 @@ class Mission
 							typeName="same_lr_frequencies_for_side";
 						};
 					};
-					id=31;
+					id=29;
 					side="LOGIC";
 					vehicle="tfar_ModuleTaskForceRadioEnforceUsage";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item10
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={1570.9048,0.039369553,5913.8945};
-					class args
-					{
-						items=3;
-						class Item0
-						{
-							value="5";
-							parentCls="AGM_ModuleNameTags";
-							typeName="PlayerNamesViewDistance";
-						};
-						class Item1
-						{
-							value="0";
-							parentCls="AGM_ModuleNameTags";
-							typeName="ShowNamesForAI";
-						};
-						class Item2
-						{
-							value="0";
-							parentCls="AGM_ModuleNameTags";
-							typeName="Visibility";
-						};
-					};
-					id=32;
-					side="LOGIC";
-					vehicle="AGM_ModuleNameTags";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item11
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={1570.235,-0.15570445,5894.0659};
-					class args
-					{
-						items=14;
-						class Item0
-						{
-							value="1";
-							parentCls="AGM_ModuleMedical";
-							typeName="CoefDamage";
-						};
-						class Item1
-						{
-							value="1";
-							parentCls="AGM_ModuleMedical";
-							typeName="CoefBleeding";
-						};
-						class Item2
-						{
-							value="1";
-							parentCls="AGM_ModuleMedical";
-							typeName="CoefPain";
-						};
-						class Item3
-						{
-							value="2";
-							parentCls="AGM_ModuleMedical";
-							typeName="CoefNonMedic";
-						};
-						class Item4
-						{
-							value="-1";
-							parentCls="AGM_ModuleMedical";
-							typeName="MaxUnconsciousnessTime";
-						};
-						class Item5
-						{
-							value="0";
-							parentCls="AGM_ModuleMedical";
-							typeName="AllowNonmedics";
-						};
-						class Item6
-						{
-							value="0";
-							parentCls="AGM_ModuleMedical";
-							typeName="RequireDiagnosis";
-						};
-						class Item7
-						{
-							value="1";
-							parentCls="AGM_ModuleMedical";
-							typeName="PreventInstaDeath";
-						};
-						class Item8
-						{
-							value="0";
-							parentCls="AGM_ModuleMedical";
-							typeName="PreventDeathWhileUnconscious";
-						};
-						class Item9
-						{
-							value="0";
-							parentCls="AGM_ModuleMedical";
-							typeName="SingleBandage";
-						};
-						class Item10
-						{
-							value="0";
-							parentCls="AGM_ModuleMedical";
-							typeName="AllowChatWhileUnconscious";
-						};
-						class Item11
-						{
-							value="1";
-							parentCls="AGM_ModuleMedical";
-							typeName="EnableOverdosing";
-						};
-						class Item12
-						{
-							value="0";
-							parentCls="AGM_ModuleMedical";
-							typeName="RequireMEDEVAC";
-						};
-						class Item13
-						{
-							value="1";
-							parentCls="AGM_ModuleMedical";
-							typeName="AutomaticWakeup";
-						};
-					};
-					id=33;
-					side="LOGIC";
-					vehicle="AGM_ModuleMedical";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
@@ -860,7 +625,7 @@ class Mission
 		{
 			position[]={1844.2902,5.2536268,6127.4043};
 			azimut=163.319;
-			id=34;
+			id=30;
 			side="EMPTY";
 			vehicle="B_Truck_01_covered_F";
 			leader=1;
@@ -873,7 +638,7 @@ class Mission
 		{
 			position[]={1852.9342,5.3323355,6128.8511};
 			azimut=163.319;
-			id=35;
+			id=31;
 			side="EMPTY";
 			vehicle="Land_MapBoard_F";
 			leader=1;
@@ -884,7 +649,7 @@ class Mission
 		class Item2
 		{
 			position[]={1515.3201,5.5,5015.7935};
-			id=36;
+			id=32;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
@@ -894,7 +659,7 @@ class Mission
 		class Item3
 		{
 			position[]={1850.7795,5.3208466,6121.436};
-			id=37;
+			id=33;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;

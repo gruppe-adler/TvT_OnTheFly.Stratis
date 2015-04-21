@@ -35,7 +35,9 @@ playback_speed_hint = {
     local_recording_playback_speed = (playback_speeds1 select playback_speed_x1) select 0;
     local_recording_playback_speed_text = (playback_speeds1 select playback_speed_x1) select 1;
 
+    if (!IS_VANILLA) then {
     [localize 'str_GRAD_hint_playback_speed_hint' + local_recording_playback_speed_text] call AGM_Core_fnc_displayTextStructured;
+    };
 };
 
 "PV_playback_speed_hint" addPublicVariableEventHandler {(_this select 1) spawn playback_speed_hint};
