@@ -25,5 +25,5 @@ plank_deploy_fortData = [
 ["Bunker Tower",                        "Land_BagBunker_Tower_F",               10,             0,                  360,            {}],
 ["Tanktrap",							"Hedgehog",							   	3,				180,				360,			{}],
 ["Small Bunker",                       	"Land_fortified_nest_small", 			4, 			    180, 				360, 			{}],
-["Sandbag Bunker"],						"Land_BagBunker_Small_F",				4,				180,				360,			{}]
+["Sandbag Bunker",						"Land_BagBunker_Small_F",				4,				180,				360,			{}]
 ];
