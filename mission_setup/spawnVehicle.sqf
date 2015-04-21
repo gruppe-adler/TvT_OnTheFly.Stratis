@@ -22,11 +22,12 @@ if (_side == west) then {
 	//	};
 	while{ count _spawn_area < 1} do {
 	
-	_spawn_area = [_centre,_max_distance] call get_vec_spawn_point;
-	_max_distance = _max_distance + 10;
+		_spawn_area = [_centre,_max_distance] call get_vec_spawn_point;
+		sleep 0.04;
+		_max_distance = _max_distance + 10;
 	};
 	
-	_blufor_vehicle = _vehicle createVehicle _spawn_area;
+	_blufor_vehicle = _vehicle createVehicle (_spawn_area select 0);
 
 
 	// REMOVE SPAWN ACTIONS
@@ -38,9 +39,9 @@ if (_side == west) then {
 		} else {
 			hintSilent format [localize "str_GRAD_vehicleSpawned"];
 		};
-		sleep 0.1;
+		sleep 0.04;
 		_blufor_vehicle disableTIEquipment true;
-		[[[_spawn_area,_side,2],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+		[[[_spawn_area select 0,_side,2],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 		};
 
 	player removeAction createVehicleHEMTT;
@@ -50,7 +51,7 @@ if (_side == west) then {
 		} else {
 			hintSilent format [localize "str_GRAD_vehicleSpawned"];
 		};
-	[[[_spawn_area,_side,1],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+	[[[_spawn_area select 0,_side,1],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 
 	
 	
@@ -66,10 +67,11 @@ if (_side == east) then {
 		while{ count _spawn_area2 < 1} do {
 		
 		_spawn_area2 = [_centre2,_max_distance] call get_vec_spawn_point;
+		sleep 0.04;
 		_max_distance = _max_distance + 10;
 		};
-		[[[_spawn_area2,_side,1],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
-		opfor_vehicle = _vehicle createVehicle _spawn_area2;
+		[[[_spawn_area2 select 0,_side,1],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+		opfor_vehicle = _vehicle createVehicle (_spawn_area2 select 0);
 		opfor_vehicle setVehicleAmmo 0.1;
 		if (!IS_VANILLA) then {
 			[localize "str_GRAD_mortarSpawned"] call AGM_Core_fnc_displayTextStructured;
@@ -85,11 +87,11 @@ if (_side == east) then {
 	if (_vehicle == "box_nato_wpslaunch_f") exitWith {
 		while{ count _spawn_area < 1} do {
 		_spawn_area = [_centre,_max_distance] call get_vec_spawn_point;
-
+		sleep 0.04;
 		_max_distance = _max_distance + 10;
 		};
 		
-		opfor_box = _vehicle createVehicle _spawn_area;
+		opfor_box = _vehicle createVehicle (_spawn_area select 0);
 
 		clearWeaponCargoGlobal opfor_box; 
 		clearItemCargoGlobal opfor_box; 
@@ -121,24 +123,25 @@ if (_side == east) then {
 		
 		player removeAction createVehicleAt4Box;
 
-		[[[_spawn_area,_side,2],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+		[[[_spawn_area select 0,_side,2],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 	};
 
 	
 
 
 	// SPAWN ANY OTHER OPFOR VEHICLE
-	while{ count _spawn_area < 1} do {
+	while {count _spawn_area < 1} do {
 		
 		_spawn_area = [_centre,_max_distance] call get_vec_spawn_point;
+		sleep 0.04;
 		_max_distance = _max_distance + 10;
 		};
-		[[[_spawn_area,_side,1],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
-		opfor_vehicle = _vehicle createVehicle _spawn_area;
+		[[[_spawn_area select 0,_side,1],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+		opfor_vehicle = _vehicle createVehicle (_spawn_area select 0);
 	sleep 0.1;
 
 	// SET FUEL TO ZERO
-	opfor_vehicle setFuel 0;
+
 	player removeAction createVehicleTransport; 
 	player removeAction createVehicleTactical;
 	player removeAction createVehicleMortar;

@@ -186,3 +186,4 @@ get_vec_spawn_point = {
 
 
 spawn_help_fnc_compiled = true;
+If(spawn_help_fnc_compiled)then{diag_log str "spawnfuncs ready";};
