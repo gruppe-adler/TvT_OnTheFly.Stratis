@@ -6,13 +6,23 @@ TROPENTARN = (paramsArray select 3) == 1;
 MINIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 4;
 MAXIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 5;
 TIME_ACCELERATION = paramsArray select 6;
-SMA_AND_HLC_WEAPONS = (paramsArray select 7) == 1;
+IS_VANILLA = (paramsArray select 7) == 1;
 ENABLE_REPLAY = (paramsArray select 8) == 1;
 IS_STREAMABLE = (paramsArray select 9) == 1;
 
+if (isClass(configFile >> (_this select 0) >> task_force_radio)) then {
+	TFAR_ENABLED = true;
+	} else {
+	TFAR_ENABLED = false;
+};
+
 if (OPFOR_TELEPORTED) then {
 	[player] execVM "onPlayerRespawn.sqf";
+	if (!IS_VANILLA) then {
 	[localize "str_GRAD_jip"] call AGM_Core_fnc_displayTextStructured;
+	} else {
+	hintSilent "JIP leads to instant spectator";
+	};
 };
 
 [] execVM "CSSA3\CSSA3_init.sqf";
@@ -88,7 +98,9 @@ if ((isServer) || (isDedicated)) then {
 
 
 	respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger select 0),(getPos sector_trigger select 1),0];
+	if (!IS_VANILLA) then {
 	[respawn_helper, false] call AGM_Drag_fnc_makeDraggable;
+	};
 
 	[] spawn {
 		while {true} do {
@@ -118,7 +130,7 @@ if !(isDedicated) then {
 	["Preload"] call BIS_fnc_arsenal;
 
 
-	if (SMA_AND_HLC_WEAPONS) then {
+	if (!IS_VANILLA) then {
 		[] execVM "loadouts\_client.sqf";
 	};
 
