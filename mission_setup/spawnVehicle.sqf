@@ -21,7 +21,8 @@ if (_side == west) then {
 	//	    _max_distance = _max_distance + 10;
 	//	};
 	while{ count _spawn_area < 1} do {
-	_spawn_area = [_centre,5,_max_distance,3,0,0,0] call BIS_fnc_findSafePos;
+	
+	_spawn_area = [_centre,_max_distance] call get_vec_spawn_point;
 	_max_distance = _max_distance + 10;
 	};
 	
@@ -63,7 +64,8 @@ if (_side == east) then {
 	// SPAWN MORTAR
 	if (_vehicle == "O_G_Mortar_01_F") exitWith {
 		while{ count _spawn_area2 < 1} do {
-		_spawn_area2 = [_centre2,5,_max_distance,3,0,0,0] call BIS_fnc_findSafePos;
+		
+		_spawn_area2 = [_centre2,_max_distance] call get_vec_spawn_point;
 		_max_distance = _max_distance + 10;
 		};
 		[[[_spawn_area2,_side,1],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
@@ -82,7 +84,8 @@ if (_side == east) then {
 
 	if (_vehicle == "box_nato_wpslaunch_f") exitWith {
 		while{ count _spawn_area < 1} do {
-		_spawn_area = [_centre,5,_max_distance,3,0,0,0] call BIS_fnc_findSafePos;
+		_spawn_area = [_centre,_max_distance] call get_vec_spawn_point;
+
 		_max_distance = _max_distance + 10;
 		};
 		
@@ -126,7 +129,8 @@ if (_side == east) then {
 
 	// SPAWN ANY OTHER OPFOR VEHICLE
 	while{ count _spawn_area < 1} do {
-		_spawn_area = [_centre,5,_max_distance,3,0,0,0] call BIS_fnc_findSafePos;
+		
+		_spawn_area = [_centre,_max_distance] call get_vec_spawn_point;
 		_max_distance = _max_distance + 10;
 		};
 		[[[_spawn_area,_side,1],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;

@@ -65,6 +65,7 @@ blufor_teleport = blufor_teamlead addAction["<t color=""#93E352"">" + localize "
 call compile preprocessFileLineNumbers "plank\plank_init.sqf";				//Plank
 cameraOldPimped = compile preprocessFile "spectator\cameraOld_rip.sqf";
 cameraNewPimped = compile preprocessFile "spectator\camera_rip.sqf";
+If(isNil "spawn_help_fnc_compiled")then{call compile preprocessFileLineNumbers "helpers\findPos.sqf"};
 
 enableSentences false;														//Autospotten
 
