@@ -93,16 +93,18 @@ if (_side == east) then {
 		clearMagazineCargoGlobal opfor_box; 
 		clearBackpackCargoGlobal opfor_box;
 		sleep 0.1;
+		
+		if (!IS_VANILLA) then {} 
+		else {
 		opfor_box addweaponcargoglobal ["launch_RPG32_F", 4];
 		opfor_box addmagazinecargoglobal ["RPG32_F", 4];
 		opfor_box addmagazinecargoglobal ["RPG32_HE_F", 4];
-
-		opfor_box addweaponcargoglobal ["tf47_at4_heat", 4];
-		opfor_box addmagazinecargoglobal ["tf47_at4_m_HEAT", 4];
-
 		opfor_box addmagazinecargoglobal ["ATMine_Range_Mag", 4];
 		opfor_box addmagazinecargoglobal ["IEDUrbanSmall_Remote_Mag", 1];
 		opfor_box addmagazinecargoglobal ["IEDLandSmall_Remote_Mag", 1];
+		opfor_box addweaponcargoglobal ["tf47_at4_heat", 4];
+		opfor_box addmagazinecargoglobal ["tf47_at4_m_HEAT", 4];
+		};
 		
 		
 		if (!IS_VANILLA) then {
