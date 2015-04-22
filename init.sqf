@@ -177,7 +177,7 @@ if !(isDedicated) then {
 
 	if (!IS_VANILLA) then {
 		[] execVM "loadouts\_client.sqf";
-		if (!IS_VANILLA) then {
+		
 			nul = arsenal_opfor execVM "loadouts\XLA_arsenal_opfor.sqf"; 
 			arsenal_opfor allowDamage false; 
 			clearItemCargoGlobal arsenal_opfor; 
