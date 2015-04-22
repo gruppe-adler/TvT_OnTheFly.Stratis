@@ -9,7 +9,6 @@ class Mission
 		"A3_Missions_F_Curator",
 		"A3_Modules_F",
 		"A3_Modules_F_Multiplayer",
-		"task_force_radio_items",
 		"A3_Soft_F_HEMTT",
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Supplies_F_Heli_CargoNets",
@@ -23,7 +22,6 @@ class Mission
 		"A3_Missions_F_Curator",
 		"A3_Modules_F",
 		"A3_Modules_F_Multiplayer",
-		"task_force_radio_items",
 		"A3_Soft_F_HEMTT",
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Supplies_F_Heli_CargoNets",
@@ -51,7 +49,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=8;
+		items=7;
 		class Item0
 		{
 			side="WEST";
@@ -553,70 +551,6 @@ class Mission
 				};
 			};
 		};
-		class Item7
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={1594.9597,-0.025416009,5944.4312};
-					class args
-					{
-						items=7;
-						class Item0
-						{
-							value="0";
-							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
-							typeName="TeamLeaderRadio";
-						};
-						class Item1
-						{
-							value="0";
-							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
-							typeName="RiflemanRadio";
-						};
-						class Item2
-						{
-							value="7";
-							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
-							typeName="terrain_interception_coefficient";
-						};
-						class Item3
-						{
-							value="TFAR";
-							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
-							typeName="radio_channel_name";
-						};
-						class Item4
-						{
-							value="helium";
-							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
-							typeName="radio_channel_password";
-						};
-						class Item5
-						{
-							value="0";
-							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
-							typeName="same_sw_frequencies_for_side";
-						};
-						class Item6
-						{
-							value="0";
-							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
-							typeName="same_lr_frequencies_for_side";
-						};
-					};
-					id=29;
-					side="LOGIC";
-					vehicle="tfar_ModuleTaskForceRadioEnforceUsage";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
 	};
 	class Vehicles
 	{
@@ -625,7 +559,7 @@ class Mission
 		{
 			position[]={1844.2902,5.2536268,6127.4043};
 			azimut=163.319;
-			id=30;
+			id=29;
 			side="EMPTY";
 			vehicle="B_Truck_01_covered_F";
 			leader=1;
@@ -638,7 +572,7 @@ class Mission
 		{
 			position[]={1852.9342,5.3323355,6128.8511};
 			azimut=163.319;
-			id=31;
+			id=30;
 			side="EMPTY";
 			vehicle="Land_MapBoard_F";
 			leader=1;
@@ -649,7 +583,7 @@ class Mission
 		class Item2
 		{
 			position[]={1515.3201,5.5,5015.7935};
-			id=32;
+			id=31;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
@@ -659,7 +593,7 @@ class Mission
 		class Item3
 		{
 			position[]={1850.7795,5.3208466,6121.436};
-			id=33;
+			id=32;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;

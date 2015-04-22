@@ -130,6 +130,11 @@ if (isClass (configFile >> "CfgPatches" >> "AGM_Medical")) then
     }; 
 };  
 
+if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then  
+	{ 
+	[] execVM "tfarsettings.sqf";
+};
+
 if ((isServer) || (isDedicated)) then {
 
 	[] execVM "objectives\detect_all_dead.sqf";
