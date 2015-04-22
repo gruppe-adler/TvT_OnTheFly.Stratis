@@ -588,7 +588,7 @@ class Mission
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
 			text="arsenal_blufor";
-			init="0 = [""AmmoboxInit"",[this,true]] spawn BIS_fnc_arsenal; this allowDamage false; clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearBackpackCargoGlobal this; clearMagazineCargoGlobal this;";
+			init="if (!IS_VANILLA) then {nul = this execVM ""loadouts\XLA_arsenal_blufor.sqf"";} else {0 = [""AmmoboxInit"",[this,true]] spawn BIS_fnc_arsenal;}; this allowDamage false; clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearBackpackCargoGlobal this; clearMagazineCargoGlobal this;";
 		};
 		class Item3
 		{
@@ -598,7 +598,7 @@ class Mission
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
 			text="arsenal_opfor";
-			init="0 = [""AmmoboxInit"",[this,true]] spawn BIS_fnc_arsenal; this allowDamage false; clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearBackpackCargoGlobal this; clearMagazineCargoGlobal this;";
+			init="if (!IS_VANILLA) then {nul = this execVM ""loadouts\XLA_arsenal_opfor.sqf"";} else {0 = [""AmmoboxInit"",[this,true]] spawn BIS_fnc_arsenal;}; this allowDamage false; clearItemCargoGlobal this; clearWeaponCargoGlobal this; clearBackpackCargoGlobal this; clearMagazineCargoGlobal this;";
 		};
 	};
 	class Markers
