@@ -177,6 +177,23 @@ if !(isDedicated) then {
 
 	if (!IS_VANILLA) then {
 		[] execVM "loadouts\_client.sqf";
+		if (!IS_VANILLA) then {
+			nul = arsenal_opfor execVM "loadouts\XLA_arsenal_opfor.sqf"; 
+			arsenal_opfor allowDamage false; 
+			clearItemCargoGlobal arsenal_opfor; 
+			clearWeaponCargoGlobal arsenal_opfor; 
+			clearBackpackCargoGlobal arsenal_opfor; 
+			clearMagazineCargoGlobal arsenal_opfor;
+
+			nul = arsenal_blufor execVM "loadouts\XLA_arsenal_blufor.sqf"; 
+			arsenal_blufor allowDamage false; 
+			clearItemCargoGlobal arsenal_blufor; 
+			clearWeaponCargoGlobal arsenal_blufor; 
+			clearBackpackCargoGlobal arsenal_blufor; 
+			clearMagazineCargoGlobal arsenal_blufor;
+	} else {
+	nul = ["AmmoboxInit",[arsenal_opfor,true]] spawn BIS_fnc_arsenal; 
+	nul = ["AmmoboxInit",[arsenal_blufor,true]] spawn BIS_fnc_arsenal; 
 	};
 
 	// Intro Gruppe Adler
