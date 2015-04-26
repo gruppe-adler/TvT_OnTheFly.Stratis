@@ -758,7 +758,7 @@ if (isServer) then {
 
 	// Grab the parameter that was passed in.
 	// The box should have "this execVM <scriptname>" in it's init field.
-	_box = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+	_box = [_this select 0, 0, objNull, [objNull]] call BIS_fnc_param;
 
 	// Check if @XLA_FixedArsenal is loaded
 	 if (isnil "XLA_fnc_addVirtualItemCargo") then {
