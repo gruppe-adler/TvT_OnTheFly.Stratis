@@ -26,7 +26,7 @@ if (_target == opfor_teamlead) then {
 
 };
 
-
+if (!isNil "opfor_engi") then {
 if (_target == opfor_engi) then {
 
 [] spawn {
@@ -47,5 +47,5 @@ if (_target == opfor_engi) then {
 
 		};
 };
-
+};
 };
