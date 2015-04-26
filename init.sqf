@@ -7,8 +7,8 @@ MINIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 4;
 MAXIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 5;
 TIME_ACCELERATION = paramsArray select 6;
 IS_VANILLA = (paramsArray select 7) == 1;
-ENABLE_REPLAY = (paramsArray select 8) == 1;
-IS_STREAMABLE = (paramsArray select 9) == 1;
+AR3PLAY_ENABLE_REPLAY = (paramsArray select 8) == 1;
+AR3PLAY_IS_STREAMABLE = (paramsArray select 9) == 1;
 
 if (isClass(configFile >> (_this select 0) >> task_force_radio)) then {
 	TFAR_ENABLED = true;
