@@ -73,9 +73,8 @@ if (isServer || isDedicated) then {
 			_prepare_dir = (((((local_recording) select 0) select 1) select _k) select 3);
 			_prepare_kindof = (((((local_recording) select 0) select 1) select _k) select 4);
 			_prepare_veh = (((((local_recording) select 0) select 1) select _k) select 5);
-			//single_current_values = [_unit,_side,_pos,_dir,_kindof,_veh];
-			//mil triangle:
-			//hintSilent format ["%1", (((((local_recording) select 1) select 0) select 1) select 3)];
+			
+			diag_log format ["marker for %1 created",_prepare_unit];
 			_marker = createMarker [format["%1",_prepare_unit],_prepare_pos];
 			_marker setMarkerShape "ICON";
 			_marker setMarkerType _prepare_kindof;
