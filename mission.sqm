@@ -588,6 +588,7 @@ class Mission
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
 			text="arsenal_blufor";
+			init="nul = this execVM ""loadouts\XLA_arsenal_blufor.sqf"";  this allowDamage false;      clearItemCargoGlobal this;      clearWeaponCargoGlobal this;      clearBackpackCargoGlobal this;      clearMagazineCargoGlobal this;";
 		};
 		class Item3
 		{
@@ -597,6 +598,7 @@ class Mission
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
 			text="arsenal_opfor";
+			init="nul = this execVM ""loadouts\XLA_arsenal_opfor.sqf"";  this allowDamage false;      clearItemCargoGlobal this;      clearWeaponCargoGlobal this;      clearBackpackCargoGlobal this;      clearMagazineCargoGlobal this;";
 		};
 	};
 	class Markers

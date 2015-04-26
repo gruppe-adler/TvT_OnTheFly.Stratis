@@ -184,19 +184,9 @@ if !(isDedicated) then {
 	if (!IS_VANILLA) then {
 		[] execVM "loadouts\_client.sqf";
 		
-			_nul1 = [arsenal_opfor] execVM "loadouts\XLA_arsenal_opfor.sqf"; 
-			arsenal_opfor allowDamage false; 
-			clearItemCargoGlobal arsenal_opfor; 
-			clearWeaponCargoGlobal arsenal_opfor; 
-			clearBackpackCargoGlobal arsenal_opfor; 
-			clearMagazineCargoGlobal arsenal_opfor;
-
-			_nul2 = [arsenal_blufor] execVM "loadouts\XLA_arsenal_blufor.sqf"; 
-			arsenal_blufor allowDamage false; 
-			clearItemCargoGlobal arsenal_blufor; 
-			clearWeaponCargoGlobal arsenal_blufor; 
-			clearBackpackCargoGlobal arsenal_blufor; 
-			clearMagazineCargoGlobal arsenal_blufor;
+			
+			
+			
 	} else {
 	_nul1 = ["AmmoboxInit",[arsenal_opfor,true]] spawn BIS_fnc_arsenal; 
 	_nul2 = ["AmmoboxInit",[arsenal_blufor,true]] spawn BIS_fnc_arsenal; 
