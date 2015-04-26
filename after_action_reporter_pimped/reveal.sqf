@@ -109,7 +109,7 @@ if (isServer || isDedicated) then {
 		_curMarker setMarkerType _kindof;
 		//sleep 0.1;
 		if (_kindof == "KIA" && !(_unit in deadUnitMarkers)) then {
-			_marker_kia = createMarker [format["kia_%1",_unit],_position];
+			_marker_kia = createMarker [format["kia_%1",_unit],_pos];
 			_marker_kia setMarkerShape "ICON";
 			_marker_kia setMarkerType _kindof;
 			_marker_kia setMarkerAlpha 1;        //**** change : new Command added
