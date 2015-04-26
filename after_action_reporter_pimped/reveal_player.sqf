@@ -1,4 +1,5 @@
 openMap [true,false];
+{deleteMarker _x} forEach allMapMarkers;
 playback_speed_x1 = 1;
 playback_speeds = [ [30,"30x"],
                         [20,"20x"],

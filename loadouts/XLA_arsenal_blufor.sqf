@@ -753,7 +753,7 @@ _availableGuns = _availableGuns
 + _agm_vector_Weapons
 + _agm_wind_Weapons;
 
-
+sleep 1;
 if (isServer && !IS_VANILLA) then {
 
 	// Grab the parameter that was passed in.

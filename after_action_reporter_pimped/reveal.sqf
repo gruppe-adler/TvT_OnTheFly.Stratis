@@ -1,7 +1,7 @@
 if (isServer || isDedicated) then {
 	did_replay = true;
 
-	{deleteMarker _x} forEach allMapMarkers;
+	
 
 
 	getDayTimeConverted = {
