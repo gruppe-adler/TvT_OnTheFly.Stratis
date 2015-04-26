@@ -91,7 +91,7 @@ class Params
 		title = "Play without Gruppe Adler Modset";
 		values[] = {true, false};
 		texts[] = {"YES","NO"};
-		default = false;
+		default = true;
 	};
 	class EnableReplay
 	{
