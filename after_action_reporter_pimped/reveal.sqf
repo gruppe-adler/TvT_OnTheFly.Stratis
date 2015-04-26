@@ -121,11 +121,11 @@ if (isServer || isDedicated) then {
 		//};
 		local_recording_counter = local_recording_counter + local_recording_playback_speed;
 			if (local_recording_counter > local_recording_length) exitWith {
-			[{["Replay finished."] call AGM_Core_fnc_displayTextStructured;},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
+			[{if (!IS_VANILLA) then {["Replay finished."] call AGM_Core_fnc_displayTextStructured;};},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
 			};
 		if (local_recording_counter < 0) then {
 			local_recording_playback_speed = 1;
-			[{["Replay restarted."] call AGM_Core_fnc_displayTextStructured;},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
+			[{if (!IS_VANILLA) then {["Replay restarted."] call AGM_Core_fnc_displayTextStructured;};},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
 			};
 		sleep 0.1;
 		//diag_log format ["CURRENT VALUES %1, counter is %2", (local_recording) select local_recording_counter, local_recording_counter];

@@ -11,7 +11,12 @@ if (_target == opfor_teamlead) then {
 		
 
 		if (OPFOR_TELEPORTED) exitWith {
-			[player, [0, 1, 3, 0, 0, 0, 0, 0, 3, 1]] call plank_deploy_fnc_init;
+
+			if (!IS_VANILLA) then {
+			[player, [0, 1, 3, 0, 0, 0, 0, 0, 3, 1,0]] call plank_deploy_fnc_init;
+			} else {
+			[player, [0, 0, 3, 0, 0, 0, 0, 0, 0, 0,1]] call plank_deploy_fnc_init;
+			};
 			player setVariable ["buildReady", false];
 			buildReadyAction1 = player addAction["<t color='#ff5555'>" + localize "str_GRAD_endPlacement" + "</t>",{player setVariable ["buildReady", true]; player removeAction buildReadyAction1;}];
 			};
@@ -31,7 +36,11 @@ if (_target == opfor_engi) then {
 		
 
 		if (OPFOR_TELEPORTED) exitWith {
-			[player, [1, 0, 3, 0, 0, 0, 0, 0, 3, 0]] call plank_deploy_fnc_init;
+			if (!IS_VANILLA) then {
+			[player, [0, 1, 3, 0, 0, 0, 0, 0, 3, 1,0]] call plank_deploy_fnc_init;
+			} else {
+			[player, [0, 0, 3, 0, 0, 0, 0, 0, 0, 0,1]] call plank_deploy_fnc_init;
+			};
 			player setVariable ["buildReady", false];
 			buildReadyAction2 = player addAction["<t color='#ff5555'>" + localize "str_GRAD_endPlacement" + "</t>",{player setVariable ["buildReady", true]; player removeAction buildReadyAction2;}];
 			};

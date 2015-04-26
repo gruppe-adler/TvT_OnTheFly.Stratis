@@ -86,12 +86,12 @@ class Params
 		default = 4;
 	};
 
-	class SMAandHLC
+	class isVanilla
 	{
-		title = "SMA and HLC Weapons?";
+		title = "Play without Gruppe Adler Modset";
 		values[] = {true, false};
 		texts[] = {"YES","NO"};
-		default = true;
+		default = false;
 	};
 	class EnableReplay
 	{

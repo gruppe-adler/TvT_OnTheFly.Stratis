@@ -71,6 +71,7 @@ blufor_teleport = blufor_teamlead addAction["<t color=""#93E352"">" + localize "
 call compile preprocessFileLineNumbers "plank\plank_init.sqf";				//Plank
 cameraOldPimped = compile preprocessFile "spectator\cameraOld_rip.sqf";
 cameraNewPimped = compile preprocessFile "spectator\camera_rip.sqf";
+If(isNil "spawn_help_fnc_compiled")then{call compile preprocessFileLineNumbers "helpers\findPos.sqf"};
 
 enableSentences false;														//Autospotten
 
@@ -91,6 +92,54 @@ if (!isNil "opfor_engi") then {
 };
 
 if (isServer) then { setDate [2035, 6, 24, TIME_OF_DAY, 1]; };	//Zeit
+
+if (isClass (configFile >> "CfgPatches" >> "AGM_Medical")) then  
+{ 
+    AGM_Medical_CoefDamage = 1; //Schadenskoeffizient
+    AGM_Medical_CoefBleeding = 1; //Blutungskoeffizient
+    AGM_Medical_CoefPain = 1; //Schmerzkoeffizient
+    AGM_Medical_CoefNonMedic = 2; //Zeitkoeffizient wenn Behandelnder kein Medic ist.
+    AGM_Medical_MaxUnconsciousnessTime = -1; //Zeit bewusstlos vor Tod. -1 = unendlich.
+    AGM_Medical_AllowNonMedics = false; //Nicht-Medics erlauben Epi und Blut zu verabreichen - ja ^ nein
+    AGM_Medical_RequireDiagnosis = true; //Diagnose notwendig - ja ^ nein
+    AGM_Medical_PreventInstaDeath = true; //Instant Death bei schweren Treffern? - ja ^ nein
+    AGM_Medical_PreventDeathWhileUnconscious = false; //Tod während Bewusstlosigkeit verhindern - ja ^ nein
+    AGM_Medical_SingleBandage = false; //Eine Bandage stopt alle Blutungen. - ja ^ nein
+    AGM_Medical_AllowChatWhileUnconscious = false; //Bewusstlose dürfen chaten. - ja ^ nein
+    AGM_Medical_EnableOverdosing = true; //Überdosis möglich. - ja ^ nein
+    AGM_Medical_RequireMEDEVAC = false; //Medevac Option an ^ aus.
+    AGM_Medical_AutomaticWakeup = true; //Bewusstlose (KI und Spieler)können aufwachen. - ja ^ nein
+    AGM_Medical_DisableScreams = true; //Schmerzenschreie. - ja ^ nein
+    AGM_Respawn_SavePreDeathGear = true; //Ausrüstung nach Tod speichern. - ja ^ nein
+    AGM_Respawn_RemoveDeadBodiesDisonncected = false; //Körper nach Disconnect entfernen. - ja ^ nein
+    
+    if (isServer) then  
+    { 
+       
+    publicVariable "AGM_Medical_CoefDamage";
+    publicVariable "AGM_Medical_CoefBleeding";
+    publicVariable "AGM_Medical_CoefPain";
+    publicVariable "AGM_Medical_CoefNonMedic";
+    publicVariable "AGM_Medical_MaxUnconsciousnessTime";
+    publicVariable "AGM_Medical_AllowNonMedics";
+    publicVariable "AGM_Medical_RequireDiagnosis";
+    publicVariable "AGM_Medical_PreventInstaDeath";
+    publicVariable "AGM_Medical_PreventDeathWhileUnconscious";
+    publicVariable "AGM_Medical_SingleBandage";
+    publicVariable "AGM_Medical_AllowChatWhileUnconscious";
+    publicVariable "AGM_Medical_EnableOverdosing";
+    publicVariable "AGM_Medical_RequireMEDEVAC";
+    publicVariable "AGM_Medical_AutomaticWakeup";
+    publicVariable "AGM_Medical_DisableScreams";
+    publicVariable "AGM_Respawn_SavePreDeathGear";
+    publicVariable "AGM_Respawn_RemoveDeadBodiesDisonncected";
+    }; 
+};  
+
+if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then  
+	{ 
+	[] execVM "tfarsettings.sqf";
+};
 
 if ((isServer) || (isDedicated)) then {
 
@@ -124,7 +173,9 @@ if ((isServer) || (isDedicated)) then {
 
 if !(isDedicated) then {
 	[] execVM "mission_setup\helpBriefing.sqf";
+	if (!IS_VANILLA) then {
 	[] execVM "mission_setup\surrenderAction.sqf";
+	};
 
 	switchMoveEverywhere = compileFinal "_this select 0 switchMove (_this select 1);";
 	["Preload"] call BIS_fnc_arsenal;
@@ -132,6 +183,23 @@ if !(isDedicated) then {
 
 	if (!IS_VANILLA) then {
 		[] execVM "loadouts\_client.sqf";
+		
+			nul = arsenal_opfor execVM "loadouts\XLA_arsenal_opfor.sqf"; 
+			arsenal_opfor allowDamage false; 
+			clearItemCargoGlobal arsenal_opfor; 
+			clearWeaponCargoGlobal arsenal_opfor; 
+			clearBackpackCargoGlobal arsenal_opfor; 
+			clearMagazineCargoGlobal arsenal_opfor;
+
+			nul = arsenal_blufor execVM "loadouts\XLA_arsenal_blufor.sqf"; 
+			arsenal_blufor allowDamage false; 
+			clearItemCargoGlobal arsenal_blufor; 
+			clearWeaponCargoGlobal arsenal_blufor; 
+			clearBackpackCargoGlobal arsenal_blufor; 
+			clearMagazineCargoGlobal arsenal_blufor;
+	} else {
+	nul = ["AmmoboxInit",[arsenal_opfor,true]] spawn BIS_fnc_arsenal; 
+	nul = ["AmmoboxInit",[arsenal_blufor,true]] spawn BIS_fnc_arsenal; 
 	};
 
 	// Intro Gruppe Adler
