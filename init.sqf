@@ -183,7 +183,6 @@ if !(isDedicated) then {
 
 	if (!IS_VANILLA) then {
 		[] execVM "loadouts\_client.sqf";
-		
 			
 			
 			
