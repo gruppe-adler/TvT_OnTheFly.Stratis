@@ -82,7 +82,7 @@ while{!replay_end_condition} do
 
 		// current values: position, side, kindof
 		single_current_values = [_unit,_side,_pos,_dir,_kindof,_veh];
-		diag_log format ["%1",single_current_values];
+		//diag_log format ["%1",single_current_values];
 		// prevent markers to render double on the same position (e.g. full team in vehicle)
 		if (!(_pos in all_current_values) && !(_veh in all_current_values)) then {
 			

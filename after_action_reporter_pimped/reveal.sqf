@@ -74,7 +74,7 @@ if (isServer || isDedicated) then {
 			_prepare_kindof = (((((local_recording) select 0) select 1) select _k) select 4);
 			_prepare_veh = (((((local_recording) select 0) select 1) select _k) select 5);
 			
-			diag_log format ["marker for %1 created",_prepare_unit];
+			//diag_log format ["marker for %1 created",_prepare_unit];
 			_marker = createMarker [format["%1",_prepare_unit],_prepare_pos];
 			_marker setMarkerShape "ICON";
 			_marker setMarkerType _prepare_kindof;
@@ -89,7 +89,7 @@ if (isServer || isDedicated) then {
 		//current_recording_length = count ((local_recording) select local_recording_counter);
 		//for [{_j=0}, {_j<current_recording_length}, {_j=_j+1}] do {
 		_daytime = [(((local_recording) select local_recording_counter) select 0)] call getDayTimeConverted;
-		
+		diag_log format ["daytime is %1",_daytime];
 		//hintSilent format ["Replay Game Time" + " %1",_daytime];
 
 		//change : **** ((count current_markers) - 1)
