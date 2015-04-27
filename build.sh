@@ -69,9 +69,8 @@ tmpdir="$builddir/tmpdir"
 
 
 cp -r ./ "$tmpdir"
-rm "$tmpdir/*.sh"
-rm "$tmpdir/*.bat"
-rm "$tmpdir/*.exe"
+rm "$tmpdir/build.sh"
+rm "$tmpdir/cpbo.exe"
 rm -fr "$tmpdir/.git"
 rm "$tmpdir/.gitattributes"
 rm "$tmpdir/.gitignore"
