@@ -93,8 +93,8 @@ if (!isNil "opfor_engi") then {
 
 if (isServer) then { setDate [2035, 6, 24, TIME_OF_DAY, 1]; };	//Zeit
 
-if (isClass (configFile >> "CfgPatches" >> "AGM_Medical")) then  
-{ 
+if (isClass (configFile >> "CfgPatches" >> "AGM_Medical")) then
+{
     AGM_Medical_CoefDamage = 1; //Schadenskoeffizient
     AGM_Medical_CoefBleeding = 1; //Blutungskoeffizient
     AGM_Medical_CoefPain = 1; //Schmerzkoeffizient
@@ -112,10 +112,10 @@ if (isClass (configFile >> "CfgPatches" >> "AGM_Medical")) then
     AGM_Medical_DisableScreams = true; //Schmerzenschreie. - ja ^ nein
     AGM_Respawn_SavePreDeathGear = true; //Ausrüstung nach Tod speichern. - ja ^ nein
     AGM_Respawn_RemoveDeadBodiesDisonncected = false; //Körper nach Disconnect entfernen. - ja ^ nein
-    
-    if (isServer) then  
-    { 
-       
+
+    if (isServer) then
+    {
+
     publicVariable "AGM_Medical_CoefDamage";
     publicVariable "AGM_Medical_CoefBleeding";
     publicVariable "AGM_Medical_CoefPain";
@@ -133,16 +133,16 @@ if (isClass (configFile >> "CfgPatches" >> "AGM_Medical")) then
     publicVariable "AGM_Medical_DisableScreams";
     publicVariable "AGM_Respawn_SavePreDeathGear";
     publicVariable "AGM_Respawn_RemoveDeadBodiesDisonncected";
-    }; 
-};  
-
-if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then  
-	{ 
-	[] execVM "tfarsettings.sqf";
+    };
 };
 
-if ((isServer) || (isDedicated)) then {
 
+
+if ((isServer) || (isDedicated)) then {
+	if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then
+		{
+		[] execVM "tfarsettings.sqf";
+	};
 	[] execVM "objectives\detect_all_dead.sqf";
 
 
@@ -183,12 +183,12 @@ if !(isDedicated) then {
 
 	if (!IS_VANILLA) then {
 		[] execVM "loadouts\_client.sqf";
-			
-			
-			
+
+
+
 	} else {
-	_nul1 = ["AmmoboxInit",[arsenal_opfor,true]] spawn BIS_fnc_arsenal; 
-	_nul2 = ["AmmoboxInit",[arsenal_blufor,true]] spawn BIS_fnc_arsenal; 
+	_nul1 = ["AmmoboxInit",[arsenal_opfor,true]] spawn BIS_fnc_arsenal;
+	_nul2 = ["AmmoboxInit",[arsenal_blufor,true]] spawn BIS_fnc_arsenal;
 	};
 
 	// Intro Gruppe Adler
