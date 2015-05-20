@@ -3,12 +3,19 @@
 compile preprocessFileLineNumbers "\task_force_radio\functions\common.sqf";
 
 _getTsChannel = {
-	_answer = ("reflection" callExtension "arg(port)");
+	_rawResponse = ("reflection" callExtension "arg(port)");
 	_channel = "TFAR";
-	if ((_answer select [0, 1]) == "0") then {
-		_channel = _channel + "-" + (_answer select [2]);
+	if (count _rawResponse > 0) then {
+		_response =  call compile _rawResponse;
+		_responseCode = (_response select 0);
+		_returnValue = (_response select 1);
+		if (_responseCode == 0) then {
+			_channel = _channel + "-" + _returnValue;
+		} else {
+			diag_log "could not get game server port: " + _returnValue;
+		};
 	} else {
-		diag_log "could not get game server port: " + _answer;
+		diag_log "no answer for reflection.so call :(";
 	};
 
 	_channel;
