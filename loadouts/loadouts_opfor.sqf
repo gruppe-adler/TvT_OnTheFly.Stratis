@@ -99,7 +99,9 @@ randWeaponTerrorists =
 "rhs_weap_akms",
 "rhs_weap_M590_8RD",
 "rhs_weap_pkm",
-"rhs_weap_ak74m_desert_npz"
+"rhs_weap_ak74m_desert_npz",
+"rhs_weap_ak74m_npz",
+"rhs_weap_ak103_npz"
 ];
 
 //Ammo Terrorists
@@ -118,7 +120,9 @@ randWeaponTerrorists =
 //"rhs_45Rnd_545X39_7N10_AK"
 //"rhs_45Rnd_545X39_7N22_AK"
 //"rhs_45Rnd_545X39_AK_Green"
-
+//"rhs_30Rnd_762x39mm"
+//"rhs_30Rnd_762x39mm_tracer"
+//"rhs_30Rnd_762x39mm_89"
 
 randLauncherTerrorists = 
 [
