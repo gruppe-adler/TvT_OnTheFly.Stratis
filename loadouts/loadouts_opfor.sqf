@@ -95,8 +95,30 @@ randBackpackTerrorists =
 
 randWeaponTerrorists = 
 [
-
+"rhs_weap_akm",
+"rhs_weap_akms",
+"rhs_weap_M590_8RD",
+"rhs_weap_pkm",
+"rhs_weap_ak74m_desert_npz"
 ];
+
+//Ammo Terrorists
+//"rhs_30Rnd_762x39mm"
+//"rhs_30Rnd_762x39mm_tracer"
+//"rhs_30Rnd_762x39mm_89"
+//"rhsusf_8Rnd_00Buck"
+//"rhs_100Rnd_762x54mmR"
+//"rhs_100Rnd_762x54mmR_green"
+//"rhs_30Rnd_545x39_AK"
+//"rhs_30Rnd_545x39_AK_no_tracers"
+//"rhs_30Rnd_545x39_7N10_AK"
+//"rhs_30Rnd_545x39_7N22_AK"
+//"rhs_30Rnd_545x39_AK_green"
+//"rhs_45Rnd_545X39_AK"
+//"rhs_45Rnd_545X39_7N10_AK"
+//"rhs_45Rnd_545X39_7N22_AK"
+//"rhs_45Rnd_545X39_AK_Green"
+
 
 randLauncherTerrorists = 
 [
