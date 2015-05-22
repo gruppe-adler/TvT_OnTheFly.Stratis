@@ -1,103 +1,206 @@
-randUniformEastern = 
-["U_CAF_AG_EEUR_FATIGUES_01",
-"U_CAF_AG_EEUR_FATIGUES_01a",
-"U_CAF_AG_EEUR_FATIGUES_02",
-"U_CAF_AG_EEUR_FATIGUES_02a",
-"U_CAF_AG_EEUR_FATIGUES_03",
-"U_CAF_AG_EEUR_FATIGUES_03a",
-"U_CAF_AG_EEUR_FATIGUES_03b",
-"U_CAF_AG_EEUR_FATIGUES_03c"
-];
+// TALIBAN (taliban stuff)
 
 randUniformTaliban = 
-["U_CAF_AG_ME_ROBES_01",
-"U_CAF_AG_ME_ROBES_01a",
-"U_CAF_AG_ME_ROBES_01b",
-"U_CAF_AG_ME_ROBES_01c",
-"U_CAF_AG_ME_ROBES_01d",
-"U_CAF_AG_ME_ROBES_02",
-"U_CAF_AG_ME_ROBES_02a",
-"U_CAF_AG_ME_ROBES_02b",
-"U_CAF_AG_ME_ROBES_02c",
-"U_CAF_AG_ME_ROBES_02d",
-"U_CAF_AG_ME_ROBES_03",
-"U_CAF_AG_ME_ROBES_03a",
-"U_CAF_AG_ME_ROBES_03b",
-"U_CAF_AG_ME_ROBES_03c",
-"U_CAF_AG_ME_ROBES_03d",
-"U_CAF_AG_ME_ROBES_04",
-"U_CAF_AG_ME_ROBES_04a",
-"U_CAF_AG_ME_ROBES_04b",
-"U_CAF_AG_ME_ROBES_04c",
-"U_CAF_AG_ME_ROBES_04d",
-"U_CAF_AG_ME_ROBES_mil_01",
-"U_CAF_AG_ME_ROBES_mil_01a"
+[
+"LOP_U_Mil_01",
+"LOP_U_Mil_02",
+"LOP_U_Mil_03",
+"LOP_U_Mil_04",
+"LOP_U_Afg_civ_01",
+"LOP_U_Afg_civ_02",
+"LOP_U_Afg_civ_03",
+"LOP_U_Afg_civ_04"
 ];
 
-randHeadGearEastern = 
-["H_CAF_AG_FUR",
-"H_CAF_AG_FUR2",
-"H_CAF_AG_BEANIE",
-"H_CAF_AG_BOONIE_01",
-"H_CAF_AG_BOONIE_02",
-"H_Watchcap_cbr",
-"H_Shemag_olive_hs",
-"H_Hat_camo"
+randomVestTaliban = 
+[
+
+];
+
+randomBackpackTaliban =
+[
+
 ];
 
 randHeadGearTaliban = 
-["H_CAF_AG_TURBAN",
-"H_CAF_AG_PAKTOL",
-"H_CAF_AG_PAKTOL_01",
-"H_CAF_AG_PAKTOL_02",
-"H_CAF_AG_PAKTOL_03",
-"H_CAF_AG_WRAP"
+[
+"LOP_H_Turban",
+"H_ShemagOpen_khk",
+"H_ShemagOpen_tan",
+"H_Shemag_olive",
+"LOP_H_Shemag_IT",
+"LOP_H_Pakol",
+"LOP_H_Pakol",
+"LOP_H_Pakol"
 ];
 
-opfor_rpg = {
 
-	this = _this select 0;
+// TERRORS (black uniforms)
 
-	comment "Exported from Arsenal by nomisum";
+randUniformTerrorists = 
+[
+"LOP_U_IT_Fatigue_01",
+"LOP_U_IT_Fatigue_02",
+"LOP_U_IT_Fatigue_03",
+"LOP_U_IT_Fatigue_04",
+"LOP_U_IA_Fatigue_02",
+"LOP_U_IA_Fatigue_01"
+];
 
-	comment "Remove existing items";
-	removeAllWeapons this;
-	removeAllItems this;
-	removeAllAssignedItems this;
-	removeUniform this;
-	removeVest this;
-	removeBackpack this;
-	removeHeadgear this;
-	removeGoggles this;
+randHeadGearTerrorists =
+[
+"LOP_H_Shemag_IT"
+];
+
+randomVestTerrorists = 
+[
+"ARC_Common_Blk_Plate_Carrier_H",
+"ARC_Common_Blk_Plate_Carrier",
+"V_PlateCarrier1_blk",
+"V_Chestrig_blk",
+"V_TacVestIR_blk",
+"V_BandollierB_blk",
+"V_BandollierB_rgr",
+"SMA_UNIFORMS_BLACK_VEST"
+];
+
+randomBackpackTerrorists =
+[
+
+];
 
 
+// EASTERN (wood)
+
+randUniformEastern = 
+[
+"LOP_U_UA_Fatigue_01",
+"LOP_U_UA_Fatigue_02",
+"LOP_U_UA_Fatigue_03",
+"LOP_U_UA_Fatigue_04",
+"LOP_U_US_Fatigue_02",
+"LOP_U_US_Fatigue_02_slv",
+"LOP_U_ChDKZ_Lopotev"
+];
+
+randomVestEastern= 
+[
+
+];
+
+randomBackpackEastern =
+[
+
+];
+
+randHeadGearEastern = 
+[
+"H_Bandanna_gry",
+"H_Bandanna_cbr",
+"H_Bandanna_khk_hs",
+"H_Bandanna_khk",
+"H_Bandanna_sgg",
+"H_Bandanna_sand",
+"H_Bandanna_camo",
+"H_Watchcap_blk",
+"rhs_beanie_green",
+"rhs_beanie",
+"H_Booniehat_khk_hs",
+"H_Booniehat_oli",
+"rhs_Booniehat_m81",
+"H_Cap_oli",
+"H_MilCap_gry",
+"H_Cap_headphones"
+];
 
 
+// RUSSIANS (emr summer)
 
-	comment "Add containers";
-	if (TROPENTARN) then {
-		[[{}, this forceAddUniform (randUniformTaliban call BIS_fnc_selectRandom)], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	} else {
-		[[{}, this forceAddUniform (randUniformEastern call BIS_fnc_selectRandom)], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	};
+randUniformRussians = 
+[
+"rhs_uniform_emr_patchless"
+];
+
+randVestRussian = 
+[
+"rhs_6b23_digi",
+"rhs_6b23_digi_6sh92",
+"rhs_6b23_digi_6sh92_headset_mapcase",
+"rhs_6b23_digi_6sh92_radio",
+"rhs_6b23_digi_6sh92_vog",
+"rhs_6b23_digi_6sh92_vog_headset",
+"rhs_6b23_digi_crewofficer",
+"rhs_6b23_digi_crew",
+"rhs_6b23_digi_engineer",
+"rhs_6b23_digi_medic",
+"rhs_6b23_digi_rifleman",
+"rhs_6b23_digi_sniper"
+];
+
+randHeadGearRussian =
+[
+"rhs_6b27m_digi",
+"rhs_6b27m_digi_bala",
+"rhs_6b27m_digi_ess",
+"rhs_6b27m_digi_ess_bala"
+];
+
+randHeadGearRussianOfficer =
+[
+"rhs_fieldcap_digi",
+"rhs_fieldcap_helm_digi"
+];
+
+randBackPackRussian = [
+"rhs_sidor",
+"B_Carryall_oli",
+"rhs_assault_umbts",
+"rhs_assault_umbts_demo"
+];
+
+
+switch (OPFORCE) do {
+	// taliban
+	case "0": {
+		customUniform = randUniformTaliban call BIS_fnc_selectRandom;
+		customVest= randVestTaliban call BIS_fnc_selectRandom;
+		customHeadgear = randHeadGearTaliban call BIS_fnc_selectRandom;
+		customBackpack = randBackPackTaliban call BIS_fnc_selectRandom;
+
+	}; 
+
+	// terrorists
+	case "1": {
+		customUniform = randUniformTerrorists call BIS_fnc_selectRandom;
+		customVest= randVestTerrorists call BIS_fnc_selectRandom;
+		customHeadgear = randHeadGearTerrorists call BIS_fnc_selectRandom;
+		customBackpack = randBackPackTerrorists call BIS_fnc_selectRandom;
+
+	}; 
+
+	// eastern/nationalists
+	case "2": {
+		customUniform = randUniformEastern call BIS_fnc_selectRandom;
+		customVest= randVestEastern call BIS_fnc_selectRandom;
+		customHeadgear = randHeadGearEastern call BIS_fnc_selectRandom;
+		customBackpack = randBackPackEastern call BIS_fnc_selectRandom;
+
+	}; 
 	
-
-	comment "Add items";
-	this linkItem "ItemMap";
-	this linkItem "ItemCompass";
-	this linkItem "ItemWatch";
-	this linkItem "tf_fadak";
-
+	// russians
+	case "3": {
+		customUniform = randUniformRussians call BIS_fnc_selectRandom;
+		customVest= randVestRussian call BIS_fnc_selectRandom;
+		customHeadgear = randHeadGearRussian call BIS_fnc_selectRandom;
+		customBackpack = randBackPackRussian call BIS_fnc_selectRandom;
+	};
+	default {};
 };
 
 
-opfor_pkm = {
-
+opfor_default = {
+	
 	this = _this select 0;
-
-	comment "Exported from Arsenal by nomisum";
-
-
 
 	comment "Remove existing items";
 	removeAllWeapons this;
@@ -109,172 +212,13 @@ opfor_pkm = {
 	removeHeadgear this;
 	removeGoggles this;
 
-
-
 	comment "Add containers";
-	if (TROPENTARN) then {
-		[[{}, this forceAddUniform (randUniformTaliban call BIS_fnc_selectRandom)], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	} else {
-		[[{}, this forceAddUniform (randUniformEastern call BIS_fnc_selectRandom)], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	};
 	
-
-	comment "Add items";
-	this linkItem "ItemMap";
-	this linkItem "ItemCompass";
-	this linkItem "ItemWatch";
-	this linkItem "tf_fadak";
-
-
-
-};
-
-
-opfor_medic = {
-
-	this = _this select 0;
-
-	comment "Exported from Arsenal by nomisum";
-
-
-
-	comment "Remove existing items";
-	removeAllWeapons this;
-	removeAllItems this;
-	removeAllAssignedItems this;
-	removeUniform this;
-	removeVest this;
-	removeBackpack this;
-	removeHeadgear this;
-	removeGoggles this;
-
-
-
-	comment "Add containers";
-	if (TROPENTARN) then {
-		[[{}, this forceAddUniform (randUniformTaliban call BIS_fnc_selectRandom)], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	} else {
-		[[{}, this forceAddUniform (randUniformEastern call BIS_fnc_selectRandom)], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	};
+	[[{}, this forceAddUniform customUniform], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addVest customVest], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addHeadgear customHeadgear], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addBackpack customBackpack], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	
-	comment "Add items";
-	this linkItem "ItemMap";
-	this linkItem "ItemCompass";
-	this linkItem "ItemWatch";
-	this linkItem "tf_fadak";
-
-
-
-};
-
-
-opfor_m14 = {
-
-	this = _this select 0;
-
-	comment "Exported from Arsenal by nomisum";
-
-
-
-	comment "Remove existing items";
-	removeAllWeapons this;
-	removeAllItems this;
-	removeAllAssignedItems this;
-	removeUniform this;
-	removeVest this;
-	removeBackpack this;
-	removeHeadgear this;
-	removeGoggles this;
-
-
-
-	comment "Add containers";
-	if (TROPENTARN) then {
-		[[{}, this forceAddUniform (randUniformTaliban call BIS_fnc_selectRandom)], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	} else {
-		[[{}, this forceAddUniform (randUniformEastern call BIS_fnc_selectRandom)], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	};
-	
-
-	comment "Add items";
-	this linkItem "ItemMap";
-	this linkItem "ItemCompass";
-	this linkItem "ItemWatch";
-	this linkItem "tf_fadak";
-
-
-
-};
-
-
-opfor_l1a1 = {
-
-	this = _this select 0;
-
-	comment "Exported from Arsenal by nomisum";
-
-
-
-	comment "Remove existing items";
-	removeAllWeapons this;
-	removeAllItems this;
-	removeAllAssignedItems this;
-	removeUniform this;
-	removeVest this;
-	removeBackpack this;
-	removeHeadgear this;
-	removeGoggles this;
-
-
-
-	comment "Add containers";
-	if (TROPENTARN) then {
-		[[{}, this forceAddUniform (randUniformTaliban call BIS_fnc_selectRandom)], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	} else {
-		[[{}, this forceAddUniform (randUniformEastern call BIS_fnc_selectRandom)], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	};
-	
-
-	comment "Add items";
-	this linkItem "ItemMap";
-	this linkItem "ItemCompass";
-	this linkItem "ItemWatch";
-	this linkItem "ItemGPS";
-	this linkItem "tf_fadak";
-
-
-
-};
-
-opfor_akfamily = {
-	
-	this = _this select 0;
-
-	comment "Exported from Arsenal by nomisum";
-
-	comment "Remove existing items";
-	removeAllWeapons this;
-	removeAllItems this;
-	removeAllAssignedItems this;
-	removeUniform this;
-	removeVest this;
-	removeBackpack this;
-	removeHeadgear this;
-	removeGoggles this;
-
-
-
-
-
-	comment "Add containers";
-
-	if (TROPENTARN) then {
-		[[{}, this forceAddUniform (randUniformTaliban call BIS_fnc_selectRandom)], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	} else {
-		[[{}, this forceAddUniform (randUniformEastern call BIS_fnc_selectRandom)], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	};
-	
-
 	comment "Add items";
 	this linkItem "ItemMap";
 	this linkItem "ItemCompass";

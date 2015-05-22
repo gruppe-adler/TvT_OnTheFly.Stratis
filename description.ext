@@ -46,7 +46,7 @@ class Params
 		default = 0;
     };
 
-	class APCVSAT
+	class MBTVSAT
 	{
 		title = "One of those vehicles for each side";
 		values[] = {0, 1};
@@ -54,11 +54,18 @@ class Params
 		default = 0;
 	};
 
-	class Tropentarn
+	class BLUFORCE
 	{
-		title = "Forces";
-		values[] = {0,1};
-		texts[] = {"Flecktarn/Eastern Rebels","Tropentarn/Taliban"};
+		title = "BLUFOR";
+		values[] = {0,1,2,3};
+		texts[] = {"BW Fleck","BW Tropen","US Desert","US Wood"};
+		default = 1;
+	};
+	class OPFORCE
+	{
+		title = "OPFOR";
+		values[] = {0,1,2,3};
+		texts[] = {"Taliban/Afghan Militia","Iraqi Terrorists","Eastern Rebels/Nationalists","Russians"};
 		default = 1;
 	};
 

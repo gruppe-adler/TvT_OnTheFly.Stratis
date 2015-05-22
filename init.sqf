@@ -1,14 +1,15 @@
 
 TIME_OF_DAY = paramsArray select 0;
 WEATHER_SETTING = paramsArray select 1;
-MBT_VS_AT = (paramsArray select 2) == 1;
-TROPENTARN = (paramsArray select 3) == 1;
-MINIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 4;
-MAXIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 5;
-TIME_ACCELERATION = paramsArray select 6;
-IS_VANILLA = (paramsArray select 7) == 1;
-AR3PLAY_ENABLE_REPLAY = (paramsArray select 8) == 1;
-AR3PLAY_IS_STREAMABLE = (paramsArray select 9) == 1;
+MBT_VS_AT = paramsArray select 2;
+BLUFORCE = paramsArray select 3;
+OPFORCE = (paramsArray select 4) == 1;
+MINIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 5;
+MAXIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 6;
+TIME_ACCELERATION = paramsArray select 7;
+IS_VANILLA = (paramsArray select 8) == 1;
+AR3PLAY_ENABLE_REPLAY = (paramsArray select 9) == 1;
+AR3PLAY_IS_STREAMABLE = (paramsArray select 10) == 1;
 
 if (isClass(configFile >> (_this select 0) >> task_force_radio)) then {
 	TFAR_ENABLED = true;
@@ -93,48 +94,6 @@ if (!isNil "opfor_engi") then {
 
 if (isServer) then { setDate [2035, 6, 24, TIME_OF_DAY, 1]; };	//Zeit
 
-if (isClass (configFile >> "CfgPatches" >> "AGM_Medical")) then
-{
-    AGM_Medical_CoefDamage = 1; //Schadenskoeffizient
-    AGM_Medical_CoefBleeding = 1; //Blutungskoeffizient
-    AGM_Medical_CoefPain = 1; //Schmerzkoeffizient
-    AGM_Medical_CoefNonMedic = 2; //Zeitkoeffizient wenn Behandelnder kein Medic ist.
-    AGM_Medical_MaxUnconsciousnessTime = -1; //Zeit bewusstlos vor Tod. -1 = unendlich.
-    AGM_Medical_AllowNonMedics = false; //Nicht-Medics erlauben Epi und Blut zu verabreichen - ja ^ nein
-    AGM_Medical_RequireDiagnosis = true; //Diagnose notwendig - ja ^ nein
-    AGM_Medical_PreventInstaDeath = true; //Instant Death bei schweren Treffern? - ja ^ nein
-    AGM_Medical_PreventDeathWhileUnconscious = false; //Tod während Bewusstlosigkeit verhindern - ja ^ nein
-    AGM_Medical_SingleBandage = false; //Eine Bandage stopt alle Blutungen. - ja ^ nein
-    AGM_Medical_AllowChatWhileUnconscious = false; //Bewusstlose dürfen chaten. - ja ^ nein
-    AGM_Medical_EnableOverdosing = true; //Überdosis möglich. - ja ^ nein
-    AGM_Medical_RequireMEDEVAC = false; //Medevac Option an ^ aus.
-    AGM_Medical_AutomaticWakeup = true; //Bewusstlose (KI und Spieler)können aufwachen. - ja ^ nein
-    AGM_Medical_DisableScreams = true; //Schmerzenschreie. - ja ^ nein
-    AGM_Respawn_SavePreDeathGear = true; //Ausrüstung nach Tod speichern. - ja ^ nein
-    AGM_Respawn_RemoveDeadBodiesDisonncected = false; //Körper nach Disconnect entfernen. - ja ^ nein
-
-    if (isServer) then
-    {
-
-    publicVariable "AGM_Medical_CoefDamage";
-    publicVariable "AGM_Medical_CoefBleeding";
-    publicVariable "AGM_Medical_CoefPain";
-    publicVariable "AGM_Medical_CoefNonMedic";
-    publicVariable "AGM_Medical_MaxUnconsciousnessTime";
-    publicVariable "AGM_Medical_AllowNonMedics";
-    publicVariable "AGM_Medical_RequireDiagnosis";
-    publicVariable "AGM_Medical_PreventInstaDeath";
-    publicVariable "AGM_Medical_PreventDeathWhileUnconscious";
-    publicVariable "AGM_Medical_SingleBandage";
-    publicVariable "AGM_Medical_AllowChatWhileUnconscious";
-    publicVariable "AGM_Medical_EnableOverdosing";
-    publicVariable "AGM_Medical_RequireMEDEVAC";
-    publicVariable "AGM_Medical_AutomaticWakeup";
-    publicVariable "AGM_Medical_DisableScreams";
-    publicVariable "AGM_Respawn_SavePreDeathGear";
-    publicVariable "AGM_Respawn_RemoveDeadBodiesDisonncected";
-    };
-};
 
 
 
@@ -148,7 +107,7 @@ if ((isServer) || (isDedicated)) then {
 
 	respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger select 0),(getPos sector_trigger select 1),0];
 	if (!IS_VANILLA) then {
-	[respawn_helper, false] call AGM_Drag_fnc_makeDraggable;
+	
 	};
 
 	[] spawn {

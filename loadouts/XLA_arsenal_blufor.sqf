@@ -61,84 +61,84 @@ _3CB_guns = [
 
 
 // -------------------------------------------------------------------
-// 		AGM Grenades
+// 		ACE Grenades
 // -------------------------------------------------------------------
-_agm_grenades_Magazines = [
-	"AGM_HandFlare_White",
-	"AGM_HandFlare_Red",
-	"AGM_HandFlare_Green",
-	"AGM_HandFlare_Yellow",
-	"AGM_M84",
+_ACE_grenades_Magazines = [
+	"ACE_HandFlare_White",
+	"ACE_HandFlare_Red",
+	"ACE_HandFlare_Green",
+	"ACE_HandFlare_Yellow",
+	"ACE_M84",
 	"3Rnd_UGL_FlareGreen_F", //Do we need this? Seems like vanilla
 	"6Rnd_GreenSignal_F",
 	"6Rnd_RedSignal_F"
 ];
-_agm_grenades_Weapons = [
-	"AGM_HandFlare_WhiteMuzzle",
-	"AGM_HandFlare_RedMuzzle",
-	"AGM_HandFlare_GreenMuzzle",
-	"AGM_HandFlare_YellowMuzzle",
-	"AGM_M84Muzzle"
+_ACE_grenades_Weapons = [
+	"ACE_HandFlare_WhiteMuzzle",
+	"ACE_HandFlare_RedMuzzle",
+	"ACE_HandFlare_GreenMuzzle",
+	"ACE_HandFlare_YellowMuzzle",
+	"ACE_M84Muzzle"
 ];
 
 // -------------------------------------------------------------------
-// 		AGM Attach
+// 		ACE Attach
 // -------------------------------------------------------------------
-_agm_attach_Weapons = [
-	"AGM_IR_Strobe_Item"
+_ACE_attach_Weapons = [
+	"ACE_IR_Strobe_Item"
 ];
-_agm_attach_Magazines = [
+_ACE_attach_Magazines = [
 	"B_IR_Grenade",
 	"Chemlight_green"
 ];
 
 // -------------------------------------------------------------------
-// 		AGM Ballistics
+// 		ACE Ballistics
 // -------------------------------------------------------------------
-_agm_ballistics_Magazines = [
-	"AGM_30Rnd_65x39_caseless_mag_Tracer_Dim",
-	"AGM_30Rnd_65x39_caseless_mag_SD",
-	"AGM_30Rnd_65x39_caseless_mag_AP",
-	"AGM_30Rnd_65x39_caseless_green_mag_Tracer_Dim",
-	"AGM_30Rnd_65x39_caseless_green_mag_SD",
-	"AGM_30Rnd_65x39_caseless_green_mag_AP",
-	"AGM_30Rnd_556x45_Stanag_Tracer_Dim",
-	"AGM_30Rnd_556x45_Stanag_SD",
-	"AGM_30Rnd_556x45_Stanag_AP",
-	"AGM_20Rnd_762x51_Mag_Tracer",
-	"AGM_20Rnd_762x51_Mag_Tracer_Dim",
-	"AGM_20Rnd_762x51_Mag_SD",
-	"AGM_20Rnd_762x51_Mag_AP"
+_ACE_ballistics_Magazines = [
+	"ACE_30Rnd_65x39_caseless_mag_Tracer_Dim",
+	"ACE_30Rnd_65x39_caseless_mag_SD",
+	"ACE_30Rnd_65x39_caseless_mag_AP",
+	"ACE_30Rnd_65x39_caseless_green_mag_Tracer_Dim",
+	"ACE_30Rnd_65x39_caseless_green_mag_SD",
+	"ACE_30Rnd_65x39_caseless_green_mag_AP",
+	"ACE_30Rnd_556x45_Stanag_Tracer_Dim",
+	"ACE_30Rnd_556x45_Stanag_SD",
+	"ACE_30Rnd_556x45_Stanag_AP",
+	"ACE_20Rnd_762x51_Mag_Tracer",
+	"ACE_20Rnd_762x51_Mag_Tracer_Dim",
+	"ACE_20Rnd_762x51_Mag_SD",
+	"ACE_20Rnd_762x51_Mag_AP"
 ];
-_agm_ballistics_attachments = [
-	"AGM_muzzle_mzls_H",
-	"AGM_muzzle_mzls_B",
-	"AGM_muzzle_mzls_L",
-	"AGM_muzzle_mzls_smg_01",
-	"AGM_muzzle_mzls_smg_02"
+_ACE_ballistics_attachments = [
+	"ACE_muzzle_mzls_H",
+	"ACE_muzzle_mzls_B",
+	"ACE_muzzle_mzls_L",
+	"ACE_muzzle_mzls_smg_01",
+	"ACE_muzzle_mzls_smg_02"
 ];
 
 // -------------------------------------------------------------------
-// 		AGM Disposable (Launchers)
+// 		ACE Disposable (Launchers)
 // -------------------------------------------------------------------
 	//This is a design choice - do we want people saving spent tubes?
-_agm_disposable_Weapons = [
-	"AGM_launch_NLAW_Used_F"
+_ACE_disposable_Weapons = [
+	"ACE_launch_NLAW_Used_F"
 ];
-_agm_disposable_Magazines = [
-	"AGM_UsedTube_F"
+_ACE_disposable_Magazines = [
+	"ACE_UsedTube_F"
 ];
 
 // -------------------------------------------------------------------
-// 		AGM Explosives
+// 		ACE Explosives
 // -------------------------------------------------------------------
-_agm_explosives_Weapons = [
-	"AGM_Clacker",
-	"AGM_M26_Clacker",
-	"AGM_DefusalKit",
-	"AGM_DeadManSwitch"
+_ACE_explosives_Weapons = [
+	"ACE_Clacker",
+	"ACE_M26_Clacker",
+	"ACE_DefusalKit",
+	"ACE_DeadManSwitch"
 ];
-_agm_explosives_Magazines = [
+_ACE_explosives_Magazines = [
 	"ATMine_Range_Mag",
 	"APERSBoundingMine_Range_Mag",
 	"APERSMine_Range_Mag",
@@ -150,70 +150,70 @@ _agm_explosives_Magazines = [
 ];
 
 // -------------------------------------------------------------------
-// 		AGM Hearing (Earbuds)
+// 		ACE Hearing (Earbuds)
 // -------------------------------------------------------------------
-_agm_hearing_Weapons = [
-	"AGM_EarBuds"
+_ACE_hearing_Weapons = [
+	"ACE_EarBuds"
 ];
 
 // -------------------------------------------------------------------
-// 		AGM Interaction (Handcuffs)
+// 		ACE Interaction (Handcuffs)
 // -------------------------------------------------------------------
-_agm_interaction_Weapons = [
-	"AGM_CableTie"
+_ACE_interaction_Weapons = [
+	"ACE_CableTie"
 ];
 
 // -------------------------------------------------------------------
-// 		AGM Logistics (UAV Batteries)
+// 		ACE Logistics (UAV Batteries)
 // -------------------------------------------------------------------
-_agm_logistics_Weapons = [
-	"AGM_UAVBattery"
+_ACE_logistics_Weapons = [
+	"ACE_UAVBattery"
 ];
 
 // -------------------------------------------------------------------
-// 		AGM Map (Maptool)
+// 		ACE Map (Maptool)
 // -------------------------------------------------------------------
-_agm_map_Weapons = [
-	"AGM_MapTools"
+_ACE_map_Weapons = [
+	"ACE_MapTools"
 ];
 
 // -------------------------------------------------------------------
-// 		AGM Medical
+// 		ACE Medical
 // -------------------------------------------------------------------
-_agm_medical_Weapons = [
-	"AGM_Bandage",
-	"AGM_Morphine",
-	"AGM_Epipen",
-	"AGM_Bloodbag"
+_ACE_medical_Weapons = [
+	"ACE_Bandage",
+	"ACE_Morphine",
+	"ACE_Epipen",
+	"ACE_Bloodbag"
 ];
 
 // -------------------------------------------------------------------
-// 		AGM Overheating (Spare Barrels)
+// 		ACE Overheating (Spare Barrels)
 // -------------------------------------------------------------------
-_agm_overheating_Weapons = [
-	"AGM_SpareBarrel"
+_ACE_overheating_Weapons = [
+	"ACE_SpareBarrel"
 ];
 
 // -------------------------------------------------------------------
-// 		AGM Parachute (Altimeter)
+// 		ACE Parachute (Altimeter)
 // -------------------------------------------------------------------
-_agm_parachute_Weapons = [
-	"AGM_Altimeter"
+_ACE_parachute_Weapons = [
+	"ACE_Altimeter"
 ];
 
 // -------------------------------------------------------------------
-// 		AGM Vector
+// 		ACE Vector
 // -------------------------------------------------------------------
-_agm_vector_Weapons = [
-	"AGM_Vector",
-	"AGM_Item_Vector"
+_ACE_vector_Weapons = [
+	"ACE_Vector",
+	"ACE_Item_Vector"
 ];
 
 // -------------------------------------------------------------------
-// 		AGM Wind (Kestrel)
+// 		ACE Wind (Kestrel)
 // -------------------------------------------------------------------
-_agm_wind_Weapons = [
-	"AGM_ItemKestrel"
+_ACE_wind_Weapons = [
+	"ACE_ItemKestrel"
 ];
 
 
@@ -389,7 +389,7 @@ _tfarItems = [
 // -------------------------------------------------------------------
 
 		_blacklistMagazine = [
-			"mas_PG7V", "mas_PG7L", "mas_PG7VR", "mas_OG7", "mas_TBG7V", "mas_PG18", "mas_Metis", "mas_Metis_HE", "mas_LAW", "mas_M136", "mas_M136_HE", "mas_MAAWS", "mas_MAAWS_HE", "mas_SMAW", "mas_SMAW_HE", "mas_SMAW_NE", "mas_NLAW", "mas_NLAW_HE", "mas_TitanS", "mas_TitanS_HE", "mas_Stinger", "mas_Strela", "Sting_mas_AA_F", "RPG32_mas_AA_F", "30Rnd_mas_556x45_Stanag", "30Rnd_mas_556x45_T_Stanag", "200Rnd_mas_556x45_Stanag", "200Rnd_mas_556x45_T_Stanag", "100Rnd_mas_762x51_Stanag", "100Rnd_mas_762x51_T_Stanag", "100Rnd_mas_762x54_mag", "100Rnd_mas_762x54_T_mag", "100Rnd_mas_762x39_mag", "100Rnd_mas_762x39_T_mag", "30Rnd_mas_545x39_mag", "30Rnd_mas_545x39_T_mag", "100Rnd_mas_545x39_mag", "100Rnd_mas_545x39_T_mag", "20Rnd_mas_762x51_Stanag", "20Rnd_mas_762x51_T_Stanag", "5Rnd_mas_762x51_Stanag", "5Rnd_mas_762x51_T_Stanag", "10Rnd_mas_338_Stanag", "10Rnd_mas_338_T_Stanag", "30Rnd_mas_762x39_mag", "30Rnd_mas_762x39_T_mag", "10Rnd_mas_762x54_mag", "10Rnd_mas_762x54_T_mag", "5Rnd_mas_127x99_Stanag", "5Rnd_mas_127x99_dem_Stanag", "5Rnd_mas_127x99_T_Stanag", "5Rnd_mas_127x108_mag", "5Rnd_mas_127x108_dem_mag", "5Rnd_mas_127x108_T_mag", "30Rnd_mas_9x21_Stanag", "30Rnd_mas_9x21d_Stanag", "12Rnd_mas_45acp_Mag", "10Rnd_mas_45acp_Mag", "8Rnd_mas_45acp_Mag", "15Rnd_mas_9x21_Mag", "17Rnd_mas_9x21_Mag", "13Rnd_mas_9x21_Mag", "8Rnd_mas_9x18_mag", "7Rnd_mas_12Gauge_Slug", "7Rnd_mas_12Gauge_Pellets", "10Rnd_mas_12Gauge_Slug", "10Rnd_mas_12Gauge_Pellets", "64Rnd_mas_9x18_mag", "20Rnd_mas_765x17_Mag", "25Rnd_mas_9x19_Mag", "40Rnd_mas_46x30_Mag", "2Rnd_mas_Missile_AA_03_F", "4Rnd_mas_Missile_AGM_01_F", "2Rnd_mas_r_Missile_AA_03_F", "4Rnd_mas_r_Missile_AGM_01_F", "20Rnd_mas_Rocket_03_HE_F", "20Rnd_mas_Rocket_03_AP_F", "2Rnd_mas_Bomb_03_F", "2Rnd_mas_r_Bomb_03_F", "24Rnd_mas_PG_missiles", "12Rnd_mas_PG_HE_missiles","12Rnd_mas_PG_missiles",
+			"mas_PG7V", "mas_PG7L", "mas_PG7VR", "mas_OG7", "mas_TBG7V", "mas_PG18", "mas_Metis", "mas_Metis_HE", "mas_LAW", "mas_M136", "mas_M136_HE", "mas_MAAWS", "mas_MAAWS_HE", "mas_SMAW", "mas_SMAW_HE", "mas_SMAW_NE", "mas_NLAW", "mas_NLAW_HE", "mas_TitanS", "mas_TitanS_HE", "mas_Stinger", "mas_Strela", "Sting_mas_AA_F", "RPG32_mas_AA_F", "30Rnd_mas_556x45_Stanag", "30Rnd_mas_556x45_T_Stanag", "200Rnd_mas_556x45_Stanag", "200Rnd_mas_556x45_T_Stanag", "100Rnd_mas_762x51_Stanag", "100Rnd_mas_762x51_T_Stanag", "100Rnd_mas_762x54_mag", "100Rnd_mas_762x54_T_mag", "100Rnd_mas_762x39_mag", "100Rnd_mas_762x39_T_mag", "30Rnd_mas_545x39_mag", "30Rnd_mas_545x39_T_mag", "100Rnd_mas_545x39_mag", "100Rnd_mas_545x39_T_mag", "20Rnd_mas_762x51_Stanag", "20Rnd_mas_762x51_T_Stanag", "5Rnd_mas_762x51_Stanag", "5Rnd_mas_762x51_T_Stanag", "10Rnd_mas_338_Stanag", "10Rnd_mas_338_T_Stanag", "30Rnd_mas_762x39_mag", "30Rnd_mas_762x39_T_mag", "10Rnd_mas_762x54_mag", "10Rnd_mas_762x54_T_mag", "5Rnd_mas_127x99_Stanag", "5Rnd_mas_127x99_dem_Stanag", "5Rnd_mas_127x99_T_Stanag", "5Rnd_mas_127x108_mag", "5Rnd_mas_127x108_dem_mag", "5Rnd_mas_127x108_T_mag", "30Rnd_mas_9x21_Stanag", "30Rnd_mas_9x21d_Stanag", "12Rnd_mas_45acp_Mag", "10Rnd_mas_45acp_Mag", "8Rnd_mas_45acp_Mag", "15Rnd_mas_9x21_Mag", "17Rnd_mas_9x21_Mag", "13Rnd_mas_9x21_Mag", "8Rnd_mas_9x18_mag", "7Rnd_mas_12Gauge_Slug", "7Rnd_mas_12Gauge_Pellets", "10Rnd_mas_12Gauge_Slug", "10Rnd_mas_12Gauge_Pellets", "64Rnd_mas_9x18_mag", "20Rnd_mas_765x17_Mag", "25Rnd_mas_9x19_Mag", "40Rnd_mas_46x30_Mag", "2Rnd_mas_Missile_AA_03_F", "4Rnd_mas_Missile_ACE_01_F", "2Rnd_mas_r_Missile_AA_03_F", "4Rnd_mas_r_Missile_ACE_01_F", "20Rnd_mas_Rocket_03_HE_F", "20Rnd_mas_Rocket_03_AP_F", "2Rnd_mas_Bomb_03_F", "2Rnd_mas_r_Bomb_03_F", "24Rnd_mas_PG_missiles", "12Rnd_mas_PG_HE_missiles","12Rnd_mas_PG_missiles",
 			"XLA_Dummy"
 		];
 
@@ -637,7 +637,7 @@ _availableItems = [
 	"ItemCompass",
 	"ItemWatch",
 	"ItemGPS",
-	"AGM_NVG_Wide"
+	"ACE_NVG_Wide"
 ];
 
 
@@ -670,9 +670,6 @@ _availableMagazines = [
 	"30Rnd_45ACP_Mag_SMG_01",
 	"30Rnd_45ACP_Mag_SMG_01_Tracer_Green",
 	"16Rnd_9x21_Mag",
-	"hlc_30Rnd_9x19_B_MP5",
-	"hlc_30Rnd_9x19_GD_MP5",
-	"hlc_30Rnd_9x19_SD_MP5",
 	"1Rnd_HE_Grenade_shell",
 	"1Rnd_SmokeBlue_Grenade_shell",
 	"1Rnd_SmokeGreen_Grenade_shell",
@@ -698,9 +695,6 @@ _availableMagazines = [
 	"Chemlight_blue",
 	"B_IR_Grenade",
 	"SLAMDirectionalMine_Wire_Mag",
-	"hlc_100Rnd_762x51_B_M60E4",
-	"hlc_100Rnd_762x51_T_M60E4",
-	"hlc_100Rnd_762x51_M_M60E4",
 	"SMA_20Rnd_762x51mm_M80A1_EPR",
 	"SMA_20Rnd_762x51mm_M80A1_EPR_Tracer",
 	"SMA_20Rnd_762x51mm_M80A1_EPR_IR",
@@ -721,37 +715,37 @@ _availableMagazines = [
 	"150Rnd_93x64_Mag",
 	"20Rnd_762x51_Mag",
 	"DemoCharge_Remote_Mag",
-	"AGM_M26_Clacker"
+	"ACE_M26_Clacker"
 ];
 
 
 _availableAttachments = _availableAttachments
-+ _agm_ballistics_attachments;
++ _ACE_ballistics_attachments;
 
 _availableItems = _availableItems
 + _tfarItems;
 
 _availableMagazines = _availableMagazines
-+ _agm_grenades_Magazines;
-+ _agm_attach_Magazines
-+ _agm_ballistics_Magazines;
-+ _agm_disposable_Magazines;
-+ _agm_explosives_Magazines;
++ _ACE_grenades_Magazines;
++ _ACE_attach_Magazines
++ _ACE_ballistics_Magazines;
++ _ACE_disposable_Magazines;
++ _ACE_explosives_Magazines;
 
 _availableGuns = _availableGuns
-+ _agm_grenades_Weapons
-+ _agm_attach_Weapons
-+ _agm_disposable_Weapons
-+ _agm_explosives_Weapons
-+ _agm_hearing_Weapons
-+ _agm_interaction_Weapons
-+ _agm_logistics_Weapons
-+ _agm_map_Weapons
-+ _agm_medical_Weapons
-+ _agm_overheating_Weapons
-+ _agm_parachute_Weapons
-+ _agm_vector_Weapons
-+ _agm_wind_Weapons;
++ _ACE_grenades_Weapons
++ _ACE_attach_Weapons
++ _ACE_disposable_Weapons
++ _ACE_explosives_Weapons
++ _ACE_hearing_Weapons
++ _ACE_interaction_Weapons
++ _ACE_logistics_Weapons
++ _ACE_map_Weapons
++ _ACE_medical_Weapons
++ _ACE_overheating_Weapons
++ _ACE_parachute_Weapons
++ _ACE_vector_Weapons
++ _ACE_wind_Weapons;
 
 sleep 1;
 if (isServer && !IS_VANILLA) then {
