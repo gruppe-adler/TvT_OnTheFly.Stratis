@@ -128,7 +128,15 @@ randWeaponTerrorists =
 //"rhs_mag_30Rnd_556x45_M855A1_Stanag"
 //"rhs_mag_30Rnd_556x45_Mk262_Stanag"
 //"rhs_mag_30Rnd_556x45_Mk318_Stanag"
-
+//"rhs_30Rnd_545x39_AK"
+//"rhs_30Rnd_545x39_AK_no_tracers"
+//"rhs_30Rnd_545x39_7N10_AK"
+//"rhs_30Rnd_545x39_7N22_AK"
+//"rhs_30Rnd_545x39_AK_green"
+//"rhs_45Rnd_545X39_AK"
+//"rhs_45Rnd_545X39_7N10_AK"
+//"rhs_45Rnd_545X39_7N22_AK"
+//"rhs_45Rnd_545X39_AK_Green"
 
 
 
@@ -184,7 +192,13 @@ randHeadGearEastern =
 
 randWeaponEastern = 
 [
-
+"rhs_weap_akm",
+"rhs_weap_akms",
+"rhs_weap_M590_8RD",
+"rhs_weap_pkm",
+"rhs_weap_ak74m_2mag_camo",
+"rhs_weap_ak74m_npz",
+"rhs_weap_ak103_npz"
 ];
 
 randLauncherEastern = 
