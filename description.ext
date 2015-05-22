@@ -58,7 +58,7 @@ class Params
 	{
 		title = "BLUFOR";
 		values[] = {0,1,2,3};
-		texts[] = {"BW Fleck","BW Tropen","US Desert","US Wood"};
+		texts[] = {"BW Fleck","BW Tropen","US UCP","US OCP"};
 		default = 1;
 	};
 
@@ -110,7 +110,7 @@ class Params
 		default = true;
 		isGlobal = 0;
 	};
-	
+
 	class IsStreamable
 	{
 		title = "enable live stream (needs 'enable replay')";
