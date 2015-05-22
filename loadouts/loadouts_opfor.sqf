@@ -1,279 +1,281 @@
-// TALIBAN (taliban stuff)
+fillLoadouts = {
+	// TALIBAN (taliban stuff)
 
-randUniformTaliban = 
-[
-"LOP_U_Mil_01",
-"LOP_U_Mil_02",
-"LOP_U_Mil_03",
-"LOP_U_Mil_04",
-"LOP_U_Afg_civ_01",
-"LOP_U_Afg_civ_02",
-"LOP_U_Afg_civ_03",
-"LOP_U_Afg_civ_04"
-];
+	randUniformTaliban = 
+	[
+	"LOP_U_Mil_01",
+	"LOP_U_Mil_02",
+	"LOP_U_Mil_03",
+	"LOP_U_Mil_04",
+	"LOP_U_Afg_civ_01",
+	"LOP_U_Afg_civ_02",
+	"LOP_U_Afg_civ_03",
+	"LOP_U_Afg_civ_04"
+	];
 
-randVestTaliban = 
-[
+	randVestTaliban = 
+	[
 
-];
+	];
 
-randomBackpackTaliban =
-[
+	randomBackpackTaliban =
+	[
 
-];
+	];
 
-randHeadGearTaliban = 
-[
-"LOP_H_Turban",
-"H_ShemagOpen_khk",
-"H_ShemagOpen_tan",
-"H_Shemag_olive",
-"LOP_H_Shemag_IT",
-"LOP_H_Pakol",
-"LOP_H_Pakol",
-"LOP_H_Pakol"
-];
+	randHeadGearTaliban = 
+	[
+	"LOP_H_Turban",
+	"H_ShemagOpen_khk",
+	"H_ShemagOpen_tan",
+	"H_Shemag_olive",
+	"LOP_H_Shemag_IT",
+	"LOP_H_Pakol",
+	"LOP_H_Pakol",
+	"LOP_H_Pakol"
+	];
 
-randWeaponTaliban = 
-[
-"rhs_weap_akm",
-"rhs_weap_akms",
-"rhs_weap_M590_8RD",
-"rhs_weap_pkm"
-];
+	randWeaponTaliban = 
+	[
+	"rhs_weap_akm",
+	"rhs_weap_akms",
+	"rhs_weap_M590_8RD",
+	"rhs_weap_pkm"
+	];
 
-//Ammo Taliban
-//"rhs_30Rnd_762x39mm"
-//"rhs_30Rnd_762x39mm_tracer"
-//"rhs_30Rnd_762x39mm_89"
-//"rhsusf_8Rnd_00Buck"
-//"rhs_100Rnd_762x54mmR"
-//"rhs_100Rnd_762x54mmR_green"
-
-
-
-
-randLauncherTaliban = 
-[
-
-];
-
-
-// TERRORS (black uniforms)
-
-randUniformTerrorists = 
-[
-"LOP_U_IT_Fatigue_01",
-"LOP_U_IT_Fatigue_02",
-"LOP_U_IT_Fatigue_03",
-"LOP_U_IT_Fatigue_04",
-"LOP_U_IA_Fatigue_02",
-"LOP_U_IA_Fatigue_01"
-];
-
-randHeadGearTerrorists =
-[
-"LOP_H_Shemag_IT"
-];
-
-randVestTerrorists = 
-[
-"ARC_Common_Blk_Plate_Carrier_H",
-"ARC_Common_Blk_Plate_Carrier",
-"V_PlateCarrier1_blk",
-"V_Chestrig_blk",
-"V_TacVestIR_blk",
-"V_BandollierB_blk",
-"V_BandollierB_rgr",
-"SMA_UNIFORMS_BLACK_VEST"
-];
-
-randBackpackTerrorists =
-[
-
-];
-
-randWeaponTerrorists = 
-[
-"rhs_weap_akm",
-"rhs_weap_akms",
-"rhs_weap_M590_8RD",
-"rhs_weap_pkm",
-"rhs_weap_ak74m_desert_npz",
-"rhs_weap_ak74m_npz",
-"rhs_weap_ak103_npz",
-"rhs_weap_m16a4"
-];
-
-//Ammo Terrorists
-//"rhs_30Rnd_762x39mm"
-//"rhs_30Rnd_762x39mm_tracer"
-//"rhs_30Rnd_762x39mm_89"
-//"rhsusf_8Rnd_00Buck"
-//"rhs_100Rnd_762x54mmR"
-//"rhs_100Rnd_762x54mmR_green"
-//"rhs_30Rnd_545x39_AK"
-//"rhs_30Rnd_545x39_AK_no_tracers"
-//"rhs_30Rnd_545x39_7N10_AK"
-//"rhs_30Rnd_545x39_7N22_AK"
-//"rhs_30Rnd_545x39_AK_green"
-//"rhs_45Rnd_545X39_AK"
-//"rhs_45Rnd_545X39_7N10_AK"
-//"rhs_45Rnd_545X39_7N22_AK"
-//"rhs_45Rnd_545X39_AK_Green"
-//"rhs_30Rnd_762x39mm"
-//"rhs_30Rnd_762x39mm_tracer"
-//"rhs_30Rnd_762x39mm_89"
-//"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"
-//"rhs_mag_30Rnd_556x45_M855A1_Stanag"
-//"rhs_mag_30Rnd_556x45_Mk262_Stanag"
-//"rhs_mag_30Rnd_556x45_Mk318_Stanag"
-//"rhs_30Rnd_545x39_AK"
-//"rhs_30Rnd_545x39_AK_no_tracers"
-//"rhs_30Rnd_545x39_7N10_AK"
-//"rhs_30Rnd_545x39_7N22_AK"
-//"rhs_30Rnd_545x39_AK_green"
-//"rhs_45Rnd_545X39_AK"
-//"rhs_45Rnd_545X39_7N10_AK"
-//"rhs_45Rnd_545X39_7N22_AK"
-//"rhs_45Rnd_545X39_AK_Green"
-//"rhs_100Rnd_762x54mmR"
-//"rhs_100Rnd_762x54mmR_green"
+	//Ammo Taliban
+	//"rhs_30Rnd_762x39mm"
+	//"rhs_30Rnd_762x39mm_tracer"
+	//"rhs_30Rnd_762x39mm_89"
+	//"rhsusf_8Rnd_00Buck"
+	//"rhs_100Rnd_762x54mmR"
+	//"rhs_100Rnd_762x54mmR_green"
 
 
 
-randLauncherTerrorists = 
-[
 
-];
+	randLauncherTaliban = 
+	[
 
-
-// EASTERN (wood)
-
-randUniformEastern = 
-[
-"LOP_U_UA_Fatigue_01",
-"LOP_U_UA_Fatigue_02",
-"LOP_U_UA_Fatigue_03",
-"LOP_U_UA_Fatigue_04",
-"LOP_U_US_Fatigue_02",
-"LOP_U_US_Fatigue_02_slv",
-"LOP_U_ChDKZ_Lopotev"
-];
-
-randVestEastern= 
-[
-
-];
-
-randBackpackEastern =
-[
-
-];
-
-randHeadGearEastern = 
-[
-"H_Bandanna_gry",
-"H_Bandanna_cbr",
-"H_Bandanna_khk_hs",
-"H_Bandanna_khk",
-"H_Bandanna_sgg",
-"H_Bandanna_sand",
-"H_Bandanna_camo",
-"H_Watchcap_blk",
-"rhs_beanie_green",
-"rhs_beanie",
-"H_Booniehat_khk_hs",
-"H_Booniehat_oli",
-"rhs_Booniehat_m81",
-"H_Cap_oli",
-"H_MilCap_gry",
-"H_Cap_headphones"
-];
-
-randWeaponEastern = 
-[
-"rhs_weap_akm",
-"rhs_weap_akms",
-"rhs_weap_M590_8RD",
-"rhs_weap_pkm",
-"rhs_weap_ak74m_2mag_camo",
-"rhs_weap_ak74m_npz",
-"rhs_weap_ak103_npz"
-];
-
-randLauncherEastern = 
-[
-
-];
+	];
 
 
-// RUSSIANS (emr summer)
+	// TERRORS (black uniforms)
 
-randUniformRussians = 
-[
-"rhs_uniform_emr_patchless"
-];
+	randUniformTerrorists = 
+	[
+	"LOP_U_IT_Fatigue_01",
+	"LOP_U_IT_Fatigue_02",
+	"LOP_U_IT_Fatigue_03",
+	"LOP_U_IT_Fatigue_04",
+	"LOP_U_IA_Fatigue_02",
+	"LOP_U_IA_Fatigue_01"
+	];
 
-randVestRussian = 
-[
-"rhs_6b23_digi",
-"rhs_6b23_digi_6sh92",
-"rhs_6b23_digi_6sh92_headset_mapcase",
-"rhs_6b23_digi_6sh92_radio",
-"rhs_6b23_digi_6sh92_vog",
-"rhs_6b23_digi_6sh92_vog_headset",
-"rhs_6b23_digi_crewofficer",
-"rhs_6b23_digi_crew",
-"rhs_6b23_digi_engineer",
-"rhs_6b23_digi_medic",
-"rhs_6b23_digi_rifleman",
-"rhs_6b23_digi_sniper"
-];
+	randHeadGearTerrorists =
+	[
+	"LOP_H_Shemag_IT"
+	];
 
-randHeadGearRussian =
-[
-"rhs_6b27m_digi",
-"rhs_6b27m_digi_bala",
-"rhs_6b27m_digi_ess",
-"rhs_6b27m_digi_ess_bala"
-];
+	randVestTerrorists = 
+	[
+	"ARC_Common_Blk_Plate_Carrier_H",
+	"ARC_Common_Blk_Plate_Carrier",
+	"V_PlateCarrier1_blk",
+	"V_Chestrig_blk",
+	"V_TacVestIR_blk",
+	"V_BandollierB_blk",
+	"V_BandollierB_rgr",
+	"SMA_UNIFORMS_BLACK_VEST"
+	];
 
-randHeadGearRussianOfficer =
-[
-"rhs_fieldcap_digi",
-"rhs_fieldcap_helm_digi"
-];
+	randBackpackTerrorists =
+	[
 
-randBackPackRussian = [
-"rhs_sidor",
-"B_Carryall_oli",
-"rhs_assault_umbts",
-"rhs_assault_umbts_demo",
-"rhs_rpg_empty"
-];
+	];
 
-randWeaponRussians = 
-[
-"rhs_weap_M590_8RD",
-"rhs_weap_pkm",
-"rhs_weap_pkp",
-"rhs_weap_ak74m_2mag_camo",
-"rhs_weap_ak74m_2mag_npz",
-"rhs_weap_ak74m_camo_npz",
-"rhs_weap_ak74m_npz",
-"rhs_weap_ak103_npz"
-];
+	randWeaponTerrorists = 
+	[
+	"rhs_weap_akm",
+	"rhs_weap_akms",
+	"rhs_weap_M590_8RD",
+	"rhs_weap_pkm",
+	"rhs_weap_ak74m_desert_npz",
+	"rhs_weap_ak74m_npz",
+	"rhs_weap_ak103_npz",
+	"rhs_weap_m16a4"
+	];
 
-randLauncherRussians = 
-[
+	//Ammo Terrorists
+	//"rhs_30Rnd_762x39mm"
+	//"rhs_30Rnd_762x39mm_tracer"
+	//"rhs_30Rnd_762x39mm_89"
+	//"rhsusf_8Rnd_00Buck"
+	//"rhs_100Rnd_762x54mmR"
+	//"rhs_100Rnd_762x54mmR_green"
+	//"rhs_30Rnd_545x39_AK"
+	//"rhs_30Rnd_545x39_AK_no_tracers"
+	//"rhs_30Rnd_545x39_7N10_AK"
+	//"rhs_30Rnd_545x39_7N22_AK"
+	//"rhs_30Rnd_545x39_AK_green"
+	//"rhs_45Rnd_545X39_AK"
+	//"rhs_45Rnd_545X39_7N10_AK"
+	//"rhs_45Rnd_545X39_7N22_AK"
+	//"rhs_45Rnd_545X39_AK_Green"
+	//"rhs_30Rnd_762x39mm"
+	//"rhs_30Rnd_762x39mm_tracer"
+	//"rhs_30Rnd_762x39mm_89"
+	//"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"
+	//"rhs_mag_30Rnd_556x45_M855A1_Stanag"
+	//"rhs_mag_30Rnd_556x45_Mk262_Stanag"
+	//"rhs_mag_30Rnd_556x45_Mk318_Stanag"
+	//"rhs_30Rnd_545x39_AK"
+	//"rhs_30Rnd_545x39_AK_no_tracers"
+	//"rhs_30Rnd_545x39_7N10_AK"
+	//"rhs_30Rnd_545x39_7N22_AK"
+	//"rhs_30Rnd_545x39_AK_green"
+	//"rhs_45Rnd_545X39_AK"
+	//"rhs_45Rnd_545X39_7N10_AK"
+	//"rhs_45Rnd_545X39_7N22_AK"
+	//"rhs_45Rnd_545X39_AK_Green"
+	//"rhs_100Rnd_762x54mmR"
+	//"rhs_100Rnd_762x54mmR_green"
 
-];
+
+
+	randLauncherTerrorists = 
+	[
+
+	];
+
+
+	// EASTERN (wood)
+
+	randUniformEastern = 
+	[
+	"LOP_U_UA_Fatigue_01",
+	"LOP_U_UA_Fatigue_02",
+	"LOP_U_UA_Fatigue_03",
+	"LOP_U_UA_Fatigue_04",
+	"LOP_U_US_Fatigue_02",
+	"LOP_U_US_Fatigue_02_slv",
+	"LOP_U_ChDKZ_Lopotev"
+	];
+
+	randVestEastern= 
+	[
+
+	];
+
+	randBackpackEastern =
+	[
+
+	];
+
+	randHeadGearEastern = 
+	[
+	"H_Bandanna_gry",
+	"H_Bandanna_cbr",
+	"H_Bandanna_khk_hs",
+	"H_Bandanna_khk",
+	"H_Bandanna_sgg",
+	"H_Bandanna_sand",
+	"H_Bandanna_camo",
+	"H_Watchcap_blk",
+	"rhs_beanie_green",
+	"rhs_beanie",
+	"H_Booniehat_khk_hs",
+	"H_Booniehat_oli",
+	"rhs_Booniehat_m81",
+	"H_Cap_oli",
+	"H_MilCap_gry",
+	"H_Cap_headphones"
+	];
+
+	randWeaponEastern = 
+	[
+	"rhs_weap_akm",
+	"rhs_weap_akms",
+	"rhs_weap_M590_8RD",
+	"rhs_weap_pkm",
+	"rhs_weap_ak74m_2mag_camo",
+	"rhs_weap_ak74m_npz",
+	"rhs_weap_ak103_npz"
+	];
+
+	randLauncherEastern = 
+	[
+
+	];
+
+
+	// RUSSIANS (emr summer)
+
+	randUniformRussians = 
+	[
+	"rhs_uniform_emr_patchless"
+	];
+
+	randVestRussian = 
+	[
+	"rhs_6b23_digi",
+	"rhs_6b23_digi_6sh92",
+	"rhs_6b23_digi_6sh92_headset_mapcase",
+	"rhs_6b23_digi_6sh92_radio",
+	"rhs_6b23_digi_6sh92_vog",
+	"rhs_6b23_digi_6sh92_vog_headset",
+	"rhs_6b23_digi_crewofficer",
+	"rhs_6b23_digi_crew",
+	"rhs_6b23_digi_engineer",
+	"rhs_6b23_digi_medic",
+	"rhs_6b23_digi_rifleman",
+	"rhs_6b23_digi_sniper"
+	];
+
+	randHeadGearRussian =
+	[
+	"rhs_6b27m_digi",
+	"rhs_6b27m_digi_bala",
+	"rhs_6b27m_digi_ess",
+	"rhs_6b27m_digi_ess_bala"
+	];
+
+	randHeadGearRussianOfficer =
+	[
+	"rhs_fieldcap_digi",
+	"rhs_fieldcap_helm_digi"
+	];
+
+	randBackPackRussian = [
+	"rhs_sidor",
+	"B_Carryall_oli",
+	"rhs_assault_umbts",
+	"rhs_assault_umbts_demo",
+	"rhs_rpg_empty"
+	];
+
+	randWeaponRussians = 
+	[
+	"rhs_weap_M590_8RD",
+	"rhs_weap_pkm",
+	"rhs_weap_pkp",
+	"rhs_weap_ak74m_2mag_camo",
+	"rhs_weap_ak74m_2mag_npz",
+	"rhs_weap_ak74m_camo_npz",
+	"rhs_weap_ak74m_npz",
+	"rhs_weap_ak103_npz"
+	];
+
+	randLauncherRussians = 
+	[
+
+	];
+};
 
 
 switch (OPFORCE) do {
 	// taliban
-	case "0": {
+	case 0: {
 		customUniform = randUniformTaliban call BIS_fnc_selectRandom;
 		customVest= randVestTaliban call BIS_fnc_selectRandom;
 		customHeadgear = randHeadGearTaliban call BIS_fnc_selectRandom;
@@ -282,7 +284,7 @@ switch (OPFORCE) do {
 	}; 
 
 	// terrorists
-	case "1": {
+	case 1: {
 		customUniform = randUniformTerrorists call BIS_fnc_selectRandom;
 		customVest= randVestTerrorists call BIS_fnc_selectRandom;
 		customHeadgear = randHeadGearTerrorists call BIS_fnc_selectRandom;
@@ -291,7 +293,7 @@ switch (OPFORCE) do {
 	}; 
 
 	// eastern/nationalists
-	case "2": {
+	case 2: {
 		customUniform = randUniformEastern call BIS_fnc_selectRandom;
 		customVest= randVestEastern call BIS_fnc_selectRandom;
 		customHeadgear = randHeadGearEastern call BIS_fnc_selectRandom;
@@ -300,13 +302,13 @@ switch (OPFORCE) do {
 	}; 
 	
 	// russians
-	case "3": {
+	case 3: {
 		customUniform = randUniformRussians call BIS_fnc_selectRandom;
 		customVest= randVestRussian call BIS_fnc_selectRandom;
 		customHeadgear = randHeadGearRussian call BIS_fnc_selectRandom;
 		customBackpack = randBackPackRussian call BIS_fnc_selectRandom;
 	};
-	default {};
+	default {hintSilent "error in reading faction parameter";};
 };
 
 
@@ -338,3 +340,7 @@ opfor_default = {
 	this linkItem "tf_fadak";
 
 };
+
+[] call fillLoadouts;
+ sleep 0.1;
+[] call fillVariables;
