@@ -137,7 +137,8 @@ randWeaponTerrorists =
 //"rhs_45Rnd_545X39_7N10_AK"
 //"rhs_45Rnd_545X39_7N22_AK"
 //"rhs_45Rnd_545X39_AK_Green"
-
+//"rhs_100Rnd_762x54mmR"
+//"rhs_100Rnd_762x54mmR_green"
 
 
 
@@ -254,7 +255,14 @@ randBackPackRussian = [
 
 randWeaponRussians = 
 [
-
+"rhs_weap_M590_8RD",
+"rhs_weap_pkm",
+"rhs_weap_pkp",
+"rhs_weap_ak74m_2mag_camo",
+"rhs_weap_ak74m_2mag_npz",
+"rhs_weap_ak74m_camo_npz",
+"rhs_weap_ak74m_npz",
+"rhs_weap_ak103_npz"
 ];
 
 randLauncherRussians = 
