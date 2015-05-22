@@ -61,6 +61,7 @@ class Params
 		texts[] = {"BW Fleck","BW Tropen","US Desert","US Wood"};
 		default = 1;
 	};
+
 	class OPFORCE
 	{
 		title = "OPFOR";
@@ -100,6 +101,7 @@ class Params
 		texts[] = {"YES","NO"};
 		default = false;
 	};
+
 	class EnableReplay
 	{
 		title = "enable replay";
@@ -108,6 +110,7 @@ class Params
 		default = true;
 		isGlobal = 0;
 	};
+	
 	class IsStreamable
 	{
 		title = "enable live stream (needs 'enable replay')";

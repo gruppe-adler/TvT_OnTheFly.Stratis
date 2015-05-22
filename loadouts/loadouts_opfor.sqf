@@ -34,6 +34,15 @@ randHeadGearTaliban =
 "LOP_H_Pakol"
 ];
 
+randWeaponTaliban = 
+[
+
+];
+
+randLauncherTaliban = [
+
+];
+
 
 // TERRORS (black uniforms)
 
@@ -65,6 +74,16 @@ randomVestTerrorists =
 ];
 
 randomBackpackTerrorists =
+[
+
+];
+
+randWeaponTerrorists = 
+[
+
+];
+
+randLauncherTerrorists = 
 [
 
 ];
@@ -113,6 +132,16 @@ randHeadGearEastern =
 "H_Cap_headphones"
 ];
 
+randWeaponEastern = 
+[
+
+];
+
+randLauncherEastern = 
+[
+
+];
+
 
 // RUSSIANS (emr summer)
 
@@ -155,7 +184,18 @@ randBackPackRussian = [
 "rhs_sidor",
 "B_Carryall_oli",
 "rhs_assault_umbts",
-"rhs_assault_umbts_demo"
+"rhs_assault_umbts_demo",
+"rhs_rpg_empty"
+];
+
+randWeaponRussians = 
+[
+
+];
+
+randLauncherRussians = 
+[
+
 ];
 
 
