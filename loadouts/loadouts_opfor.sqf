@@ -36,10 +36,25 @@ randHeadGearTaliban =
 
 randWeaponTaliban = 
 [
-
+"rhs_weap_akm",
+"rhs_weap_akms",
+"rhs_weap_M590_8RD",
+"rhs_weap_pkm"
 ];
 
-randLauncherTaliban = [
+//Ammo Taliban
+//"rhs_30Rnd_762x39mm"
+//"rhs_30Rnd_762x39mm_tracer"
+//"rhs_30Rnd_762x39mm_89"
+//"rhsusf_8Rnd_00Buck"
+//"rhs_100Rnd_762x54mmR"
+//"rhs_100Rnd_762x54mmR_green"
+
+
+
+
+randLauncherTaliban = 
+[
 
 ];
 
