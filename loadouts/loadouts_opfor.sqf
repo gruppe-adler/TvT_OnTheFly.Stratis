@@ -12,7 +12,7 @@ randUniformTaliban =
 "LOP_U_Afg_civ_04"
 ];
 
-randomVestTaliban = 
+randVestTaliban = 
 [
 
 ];
@@ -61,7 +61,7 @@ randHeadGearTerrorists =
 "LOP_H_Shemag_IT"
 ];
 
-randomVestTerrorists = 
+randVestTerrorists = 
 [
 "ARC_Common_Blk_Plate_Carrier_H",
 "ARC_Common_Blk_Plate_Carrier",
@@ -73,7 +73,7 @@ randomVestTerrorists =
 "SMA_UNIFORMS_BLACK_VEST"
 ];
 
-randomBackpackTerrorists =
+randBackpackTerrorists =
 [
 
 ];
@@ -102,12 +102,12 @@ randUniformEastern =
 "LOP_U_ChDKZ_Lopotev"
 ];
 
-randomVestEastern= 
+randVestEastern= 
 [
 
 ];
 
-randomBackpackEastern =
+randBackpackEastern =
 [
 
 ];
