@@ -132,22 +132,19 @@ if ((isServer) || (isDedicated)) then {
 
 if !(isDedicated) then {
 	[] execVM "mission_setup\helpBriefing.sqf";
-	if (!IS_VANILLA) then {
-	[] execVM "mission_setup\surrenderAction.sqf";
-	};
+	
 
 	switchMoveEverywhere = compileFinal "_this select 0 switchMove (_this select 1);";
 	["Preload"] call BIS_fnc_arsenal;
 
 
-	if (!IS_VANILLA) then {
-		[] execVM "loadouts\_client.sqf";
-
-
-
+	if (!IS_VANILLA) then {		
+		
+			[player] execVM "loadouts\_client.sqf";
+	
 	} else {
-	_nul1 = ["AmmoboxInit",[arsenal_opfor,true]] spawn BIS_fnc_arsenal;
-	_nul2 = ["AmmoboxInit",[arsenal_blufor,true]] spawn BIS_fnc_arsenal;
+		_nul1 = ["AmmoboxInit",[arsenal_opfor,true]] spawn BIS_fnc_arsenal;
+		_nul2 = ["AmmoboxInit",[arsenal_blufor,true]] spawn BIS_fnc_arsenal;
 	};
 
 	// Intro Gruppe Adler

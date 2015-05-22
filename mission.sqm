@@ -157,7 +157,7 @@ class Mission
 					id=8;
 					side="WEST";
 					vehicle="B_medic_F";
-					player="PLAY CDG";
+					player="PLAYER COMMANDER";
 					skill=0.40000001;
 					description="Medic";
 				};
@@ -232,7 +232,7 @@ class Mission
 					id=14;
 					side="EAST";
 					vehicle="O_officer_F";
-					player="PLAYER COMMANDER";
+					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
