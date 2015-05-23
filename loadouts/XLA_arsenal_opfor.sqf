@@ -1,4 +1,4 @@
-waitUntil {loadoutInitFinished};
+waitUntil {loadoutInitOpforFinished};
 sleep 0.1;
 
 #define NO_SIDE -1
@@ -16,6 +16,7 @@ _availableVests = [];
 _availableHeadgear = [];
 _availableBackpacks = [];
 _availableGuns = [];
+
 
 switch (OPFORCE) do {
 	

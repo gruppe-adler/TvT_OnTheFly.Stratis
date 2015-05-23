@@ -1,5 +1,4 @@
-waitUntil {loadoutInitFinished};
-sleep 0.1;
+waitUntil {loadoutInitBluforFinished};
 
 #define NO_SIDE -1
 #define EAST_SIDE 0

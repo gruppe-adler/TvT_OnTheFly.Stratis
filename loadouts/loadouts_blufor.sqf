@@ -236,7 +236,7 @@ fillBluforLoadouts = {
 
 	];
 
-	loadoutInitFinished = true;
+	loadoutInitBluforFinished = true;
 };
 
 

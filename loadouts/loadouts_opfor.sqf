@@ -291,7 +291,7 @@ fillOpforLoadouts = {
 
 	];
 
-	loadoutInitFinished = true;
+	loadoutInitOpforFinished = true;
 };
 
 fillOpforVariables = {
