@@ -1,5 +1,6 @@
-waitUntil {loadoutInitOpforFinished};
-sleep 0.1;
+waitUntil {
+loadoutInitOpforFinished
+};
 
 #define NO_SIDE -1
 #define EAST_SIDE 0
@@ -332,6 +333,7 @@ if (isServer && !IS_VANILLA) then {
 	// Grab the parameter that was passed in.
 	// The box should have "this execVM <scriptname>" in it's init field.
 	_box = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+	
 
 	// Check if @XLA_FixedArsenal is loaded
 	 if (isnil "XLA_fnc_addVirtualItemCargo") then {
@@ -340,7 +342,7 @@ if (isServer && !IS_VANILLA) then {
 
 	} else {
 
-		["Preload",[false, _box, nil, []]] spawn XLA_fnc_arsenal;
+		
 
 		[_box, _availableBackpacks,true,false] call XLA_fnc_addVirtualBackpackCargo;
 		[_box, (_availableGuns + _availableMagazines + _availableAttachments +_availableItems + _availableUniforms + _availableVests + _availableHeadgear),true,false] call  XLA_fnc_addVirtualItemCargo;
@@ -349,6 +351,7 @@ if (isServer && !IS_VANILLA) then {
 		//[_box, [WEST_SIDE,FRIENDLY_SIDE],true,false] call XLA_fnc_addVirtualSideCargo;
 
 		
+		["Preload",[false, _box, nil, []]] spawn XLA_fnc_arsenal;
 		
 		// Start the arsenal on it
 		_addActionText = "<t color='#45B6EA'>" + localize "str_GRAD_openSupplyBox";

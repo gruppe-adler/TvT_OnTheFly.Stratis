@@ -1,6 +1,8 @@
 #include "\z\ace\addons\main\script_component.hpp"
 #include "\z\ace\addons\main\script_macros.hpp"
 
+
+
 TIME_OF_DAY = paramsArray select 0;
 WEATHER_SETTING = paramsArray select 1;
 MBT_VS_AT = (paramsArray select 2) == 1;
@@ -33,8 +35,7 @@ if (OPFOR_TELEPORTED) then {
 
 // global options
 did_replay = false;
-loadoutInitOpforFinished = false;
-loadoutInitBluforFinished = false;
+
 
 // spawn teleports done?
 OPFOR_TELEPORTED = false;
@@ -120,12 +121,13 @@ if ((isServer) || (isDedicated)) then {
 			[] spawn {
 				while {true} do {
 					if ((OPFOR_TELEPORTED) && (BLUFOR_TELEPORTED)) then {
-							if (respawn_helper animationPhase "mast_handler") then {
+							if (respawn_helper animationPhase "mast_handler" == 1) then {
 								_pos =  [(getPos respawn_helper select 0), (getPos respawn_helper select 1), 0];
 								sector_trigger setPos _pos;
 								sector_module setPos _pos;
 								sector_module hideObjectGlobal false;
 							} else {
+								_pos =  [(getPos respawn_helper select 0), (getPos respawn_helper select 1), 0];
 								sector_trigger setPos _pos;
 								sector_module hideObjectGlobal true;
 						};

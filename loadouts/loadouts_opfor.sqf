@@ -423,5 +423,7 @@ opfor_medic = {
 };
 
 [] call fillOpforLoadouts;
- sleep 0.1;
+waitUntil {
+  loadoutInitOpforFinished
+};
 [] call fillOpforVariables;

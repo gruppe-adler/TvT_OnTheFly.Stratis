@@ -280,6 +280,7 @@ fillBluforVariables = {
 		default {
 		hintSilent "error in reading faction parameter";
 		};
+		
 	};
 };
 
@@ -379,5 +380,7 @@ blufor_medic = {
 };
 
  [] call fillBluforLoadouts;
- sleep 0.1;
+waitUntil {
+  loadoutInitBluforFinished
+};
  [] call fillBluforVariables;

@@ -38,9 +38,9 @@
         </Container>
         <Container name="mission setup">
             <Key ID="str_GRAD_openSupplyBox">
-                <Original>Open Supply Box</Original>
-                <English>Open Supply Box</English>
-                <German>Versorgungskiste öffnen</German>
+                <Original>Open Fixed Arsenal</Original>
+                <English>Open Fixed Arsenal</English>
+                <German>Fixed Arsenal öffnen</German>
             </Key>
             <Key ID="str_GRAD_spawn_on_water">
                 <Original>Spawn on water not possible</Original>
