@@ -1,9 +1,11 @@
+#include "\z\ace\addons\main\script_component.hpp"
+#include "\z\ace\addons\main\script_macros.hpp"
 
 TIME_OF_DAY = paramsArray select 0;
 WEATHER_SETTING = paramsArray select 1;
-MBT_VS_AT = paramsArray select 2;
+MBT_VS_AT = (paramsArray select 2) == 1;
 BLUFORCE = paramsArray select 3;
-OPFORCE = (paramsArray select 4) == 1;
+OPFORCE = paramsArray select 4;
 MINIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 5;
 MAXIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 6;
 TIME_ACCELERATION = paramsArray select 7;
@@ -20,7 +22,7 @@ if (isClass(configFile >> (_this select 0) >> task_force_radio)) then {
 if (OPFOR_TELEPORTED) then {
 	[player] execVM "onPlayerRespawn.sqf";
 	if (!IS_VANILLA) then {
-	[localize "str_GRAD_jip"] call AGM_Core_fnc_displayTextStructured;
+	[localize "str_GRAD_jip"] call EFUNC(common,displayTextStructured);
 	} else {
 	hintSilent "JIP leads to instant spectator";
 	};
@@ -31,6 +33,7 @@ if (OPFOR_TELEPORTED) then {
 
 // global options
 did_replay = false;
+loadoutInitFinished = false;
 
 // spawn teleports done?
 OPFOR_TELEPORTED = false;
@@ -106,6 +109,9 @@ if ((isServer) || (isDedicated)) then {
 
 
 	respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger select 0),(getPos sector_trigger select 1),0];
+	
+	[respawn_helper, true, [0,0,0], 180] call EFUNC(dragging,setDraggable);
+	
 	if (!IS_VANILLA) then {
 	
 	};

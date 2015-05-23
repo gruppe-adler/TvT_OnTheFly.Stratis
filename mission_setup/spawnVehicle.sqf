@@ -1,3 +1,5 @@
+#include "\z\ace\addons\main\script_component.hpp"
+
 _position = _this select 0;
 _vehicle = _this select 1;
 _side = _this select 2;
@@ -37,7 +39,7 @@ if (_side == west) then {
 		_blufor_vehicle = _vehicle createVehicle (_spawn_area select 0);
 		
 		if (!IS_VANILLA) then {
-			[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
+			[localize "str_GRAD_vehicleSpawned"] call EFUNC(common,displayTextStructured);
 		} else {
 			hintSilent format [localize "str_GRAD_vehicleSpawned"];
 		};
@@ -60,7 +62,7 @@ if (_side == west) then {
 	_blufor_vehicle = _vehicle createVehicle (_spawn_area select 0);
 
 	if (!IS_VANILLA) then {
-			[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
+			[localize "str_GRAD_vehicleSpawned"] call EFUNC(common,displayTextStructured);
 		} else {
 			hintSilent format [localize "str_GRAD_vehicleSpawned"];
 		};
@@ -89,7 +91,7 @@ if (_side == east) then {
 		opfor_vehicle = _vehicle createVehicle (_spawn_area2 select 0);
 		opfor_vehicle setVehicleAmmo 0.1;
 		if (!IS_VANILLA) then {
-			[localize "str_GRAD_mortarSpawned"] call AGM_Core_fnc_displayTextStructured;
+			[localize "str_GRAD_mortarSpawned"] call EFUNC(common,displayTextStructured);
 		} else {
 			hintSilent format [localize "str_GRAD_mortarSpawned"];
 		};
@@ -127,7 +129,7 @@ if (_side == east) then {
 		
 		
 		if (!IS_VANILLA) then {
-			[localize "str_GRAD_at4Spawned"] call AGM_Core_fnc_displayTextStructured;
+			[localize "str_GRAD_at4Spawned"] call EFUNC(common,displayTextStructured);
 		} else {
 			hintSilent format [localize "str_GRAD_at4Spawned"];
 		};
@@ -161,7 +163,7 @@ if (_side == east) then {
 	
 
 	if (!IS_VANILLA) then {
-			[localize "str_GRAD_vehicleSpawned"] call AGM_Core_fnc_displayTextStructured;
+			[localize "str_GRAD_vehicleSpawned"] call EFUNC(common,displayTextStructured);
 		} else {
 			hintSilent format [localize "str_GRAD_vehicleSpawned"];
 	};

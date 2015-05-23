@@ -1,4 +1,4 @@
-fillLoadouts = {
+fillBluforLoadouts = {
 	// BUNDESWEHR FLECK
 
 	randUniformBWFleck = 
@@ -235,45 +235,47 @@ fillLoadouts = {
 	[
 
 	];
+
+	loadoutInitFinished = true;
 };
 
 
-fillVariables = {
+fillBluforVariables = {
 	switch (BLUFORCE) do {
 	
 		// BW Fleck
 		case 0: {
-			customUniform = randUniformBWFleck call BIS_fnc_selectRandom;
-			customVest = randVestBWFleck call BIS_fnc_selectRandom;
-			customHeadgear = randHeadGearBWFleck call BIS_fnc_selectRandom;
-			customBackpack = randBackpackBWFleck call BIS_fnc_selectRandom;
+			customUniformBlufor = randUniformBWFleck call BIS_fnc_selectRandom;
+			customVestBlufor = randVestBWFleck call BIS_fnc_selectRandom;
+			customHeadgearBlufor = randHeadGearBWFleck call BIS_fnc_selectRandom;
+			customBackpackBlufor = randBackpackBWFleck call BIS_fnc_selectRandom;
 
 		}; 
 
 		// BW Tropen
 		case 1: {
-			customUniform = randUniformBWTropen call BIS_fnc_selectRandom;
-			customVest = randVestBWTropen call BIS_fnc_selectRandom;
-			customHeadgear = randHeadGearBWTropen call BIS_fnc_selectRandom;
-			customBackpack = randBackpackBWTropen call BIS_fnc_selectRandom;
+			customUniformBlufor = randUniformBWTropen call BIS_fnc_selectRandom;
+			customVestBlufor = randVestBWTropen call BIS_fnc_selectRandom;
+			customHeadgearBlufor = randHeadGearBWTropen call BIS_fnc_selectRandom;
+			customBackpackBlufor = randBackpackBWTropen call BIS_fnc_selectRandom;
 
 		}; 
 
 		// US Desert
 		case 2: {
-			customUniform = randUniformUSOCP call BIS_fnc_selectRandom;
-			customVest = randVestUSOCP call BIS_fnc_selectRandom;
-			customHeadgear = randHeadGearUSOCP call BIS_fnc_selectRandom;
-			customBackpack = randBackpackUSOCP call BIS_fnc_selectRandom;
+			customUniformBlufor = randUniformUSOCP call BIS_fnc_selectRandom;
+			customVestBlufor = randVestUSOCP call BIS_fnc_selectRandom;
+			customHeadgearBlufor = randHeadGearUSOCP call BIS_fnc_selectRandom;
+			customBackpackBlufor = randBackpackUSOCP call BIS_fnc_selectRandom;
 
 		}; 
 		
 		// US Tropen
 		case 3: {
-			customUniform = randUniformUSUCP call BIS_fnc_selectRandom;
-			customVest = randVestUSUCP call BIS_fnc_selectRandom;
-			customHeadgear = randHeadGearUSUCP call BIS_fnc_selectRandom;
-			customBackpack = randBackpackUSUCP call BIS_fnc_selectRandom;
+			customUniformBlufor = randUniformUSUCP call BIS_fnc_selectRandom;
+			customVestBlufor = randVestUSUCP call BIS_fnc_selectRandom;
+			customHeadgearBlufor = randHeadGearUSUCP call BIS_fnc_selectRandom;
+			customBackpackBlufor = randBackpackUSUCP call BIS_fnc_selectRandom;
 		};
 		default {
 		hintSilent "error in reading faction parameter";
@@ -298,10 +300,10 @@ blufor_default = {
 
 	comment "Add containers";
 
-	[[{}, this forceAddUniform customUniform], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addVest customVest], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addHeadgear customHeadgear], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addBackpack customBackpack], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this forceAddUniform customUniformBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addVest customVestBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addHeadgear customHeadgearBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addBackpack customBackpackBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 
 	comment "Add items";
 	this linkItem "ItemMap";
@@ -313,6 +315,69 @@ blufor_default = {
 	
 };
 
- [] call fillLoadouts;
+blufor_officer = {
+	
+	this = _this select 0;
+
+	comment "Remove existing items";
+	removeAllWeapons this;
+	removeAllItems this;
+	removeAllAssignedItems this;
+	removeUniform this;
+	removeVest this;
+	removeBackpack this;
+	removeHeadgear this;
+	removeGoggles this;
+
+	comment "Add containers";
+
+	[[{}, this forceAddUniform customUniformBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addVest customVestBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addHeadgear customHeadgearBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addBackpack customBackpackBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+
+	comment "Add items";
+	this linkItem "ItemMap";
+	this linkItem "ItemCompass";
+	this linkItem "ACE_Altimeter";
+	this linkItem "ItemGPS";
+	this linkItem "NVGoggles_OPFOR";
+	this linkItem "tf_anprc152";
+	
+};
+
+
+blufor_medic = {
+	
+	this = _this select 0;
+
+	comment "Remove existing items";
+	removeAllWeapons this;
+	removeAllItems this;
+	removeAllAssignedItems this;
+	removeUniform this;
+	removeVest this;
+	removeBackpack this;
+	removeHeadgear this;
+	removeGoggles this;
+
+	comment "Add containers";
+
+	[[{}, this forceAddUniform customUniformBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addVest customVestBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addHeadgear customHeadgearBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addBackpack customBackpackBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+
+	comment "Add items";
+	this linkItem "ItemMap";
+	this linkItem "ItemCompass";
+	this linkItem "ACE_Altimeter";
+	this linkItem "ItemGPS";
+	this linkItem "NVGoggles_OPFOR";
+	this linkItem "tf_anprc152";
+	
+};
+
+ [] call fillBluforLoadouts;
  sleep 0.1;
- [] call fillVariables;
+ [] call fillBluforVariables;

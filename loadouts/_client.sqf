@@ -3,17 +3,8 @@ _unit = _this select 0;
 waitUntil { !isNull _unit };
       if (local _unit) then {
         waitUntil { time > 1 };
-
-       
-        switch (faction _unit) do {
-               case "BLU_F":
-               {[] execVM "loadouts\loadouts_blufor.sqf";};
-               case "OPF_F":
-               {[] execVM "loadouts\loadouts_opfor.sqf";};
-               default {["ERROR: _unit is neither OPFOR nor BLUFOR?!",typeOf _unit] call BIS_fnc_logFormat;};
-              };
-    
-            
+        [] execVM "loadouts\loadouts_blufor.sqf";
+        [] execVM "loadouts\loadouts_opfor.sqf";
             ["loadouts processed for _unit %1",typeOf _unit] call BIS_fnc_logFormat;
            
 
@@ -21,22 +12,22 @@ waitUntil { !isNull _unit };
             
             switch (typeOf _unit) do {
 
-            case "B_G_officer_F": {[_unit] call blufor_default;};
-            case "B_officer_F": {[_unit] call blufor_default;};
+            case "B_G_officer_F": {[_unit] call blufor_officer;};
+            case "B_officer_F": {[_unit] call blufor_officer;};
 
-            case "B_Soldier_TL_F": {[_unit] call blufor_default;};
-            case "B_G_Soldier_TL_F": {[_unit] call blufor_default;};
-            case "B_recon_TL_F": {[_unit] call blufor_default;};
-            case "B_Soldier_SL_F": {[_unit] call blufor_default;};
-            case "B_G_Soldier_SL_F": {[_unit] call blufor_default;};
+            case "B_Soldier_TL_F": {[_unit] call opfor_officer;};
+            case "B_G_Soldier_TL_F": {[_unit] call opfor_officer;};
+            case "B_recon_TL_F": {[_unit] call opfor_officer;};
+            case "B_Soldier_SL_F": {[_unit] call opfor_officer;};
+            case "B_G_Soldier_SL_F": {[_unit] call opfor_officer;};
             
 
             case "B_G_Soldier_GL_F": {[_unit] call blufor_default;};
             case "B_Soldier_GL_F": {[_unit] call blufor_default;};
 
-            case "B_medic_F": {[_unit] call blufor_default;};
-            case "B_recon_medic_F": {[_unit] call blufor_default;};
-            case "B_G_medic_F": {[_unit] call blufor_default;};
+            case "B_medic_F": {[_unit] call blufor_medic;};
+            case "B_recon_medic_F": {[_unit] call blufor_medic;};
+            case "B_G_medic_F": {[_unit] call blufor_medic;};
 
             case "B_soldier_AAR_F": {[_unit] call blufor_default;};
             case "B_G_Soldier_AR_F": {[_unit] call blufor_default;};
@@ -57,10 +48,10 @@ waitUntil { !isNull _unit };
             case "O_soldierU_LAT_F": {[_unit] call opfor_default;};
             case "O_G_Soldier_LAT_F": {[_unit] call opfor_default;};
 
-            case "O_medic_F": {[_unit] call opfor_default;};
-            case "O_recon_medic_F": {[_unit] call opfor_default;};
-            case "O_soldierU_medic_F": {[_unit] call opfor_default;};
-            case "O_G_medic_F": {[_unit] call opfor_default;};
+            case "O_medic_F": {[_unit] call opfor_medic;};
+            case "O_recon_medic_F": {[_unit] call opfor_medic;};
+            case "O_soldierU_medic_F": {[_unit] call opfor_medic;};
+            case "O_G_medic_F": {[_unit] call opfor_medic;};
 
             case "O_G_Soldier_exp_F": {[_unit] call opfor_default;};
             case "O_soldier_exp_F": {[_unit] call opfor_default;};
@@ -73,16 +64,16 @@ waitUntil { !isNull _unit };
             case "O_Soldier_AAR_F": {[_unit] call opfor_default;};
             case "O_soldierU_AAR_F": {[_unit] call opfor_default;};
 
-            case "O_G_Soldier_TL_F": {[_unit] call opfor_default;};
-            case "O_soldierU_F": {[_unit] call opfor_default;};
-            case "O_Soldier_TL_F": {[_unit] call opfor_default;};
-            case "O_recon_TL_F": {[_unit] call opfor_default;};
-            case "O_soldierU_TL_F": {[_unit] call opfor_default;};
-            case "O_G_officer_F": {[_unit] call opfor_default;};
-            case "O_officer_F": {[_unit] call opfor_default;};
-            case "O_Soldier_TL_F": {[_unit] call opfor_default;};
-            case "O_recon_TL_F": {[_unit] call opfor_default;};
-            case "O_soldierU_TL_F": {[_unit] call opfor_default;};
+            case "O_G_Soldier_TL_F": {[_unit] call opfor_officer;};
+            case "O_soldierU_F": {[_unit] call opfor_officer;};
+            case "O_Soldier_TL_F": {[_unit] call opfor_officer;};
+            case "O_recon_TL_F": {[_unit] call opfor_officer;};
+            case "O_soldierU_TL_F": {[_unit] call opfor_officer;};
+            case "O_G_officer_F": {[_unit] call opfor_officer;};
+            case "O_officer_F": {[_unit] call opfor_officer;};
+            case "O_Soldier_TL_F": {[_unit] call opfor_officer;};
+            case "O_recon_TL_F": {[_unit] call opfor_officer;};
+            case "O_soldierU_TL_F": {[_unit] call opfor_officer;};
 
             case "O_G_Soldier_GL_F": {[_unit] call opfor_default;};
             case "O_Soldier_GL_F": {[_unit] call opfor_default;};

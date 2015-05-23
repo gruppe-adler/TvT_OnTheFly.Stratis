@@ -1,3 +1,5 @@
+#include "\z\ace\addons\main\script_component.hpp"
+
 openMap [true,false];
 {deleteMarker _x} forEach allMapMarkers;
 playback_speed_x1 = 1;
@@ -37,7 +39,7 @@ playback_speed_hint = {
     local_recording_playback_speed_text = (playback_speeds1 select playback_speed_x1) select 1;
 
     if (!IS_VANILLA) then {
-    [localize 'str_GRAD_hint_playback_speed_hint' + local_recording_playback_speed_text] call AGM_Core_fnc_displayTextStructured;
+    [localize 'str_GRAD_hint_playback_speed_hint' + local_recording_playback_speed_text] call EFUNC(common,displayTextStructured);
     };
 };
 

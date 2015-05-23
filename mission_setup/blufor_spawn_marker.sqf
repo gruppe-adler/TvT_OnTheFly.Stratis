@@ -1,8 +1,10 @@
+#include "\z\ace\addons\main\script_component.hpp"
+
 _pos = _this select 0;
 
 if (side player != west) exitWith {
 	if (!IS_VANILLA) then {
-	[localize "str_GRAD_hint_bluforSpawned"] call AGM_Core_fnc_displayTextStructured;	
+	[localize "str_GRAD_hint_bluforSpawned"] call EFUNC(common,displayTextStructured);	
 	} else {
 	hintSilent format [localize "str_GRAD_hint_bluforSpawned"];
 	};

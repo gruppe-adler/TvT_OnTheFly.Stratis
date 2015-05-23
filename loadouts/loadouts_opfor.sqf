@@ -1,4 +1,4 @@
-fillLoadouts = {
+fillOpforLoadouts = {
 	// TALIBAN (taliban stuff)
 
 	randUniformTaliban = 
@@ -15,12 +15,20 @@ fillLoadouts = {
 
 	randVestTaliban = 
 	[
-
+	"V_TacVest_blk",
+	"V_TacVest_camo",
+	"V_BandollierB_blk",
+	"V_BandollierB_oli",
+	"V_TacVestCamo_khk",
+	"V_TacVestIR_blk"
 	];
 
 	randomBackpackTaliban =
 	[
-
+	"rhs_sidor",
+	"rhs_assault_umbts",
+	"rhs_assault_umbts_demo",
+	"rhs_rpg_empty"
 	];
 
 	randHeadGearTaliban = 
@@ -74,7 +82,8 @@ fillLoadouts = {
 
 	randHeadGearTerrorists =
 	[
-	"LOP_H_Shemag_IT"
+	"LOP_H_Shemag_IT",
+	"H_Shemag_olive"
 	];
 
 	randVestTerrorists = 
@@ -91,7 +100,9 @@ fillLoadouts = {
 
 	randBackpackTerrorists =
 	[
-
+	"B_OutdoorPack_blk",
+	"B_FieldPack_blk",
+	"B_AssaultPack_blk"
 	];
 
 	randWeaponTerrorists = 
@@ -164,12 +175,21 @@ fillLoadouts = {
 
 	randVestEastern= 
 	[
-
+	"V_TacVest_blk",
+	"V_TacVest_camo",
+	"V_BandollierB_blk",
+	"V_BandollierB_oli",
+	"V_TacVestCamo_khk",
+	"V_TacVestIR_blk"
 	];
 
 	randBackpackEastern =
 	[
-
+	"rhs_sidor",
+	"B_Carryall_oli",
+	"rhs_assault_umbts",
+	"rhs_assault_umbts_demo",
+	"rhs_rpg_empty"
 	];
 
 	randHeadGearEastern = 
@@ -209,9 +229,9 @@ fillLoadouts = {
 	];
 
 
-	// RUSSIANS (emr summer)
+	// Russian (emr summer)
 
-	randUniformRussians = 
+	randUniformRussian = 
 	[
 	"rhs_uniform_emr_patchless"
 	];
@@ -254,7 +274,7 @@ fillLoadouts = {
 	"rhs_rpg_empty"
 	];
 
-	randWeaponRussians = 
+	randWeaponRussian = 
 	[
 	"rhs_weap_M590_8RD",
 	"rhs_weap_pkm",
@@ -266,49 +286,52 @@ fillLoadouts = {
 	"rhs_weap_ak103_npz"
 	];
 
-	randLauncherRussians = 
+	randLauncherRussian = 
 	[
 
 	];
+
+	loadoutInitFinished = true;
 };
 
+fillOpforVariables = {
+	switch (OPFORCE) do {
+		// taliban
+		case 0: {
+			customUniformOpfor = randUniformTaliban call BIS_fnc_selectRandom;
+			customVestOpfor = randVestTaliban call BIS_fnc_selectRandom;
+			customHeadgearOpfor = randHeadGearTaliban call BIS_fnc_selectRandom;
+			customBackpackOpfor = randBackPackTaliban call BIS_fnc_selectRandom;
 
-switch (OPFORCE) do {
-	// taliban
-	case 0: {
-		customUniform = randUniformTaliban call BIS_fnc_selectRandom;
-		customVest= randVestTaliban call BIS_fnc_selectRandom;
-		customHeadgear = randHeadGearTaliban call BIS_fnc_selectRandom;
-		customBackpack = randBackPackTaliban call BIS_fnc_selectRandom;
+		}; 
 
-	}; 
+		// terrorists
+		case 1: {
+			customUniformOpfor = randUniformTerrorists call BIS_fnc_selectRandom;
+			customVestOpfor = randVestTerrorists call BIS_fnc_selectRandom;
+			customHeadgearOpfor = randHeadGearTerrorists call BIS_fnc_selectRandom;
+			customBackpackOpfor = randBackPackTerrorists call BIS_fnc_selectRandom;
 
-	// terrorists
-	case 1: {
-		customUniform = randUniformTerrorists call BIS_fnc_selectRandom;
-		customVest= randVestTerrorists call BIS_fnc_selectRandom;
-		customHeadgear = randHeadGearTerrorists call BIS_fnc_selectRandom;
-		customBackpack = randBackPackTerrorists call BIS_fnc_selectRandom;
+		}; 
 
-	}; 
+		// eastern/nationalists
+		case 2: {
+			customUniformOpfor = randUniformEastern call BIS_fnc_selectRandom;
+			customVestOpfor = randVestEastern call BIS_fnc_selectRandom;
+			customHeadgearOpfor = randHeadGearEastern call BIS_fnc_selectRandom;
+			customBackpackOpfor = randBackPackEastern call BIS_fnc_selectRandom;
 
-	// eastern/nationalists
-	case 2: {
-		customUniform = randUniformEastern call BIS_fnc_selectRandom;
-		customVest= randVestEastern call BIS_fnc_selectRandom;
-		customHeadgear = randHeadGearEastern call BIS_fnc_selectRandom;
-		customBackpack = randBackPackEastern call BIS_fnc_selectRandom;
-
-	}; 
-	
-	// russians
-	case 3: {
-		customUniform = randUniformRussians call BIS_fnc_selectRandom;
-		customVest= randVestRussian call BIS_fnc_selectRandom;
-		customHeadgear = randHeadGearRussian call BIS_fnc_selectRandom;
-		customBackpack = randBackPackRussian call BIS_fnc_selectRandom;
+		}; 
+		
+		// Russian
+		case 3: {
+			customUniformOpfor = randUniformRussian call BIS_fnc_selectRandom;
+			customVestOpfor = randVestRussian call BIS_fnc_selectRandom;
+			customHeadgearOpfor = randHeadGearRussian call BIS_fnc_selectRandom;
+			customBackpackOpfor = randBackPackRussian call BIS_fnc_selectRandom;
+		};
+		default {hintSilent "error in reading faction parameter";};
 	};
-	default {hintSilent "error in reading faction parameter";};
 };
 
 
@@ -328,10 +351,10 @@ opfor_default = {
 
 	comment "Add containers";
 	
-	[[{}, this forceAddUniform customUniform], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addVest customVest], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addHeadgear customHeadgear], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addBackpack customBackpack], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this forceAddUniform customUniformOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addVest customVestOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addHeadgear customHeadgearOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addBackpack customBackpackOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
 	
 	comment "Add items";
 	this linkItem "ItemMap";
@@ -341,6 +364,64 @@ opfor_default = {
 
 };
 
-[] call fillLoadouts;
+opfor_officer = {
+	
+	this = _this select 0;
+
+	comment "Remove existing items";
+	removeAllWeapons this;
+	removeAllItems this;
+	removeAllAssignedItems this;
+	removeUniform this;
+	removeVest this;
+	removeBackpack this;
+	removeHeadgear this;
+	removeGoggles this;
+
+	comment "Add containers";
+	
+	[[{}, this forceAddUniform customUniformOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addVest customVestOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addHeadgear customHeadgearOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addBackpack customBackpackOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	
+	comment "Add items";
+	this linkItem "ItemMap";
+	this linkItem "ItemCompass";
+	this linkItem "ItemWatch";
+	this linkItem "tf_fadak";
+
+};
+
+opfor_medic = {
+	
+	this = _this select 0;
+
+	comment "Remove existing items";
+	removeAllWeapons this;
+	removeAllItems this;
+	removeAllAssignedItems this;
+	removeUniform this;
+	removeVest this;
+	removeBackpack this;
+	removeHeadgear this;
+	removeGoggles this;
+
+	comment "Add containers";
+	
+	[[{}, this forceAddUniform customUniformOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addVest customVestOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addHeadgear customHeadgearOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	[[{}, this addBackpack customBackpackOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	
+	comment "Add items";
+	this linkItem "ItemMap";
+	this linkItem "ItemCompass";
+	this linkItem "ItemWatch";
+	this linkItem "tf_fadak";
+
+};
+
+[] call fillOpforLoadouts;
  sleep 0.1;
-[] call fillVariables;
+[] call fillOpforVariables;

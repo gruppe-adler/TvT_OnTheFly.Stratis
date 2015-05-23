@@ -1,3 +1,5 @@
+#include "\z\ace\addons\main\script_component.hpp"
+
 //--- Classic camera script, enhanced by Karel Moricky, 2010/03/19
 //--- pimped for his needs by nomisum, 2014/11/30
 
@@ -91,7 +93,7 @@ BIS_DEBUG_CAM_MARKER setmarkertextlocal "Your Spectator Cam";
 			sideOfTarget = '<t color="#ffffff">Bewusstlos</t>';
 			};
 			text0 = format ["%1<br />%2", nameOfTarget, sideOfTarget];
-			[text0] call AGM_Core_fnc_displayTextStructured;	
+			[text0] call EFUNC(common,displayTextStructured);	
 			sleep 1;
 			
 		};
@@ -213,7 +215,7 @@ onScrollWheelChange = {
 		if (side currentSpecUnit == EAST) then {sideOfTarget = '<t color="#c80000">OPFOR</t>';};
 		if (side currentSpecUnit == CIVILIAN) then {sideOfTarget = '<t color="#ffffff">bewusstlos</t>';};
 		text1 = format ["%1<br />%2", nameOfTarget, sideOfTarget];
-		[text1] call AGM_Core_fnc_displayTextStructured;
+		[text1] call EFUNC(common,displayTextStructured);
 		BIS_DEBUG_CAM camcommand 'manual off';
 		BIS_DEBUG_CAM camSetTarget currentSpecUnit;
 		BIS_DEBUG_CAM camSetRelPos [0,-5,5];
@@ -239,7 +241,7 @@ onScrollWheelChange = {
 		if (side currentSpecUnit == EAST) then {sideOfTarget = '<t color="#c80000">OPFOR</t>';};
 		if (side currentSpecUnit == CIVILIAN) then {sideOfTarget = '<t color="#ffffff">bewusstlos</t>';};
 		text2 = format ["%1<br />%2", nameOfTarget, sideOfTarget];
-		[text2] call AGM_Core_fnc_displayTextStructured;
+		[text2] call EFUNC(common,displayTextStructured);
 		BIS_DEBUG_CAM camcommand 'manual off';
 		BIS_DEBUG_CAM camSetTarget currentSpecUnit;
 		BIS_DEBUG_CAM camSetRelPos [0,-5,5];

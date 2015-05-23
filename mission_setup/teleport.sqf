@@ -1,8 +1,10 @@
+#include "\z\ace\addons\main\script_component.hpp"
+
 spawnpoint_mapclick = [];
 
 if (player == opfor_teamlead && !OPFOR_TELEPORTED) then {
 if (!IS_VANILLA) then {
-	[localize "str_GRAD_choose_spawn_location"] call AGM_Core_fnc_displayTextStructured;
+	[localize "str_GRAD_choose_spawn_location"] call EFUNC(common,displayTextStructured);
 	} else {
 	hintSilent format [localize "str_GRAD_choose_spawn_location"];
 };
@@ -13,7 +15,7 @@ onMapSingleClick "[_pos] call teleportGroup; onMapSingleClick ''; true";
 
 if (player == blufor_teamlead && OPFOR_TELEPORTED) then {
 if (!IS_VANILLA) then {
-	[localize "str_GRAD_choose_spawn_location"] call AGM_Core_fnc_displayTextStructured;
+	[localize "str_GRAD_choose_spawn_location"] call EFUNC(common,displayTextStructured);
 	} else {
 	hintSilent format [localize "str_GRAD_choose_spawn_location"];
 };
@@ -30,7 +32,7 @@ openMap [false,false];
 	if (surfaceIsWater [(spawnpoint_mapclick select 0),(spawnpoint_mapclick select 1)]) exitWith {
        
        if (!IS_VANILLA) then {
-		[localize "str_GRAD_spawn_on_water"] call AGM_Core_fnc_displayTextStructured;
+		[localize "str_GRAD_spawn_on_water"] call EFUNC(common,displayTextStructured);
 		} else {
 		hintSilent format [localize "str_GRAD_spawn_on_water"];
 		};
