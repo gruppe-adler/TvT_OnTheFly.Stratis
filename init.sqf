@@ -113,33 +113,18 @@ if ((isServer) || (isDedicated)) then {
 	switch (OPFORCE) do {
 		case 3: {
 			// WHEN RUSSIANS
-			respawn_helper = "rhs_gaz66_r142_vv" createVehicle [(getPos sector_trigger select 0),(getPos sector_trigger select 1),0];
+			respawn_helper = "rhs_gaz66_r142_vv" createVehicle (getPos opfor_teamlead);
 			sleep 0.1;	 
 			[[[respawn_helper],"objectives\russianMarker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
-			[] spawn {
-				while {true} do {
-					sleep 1;
-				};
+
 
 		};
 		default {
-			respawn_helper = "Land_MetalBarrel_F" createVehicle [(getPos sector_trigger select 0),(getPos sector_trigger select 1),0];
+			respawn_helper = "Land_MetalBarrel_F" createVehicle (getPos opfor_teamlead);
 			//[respawn_helper, true, [0,0,0], 180] call EFUNC(dragging,setDraggable);
 			[respawn_helper, true, [0,0,0], 180] call ace_dragging_fnc_setdraggable;
 
-			[] spawn {
-				while {true} do {
-					if ((OPFOR_TELEPORTED) && (BLUFOR_TELEPORTED)) then {
-
-							_pos =  [(getPos respawn_helper select 0), (getPos respawn_helper select 1), 0];
-							sector_trigger setPos _pos;
-							sector_module setPos _pos;
-
-							sleep 1;
-
-					};
-				};
-			};
+			[respawn_helper] execVM "objectives\triggerTracking.sqf";
 		};
 
 	};

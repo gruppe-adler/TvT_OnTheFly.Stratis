@@ -6,9 +6,6 @@ class Mission
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
 		"A3_Characters_F_OPFOR",
-		"A3_Missions_F_Curator",
-		"A3_Modules_F",
-		"A3_Modules_F_Multiplayer",
 		"A3_Soft_F_HEMTT",
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Supplies_F_Heli_CargoNets",
@@ -20,9 +17,6 @@ class Mission
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
 		"A3_Characters_F_OPFOR",
-		"A3_Missions_F_Curator",
-		"A3_Modules_F",
-		"A3_Modules_F_Multiplayer",
 		"A3_Soft_F_HEMTT",
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Supplies_F_Heli_CargoNets",
@@ -51,7 +45,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=7;
+		items=2;
 		class Item0
 		{
 			side="WEST";
@@ -361,198 +355,6 @@ class Mission
 				};
 			};
 		};
-		class Item2
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={1842.5299,5.5,5886.6802};
-					id=24;
-					side="LOGIC";
-					vehicle="ModuleMPTypeSectorControl_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					syncId=0;
-					synchronizations[]={3,4,2};
-				};
-			};
-		};
-		class Item3
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={1841.8689,5.5,5926.7642};
-					id=25;
-					side="LOGIC";
-					vehicle="LocationArea_F";
-					leader=1;
-					skill=0.60000002;
-					syncId=1;
-					synchronizations[]={4,5};
-				};
-			};
-		};
-		class Item4
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={1866.7422,5.5,5852.3794};
-					id=26;
-					side="LOGIC";
-					vehicle="SideBLUFOR_F";
-					leader=1;
-					skill=0.60000002;
-					syncId=2;
-					synchronizations[]={0};
-				};
-			};
-		};
-		class Item5
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={1820.1241,5.5,5859.6265};
-					id=27;
-					side="LOGIC";
-					vehicle="SideOPFOR_F";
-					leader=1;
-					skill=0.60000002;
-					syncId=3;
-					synchronizations[]={0};
-				};
-			};
-		};
-		class Item6
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={1841.6459,5.5,5907.9058};
-					class args
-					{
-						items=15;
-						class Item0
-						{
-							value="Insurgents HQ";
-							parentCls="ModuleSector_F";
-							typeName="Name";
-						};
-						class Item1
-						{
-							value="";
-							parentCls="ModuleSector_F";
-							typeName="Designation";
-						};
-						class Item2
-						{
-							value="0";
-							parentCls="ModuleSector_F";
-							typeName="ScoreReward";
-						};
-						class Item3
-						{
-							value="if ((_this select 1) == west) then { [] execVM ""objectives\blufor_captures.sqf"";};";
-							parentCls="ModuleSector_F";
-							typeName="OnOwnerChange";
-						};
-						class Item4
-						{
-							value="1";
-							parentCls="ModuleSector_F";
-							typeName="OwnerLimit";
-						};
-						class Item5
-						{
-							value="0";
-							parentCls="ModuleSector_F";
-							typeName="DefaultOwner";
-						};
-						class Item6
-						{
-							value="3";
-							parentCls="ModuleSector_F";
-							typeName="TaskOwner";
-						};
-						class Item7
-						{
-							value="Seize";
-							parentCls="ModuleSector_F";
-							typeName="TaskTitle";
-						};
-						class Item8
-						{
-							value="Seize and eliminate enemy presence";
-							parentCls="ModuleSector_F";
-							typeName="TaskDescription";
-						};
-						class Item9
-						{
-							value="0.5";
-							parentCls="ModuleSector_F";
-							typeName="CostInfantry";
-						};
-						class Item10
-						{
-							value="0";
-							parentCls="ModuleSector_F";
-							typeName="CostWheeled";
-						};
-						class Item11
-						{
-							value="0";
-							parentCls="ModuleSector_F";
-							typeName="CostTracked";
-						};
-						class Item12
-						{
-							value="0";
-							parentCls="ModuleSector_F";
-							typeName="CostWater";
-						};
-						class Item13
-						{
-							value="0";
-							parentCls="ModuleSector_F";
-							typeName="CostAir";
-						};
-						class Item14
-						{
-							value="1";
-							parentCls="ModuleSector_F";
-							typeName="CostPlayers";
-						};
-					};
-					id=28;
-					side="LOGIC";
-					vehicle="ModuleSector_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					text="sector_module";
-					syncId=4;
-					synchronizations[]={0,1};
-				};
-			};
-		};
 	};
 	class Vehicles
 	{
@@ -561,7 +363,7 @@ class Mission
 		{
 			position[]={1844.2902,5.2536268,6127.4043};
 			azimut=163.319;
-			id=29;
+			id=24;
 			side="EMPTY";
 			vehicle="B_Truck_01_covered_F";
 			leader=1;
@@ -574,7 +376,7 @@ class Mission
 		{
 			position[]={1852.9342,5.3323355,6128.8511};
 			azimut=163.319;
-			id=30;
+			id=25;
 			side="EMPTY";
 			vehicle="Land_MapBoard_F";
 			leader=1;
@@ -585,7 +387,7 @@ class Mission
 		class Item2
 		{
 			position[]={1515.3201,5.5,5015.7935};
-			id=31;
+			id=26;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
@@ -595,7 +397,7 @@ class Mission
 		class Item3
 		{
 			position[]={1850.7795,5.3208466,6121.436};
-			id=32;
+			id=27;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
@@ -605,7 +407,7 @@ class Mission
 		class Item4
 		{
 			position[]={1797.2467,5.5,5987.0596};
-			id=33;
+			id=28;
 			side="EMPTY";
 			vehicle="rhs_gaz66_r142_vv";
 			skill=0.60000002;
@@ -630,23 +432,8 @@ class Mission
 	};
 	class Sensors
 	{
-		items=2;
+		items=1;
 		class Item0
-		{
-			position[]={1806.5537,5.5,5980.5337};
-			a=4;
-			b=4;
-			activationBy="ANY";
-			interruptable=1;
-			age="UNKNOWN";
-			name="sector_trigger";
-			class Effects
-			{
-			};
-			synchronizations[]={1};
-			syncId=5;
-		};
-		class Item1
 		{
 			position[]={1846.2662,5.5,5990.2334};
 			a=0;
