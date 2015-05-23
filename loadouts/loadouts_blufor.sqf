@@ -42,14 +42,48 @@ fillLoadouts = {
 
 	randWeaponBWFleck = 
 	[
-
+	"SMA_HK416afg",
+	"SMA_HK416vfg",
+	"SMA_HK416afgQCB",
+	"SMA_HK417vfg",
+	"SMA_HK417afg",
+	"SMA_HK417_tanafg",
+	"SMA_HK417_tanvfg",
+	"SMA_HK417_16in_afg",
+	"SMA_HK417_16in_vfg",
+	"MMG_02_black_F",
+	"MMG_02_sand_F",
+	"MMG_01_tan_F"
 	];
 
 	randLauncherBWFleck = 
 	[
 
 	];
-
+	//Munition Blufor
+	//"SMA_30Rnd_556x45_M855A1"
+	//"SMA_30Rnd_556x45_M855A1_Tracer"
+	//"SMA_30Rnd_556x45_M855A1_IR"
+	//"SMA_30Rnd_556x45_Mk318_Tracer"
+	//"SMA_30Rnd_556x45_Mk318"
+	//"SMA_30Rnd_556x45_Mk318_IR"
+	//"SMA_30Rnd_556x45_Mk262"
+	//"SMA_30Rnd_556x45_Mk262_Tracer"
+	//"SMA_30Rnd_556x45_Mk262_IR"
+	//"SMA_20Rnd_762x51mm_M80A1_EPR"
+	//"SMA_20Rnd_762x51mm_M80A1_EPR_Tracer"
+	//"SMA_20Rnd_762x51mm_M80A1_EPR_IR"
+	//"SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range"
+	//"SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"
+	//"SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_IR"
+	//"SMA_20Rnd_762x51mm_Mk319_Mod_0_Ball_Barrier"
+	//"SMA_20Rnd_762x51mm_Mk319_Mod_0_Ball_Barrier_Tracer"
+	//"SMA_20Rnd_762x51mm_Mk319_Mod_0_Ball_Barrier_IR"
+	//"SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic"
+	//"SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic_Tracer"
+	//"SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic_IR"
+	//"150Rnd_93x64_Mag"
+	//"130Rnd_338_Mag"
 
 	// BUNDESWEHR TROPEN
 
@@ -94,7 +128,18 @@ fillLoadouts = {
 
 	randWeaponBWTropen = 
 	[
-
+	"SMA_HK416afg",
+	"SMA_HK416vfg",
+	"SMA_HK416afgQCB",
+	"SMA_HK417vfg",
+	"SMA_HK417afg",
+	"SMA_HK417_tanafg",
+	"SMA_HK417_tanvfg",
+	"SMA_HK417_16in_afg",
+	"SMA_HK417_16in_vfg",
+	"MMG_02_black_F",
+	"MMG_02_sand_F",
+	"MMG_01_tan_F"
 	];
 
 	randLauncherBWTropen = 
