@@ -11,13 +11,15 @@ if (!IS_VANILLA) then {
 	vehicle_classname_littlebird = "MH6_Tropentarn";
 	vehicle_classname_mbt = "Leopard_2A6_Tarn";
 	};
-	if (BLUFORCE == 1) {
+	if (BLUFORCE == 1) then {
 	vehicle_classname_littlebird = "MH6_Flecktarn";	
 	vehicle_classname_mbt = "Leopard_2A6_Fleck";
 	};
 	if ((BLUFORCE == 2 || if (BLUFORCE == 3)) then {
 	vehicle_classname_littlebird = "B_Heli_Light_01_F";
-	vehicle_classname_mbt = "B_MBT_01_TUSK_F";
+	vehicle_classname_mbt = "rhsusf_m113d_usarmy";
+	
+] call BIS_fnc_initVehicle;
 	};
 } else {
 vehicle_classname_littlebird = "B_Heli_Light_01_F";

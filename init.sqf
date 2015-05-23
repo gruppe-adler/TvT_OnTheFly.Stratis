@@ -114,28 +114,12 @@ if ((isServer) || (isDedicated)) then {
 		case 3: {
 			// WHEN RUSSIANS
 			respawn_helper = "rhs_gaz66_r142_vv" createVehicle [(getPos sector_trigger select 0),(getPos sector_trigger select 1),0];
-			sleep 0.1;
-			respawn_helper animate ["mast_handler", 0];
-
-			 
+			sleep 0.1;	 
+			[[[respawn_helper],"objectives\russianMarker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 			[] spawn {
 				while {true} do {
-					if ((OPFOR_TELEPORTED) && (BLUFOR_TELEPORTED)) then {
-							if (respawn_helper animationPhase "mast_handler" == 1) then {
-								_pos =  [(getPos respawn_helper select 0), (getPos respawn_helper select 1), 0];
-								sector_trigger setPos _pos;
-								sector_module setPos _pos;
-								sector_module hideObjectGlobal false;
-							} else {
-								_pos =  [(getPos respawn_helper select 0), (getPos respawn_helper select 1), 0];
-								sector_trigger setPos _pos;
-								sector_module hideObjectGlobal true;
-						};
-						sleep 1;
-
-					};
+					sleep 1;
 				};
-			};
 
 		};
 		default {

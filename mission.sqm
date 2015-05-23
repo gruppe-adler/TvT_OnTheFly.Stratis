@@ -12,7 +12,8 @@ class Mission
 		"A3_Soft_F_HEMTT",
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Supplies_F_Heli_CargoNets",
-		"a3_map_stratis"
+		"a3_map_stratis",
+		"rhs_c_trucks"
 	};
 	addOnsAuto[]=
 	{
@@ -25,6 +26,7 @@ class Mission
 		"A3_Soft_F_HEMTT",
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Supplies_F_Heli_CargoNets",
+		"rhs_c_trucks",
 		"a3_map_stratis"
 	};
 	randomSeed=7556201;
@@ -554,7 +556,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=4;
+		items=5;
 		class Item0
 		{
 			position[]={1844.2902,5.2536268,6127.4043};
@@ -599,6 +601,15 @@ class Mission
 			skill=0.60000002;
 			text="arsenal_opfor";
 			init="loadoutInitOpforFinished = false;   nul = this execVM ""loadouts\XLA_arsenal_opfor.sqf""; this allowDamage false;      clearItemCargoGlobal this;      clearWeaponCargoGlobal this;      clearBackpackCargoGlobal this;      clearMagazineCargoGlobal this;";
+		};
+		class Item4
+		{
+			position[]={1797.2467,5.5,5987.0596};
+			id=33;
+			side="EMPTY";
+			vehicle="rhs_gaz66_r142_vv";
+			skill=0.60000002;
+			text="funk";
 		};
 	};
 	class Markers
