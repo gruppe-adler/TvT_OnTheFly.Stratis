@@ -27,7 +27,7 @@ if (_side == west) then {
 
 	// REMOVE SPAWN ACTIONS
 	
-	if (_vehicle == "Leopard_2A6_Fleck" || _vehicle == "Leopard_2A6_Tarn" || _vehicle == "B_MBT_01_TUSK_F") exitWith {
+	if (_vehicle == "Leopard_2A6_Fleck" || _vehicle == "Leopard_2A6_Tarn" || _vehicle == "B_MBT_01_TUSK_F" || _vehicle == "rhsusf_m113d_usarmy") exitWith {
 		player removeAction createVehicleMBT;
 		while{ count _spawn_area < 1} do {
 	
@@ -116,15 +116,12 @@ if (_side == east) then {
 		sleep 0.1;
 		
 		if (!IS_VANILLA) then {} 
-		else {
-		opfor_box addweaponcargoglobal ["launch_RPG32_F", 4];
-		opfor_box addmagazinecargoglobal ["RPG32_F", 4];
-		opfor_box addmagazinecargoglobal ["RPG32_HE_F", 4];
-		opfor_box addmagazinecargoglobal ["ATMine_Range_Mag", 4];
-		opfor_box addmagazinecargoglobal ["IEDUrbanSmall_Remote_Mag", 1];
-		opfor_box addmagazinecargoglobal ["IEDLandSmall_Remote_Mag", 1];
-		opfor_box addweaponcargoglobal ["tf47_at4_heat", 4];
-		opfor_box addmagazinecargoglobal ["tf47_at4_m_HEAT", 4];
+			else {
+			opfor_box addweaponcargoglobal ["launch_RPG32_F", 4];
+			opfor_box addmagazinecargoglobal ["RPG32_F", 8];
+			opfor_box addmagazinecargoglobal ["RPG32_HE_F", 4];
+			opfor_box addmagazinecargoglobal ["IEDUrbanSmall_Remote_Mag", 3];
+			opfor_box addmagazinecargoglobal ["IEDLandSmall_Remote_Mag", 3];
 		};
 		
 		

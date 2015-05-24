@@ -7,23 +7,21 @@ vehicle_classname_transport = "I_G_Van_01_transport_F";
 vehicle_classname_tactical = "I_G_Offroad_01_armed_F";
 vehicle_classname_mortar = "O_G_Mortar_01_F";
 if (!IS_VANILLA) then {
-	if (BLUFORCE == 0) then {
-	vehicle_classname_littlebird = "MH6_Tropentarn";
-	vehicle_classname_mbt = "Leopard_2A6_Tarn";
-	};
-	if (BLUFORCE == 1) then {
-	vehicle_classname_littlebird = "MH6_Flecktarn";	
-	vehicle_classname_mbt = "Leopard_2A6_Fleck";
-	};
-	if ((BLUFORCE == 2 || if (BLUFORCE == 3)) then {
+		if (BLUFORCE == 0) then {
+			vehicle_classname_littlebird = "MH6_Tropentarn";
+			vehicle_classname_mbt = "Leopard_2A6_Tarn";
+		};
+		if (BLUFORCE == 1) then {
+			vehicle_classname_littlebird = "MH6_Flecktarn";	
+			vehicle_classname_mbt = "Leopard_2A6_Fleck";
+		};
+		if ((BLUFORCE == 2) || (BLUFORCE == 3)) then {
+			vehicle_classname_littlebird = "B_Heli_Light_01_F";
+			vehicle_classname_mbt = "rhsusf_m113d_usarmy";
+		};
+	} else {
 	vehicle_classname_littlebird = "B_Heli_Light_01_F";
-	vehicle_classname_mbt = "rhsusf_m113d_usarmy";
-	
-] call BIS_fnc_initVehicle;
-	};
-} else {
-vehicle_classname_littlebird = "B_Heli_Light_01_F";
-vehicle_classname_mbt = "B_MBT_01_TUSK_F";
+	vehicle_classname_mbt = "B_MBT_01_TUSK_F";
 };
 vehicle_classname_hemtt = "B_Truck_01_covered_F";
 vehicle_classname_at4_box = "box_nato_wpslaunch_f";
