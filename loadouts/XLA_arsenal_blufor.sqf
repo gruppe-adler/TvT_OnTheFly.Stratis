@@ -1,3 +1,4 @@
+[]spawn {
 waitUntil {
 loadoutInitBluforFinished
 };
@@ -420,7 +421,7 @@ _availableGuns = _availableGuns
 	+ _ACE_vector_Weapons
 	+ _ACE_wind_Weapons;
 
-sleep 1;
+sleep 0.1;
 if (isServer && !IS_VANILLA) then {
 
 	// Grab the parameter that was passed in.
@@ -450,4 +451,5 @@ if (isServer && !IS_VANILLA) then {
 
 
 	};
+};
 };

@@ -132,6 +132,11 @@
                 <German>Mission wird beendet</German>
 				<French>Mission est fini</French>
             </Key>
+             <Key ID="str_GRAD_winmsg_points">
+               <Original>OPFOR wins! All propaganda transmitted.</Original>
+                <English>OPFOR wins! All propaganda transmitted.</English>
+                <German>OPFOR gewinnt! Propaganda vollständig ausgestrahlt.</German>
+            </Key>
             <Key ID="str_GRAD_thankyouforplaying_opfor">
                <Original>OPFOR wins!</Original>
                 <English>OPFOR wins!</English>

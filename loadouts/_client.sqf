@@ -2,7 +2,7 @@ _unit = _this select 0;
 
  [] execVM "loadouts\loadouts_blufor.sqf";
  [] execVM "loadouts\loadouts_opfor.sqf";
-waitUntil {(loadoutInitBluforFinished) && (loadoutInitOpforFinished)};
+
 waitUntil { !isNull _unit };
 
       if (local _unit) then {

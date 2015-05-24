@@ -380,7 +380,5 @@ blufor_medic = {
 };
 
  [] call fillBluforLoadouts;
-waitUntil {
-  loadoutInitBluforFinished
-};
+if (!isServer) then {waitUntil {loadoutInitBluforFinished};};
  [] call fillBluforVariables;

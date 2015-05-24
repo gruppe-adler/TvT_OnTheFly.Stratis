@@ -67,7 +67,7 @@ class Params
 		title = "OPFOR";
 		values[] = {0,1,2,3};
 		texts[] = {"Taliban/Afghan Militia","Iraqi Terrorists","Eastern Rebels/Nationalists","Russians"};
-		default = 1;
+		default = 3;
 	};
 
 	class AllowedSpawnDistanceMinimum

@@ -15,6 +15,9 @@ IS_VANILLA = (paramsArray select 8) == 1;
 AR3PLAY_ENABLE_REPLAY = (paramsArray select 9) == 1;
 AR3PLAY_IS_STREAMABLE = (paramsArray select 10) == 1;
 
+if (isServer) then { setDate [2035, 6, 24, TIME_OF_DAY, 1]; };	//Zeit
+
+
 if (isClass(configFile >> (_this select 0) >> task_force_radio)) then {
 	TFAR_ENABLED = true;
 	} else {
@@ -46,6 +49,7 @@ firstspawn = false;
 BLUFOR_AT_BARREL = false;
 
 
+
 EDITOR_MODE = false; // check if test is in editor/singleplayer
 if (!isMultiplayer) then {
 	EDITOR_MODE = true;
@@ -68,6 +72,8 @@ if (isServer) then {
 	publicVariable "END_MISSION_TRIGGERED";
 	SPECTATOR_LIST = [];
 	publicVariable "SPECTATOR_LIST";
+	RUSSIAN_MARKER_HIDDEN = true;
+	publicVariable "RUSSIAN_MARKER";
 };
 
 
@@ -78,6 +84,10 @@ blufor_teleport = blufor_teamlead addAction["<t color=""#93E352"">" + localize "
 call compile preprocessFileLineNumbers "plank\plank_init.sqf";				//Plank
 cameraOldPimped = compile preprocessFile "spectator\cameraOld_rip.sqf";
 cameraNewPimped = compile preprocessFile "spectator\camera_rip.sqf";
+clearInventory = compile preprocessFile "helpers\clearInventory.sqf";
+spawnStuff = compile preprocessFile "helpers\spawnStuff.sqf";
+
+
 If(isNil "spawn_help_fnc_compiled")then{call compile preprocessFileLineNumbers "helpers\findPos.sqf"};
 
 enableSentences false;														//Autospotten
@@ -98,7 +108,6 @@ if (!isNil "opfor_engi") then {
 	};
 };
 
-if (isServer) then { setDate [2035, 6, 24, TIME_OF_DAY, 1]; };	//Zeit
 
 
 
@@ -116,10 +125,14 @@ if ((isServer) || (isDedicated)) then {
 	switch (OPFORCE) do {
 		case 3: {
 			// WHEN RUSSIANS
-			respawn_helper = "rhs_gaz66_r142_vv" createVehicle (getPos opfor_teamlead);
+			[] spawn {
+			respawn_helper = [getPos opfor_teamlead,10,"rhs_gaz66_r142_vv"] call spawnStuff;
+			russian_brt = [getPos opfor_teamlead,10,"rhs_btr60_vv"] call spawnStuff;
 			sleep 0.1;	 
+			[russian_brt] call clearInventory;
+			[respawn_helper] call clearInventory;
 			[[[respawn_helper],"objectives\russianMarker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
-
+			};
 
 		};
 		default {

@@ -423,7 +423,11 @@ opfor_medic = {
 };
 
 [] call fillOpforLoadouts;
-waitUntil {
-  loadoutInitOpforFinished
-};
+if (isServer) then {
+	[] spawn {
+		waitUntil {loadoutInitOpforFinished};
+		[] call fillOpforVariables;
+	};
+} else {
 [] call fillOpforVariables;
+};
