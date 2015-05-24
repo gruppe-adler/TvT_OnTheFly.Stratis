@@ -1,3 +1,5 @@
+if (isServer) exitWith {};
+
 waitUntil {
 loadoutInitOpforFinished
 };
@@ -301,30 +303,30 @@ _availableMagazines = [
 ];
 
 _availableAttachments = _availableAttachments
-+ _ACE_ballistics_attachments;
+	+ _ACE_ballistics_attachments;
 
 _availableItems = _availableItems;
 
 _availableMagazines = _availableMagazines
-+ _ACE_grenades_Magazines;
-+ _ACE_attach_Magazines
-+ _ACE_ballistics_Magazines;
-+ _ACE_disposable_Magazines;
-+ _ACE_explosives_Magazines;
+	+ _ACE_grenades_Magazines
+	+ _ACE_attach_Magazines
+	+ _ACE_ballistics_Magazines
+	+ _ACE_disposable_Magazines
+	+ _ACE_explosives_Magazines;
 
 _availableGuns = _availableGuns
-+ _ACE_grenades_Weapons
-+ _ACE_attach_Weapons
-+ _ACE_disposable_Weapons
-+ _ACE_explosives_Weapons
-+ _ACE_hearing_Weapons
-+ _ACE_interaction_Weapons
-+ _ACE_logistics_Weapons
-+ _ACE_map_Weapons
-+ _ACE_medical_Weapons
-+ _ACE_overheating_Weapons
-+ _ACE_parachute_Weapons
-+ _ACE_wind_Weapons;
+	+ _ACE_grenades_Weapons
+	+ _ACE_attach_Weapons
+	+ _ACE_disposable_Weapons
+	+ _ACE_explosives_Weapons
+	+ _ACE_hearing_Weapons
+	+ _ACE_interaction_Weapons
+	+ _ACE_logistics_Weapons
+	+ _ACE_map_Weapons
+	+ _ACE_medical_Weapons
+	+ _ACE_overheating_Weapons
+	+ _ACE_parachute_Weapons
+	+ _ACE_wind_Weapons;
 
 sleep 1;
 
