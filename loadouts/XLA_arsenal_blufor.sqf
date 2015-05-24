@@ -390,7 +390,10 @@ _availableMagazines = [
 	"SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic_Tracer",
 	"SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic_IR",
 	"150Rnd_93x64_Mag",
-	"130Rnd_338_Mag"
+	"130Rnd_338_Mag",
+	"rhs_m136_hedp_mag",
+	"rhs_m136_mag",
+	"rhs_m136_hp_mag"
 ];
 
 

@@ -126,12 +126,21 @@ if ((isServer) || (isDedicated)) then {
 		case 3: {
 			// WHEN RUSSIANS
 			[] spawn {
-			respawn_helper = [getPos opfor_teamlead,10,"rhs_gaz66_r142_vv"] call spawnStuff;
+			funkwagen = [getPos opfor_teamlead,10,"rhs_gaz66_r142_vv"] call spawnStuff;
 			russian_brt = [getPos opfor_teamlead,10,"rhs_btr60_vv"] call spawnStuff;
+			blufor_observer_heli = [getPos blufor_teamlead,10,"RHS_UH1Y"] call spawnStuff;
+			
 			sleep 0.1;	 
+
 			[russian_brt] call clearInventory;
-			[respawn_helper] call clearInventory;
-			[[[respawn_helper],"objectives\russianMarker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+			[funkwagen] call clearInventory;
+			[blufor_observer_heli] call clearInventory;
+
+			blufor_observer_heli animate ["hide_rockets",1];
+			blufor_observer_heli animate ["hide_mg",1];
+			funkwagen animate ["light_hide"];
+
+			[[[funkwagen],"objectives\russianMarker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 			};
 
 		};

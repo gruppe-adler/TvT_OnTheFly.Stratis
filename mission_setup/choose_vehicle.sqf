@@ -17,7 +17,7 @@ if (!IS_VANILLA) then {
 		};
 		if ((BLUFORCE == 2) || (BLUFORCE == 3)) then {
 			vehicle_classname_littlebird = "B_Heli_Light_01_F";
-			vehicle_classname_mbt = "rhsusf_m113d_usarmy";
+			vehicle_classname_mbt = "RHS_M2A3_BUSKIII";
 		};
 	} else {
 	vehicle_classname_littlebird = "B_Heli_Light_01_F";
