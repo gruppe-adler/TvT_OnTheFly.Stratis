@@ -23,7 +23,7 @@ fillOpforLoadouts = {
 	"V_TacVestIR_blk"
 	];
 
-	randomBackpackTaliban =
+	randBackpackTaliban =
 	[
 	"rhs_sidor",
 	"rhs_assault_umbts",
@@ -351,10 +351,10 @@ opfor_default = {
 
 	comment "Add containers";
 	
-	[[{}, this forceAddUniform customUniformOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addVest customVestOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addHeadgear customHeadgearOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addBackpack customBackpackOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	this forceAddUniform customUniformOpfor;
+	this addVest customVestOpfor;
+	this addHeadgear customHeadgearOpfor;
+	this addBackpack customBackpackOpfor;
 	
 	comment "Add items";
 	this linkItem "ItemMap";
@@ -380,10 +380,10 @@ opfor_officer = {
 
 	comment "Add containers";
 	
-	[[{}, this forceAddUniform customUniformOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addVest customVestOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addHeadgear customHeadgearOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addBackpack customBackpackOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	this forceAddUniform customUniformOpfor;
+	this addVest customVestOpfor;
+	this addHeadgear customHeadgearOpfor;
+	this addBackpack customBackpackOpfor;
 	
 	comment "Add items";
 	this linkItem "ItemMap";
@@ -409,10 +409,10 @@ opfor_medic = {
 
 	comment "Add containers";
 	
-	[[{}, this forceAddUniform customUniformOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addVest customVestOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addHeadgear customHeadgearOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addBackpack customBackpackOpfor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	this forceAddUniform customUniformOpfor;
+	this addVest customVestOpfor;
+	this addHeadgear customHeadgearOpfor;
+	this addBackpack customBackpackOpfor;
 	
 	comment "Add items";
 	this linkItem "ItemMap";

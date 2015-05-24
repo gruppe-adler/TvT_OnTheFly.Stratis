@@ -38,7 +38,8 @@ _inner_marker setMarkerBrushLocal "Border";
 };
 
 while {true} do {
-	if ((_target getVariable ["tf_range",true]) > 10000) then 
+	waitUntil {!isNull (_target getVariable ["tf_range",true])};
+	if ((_target getVariable ["tf_range",true]) == 50000) then 
 		{
 		_inner_marker setMarkerAlphaLocal 1;
 		} else {

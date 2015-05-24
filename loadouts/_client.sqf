@@ -18,11 +18,11 @@ waitUntil { !isNull _unit };
             case "B_G_officer_F": {[_unit] call blufor_officer;};
             case "B_officer_F": {[_unit] call blufor_officer;};
 
-            case "B_Soldier_TL_F": {[_unit] call opfor_officer;};
-            case "B_G_Soldier_TL_F": {[_unit] call opfor_officer;};
-            case "B_recon_TL_F": {[_unit] call opfor_officer;};
-            case "B_Soldier_SL_F": {[_unit] call opfor_officer;};
-            case "B_G_Soldier_SL_F": {[_unit] call opfor_officer;};
+            case "B_Soldier_TL_F": {[_unit] call blufor_officer;};
+            case "B_G_Soldier_TL_F": {[_unit] call blufor_officer;};
+            case "B_recon_TL_F": {[_unit] call blufor_officer;};
+            case "B_Soldier_SL_F": {[_unit] call blufor_officer;};
+            case "B_G_Soldier_SL_F": {[_unit] call blufor_officer;};
             
 
             case "B_G_Soldier_GL_F": {[_unit] call blufor_default;};

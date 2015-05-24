@@ -301,10 +301,10 @@ blufor_default = {
 
 	comment "Add containers";
 
-	[[{}, this forceAddUniform customUniformBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addVest customVestBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addHeadgear customHeadgearBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addBackpack customBackpackBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	this forceAddUniform customUniformBlufor;
+	this addVest customVestBlufor;
+	this addHeadgear customHeadgearBlufor;
+	this addBackpack customBackpackBlufor;
 
 	comment "Add items";
 	this linkItem "ItemMap";
@@ -332,10 +332,10 @@ blufor_officer = {
 
 	comment "Add containers";
 
-	[[{}, this forceAddUniform customUniformBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addVest customVestBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addHeadgear customHeadgearBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addBackpack customBackpackBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	this forceAddUniform customUniformBlufor;
+	this addVest customVestBlufor;
+	this addHeadgear customHeadgearBlufor;
+	this addBackpack customBackpackBlufor;
 
 	comment "Add items";
 	this linkItem "ItemMap";
@@ -364,10 +364,10 @@ blufor_medic = {
 
 	comment "Add containers";
 
-	[[{}, this forceAddUniform customUniformBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addVest customVestBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addHeadgear customHeadgearBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
-	[[{}, this addBackpack customBackpackBlufor], "BIS_fnc_spawn", true] call BIS_fnc_MP;
+	this forceAddUniform customUniformBlufor;
+	this addVest customVestBlufor;
+	this addHeadgear customHeadgearBlufor;
+	this addBackpack customBackpackBlufor;
 
 	comment "Add items";
 	this linkItem "ItemMap";

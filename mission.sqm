@@ -9,8 +9,7 @@ class Mission
 		"A3_Soft_F_HEMTT",
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Supplies_F_Heli_CargoNets",
-		"a3_map_stratis",
-		"rhs_c_trucks"
+		"a3_map_stratis"
 	};
 	addOnsAuto[]=
 	{
