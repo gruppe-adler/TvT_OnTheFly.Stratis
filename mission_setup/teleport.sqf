@@ -94,6 +94,13 @@ openMap [false,false];
 
 		[arsenal_blufor, spawnpoint_mapclick] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
 
+		switch (OPFORCE) do {
+		case 3: {
+			
+			};
+		default {};
+		};
+
 		// create base building for blufor
 		_baseBuilding = "Land_Cargo_House_V1_F" createVehicle _spawn_area;
 		_baseBuilding addAction["<t color=""#ff0000"">" + localize "str_GRAD_declareFailedBlufor",{BLUFOR_SURRENDERED = true; publicVariable "BLUFOR_SURRENDERED";}, _Args, 1, false, false, "","side _this == west && !BLUFOR_SURRENDERED"];

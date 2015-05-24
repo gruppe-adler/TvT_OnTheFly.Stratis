@@ -1,4 +1,3 @@
-[] spawn {
 
 waitUntil {
 loadoutInitOpforFinished
@@ -362,7 +361,7 @@ _availableGuns = _availableGuns
 	+ _ACE_parachute_Weapons
 	+ _ACE_wind_Weapons;
 
-sleep 0.1;
+sleep 1;
 
 if (isServer && !IS_VANILLA) then {
 
@@ -394,5 +393,4 @@ if (isServer && !IS_VANILLA) then {
 
 
 	};
-};
 };
