@@ -19,6 +19,8 @@
  * ----------------------------------------------------------------------------------
  */
 
+// PIMPED BY nomisum: this select 3 should be false to delete again
+
 // Check that we got at least ONE arg
 if ((count _this) < 1) exitWith {debugLog "Log: [C9J_fnc_smokeColumn] Function requires at least 1 parameter"; []};
 
@@ -36,6 +38,7 @@ if((_type != "oil") and (_type != "wood") and (_type != "mixed")) exitWith {debu
 if((_size != "small") and (_size != "medium") and (_size != "large")) exitWith {debugLog "Log: [C9J_fnc_smokeColumn] Invalid smoke size. Valid sizes are small, medium, large"; []};
 
 _source1 = "#particlesource" createVehicle _position;
+_source2 = "#particlesource" createVehicle _position;
 
 // Lazy controls statements
 if(_type == "oil") then
@@ -90,7 +93,6 @@ if(_type == "wood") then
 
 if(_type == "mixed") then
 {
-	_source2 = "#particlesource" createVehicle _position;
 	
 	if(_size == "small") then
 	{
@@ -130,4 +132,8 @@ if(_type == "mixed") then
 	};
 };
 
-true
+
+//hintSilent format ["%1",_conditionToDelete];
+waitUntil (_this select 3);
+deleteVehicle _source1;
+deleteVehicle _source2;

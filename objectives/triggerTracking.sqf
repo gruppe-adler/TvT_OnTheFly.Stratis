@@ -20,7 +20,7 @@ bluforAtBarrel = {
 	_pos = getPos _targ;
 
 	//hintSilent format ["%1",_targ];
-	_smoke = [_targ,"wood","small",BLUFOR_AT_BARREL] execVM "helpers\createSmokeColumn.sqf";
+	_smoke = [_targ,"wood","small",{!BLUFOR_AT_BARREL}] execVM "helpers\createSmokeColumn.sqf";
 	
 };
 
