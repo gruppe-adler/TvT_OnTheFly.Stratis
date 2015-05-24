@@ -364,7 +364,32 @@ _availableMagazines = [
 	"150Rnd_93x64_Mag",
 	"20Rnd_762x51_Mag",
 	"DemoCharge_Remote_Mag",
-	"ACE_M26_Clacker"
+	"ACE_M26_Clacker",
+
+
+	"SMA_30Rnd_556x45_M855A1",
+	"SMA_30Rnd_556x45_M855A1_Tracer",
+	"SMA_30Rnd_556x45_M855A1_IR",
+	"SMA_30Rnd_556x45_Mk318_Tracer",
+	"SMA_30Rnd_556x45_Mk318",
+	"SMA_30Rnd_556x45_Mk318_IR",
+	"SMA_30Rnd_556x45_Mk262",
+	"SMA_30Rnd_556x45_Mk262_Tracer",
+	"SMA_30Rnd_556x45_Mk262_IR",
+	"SMA_20Rnd_762x51mm_M80A1_EPR",
+	"SMA_20Rnd_762x51mm_M80A1_EPR_Tracer",
+	"SMA_20Rnd_762x51mm_M80A1_EPR_IR",
+	"SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range",
+	"SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer",
+	"SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_IR",
+	"SMA_20Rnd_762x51mm_Mk319_Mod_0_Ball_Barrier",
+	"SMA_20Rnd_762x51mm_Mk319_Mod_0_Ball_Barrier_Tracer",
+	"SMA_20Rnd_762x51mm_Mk319_Mod_0_Ball_Barrier_IR",
+	"SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic",
+	"SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic_Tracer",
+	"SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic_IR",
+	"150Rnd_93x64_Mag",
+	"130Rnd_338_Mag"
 ];
 
 
@@ -412,7 +437,7 @@ if (isServer && !IS_VANILLA) then {
 		
 
 		[_box, _availableBackpacks,true,false] call XLA_fnc_addVirtualBackpackCargo;
-		[_box, (_availableGuns + _availableMagazines + _availableAttachments +_availableItems + _availableUniforms + _availableVests + _availableHeadgear),true,false] call  XLA_fnc_addVirtualItemCargo;
+		[_box, (_availableGuns + _availableAttachments +_availableItems + _availableUniforms + _availableVests + _availableHeadgear),true,false] call  XLA_fnc_addVirtualItemCargo;
 		[_box, _availableMagazines,true,false] call XLA_fnc_addVirtualMagazineCargo;
 		[_box, (_availableGuns),true,false] call XLA_fnc_addVirtualWeaponCargo;
 		//[_box, [WEST_SIDE,FRIENDLY_SIDE],true,false] call XLA_fnc_addVirtualSideCargo;

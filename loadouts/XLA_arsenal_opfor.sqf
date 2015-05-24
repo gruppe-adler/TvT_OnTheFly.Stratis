@@ -297,7 +297,41 @@ _availableMagazines = [
 	"SMA_30Rnd_762x39_SKS",
 	"SMA_30Rnd_762x39_SKS_Red",
 	"20Rnd_762x51_Mag",
-	"130Rnd_338_Mag"
+	"130Rnd_338_Mag",
+
+	"rhs_30Rnd_762x39mm",
+	"rhs_30Rnd_762x39mm_tracer",
+	"rhs_30Rnd_762x39mm_89",
+	"rhsusf_8Rnd_00Buck",
+	"rhs_100Rnd_762x54mmR",
+	"rhs_100Rnd_762x54mmR_green",
+	"rhs_30Rnd_545x39_AK",
+	"rhs_30Rnd_545x39_AK_no_tracers",
+	"rhs_30Rnd_545x39_7N10_AK",
+	"rhs_30Rnd_545x39_7N22_AK",
+	"rhs_30Rnd_545x39_AK_green",
+	"rhs_45Rnd_545X39_AK",
+	"rhs_45Rnd_545X39_7N10_AK",
+	"rhs_45Rnd_545X39_7N22_AK",
+	"rhs_45Rnd_545X39_AK_Green",
+	"rhs_30Rnd_762x39mm",
+	"rhs_30Rnd_762x39mm_tracer",
+	"rhs_30Rnd_762x39mm_89",
+	"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+	"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+	"rhs_mag_30Rnd_556x45_Mk262_Stanag",
+	"rhs_mag_30Rnd_556x45_Mk318_Stanag",
+	"rhs_30Rnd_545x39_AK",
+	"rhs_30Rnd_545x39_AK_no_tracers",
+	"rhs_30Rnd_545x39_7N10_AK",
+	"rhs_30Rnd_545x39_7N22_AK",
+	"rhs_30Rnd_545x39_AK_green",
+	"rhs_45Rnd_545X39_AK",
+	"rhs_45Rnd_545X39_7N10_AK",
+	"rhs_45Rnd_545X39_7N22_AK",
+	"rhs_45Rnd_545X39_AK_Green",
+	"rhs_100Rnd_762x54mmR",
+	"rhs_100Rnd_762x54mmR_green"
 ];
 
 _availableAttachments = _availableAttachments
@@ -345,7 +379,7 @@ if (isServer && !IS_VANILLA) then {
 		
 
 		[_box, _availableBackpacks,true,false] call XLA_fnc_addVirtualBackpackCargo;
-		[_box, (_availableGuns + _availableMagazines + _availableAttachments +_availableItems + _availableUniforms + _availableVests + _availableHeadgear),true,false] call  XLA_fnc_addVirtualItemCargo;
+		[_box, (_availableGuns + _availableAttachments +_availableItems + _availableUniforms + _availableVests + _availableHeadgear),true,false] call  XLA_fnc_addVirtualItemCargo;
 		[_box, _availableMagazines,true,false] call XLA_fnc_addVirtualMagazineCargo;
 		[_box, (_availableGuns),true,false] call XLA_fnc_addVirtualWeaponCargo;
 		//[_box, [WEST_SIDE,FRIENDLY_SIDE],true,false] call XLA_fnc_addVirtualSideCargo;
