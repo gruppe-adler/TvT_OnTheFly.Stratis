@@ -46,7 +46,6 @@ BLUFOR_TELEPORTED = false;
 WINCONDITIONOPFOR = false;
 WINCONDITIONBLUFOR = false;
 firstspawn = false;
-BLUFOR_AT_BARREL = false;
 
 
 
@@ -74,6 +73,8 @@ if (isServer) then {
 	publicVariable "SPECTATOR_LIST";
 	RUSSIAN_MARKER_HIDDEN = true;
 	publicVariable "RUSSIAN_MARKER";
+	BLUFOR_AT_BARREL = false;
+	publicVariable "BLUFOR_AT_BARREL";
 };
 
 
@@ -128,8 +129,11 @@ if ((isServer) || (isDedicated)) then {
 			[] spawn {
 			funkwagen = [getPos opfor_teamlead,10,"rhs_gaz66_r142_vv"] call spawnStuff;
 			russian_brt = [getPos opfor_teamlead,10,"rhs_btr60_vv"] call spawnStuff;
+			uaz = [getPos opfor_teamlead,10,"rhs_uaz_open_MSV_01"] call spawnStuff;
+			blufor_hmvv =  [getPos blufor_teamlead,10,"rhsusf_m1025_d_m2"] call spawnStuff;
 			blufor_observer_heli = [getPos blufor_teamlead,10,"RHS_UH1Y"] call spawnStuff;
-			uaz = [getPos blufor_teamlead,10,"rhs_uaz_open_MSV_01"] call spawnStuff;
+			
+			
 			sleep 0.1;	 
 
 			[russian_brt] call clearInventory;
