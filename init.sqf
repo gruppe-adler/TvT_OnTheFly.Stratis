@@ -129,7 +129,7 @@ if ((isServer) || (isDedicated)) then {
 			funkwagen = [getPos opfor_teamlead,10,"rhs_gaz66_r142_vv"] call spawnStuff;
 			russian_brt = [getPos opfor_teamlead,10,"rhs_btr60_vv"] call spawnStuff;
 			blufor_observer_heli = [getPos blufor_teamlead,10,"RHS_UH1Y"] call spawnStuff;
-			
+			uaz = [getPos blufor_teamlead,10,"rhs_uaz_open_MSV_01"] call spawnStuff;
 			sleep 0.1;	 
 
 			[russian_brt] call clearInventory;
@@ -138,7 +138,8 @@ if ((isServer) || (isDedicated)) then {
 
 			blufor_observer_heli animate ["hide_rockets",1];
 			blufor_observer_heli animate ["hide_mg",1];
-			funkwagen animate ["light_hide"];
+			funkwagen animate ["light_hide",1];
+			uaz animate ["light_hide",1];
 
 			[[[funkwagen],"objectives\russianMarker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 			};
