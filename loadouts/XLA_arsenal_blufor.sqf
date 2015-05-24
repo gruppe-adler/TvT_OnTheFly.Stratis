@@ -417,10 +417,7 @@ if (isServer && !IS_VANILLA) then {
 		[_box, (_availableGuns),true,false] call XLA_fnc_addVirtualWeaponCargo;
 		//[_box, [WEST_SIDE,FRIENDLY_SIDE],true,false] call XLA_fnc_addVirtualSideCargo;
 
-		if (isMultiplayer) then {
-		["Preload",[false, _box, nil, []]] spawn XLA_fnc_arsenal;
-		};
-
+		
 		// Start the arsenal on it
 		_addActionText = "<t color='#45B6EA'>" + localize "str_GRAD_openSupplyBox";
 		["AmmoboxInit",[_box,false,{true},_addActionText,false]] spawn XLA_fnc_arsenal;
