@@ -1,5 +1,3 @@
-if (isServer) exitWith {};
-
 waitUntil {
 loadoutInitBluforFinished
 };

@@ -109,6 +109,8 @@ if ((isServer) || (isDedicated)) then {
 		[] execVM "tfarsettings.sqf";
 	};
 	[] execVM "objectives\detect_all_dead.sqf";
+	[] execVM "loadouts\loadouts_blufor.sqf";
+ 	[] execVM "loadouts\loadouts_opfor.sqf";
 
 
 	switch (OPFORCE) do {
