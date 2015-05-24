@@ -19,16 +19,21 @@ bluforAtBarrel = {
 	_targ = _this select 0;
 	_pos = getPos _targ;
 
-	hintSilent format ["%1",_targ];
-	_smoke = "test_EmptyObjectForSmoke" createVehicle _pos;
-	_smoke attachTo [_targ,[0,0,0.5]];
-
+	//hintSilent format ["%1",_targ];
+	_smoke = [_targ,"wood","small"] execVM "helpers\createSmokeColumn.sqf";
+	
+	
 	[_smoke] spawn {
-	_smo = _this select 0;
-		while {BLUFOR_AT_BARREL} do {
+		_smo = _this select 0;
+		while {true} do {
 			sleep 1;
+			if (!BLUFOR_AT_BARREL) exitWith {
+				//hintSilent format ["%1 is known and should disappear",_smo];
+				
+				deleteVehicle _smo;
+			};
 		};
-		deleteVehicle _smo;
+		
 	};
 };
 
@@ -45,11 +50,11 @@ _trigTracking setTriggerStatements["WEST countSide thislist > 0 && EAST countSid
 // TRACKING
 _feedbackTrigger = createTrigger["EmptyDetector",getPos _target];
 _feedbackTrigger setTriggerArea[_trig_size,_trig_size,0,false];
-_feedbackTrigger setTriggerActivation["ANY","PRESENT",true];
+_feedbackTrigger setTriggerActivation["WEST","PRESENT",true];
 _feedbackTrigger setTriggerTimeout [0,0,0,true];
 
 // CONDITION ON ACT ON DEACT
-_feedbackTrigger setTriggerStatements["WEST countSide thislist > 0 && EAST countSide thislist == 0","[_target] call bluforAtBarrel; BLUFOR_AT_BARREL = TRUE;", "BLUFOR_AT_BARREL = FALSE;"];
+_feedbackTrigger setTriggerStatements["this","BLUFOR_AT_BARREL = TRUE; [respawn_helper] call bluforAtBarrel;", "BLUFOR_AT_BARREL = FALSE;"];
 
 mrk_tracking = createMarker ["trackingMarker",getPos _target];
 mrk_tracking setMarkerShape "ICON";
