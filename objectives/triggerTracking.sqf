@@ -20,8 +20,7 @@ bluforAtBarrel = {
 	_pos = getPos _targ;
 
 	//hintSilent format ["%1",_targ];
-	_smoke = [_targ,"wood","small",{!BLUFOR_AT_BARREL}] execVM "helpers\createSmokeColumn.sqf";
-	
+	_smoke = [[[_targ,"wood","small",{!BLUFOR_AT_BARREL}],"helpers\createSmokeColumn.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 };
 
 // TRACKING
@@ -41,7 +40,7 @@ _feedbackTrigger setTriggerActivation["WEST","PRESENT",true];
 _feedbackTrigger setTriggerTimeout [0,0,0,true];
 
 // CONDITION ON ACT ON DEACT
-_feedbackTrigger setTriggerStatements["this","BLUFOR_AT_BARREL = TRUE; [respawn_helper] call bluforAtBarrel;", "BLUFOR_AT_BARREL = FALSE;"];
+_feedbackTrigger setTriggerStatements["this","BLUFOR_AT_BARREL = TRUE; publicVariable 'BLUFOR_AT_BARREL'; [respawn_helper] call bluforAtBarrel;", "BLUFOR_AT_BARREL = FALSE;publicVariable 'BLUFOR_AT_BARREL';"];
 
 mrk_tracking = createMarker ["trackingMarker",getPos _target];
 mrk_tracking setMarkerShape "ICON";
