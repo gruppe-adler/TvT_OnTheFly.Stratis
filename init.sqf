@@ -43,6 +43,7 @@ BLUFOR_TELEPORTED = false;
 WINCONDITIONOPFOR = false;
 WINCONDITIONBLUFOR = false;
 firstspawn = false;
+BLUFOR_AT_BARREL = false;
 
 
 EDITOR_MODE = false; // check if test is in editor/singleplayer

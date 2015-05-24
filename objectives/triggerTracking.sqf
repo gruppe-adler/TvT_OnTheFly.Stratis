@@ -20,21 +20,8 @@ bluforAtBarrel = {
 	_pos = getPos _targ;
 
 	//hintSilent format ["%1",_targ];
-	_smoke = [_targ,"wood","small"] execVM "helpers\createSmokeColumn.sqf";
+	_smoke = [_targ,"wood","small",BLUFOR_AT_BARREL] execVM "helpers\createSmokeColumn.sqf";
 	
-	
-	[_smoke] spawn {
-		_smo = _this select 0;
-		while {true} do {
-			sleep 1;
-			if (!BLUFOR_AT_BARREL) exitWith {
-				//hintSilent format ["%1 is known and should disappear",_smo];
-				
-				deleteVehicle _smo;
-			};
-		};
-		
-	};
 };
 
 // TRACKING
