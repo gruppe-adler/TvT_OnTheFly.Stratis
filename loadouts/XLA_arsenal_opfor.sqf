@@ -28,7 +28,7 @@ switch (OPFORCE) do {
 			_availableVests = randVestTaliban;
 			_availableHeadgear = randHeadGearTaliban;
 			_availableBackpacks = randBackPackTaliban;
-			_availableGuns = randWeaponTerrorists;
+			_availableGuns = randWeaponTaliban + randLauncherTaliban;
 		}; 
 
 		// TERRORISTS
@@ -37,7 +37,7 @@ switch (OPFORCE) do {
 			_availableVests = randVestTerrorists;
 			_availableHeadgear = randHeadGearTerrorists;
 			_availableBackpacks = randBackPackTerrorists;
-			_availableGuns = randWeaponTerrorists;
+			_availableGuns = randWeaponTerrorists + randLauncherTerrorists;
 		}; 
 
 		// EASTERN
@@ -46,7 +46,7 @@ switch (OPFORCE) do {
 			_availableVests = randVestEastern;
 			_availableHeadgear = randHeadGearEastern;
 			_availableBackpacks = randBackPackEastern;
-			_availableGuns = randWeaponTerrorists;
+			_availableGuns = randWeaponEastern + randLauncherEastern;
 		}; 
 		
 		// Russian
@@ -55,7 +55,7 @@ switch (OPFORCE) do {
 			_availableVests = randVestRussian;
 			_availableHeadgear = randHeadGearRussian;
 			_availableBackpacks = randBackPackRussian;
-			_availableGuns = randWeaponRussian;
+			_availableGuns = randWeaponRussian + randLauncherRussian;
 		};
 		default {
 		hintSilent "error in reading faction parameter";

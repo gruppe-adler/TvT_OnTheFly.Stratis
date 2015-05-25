@@ -28,7 +28,7 @@ switch (BLUFORCE) do {
 			_availableVests = randVestBWFleck;
 			_availableHeadgear = randHeadGearBWFleck;
 			_availableBackpacks = randBackpackBWFleck;
-			_availableGuns = randWeaponBWFleck;
+			_availableGuns = randWeaponBWFleck + randLauncherBWFleck;
 		}; 
 
 		// BW Tropen
@@ -37,7 +37,7 @@ switch (BLUFORCE) do {
 			_availableVests = randVestBWTropen;
 			_availableHeadgear = randHeadGearBWTropen;
 			_availableBackpacks = randBackpackBWTropen;
-			_availableGuns = randWeaponBWTropen;
+			_availableGuns = randWeaponBWTropen + randLauncherBWTropen;
 		}; 
 
 		// US Desert
@@ -46,7 +46,7 @@ switch (BLUFORCE) do {
 			_availableVests = randVestUSOCP;
 			_availableHeadgear = randHeadGearUSOCP;
 			_availableBackpacks = randBackpackUSOCP;
-			_availableGuns = randWeaponUSOCP;
+			_availableGuns = randWeaponUSOCP + randLauncherUSOCP;
 		}; 
 		
 		// US Tropen
@@ -55,7 +55,7 @@ switch (BLUFORCE) do {
 			_availableVests = randVestUSUCP;
 			_availableHeadgear = randHeadGearUSUCP;
 			_availableBackpacks = randBackpackUSUCP;
-			_availableGuns = randWeaponUSUCP;
+			_availableGuns = randWeaponUSUCP + randLauncherUSOCP;
 		};
 		default {
 		hintSilent "error in reading faction parameter";
