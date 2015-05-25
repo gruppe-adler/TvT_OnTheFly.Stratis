@@ -49,6 +49,8 @@ firstspawn = false;
 
 
 
+
+
 EDITOR_MODE = false; // check if test is in editor/singleplayer
 if (!isMultiplayer) then {
 	EDITOR_MODE = true;
@@ -72,7 +74,7 @@ if (isServer) then {
 	SPECTATOR_LIST = [];
 	publicVariable "SPECTATOR_LIST";
 	RUSSIAN_MARKER_HIDDEN = true;
-	publicVariable "RUSSIAN_MARKER";
+	publicVariable "RUSSIAN_MARKER_HIDDEN";
 	BLUFOR_AT_BARREL = false;
 	publicVariable "BLUFOR_AT_BARREL";
 };
