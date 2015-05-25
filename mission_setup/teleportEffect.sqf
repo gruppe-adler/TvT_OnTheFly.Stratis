@@ -1,22 +1,35 @@
 _side = _this select 0;
-_pos = _this select 1;
+_posi = _this select 1;
+
+[_posi] spawn {
+_position = _this select 0;
+	if (isServer && !BLUFOR_TELEPORTED) then {
+		[_position,10,funkwagen] spawn moveStuff;
+
+
+		russian_brt = [_position,10,"rhs_btr60_vv"] call spawnStuff;
+		uaz = [_position,10,"rhs_uaz_open_MSV_01"] call spawnStuff;
+		sleep 0.1;
+		[russian_brt] call clearInventory;
+
+		uaz animate ["light_hide",1];
+	};
+
+	if (isServer && BLUFOR_TELEPORTED) then {
+		
+		blufor_hmvv =  [_position,10,"rhsusf_m1025_d_m2"] call spawnStuff;
+		blufor_observer_heli = [_position,10,"RHS_UH1Y"] call spawnStuff;
+		sleep 0.1;
+		
+		[blufor_observer_heli] call clearInventory;
+
+		blufor_observer_heli animate ["hide_rockets",1];
+		blufor_observer_heli animate ["hide_mg",1];
+		
+	};
+};
+
 
 if (side player != _side) exitWith {};
 
-_centre = [ _pos, random 5 , random 360 ] call BIS_fnc_relPos;
-_spawn_area = [];
-_max_distance = 50;
-	while{ count _spawn_area < 1 } do
-		{
-		    _spawn_area = _centre findEmptyPosition[ 2 , _max_distance , "B_static_AT_F" ];
-		    _max_distance = _max_distance + 10;
-
-		};
-
-waitUntil {count _spawn_area >= 1;};
-playSound "beam";
-titleCut ["", "BLACK OUT", 1];
-BIS_DEBUG_CAM = nil;
-sleep 1.2;
-player setPos _spawn_area;
-titleCut ["", "BLACK IN", 1];
+[_posi,10,player] call moveStuff;

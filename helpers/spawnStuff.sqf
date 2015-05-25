@@ -9,7 +9,7 @@ _spawn_area = [];
 
 while{ count _spawn_area < 1} do {
 	_spawn_area = [_location,_distance] call get_vec_spawn_point;
-	sleep 0.04;
+	sleep 0.05;
 	_distance = _distance + 5;
 };
 

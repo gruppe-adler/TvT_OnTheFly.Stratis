@@ -87,6 +87,7 @@ cameraOldPimped = compile preprocessFile "spectator\cameraOld_rip.sqf";
 cameraNewPimped = compile preprocessFile "spectator\camera_rip.sqf";
 clearInventory = compile preprocessFile "helpers\clearInventory.sqf";
 spawnStuff = compile preprocessFile "helpers\spawnStuff.sqf";
+moveStuff = compile preprocessFile "helpers\moveStuff.sqf";
 
 
 If(isNil "spawn_help_fnc_compiled")then{call compile preprocessFileLineNumbers "helpers\findPos.sqf"};
@@ -128,24 +129,12 @@ if ((isServer) || (isDedicated)) then {
 			// WHEN RUSSIANS
 			[] spawn {
 			funkwagen = [getPos opfor_teamlead,10,"rhs_gaz66_r142_vv"] call spawnStuff;
-			russian_brt = [getPos opfor_teamlead,10,"rhs_btr60_vv"] call spawnStuff;
-			uaz = [getPos opfor_teamlead,10,"rhs_uaz_open_MSV_01"] call spawnStuff;
-			blufor_hmvv =  [getPos blufor_teamlead,10,"rhsusf_m1025_d_m2"] call spawnStuff;
-			blufor_observer_heli = [getPos blufor_teamlead,10,"RHS_UH1Y"] call spawnStuff;
-			
-			
-			sleep 0.1;	 
-
-			[russian_brt] call clearInventory;
+			sleep 0.1;
 			[funkwagen] call clearInventory;
-			[blufor_observer_heli] call clearInventory;
-
-			blufor_observer_heli animate ["hide_rockets",1];
-			blufor_observer_heli animate ["hide_mg",1];
 			funkwagen animate ["light_hide",1];
-			uaz animate ["light_hide",1];
-
+			
 			[[[funkwagen],"objectives\russianMarker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+			
 			};
 
 		};
@@ -158,10 +147,7 @@ if ((isServer) || (isDedicated)) then {
 		};
 
 	};
-	
-	
 
-	
 };
 // call this on server too - because of whiteboard/truck
 [] execVM "mission_setup\adjustInitialSpawnPosition.sqf";

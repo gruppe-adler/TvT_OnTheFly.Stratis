@@ -42,6 +42,8 @@ openMap [false,false];
 	[[[spawnpoint_mapclick],"mission_setup\createMarkerBlufor.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 
 	if (player == opfor_teamlead && !OPFOR_TELEPORTED) then {
+		OPFOR_TELEPORTED = TRUE;
+		publicVariable "OPFOR_TELEPORTED";
 
 		[[[east,spawnpoint_mapclick],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 
@@ -51,8 +53,7 @@ openMap [false,false];
 		// with sector module, marker is only needed for getting position
 		_opfor_marker setMarkerAlpha 0;
 
-		OPFOR_TELEPORTED = TRUE;
-		publicVariable "OPFOR_TELEPORTED";
+		
 
 		[arsenal_opfor, spawnpoint_mapclick] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
 		//[extraweapons_opfor, spawnpoint_mapclick] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
@@ -69,6 +70,9 @@ openMap [false,false];
 
 	if (player == blufor_teamlead && OPFOR_TELEPORTED) then {
 		openMap [false,false];
+		
+		BLUFOR_TELEPORTED = TRUE;
+		publicVariable "BLUFOR_TELEPORTED";
 
 		// entfernung marker zu spawnpunkt zu klein oder groß?
 		// pos ist hier ein anderes pos als oben!
@@ -108,8 +112,6 @@ openMap [false,false];
 		//choose_vehicle_blufor = blufor_teamlead addAction["<t color=""#93E352"">" + localize "str_GRAD_choose_blufor_vehicle",{[[[choose_vehicle_blufor], "mission_setup\choose_vehicle.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
 		choose_vehicle_blufor = blufor_teamlead addAction["<t color=""#93E352"">" + localize "str_GRAD_choose_vehicle",{nul = [choose_vehicle_blufor] execVM "mission_setup\choose_vehicle.sqf"}, _Args, 1, false, false, "","_this == _target && BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
 
-		BLUFOR_TELEPORTED = TRUE;
-		publicVariable "BLUFOR_TELEPORTED";
 		//[[[],"after_action_reporter_pimped\movement.sqf",nil,false],"BIS_fnc_execVM",true,false] spawn BIS_fnc_MP;
 		[[[spawnpoint_mapclick],"mission_setup\blufor_spawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 	};

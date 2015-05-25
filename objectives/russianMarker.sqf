@@ -18,15 +18,22 @@ bluforSurrendered = {
 	BLUFOR_SURRENDERED = true; publicVariable "BLUFOR_SURRENDERED";
 };
 
-_inner_marker = createMarkerLocal ["opfor_marker", getPos _target];
-_inner_marker setMarkerTypeLocal "mil_unknown";
-_inner_marker setMarkerColorLocal "ColorRed";
-_inner_marker setMarkerShapeLocal "ELLIPSE";
-_inner_marker setMarkerSizeLocal [_size, _size];
-_inner_marker setMarkerBrushLocal "Border";
+inner_marker = createMarkerLocal ["opfor_marker", getPos _target];
+inner_marker setMarkerTypeLocal "mil_unknown";
+inner_marker setMarkerColorLocal "ColorRed";
+inner_marker setMarkerShapeLocal "ELLIPSE";
+inner_marker setMarkerSizeLocal [_size, _size];
+inner_marker setMarkerBrushLocal "Border";
+
+// CLIENTS ZEIGEN MARKER
+moveMarker = {
+	_position = _this select 0;
+	hintSilent format ["%1",_position];
+	inner_marker setMarkerPosLocal _position;
+};
 
 if (!isDedicated) then {
-[_inner_marker,_size,_maxSize,_animationSpeed] spawn 
+[inner_marker,_size,_maxSize,_animationSpeed] spawn 
 	{
 	private ["_pulsemarker","_pulsesize","_pulseMaxSize"];
 	_pulsemarker = _this select 0;
@@ -52,19 +59,7 @@ if (!isDedicated) then {
 		};
 	};
 
-// CLIENTS ZEIGEN MARKER
-[_target,_inner_marker] spawn {
-	_clientTarget = _this select 0;
-	_clientMarker = _this select 0;
-	while {true} do {
-		waitUntil {(_clientTarget getVariable ["tf_range",0] == 50000)};
-		
-
-		if (!alive _clientTarget) exitWith {};
-		sleep 1;
-		_clientMarker setPos (getPos _clientTarget);
-	};
-	};
+	
 };
 
 
@@ -74,7 +69,7 @@ if (isServer || isDedicated) then {
 	while {true} do {
 		if ((_target getVariable ["tf_range",0]) == 50000) then 
 			{
-			_points = _points + 1;
+			_points = _points + 2;
 			RUSSIAN_MARKER_HIDDEN = false;
 			publicVariable "RUSSIAN_MARKER_HIDDEN";
 			//hintSilent format ["%1 Minuten gesendet",round (_points/60)];
@@ -104,7 +99,8 @@ if (isServer || isDedicated) then {
 		if (!alive _target) exitWith {
 			[] call bluforCaptured;
 		};
-		sleep 1;
-		
+		sleep 2;
+		_targetPosition = [getPos _target select 0,getPos _target select 1];
+		[[_targetPosition],"moveMarker",true,true] spawn BIS_fnc_MP;
 	};
 };
