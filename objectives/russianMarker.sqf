@@ -29,7 +29,7 @@ bluforSurrendered = {
 	
 	_modifier = 1;
 
-	inner_marker = createMarkerLocal ["opfor_marker", getPos _target];
+	inner_marker = createMarkerLocal ["opfor_marker", [0,0,0]];
 	"opfor_marker" setMarkerShapeLocal "ELLIPSE";
 	"opfor_marker" setMarkerTypeLocal "mil_unknown";
 	"opfor_marker" setMarkerColorLocal "ColorRed";
