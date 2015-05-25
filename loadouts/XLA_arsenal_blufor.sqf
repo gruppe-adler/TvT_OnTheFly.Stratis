@@ -300,7 +300,28 @@ _availableItems = [
 	"ItemCompass",
 	"ItemWatch",
 	"ItemGPS",
-	"ACE_NVG_Wide"
+	"ACE_NVG_Wide",
+	"ACE_fieldDressing",
+	"ACE_packingBandage",
+	"ACE_elasticBandage",
+	"ACE_quikclot",
+	"ACE_tourniquet",
+	"ACE_atropine",
+	"ACE_morphine",
+	"ACE_epinephrine",
+	"ACE_plasmaIV",
+	"ACE_plasmaIV_250",
+	"ACE_plasmaIV_500",
+	"ACE_salineIV",
+	"ACE_salineIV_250",
+	"ACE_salineIV_500",
+	"ACE_bloodIV",
+	"ACE_bloodIV_250",
+	"ACE_bloodIV_500",
+	"ACE_personalAidKit",
+	"ACE_surgicalKit",
+	"ACE_bodyBag",
+	"ACE_EarPlugs"
 ];
 
 

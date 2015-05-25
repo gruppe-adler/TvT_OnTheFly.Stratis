@@ -122,6 +122,7 @@ if ((isServer) || (isDedicated)) then {
 	[] execVM "objectives\detect_all_dead.sqf";
 	[] execVM "loadouts\loadouts_blufor.sqf";
  	[] execVM "loadouts\loadouts_opfor.sqf";
+ 	[] execVM "helpers\medical_settings.sqf";
 
 
 	switch (OPFORCE) do {
