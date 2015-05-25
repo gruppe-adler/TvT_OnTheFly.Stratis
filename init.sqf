@@ -128,15 +128,7 @@ if ((isServer) || (isDedicated)) then {
 	switch (OPFORCE) do {
 		case 3: {
 			// WHEN RUSSIANS
-			[] spawn {
-			funkwagen = [getPos opfor_teamlead,10,"rhs_gaz66_r142_vv"] call spawnStuff;
-			sleep 0.1;
-			[funkwagen] call clearInventory;
-			funkwagen animate ["light_hide",1];
 			
-			[[[funkwagen],"objectives\russianMarker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
-			
-			};
 
 		};
 		default {
