@@ -90,9 +90,9 @@ if (isServer || isDedicated) then {
 		{
 		//current_recording_length = count ((local_recording) select local_recording_counter);
 		//for [{_j=0}, {_j<current_recording_length}, {_j=_j+1}] do {
-		_daytime = [(((local_recording) select local_recording_counter) select 0)] call getDayTimeConverted;
+		//_daytime = [(((local_recording) select local_recording_counter) select 0)] call getDayTimeConverted;
 		//diag_log format ["daytime is %1",_daytime];
-		hintSilent format ["Replay Game Time" + " %1",_daytime];
+		//hintSilent format ["Replay Game Time" + " %1",_daytime];
 
 		//change : **** ((count current_markers) - 1)
 		for [{_a=0}, {_a<((count current_markers) - 1)}, {_a=_a+1}] do
