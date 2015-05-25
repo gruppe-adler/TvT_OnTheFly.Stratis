@@ -46,6 +46,7 @@ BLUFOR_TELEPORTED = false;
 WINCONDITIONOPFOR = false;
 WINCONDITIONBLUFOR = false;
 firstspawn = false;
+RUSSIAN_MARKER_POS = [0,0];
 
 
 

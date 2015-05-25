@@ -27,12 +27,13 @@ inner_marker setMarkerBrushLocal "Border";
 
 // CLIENTS ZEIGEN MARKER
 moveMarker = {
-	_position = _this select 0;
 	//hintSilent format ["%1",_position];
-	inner_marker setMarkerPosLocal _position;
+	inner_marker setMarkerPosLocal RUSSIAN_MARKER_POS;
 };
 
 if (!isDedicated) then {
+
+
 [inner_marker,_size,_maxSize,_animationSpeed] spawn 
 	{
 	private ["_pulsemarker","_pulsesize","_pulseMaxSize"];
@@ -56,6 +57,15 @@ if (!isDedicated) then {
 		};
 		_pulsemarker setMarkerSizeLocal [_pulsesize,_pulsesize];
 		sleep _pulseSpeed;
+		
+		};
+	};
+
+	[inner_marker] spawn {
+		_posMarker = _this select 0;
+		while {true} do {
+			_posMarker setMarkerPosLocal RUSSIAN_MARKER_POS;
+			sleep 5;
 		};
 	};
 
@@ -65,7 +75,6 @@ if (!isDedicated) then {
 
 // SERVER ZÄHLT PUNKTE
 if (isServer || isDedicated) then {
-	waitUntil {(_target getVariable ["tf_range",0] == 50000)};
 	while {true} do {
 		if ((_target getVariable ["tf_range",0]) == 50000) then 
 			{
@@ -101,6 +110,6 @@ if (isServer || isDedicated) then {
 		};
 		sleep 2;
 		_targetPosition = [getPos _target select 0,getPos _target select 1];
-		[[_targetPosition],"moveMarker",true,true] spawn BIS_fnc_MP;
+		RUSSIAN_MARKER_POS = _targetPosition; publicVariable "RUSSIAN_MARKER_POS";
 	};
 };
