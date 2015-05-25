@@ -63,7 +63,7 @@ bluforSurrendered = {
 // SERVER ZÄHLT PUNKTE
 if (isServer || isDedicated) then {
 	while {true} do {
-		if ((_target getVariable ["tf_range",0]) == 50000) then 
+		if ((funkwagen getVariable ["tf_range",0]) == 50000) then 
 			{
 			_points = _points + 2;
 			RUSSIAN_MARKER_HIDDEN = false;
@@ -92,11 +92,11 @@ if (isServer || isDedicated) then {
 			 [[[_string],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP; 
 		};
 
-		if (!alive _target) exitWith {
+		if (!alive funkwagen) exitWith {
 			[] call bluforCaptured;
 		};
 		sleep 2;
-		_targetPosition = [getPos _target select 0,getPos _target select 1];
+		_targetPosition = [getPos funkwagen select 0,getPos funkwagen select 1];
 		RUSSIAN_MARKER_POS = _targetPosition; publicVariable "RUSSIAN_MARKER_POS";
 	};
 };
