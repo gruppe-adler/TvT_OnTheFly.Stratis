@@ -28,7 +28,7 @@ inner_marker setMarkerBrushLocal "Border";
 // CLIENTS ZEIGEN MARKER
 moveMarker = {
 	_position = _this select 0;
-	hintSilent format ["%1",_position];
+	//hintSilent format ["%1",_position];
 	inner_marker setMarkerPosLocal _position;
 };
 

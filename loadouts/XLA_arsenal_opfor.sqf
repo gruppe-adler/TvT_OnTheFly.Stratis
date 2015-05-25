@@ -332,7 +332,11 @@ _availableMagazines = [
 	"rhs_45Rnd_545X39_7N22_AK",
 	"rhs_45Rnd_545X39_AK_Green",
 	"rhs_100Rnd_762x54mmR",
-	"rhs_100Rnd_762x54mmR_green"
+	"rhs_100Rnd_762x54mmR_green",
+	"rhs_rpg7_TBG7V_mag",
+	"rhs_rpg7_OG7V_mag",
+	"rhs_rpg7_PG7VR_mag",
+	"rhs_rpg7_PG7VL_mag"
 ];
 
 _availableAttachments = _availableAttachments

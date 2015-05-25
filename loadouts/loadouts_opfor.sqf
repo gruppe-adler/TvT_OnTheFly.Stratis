@@ -64,7 +64,7 @@ fillOpforLoadouts = {
 
 	randLauncherTaliban = 
 	[
-
+	"rhs_weap_rpg7"
 	];
 
 
@@ -156,7 +156,7 @@ fillOpforLoadouts = {
 
 	randLauncherTerrorists = 
 	[
-
+	"rhs_weap_rpg7"
 	];
 
 
@@ -225,7 +225,7 @@ fillOpforLoadouts = {
 
 	randLauncherEastern = 
 	[
-
+	"rhs_weap_rpg7"
 	];
 
 
@@ -288,7 +288,7 @@ fillOpforLoadouts = {
 
 	randLauncherRussian = 
 	[
-
+	"rhs_weap_rpg7"
 	];
 
 	loadoutInitOpforFinished = true;
