@@ -34,7 +34,7 @@ bluforSurrendered = {
 	"opfor_marker" setMarkerTypeLocal "mil_unknown";
 	"opfor_marker" setMarkerColorLocal "ColorRed";
 	"opfor_marker" setMarkerAlphaLocal 1;
-	"opfor_marker" setMarkerSizeLocal [_size, _size];
+	"opfor_marker" setMarkerSizeLocal [_pulsesize, _pulsesize];
 	"opfor_marker" setMarkerBrushLocal "Border";
 
 	while {true} do {
@@ -47,7 +47,7 @@ bluforSurrendered = {
 		if (!RUSSIAN_MARKER_HIDDEN) then {
 			"opfor_marker" setMarkerAlphaLocal _pulsesize/_pulseMaxSize;
 			} else {
-			 inner_marker setMarkerAlphaLocal 0;
+			 "opfor_marker" setMarkerAlphaLocal 0;
 		};
 		"opfor_marker" setMarkerSizeLocal [_pulsesize,_pulsesize];
 		"opfor_marker" setMarkerPosLocal RUSSIAN_MARKER_POS;

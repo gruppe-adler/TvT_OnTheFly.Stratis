@@ -183,7 +183,7 @@ if !(isDedicated) then {
 };
 
 
-[WEATHER_SETTING] execVM "ga_weather\ga_start_weather.sqf";
+//[WEATHER_SETTING] execVM "ga_weather\ga_start_weather.sqf";
 
 if (isServer) then {
 	waitUntil {OPFOR_TELEPORTED && BLUFOR_TELEPORTED};
