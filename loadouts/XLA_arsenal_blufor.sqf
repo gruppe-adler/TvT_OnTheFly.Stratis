@@ -162,7 +162,15 @@ _ACE_hearing_Weapons = [
 // 		ACE Interaction (Handcuffs)
 // -------------------------------------------------------------------
 _ACE_interaction_Weapons = [
-	"ACE_CableTie"
+	"ACE_CableTie",
+	"ACE_key_west",
+	"ACE_key_lockpick",
+	"ACE_RangeTable_82mm",
+	"ACE_MapTools",
+	"ACE_wirecutter",
+	"ACE_Kestrel4500",
+	"ACE_DefusalKit",
+	"ACE_microDAGR"
 ];
 
 // -------------------------------------------------------------------
@@ -387,8 +395,8 @@ _availableMagazines = [
 	"150Rnd_93x64_Mag",
 	"130Rnd_338_Mag",
 	"rhs_m136_hedp_mag",
-	"rhs_m136_mag",
-	"rhs_m136_hp_mag"
+	"rhs_m136_hp_mag",
+	"rhs_m136_mag"
 ];
 
 

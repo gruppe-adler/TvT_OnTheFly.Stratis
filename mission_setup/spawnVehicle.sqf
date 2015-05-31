@@ -43,8 +43,9 @@ if (_side == west) then {
 		} else {
 			hintSilent format [localize "str_GRAD_vehicleSpawned"];
 		};
-		sleep 0.04;
+		sleep 1;
 		_blufor_vehicle disableTIEquipment true;
+		[blufor_teamlead, _blufor_vehicle, true] call ACE_VehicleLock_fnc_addKeyForVehicle;
 		[[[_spawn_area select 0,_side,2],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 		};
 
@@ -66,7 +67,10 @@ if (_side == west) then {
 		} else {
 			hintSilent format [localize "str_GRAD_vehicleSpawned"];
 		};
+
 	[[[_spawn_area select 0,_side,1],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
+	sleep 1;
+	[blufor_teamlead, _blufor_vehicle, true] call ACE_VehicleLock_fnc_addKeyForVehicle;
 
 	
 	
@@ -153,7 +157,8 @@ if (_side == east) then {
 		};
 		[[[_spawn_area select 0,_side,1],"mission_setup\vehiclespawn_marker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 		opfor_vehicle = _vehicle createVehicle (_spawn_area select 0);
-	sleep 0.1;
+	sleep 1;
+	[opfor_teamlead, opfor_vehicle, true] call ACE_VehicleLock_fnc_addKeyForVehicle;
 
 	// SET FUEL TO ZERO
 

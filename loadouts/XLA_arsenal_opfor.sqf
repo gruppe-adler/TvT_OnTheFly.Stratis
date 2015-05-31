@@ -162,7 +162,15 @@ _ACE_hearing_Weapons = [
 // 		ACE Interaction (Handcuffs)
 // -------------------------------------------------------------------
 _ACE_interaction_Weapons = [
-	"ACE_CableTie"
+	"ACE_CableTie",
+	"ACE_key_east",
+	"ACE_key_lockpick",
+	"ACE_RangeTable_82mm",
+	"ACE_MapTools",
+	"ACE_wirecutter",
+	"ACE_Kestrel4500",
+	"ACE_Cellphone",
+	"ACE_DeadManSwitch"
 ];
 
 // -------------------------------------------------------------------
