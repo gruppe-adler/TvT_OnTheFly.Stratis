@@ -137,7 +137,7 @@ if ((isServer) || (isDedicated)) then {
 		default {
 			respawn_helper = "Land_MetalBarrel_F" createVehicle (getPos opfor_teamlead);
 			//[respawn_helper, true, [0,0,0], 180] call EFUNC(dragging,setDraggable);
-			[respawn_helper, true, [0,0,0], 180] call ace_dragging_fnc_setdraggable;
+			//[respawn_helper, true, [0,0,0], 180] call ace_dragging_fnc_setdraggable;
 
 			[respawn_helper] execVM "objectives\triggerTracking.sqf";
 		};

@@ -225,33 +225,7 @@ _ACE_wind_Weapons = [
 // 		Combine lists
 // -------------------------------------------------------------------
 
-_availableGuns 	= [
- 	"SMA_Steyr_AUG_BLACK_F",
-    "SMA_HK416afg",
-    "SMA_HK416vfg",
-    "SMA_HK417afg",
-    "SMA_HK417vfg",
-    "SMA_HK417_tanafg",
-    "SMA_HK417_tanvgf",
-    "SMA_HK417_16in_afg",
-    "SMA_HK417_16in_afg_tan",
-    "SMA_MK16",
-    "SMA_Mk16_black",
-    "SMA_Mk17",
-    "SMA_Mk17_black",
-    "hgun_P07_F",
-    "Rangefinder",
-    "hgun_Rook40_F",
-    "hlc_smg_mp5k",
-    "hlc_lmg_M60E4",
-    "srifle_DMR_06_olive_F",
-    "MMG_01_base_F",
-	"MMG_01_hex_ACRO_LP_F",
-	"MMG_01_hex_F",
-	"MMG_01_tan_F",
-	"srifle_DMR_03_F",
-	"srifle_DMR_03_tan_F"
-   ];
+
 
 _availableMagazines 	= [];
 _availableAttachments = [
