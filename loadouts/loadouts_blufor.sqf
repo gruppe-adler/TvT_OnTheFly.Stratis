@@ -58,7 +58,7 @@ fillBluforLoadouts = {
 
 	randLauncherBWFleck = 
 	[
-	"rhs_weap_M136_hedp"
+	"rhs_weap_M136"
 	];
 	//Munition Blufor
 	//"SMA_30Rnd_556x45_M855A1"
@@ -147,7 +147,7 @@ fillBluforLoadouts = {
 
 	randLauncherBWTropen = 
 	[
-	"rhs_weap_M136_hedp"
+	"rhs_weap_M136"
 	];
 
 
@@ -203,7 +203,7 @@ fillBluforLoadouts = {
 
 	randLauncherUSOCP = 
 	[
-	"rhs_weap_M136_hedp"
+	"rhs_weap_M136"
 	];
 
 
@@ -258,7 +258,7 @@ fillBluforLoadouts = {
 
 	randLauncherUSUCP = 
 	[
-	"rhs_weap_M136_hedp"
+	"rhs_weap_M136"
 	];
 
 	loadoutInitBluforFinished = true;
