@@ -13,7 +13,7 @@ if (_target == opfor_teamlead) then {
 		if (OPFOR_TELEPORTED) exitWith {
 
 			if (!IS_VANILLA) then {
-			[player, [0, 1, 3, 0, 0, 0, 0, 0, 3, 1,0]] call plank_deploy_fnc_init;
+			[player, [0, 3, 3, 0, 0, 0, 0, 0, 3, 1,0]] call plank_deploy_fnc_init;
 			} else {
 			[player, [0, 0, 3, 0, 0, 0, 0, 0, 0, 0,1]] call plank_deploy_fnc_init;
 			};
