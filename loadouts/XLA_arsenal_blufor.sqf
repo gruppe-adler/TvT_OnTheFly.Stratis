@@ -304,7 +304,7 @@ _availableItems = [
 	"ACE_surgicalKit",
 	"ACE_bodyBag",
 	"ACE_EarPlugs",
-	"tf_anprc152	"
+	"tf_anprc152"
 ];
 
 
