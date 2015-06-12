@@ -65,7 +65,7 @@ if (isServer || isDedicated) then {
 	while {true} do {
 		if ((funkwagen getVariable ["tf_range",0]) == 50000) then 
 			{
-			_points = _points + 2;
+			_points = _points + 2 + (count SPECTATOR_LIST);
 			RUSSIAN_MARKER_HIDDEN = false;
 			publicVariable "RUSSIAN_MARKER_HIDDEN";
 			//hintSilent format ["%1 Minuten gesendet",round (_points/60)];
@@ -75,9 +75,10 @@ if (isServer || isDedicated) then {
 		};
 		if (_points > _maxPoints) exitWith {
 			[] call bluforSurrendered;
-			 [[localize "str_GRAD_winmsg_points","mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP; 
+			 [[[localize "str_GRAD_winmsg_points","all"],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP; 
 			};
 		if (
+			(_points == 60) ||
 			(_points == 600) ||
 			(_points == 1200) ||
 			(_points == 1800) ||
@@ -87,9 +88,9 @@ if (isServer || isDedicated) then {
 			(_points == 4200) ||
 			(_points == 4800)
 			) then {
-			_string = "Die Russen haben schon " + str (round(_points/60)) + " min gesendet.";
+			_string = "Die Russen haben schon " + str (round((_points/_maxPoints)*100)) + " Prozent gesendet.";
 			//hintSilent format ["%1",_string];
-			 [[[_string],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP; 
+			 [[[_string,"blufor"],"mp_helpers\hint.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP; 
 		};
 
 		if (!alive funkwagen) exitWith {

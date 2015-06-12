@@ -78,7 +78,7 @@ class Mission
 					id=0;
 					side="WEST";
 					vehicle="B_Soldier_SL_F";
-					player="PLAYER COMMANDER";
+					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
@@ -247,7 +247,7 @@ class Mission
 					id=14;
 					side="EAST";
 					vehicle="O_officer_F";
-					player="PLAY CDG";
+					player="PLAYER COMMANDER";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
@@ -473,19 +473,19 @@ class Mission
 						{
 							value="0";
 							parentCls="ACE_moduleMedicalSettings";
-							typeName="enableFor";
+							typeName="";
 						};
 						class Item2
 						{
 							value="0";
 							parentCls="ACE_moduleMedicalSettings";
-							typeName="enableAdvancedWounds";
+							typeName="";
 						};
 						class Item3
 						{
 							value="1";
 							parentCls="ACE_moduleMedicalSettings";
-							typeName="enableVehicleCrashes";
+							typeName="";
 						};
 						class Item4
 						{
@@ -509,7 +509,7 @@ class Mission
 						{
 							value="1";
 							parentCls="ACE_moduleMedicalSettings";
-							typeName="enableUnsconsiousnessAI";
+							typeName="";
 						};
 						class Item8
 						{
@@ -773,7 +773,7 @@ class Mission
 						{
 							value="1";
 							parentCls="ACE_VehicleLock_ModuleSetup";
-							typeName="SetLockState";
+							typeName="";
 						};
 						class Item2
 						{
