@@ -24,19 +24,19 @@ switch (BLUFORCE) do {
 	
 		// BW Fleck
 		case 0: {
-			_availableUniforms = randUniformBWFleck;
-			_availableVests = randVestBWFleck;
-			_availableHeadgear = randHeadGearBWFleck;
-			_availableBackpacks = randBackpackBWFleck;
+			_availableUniforms = randUniformBWFleck + randUniformBWTropen;
+			_availableVests = randVestBWFleck + randVestBWTropen;
+			_availableHeadgear = randHeadGearBWFleck + randHeadGearBWTropen;
+			_availableBackpacks = randBackpackBWFleck + randBackpackBWTropen;
 			_availableGuns = randWeaponBWFleck + randLauncherBWFleck;
 		}; 
 
 		// BW Tropen
 		case 1: {
-			_availableUniforms = randUniformBWTropen;
-			_availableVests = randVestBWTropen;
-			_availableHeadgear = randHeadGearBWTropen;
-			_availableBackpacks = randBackpackBWTropen;
+			_availableUniforms = randUniformBWTropen + randUniformBWFleck;
+			_availableVests = randVestBWTropen + randVestBWFleck;
+			_availableHeadgear = randHeadGearBWTropen + randHeadGearBWFleck;
+			_availableBackpacks = randBackpackBWTropen + randBackpackBWFleck;
 			_availableGuns = randWeaponBWTropen + randLauncherBWTropen;
 		}; 
 

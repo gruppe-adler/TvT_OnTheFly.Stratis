@@ -25,8 +25,6 @@ fillBluforLoadouts = {
 	"ARC_GER_Backpack_Flecktarn",
 	"ARC_GER_Backpack_compact_Flecktarn",
 	"ARC_GER_Kitbag_compact_Flecktarn",
-	"ARC_GER_Backpack_Flecktarn_Med",
-	"ARC_GER_Backpack_Flecktarn_Rep",
 	"ARC_GER_Backpack_Carryall_Flecktarn"
 	];
 
@@ -114,8 +112,6 @@ fillBluforLoadouts = {
 	"ARC_GER_Backpack_Tropentarn",
 	"ARC_GER_Backpack_compact_Tropentarn",
 	"ARC_GER_Kitbag_compact_Tropentarn",
-	"ARC_GER_Backpack_Tropentarn_Med",
-	"ARC_GER_Backpack_Tropentarn_Rep",
 	"ARC_GER_Backpack_Carryall_Tropentarn"
 	];
 
