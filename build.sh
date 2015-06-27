@@ -25,6 +25,7 @@ islands=(
 	saru
 	takistan
 	xcam_prototype
+	pja305 # N'ziwasogo
 )
 
 ### AS AS USER, DONT EDIT BELOW THIS LINE ###
