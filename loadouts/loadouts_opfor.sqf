@@ -291,6 +291,92 @@ fillOpforLoadouts = {
 	"rhs_weap_rpg7"
 	];
 
+
+	randLauncherTerrorists = 
+	[
+	"rhs_weap_rpg7"
+	];
+
+
+	// EASTERN (wood)
+
+	randUniformAfrican = 
+	[
+	"LOP_U_AFR_Fatigue_01",
+	"LOP_U_AFR_Fatigue_02",
+	"LOP_U_AFR_Fatigue_03",
+	"LOP_U_AFR_Fatigue_04",
+	"LOP_U_AFR_Fatigue_04_slv",
+	"LOP_U_AFR_Civ_03",
+	"LOP_U_AFR_Civ_04"
+	];
+
+	randVestAfrican= 
+	[
+	"V_TacVest_blk",
+	"V_TacVest_camo",
+	"V_BandollierB_blk",
+	"V_BandollierB_oli",
+	"V_TacVestCamo_khk",
+	"V_TacVestIR_blk",
+	"V_TacVest_camo"
+	];
+
+	randBackpackAfrican =
+	[
+	"rhs_sidor",
+	"B_Carryall_oli",
+	"rhs_assault_umbts",
+	"rhs_assault_umbts_demo",
+	"rhs_rpg_empty"
+	];
+
+	randHeadGearAfrican = 
+	[
+	"H_Bandanna_gry",
+	"H_Bandanna_cbr",
+	"H_Bandanna_khk_hs",
+	"H_Bandanna_khk",
+	"H_Bandanna_sgg",
+	"H_Bandanna_sand",
+	"H_Bandanna_camo",
+	"H_Watchcap_blk",
+	"rhs_beanie_green",
+	"rhs_beanie",
+	"H_Booniehat_khk_hs",
+	"H_Booniehat_oli",
+	"rhs_Booniehat_m81",
+	"H_Cap_oli",
+	"H_MilCap_gry",
+	"H_Cap_headphones"
+	];
+
+	randWeaponAfrican = 
+	[
+	"rhs_weap_akm",
+	"rhs_weap_akms",
+	"rhs_weap_M590_8RD",
+	"rhs_weap_pkm",
+	"rhs_weap_ak74m_2mag_camo",
+	"rhs_weap_ak74m_npz",
+	"rhs_weap_ak103_npz"
+	];
+
+	randLauncherAfrican = 
+	[
+	"rhs_weap_rpg7"
+	];
+
+	randHeadAfrican = 
+	[
+	"AfricanHead_01",
+	"AfricanHead_02",
+	"AfricanHead_03",
+	"PersianHead_A3_01",
+	"PersianHead_A3_02",
+	"PersianHead_A3_03"
+	];
+
 	loadoutInitOpforFinished = true;
 };
 
@@ -330,6 +416,15 @@ fillOpforVariables = {
 			customHeadgearOpfor = randHeadGearRussian call BIS_fnc_selectRandom;
 			customBackpackOpfor = randBackPackRussian call BIS_fnc_selectRandom;
 		};
+
+		// African
+		case 4: {
+			customUniformOpfor = randUniformAfrican call BIS_fnc_selectRandom;
+			customVestOpfor = randVestAfrican call BIS_fnc_selectRandom;
+			customHeadgearOpfor = randHeadGearAfrican call BIS_fnc_selectRandom;
+			customBackpackOpfor = randBackPackAfrican call BIS_fnc_selectRandom;
+			customHeadOpfor = randHeadAfrican call BIS_fnc_selectRandom;
+		};
 		default {hintSilent "error in reading faction parameter";};
 	};
 };
@@ -355,6 +450,10 @@ opfor_default = {
 	this addVest customVestOpfor;
 	this addHeadgear customHeadgearOpfor;
 	this addBackpack customBackpackOpfor;
+
+	if (OPFORCE == 4) then {
+		this setFace customHeadOpfor;
+	};
 	
 	comment "Add items";
 	this linkItem "ItemMap";
@@ -364,6 +463,7 @@ opfor_default = {
 
 };
 
+// below currently not used
 opfor_officer = {
 	
 	this = _this select 0;

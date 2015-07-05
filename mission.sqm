@@ -422,7 +422,7 @@ class Mission
 						{
 							value="4";
 							parentCls="ACE_ModuleNameTags";
-							typeName="PlayerNamesViewDistance";
+							typeName="playerNamesViewDistance";
 						};
 						class Item1
 						{
@@ -553,7 +553,7 @@ class Mission
 						{
 							value="1";
 							parentCls="ace_advanced_ballistics_ModuleSettings";
-							typeName="alwaysSimulateForSnipers";
+							typeName="";
 						};
 						class Item2
 						{
@@ -565,7 +565,7 @@ class Mission
 						{
 							value="1";
 							parentCls="ace_advanced_ballistics_ModuleSettings";
-							typeName="onlyActiveForLocalPlayers";
+							typeName="";
 						};
 						class Item4
 						{

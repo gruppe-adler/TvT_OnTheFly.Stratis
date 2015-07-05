@@ -65,9 +65,9 @@ class Params
 	class OPFORCE
 	{
 		title = "OPFOR";
-		values[] = {0,1,2,3};
-		texts[] = {"Taliban/Afghan Militia","Iraqi Terrorists","Eastern Rebels/Nationalists","Russians"};
-		default = 3;
+		values[] = {0,1,2,3,4};
+		texts[] = {"Taliban/Afghan Militia","Iraqi Terrorists","Eastern Rebels/Nationalists","Russians","African Pirates"};
+		default = 2;
 	};
 
 	class AllowedSpawnDistanceMinimum
