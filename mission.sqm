@@ -20,7 +20,8 @@ class Mission
 		"ace_microdagr",
 		"ace_respawn",
 		"ace_vehiclelock",
-		"ace_winddeflection"
+		"ace_winddeflection",
+		"ace_captives"
 	};
 	addOnsAuto[]=
 	{
@@ -35,6 +36,7 @@ class Mission
 		"ace_hearing",
 		"ace_interaction",
 		"ace_microdagr",
+		"ace_captives",
 		"ace_respawn",
 		"ace_vehiclelock",
 		"ace_winddeflection",
@@ -456,7 +458,7 @@ class Mission
 			side="LOGIC";
 			class Vehicles
 			{
-				items=7;
+				items=8;
 				class Item0
 				{
 					position[]={1601.2853,-0.023239762,5903.5542};
@@ -723,6 +725,31 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 				};
+				class Item7
+				{
+					position[]={1661.4274,-0.16746354,5947.3862};
+					class args
+					{
+						items=2;
+						class Item0
+						{
+							value="0";
+							parentCls="ace_captives_moduleSettings";
+							typeName="allowHandcuffOwnSide";
+						};
+						class Item1
+						{
+							value="1";
+							parentCls="ace_captives_moduleSettings";
+							typeName="allowSurrender";
+						};
+					};
+					id=33;
+					side="LOGIC";
+					vehicle="ace_captives_moduleSettings";
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
 			};
 		};
 		class Item4
@@ -750,7 +777,7 @@ class Mission
 							typeName="RemoveDeadBodiesDisconnected";
 						};
 					};
-					id=33;
+					id=34;
 					side="LOGIC";
 					vehicle="ACE_ModuleRespawn";
 					leader=1;
@@ -782,7 +809,7 @@ class Mission
 							typeName="DefaultLockpickStrength";
 						};
 					};
-					id=34;
+					id=35;
 					side="LOGIC";
 					vehicle="ACE_VehicleLock_ModuleSetup";
 					lock="UNLOCKED";
@@ -815,7 +842,7 @@ class Mission
 							typeName="simulationRadius";
 						};
 					};
-					id=35;
+					id=36;
 					side="LOGIC";
 					vehicle="ace_winddeflection_ModuleSettings";
 					leader=1;
@@ -832,7 +859,7 @@ class Mission
 		{
 			position[]={1844.2902,5.2536268,6127.4043};
 			azimut=163.319;
-			id=36;
+			id=37;
 			side="EMPTY";
 			vehicle="B_Truck_01_covered_F";
 			leader=1;
@@ -845,7 +872,7 @@ class Mission
 		{
 			position[]={1852.9342,5.3323355,6128.8511};
 			azimut=163.319;
-			id=37;
+			id=38;
 			side="EMPTY";
 			vehicle="Land_MapBoard_F";
 			leader=1;
@@ -856,7 +883,7 @@ class Mission
 		class Item2
 		{
 			position[]={1515.3201,5.5,5015.7935};
-			id=38;
+			id=39;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
@@ -866,7 +893,7 @@ class Mission
 		class Item3
 		{
 			position[]={1850.7795,5.3208466,6121.436};
-			id=39;
+			id=40;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;

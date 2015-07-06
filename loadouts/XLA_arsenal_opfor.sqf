@@ -258,7 +258,6 @@ _availableAttachments = [
 	"optic_Hamr",
  	"optic_Aco",
  	"bipod_03_F_oli",
- 	"optic_KHS_old",
  	"bipod_02_F_tan",
  	"bipod_01_F_blk"
 	];
