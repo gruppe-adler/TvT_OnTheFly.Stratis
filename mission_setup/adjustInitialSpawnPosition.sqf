@@ -65,7 +65,7 @@ targetPositions = [
 	[ [7777, 4280], [9200, 4280], true, 'FDF_Isle1_a'],
 	[ [1240, 9450], [1240, 8450], true, 'IsolaDiCapraia'],
 	[ [-500, -500], [-500, -900], false, 'Kunduz'],
-	[ [12870, 780], [13830, 780], false, 'pja305'],
+	[ [12870, 780], [13830, 780], true, 'pja305'],
 	[ [18080, 18535], [18200, 18060], true, 'Sara'],
 	[ [18080, 18535], [18200, 18060], true, 'Sara_dbe1'],
 	[ [9800, 4700], [9800, 3800], true, 'saru'],
@@ -79,6 +79,7 @@ targetPositions = [
 	[ [3400, 4320], [3400, 3600], false, 'Zargabad']
 ];
 
+// spawn outside of map on flat terrain if possible
 alternativeSpawnsOutsideMap = [[-500,-500],[-500,-900]];
 
 

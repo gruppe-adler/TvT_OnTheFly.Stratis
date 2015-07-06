@@ -298,7 +298,7 @@ fillOpforLoadouts = {
 	];
 
 
-	// EASTERN (wood)
+	// African
 
 	randUniformAfrican = 
 	[
