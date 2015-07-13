@@ -35,7 +35,8 @@ fillBluforLoadouts = {
 	"ARC_GER_Flecktarn_Helmet_simple",
 	"ARC_GER_Flecktarn_Milcap",
 	"ARC_GER_Flecktarn_Mich",
-	"ARC_GER_Flecktarn_booniehat"
+	"ARC_GER_Flecktarn_booniehat",
+	"rhsusf_ach_helmet_camo_ocp"
 	];
 
 	randWeaponBWFleck = 
@@ -122,7 +123,8 @@ fillBluforLoadouts = {
 	"ARC_GER_Tropentarn_Helmet_simple",
 	"ARC_GER_Tropentarn_Milcap",
 	"ARC_GER_Tropentarn_Mich",
-	"ARC_GER_Tropentarn_booniehat"
+	"ARC_GER_Tropentarn_booniehat",
+	"rhsusf_ach_helmet_camo_ocp"
 	];
 
 	randWeaponBWTropen = 
