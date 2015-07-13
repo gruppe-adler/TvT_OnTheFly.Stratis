@@ -316,7 +316,6 @@ _availableMagazines = [
 	"30Rnd_45ACP_Mag_SMG_01",
 	"30Rnd_45ACP_Mag_SMG_01_Tracer_Green",
 	"16Rnd_9x21_Mag",
-	"1Rnd_HE_Grenade_shell",
 	"1Rnd_SmokeBlue_Grenade_shell",
 	"1Rnd_SmokeGreen_Grenade_shell",
 	"1Rnd_SmokeOrange_Grenade_shell",
