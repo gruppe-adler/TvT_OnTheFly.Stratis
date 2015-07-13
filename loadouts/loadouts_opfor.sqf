@@ -3,14 +3,14 @@ fillOpforLoadouts = {
 
 	randUniformTaliban = 
 	[
-	"LOP_U_Mil_01",
-	"LOP_U_Mil_02",
-	"LOP_U_Mil_03",
-	"LOP_U_Mil_04",
-	"LOP_U_Afg_civ_01",
-	"LOP_U_Afg_civ_02",
-	"LOP_U_Afg_civ_03",
-	"LOP_U_Afg_civ_04"
+	"LOP_U_AM_Fatigue_01",
+	"LOP_U_AM_Fatigue_02",
+	"LOP_U_AM_Fatigue_03",
+	"LOP_U_AM_Fatigue_04",
+	"LOP_U_TAK_Civ_Fatigue_01",
+	"LOP_U_TAK_Civ_Fatigue_02",
+	"LOP_U_TAK_Civ_Fatigue_03",
+	"LOP_U_TAK_Civ_Fatigue_04"
 	];
 
 	randVestTaliban = 
@@ -72,12 +72,10 @@ fillOpforLoadouts = {
 
 	randUniformTerrorists = 
 	[
-	"LOP_U_IT_Fatigue_01",
-	"LOP_U_IT_Fatigue_02",
-	"LOP_U_IT_Fatigue_03",
-	"LOP_U_IT_Fatigue_04",
-	"LOP_U_IA_Fatigue_02",
-	"LOP_U_IA_Fatigue_01"
+	"LOP_U_ISTS_Fatigue_01",
+	"LOP_U_ISTS_Fatigue_02",
+	"LOP_U_ISTS_Fatigue_03",
+	"LOP_U_ISTS_Fatigue_04"
 	];
 
 	randHeadGearTerrorists =
