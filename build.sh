@@ -24,6 +24,7 @@ islands=(
 	fata
 	saru
 	takistan
+	vt5
 	xcam_prototype
 	pja305 # N'ziwasogo
 )

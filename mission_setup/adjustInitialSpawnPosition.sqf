@@ -1,6 +1,6 @@
 private ['_islands', '_targetPositions', '_positionsForCurrentWorld', '_targetPosition'];
 
-// Please insert new islands alphabetically by file ending!
+// Please insert new islands alphabetically by file name extension!
 
 // Readable List: 
 // Altis,
@@ -23,6 +23,7 @@ private ['_islands', '_targetPositions', '_positionsForCurrentWorld', '_targetPo
 // Thirsk, 
 // Panthera, 
 // Bystrica, 
+// vt5
 // X-Cam Prototype
 // Zargabad
 
@@ -48,6 +49,7 @@ islands = [
 	'takistan',
 	'Thirsk',
 	'Panthera3',
+	'vt5',
 	'Woodland_ACR',
 	'xcam_prototype',
 	'Zargabad'
@@ -74,6 +76,7 @@ targetPositions = [
 	[ [7700, 1600], [8250, 2130], false, 'takistan'],
 	[ [1100, 3200], [1700, 3000], true, 'Thirsk'],
 	[ [4080, 7580], [4860, 7600], true, 'Panthera3'],
+	[ [-850, 700], [-630, 300], false, 'vt5'],
 	[ [7500, 7600], [7500, 7300], false, 'Woodland_ACR'],
 	[ [4000, 4150], [4450, 3830], true, 'xcam_prototype'],
 	[ [3400, 4320], [3400, 3600], false, 'Zargabad']
