@@ -273,7 +273,7 @@ _availableItems = [
 	"ItemMap",
 	"ItemCompass",
 	"ItemWatch",
-	"ItemGPS"
+	"ItemGPS",
 	"ACE_fieldDressing",
 	"ACE_packingBandage",
 	"ACE_elasticBandage",
