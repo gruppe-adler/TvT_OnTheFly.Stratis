@@ -20,14 +20,16 @@ moveEveryoneToWhiteboard = {
             MISSION_COMPLETED = true; publicVariable "MISSION_COMPLETED";
             WINCONDITIONBLUFOR = true; publicVariable "WINCONDITIONBLUFOR";
             sleep 2;
-            call moveEveryoneToWhiteboard;
+            [] call "objectives\endmission.sqf";
+            //call moveEveryoneToWhiteboard;
         };
 
         if (WINCONDITIONOPFOR || BLUFOR_SURRENDERED) exitWith {
             MISSION_COMPLETED = true; publicVariable "MISSION_COMPLETED";
             WINCONDITIONOPFOR = true; publicVariable "WINCONDITIONOPFOR";
             sleep 2;
-            call moveEveryoneToWhiteboard;
+            [] call "objectives\endmission.sqf";
+            //call moveEveryoneToWhiteboard;
         };
     };
 };

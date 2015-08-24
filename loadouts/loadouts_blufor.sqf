@@ -43,6 +43,7 @@ fillBluforLoadouts = {
 	[
 	"SMA_HK416afg",
 	"SMA_HK416vfg",
+	"SMA_HK416GL",
 	"SMA_HK416afgQCB",
 	"SMA_HK417vfg",
 	"SMA_HK417afg",

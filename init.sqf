@@ -15,7 +15,7 @@ IS_VANILLA = (paramsArray select 8) == 1;
 AR3PLAY_ENABLE_REPLAY = (paramsArray select 9) == 1;
 AR3PLAY_IS_STREAMABLE = (paramsArray select 10) == 1;
 
-if (isServer) then { setDate [2035, 6, 24, TIME_OF_DAY, 1]; };	//Zeit
+if (isServer) then { setDate [2015, 2, 2, TIME_OF_DAY, 1]; };	//Zeit
 
 
 if (isClass(configFile >> (_this select 0) >> task_force_radio)) then {

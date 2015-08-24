@@ -56,9 +56,9 @@ class Mission
 		forecastWaves=0;
 		wavesForced=1;
 		windForced=1;
-		year=2035;
-		month=7;
-		day=6;
+		year=2015;
+		month=2;
+		day=4;
 		hour=12;
 		minute=0;
 		startFogDecay=0.013;
