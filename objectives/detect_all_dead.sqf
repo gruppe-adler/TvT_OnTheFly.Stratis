@@ -20,7 +20,7 @@ moveEveryoneToWhiteboard = {
             MISSION_COMPLETED = true; publicVariable "MISSION_COMPLETED";
             WINCONDITIONBLUFOR = true; publicVariable "WINCONDITIONBLUFOR";
             sleep 2;
-            nul = [west] execVM "objectives\endmission.sqf";
+            [[[west], "objectives\endmission.sqf"], "BIS_fnc_execVM", true, true] spawn BIS_fnc_MP;
             //call moveEveryoneToWhiteboard;
         };
 
@@ -28,7 +28,8 @@ moveEveryoneToWhiteboard = {
             MISSION_COMPLETED = true; publicVariable "MISSION_COMPLETED";
             WINCONDITIONOPFOR = true; publicVariable "WINCONDITIONOPFOR";
             sleep 2;
-            nul = [east] execVM "objectives\endmission.sqf";
+            [[[east], "objectives\endmission.sqf"], "BIS_fnc_execVM", true, true] spawn BIS_fnc_MP;
+            
             //call moveEveryoneToWhiteboard;
         };
     };
