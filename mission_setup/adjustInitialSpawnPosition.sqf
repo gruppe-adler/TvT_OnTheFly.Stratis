@@ -9,6 +9,7 @@ private ['_islands', '_targetPositions', '_positionsForCurrentWorld', '_targetPo
 // Chernarus Summer,
 // Clafghan,
 // Desert,
+// Esseker,
 // Fatah,
 // Gorgona
 // Podagorsk,
@@ -35,6 +36,7 @@ islands = [
 	'Chernarus_Summer',
 	'clafghan',
 	'Desert_E',
+	'Esseker',
 	'fata',
 	'Gorgona',
 	'FDF_Isle1_a',
@@ -62,6 +64,7 @@ targetPositions = [
 	[ [4100,11000], [4860, 9740], true, 'Chernarus_Summer'],
 	[ [15550,920], [15850, 370], false, 'clafghan'],
 	[ [1500, 50], [1900, 50], false, 'Desert_E'],
+	[ [1500, 50], [1900, 50], false, 'Esseker'],
 	[ [7700, 1600], [8400, 2000], false, 'fata'],
 	[ [1300, 3100], [950, 1170], true, 'Gorgona'],
 	[ [7777, 4280], [9200, 4280], true, 'FDF_Isle1_a'],

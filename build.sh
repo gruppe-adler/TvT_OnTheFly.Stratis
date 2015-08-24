@@ -10,6 +10,7 @@ islands=(
 	Chernarus
 	Chernarus_Summer
 	FDF_Isle1_a
+	Esseker
 	Gorgona
 	IsolaDiCapraia
 	Kunduz
