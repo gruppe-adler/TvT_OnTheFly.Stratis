@@ -87,11 +87,15 @@ opfor_teleport = opfor_teamlead addAction["<t color=""#93E352"">" + localize "st
 blufor_teleport = blufor_teamlead addAction["<t color=""#93E352"">" + localize "str_GRAD_choose_spawn_location",{[[[false], "mission_setup\teleport.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && !BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
 
 call compile preprocessFileLineNumbers "plank\plank_init.sqf";				//Plank
+call compile preprocessfile "SHK_pos\shk_pos_init.sqf";
 cameraOldPimped = compile preprocessFile "spectator\cameraOld_rip.sqf";
 cameraNewPimped = compile preprocessFile "spectator\camera_rip.sqf";
 clearInventory = compile preprocessFile "helpers\clearInventory.sqf";
 spawnStuff = compile preprocessFile "helpers\spawnStuff.sqf";
 moveStuff = compile preprocessFile "helpers\moveStuff.sqf";
+call compile preprocessfile "helpers\findSimplePos.sqf";
+
+[] execVM "helpers\radioFix.sqf";
 
 
 If(isNil "spawn_help_fnc_compiled")then{call compile preprocessFileLineNumbers "helpers\findPos.sqf"};

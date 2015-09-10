@@ -88,13 +88,8 @@ openMap [false,false];
 		// teleport und gucken, ob posi frei ist
 		[[[west,spawnpoint_mapclick],"mission_setup\teleportEffect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 
-		_spawn_area = [];
-		_max_distance = 40;
-		while{ count _spawn_area < 1 } do
-		{
-		    _spawn_area = spawnpoint_mapclick findEmptyPosition[ 10 , _max_distance , "Land_Cargo_House_V1_F" ];
-		    _max_distance = _max_distance + 10;
-		};
+		
+		_spawn_area = [spawnpoint_mapclick,40,"Land_Cargo_House_V1_F"] call findSimplePos;
 
 		[arsenal_blufor, spawnpoint_mapclick] execVM "mission_setup\teleportUnitToEmptySpot.sqf";
 
