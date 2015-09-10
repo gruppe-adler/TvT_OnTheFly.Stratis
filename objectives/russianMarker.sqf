@@ -65,7 +65,7 @@ if (isServer || isDedicated) then {
 	while {true} do {
 		if ((funkwagen getVariable ["tf_range",0]) == 50000) then 
 			{
-			_points = _points + 2 + (count SPECTATOR_LIST);
+			_points = _points + 1;
 			RUSSIAN_MARKER_HIDDEN = false;
 			publicVariable "RUSSIAN_MARKER_HIDDEN";
 			//hintSilent format ["%1 Minuten gesendet",round (_points/60)];
@@ -96,7 +96,7 @@ if (isServer || isDedicated) then {
 		if (!alive funkwagen) exitWith {
 			[] call bluforCaptured;
 		};
-		sleep 2;
+		sleep 1;
 		_targetPosition = [getPos funkwagen select 0,getPos funkwagen select 1];
 		RUSSIAN_MARKER_POS = _targetPosition; publicVariable "RUSSIAN_MARKER_POS";
 	};

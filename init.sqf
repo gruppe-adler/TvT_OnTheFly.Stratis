@@ -35,6 +35,7 @@ if (OPFOR_TELEPORTED) then {
 
 [] execVM "CSSA3\CSSA3_init.sqf";
 
+enableSentences false;
 
 // global options
 did_replay = false;
