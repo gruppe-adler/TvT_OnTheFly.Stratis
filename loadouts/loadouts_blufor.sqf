@@ -53,7 +53,8 @@ fillBluforLoadouts = {
 	"SMA_HK417_16in_vfg",
 	"MMG_02_black_F",
 	"MMG_02_sand_F",
-	"MMG_01_tan_F"
+	"MMG_01_tan_F",
+	"hgun_P07_F"
 	];
 
 	randLauncherBWFleck = 
@@ -135,13 +136,15 @@ fillBluforLoadouts = {
 	"SMA_HK416afgQCB",
 	"SMA_HK417vfg",
 	"SMA_HK417afg",
+	"SMA_HK416GL",
 	"SMA_HK417_tanafg",
 	"SMA_HK417_tanvfg",
 	"SMA_HK417_16in_afg",
 	"SMA_HK417_16in_vfg",
 	"MMG_02_black_F",
 	"MMG_02_sand_F",
-	"MMG_01_tan_F"
+	"MMG_01_tan_F",
+	"hgun_P07_F"
 	];
 
 	randLauncherBWTropen = 
@@ -191,13 +194,15 @@ fillBluforLoadouts = {
 	"SMA_HK416afgQCB",
 	"SMA_HK417vfg",
 	"SMA_HK417afg",
+	"SMA_HK416GL",
 	"SMA_HK417_tanafg",
 	"SMA_HK417_tanvfg",
 	"SMA_HK417_16in_afg",
 	"SMA_HK417_16in_vfg",
 	"MMG_02_black_F",
 	"MMG_02_sand_F",
-	"MMG_01_tan_F"
+	"MMG_01_tan_F",
+	"hgun_P07_F"
 	];
 
 	randLauncherUSOCP = 
@@ -246,13 +251,15 @@ fillBluforLoadouts = {
 	"SMA_HK416afgQCB",
 	"SMA_HK417vfg",
 	"SMA_HK417afg",
+	"SMA_HK416GL",
 	"SMA_HK417_tanafg",
 	"SMA_HK417_tanvfg",
 	"SMA_HK417_16in_afg",
 	"SMA_HK417_16in_vfg",
 	"MMG_02_black_F",
 	"MMG_02_sand_F",
-	"MMG_01_tan_F"
+	"MMG_01_tan_F",
+	"hgun_P07_F"
 	];
 
 	randLauncherUSUCP = 

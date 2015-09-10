@@ -48,7 +48,8 @@ fillOpforLoadouts = {
 	"rhs_weap_akm",
 	"rhs_weap_akms",
 	"rhs_weap_M590_8RD",
-	"rhs_weap_pkm"
+	"rhs_weap_pkm",
+	"hgun_P07_F"
 	];
 
 	//Ammo Taliban
@@ -112,7 +113,8 @@ fillOpforLoadouts = {
 	"rhs_weap_ak74m_desert_npz",
 	"rhs_weap_ak74m_npz",
 	"rhs_weap_ak103_npz",
-	"rhs_weap_m16a4"
+	"rhs_weap_m16a4",
+	"hgun_P07_F"
 	];
 
 	//Ammo Terrorists
@@ -218,7 +220,8 @@ fillOpforLoadouts = {
 	"rhs_weap_pkm",
 	"rhs_weap_ak74m_2mag_camo",
 	"rhs_weap_ak74m_npz",
-	"rhs_weap_ak103_npz"
+	"rhs_weap_ak103_npz",
+	"hgun_P07_F"
 	];
 
 	randLauncherEastern = 
@@ -281,7 +284,8 @@ fillOpforLoadouts = {
 	"rhs_weap_ak74m_2mag_npz",
 	"rhs_weap_ak74m_camo_npz",
 	"rhs_weap_ak74m_npz",
-	"rhs_weap_ak103_npz"
+	"rhs_weap_ak103_npz",
+	"hgun_P07_F"
 	];
 
 	randLauncherRussian = 
@@ -357,7 +361,8 @@ fillOpforLoadouts = {
 	"rhs_weap_pkm",
 	"rhs_weap_ak74m_2mag_camo",
 	"rhs_weap_ak74m_npz",
-	"rhs_weap_ak103_npz"
+	"rhs_weap_ak103_npz",
+	"hgun_P07_F"
 	];
 
 	randLauncherAfrican = 
