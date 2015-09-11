@@ -11,7 +11,7 @@ _position = _this select 0;
 			
 		[opfor_teamlead, funkwagen, true] call ACE_VehicleLock_fnc_addKeyForVehicle;
 
-		[_position,10,funkwagen] call moveStuff;
+		[_position,50,funkwagen] call moveStuff;
 
 
 		russian_brt = [_position,10,"rhs_btr60_vv"] call spawnStuff;
@@ -46,4 +46,4 @@ _position = _this select 0;
 
 if (side player != _side) exitWith {};
 
-[_posi,10,player] call moveStuff;
+[_posi,50,player] call moveStuff;
