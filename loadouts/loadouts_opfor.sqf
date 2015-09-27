@@ -3,14 +3,20 @@ fillOpforLoadouts = {
 
 	randUniformTaliban = 
 	[
-	"LOP_U_AM_Fatigue_01",
-	"LOP_U_AM_Fatigue_02",
-	"LOP_U_AM_Fatigue_03",
-	"LOP_U_AM_Fatigue_04",
-	"LOP_U_TAK_Civ_Fatigue_01",
-	"LOP_U_TAK_Civ_Fatigue_02",
-	"LOP_U_TAK_Civ_Fatigue_03",
-	"LOP_U_TAK_Civ_Fatigue_04"
+	"U_TKLocalTactic_D",
+	"U_TKLocalTactic_C",
+	"U_TKLocalTactic_B",
+	"U_TKLocalTactic_A",
+	"U_TKLocalUni_F",
+	"U_TKLocalUni_E",
+	"U_TKLocalUni_D",
+	"U_TKLocalUni_C",
+	"U_TKLocalUni_B",
+	"U_TKLocalUni_A",
+	"U_TKLocalCombat_D",
+	"U_TKLocalCombat_C",
+	"U_TKLocalCombat_B",
+	"U_TKLocalCombat_A"
 	];
 
 	randVestTaliban = 
@@ -33,14 +39,18 @@ fillOpforLoadouts = {
 
 	randHeadGearTaliban = 
 	[
-	"LOP_H_Turban",
+	"H_Hat_Pagri",
 	"H_ShemagOpen_khk",
 	"H_ShemagOpen_tan",
 	"H_Shemag_olive",
-	"LOP_H_Shemag_IT",
-	"LOP_H_Pakol",
-	"LOP_H_Pakol",
-	"LOP_H_Pakol"
+	"H_Hat_Turban_D",
+	"H_Hat_Turban_C",
+	"H_Hat_Turban_B",
+	"H_Hat_Turban_A",
+	"H_Hat_Kufiya_D",
+	"H_Hat_Kufiya_C",
+	"H_Hat_Kufiya_B",
+	"H_Hat_Kufiya_A"
 	];
 
 	randWeaponTaliban = 
@@ -73,15 +83,16 @@ fillOpforLoadouts = {
 
 	randUniformTerrorists = 
 	[
-	"LOP_U_ISTS_Fatigue_01",
-	"LOP_U_ISTS_Fatigue_02",
-	"LOP_U_ISTS_Fatigue_03",
-	"LOP_U_ISTS_Fatigue_04"
+	"U_TerrorCombat_B",
+	"U_TerrorCombat_A"
 	];
 
 	randHeadGearTerrorists =
 	[
-	"LOP_H_Shemag_IT",
+	"H_Hat_Kufiya_D",
+	"H_Hat_Kufiya_C",
+	"H_Hat_Kufiya_B",
+	"H_Hat_Kufiya_A",
 	"H_Shemag_olive"
 	];
 
@@ -164,13 +175,16 @@ fillOpforLoadouts = {
 
 	randUniformEastern = 
 	[
-	"LOP_U_UA_Fatigue_01",
-	"LOP_U_UA_Fatigue_02",
-	"LOP_U_UA_Fatigue_03",
-	"LOP_U_UA_Fatigue_04",
-	"LOP_U_US_Fatigue_02",
-	"LOP_U_US_Fatigue_02_slv",
-	"LOP_U_ChDKZ_Lopotev"
+	"U_CombatUniLeadMerc_F",
+	"U_CombatUniLeadMerc_E",
+	"U_CombatUniLeadMerc_D",
+	"U_CombatUniLeadMerc_C",
+	"U_CombatUniLeadMerc_B",
+	"U_CombatUniLeadMerc_A",
+	"U_MilitiaUniTShirt_D",
+	"U_MilitiaUniTShirt_C",
+	"U_MilitiaUniTShirt_B",
+	"U_MilitiaUniTShirt_A"
 	];
 
 	randVestEastern= 
@@ -304,13 +318,16 @@ fillOpforLoadouts = {
 
 	randUniformAfrican = 
 	[
-	"LOP_U_AFR_Fatigue_01",
-	"LOP_U_AFR_Fatigue_02",
-	"LOP_U_AFR_Fatigue_03",
-	"LOP_U_AFR_Fatigue_04",
-	"LOP_U_AFR_Fatigue_04_slv",
-	"LOP_U_AFR_Civ_03",
-	"LOP_U_AFR_Civ_04"
+	"U_CombatUniLeadMerc_F",
+	"U_CombatUniLeadMerc_E",
+	"U_CombatUniLeadMerc_D",
+	"U_CombatUniLeadMerc_C",
+	"U_CombatUniLeadMerc_B",
+	"U_CombatUniLeadMerc_A",
+	"U_MilitiaUniTShirt_D",
+	"U_MilitiaUniTShirt_C",
+	"U_MilitiaUniTShirt_B",
+	"U_MilitiaUniTShirt_A"
 	];
 
 	randVestAfrican= 
