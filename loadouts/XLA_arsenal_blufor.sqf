@@ -295,7 +295,24 @@ _availableItems = [
 	"ACE_surgicalKit",
 	"ACE_bodyBag",
 	"ACE_EarPlugs",
-	"tf_anprc152"
+	"tf_anprc152",
+	"ACE_Flashlight_KSF1",
+	"TRYK_Beard",
+	"TRYK_Beard_BW",
+	"TRYK_Beard_BK",
+	"TRYK_Beard_Gr",
+	"TRYK_Beard2",
+	"TRYK_Beard_BW2",
+	"TRYK_Beard_BK2",
+	"TRYK_Beard_Gr2",
+	"TRYK_Beard_BW3",
+	"TRYK_Beard_BK3",
+	"TRYK_Beard_Gr3",
+	"TRYK_Beard3",
+	"TRYK_Beard_BW4",
+	"TRYK_Beard_BK4",
+	"TRYK_Beard_Gr4",
+	"TRYK_Beard4"
 ];
 
 
@@ -387,7 +404,13 @@ _availableMagazines = [
 	"130Rnd_338_Mag",
 	"rhs_m136_hedp_mag",
 	"rhs_m136_hp_mag",
-	"rhs_m136_mag"
+	"rhs_m136_mag",
+	"150Rnd_762x51_Box_Tracer",
+	"10Rnd_77x56_SMLE",
+	"rhsusf_mag_7x45acp_MHP",
+	"5Rnd_792x57_Kar98",
+	"rhsusf_weap_m1911a1",
+	"30Rnd_792x33_MP44"
 ];
 
 

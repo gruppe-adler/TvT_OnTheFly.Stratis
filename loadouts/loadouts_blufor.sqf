@@ -54,7 +54,12 @@ fillBluforLoadouts = {
 	"MMG_02_black_F",
 	"MMG_02_sand_F",
 	"MMG_01_tan_F",
-	"hgun_P07_F"
+	"hgun_P07_F",
+	"Auto762x51_MG3",
+	"rhsusf_weap_m1911a1",
+	"hgun_Rook40_F",
+	"Bolt792x57_Kar98K",
+	"Auto792x33_MP44"
 	];
 
 	randLauncherBWFleck = 
@@ -144,7 +149,12 @@ fillBluforLoadouts = {
 	"MMG_02_black_F",
 	"MMG_02_sand_F",
 	"MMG_01_tan_F",
-	"hgun_P07_F"
+	"hgun_P07_F",
+	"Auto762x51_MG3",
+	"rhsusf_weap_m1911a1",
+	"hgun_Rook40_F",
+	"Bolt792x57_Kar98K",
+	"Auto792x33_MP44"
 	];
 
 	randLauncherBWTropen = 
@@ -202,7 +212,12 @@ fillBluforLoadouts = {
 	"MMG_02_black_F",
 	"MMG_02_sand_F",
 	"MMG_01_tan_F",
-	"hgun_P07_F"
+	"hgun_P07_F",
+	"Auto762x51_MG3",
+	"rhsusf_weap_m1911a1",
+	"hgun_Rook40_F",
+	"Bolt792x57_Kar98K",
+	"Auto792x33_MP44"
 	];
 
 	randLauncherUSOCP = 
@@ -259,7 +274,12 @@ fillBluforLoadouts = {
 	"MMG_02_black_F",
 	"MMG_02_sand_F",
 	"MMG_01_tan_F",
-	"hgun_P07_F"
+	"hgun_P07_F",
+	"Auto762x51_MG3",
+	"rhsusf_weap_m1911a1",
+	"hgun_Rook40_F",
+	"Bolt792x57_Kar98K",
+	"Auto792x33_MP44"
 	];
 
 	randLauncherUSUCP = 

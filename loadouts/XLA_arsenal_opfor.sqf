@@ -298,7 +298,24 @@ _availableItems = [
 	"ACE_personalAidKit",
 	"ACE_surgicalKit",
 	"ACE_bodyBag",
-	"ACE_EarPlugs"
+	"ACE_EarPlugs",
+	"ACE_Flashlight_KSF1",
+	"TRYK_Beard",
+	"TRYK_Beard_BW",
+	"TRYK_Beard_BK",
+	"TRYK_Beard_Gr",
+	"TRYK_Beard2",
+	"TRYK_Beard_BW2",
+	"TRYK_Beard_BK2",
+	"TRYK_Beard_Gr2",
+	"TRYK_Beard_BW3",
+	"TRYK_Beard_BK3",
+	"TRYK_Beard_Gr3",
+	"TRYK_Beard3",
+	"TRYK_Beard_BW4",
+	"TRYK_Beard_BK4",
+	"TRYK_Beard_Gr4",
+	"TRYK_Beard4"
 ];
 
 
@@ -373,7 +390,12 @@ _availableMagazines = [
 	"rhs_rpg7_TBG7V_mag",
 	"rhs_rpg7_OG7V_mag",
 	"rhs_rpg7_PG7VR_mag",
-	"rhs_rpg7_PG7VL_mag"
+	"rhs_rpg7_PG7VL_mag",
+	"10Rnd_77x56_SMLE",
+	"rhsusf_mag_7x45acp_MHP",
+	"5Rnd_792x57_Kar98",
+	"rhsusf_weap_m1911a1",
+	"71Rnd_762x25_PPSh"
 ];
 
 _availableAttachments = _availableAttachments
@@ -435,3 +457,4 @@ if (isServer && !IS_VANILLA) then {
 
 	};
 };
+
