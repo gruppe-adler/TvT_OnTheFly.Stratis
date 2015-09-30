@@ -416,6 +416,68 @@ fillOpforLoadouts = {
 	"PersianHead_A3_02",
 	"PersianHead_A3_03"
 	];
+	// Russian 1945
+
+	randUniformRussian1945 = 
+	[
+	"rhs_uniform_emr_patchless"
+	];
+
+	randVestRussian1945 = 
+	[
+	"rhs_6b23_digi",
+	"rhs_6b23_digi_6sh92",
+	"rhs_6b23_digi_6sh92_headset_mapcase",
+	"rhs_6b23_digi_6sh92_radio",
+	"rhs_6b23_digi_6sh92_vog",
+	"rhs_6b23_digi_6sh92_vog_headset",
+	"rhs_6b23_digi_crewofficer",
+	"rhs_6b23_digi_crew",
+	"rhs_6b23_digi_engineer",
+	"rhs_6b23_digi_medic",
+	"rhs_6b23_digi_rifleman",
+	"rhs_6b23_digi_sniper"
+	];
+
+	randHeadGearRussian1945 =
+	[
+	"rhs_6b27m_digi",
+	"rhs_6b27m_digi_bala",
+	"rhs_6b27m_digi_ess",
+	"rhs_6b27m_digi_ess_bala"
+	"rhs_fieldcap_digi",
+	"rhs_fieldcap_helm_digi"
+	];
+
+	randBackPackRussian1945 = [
+	"rhs_sidor",
+	"B_Carryall_oli",
+	"rhs_assault_umbts",
+	"rhs_assault_umbts_demo",
+	"rhs_rpg_empty"
+	];
+
+	randWeaponRussian1945 = 
+	[
+	"rhs_weap_M590_8RD",
+	"rhs_weap_pkm",
+	"rhs_weap_pkp",
+	"rhs_weap_ak74m_2mag_camo",
+	"rhs_weap_ak74m_2mag_npz",
+	"rhs_weap_ak74m_camo_npz",
+	"rhs_weap_ak74m_npz",
+	"rhs_weap_ak103_npz",
+	"hgun_P07_F",
+	"Bolt792x57_Kar98K",
+	"Bolt77x56_SMLE",
+	"rhsusf_weap_m1911a1",
+	"Smg762x25_PPSh41_B"
+	];
+
+	randLauncherRussian1945 = 
+	[
+	];
+
 
 	loadoutInitOpforFinished = true;
 };
@@ -465,6 +527,16 @@ fillOpforVariables = {
 			customBackpackOpfor = randBackPackAfrican call BIS_fnc_selectRandom;
 			customHeadOpfor = randHeadAfrican call BIS_fnc_selectRandom;
 		};
+		
+		// Russian 1945
+		case 5: {
+			customUniformOpfor = randUniformRussian1945 call BIS_fnc_selectRandom;
+			customVestOpfor = randVestRussian1945 call BIS_fnc_selectRandom;
+			customHeadgearOpfor = randHeadGearRussian1945 call BIS_fnc_selectRandom;
+			customBackpackOpfor = randBackPackRussian1945 call BIS_fnc_selectRandom;
+		};
+		
+		
 		default {hintSilent "error in reading faction parameter";};
 	};
 };
