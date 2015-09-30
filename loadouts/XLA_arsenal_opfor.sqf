@@ -66,6 +66,14 @@ switch (OPFORCE) do {
 			_availableBackpacks = randBackPackAfrican;
 			_availableGuns = randWeaponAfrican + randLauncherAfrican;
 		};
+		// Russians 1945
+		case 5: {
+			_availableUniforms = randUniformRussian1945;
+			_availableVests = randVestRussian1945;
+			_availableHeadgear = randHeadGearRussian1945;
+			_availableBackpacks = randBackPackRussian1945;
+			_availableGuns = randWeaponRussian1945 + randLauncherRussian1945;
+		};
 		default {
 		hintSilent "error in reading faction parameter";
 		};
