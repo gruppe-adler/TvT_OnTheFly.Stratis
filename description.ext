@@ -57,16 +57,16 @@ class Params
 	class BLUFORCE
 	{
 		title = "BLUFOR";
-		values[] = {0,1,2,3};
-		texts[] = {"BW Fleck","BW Tropen","US UCP","US OCP"};
+		values[] = {0,1,2,3,4};
+		texts[] = {"BW Fleck","BW Tropen","US UCP","US OCP","BW 1945"};
 		default = 1;
 	};
 
 	class OPFORCE
 	{
 		title = "OPFOR";
-		values[] = {0,1,2,3,4};
-		texts[] = {"Taliban/Afghan Militia","Iraqi Terrorists","Eastern Rebels/Nationalists","Russians","African Pirates"};
+		values[] = {0,1,2,3,4,5};
+		texts[] = {"Taliban/Afghan Militia","Iraqi Terrorists","Eastern Rebels/Nationalists","Russians","African Pirates","Russians 1945"};
 		default = 4;
 	};
 
