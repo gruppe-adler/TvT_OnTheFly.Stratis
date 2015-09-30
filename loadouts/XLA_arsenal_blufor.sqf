@@ -57,6 +57,16 @@ switch (BLUFORCE) do {
 			_availableBackpacks = randBackpackUSUCP;
 			_availableGuns = randWeaponUSUCP + randLauncherUSOCP;
 		};
+		
+		// BW 1945
+		case 4: {
+			_availableUniforms = randUniformBW1945;
+			_availableVests = randVestBW1945;
+			_availableHeadgear = randHeadGearBW1945;
+			_availableBackpacks = randBackpackBW1945;
+			_availableGuns = randWeaponBW1945 + randLauncherBW1945;
+		};
+		
 		default {
 		hintSilent "error in reading faction parameter";
 		};
