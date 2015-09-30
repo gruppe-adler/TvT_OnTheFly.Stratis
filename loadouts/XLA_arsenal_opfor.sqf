@@ -238,7 +238,7 @@ _ACE_vector_Weapons = [
 _availableGuns 	= _availableGuns + [
 	
 	"Binocular",
-	"hgun_P07_F",
+	"hgun_P07_F"
 
 	];
 _availableMagazines 	= [];
@@ -402,8 +402,7 @@ _availableGuns = _availableGuns
 	+ _ACE_overheating_Weapons
 	+ _ACE_parachute_Weapons
 	+ _ACE_wind_Weapons;	
-};
-else {
+} else {
 // -------------------------------------------------------------------
 // 		ACE Grenades
 // -------------------------------------------------------------------
@@ -756,7 +755,7 @@ _availableGuns = _availableGuns
 	+ _ACE_overheating_Weapons
 	+ _ACE_parachute_Weapons
 	+ _ACE_wind_Weapons;
-}
+};
 sleep 1;
 
 if (isServer && !IS_VANILLA) then {
