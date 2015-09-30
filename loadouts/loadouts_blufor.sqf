@@ -287,6 +287,62 @@ fillBluforLoadouts = {
 	"rhs_weap_M136"
 	];
 
+	// BUNDESWEHR 1945
+
+	randUniformBW1945 = 
+	[
+	"GER_Flecktarn_Officer_Uniform",
+	"ARC_GER_Flecktarn_Uniform_tshirt",
+	"ARC_GER_Flecktarn_Uniform_vest",
+	"ARC_GER_Flecktarn_Uniform",
+	"ARC_GER_Flecktarn_Uniform_Light"
+	];
+
+	randVestBW1945 = 
+	[
+	"ARC_GER_Flecktarn_PlateCarrier_1",
+	"ARC_GER_Flecktarn_PlateCarrier_2",
+	"ARC_GER_Flecktarn_Plate_Carrier_H",
+	"ARC_GER_Flecktarn_Plate_Carrier",
+	"ARC_GER_Flecktarn_rangemaster_belt",
+	"ARC_GER_Flecktarn_BandollierB_rgr"
+	];
+
+	randBackpackBW1945 =
+	[
+	"ARC_GER_Backpack_Flecktarn",
+	"ARC_GER_Backpack_compact_Flecktarn",
+	"ARC_GER_Kitbag_compact_Flecktarn",
+	"ARC_GER_Backpack_Carryall_Flecktarn"
+	];
+
+	randHeadGearBW1945 = 
+	[
+	"ARC_GER_Flecktarn_Helmet",
+	"ARC_GER_Flecktarn_Helmet_Light",
+	"ARC_GER_Flecktarn_Helmet_simple",
+	"ARC_GER_Flecktarn_Milcap",
+	"ARC_GER_Flecktarn_Mich",
+	"ARC_GER_Flecktarn_booniehat",
+	"rhsusf_ach_helmet_camo_ocp"
+	];
+
+	randWeaponBW1945 = 
+	[
+	
+	"hgun_P07_F",
+	"Auto762x51_MG3",
+	"rhsusf_weap_m1911a1",
+	"hgun_Rook40_F",
+	"Bolt792x57_Kar98K",
+	"Auto792x33_MP44"
+	];
+
+	randLauncherBW1945 = 
+	[
+	];
+
+
 	loadoutInitBluforFinished = true;
 };
 
@@ -328,6 +384,15 @@ fillBluforVariables = {
 			customHeadgearBlufor = randHeadGearUSUCP call BIS_fnc_selectRandom;
 			customBackpackBlufor = randBackpackUSUCP call BIS_fnc_selectRandom;
 		};
+		
+		// BW 1945
+		case 4: {
+			customUniformBlufor = randUniformBW1945 call BIS_fnc_selectRandom;
+			customVestBlufor = randVestBW1945 call BIS_fnc_selectRandom;
+			customHeadgearBlufor = randHeadGearBW1945 call BIS_fnc_selectRandom;
+			customBackpackBlufor = randBackpackBW1945 call BIS_fnc_selectRandom;
+		};
+		
 		default {
 		hintSilent "error in reading faction parameter";
 		};
