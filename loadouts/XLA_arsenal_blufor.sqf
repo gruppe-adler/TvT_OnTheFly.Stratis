@@ -192,7 +192,6 @@ _availableGuns 	= _availableGuns + [
 	
 	"Binocular",
 	"hgun_P07_F"
-
 	];
 _availableMagazines 	= [];
 
@@ -273,6 +272,14 @@ _availableMagazines = [
 	"rhsusf_weap_m1911a1",
 	"71Rnd_762x25_PPSh"
 ];
+
+_ACE_grenades_Weapons = [];
+_ACE_attach_Weapons = [];
+_ACE_ballistics_attachments = [];
+_ACE_disposable_Weapons = [];
+_ACE_disposable_Magazines = [];
+_ACE_parachute_Weapons = [];
+_ACE_vector_Weapons = [];
 
 _availableAttachments = _availableAttachments
 	+ _ACE_ballistics_attachments;
