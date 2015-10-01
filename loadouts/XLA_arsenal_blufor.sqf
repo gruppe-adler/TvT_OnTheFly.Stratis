@@ -87,20 +87,10 @@ _ACE_grenades_Magazines = [
 	"6Rnd_GreenSignal_F",
 	"6Rnd_RedSignal_F"
 ];
-_ACE_grenades_Weapons = [
-	"ACE_HandFlare_WhiteMuzzle",
-	"ACE_HandFlare_RedMuzzle",
-	"ACE_HandFlare_GreenMuzzle",
-	"ACE_HandFlare_YellowMuzzle",
-	"ACE_M84Muzzle"
-];
 
 // -------------------------------------------------------------------
 // 		ACE Attach
 // -------------------------------------------------------------------
-_ACE_attach_Weapons = [
-	"ACE_IR_Strobe_Item"
-];
 _ACE_attach_Magazines = [
 	"B_IR_Grenade",
 	"Chemlight_green"
@@ -124,24 +114,7 @@ _ACE_ballistics_Magazines = [
 	"ACE_20Rnd_762x51_Mag_SD",
 	"ACE_20Rnd_762x51_Mag_AP"
 ];
-_ACE_ballistics_attachments = [
-	"ACE_muzzle_mzls_H",
-	"ACE_muzzle_mzls_B",
-	"ACE_muzzle_mzls_L",
-	"ACE_muzzle_mzls_smg_01",
-	"ACE_muzzle_mzls_smg_02"
-];
 
-// -------------------------------------------------------------------
-// 		ACE Disposable (Launchers)
-// -------------------------------------------------------------------
-	//This is a design choice - do we want people saving spent tubes?
-_ACE_disposable_Weapons = [
-	"ACE_launch_NLAW_Used_F"
-];
-_ACE_disposable_Magazines = [
-	"ACE_UsedTube_F"
-];
 
 // -------------------------------------------------------------------
 // 		ACE Explosives
@@ -180,7 +153,6 @@ _ACE_interaction_Weapons = [
 	"ACE_RangeTable_82mm",
 	"ACE_MapTools",
 	"ACE_wirecutter",
-	"ACE_Kestrel4500",
 	"ACE_Cellphone",
 	"ACE_DeadManSwitch"
 ];
@@ -210,21 +182,6 @@ _ACE_overheating_Weapons = [
 	"ACE_SpareBarrel"
 ];
 
-// -------------------------------------------------------------------
-// 		ACE Parachute (Altimeter)
-// -------------------------------------------------------------------
-_ACE_parachute_Weapons = [
-	"ACE_Altimeter"
-];
-
-// -------------------------------------------------------------------
-// 		ACE Vector
-// -------------------------------------------------------------------
-_ACE_vector_Weapons = [
-	"ACE_Vector",
-	"ACE_Item_Vector"
-];
-
 
 // -------------------------------------------------------------------
 // 		Combine lists
@@ -234,7 +191,6 @@ _availableGuns 	= _availableGuns + [
 	
 	"Binocular",
 	"hgun_P07_F"
-
 	];
 _availableMagazines 	= [];
 
@@ -297,18 +253,6 @@ _availableItems = [
 
 _availableMagazines = [
 	"16Rnd_9x21_Mag",
-	"SMA_20Rnd_762x51mm_M80A1_EPR",
-	"SMA_20Rnd_762x51mm_M80A1_EPR_Tracer",
-	"SMA_20Rnd_762x51mm_M80A1_EPR_IR",
-	"SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range",
-	"SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer",
-	"SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_IR",
-	"SMA_20Rnd_762x51mm_Mk319_Mod_0_Ball_Barrier",
-	"SMA_20Rnd_762x51mm_Mk319_Mod_0_Ball_Barrier_Tracer",
-	"SMA_20Rnd_762x51mm_Mk319_Mod_0_Ball_Barrier_IR",
-	"SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic",
-	"SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic_Tracer",
-	"SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic_IR",
 	"HandGrenade",
 	"SmokeShell",
 	"SmokeShellYellow",
@@ -322,55 +266,20 @@ _availableMagazines = [
 	"Chemlight_yellow",
 	"Chemlight_blue",
 
-
-	"SMA_30Rnd_762x39_SKS",
-	"SMA_30Rnd_762x39_SKS_Red",
-	"20Rnd_762x51_Mag",
-	"130Rnd_338_Mag",
-
-	"rhs_30Rnd_762x39mm",
-	"rhs_30Rnd_762x39mm_tracer",
-	"rhs_30Rnd_762x39mm_89",
-	"rhsusf_8Rnd_00Buck",
-	"rhs_100Rnd_762x54mmR",
-	"rhs_100Rnd_762x54mmR_green",
-	"rhs_30Rnd_545x39_AK",
-	"rhs_30Rnd_545x39_AK_no_tracers",
-	"rhs_30Rnd_545x39_7N10_AK",
-	"rhs_30Rnd_545x39_7N22_AK",
-	"rhs_30Rnd_545x39_AK_green",
-	"rhs_45Rnd_545X39_AK",
-	"rhs_45Rnd_545X39_7N10_AK",
-	"rhs_45Rnd_545X39_7N22_AK",
-	"rhs_45Rnd_545X39_AK_Green",
-	"rhs_30Rnd_762x39mm",
-	"rhs_30Rnd_762x39mm_tracer",
-	"rhs_30Rnd_762x39mm_89",
-	"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-	"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-	"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-	"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-	"rhs_30Rnd_545x39_AK",
-	"rhs_30Rnd_545x39_AK_no_tracers",
-	"rhs_30Rnd_545x39_7N10_AK",
-	"rhs_30Rnd_545x39_7N22_AK",
-	"rhs_30Rnd_545x39_AK_green",
-	"rhs_45Rnd_545X39_AK",
-	"rhs_45Rnd_545X39_7N10_AK",
-	"rhs_45Rnd_545X39_7N22_AK",
-	"rhs_45Rnd_545X39_AK_Green",
-	"rhs_100Rnd_762x54mmR",
-	"rhs_100Rnd_762x54mmR_green",
-	"rhs_rpg7_TBG7V_mag",
-	"rhs_rpg7_OG7V_mag",
-	"rhs_rpg7_PG7VR_mag",
-	"rhs_rpg7_PG7VL_mag",
 	"10Rnd_77x56_SMLE",
 	"rhsusf_mag_7x45acp_MHP",
 	"5Rnd_792x57_Kar98",
 	"rhsusf_weap_m1911a1",
 	"71Rnd_762x25_PPSh"
 ];
+
+_ACE_grenades_Weapons = [];
+_ACE_attach_Weapons = [];
+_ACE_ballistics_attachments = [];
+_ACE_disposable_Weapons = [];
+_ACE_disposable_Magazines = [];
+_ACE_parachute_Weapons = [];
+_ACE_vector_Weapons = [];
 
 _availableAttachments = _availableAttachments
 	+ _ACE_ballistics_attachments;
@@ -406,7 +315,6 @@ _ACE_grenades_Magazines = [
 	"ACE_HandFlare_Red",
 	"ACE_HandFlare_Green",
 	"ACE_HandFlare_Yellow",
-	"ACE_M84",
 	"3Rnd_UGL_FlareGreen_F", //Do we need this? Seems like vanilla
 	"6Rnd_GreenSignal_F",
 	"6Rnd_RedSignal_F"
@@ -415,8 +323,7 @@ _ACE_grenades_Weapons = [
 	"ACE_HandFlare_WhiteMuzzle",
 	"ACE_HandFlare_RedMuzzle",
 	"ACE_HandFlare_GreenMuzzle",
-	"ACE_HandFlare_YellowMuzzle",
-	"ACE_M84Muzzle"
+	"ACE_HandFlare_YellowMuzzle"
 ];
 
 // -------------------------------------------------------------------
