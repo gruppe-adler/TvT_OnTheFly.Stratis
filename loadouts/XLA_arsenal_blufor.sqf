@@ -153,7 +153,6 @@ _ACE_interaction_Weapons = [
 	"ACE_RangeTable_82mm",
 	"ACE_MapTools",
 	"ACE_wirecutter",
-	"ACE_Kestrel4500",
 	"ACE_Cellphone",
 	"ACE_DeadManSwitch"
 ];
@@ -267,6 +266,7 @@ _availableMagazines = [
 	"Chemlight_yellow",
 	"Chemlight_blue",
 
+	"10Rnd_77x56_SMLE",
 	"rhsusf_mag_7x45acp_MHP",
 	"5Rnd_792x57_Kar98",
 	"rhsusf_weap_m1911a1",
