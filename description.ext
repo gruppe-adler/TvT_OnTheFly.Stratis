@@ -119,6 +119,15 @@ class Params
 		default = 0;
 		isGlobal = 0;
 	};
+	
+	class BFT
+	{
+		title = "Enables Bluforcetrackein";
+		values[] = {false, true};
+		texts[] = {"no","yes"};
+		default = 0;
+		isGlobal = 0;
+	};
 };
 
 class CfgSounds
