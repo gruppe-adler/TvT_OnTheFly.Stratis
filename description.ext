@@ -122,11 +122,10 @@ class Params
 	
 	class BFT
 	{
-		title = "Enables Bluforcetrackein";
+		title = "Enable Bluforcetrackign";
 		values[] = {false, true};
 		texts[] = {"no","yes"};
 		default = 0;
-		isGlobal = 0;
 	};
 };
 
