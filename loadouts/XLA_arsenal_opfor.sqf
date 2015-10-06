@@ -95,14 +95,13 @@ _ACE_grenades_Weapons = [
 	"ACE_HandFlare_WhiteMuzzle",
 	"ACE_HandFlare_RedMuzzle",
 	"ACE_HandFlare_GreenMuzzle",
-	"ACE_HandFlare_YellowMuzzle",
+	"ACE_HandFlare_YellowMuzzle"
 ];
 
 // -------------------------------------------------------------------
 // 		ACE Attach
 // -------------------------------------------------------------------
-_ACE_attach_Weapons = [
-];
+_ACE_attach_Weapons = [];
 _ACE_attach_Magazines = [
 	"Chemlight_green"
 ];
@@ -110,21 +109,15 @@ _ACE_attach_Magazines = [
 // -------------------------------------------------------------------
 // 		ACE Ballistics
 // -------------------------------------------------------------------
-_ACE_ballistics_Magazines = [
-	
-];
-_ACE_ballistics_attachments = [
-
-];
+_ACE_ballistics_Magazines = [];
+_ACE_ballistics_attachments = [];
 
 // -------------------------------------------------------------------
 // 		ACE Disposable (Launchers)
 // -------------------------------------------------------------------
 	//This is a design choice - do we want people saving spent tubes?
-_ACE_disposable_Weapons = [
-];
-_ACE_disposable_Magazines = [
-];
+_ACE_disposable_Weapons = [];
+_ACE_disposable_Magazines = [];
 
 // -------------------------------------------------------------------
 // 		ACE Explosives
@@ -195,8 +188,7 @@ _ACE_overheating_Weapons = [
 // -------------------------------------------------------------------
 // 		ACE Parachute (Altimeter)
 // -------------------------------------------------------------------
-_ACE_parachute_Weapons = [
-];
+_ACE_parachute_Weapons = [];
 
 // -------------------------------------------------------------------
 // 		ACE Vector
@@ -212,10 +204,8 @@ _ACE_vector_Weapons = [
 // -------------------------------------------------------------------
 
 _availableGuns 	= _availableGuns + [
-	
 	"Binocular",
 	"hgun_P07_F"
-
 	];
 _availableMagazines 	= [];
 
