@@ -444,7 +444,7 @@ fillOpforLoadouts = {
 	"rhs_6b27m_digi",
 	"rhs_6b27m_digi_bala",
 	"rhs_6b27m_digi_ess",
-	"rhs_6b27m_digi_ess_bala"
+	"rhs_6b27m_digi_ess_bala",
 	"rhs_fieldcap_digi",
 	"rhs_fieldcap_helm_digi"
 	];
