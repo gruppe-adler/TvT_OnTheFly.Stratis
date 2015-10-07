@@ -14,6 +14,7 @@ TIME_ACCELERATION = paramsArray select 7;
 IS_VANILLA = (paramsArray select 8) == 1;
 AR3PLAY_ENABLE_REPLAY = (paramsArray select 9) == 1;
 AR3PLAY_IS_STREAMABLE = (paramsArray select 10) == 1;
+BFT_Enabled = paramsArray select 11;
 
 if (isServer) then { setDate [2015, 2, 2, TIME_OF_DAY, 1]; };	//Zeit
 
