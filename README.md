@@ -2,4 +2,4 @@
 
 # TvT_OnTheFly.Stratis
 
-TvT für alle Maps
+Simple dynamic TvT scenario. OPFOR chooses a spawn location, symbolized by a barrel, which they have to defend.
