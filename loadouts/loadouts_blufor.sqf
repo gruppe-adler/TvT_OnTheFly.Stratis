@@ -329,7 +329,6 @@ fillBluforLoadouts = {
 
 	randWeaponBW1945 = 
 	[
-	
 	"hgun_P07_F",
 	"Auto762x51_MG3",
 	"rhsusf_weap_m1911a1",
@@ -338,9 +337,7 @@ fillBluforLoadouts = {
 	"Auto792x33_MP44"
 	];
 
-	randLauncherBW1945 = 
-	[
-	];
+	
 
 
 	loadoutInitBluforFinished = true;

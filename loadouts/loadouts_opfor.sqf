@@ -474,11 +474,6 @@ fillOpforLoadouts = {
 	"Smg762x25_PPSh41_B"
 	];
 
-	randLauncherRussian1945 = 
-	[
-	];
-
-
 	loadoutInitOpforFinished = true;
 };
 

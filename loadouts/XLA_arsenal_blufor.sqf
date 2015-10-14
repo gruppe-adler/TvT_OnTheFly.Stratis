@@ -18,6 +18,9 @@ _availableVests = [];
 _availableHeadgear = [];
 _availableBackpacks = [];
 _availableGuns = [];
+_availableItems = [];
+_availableAttachments = [];
+_availableMagazines = [];
 
 
 switch (BLUFORCE) do {
@@ -64,7 +67,7 @@ switch (BLUFORCE) do {
 			_availableVests = randVestBW1945;
 			_availableHeadgear = randHeadGearBW1945;
 			_availableBackpacks = randBackpackBW1945;
-			_availableGuns = randWeaponBW1945 + randLauncherBW1945;
+			_availableGuns = randWeaponBW1945;
 		};
 		
 		default {
@@ -83,7 +86,7 @@ _ACE_grenades_Magazines = [
 	"ACE_HandFlare_Green",
 	"ACE_HandFlare_Yellow",
 	"ACE_M84",
-	"3Rnd_UGL_FlareGreen_F", //Do we need this? Seems like vanilla
+	"3Rnd_UGL_FlareGreen_F",
 	"6Rnd_GreenSignal_F",
 	"6Rnd_RedSignal_F"
 ];
@@ -142,6 +145,8 @@ _ACE_explosives_Magazines = [
 _ACE_hearing_Weapons = [
 	"ACE_EarBuds"
 ];
+
+_availableAttachments = [""];
 
 // -------------------------------------------------------------------
 // 		ACE Interaction (Handcuffs)
@@ -315,7 +320,7 @@ _ACE_grenades_Magazines = [
 	"ACE_HandFlare_Red",
 	"ACE_HandFlare_Green",
 	"ACE_HandFlare_Yellow",
-	"3Rnd_UGL_FlareGreen_F", //Do we need this? Seems like vanilla
+	"3Rnd_UGL_FlareGreen_F",
 	"6Rnd_GreenSignal_F",
 	"6Rnd_RedSignal_F"
 ];
@@ -660,7 +665,16 @@ _availableMagazines = [
 _availableAttachments = _availableAttachments
 	+ _ACE_ballistics_attachments;
 
-_availableItems = _availableItems;
+
+availableTFARblufor = [];
+for [{_i=0}, {_i<999}, {_i=_i+1}] do
+{
+    availableTFARblufor = availableTFARblufor + ["tf_anprc152_" + str _i];
+};
+
+
+_availableItems = _availableItems + availableTFARblufor;
+
 
 _availableMagazines = _availableMagazines
 	+ _ACE_grenades_Magazines
@@ -699,9 +713,15 @@ if (isServer && !IS_VANILLA) then {
 
 	} else {
 		
+		//	
 
 		[_box, _availableBackpacks,true,false] call XLA_fnc_addVirtualBackpackCargo;
-		[_box, (_availableGuns + _availableAttachments +_availableItems + _availableUniforms + _availableVests + _availableHeadgear),true,false] call  XLA_fnc_addVirtualItemCargo;
+		[_box, (_availableGuns 
+			+ _availableAttachments 
+			+_availableItems 
+			+ _availableUniforms 
+			+ _availableVests 
+			+ _availableHeadgear),true,false] call  XLA_fnc_addVirtualItemCargo;
 		[_box, _availableMagazines,true,false] call XLA_fnc_addVirtualMagazineCargo;
 		[_box, (_availableGuns),true,false] call XLA_fnc_addVirtualWeaponCargo;
 		//[_box, [WEST_SIDE,FRIENDLY_SIDE],true,false] call XLA_fnc_addVirtualSideCargo;
