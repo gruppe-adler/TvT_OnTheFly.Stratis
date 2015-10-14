@@ -79,8 +79,11 @@ if (isServer) then {
 	publicVariable "RUSSIAN_MARKER_HIDDEN";
 	BLUFOR_AT_BARREL = false;
 	publicVariable "BLUFOR_AT_BARREL";
-};
 
+	REPLAY_FINISHED = false;
+	publicVariable "REPLAY_FINISHED";
+};
+[1] execVM "GRAD_replay\GRAD_replay_init.sqf";
 
 // respawn helper object, will be moved to objective location in teleport.sqf
 opfor_teleport = opfor_teamlead addAction["<t color=""#93E352"">" + localize "str_GRAD_choose_spawn_location",{[[[false], "mission_setup\teleport.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && !OPFOR_TELEPORTED"];
