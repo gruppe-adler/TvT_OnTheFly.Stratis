@@ -8,4 +8,4 @@ before_script:
 - mv sqf_validator.py tools/
 script:
 - python3 tools/sqf_validator.py
-
+sudo: false
