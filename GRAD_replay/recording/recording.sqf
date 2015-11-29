@@ -9,8 +9,7 @@ current_unit = [];
 current_daytime = 0;
 
 
-waitUntil {(BLUFOR_TELEPORT_TARGET select 0 != 0)};
-waitUntil {!isNil "funkwagen"};
+waitUntil {OPFOR_TELEPORTED};
 
 while{true} do
 {
@@ -104,27 +103,6 @@ while{true} do
 			_kindof = "KIA";
 		};
 
-		if(_unit == funkwagen) then 
-		{
-			_isSending = call funkwagenIsSending;
-
-			if (_isSending) then {
-				_kindof =  "loc_Transmitter";
-			} else {
-				_kindof = "loc_BusStop";
-			};
-		};
-
-		if(vehicle _unit == funkwagen) then 
-		{
-			_isSending = call funkwagenIsSending;
-
-			if (_isSending) then {
-				_kindof =  "loc_Transmitter";
-			} else {
-				_kindof = "loc_BusStop";
-			};
-		};
 
 
 
