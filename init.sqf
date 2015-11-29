@@ -82,8 +82,10 @@ if (isServer) then {
 
 	REPLAY_FINISHED = false;
 	publicVariable "REPLAY_FINISHED";
+
+	REPLAY_SPEED = 0.02;
 };
-[1] execVM "GRAD_replay\GRAD_replay_init.sqf";
+[2] execVM "GRAD_replay\GRAD_replay_init.sqf";
 
 // respawn helper object, will be moved to objective location in teleport.sqf
 opfor_teleport = opfor_teamlead addAction["<t color=""#93E352"">" + localize "str_GRAD_choose_spawn_location",{[[[false], "mission_setup\teleport.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && !OPFOR_TELEPORTED"];

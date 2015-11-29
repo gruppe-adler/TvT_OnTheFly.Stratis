@@ -21,7 +21,11 @@ class Mission
 		"ace_respawn",
 		"ace_vehiclelock",
 		"ace_winddeflection",
-		"ace_captives"
+		"ace_captives",
+		"ace_repair",
+		"ace_cargo",
+		"3DEN",
+		"a3_modules_f_curator_curator"
 	};
 	addOnsAuto[]=
 	{
@@ -30,6 +34,8 @@ class Mission
 		"A3_Characters_F_OPFOR",
 		"ace_common",
 		"ace_nametags",
+		"ace_repair",
+		"ace_cargo",
 		"ace_advanced_ballistics",
 		"ace_map",
 		"ace_hearing",
@@ -40,6 +46,8 @@ class Mission
 		"ace_respawn",
 		"ace_vehiclelock",
 		"ace_winddeflection",
+		"3DEN",
+		"a3_modules_f_curator_curator",
 		"A3_Soft_F_HEMTT",
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Supplies_F_Heli_CargoNets",
@@ -66,7 +74,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=6;
+		items=8;
 		class Item0
 		{
 			side="WEST";
@@ -381,10 +389,10 @@ class Mission
 			side="LOGIC";
 			class Vehicles
 			{
-				items=2;
+				items=4;
 				class Item0
 				{
-					position[]={1598.1364,0.26130158,6038.9531};
+					position[]={1514.1428,-0.0003446987,5997.5591};
 					class args
 					{
 						items=3;
@@ -416,7 +424,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1579.28,-18.197323,5974.7646};
+					position[]={1516.9882,-0.00042889244,5965.9238};
 					class args
 					{
 						items=4;
@@ -451,6 +459,56 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 				};
+				class Item2
+				{
+					position[]={1548.8611,-0.00053943286,5997.9121};
+					class args
+					{
+						items=3;
+						class Item0
+						{
+							value="";
+							parentCls="ACE_moduleAddSpareParts";
+							typeName="List";
+						};
+						class Item1
+						{
+							value="ACE_Wheel";
+							parentCls="ACE_moduleAddSpareParts";
+							typeName="Part";
+						};
+						class Item2
+						{
+							value="1";
+							parentCls="ACE_moduleAddSpareParts";
+							typeName="Amount";
+						};
+					};
+					id=26;
+					side="LOGIC";
+					vehicle="ACE_moduleAddSpareParts";
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+				class Item3
+				{
+					position[]={1551.2722,0.00019816018,6016.3984};
+					class args
+					{
+						items=1;
+						class Item0
+						{
+							value="1";
+							parentCls="ACE_moduleCargoSettings";
+							typeName="enable";
+						};
+					};
+					id=27;
+					side="LOGIC";
+					vehicle="ACE_moduleCargoSettings";
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
 			};
 		};
 		class Item3
@@ -461,7 +519,7 @@ class Mission
 				items=9;
 				class Item0
 				{
-					position[]={1674.3248,0.00045275345,5907.3691};
+					position[]={1529.647,0.0012368285,5861.9561};
 					class args
 					{
 						items=9;
@@ -520,7 +578,7 @@ class Mission
 							typeName="simulationRadius";
 						};
 					};
-					id=26;
+					id=28;
 					side="LOGIC";
 					vehicle="ace_advanced_ballistics_ModuleSettings";
 					leader=1;
@@ -529,7 +587,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1621.9063,-11.182812,5863.0142};
+					position[]={1625.5232,0.00060035387,5822.022};
 					class args
 					{
 						items=2;
@@ -546,7 +604,7 @@ class Mission
 							typeName="HideAiGroups";
 						};
 					};
-					id=27;
+					id=29;
 					side="LOGIC";
 					vehicle="ACE_ModuleBlueForceTracking";
 					lock="UNLOCKED";
@@ -554,7 +612,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={1581.0081,-15.290758,5841.125};
+					position[]={1578.9987,-7.3212374e-005,5821.4326};
 					class args
 					{
 						items=1;
@@ -565,7 +623,7 @@ class Mission
 							typeName="EnableCombatDeafness";
 						};
 					};
-					id=28;
+					id=30;
 					side="LOGIC";
 					vehicle="ACE_ModuleHearing";
 					lock="UNLOCKED";
@@ -573,7 +631,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={1617.874,-10.150369,5816.9316};
+					position[]={1600.5931,-0.0011537771,5820.9512};
 					class args
 					{
 						items=1;
@@ -584,7 +642,7 @@ class Mission
 							typeName="EnableTeamManagement";
 						};
 					};
-					id=29;
+					id=31;
 					side="LOGIC";
 					vehicle="ACE_ModuleInteraction";
 					lock="UNLOCKED";
@@ -592,7 +650,7 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={1545.8701,-19.793163,5935.5938};
+					position[]={1506.4856,-0.00043076527,5905.4526};
 					class args
 					{
 						items=4;
@@ -621,7 +679,7 @@ class Mission
 							typeName="MapShowCursorCoordinates";
 						};
 					};
-					id=30;
+					id=32;
 					side="LOGIC";
 					vehicle="ACE_ModuleMap";
 					lock="UNLOCKED";
@@ -629,7 +687,7 @@ class Mission
 				};
 				class Item5
 				{
-					position[]={1616.146,-14.619581,5959.2114};
+					position[]={1547.424,0.001224922,5944.7437};
 					class args
 					{
 						items=1;
@@ -640,7 +698,7 @@ class Mission
 							typeName="MapDataAvailable";
 						};
 					};
-					id=31;
+					id=33;
 					side="LOGIC";
 					vehicle="ace_microdagr_dagrModule";
 					lock="UNLOCKED";
@@ -648,7 +706,7 @@ class Mission
 				};
 				class Item6
 				{
-					position[]={1661.4274,-0.16746354,5947.3862};
+					position[]={1553.7227,-0.00060020917,5916.0391};
 					class args
 					{
 						items=2;
@@ -665,7 +723,7 @@ class Mission
 							typeName="allowSurrender";
 						};
 					};
-					id=32;
+					id=34;
 					side="LOGIC";
 					vehicle="ace_captives_moduleSettings";
 					lock="UNLOCKED";
@@ -673,7 +731,7 @@ class Mission
 				};
 				class Item7
 				{
-					position[]={1594.2518,-14.189259,5913.9219};
+					position[]={1613.5422,0.00035037496,5857.6582};
 					class args
 					{
 						items=13;
@@ -756,7 +814,7 @@ class Mission
 							typeName="keepLocalSettingsSynced";
 						};
 					};
-					id=33;
+					id=35;
 					side="LOGIC";
 					vehicle="ACE_moduleMedicalSettings";
 					lock="UNLOCKED";
@@ -764,7 +822,7 @@ class Mission
 				};
 				class Item8
 				{
-					position[]={1591.0905,-15.314562,5941.1094};
+					position[]={1505.4893,-0.0014145009,5936.2861};
 					class args
 					{
 						items=3;
@@ -787,7 +845,7 @@ class Mission
 							typeName="amountOfReviveLives";
 						};
 					};
-					id=34;
+					id=36;
 					side="LOGIC";
 					vehicle="ACE_moduleReviveSettings";
 					lock="UNLOCKED";
@@ -803,7 +861,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={1469.8341,-0.042457931,5972.4604};
+					position[]={1454.5625,0.00028526934,5951.1606};
 					class args
 					{
 						items=2;
@@ -820,7 +878,7 @@ class Mission
 							typeName="RemoveDeadBodiesDisconnected";
 						};
 					};
-					id=35;
+					id=37;
 					side="LOGIC";
 					vehicle="ACE_ModuleRespawn";
 					leader=1;
@@ -852,7 +910,7 @@ class Mission
 							typeName="DefaultLockpickStrength";
 						};
 					};
-					id=36;
+					id=38;
 					side="LOGIC";
 					vehicle="ACE_VehicleLock_ModuleSetup";
 					lock="UNLOCKED";
@@ -868,7 +926,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1496.3314,-27.401857,5842.8535};
+					position[]={1509.1918,0.000569397,5861.7422};
 					class args
 					{
 						items=2;
@@ -885,9 +943,101 @@ class Mission
 							typeName="simulationRadius";
 						};
 					};
-					id=37;
+					id=39;
 					side="LOGIC";
 					vehicle="ace_winddeflection_ModuleSettings";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item6
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1627.2281,-13.571867,5954.5098};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="#adminLogged";
+							parentCls="ModuleCurator_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Name";
+						};
+						class Item2
+						{
+							value="2";
+							parentCls="ModuleCurator_F";
+							typeName="Addons";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Forced";
+						};
+					};
+					id=40;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item7
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1645.3129,-0.0001773542,5954.9111};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="#adminVoted";
+							parentCls="ModuleCurator_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Name";
+						};
+						class Item2
+						{
+							value="2";
+							parentCls="ModuleCurator_F";
+							typeName="Addons";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Forced";
+						};
+					};
+					id=41;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
@@ -902,7 +1052,7 @@ class Mission
 		{
 			position[]={1844.2902,5.2536268,6127.4043};
 			azimut=163.319;
-			id=38;
+			id=42;
 			side="EMPTY";
 			vehicle="B_Truck_01_covered_F";
 			leader=1;
@@ -915,7 +1065,7 @@ class Mission
 		{
 			position[]={1852.9342,5.3323355,6128.8511};
 			azimut=163.319;
-			id=39;
+			id=43;
 			side="EMPTY";
 			vehicle="Land_MapBoard_F";
 			leader=1;
@@ -926,7 +1076,7 @@ class Mission
 		class Item2
 		{
 			position[]={1515.3201,5.5,5015.7935};
-			id=40;
+			id=44;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
@@ -936,7 +1086,7 @@ class Mission
 		class Item3
 		{
 			position[]={1850.7795,5.3208466,6121.436};
-			id=41;
+			id=45;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;

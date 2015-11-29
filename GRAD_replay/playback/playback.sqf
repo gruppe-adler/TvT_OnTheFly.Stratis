@@ -1,7 +1,7 @@
 #include "\z\ace\addons\main\script_component.hpp"
+[] execVM "CSSA3\exitCSSA3.sqf";
 
-[{["Starting Replay."] call EFUNC(common,displayTextStructured);},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
-[{openMap [true,false];},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
+[{[] execVM "GRAD_replay\playback\preparePlayback.sqf";},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
 
 if (isServer || isDedicated) then {
 
@@ -176,7 +176,7 @@ if (isServer || isDedicated) then {
 			REPLAY_FINISHED = true; publicVariable "REPLAY_FINISHED";
 		};
 		
-		sleep 1;
+		sleep REPLAY_SPEED;
 
 		};
 	};

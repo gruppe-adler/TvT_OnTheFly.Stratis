@@ -9,7 +9,8 @@ current_unit = [];
 current_daytime = 0;
 
 
-waitUntil {BLUFOR_TELEPORTED};
+waitUntil {(BLUFOR_TELEPORT_TARGET select 0 != 0)};
+waitUntil {!isNil "funkwagen"};
 
 while{true} do
 {
@@ -29,7 +30,9 @@ while{true} do
 		if (_side == east) then { _side_prefix = "o_";};
 		if (_side == independent) then { _side_prefix = "n_";};
 		if (_side == civilian) then { _side_prefix = "c_";};
-		_kindof = _side_prefix + "unknown";
+		
+		_kindof = "c_unknown";
+
 		_dir = (getDir _unit);
 		_hide = false;
 		
@@ -49,27 +52,27 @@ while{true} do
 			_hide = true;
 		};
 
-		if(vehicle _unit == _unit) then 
+		if(vehicle _unit == _unit && _side_prefix != "") then 
 		{
 			_kindof =  "mil_triangle";
 		};
-		if((vehicle _unit isKindOf "Car") && (_side != civilian)) then 
+		if((vehicle _unit isKindOf "Car") && (_side != civilian) && _side_prefix != "") then 
 		{
 			_kindof =  _side_prefix + "motor_inf";
 		};
-		if((vehicle _unit isKindOf "Plane") && (_side != civilian)) then 
+		if((vehicle _unit isKindOf "Plane") && (_side != civilian) && _side_prefix != "") then 
 		{
 			_kindof =  _side_prefix + "plane";
 		};
-		if((vehicle _unit isKindOf "Helicopter") && (_side != civilian)) then 
+		if((vehicle _unit isKindOf "Helicopter") && (_side != civilian) && _side_prefix != "") then 
 		{
 			_kindof =  _side_prefix + "air";
 		};
-		if((vehicle _unit isKindOf "Tank") && (_side != civilian)) then 
+		if((vehicle _unit isKindOf "Tank") && (_side != civilian) && _side_prefix != "") then 
 		{
 			_kindof =  _side_prefix + "armor";
 		};
-		if(vehicle _unit isKindOf "Ship") then 
+		if(vehicle _unit isKindOf "Ship" && _side_prefix != "") then 
 		{	
 			if (side _unit == civilian) then {
 			 _kindof =  _side_prefix + "ship";
@@ -78,7 +81,7 @@ while{true} do
 			};
 		};
 
-		if(vehicle _unit isKindOf "StaticMortar") then 
+		if(vehicle _unit isKindOf "StaticMortar" && _side_prefix != "") then 
 		{
 			_kindof =  _side_prefix + "mortar";
 		};
@@ -87,12 +90,12 @@ while{true} do
 			_kindof = "loc_Tree";
 		};
 
-		if (_unit isKindOf "TK_WarfareBUAVterminal_Base_EP1") then {
+		if (_unit isKindOf "Land_Cargo_House_V1_F") then {
 			_side = east;
 			_kindof = "mil_start";
 		};
 
-		if (_unit isKindOf "US_WarfareBUAVterminal_Base_EP1") then {
+		if (_unit isKindOf "Land_Cargo_House_V3_F") then {
 			_side = west;
 			_kindof = "mil_start";
 		};
