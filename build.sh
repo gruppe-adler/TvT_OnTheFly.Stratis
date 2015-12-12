@@ -28,6 +28,7 @@ islands=(
 	vt5
 	xcam_prototype
 	pja305 # N'ziwasogo
+	Namalsk	
 )
 
 ### AS AS USER, DONT EDIT BELOW THIS LINE ###

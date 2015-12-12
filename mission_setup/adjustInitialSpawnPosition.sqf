@@ -16,6 +16,7 @@ private ['_islands', '_targetPositions', '_positionsForCurrentWorld', '_targetPo
 // Capraia,
 // Kunduz
 // N'Ziwasogo  
+// Namalsk
 // Sarahni, 
 // Sarugao, 
 // Shapur, 
@@ -43,6 +44,7 @@ islands = [
 	'IsolaDiCapraia',
 	'Kunduz',
 	'pja305',
+	'Namalsk',
 	'Sara',
 	'Sara_dbe1',
 	'saru',
@@ -71,6 +73,7 @@ targetPositions = [
 	[ [1240, 9450], [1240, 8450], true, 'IsolaDiCapraia'],
 	[ [-500, -500], [-500, -900], false, 'Kunduz'],
 	[ [12870, 780], [13830, 780], true, 'pja305'],
+	[ [5235, 5415], [5235, 5720], true, 'Namalsk'],
 	[ [18080, 18535], [18200, 18060], true, 'Sara'],
 	[ [18080, 18535], [18200, 18060], true, 'Sara_dbe1'],
 	[ [9800, 4700], [9800, 3800], true, 'saru'],
