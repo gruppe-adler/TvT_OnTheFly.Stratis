@@ -28,7 +28,7 @@ if (isClass(configFile >> (_this select 0) >> task_force_radio)) then {
  if (GVAR(BFT_Enabled)) then {
         GVAR(BFT_markers) = [];
  [FUNC(blueForceTrackingUpdate), GVAR(BFT_Interval), []] call CBA_fnc_addPerFrameHandler;
-
+}
 
 if (OPFOR_TELEPORTED) then {
 	[player] execVM "onPlayerRespawn.sqf";
