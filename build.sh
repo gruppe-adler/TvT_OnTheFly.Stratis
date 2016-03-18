@@ -7,6 +7,7 @@ missionname="TvT_OnTheFly"
 islands=(
 	Altis
 	Bornholm
+	Bootcamp_ACR
 	Chernarus
 	Chernarus_Summer
 	FDF_Isle1_a
@@ -14,9 +15,11 @@ islands=(
 	Gorgona
 	IsolaDiCapraia
 	Kunduz
+	namalsk
 	Panthera3
 	Sara_dbe1
 	Shapur_BAF
+	SugarLake
 	Stratis
 	Thirsk
 	Woodland_ACR
@@ -28,7 +31,6 @@ islands=(
 	vt5
 	xcam_prototype
 	pja305 # N'ziwasogo
-	Namalsk	
 )
 
 ### AS AS USER, DONT EDIT BELOW THIS LINE ###
