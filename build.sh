@@ -16,6 +16,7 @@ islands=(
 	IsolaDiCapraia
 	Kunduz
 	namalsk
+	ProvingGrounds_PMC
 	Panthera3
 	Sara_dbe1
 	Shapur_BAF
