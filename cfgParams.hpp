@@ -24,7 +24,7 @@ class Params
             "USA - Army",
             "Russia - MSV",
             "Independent - Eastern European Nationalists",
-            "Independent - PMC - (requires CUP Vehicles)",
+            "Independent - PMC Special Forces - (requires CUP Vehicles)",
             "Independent - Middle Eastern Terrorists - (requires Project Opfor)",
             "GER - Heer - (requires CUP Vehicles, GA Mod, ARC Ger)"
         };
@@ -39,7 +39,7 @@ class Params
             "USA - Army",
             "Russia - MSV",
             "Independent - Eastern European Nationalists",
-            "Independent - PMC - (requires CUP Vehicles)",
+            "Independent - PMC Special Forces - (requires CUP Vehicles)",
             "Independent - Middle Eastern Terrorists - (requires Project Opfor)",
             "GER - Heer - (requires CUP Vehicles, GA Mod, ARC Ger)"
         };

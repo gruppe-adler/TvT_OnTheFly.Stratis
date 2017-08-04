@@ -7,7 +7,9 @@
 
 #include "cfgParams.hpp"
 #include "cfgIslands.hpp"
+#include "cfgFactions.hpp"
 #include "dialogs\cfgDialogs.hpp"
+#include "buyables\cfgBuyables.hpp"
 
 //HEADER =======================================================================
 class Header

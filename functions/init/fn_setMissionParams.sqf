@@ -6,6 +6,7 @@ OTF_BLUFORSTARTDIST = "BluforSpawnDist" call BIS_fnc_getParamValue;
 
 OTF_WEATHERSETTING = "WeatherSetting" call BIS_fnc_getParamValue;
 OTF_TIMEOFDAY = "TimeOfDay" call BIS_fnc_getParamValue;
+OTF_MONEYFACTOR = "MoneyFactor" call BIS_fnc_getParamValue;
 
 OTF_BLUFORFACTION = [
     "us_army",

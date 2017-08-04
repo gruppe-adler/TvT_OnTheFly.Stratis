@@ -3,6 +3,7 @@
 [] call otf_init_fnc_setMissionParams;
 [] call otf_init_fnc_setIslandParams;
 [] call otf_init_fnc_pubVars;
+[] call otf_groupsettings_fnc_setGroupSettings;
 
 [{!isNull player || isDedicated},{
 
@@ -24,6 +25,7 @@
     [{missionNamespace getVariable ["otf_init_pubVarsDone", false]}, {
         [] call otf_choosePlayArea_fnc_chooseOpforSpawn;
         [] call otf_choosePlayArea_fnc_chooseBluforSpawn;
+        [] call otf_setup_fnc_setMoney;
     }, []] call CBA_fnc_waitUntilAndExecute;
 
     //setup play area, spawn target, create markers, tasks
@@ -43,11 +45,17 @@
         [EAST] call otf_setup_fnc_teleportSide;
     }, []] call CBA_fnc_waitUntilAndExecute;
 
+    //create commandvehicle
+    [{missionNamespace getVariable ["otf_init_bluforSpawnChosen", false] && {!(OTF_BLUFORSPAWNPOS isEqualTo [0,0,0])}}, {
+        [] call otf_setup_fnc_createCommandVehicle;
+    }, []] call CBA_fnc_waitUntilAndExecute;
+
     //teleport blufor
-    [{missionNamespace getVariable ["otf_init_bluforSpawnChosen", false]}, {
+    [{missionNamespace getVariable ["otf_setup_cvCreated", false]}, {
         [WEST] call otf_setup_fnc_teleportSide;
         [{[] call otf_setup_fnc_startGame}, [], 10] call CBA_fnc_waitAndExecute;
     }, []] call CBA_fnc_waitUntilAndExecute;
+
 
     //start game
     [{missionNamespace getVariable ["otf_init_gamestarted", false]}, {

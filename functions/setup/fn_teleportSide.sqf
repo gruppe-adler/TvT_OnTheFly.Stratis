@@ -40,8 +40,8 @@ if !([player] call otf_common_fnc_isCommander) then {
                 {
                     [false] call otf_choosePlayArea_fnc_showWeatherPreview;
                     openMap [false, false];
-                    _markObject = if (side player == WEST) then {bluforcommander} else {OTF_TARGETOBJECT};
-                    _markerDescription = if (side player == WEST) then {"Commander"} else {"Device"};
+                    _markObject = if (side player == WEST) then {OTF_COMMANDVEHICLE} else {OTF_TARGETOBJECT};
+                    _markerDescription = if (side player == WEST) then {"Commandvehicle"} else {"Device"};
                     [_markObject,_markerDescription,30] call otf_common_fnc_temp3dMarker;
                 };
             } else {{}};

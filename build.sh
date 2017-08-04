@@ -6,31 +6,23 @@ missionname="TvT_OnTheFly"
 
 islands=(
 	Altis
-	Bornholm
-	Bootcamp_ACR
+	Beketov
 	Chernarus
 	Chernarus_Summer
-	FDF_Isle1_a
-	Esseker
-	Gorgona
-	IsolaDiCapraia
-	Kunduz
-	namalsk
-	ProvingGrounds_PMC
+	Intro
+	fallujah
+	lythium
+	Malden
+	mbg_celle2
+	Porto
+	Stratis
 	Sara_dbe1
 	Shapur_BAF
-	SugarLake
-	Stratis
-	Thirsk
+	Takistan
+	Tanoa
+	utes
 	Woodland_ACR
 	Zargabad
-	clafghan
-	fata
-	saru
-	takistan
-	vt5
-	xcam_prototype
-	pja305 # N'ziwasogo
 )
 
 ### AS AS USER, DONT EDIT BELOW THIS LINE ###
@@ -72,11 +64,11 @@ mkdir -p "$builddir"
 
 tmpdir="$builddir/tmpdir"
 
-
-
 cp -r ./ "$tmpdir"
 rm "$tmpdir/build.sh"
+rm "$tmpdir/build_new.sh"
 rm "$tmpdir/cpbo.exe"
+rm "$tmpdir/README.md"
 rm -fr "$tmpdir/.git"
 rm "$tmpdir/.gitattributes"
 rm "$tmpdir/.gitignore"
@@ -85,7 +77,7 @@ echo "building PBO...";
 $cpbo_path -y -p "$tmpdir" > /dev/null
 echo "done (probably)"
 
-pbofilename="${tmpdir}.pbo" 
+pbofilename="${tmpdir}.pbo"
 
 if [[ ! -f "$pbofilename" ]]; then
 	echo "örks"
