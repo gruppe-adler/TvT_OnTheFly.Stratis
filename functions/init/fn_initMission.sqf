@@ -26,6 +26,7 @@
         [] call otf_choosePlayArea_fnc_chooseOpforSpawn;
         [] call otf_choosePlayArea_fnc_chooseBluforSpawn;
         [] call otf_setup_fnc_setMoney;
+        [] call otf_setup_fnc_setRandomFortifications;
     }, []] call CBA_fnc_waitUntilAndExecute;
 
     //setup play area, spawn target, create markers, tasks

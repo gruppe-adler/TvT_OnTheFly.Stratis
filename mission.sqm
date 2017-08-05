@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=242;
+		nextID=275;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=5;
+		nextID=6;
 	};
 	class Camera
 	{
-		pos[]={1810.3169,15.469933,5690.7803};
-		dir[]={0.79657638,-0.55488729,-0.23996903};
-		up[]={0.53130633,0.8319214,-0.16005632};
-		aside[]={-0.28845015,-8.3236955e-008,-0.9575063};
+		pos[]={1865.12,15.983239,5711.5337};
+		dir[]={-0.75159913,-0.45421246,-0.47842428};
+		up[]={-0.38319176,0.89087987,-0.24391851};
+		aside[]={-0.53700906,-1.3574027e-007,0.84363639};
 	};
 };
 binarizationWanted=0;
@@ -53,14 +53,13 @@ addons[]=
 	"A3_Ui_F",
 	"A3_Characters_F",
 	"asr_ai3_cfgcamouflage",
-	"asr_ai3_cfgvehicles",
-	"po_factions_me"
+	"asr_ai3_cfgvehicles"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=24;
+		items=23;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -222,12 +221,6 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item23
-		{
-			className="po_factions_me";
-			name="po_factions_me";
-			author="Leight, Keeway";
-		};
 	};
 };
 randomSeed=4935129;
@@ -261,7 +254,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=22;
+		items=21;
 		class Item0
 		{
 			dataType="Layer";
@@ -2443,11 +2436,11 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={264.4187,-64.994736,1065.6465};
+						position[]={264.41901,-64.994972,1065.646};
 					};
 					id=115;
 					type="ace_viewdistance_ModuleSettings";
-					atlOffset=58.400261;
+					atlOffset=58.400002;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2465,7 +2458,7 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=8000;
+									value=4500;
 								};
 							};
 						};
@@ -2496,11 +2489,11 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1064.5012,-57.912491,867.24194};
+						position[]={1064.501,-57.91301,867.242};
 					};
 					id=109;
 					type="ace_weather_ModuleSettings";
-					atlOffset=16.023483;
+					atlOffset=16.023003;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2860,7 +2853,7 @@ class Mission
 				};
 			};
 			id=134;
-			atlOffset=146.86745;
+			atlOffset=146.86743;
 		};
 		class Item1
 		{
@@ -9805,21 +9798,6 @@ class Mission
 			};
 			id=222;
 			atlOffset=39.468708;
-		};
-		class Item21
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={1824.1555,7.6644082,5684.1929};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=241;
-			type="LOP_ISTS_OPF_Offroad_M2";
 		};
 	};
 	class Connections

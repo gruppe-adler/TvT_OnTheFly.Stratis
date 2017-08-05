@@ -8,6 +8,7 @@
 #include "cfgParams.hpp"
 #include "cfgIslands.hpp"
 #include "cfgFactions.hpp"
+#include "cfgStartingFortifications.hpp"
 #include "dialogs\cfgDialogs.hpp"
 #include "buyables\cfgBuyables.hpp"
 
@@ -99,6 +100,7 @@ class CfgGradFortifications {
     packUpTimeFactor = 0.01;
     fortificationOwnerType = "SIDE";
     demolitionTimeFactor = 1.6;
+    playerInventorySize = 99999;
 
     class Fortifications {
 

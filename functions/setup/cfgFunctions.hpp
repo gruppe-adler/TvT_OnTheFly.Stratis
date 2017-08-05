@@ -10,6 +10,7 @@ class otf_setup {
         class resetBuildTimes {};
         class setMapRespawnPos {};
         class setMoney {};
+        class setRandomFortifications {};
         class setTime {};
         class setWeather {};
         class startGame {};
