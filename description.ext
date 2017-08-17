@@ -1,136 +1,120 @@
-OnLoadMission = "TvT_OnTheFly";
-author = "Nomisum/XiviD für Gruppe Adler";  //appears as author in overview and loading screen
-overviewText = "Aufständische gegen Bundeswehr"; //appears in overview and loading screen
-onLoadName = "TvT_OnTheFly"; //mission name for loading screen only
-overviewPicture = ""; //mission picture for loading screen only
-onLoadMissionTime = True;
-respawnDelay = 3; // NOTE: ar3play relies on this being slower than the ar3play loop!
-disabledAI = 0; //1
-enableDebugConsole = 1;
-loadScreen = "pic\loading.jpg";
+#define MODULES_DIRECTORY node_modules
 
-//respawnDelay = 9999999; // 9999999 or greater = No Respawn
-//Changes respawn, respawnDialog and respawnTemplates parameters.
+#include "node_modules\grad-listBuymenu\grad_listBuymenu.hpp"
+#include "node_modules\grad-moneymenu\grad_moneymenu.hpp"
+#include "node_modules\grad-scoreboard\grad_scoreboard.hpp"
+#include "node_modules\grad-fortifications\grad_fortifications.hpp"
 
-// IMPORTANT ABOVE PLANK
-#include "CSSA3\CSSA3_header.hpp"
+#include "cfgParams.hpp"
+#include "cfgIslands.hpp"
+#include "cfgFactions.hpp"
+#include "cfgStartingFortifications.hpp"
+#include "dialogs\cfgDialogs.hpp"
+#include "buyables\cfgBuyables.hpp"
 
-#include "plank\plank.h"
-//#include "GUI\defines.hpp"  // cant be in, when cssa3_header.hpp is included!
-
-
-
+//HEADER =======================================================================
 class Header
 {
-	gameType = Seize;
-	minPlayers = 3;
-	maxPlayers = 24;
+    gameType = Seize;
+    minPlayers = 2;
+    maxPlayers = 84;
 };
 
+//LOAD SCREEN ==================================================================
+onLoadName = "ON THE FLY";
+onLoadMission = "";
+author = "Nomisum & McDiod für Gruppe Adler";
+loadScreen = "data\loadpic.paa";
 
-class Params
-{
-	class TimeOfDay
-	{
-		title = "Time of Day";
-		values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
-		texts[] = {"00:00","01:00","02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"};
-		default = 12;
-	};
+//MISC =========================================================================
+respawn = 3;
+respawnDelay = 9999;
+respawnVehicleDelay = 0;
+respawnTemplates[] = {"Base"};
+respawnOnStart = -1;
+respawnDialog = 0;
+disabledAI = 0;
+enableDebugConsole = 1;
+allowFunctionsRecompile = 1;
 
-	class WeatherSetting
-    {
-		title = "Weather Settings";
-		values[] = {0,1,2,3};
-		texts[] = {"SUNNY DAY","RAINY DAY","CLOUDY DAY","RANDOM WEATHER"};
-		default = 0;
+//FUNCTIONS ====================================================================
+class CfgFunctions {
+    #include "functions\cfgFunctions.hpp"
+    #include "dialogs\cfgFunctions.hpp"
+
+    #include "node_modules\grad-loadout\cfgFunctions.hpp"
+    #include "node_modules\grad-listbuymenu\cfgFunctions.hpp"
+    #include "node_modules\grad-moneymenu\cfgFunctions.hpp"
+    #include "node_modules\grad-winrateTracker\cfgFunctions.hpp"
+    #include "node_modules\grad-scoreboard\cfgFunctions.hpp"
+    #include "node_modules\grad-fortifications\cfgFunctions.hpp"
+};
+
+//SOUNDS =======================================================================
+class CfgSounds {
+
+};
+
+//WEAPONS THAT CAN HAVE MAGNIFYING SCOPES ======================================
+class CfgScopeWeapons {
+
+};
+
+//LOADOUTS =====================================================================
+class Loadouts {
+    resetLoadout = 0;
+    baseDelay = 10;
+    handleRadios = 1;
+
+    class Faction {
+        #include "node_modules\grad-factions-tvt\loadouts.hpp"
     };
-
-	class MBTVSAT
-	{
-		title = "One of those vehicles for each side";
-		values[] = {0, 1};
-		texts[] = {"HEMTT, Littlebird / Transporter, Tactical, Mortar","same but +MBT / same but +At4 Launchers"};
-		default = 0;
-	};
-
-	class BLUFORCE
-	{
-		title = "BLUFOR";
-		values[] = {0,1,2,3,4};
-		texts[] = {"BW Fleck","BW Tropen","US UCP","US OCP","BW 1945"};
-		default = 1;
-	};
-
-	class OPFORCE
-	{
-		title = "OPFOR";
-		values[] = {0,1,2,3,4,5};
-		texts[] = {"Taliban/Afghan Militia","Iraqi Terrorists","Eastern Rebels/Nationalists","Russians","African Pirates","Russians 1945"};
-		default = 2;
-	};
-
-	class AllowedSpawnDistanceMinimum
-	{
-		title = "Allowed Spawn Distance Minimum BLUFOR";
-		values[] = {1000,2000,3000};
-		texts[] = {"1km","2km","3km"};
-		default = 1000;
-	};
-
-	class AllowedSpawnDistanceMaximum
-	{
-		title = "Allowed Spawn Distance Maximum BLUFOR";
-		values[] = {4000,5000,6000};
-		texts[] = {"4km","5km","6km"};
-		default = 4000;
-	};
-
-	class Zeitbeschleunigung
-	{
-		title = "Time Acceleration";
-		values[] = {1,2,4,8,12};
-		texts[] = {"normal","2h in 1h","4h in 1h","8h in 1h","12h in 1h"};
-		default = 4;
-	};
-
-	class isVanilla
-	{
-		title = "Play without Gruppe Adler Modset";
-		values[] = {true, false};
-		texts[] = {"YES","NO"};
-		default = false;
-	};
-
-	class EnableReplay
-	{
-		title = "enable replay";
-		values[] = {false, true};
-		texts[] = {"no", "yes"};
-		default = true;
-		isGlobal = 0;
-	};
-
-	class IsStreamable
-	{
-		title = "enable live stream (needs 'enable replay')";
-		values[] = {false, true};
-		texts[] = {"no","yes"};
-		default = 0;
-		isGlobal = 0;
-	};
 };
 
-class CfgSounds
+//MONEY MENU ===================================================================
+class CfgGradMoneymenu {
+    canGiveDefault = 0;
+    canTransferToSidesDefault[] = {};
+    canTakeFromDeadDefault = 0;
+    canSendDirectlyDefault = 0;
+    canTakeFromSurrenderedDefault = 1;
+    startMoney = 0;
+    startBankBalance = 0;
+    atmObjects[] = {};
+};
+
+//WINRATE TRACKER ==============================================================
+class CfgWinrateTracker {
+    scoreBoardDuration = 16;                            //duration that the scoreboard will stay open
+    sortBy = "WINRATES";                                //what to sort by, can be "GAMES","WINS","LOSSES","WINRATES"
+    minGamesForSort = 5;                                //minimum number of games a player needs to have to be in the upper ranks
+    playerStatsHeadline = "PLAYER WINRATES";            //headline for scoreboard
+    teamStatsHeadline = "TEAM WINRATES";                //headline for team stats
+    missionName = "TvT_OnTheFly";                       //missionName that these stats are to be saved under (if not provided, actual mission name of current mission is used)
+};
+
+//FORTIFICATIONS ===============================================================
+class CfgGradFortifications {
+    canDemolishDefault = 1;
+    buildTimeFactor = 0.01;
+    packUpTimeFactor = 0.01;
+    fortificationOwnerType = "SIDE";
+    demolitionTimeFactor = 1.6;
+    playerInventorySize = 99999;
+
+    class Fortifications {
+
+    };
+};
+
+//NOTIFICATIONS ================================================================
+class CfgNotifications
 {
-	sounds[] = {};
-	class beam
-	{
-		// how the sound is referred to in the editor (e.g. trigger effects)
-		name = "beam";
-		// filename, volume, pitch
-		sound[] = {"sounds\beam.ogg", 1, 1};
-		// subtitle delay in seconds, subtitle text
-		titles[] = {1, ""};
-	};
+    class otf_notification {
+        title = "%1";
+        iconPicture = "\A3\ui_f\data\map\markers\military\warning_CA.paa";
+        description = "%2";
+        duration = 5;
+        priority = 0;
+    };
 };
