@@ -66,7 +66,6 @@ tmpdir="$builddir/tmpdir"
 
 cp -r ./ "$tmpdir"
 rm "$tmpdir/build.sh"
-rm "$tmpdir/build_new.sh"
 rm "$tmpdir/cpbo.exe"
 rm "$tmpdir/README.md"
 rm -fr "$tmpdir/.git"
