@@ -294,6 +294,16 @@ class CfgIslands {
 		};
 	};
 
+	class prei_khmaoch_luong {
+		displayName = "Prei Khmaoch Luong";
+		type = "tropic";
+		isWoodland = true;
+		spawnPosBlu[] = {8034,8372,0};
+		spawnPosOpf[] = {8284,8104,0};
+		previewCamPos[] = {3939,4968,0};
+		previewCamTarget[] = {3853,4930,0};
+	};
+
 	class Stratis {
 		displayName = "Stratis";
 		type = "mediterranean";

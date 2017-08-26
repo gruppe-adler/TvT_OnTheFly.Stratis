@@ -4,26 +4,8 @@
 cpbo_path="$1"
 missionname="TvT_OnTheFly"
 
-islands=(
-	Altis
-	Beketov
-	Chernarus
-	Chernarus_Summer
-	Intro
-	fallujah
-	lythium
-	Malden
-	mbg_celle2
-	Porto
-	Stratis
-	Sara_dbe1
-	Shapur_BAF
-	Takistan
-	Tanoa
-	utes
-	Woodland_ACR
-	Zargabad
-)
+islands=($(curl http://arma.gruppe-adler.de/userconfig/islands.txt))
+islands=("${islands[@]%%:*}")
 
 ### AS AS USER, DONT EDIT BELOW THIS LINE ###
 
