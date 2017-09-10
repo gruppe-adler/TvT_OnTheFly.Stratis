@@ -69,6 +69,14 @@ class rus_msv_w {
 			};
 		};
 
+		//assistant autorifleman
+		class Soldier_AAR_F: Soldier_F {
+			backpack = "rhs_assault_umbts";
+			addItemsToBackpack[] = {
+				LIST_2("rhs_100Rnd_762x54mmR_green")
+			};
+		};
+
         //medic
 		class Medic_F: Soldier_F {
 			backpack = "rhs_assault_umbts";

@@ -71,6 +71,16 @@ class ind_me_terrorists {
             };
 		};
 
+		//assistant autorifleman
+		class Soldier_AAR_F: Soldier_F {
+            uniform = "LOP_U_AM_Fatigue_02_6";
+            vest = "LOP_6sh46";
+            headgear = "LOP_H_Shemag_BLK";
+            addItemsToVest[] = {
+                LIST_6("rhs_30Rnd_762x39mm")
+            };
+		};
+
         //medic
 		class Medic_F: Soldier_F {
             uniform = "LOP_U_AM_Fatigue_02_2";

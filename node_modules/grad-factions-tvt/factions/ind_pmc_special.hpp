@@ -78,6 +78,14 @@ class ind_pmc_special {
             };
 		};
 
+		//assistant autorifleman
+		class Soldier_AAR_F: Soldier_F {
+            backpack = "B_TacticalPack_blk";
+            addItemsToBackpack[] = {
+                LIST_10("rhs_mag_30Rnd_556x45_Mk262_Stanag")
+            };
+		};
+
         //medic
 		class Medic_F: Soldier_F {
             backpack = "B_TacticalPack_blk";

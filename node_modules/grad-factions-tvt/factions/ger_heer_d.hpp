@@ -26,6 +26,11 @@ class ger_heer_d: ger_heer_w {
 			backpack = "ARC_GER_Kitbag_compact_Tropentarn";
 		};
 
+		//assistant autorifleman
+		class Soldier_AAR_F: Soldier_A_F {
+			backpack = "ARC_GER_Kitbag_compact_Tropentarn";
+		};
+
         //medic
 		class Medic_F: Medic_F {
 			backpack = "ARC_GER_Backpack_Tropentarn_Med";

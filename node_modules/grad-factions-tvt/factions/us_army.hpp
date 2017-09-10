@@ -76,6 +76,14 @@ class us_army {
 			};
 		};
 
+		//assistant autorifleman
+		class Soldier_AAR_F: Soldier_F {
+			backpack = "rhsusf_assault_eagleaiii_ocp";
+			addItemsToBackpack[] = {
+				LIST_2("rhs_200rnd_556x45_M_SAW")
+			};
+		};
+
         //medic
 		class Medic_F: Soldier_F {
 			vest = "rhsusf_iotv_ocp_Medic";

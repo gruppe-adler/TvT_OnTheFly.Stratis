@@ -26,6 +26,11 @@ class rus_msv_d: rus_msv_w {
 
         };
 
+        //assistant autorifleman
+        class Soldier_AAR_F: Soldier_AAR_F {
+
+        };
+
         //medic
         class Medic_F: Medic_F {
             vest = "rhsgref_6b23_khaki_medic";

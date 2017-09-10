@@ -72,6 +72,15 @@ class ger_heer_w {
             };
 		};
 
+		//assistant autorifleman
+		class Soldier_AAR_F: Soldier_F {
+            backpack = "ARC_GER_Kitbag_compact_Flecktarn";
+            addItemsToBackpack[] = {
+                LIST_2("rhs_200rnd_556x45_M_SAW"),
+                "rhs_200rnd_556x45_T_SAW"
+            };
+		};
+
         //medic
 		class Medic_F: Soldier_F {
             headgear = "ARC_GER_Flecktarn_Helmet_Medic";

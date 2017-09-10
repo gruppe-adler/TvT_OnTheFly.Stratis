@@ -85,6 +85,20 @@ class ind_eastern_nationalists {
             };
 		};
 
+		//assistant autorifleman
+		class Soldier_AAR_F: Soldier_F {
+            uniform = "rhsgref_uniform_flecktarn";
+            vest = "V_TacVest_blk";
+            headgear = "";
+            goggles = "G_Balaclava_blk";
+            primaryWeapon = "rhs_weap_m70b1";
+            backpack = "B_TacticalPack_oli";
+            addItemsToBackpack[] = {
+                LIST_2("rhs_100Rnd_762x54mmR"),
+                "rhs_100Rnd_762x54mmR_green"
+            };
+		};
+
         //medic
 		class Medic_F: Soldier_F {
             uniform = "rhsgref_uniform_woodland";
