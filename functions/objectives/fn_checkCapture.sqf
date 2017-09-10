@@ -20,7 +20,7 @@ if (!isServer) exitWith {};
             [otf_setup_taskCaptureBlu,"SUCCEEDED",false] call BIS_fnc_taskSetState;
             [otf_setup_taskKillBlu,"SUCCEEDED",false] call BIS_fnc_taskSetState;
 
-            missionNamespace setVariable ["otf_gameEnded", [WEST, "DEVICE CAPTURED!"], true];
+            missionNamespace setVariable ["otf_gameEnded", [WEST, "BARREL CAPTURED!"], true];
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         };
     } else {

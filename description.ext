@@ -52,7 +52,11 @@ class CfgFunctions {
 
 //SOUNDS =======================================================================
 class CfgSounds {
-
+    class otf_beam {
+		name = "otf_beam";
+		sound[] = {"data\beam.ogg",1,1};
+		titles[] = {0,""};
+	};
 };
 
 //WEAPONS THAT CAN HAVE MAGNIFYING SCOPES ======================================

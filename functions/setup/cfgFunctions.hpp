@@ -4,6 +4,7 @@ class otf_setup {
         class createCommandVehicle {};
         class createTasks {};
         class createTrigger {};
+        class disableAI {};
         class opforBuyAction {};
         class playZone {};
         class playZoneMarkers {};

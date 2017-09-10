@@ -1,6 +1,7 @@
 class otf_common {
     class common {
         class addToZeus {};
+        class attachSmokeSource {};
         class createSideMarker {};
         class deleteSideMarker {};
         class diagReport {};

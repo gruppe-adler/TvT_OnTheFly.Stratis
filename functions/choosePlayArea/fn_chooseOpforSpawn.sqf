@@ -11,7 +11,7 @@ if (missionNamespace getVariable ["otf_init_opforSpawnChosen", false]) exitWith 
 
 [{!isNull (findDisplay 46) && (missionNamespace getVariable ["otf_choosePlayArea_preloadFinished",false])}, {
 
-    openMap [true,false];
+    openMap [true,true];
     [] call otf_choosePlayArea_fnc_opforWaitDialog;
 
     if (isNil "opforcommander") exitWith {};
