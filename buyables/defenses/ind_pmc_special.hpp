@@ -7,7 +7,7 @@ class Defenses: defenses_base {
     class B_HMG_01_F {
         kindOf = "Vehicles";
         code = "if (isServer) then {(_this select 2) disableTIEquipment true};";
-        price = 2500;
+        price = 2600;
         stock = 4;
     };
 

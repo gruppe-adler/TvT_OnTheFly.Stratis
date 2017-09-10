@@ -6,7 +6,7 @@ class Defenses: defenses_base {
 
     class RHS_M2StaticMG_WD {
         kindOf = "Vehicles";
-        price = 1500;
+        price = 2000;
         stock = 4;
     };
 };

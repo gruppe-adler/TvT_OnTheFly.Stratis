@@ -6,7 +6,7 @@ class Defenses: defenses_base {
 
     class rhs_KORD_high_MSV {
         kindOf = "Vehicles";
-        price = 1500;
+        price = 2000;
         stock = 4;
     };
 };

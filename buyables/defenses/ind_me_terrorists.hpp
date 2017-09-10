@@ -6,7 +6,7 @@ class Defenses: defenses_base {
 
     class LOP_ISTS_OPF_Static_DSHKM {
         kindOf = "Vehicles";
-        price = 1300;
+        price = 1500;
         stock = 4;
     };
 };

@@ -6,7 +6,7 @@ class Defenses: defenses_base {
 
     class rhsgref_ins_g_DSHKM {
         kindOf = "Vehicles";
-        price = 1300;
+        price = 1500;
         stock = 4;
     };
 };
