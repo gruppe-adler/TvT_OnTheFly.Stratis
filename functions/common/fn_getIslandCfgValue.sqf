@@ -7,6 +7,6 @@ if (!isClass _cfg) exitWith {ERROR_1("Config for island %1 not found.", worldNam
 
 private _return = [_cfg,_entry,_default] call BIS_fnc_returnConfigEntry;
 
-if (_return isEqualType "" && {_return == "true"}) then {_return = true};
+if (_return isEqualType "" && {(toLower _return) in ["true","false"]}) then {_return = call compile _return};
 
 _return
