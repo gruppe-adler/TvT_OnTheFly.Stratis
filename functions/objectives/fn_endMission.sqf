@@ -18,7 +18,8 @@ if (hasInterface) then {
             _text = format ["<img size= '6' style='vertical-align:middle' shadow='false' image='data\gruppe-adler.paa'/><br/><t size='.9' color='#FFFFFF'>%1<br/>%2</t>", _endText, _winningText];
             [_text,0,0,2,2] spawn BIS_fnc_dynamicText;
 
-            sleep 5;
+            waitUntil {missionNamespace getVariable ["REPLAY_FINISHED",false]};
+            sleep 2;
 
             if (!isNil "otf_missionStats") then {
                 otf_missionStats call grad_scoreboard_fnc_loadScoreboard;

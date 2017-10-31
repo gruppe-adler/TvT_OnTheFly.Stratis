@@ -62,6 +62,14 @@ class Params
 		default = 1500;
 	};
 
+    class GradReplayAccuracy
+	{
+		title = "InGame Replay Accuracy";
+		values[] = {1,2,3,4,5};
+		texts[] = {"every 1s","every 2s","every 3s","every 4s","every 5s"};
+		default = 3;
+	};
+
     class RankedMode
     {
         title = "Track Winrates";

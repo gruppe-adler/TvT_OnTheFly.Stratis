@@ -17,6 +17,7 @@
         "grad-loadout": "4.x",
         "grad-moneymenu": ">=0.0.1",
         "grad-scoreboard": ">=0.0.1",
-        "grad-winratetracker": ">=0.0.1"
+        "grad-winratetracker": ">=0.0.1",
+        "grad_replay": ">=0.0.1"
     }
 }

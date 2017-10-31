@@ -21,6 +21,7 @@ if (!isServer) exitWith {};
             [otf_setup_taskKillBlu,"SUCCEEDED",false] call BIS_fnc_taskSetState;
 
             missionNamespace setVariable ["otf_gameEnded", [WEST, "BARREL CAPTURED!"], true];
+            [] call GRAD_replay_fnc_stopRecord;
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         };
     } else {
