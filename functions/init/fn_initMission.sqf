@@ -4,6 +4,7 @@
 [] call otf_init_fnc_setIslandParams;
 [] call otf_init_fnc_pubVars;
 [] call otf_groupsettings_fnc_setGroupSettings;
+[] call otf_setup_fnc_disableAI;
 
 [{!isNull player || isDedicated},{
 

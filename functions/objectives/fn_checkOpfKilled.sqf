@@ -37,7 +37,7 @@ otf_fnc_checkOpfKilled_eliminated = {
             [otf_setup_taskKillBlu,"SUCCEEDED",false] call BIS_fnc_taskSetState;
 
             missionNamespace setVariable ["otf_gameEnded", [WEST, "OPFOR ELIMINATED!"], true];
-            [] call GRAD_replay_fnc_stopRecord;
+            [GRAD_replay_fnc_stopRecord,[],5] call CBA_fnc_waitAndExecute;
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         };
     } , 1, []] call CBA_fnc_addPerFrameHandler;
