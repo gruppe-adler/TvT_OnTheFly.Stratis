@@ -304,6 +304,20 @@ class CfgIslands {
 		previewCamTarget[] = {3853,4930,0};
 	};
 
+	class ruha {
+		displayName = "Ruha";
+		type = "russian";
+		isWoodland = true;
+		spawnPosBlu[] = {8243,83,0};
+		spawnPosOpf[] = {8270,503,0};
+		spawnPosInd[] = {8277,1002,0};
+		previewCamPos[] = {4438,4295,0};
+		previewCamTarget[] = {4562,4203,0};
+		locationBlacklist[] = {
+			"Joutkallio"
+		};
+	};
+
 	class Stratis {
 		displayName = "Stratis";
 		type = "mediterranean";
