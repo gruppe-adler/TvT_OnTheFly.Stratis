@@ -5,10 +5,10 @@ if (playerSide != WEST) exitWith {};
 if (missionNamespace getVariable ["otf_init_bluforSpawnChosen", false]) exitWith {};
 
 
-/* [{!isNull (findDisplay 46)}, {
-    [true] call otf_choosePlayArea_fnc_showWeatherPreview;
+[{!isNull (findDisplay 46)}, {
+    /* [true] call otf_choosePlayArea_fnc_showWeatherPreview; */
     [3,{otf_choosePlayArea_preloadFinished = true}] call otf_common_fnc_wait3Dframes;
-}, []] call CBA_fnc_waitUntilAndExecute; */
+}, []] call CBA_fnc_waitUntilAndExecute;
 
 
 [{missionNamespace getVariable ["otf_choosePlayArea_preloadFinished",false]}, {
