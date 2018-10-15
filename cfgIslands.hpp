@@ -304,6 +304,20 @@ class CfgIslands {
 		previewCamTarget[] = {3853,4930,0};
 	};
 
+    class WL_Rosche {
+        displayName = "Rosche";
+		type = "russian";
+		isWoodland = true;
+		spawnPosBlu[] = {-106,133,0};
+		spawnPosOpf[] = {-65,867,0};
+		spawnPosInd[] = {-119,1285,0};
+		previewCamPos[] = {4438,4295,0};
+		previewCamTarget[] = {4562,4203,0};
+		locationBlacklist[] = {
+
+		};
+    };
+
 	class ruha {
 		displayName = "Ruha";
 		type = "russian";
