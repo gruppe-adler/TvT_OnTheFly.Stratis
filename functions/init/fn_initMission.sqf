@@ -36,7 +36,7 @@
     }, []] call CBA_fnc_waitUntilAndExecute;
 
     //exit JIP
-    if (hasInterface && didJIP && missionNamespace getVariable ["otf_init_gamestarted", false] && {(playerSide in [EAST,WEST])}) exitWith {player allowDamage true; player setDamage 1};
+    if (hasInterface && didJIP && missionNamespace getVariable ["otf_init_gamestarted", false] && {(playerSide in [EAST,WEST])} && {CBA_missionTime > 1800}) exitWith {player allowDamage true; player setDamage 1};
     if (hasInterface && didJIP) then {[player] remoteExec ["otf_common_fnc_addToZeus",2,false]};
 
     //log
