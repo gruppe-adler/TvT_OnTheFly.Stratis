@@ -4,13 +4,13 @@ class Vehicles: vehicles_base {
     class Box_NATO_Equip_F: Box_NATO_Equip_F {};
 
 
-    class CUP_I_SUV_ION {
-        price = 2400;
+    class CUP_C_SUV_TK {
+        price = 1800;
         stock = 10;
     };
 
-    class CUP_I_SUV_Armored_ION {
-        price = 6500;
+    class rhsusf_M1078A1R_SOV_M2_D_fmtv_socom {
+        price = 3500;
         stock = 10;
     };
 

@@ -26,7 +26,7 @@ class Params
             "Independent - Eastern European Nationalists",
             "Independent - PMC Special Forces - (requires CUP Vehicles)",
             "Independent - Middle Eastern Terrorists - (requires Project Opfor)",
-            "GER - Heer - (requires CUP Vehicles, GA Mod, ARC Ger)"
+            "GER - Heer - (requires CUP Vehicles, GA Mod, ARC Ger, Redd n' Tank)"
         };
         default = 0;
     };
@@ -41,7 +41,7 @@ class Params
             "Independent - Eastern European Nationalists",
             "Independent - PMC Special Forces - (requires CUP Vehicles)",
             "Independent - Middle Eastern Terrorists - (requires Project Opfor)",
-            "GER - Heer - (requires CUP Vehicles, GA Mod, ARC Ger)"
+            "GER - Heer - (requires CUP Vehicles, GA Mod, ARC Ger, Redd n' Tank)"
         };
         default = 1;
     };

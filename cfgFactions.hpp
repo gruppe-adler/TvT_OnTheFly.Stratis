@@ -16,7 +16,7 @@ class cfgFactions {
     };
 
     class ger_heer {
-        commandVehicles[] = {"Fennek_Flecktarn_san","Fennek_Tropen_san"};
+        commandVehicles[] = {"Redd_Tank_LKW_leicht_gl_Wolf_Flecktarn_FueFu","Redd_Tank_LKW_leicht_gl_Wolf_Tropentarn_FueFu"};
         onCommandVehicleCreate = "if (isServer) then {_this disableTIEquipment true};";
         loadoutWood = "ger_heer_w";
         loadoutDes = "ger_heer_d";
@@ -50,7 +50,7 @@ class cfgFactions {
     };
 
     class ind_PMC_special {
-        commandVehicles[] = {"CUP_I_SUV_ION","CUP_I_SUV_ION"};
+        commandVehicles[] = {"CUP_C_SUV_TK","CUP_C_SUV_TK"};
         onCommandVehicleCreate = "";
         loadoutWood = "ind_pmc_special";
         loadoutDes = "ind_pmc_special";
