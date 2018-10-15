@@ -3,7 +3,7 @@ params ["_box","_type","_amount"];
 _box setVariable ["otf_buyables_boatType",_type];
 _box setVariable ["otf_buyables_boatsInBox",_amount];
 
-[_box, true, 1] call ace_cargo_fnc_makeLoadable;
+[_box,1] call ace_cargo_fnc_setSize;
 
 if (!hasInterface) exitWith {};
 
