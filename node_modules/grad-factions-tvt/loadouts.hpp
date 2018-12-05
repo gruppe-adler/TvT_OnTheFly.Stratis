@@ -1,5 +1,6 @@
 #include "list_macros.hpp"
 
+#include "factions\fin_borderGuard.hpp"
 #include "factions\ger_heer_w.hpp"
 #include "factions\ger_heer_d.hpp"
 

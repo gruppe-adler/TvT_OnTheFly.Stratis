@@ -54,7 +54,7 @@ class ger_heer_d: ger_heer_w {
 	class Rank: Rank {
 		class LIEUTENANT: LIEUTENANT {
 			headgear = "ARC_GER_Tropentarn_Milcap";
-			backpack = "tf_rt1523g_big_bwmod_tropen";
+			backpack = "TFAR_rt1523g_big_bwmod_tropen";
 		};
 	};
 };

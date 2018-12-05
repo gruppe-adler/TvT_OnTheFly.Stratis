@@ -43,7 +43,7 @@ class LOADOUTNAME {
 		compass = "ItemCompass";
 		watch = "ItemWatch";
 		gps = "ItemGPS";
-		radio = "tf_anprc152";
+		radio = "TFAR_anprc152";
 		nvgoggles = NVITEM;
     };
     class Type {

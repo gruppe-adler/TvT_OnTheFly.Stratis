@@ -74,6 +74,7 @@ These factions are available (see also the `factions` directory):
 | rus_msv_d                | Russian MSV EMR Desert        | [RHS: AFRF](http://www.rhsmods.org/mod/1)                                               |
 | rus_msv_w                | Russian MSV Flora             | [RHS: AFRF](http://www.rhsmods.org/mod/1)                                               |
 | us_army                  | US Army OCP                   | [RHS: USAF](http://www.rhsmods.org/mod/2)                                               |
+| fin_borderGuard          | Finnish Border Guard          | [RHS: SAF](http://www.rhsmods.org/mod/4), [RHS: AFRF](http://www.rhsmods.org/mod/1)     |
 
 
 ## Units
