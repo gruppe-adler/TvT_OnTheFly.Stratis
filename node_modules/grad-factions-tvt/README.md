@@ -68,6 +68,7 @@ These factions are available (see also the `factions` directory):
 |--------------------------|-------------------------------|-----------------------------------------------------------------------------------------|
 | ger_heer_d               | Bundeswehr Tropentarn         | Gruppe Adler Mod                                                                        |
 | ger_heer_w               | Bundeswehr Flecktarn          | Gruppe Adler Mod                                                                        |
+| ger_heer_s               | Bundeswehr Schneetarn         | Gruppe Adler Mod                                                                        |
 | ind_eastern_nationalists | Rebels with Russian equipment | [RHS: GREF](http://www.rhsmods.org/mod/3)                                               |
 | ind_pmc_special          | PMC / special forces          | [CUP Vehicles](https://forums.bistudio.com/topic/179326-community-upgrade-project-cup/) |
 | ind_me_terrorists        | Middle Eastern terrorists     | [Project Opfor](http://www.armaholic.com/page.php?id=31310)                             |

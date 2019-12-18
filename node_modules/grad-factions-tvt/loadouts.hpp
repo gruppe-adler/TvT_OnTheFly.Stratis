@@ -3,6 +3,7 @@
 #include "factions\fin_borderGuard.hpp"
 #include "factions\ger_heer_w.hpp"
 #include "factions\ger_heer_d.hpp"
+#include "factions\ger_heer_s.hpp"
 
 #include "factions\ind_eastern_nationalists.hpp"
 #include "factions\ind_me_terrorists.hpp"

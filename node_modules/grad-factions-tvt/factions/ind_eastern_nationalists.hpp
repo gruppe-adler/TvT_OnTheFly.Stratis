@@ -1,6 +1,10 @@
 class ind_eastern_nationalists {
 	class AllUnits {
-        primaryWeapon[] = {"rhs_weap_m92","rhs_weap_m70b1","rhs_weap_m70ab2"};
+        primaryWeapon[] = {
+            "rhs_weap_m92",
+            "rhs_weap_m70b1",
+            "rhs_weap_m70ab2"
+        };
         primaryWeaponMagazine = "rhs_30Rnd_762x39mm";
 		primaryWeaponMuzzle = "";
 		primaryWeaponOptics = "";
@@ -10,11 +14,26 @@ class ind_eastern_nationalists {
 		secondaryWeapon = "";
 		secondaryWeaponMagazine = "";
 		handgunWeapon = "";
-		uniform = "rhsgref_uniform_woodland_olive";
+		uniform[] = {
+            "rhsgref_uniform_woodland_olive",
+            "rhsgref_uniform_woodland",
+            "rhsgref_uniform_flecktarn"
+        };
         vest = "V_TacVest_blk";
 		backpack = "";
-		headgear = "rhs_beanie_green";
-        goggles = "G_Bandanna_oli";
+		headgear[] = {
+            "",
+            "rhs_beanie_green",
+            "H_Booniehat_oli",
+            "H_Booniehat_khk"
+        };
+        goggles[] = {
+            "",
+            "G_Bandanna_oli",
+            "G_Bandanna_khk",
+            "G_Balaclava_blk",
+            "G_Bandanna_tan"
+        };
 		nvgoggles = "";
 		radio = "TFAR_fadak";
 		binoculars = "Binocular";
@@ -63,19 +82,13 @@ class ind_eastern_nationalists {
 
         //light AT
 		class Soldier_LAT_F: Soldier_F {
-            uniform = "rhsgref_uniform_woodland";
             vest = "V_TacVest_camo";
-            headgear = "H_Booniehat_oli";
-            goggles = "G_Bandanna_khk";
             secondaryWeapon = "rhs_weap_rpg26";
 		};
 
         //ammo bearer
 		class Soldier_A_F: Soldier_F {
-            uniform = "rhsgref_uniform_flecktarn";
             vest = "V_TacVest_blk";
-            headgear = "";
-            goggles = "G_Balaclava_blk";
             backpack = "B_TacticalPack_oli";
             addItemsToBackpack[] = {
                 LIST_2("rhs_100Rnd_762x54mmR"),
@@ -85,10 +98,7 @@ class ind_eastern_nationalists {
 
 		//assistant autorifleman
 		class Soldier_AAR_F: Soldier_F {
-            uniform = "rhsgref_uniform_flecktarn";
             vest = "V_TacVest_blk";
-            headgear = "";
-            goggles = "G_Balaclava_blk";
             backpack = "B_TacticalPack_oli";
             addItemsToBackpack[] = {
                 LIST_2("rhs_100Rnd_762x54mmR"),
@@ -98,10 +108,7 @@ class ind_eastern_nationalists {
 
         //medic
 		class Medic_F: Soldier_F {
-            uniform = "rhsgref_uniform_woodland";
             vest = "V_TacVest_blk";
-            headgear = "H_Booniehat_oli";
-            goggles = "G_Bandanna_tan";
             backpack = "B_AssaultPack_rgr";
             addItemsToBackpack[] = {
                 LIST_20("ACE_fieldDressing"),
@@ -114,7 +121,6 @@ class ind_eastern_nationalists {
 
         //squad leader
         class Soldier_SL_F: Soldier_F {
-            uniform = "rhsgref_uniform_flecktarn";
             vest = "rhsgref_TacVest_ERDL";
             headgear = "H_Watchcap_blk";
             goggles = "rhs_scarf";
@@ -123,8 +129,6 @@ class ind_eastern_nationalists {
         //team leader
 		class Soldier_TL_F: Soldier_F {
             vest = "V_TacVest_oli";
-            headgear = "H_Booniehat_khk";
-            goggles = "G_Bandanna_khk";
             primaryWeapon = "rhs_weap_akms_gp25";
             backpack = "B_AssaultPack_rgr";
             addItemsToBackpack[] = {
