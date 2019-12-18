@@ -4,7 +4,7 @@
 
 # On The Fly
 
-On The Fly is a simple, dynamic TvT scenario, in which OPFOR has to defend a metal barrel while BLUFOR has to capture it. This mission can be played on any map that is configured in [cfgIslands](https://github.com/gruppe-adler/TvT_OnTheFly.Stratis/cfgIslands.hpp).
+On The Fly is a simple, dynamic TvT scenario, in which OPFOR has to defend a metal barrel while BLUFOR has to capture it. This mission can be played on any map that is configured in [cfgGradIslands](https://github.com/gruppe-adler/grad-islandconfig/blob/master/cfgGradIslands.hpp).
 
 ## Dependencies
 
