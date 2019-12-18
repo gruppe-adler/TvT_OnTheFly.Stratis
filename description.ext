@@ -5,8 +5,8 @@
 #include "node_modules\grad-scoreboard\grad_scoreboard.hpp"
 #include "node_modules\grad-fortifications\grad_fortifications.hpp"
 
-#include "node_modules\grad_replay\ui\defines.hpp"
-#include "node_modules\grad_replay\ui\dialog.hpp"
+#include "node_modules\@gruppe-adler\replay\ui\defines.hpp"
+#include "node_modules\@gruppe-adler\replay\ui\dialog.hpp"
 
 #include "cfgParams.hpp"
 #include "cfgIslands.hpp"
@@ -51,7 +51,7 @@ class CfgFunctions {
     #include "node_modules\grad-winrateTracker\cfgFunctions.hpp"
     #include "node_modules\grad-scoreboard\cfgFunctions.hpp"
     #include "node_modules\grad-fortifications\cfgFunctions.hpp"
-    #include "node_modules\grad_replay\cfgFunctions.hpp"
+    #include "node_modules\@gruppe-adler\replay\cfgFunctions.hpp"
 };
 
 //SOUNDS =======================================================================
@@ -77,6 +77,18 @@ class Loadouts {
     class Faction {
         #include "node_modules\grad-factions-tvt\loadouts.hpp"
     };
+};
+
+//REPLAY =======================================================================
+class GRAD_Replay {
+    precision = 3;                                    // precision of replay, 5 means every 5 seconds one snapshot (number)
+    trackedSides[] = {"west", "east"};                // defines the sides that will be tracked (possible are "west", "east", "independent", "civilian") (array)
+    stepsPerTick = 1;                                 // defines steps played back at once (number)
+    trackedVehicles = 1;                              // defines if empty and AI steered vehicles will be tracked (0/1)
+    trackedAI = 0;                                    // defines if AI will be tracked (0/1)
+    sendingChunkSize = 10;                            // higher number means replay loading is faster, but might cause instability / lags during loading (number)
+    trackShots = 1;                                   // defines if shots will be tracked (0/1)
+    upload = 1;                                       // defines if replay data will be uploaded to replay.gruppe-adler.de (0/1)
 };
 
 //MONEY MENU ===================================================================
