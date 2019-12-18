@@ -2,7 +2,7 @@
 
 params ["_entry",["_default",-1]];
 
-private _cfg = missionConfigFile >> "CfgIslands" >> worldName;
+private _cfg = missionConfigFile >> "cfgGradIslands" >> worldName;
 if (!isClass _cfg) exitWith {ERROR_1("Config for island %1 not found.", worldName); _default};
 
 private _return = [_cfg,_entry,_default] call BIS_fnc_returnConfigEntry;

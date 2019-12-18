@@ -10,9 +10,9 @@ if (_show) then {
 
     if (isNull _pipPIPCtrl) exitWith {};
 
-    private _camPos = [missionConfigFile >> "CfgIslands" >> worldName >> "previewCamPos","array",[worldSize/2,worldSize/2,20]] call CBA_fnc_getConfigEntry;
+    private _camPos = [missionConfigFile >> "cfgGradIslands" >> worldName >> "previewCamPos","array",[worldSize/2,worldSize/2,20]] call CBA_fnc_getConfigEntry;
     _camPos set [2,20];
-    private _camTarget = [missionConfigFile >> "CfgIslands" >> worldName >> "previewCamPos","array",_camPos vectorAdd [100,100,0]] call CBA_fnc_getConfigEntry;
+    private _camTarget = [missionConfigFile >> "cfgGradIslands" >> worldName >> "previewCamPos","array",_camPos vectorAdd [100,100,0]] call CBA_fnc_getConfigEntry;
 
     private _rendertarget = "renderToPIP";
     private _cam = "camera" camCreate _camPos;

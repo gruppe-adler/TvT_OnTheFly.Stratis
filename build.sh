@@ -4,7 +4,7 @@
 cpbo_path="$1"
 missionname="TvT_OnTheFly"
 
-islands=($(curl -k https://arma.gruppe-adler.de/userconfig/islands.txt))
+islands=($(curl -k https://raw.githubusercontent.com/gruppe-adler/grad-islandconfig/master/islands.txt))
 islands=("${islands[@]%%:*}")
 
 ### AS AS USER, DONT EDIT BELOW THIS LINE ###

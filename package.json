@@ -18,6 +18,7 @@
         "grad-moneymenu": ">=0.0.1",
         "grad-scoreboard": ">=0.0.1",
         "grad-winratetracker": ">=0.0.1",
+        "grad-islandconfig": ">=0.0.1",
         "@gruppe-adler/replay": ">=0.0.1"
     }
 }
