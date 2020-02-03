@@ -1,0 +1,52 @@
+<match>
+    <company side="blufor" natosymbol="inf" callsign="BLUFOR" vehicletype="">
+      <squad natosymbol="inf" callsign="BLUFOR" vehicletype="">
+        <slot shortcode="CMD" description="Commander"/>
+        <slot shortcode="CMA" description="Ass. Commander"/>
+        <slot shortcode="M" description="Medic"/>
+        <fireteam>
+          <slot shortcode="FTL" description="Fireteam Leader"/>
+          <slot shortcode="AR" description="Autorifleman"/>
+          <slot shortcode="AAR" description="Ass. Autorifleman"/>
+          <slot shortcode="R" description="Rifleman"/>
+        </fireteam>
+        <fireteam>
+          <slot shortcode="FTL" description="Fireteam Leader"/>
+          <slot shortcode="AT" description="Rifleman (AT)"/>
+          <slot shortcode="AT" description="Rifleman (AT)"/>
+          <slot shortcode="R" description="Rifleman"/>
+        </fireteam>
+        <fireteam>
+          <slot shortcode="FTL" description="Fireteam Leader"/>
+          <slot shortcode="AT" description="Autorifleman"/>
+          <slot shortcode="AAR" description="Ass. Autorifleman"/>
+          <slot shortcode="R" description="Rifleman"/>
+        </fireteam>
+      </squad>
+    </company>
+    <company side="opfor" natosymbol="inf" callsign="OPFOR" vehicletype="">
+      <squad natosymbol="inf" callsign="OPFOR" vehicletype="">
+        <slot shortcode="CMD" description="Commander"/>
+        <slot shortcode="CMA" description="Ass. Commander"/>
+        <slot shortcode="M" description="Medic"/>
+        <fireteam>
+          <slot shortcode="FTL" description="Fireteam Leader"/>
+          <slot shortcode="AR" description="Autorifleman"/>
+          <slot shortcode="AAR" description="Ass. Autorifleman"/>
+          <slot shortcode="R" description="Rifleman"/>
+        </fireteam>
+        <fireteam>
+          <slot shortcode="FTL" description="Fireteam Leader"/>
+          <slot shortcode="AT" description="Rifleman (AT)"/>
+          <slot shortcode="AT" description="Rifleman (AT)"/>
+          <slot shortcode="R" description="Rifleman"/>
+        </fireteam>
+        <fireteam>
+          <slot shortcode="FTL" description="Fireteam Leader"/>
+          <slot shortcode="AT" description="Autorifleman"/>
+          <slot shortcode="AAR" description="Ass. Autorifleman"/>
+          <slot shortcode="R" description="Rifleman"/>
+        </fireteam>
+      </squad>
+    </company>
+</match>
