@@ -37,8 +37,13 @@ respawnTemplates[] = {"Base"};
 respawnOnStart = -1;
 respawnDialog = 0;
 disabledAI = 0;
-enableDebugConsole = 1;
 allowFunctionsRecompile = 1;
+
+//mcdiod, nomisum
+enableDebugConsole[] = {
+	"76561198044320063",
+	"76561197961080101"
+};
 
 //FUNCTIONS ====================================================================
 class CfgFunctions {
