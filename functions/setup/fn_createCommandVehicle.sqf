@@ -21,6 +21,9 @@ OTF_COMMANDVEHICLE = _cvClass createVehicle _pos;
     [OTF_COMMANDVEHICLE] call otf_common_fnc_emptyContainer;
     [OTF_COMMANDVEHICLE] remoteExec ["otf_setup_fnc_bluforBuyAction",0,OTF_COMMANDVEHICLE];
 
+    private _onCommandvehicleCreate = compile ([(missionConfigFile >> "CfgFactions" >> OTF_BLUFORFACTION),"onCommandVehicleCreate",""] call BIS_fnc_returnConfigEntry);
+    [OTF_COMMANDVEHICLE,_onCommandvehicleCreate] remoteExecCall ["call",0,OTF_COMMANDVEHICLE];
+
     INFO_1("Command vehicle %1 created.", OTF_COMMANDVEHICLE);
     missionNamespace setVariable ["otf_setup_cvCreated", true, true];
 

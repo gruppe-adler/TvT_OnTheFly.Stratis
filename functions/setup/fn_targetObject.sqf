@@ -31,6 +31,10 @@ _case setDir 180;
     [_this,false] remoteExec ["ace_dragging_fnc_setDraggable",0,_this];
     [_this,false] remoteExec ["ace_dragging_fnc_setCarryable",0,_this];
 
+    private _onBarrelCaseCreate = compile ([(missionConfigFile >> "CfgFactions" >> OTF_OPFORFACTION),"onBarrelCaseCreate",""] call BIS_fnc_returnConfigEntry);
+    [_this,_onBarrelCaseCreate] remoteExecCall ["call",0,_this];
+
+
     INFO_1("Target object %1 created.", OTF_TARGETOBJECT);
     missionNamespace setVariable ["otf_setup_targetObjectCreated", true, true];
 
