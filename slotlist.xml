@@ -18,7 +18,7 @@
         </fireteam>
         <fireteam>
           <slot shortcode="FTL" description="Fireteam Leader"/>
-          <slot shortcode="AT" description="Autorifleman"/>
+          <slot shortcode="AR" description="Autorifleman"/>
           <slot shortcode="AAR" description="Ass. Autorifleman"/>
           <slot shortcode="R" description="Rifleman"/>
         </fireteam>
@@ -43,7 +43,7 @@
         </fireteam>
         <fireteam>
           <slot shortcode="FTL" description="Fireteam Leader"/>
-          <slot shortcode="AT" description="Autorifleman"/>
+          <slot shortcode="AR" description="Autorifleman"/>
           <slot shortcode="AAR" description="Ass. Autorifleman"/>
           <slot shortcode="R" description="Rifleman"/>
         </fireteam>
