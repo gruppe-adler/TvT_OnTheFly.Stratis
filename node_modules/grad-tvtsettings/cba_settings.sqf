@@ -25,6 +25,21 @@ force ace_medical_treatment_advancedDiagnose = false;
 force ace_medical_treatment_advancedMedication = false;
 force ace_medical_treatment_allowSelfIV = 0;
 force ace_medical_treatment_clearTraumaAfterBandage = true;
+force ace_medical_ai_enabledFor = 2;
+force ace_medical_blood_enabledFor = 2;
+force ace_medical_fatalDamageSource = 2;
+force ace_medical_fractureChance = 0.8;
+force ace_medical_limping = 1;
+force ace_medical_spontaneousWakeUpChance = 0.15;
+force ace_medical_spontaneousWakeUpEpinephrineBoost = 3;
+force ace_medical_statemachine_cardiacArrestTime = 30;
+force ace_medical_statemachine_fatalInjuriesAI = 0;
+force ace_medical_statemachine_fatalInjuriesPlayer = 0;
+force ace_medical_treatment_advancedBandages = 0;
+force ace_medical_treatment_holsterRequired = 0;
+force ace_medical_treatment_locationEpinephrine = 0;
+force ace_medical_treatment_medicEpinephrine = 0;
+force ace_medical_treatment_medicIV = 1;
 
 force ace_finger_enabled = true;
 
