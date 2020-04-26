@@ -1,7 +1,7 @@
 {
     "name": "tvt-onthefly",
     "description": "A dynamic capture/defend mission for all maps.",
-    "version": "3.4.1",
+    "version": "3.4.3",
     "contributors": [
         {
             "name": "Nomisum"
