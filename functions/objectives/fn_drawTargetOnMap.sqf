@@ -1,8 +1,6 @@
 #include "component.hpp"
 
-params ["_target"];
-
-OTF_TARGETOBJECT = _target;
+if (!hasInterface) exitWith {};
 
 OTF_DRAWTARGETEH = ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw",{
     params ["_map"];

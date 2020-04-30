@@ -33,6 +33,12 @@
     //setup play area, spawn target, create markers, tasks
     [{missionNamespace getVariable ["otf_init_opforSpawnChosen", false]}, {
         [] call otf_setup_fnc_playZone;
+
+    }, []] call CBA_fnc_waitUntilAndExecute;
+
+    // add map draw EH for target
+    [{!isNil "OTF_TARGETOBJECT"}, {
+        [] call otf_objectives_fnc_drawTargetOnMap;
     }, []] call CBA_fnc_waitUntilAndExecute;
 
     //exit JIP
