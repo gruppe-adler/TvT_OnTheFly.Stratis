@@ -17,6 +17,11 @@ class cfgFactions {
         BFT = 1;
     };
 
+    class us_marines: us_army {
+        loadoutWood = "us_marines_w";
+        loadoutDes = "us_marines_d";
+    };
+
     class ger_heer {
         commandVehicles[] = {"Redd_Tank_LKW_leicht_gl_Wolf_Flecktarn_FueFu","Redd_Tank_LKW_leicht_gl_Wolf_Tropentarn_FueFu"};
         onCommandVehicleCreate = "if (isServer) then {_this disableTIEquipment true};";

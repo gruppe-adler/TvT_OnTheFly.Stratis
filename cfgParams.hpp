@@ -19,9 +19,10 @@ class Params
     class BluforFaction
     {
         title = "Blufor Faction";
-        values[] = {0,1,2,3,4,5};
+        values[] = {0,1,2,3,4,5,6};
         texts[] = {
             "USA - Army",
+            "USA - Marines",
             "Russia - MSV",
             "Independent - Eastern European Nationalists",
             "Independent - PMC Special Forces - (requires CUP Vehicles)",
@@ -34,16 +35,17 @@ class Params
     class OpforFaction
     {
         title = "Opfor Faction";
-        values[] = {0,1,2,3,4,5};
+        values[] = {0,1,2,3,4,5,6};
         texts[] = {
             "USA - Army",
+            "USA - Marines",
             "Russia - MSV",
             "Independent - Eastern European Nationalists",
             "Independent - PMC Special Forces - (requires CUP Vehicles)",
             "Independent - Middle Eastern Terrorists - (requires Project Opfor)",
             "GER - Heer - (requires CUP Vehicles, GA Mod, ARC Ger, Redd n' Tank)"
         };
-        default = 1;
+        default = 2;
     };
 
     class MoneyFactor

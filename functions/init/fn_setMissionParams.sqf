@@ -10,6 +10,7 @@ OTF_MONEYFACTOR = "MoneyFactor" call BIS_fnc_getParamValue;
 
 OTF_BLUFORFACTION = [
     "us_army",
+    "us_marines",
     "rus_msv",
     "ind_eastern_nationalists",
     "ind_pmc_special",
@@ -19,6 +20,7 @@ OTF_BLUFORFACTION = [
 
 OTF_OPFORFACTION = [
     "us_army",
+    "us_marines",
     "rus_msv",
     "ind_eastern_nationalists",
     "ind_pmc_special",

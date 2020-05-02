@@ -11,6 +11,11 @@ class CfgGradBuymenu {
         #include "explosives_base.hpp"
     };
 
+    class blu_us_marines {
+        #include "vehicles\us_marines.hpp"
+        #include "explosives_base.hpp"
+    };
+
     class blu_ger_heer {
         #include "vehicles\ger_heer.hpp"
         #include "explosives_base.hpp"
@@ -40,6 +45,11 @@ class CfgGradBuymenu {
     class opf_us_army {
         #include "defenses\us_army.hpp"
         #include "explosives\us_army.hpp"
+    };
+
+    class opf_us_marines {
+        #include "defenses\us_marines.hpp"
+        #include "explosives\us_marines.hpp"
     };
 
     class opf_ger_heer {
