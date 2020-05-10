@@ -5,17 +5,22 @@ class Defenses: defenses_base {
     class ACE_EntrenchingTool: ACE_EntrenchingTool {};
     class B_Mortar_01_F: B_Mortar_01_F {};
 
-    class B_HMG_01_F {
+    class RHS_M2StaticMG_WD {
         kindOf = "Vehicles";
-        code = "if (isServer) then {(_this select 2) disableTIEquipment true};";
-        price = 2600;
+        price = 5000;
+        stock = 4;
+    };
+
+    class RHS_M2StaticMG_MiniTripod_WD {
+        kindOf = "Vehicles";
+        price = 5000;
         stock = 4;
     };
 
     class O_Static_Designator_02_F {
         kindOf = "Vehicles";
         code = "if (isServer) then {(_this select 2) disableTIEquipment true};";
-        price = 900;
+        price = 1000;
         stock = 4;
     };
 

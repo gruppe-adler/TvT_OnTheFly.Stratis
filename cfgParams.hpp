@@ -30,7 +30,7 @@ class Params
             "Turkey - TKK - [RHS:AFRF, RHS:USAF, RHS:GREF, Project Opfor, NIArms]",
             "Germany - Heer - [GA Mod, RHS:USAF, Redd n' Tank]",
             "Misc - Nationalists (Eastern European) - [RHS:AFRF, RHS:GREF]",
-            "Misc - Special Forces (Western)",
+            "Misc - Special Forces (Western) - [RHS:USAF, NIArms, CUP Vehicles]",
             "Misc - PMC (Western) - [RHS:USAF, Project Opfor]",
             "Misc - Rural Mob (Middle Eastern)",
             "Misc - Paramilitary Forces (Middle Eastern) - [RHS:AFRF, Project Opfor]"
@@ -52,7 +52,7 @@ class Params
             "Turkey - TKK - [RHS:AFRF, RHS:USAF, RHS:GREF, Project Opfor, NIArms]",
             "Germany - Heer - [GA Mod, RHS:USAF, Redd n' Tank]",
             "Misc - Nationalists (Eastern European) - [RHS:AFRF, RHS:GREF]",
-            "Misc - Special Forces (Western)",
+            "Misc - Special Forces (Western) - [RHS:USAF, NIArms, CUP Vehicles]",
             "Misc - PMC (Western) - [RHS:USAF, Project Opfor]",
             "Misc - Rural Mob (Middle Eastern)",
             "Misc - Paramilitary Forces (Middle Eastern) - [RHS:AFRF, Project Opfor]"
