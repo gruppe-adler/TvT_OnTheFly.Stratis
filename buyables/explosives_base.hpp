@@ -13,12 +13,12 @@ class explosives_base {
     };
 
     class DemoCharge_Remote_Mag {
-        price = 600;
+        price = 500;
         stock = 6;
     };
 
     class SatchelCharge_Remote_Mag {
-        price = 1400;
+        price = 1500;
         stock = 6;
     };
 };
