@@ -37,7 +37,7 @@ class cfgFactions {
     };
 
     class hr_hkov {
-        commandVehicles[] = {"rhsusf_m998_w_s_4dr_fulltop", "rhsusf_m998_d_s_4dr_fulltop"};
+        commandVehicles[] = {"rhsgref_hidf_M998_4dr_fulltop", "rhsgref_hidf_M998_4dr_fulltop"};
         onCommandVehicleCreate = "";
         onBarrelCaseCreate = "";
         loadoutWood = "hr_hkov";
