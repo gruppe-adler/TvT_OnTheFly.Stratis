@@ -33,7 +33,7 @@ class Params
             "Misc - Special Forces (Western)",
             "Misc - PMC (Western)",
             "Misc - Rural Mob (Middle Eastern)",
-            "Misc - Paramilitary Forces (Middle Eastern)"
+            "Misc - Paramilitary Forces (Middle Eastern) - [RHS:AFRF, Project Opfor]"
         };
         default = 0;
     };
@@ -55,7 +55,7 @@ class Params
             "Misc - Special Forces (Western)",
             "Misc - PMC (Western)",
             "Misc - Rural Mob (Middle Eastern)",
-            "Misc - Paramilitary Forces (Middle Eastern)"
+            "Misc - Paramilitary Forces (Middle Eastern) - [RHS:AFRF, Project Opfor]"
         };
         default = 2;
     };

@@ -5,9 +5,15 @@ class Defenses: defenses_base {
     class ACE_EntrenchingTool: ACE_EntrenchingTool {};
     class B_Mortar_01_F: B_Mortar_01_F {};
 
-    class LOP_ISTS_OPF_Static_DSHKM {
+    class rhs_KORD_high_VDV {
         kindOf = "Vehicles";
-        price = 1500;
+        price = 5000;
+        stock = 4;
+    };
+
+    class rhs_KORD_VDV {
+        kindOf = "Vehicles";
+        price = 5000;
         stock = 4;
     };
 };

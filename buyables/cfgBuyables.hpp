@@ -3,7 +3,6 @@ class CfgGradBuymenu {
     trackingTag = "OnTheFly_TrackingData";
 
     #include "defenses_base.hpp"
-    #include "explosives_base.hpp"
     #include "vehicles_base.hpp"
 
     class blu_us_army {
