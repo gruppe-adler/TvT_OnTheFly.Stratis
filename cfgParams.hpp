@@ -23,7 +23,7 @@ class Params
         texts[] = {
             "USA - Army - [RHS:USAF]",
             "USA - Marines - [RHS:USAF]",
-            "Russia - MSV",
+            "Russia - MSV - [RHS:AFRF]",
             "Russia - Spetsnaz - [RHS:AFRF]",
             "Croatia - HKoV - [RHS:AFRF, RHS:USAF, RHS:GREF]",
             "Israel - IDF - [RHS:AFRF, RHS:USAF, FHQ Accessories]",
@@ -45,7 +45,7 @@ class Params
         texts[] = {
             "USA - Army - [RHS:USAF]",
             "USA - Marines - [RHS:USAF]",
-            "Russia - MSV",
+            "Russia - MSV - [RHS:AFRF]",
             "Russia - Spetsnaz - [RHS:AFRF]",
             "Croatia - HKoV - [RHS:AFRF, RHS:USAF, RHS:GREF]",
             "Israel - IDF - [RHS:AFRF, RHS:USAF, FHQ Accessories]",
