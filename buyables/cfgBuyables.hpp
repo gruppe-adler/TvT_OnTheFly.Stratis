@@ -36,7 +36,7 @@ class CfgGradBuymenu {
         #include "explosives_base.hpp"
     };
 
-    class tur_tkk {
+    class blu_tur_tkk {
         #include "vehicles\tur_tkk.hpp"
         #include "explosives_base.hpp"
     };
