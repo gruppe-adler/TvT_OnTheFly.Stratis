@@ -32,7 +32,7 @@ class Params
             "Misc - Nationalists (Eastern European) - [RHS:AFRF, RHS:GREF]",
             "Misc - Special Forces (Western) - [RHS:USAF, NIArms, CUP Vehicles]",
             "Misc - PMC (Western) - [RHS:USAF, Project Opfor]",
-            "Misc - Rural Mob (Middle Eastern)",
+            "Misc - Rural Mob (Middle Eastern, disadvantaged) - [RHS:AFRF, Project Opfor]",
             "Misc - Paramilitary Forces (Middle Eastern) - [RHS:AFRF, Project Opfor]"
         };
         default = 0;
@@ -54,7 +54,7 @@ class Params
             "Misc - Nationalists (Eastern European) - [RHS:AFRF, RHS:GREF]",
             "Misc - Special Forces (Western) - [RHS:USAF, NIArms, CUP Vehicles]",
             "Misc - PMC (Western) - [RHS:USAF, Project Opfor]",
-            "Misc - Rural Mob (Middle Eastern)",
+            "Misc - Rural Mob (Middle Eastern, disadvantaged) - [RHS:AFRF, Project Opfor]",
             "Misc - Paramilitary Forces (Middle Eastern) - [RHS:AFRF, Project Opfor]"
         };
         default = 2;
