@@ -76,66 +76,53 @@ class CfgGradBuymenu {
 
     class opf_us_army {
         #include "defenses\us_army.hpp"
-        #include "explosives\us_army.hpp"
     };
 
     class opf_us_marines {
         #include "defenses\us_marines.hpp"
-        #include "explosives\us_marines.hpp"
     };
 
     class opf_rus_msv {
         #include "defenses\rus_msv.hpp"
-        #include "explosives\rus_msv.hpp"
     };
 
     class opf_rus_spetsnaz {
         #include "defenses\rus_spetsnaz.hpp"
-        #include "explosives\rus_spetsnaz.hpp"
     };
 
     class opf_hr_hkov {
         #include "defenses\hr_hkov.hpp"
-        #include "explosives\hr_hkov.hpp"
     };
 
     class opf_isr_idf {
         #include "defenses\isr_idf.hpp"
-        #include "explosives\isr_idf.hpp"
     };
 
     class opf_tur_tkk {
         #include "defenses\tur_tkk.hpp"
-        #include "explosives\tur_tkk.hpp"
     };
 
     class opf_ger_heer {
         #include "defenses\ger_heer.hpp"
-        #include "explosives\ger_heer.hpp"
     };
 
     class opf_ind_eastern_nationalists {
         #include "defenses\ind_eastern_nationalists.hpp"
-        #include "explosives\ind_eastern_nationalists.hpp"
     };
 
     class opf_ind_pmc_special {
         #include "defenses\ind_pmc_special.hpp"
-        #include "explosives\ind_pmc_special.hpp"
     };
 
     class opf_ind_pmc_west {
         #include "defenses\ind_pmc_west.hpp"
-        #include "explosives\ind_pmc_west.hpp"
     };
 
     class opf_ind_me_terrorists {
         #include "defenses\ind_me_terrorists.hpp"
-        #include "explosives\ind_me_terrorists.hpp"
     };
 
     class opf_ind_me_para {
         #include "defenses\ind_me_para.hpp"
-        #include "explosives\ind_me_para.hpp"
     };
 };
