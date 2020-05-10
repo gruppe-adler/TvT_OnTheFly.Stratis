@@ -63,16 +63,20 @@ class ind_pmc_special {
         //autorifleman
 		class Soldier_AR_F: Soldier_F {
             primaryWeapon = "rhs_weap_m27iar";
-			primaryWeaponMagazine = "rhs_mag_30Rnd_556x45_Mk262_Stanag";
+			primaryWeaponMagazine = "hlc_50rnd_556x45_M";
             primaryWeaponOptics = "rhsusf_acc_eotech_552";
             primaryWeaponMuzzle = "rhsusf_acc_SF3P556";
 			primaryWeaponUnderbarrel = "rhsusf_acc_harris_bipod";
             headgear = "";
             goggles = "G_Balaclava_blk";
+            backpack = "B_TacticalPack_blk";
             addItemsToVest[] = {
-                LIST_10("rhs_mag_30Rnd_556x45_Mk262_Stanag"),
+                LIST_2("hlc_50rnd_556x45_M"),
                 LIST_2("rhs_mag_an_m8hc"),
                 LIST_2("rhs_mag_m67")
+            };
+            addItemsToBackpack[] = {
+                LIST_5("hlc_50rnd_556x45_M")
             };
 		};
 
@@ -85,7 +89,7 @@ class ind_pmc_special {
 		class Soldier_A_F: Soldier_F {
             backpack = "B_TacticalPack_blk";
             addItemsToBackpack[] = {
-                LIST_10("rhs_mag_30Rnd_556x45_Mk262_Stanag")
+                LIST_5("hlc_50rnd_556x45_M")
             };
 		};
 
@@ -93,7 +97,7 @@ class ind_pmc_special {
 		class Soldier_AAR_F: Soldier_F {
             backpack = "B_TacticalPack_blk";
             addItemsToBackpack[] = {
-                LIST_10("rhs_mag_30Rnd_556x45_Mk262_Stanag")
+                LIST_5("hlc_50rnd_556x45_M")
             };
 		};
 
