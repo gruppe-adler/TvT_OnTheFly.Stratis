@@ -19,14 +19,21 @@ class Params
     class BluforFaction
     {
         title = "Blufor Faction";
-        values[] = {0,1,2,3,4,5};
+        values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12};
         texts[] = {
-            "USA - Army",
-            "Russia - MSV",
-            "Independent - Eastern European Nationalists",
-            "Independent - PMC Special Forces - (requires CUP Vehicles)",
-            "Independent - Middle Eastern Terrorists - (requires Project Opfor)",
-            "GER - Heer - (requires CUP Vehicles, GA Mod, ARC Ger, Redd n' Tank)"
+            "USA - Army - [RHS:USAF]",
+            "USA - Marines - [RHS:USAF]",
+            "Russia - MSV - [RHS:AFRF]",
+            "Russia - Spetsnaz - [RHS:AFRF]",
+            "Croatia - HKoV - [RHS:AFRF, RHS:USAF, RHS:GREF]",
+            "Israel - IDF - [RHS:AFRF, RHS:USAF, FHQ Accessories]",
+            "Turkey - TKK - [RHS:AFRF, RHS:USAF, RHS:GREF, Project Opfor, NIArms]",
+            "Germany - Heer - [GA Mod, RHS:USAF, Redd n' Tank]",
+            "Misc - Nationalists (Eastern European) - [RHS:AFRF, RHS:GREF]",
+            "Misc - Special Forces (Western) - [RHS:USAF, NIArms, CUP Vehicles]",
+            "Misc - PMC (Western) - [RHS:USAF, Project Opfor]",
+            "Misc - Rural Mob (Middle Eastern, disadvantaged) - [RHS:AFRF, Project Opfor]",
+            "Misc - Paramilitary Forces (Middle Eastern) - [RHS:AFRF, Project Opfor]"
         };
         default = 0;
     };
@@ -34,16 +41,23 @@ class Params
     class OpforFaction
     {
         title = "Opfor Faction";
-        values[] = {0,1,2,3,4,5};
+        values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12};
         texts[] = {
-            "USA - Army",
-            "Russia - MSV",
-            "Independent - Eastern European Nationalists",
-            "Independent - PMC Special Forces - (requires CUP Vehicles)",
-            "Independent - Middle Eastern Terrorists - (requires Project Opfor)",
-            "GER - Heer - (requires CUP Vehicles, GA Mod, ARC Ger, Redd n' Tank)"
+            "USA - Army - [RHS:USAF]",
+            "USA - Marines - [RHS:USAF]",
+            "Russia - MSV - [RHS:AFRF]",
+            "Russia - Spetsnaz - [RHS:AFRF]",
+            "Croatia - HKoV - [RHS:AFRF, RHS:USAF, RHS:GREF]",
+            "Israel - IDF - [RHS:AFRF, RHS:USAF, FHQ Accessories]",
+            "Turkey - TKK - [RHS:AFRF, RHS:USAF, RHS:GREF, Project Opfor, NIArms]",
+            "Germany - Heer - [GA Mod, RHS:USAF, Redd n' Tank]",
+            "Misc - Nationalists (Eastern European) - [RHS:AFRF, RHS:GREF]",
+            "Misc - Special Forces (Western) - [RHS:USAF, NIArms, CUP Vehicles]",
+            "Misc - PMC (Western) - [RHS:USAF, Project Opfor]",
+            "Misc - Rural Mob (Middle Eastern, disadvantaged) - [RHS:AFRF, Project Opfor]",
+            "Misc - Paramilitary Forces (Middle Eastern) - [RHS:AFRF, Project Opfor]"
         };
-        default = 1;
+        default = 2;
     };
 
     class MoneyFactor

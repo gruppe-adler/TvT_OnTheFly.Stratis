@@ -5,22 +5,15 @@ class Defenses: defenses_base {
     class ACE_EntrenchingTool: ACE_EntrenchingTool {};
     class B_Mortar_01_F: B_Mortar_01_F {};
 
-    class rhs_KORD_high_VDV {
+    class RHS_M2StaticMG_WD {
         kindOf = "Vehicles";
-        price = 4000;
+        price = 5000;
         stock = 4;
     };
-
-    class rhs_KORD_VDV {
+    
+    class RHS_M2StaticMG_MiniTripod_WD {
         kindOf = "Vehicles";
-        price = 4000;
+        price = 5000;
         stock = 4;
     };
-
-    class rhs_SPG9M_VDV {
-        kindOf = "Vehicles";
-        price = 8000;
-        stock = 4;
-    };
-
 };

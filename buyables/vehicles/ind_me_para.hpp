@@ -8,11 +8,6 @@ class Vehicles: vehicles_base {
         stock = 10;
     };
 
-    class LOP_ISTS_OPF_Nissan_PKM {
-        price = 6500;
-        stock = 10;
-    };
-
     class LOP_ISTS_OPF_Landrover_M2 {
         price = 9000;
         stock = 10;

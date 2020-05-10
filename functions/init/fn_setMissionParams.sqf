@@ -8,22 +8,23 @@ OTF_WEATHERSETTING = "WeatherSetting" call BIS_fnc_getParamValue;
 OTF_TIMEOFDAY = "TimeOfDay" call BIS_fnc_getParamValue;
 OTF_MONEYFACTOR = "MoneyFactor" call BIS_fnc_getParamValue;
 
-OTF_BLUFORFACTION = [
+private _factions = [
     "us_army",
+    "us_marines",
     "rus_msv",
+    "rus_spetsnaz",
+    "hr_hkov",
+    "isr_idf",
+    "tur_tkk",
+    "ger_heer",
     "ind_eastern_nationalists",
     "ind_pmc_special",
+    "ind_pmc_west",
     "ind_me_terrorists",
-    "ger_heer"
-] select ("BluforFaction" call BIS_fnc_getParamValue);
+    "ind_me_para"
+];
 
-OTF_OPFORFACTION = [
-    "us_army",
-    "rus_msv",
-    "ind_eastern_nationalists",
-    "ind_pmc_special",
-    "ind_me_terrorists",
-    "ger_heer"
-] select ("OpforFaction" call BIS_fnc_getParamValue);
+OTF_BLUFORFACTION = _factions select ("BluforFaction" call BIS_fnc_getParamValue);
+OTF_OPFORFACTION = _factions select ("OpforFaction" call BIS_fnc_getParamValue);
 
 otf_init_missionParamsDone = true;
