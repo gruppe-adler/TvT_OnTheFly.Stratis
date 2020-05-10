@@ -6,17 +6,16 @@
 [] call otf_groupsettings_fnc_setGroupSettings;
 [] call otf_setup_fnc_disableAI;
 
+
 [{!isNull player || isDedicated},{
 
     [] call otf_init_fnc_moveToInitPos;
 
     //setup on mission start
-    [{missionNamespace getVariable ["otf_init_missionParamsDone", false]}, {
-        [] call otf_init_fnc_setLoadoutFaction;
-        [] call otf_setup_fnc_setTime;
-        [] call otf_setup_fnc_setWeather;
-        [] call otf_setup_fnc_setMapRespawnPos;
-    }, []] call CBA_fnc_waitUntilAndExecute;
+    [] call otf_init_fnc_setLoadoutFaction;
+    [] call otf_setup_fnc_setTime;
+    [] call otf_setup_fnc_setWeather;
+    [] call otf_setup_fnc_setMapRespawnPos;
 
     //auto choose spawns if commanders are not available
     [otf_choosePlayArea_fnc_autoChooseOpforSpawn, [], 10] call CBA_fnc_waitAndExecute;
@@ -33,7 +32,6 @@
     //setup play area, spawn target, create markers, tasks
     [{missionNamespace getVariable ["otf_init_opforSpawnChosen", false]}, {
         [] call otf_setup_fnc_playZone;
-
     }, []] call CBA_fnc_waitUntilAndExecute;
 
     // add map draw EH for target

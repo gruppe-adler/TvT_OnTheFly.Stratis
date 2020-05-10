@@ -19,15 +19,21 @@ class Params
     class BluforFaction
     {
         title = "Blufor Faction";
-        values[] = {0,1,2,3,4,5,6};
+        values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12};
         texts[] = {
             "USA - Army",
             "USA - Marines",
             "Russia - MSV",
-            "Independent - Eastern European Nationalists",
-            "Independent - PMC Special Forces - (requires CUP Vehicles)",
-            "Independent - Middle Eastern Terrorists - (requires Project Opfor)",
-            "GER - Heer - (requires CUP Vehicles, GA Mod, ARC Ger, Redd n' Tank)"
+            "Russia - Spetsnaz",
+            "Croatia - HKoV",
+            "Israel - IDF",
+            "Turkey - TKK",
+            "Germany - Heer - (requires CUP Vehicles, GA Mod, ARC Ger, Redd n' Tank)",
+            "Misc - Nationalists (Eastern European)",
+            "Misc - Special Forces (Western)",
+            "Misc - PMC (Western)",
+            "Misc - Rural Mob (Middle Eastern)",
+            "Misc - Paramilitary Forces (Middle Eastern)"
         };
         default = 0;
     };
@@ -35,15 +41,21 @@ class Params
     class OpforFaction
     {
         title = "Opfor Faction";
-        values[] = {0,1,2,3,4,5,6};
+        values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12};
         texts[] = {
             "USA - Army",
             "USA - Marines",
             "Russia - MSV",
-            "Independent - Eastern European Nationalists",
-            "Independent - PMC Special Forces - (requires CUP Vehicles)",
-            "Independent - Middle Eastern Terrorists - (requires Project Opfor)",
-            "GER - Heer - (requires CUP Vehicles, GA Mod, ARC Ger, Redd n' Tank)"
+            "Russia - Spetsnaz",
+            "Croatia - HKoV",
+            "Israel - IDF",
+            "Turkey - TKK",
+            "Germany - Heer - (requires CUP Vehicles, GA Mod, ARC Ger, Redd n' Tank)",
+            "Misc - Nationalists (Eastern European)",
+            "Misc - Special Forces (Western)",
+            "Misc - PMC (Western)",
+            "Misc - Rural Mob (Middle Eastern)",
+            "Misc - Paramilitary Forces (Middle Eastern)"
         };
         default = 2;
     };
