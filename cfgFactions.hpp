@@ -91,7 +91,7 @@ class cfgFactions {
     };
 
     class ind_pmc_west {
-        commandVehicles[] = {"CUP_C_SUV_TK","CUP_C_SUV_TK"};
+        commandVehicles[] = {"C_Offroad_01_F","C_Offroad_01_F"};
         onCommandVehicleCreate = "";
         onBarrelCaseCreate = "";
         loadoutWood = "ind_pmc_west";

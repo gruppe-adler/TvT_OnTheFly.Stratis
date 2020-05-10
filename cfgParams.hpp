@@ -31,7 +31,7 @@ class Params
             "Germany - Heer - (requires CUP Vehicles, GA Mod, ARC Ger, Redd n' Tank)",
             "Misc - Nationalists (Eastern European)",
             "Misc - Special Forces (Western)",
-            "Misc - PMC (Western)",
+            "Misc - PMC (Western) - [RHS:USAF, Project Opfor]",
             "Misc - Rural Mob (Middle Eastern)",
             "Misc - Paramilitary Forces (Middle Eastern) - [RHS:AFRF, Project Opfor]"
         };
@@ -53,7 +53,7 @@ class Params
             "Germany - Heer - (requires CUP Vehicles, GA Mod, ARC Ger, Redd n' Tank)",
             "Misc - Nationalists (Eastern European)",
             "Misc - Special Forces (Western)",
-            "Misc - PMC (Western)",
+            "Misc - PMC (Western) - [RHS:USAF, Project Opfor]",
             "Misc - Rural Mob (Middle Eastern)",
             "Misc - Paramilitary Forces (Middle Eastern) - [RHS:AFRF, Project Opfor]"
         };
