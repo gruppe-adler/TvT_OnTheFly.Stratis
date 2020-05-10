@@ -5,7 +5,7 @@ class Vehicles: vehicles_base {
 
     class Redd_Tank_LKW_leicht_gl_Wolf_Flecktarn_FueFu {
         condition = "OTF_ISWOODLAND";
-        price = 1700;
+        price = 2000;
         stock = 10;
     };
 
@@ -16,23 +16,11 @@ class Vehicles: vehicles_base {
     class Fennek_Flecktarn {
         condition = "OTF_ISWOODLAND";
         code = "if (isServer) then {(_this select 2) disableTIEquipment true};";
-        price = 2200;
+        price = 2500;
         stock = 10;
     };
 
     class Fennek_Tropen: Fennek_Flecktarn {
-        condition = "!OTF_ISWOODLAND";
-    };
-
-    class Redd_Tank_Fuchs_1A4_Jg_Flecktarn {
-        condition = "OTF_ISWOODLAND";
-        code = "if (isServer) then {(_this select 2) disableTIEquipment true};";
-        description = "Fuchs base version. Comes with MG3, does not come with Milan.";
-        price = 5500;
-        stock = 10;
-    };
-
-    class Redd_Tank_Fuchs_1A4_Jg_Tropentarn: Redd_Tank_Fuchs_1A4_Jg_Flecktarn {
         condition = "!OTF_ISWOODLAND";
     };
 };
