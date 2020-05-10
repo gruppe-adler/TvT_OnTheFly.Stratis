@@ -7,7 +7,13 @@ class Defenses: defenses_base {
 
     class RHS_M2StaticMG_WD {
         kindOf = "Vehicles";
-        price = 2000;
+        price = 5000;
+        stock = 4;
+    };
+
+    class RHS_M2StaticMG_MiniTripod_WD {
+        kindOf = "Vehicles";
+        price = 5000;
         stock = 4;
     };
 };

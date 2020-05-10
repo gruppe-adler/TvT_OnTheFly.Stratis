@@ -17,9 +17,13 @@ class cfgFactions {
         BFT = 1;
     };
 
-    class us_marines: us_army {
+    class us_marines {
+        commandVehicles[] = {"rhsusf_m998_w_s_4dr_fulltop", "rhsusf_m998_d_s_4dr_fulltop"};
+        onCommandVehicleCreate = "";
+        onBarrelCaseCreate = "";
         loadoutWood = "us_marines_w";
         loadoutDes = "us_marines_d";
+        BFT = 1;
     };
 
     class rus_msv {
