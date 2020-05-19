@@ -30,10 +30,8 @@ class ger_heer_w {
 		gps = "ItemGPS";
 		compass = "ItemCompass";
         addItemsToUniform[] = {
-            LIST_6("ACE_fieldDressing"),
-			LIST_2("ACE_morphine"),
+            MEDICITEMS_BASE,
             LIST_2("ACE_Chemlight_HiWhite"),
-			"ACE_epinephrine",
 			"ACE_Flashlight_MX991",
 			"ACE_MapTools"
         };

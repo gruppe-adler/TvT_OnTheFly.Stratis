@@ -40,10 +40,8 @@ class ind_me_para {
 		gps = "ItemGPS";
 		compass = "ItemCompass";
         addItemsToUniform[] = {
-            LIST_6("ACE_fieldDressing"),
-			LIST_2("ACE_morphine"),
+            MEDICITEMS_BASE,
             LIST_2("ACE_Chemlight_HiWhite"),
-			"ACE_epinephrine",
 			"ACE_Flashlight_KSF1",
 			"ACE_MapTools"
         };

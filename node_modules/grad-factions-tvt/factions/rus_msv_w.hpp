@@ -21,11 +21,9 @@ class rus_msv_w {
 		gps = "ItemGPS";
 		compass = "ItemCompass";
         addItemsToUniform[] = {
-			LIST_6("ACE_fieldDressing"),
-			LIST_2("ACE_morphine"),
+            MEDICITEMS_BASE,
 			LIST_2("rhs_mag_rdg2_white"),
             LIST_2("ACE_Chemlight_HiWhite"),
-			"ACE_epinephrine",
 			"ACE_Flashlight_KSF1",
 			"ACE_MapTools"
 		};
