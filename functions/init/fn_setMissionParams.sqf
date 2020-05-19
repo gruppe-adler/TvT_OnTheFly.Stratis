@@ -20,8 +20,9 @@ private _factions = [
     "ind_eastern_nationalists",
     "ind_pmc_special",
     "ind_pmc_west",
+    "ind_me_para",
     "ind_me_terrorists",
-    "ind_me_para"
+    "ind_eastern_peasants"
 ];
 
 OTF_BLUFORFACTION = _factions select ("BluforFaction" call BIS_fnc_getParamValue);

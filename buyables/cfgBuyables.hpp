@@ -50,6 +50,11 @@ class CfgGradBuymenu {
         #include "explosives_base.hpp"
     };
 
+    class blu_ind_eastern_peasants {
+        #include "vehicles\ind_eastern_peasants.hpp"
+        #include "explosives_base.hpp"
+    };
+
     class blu_ind_pmc_special {
         #include "vehicles\ind_pmc_special.hpp"
         #include "explosives_base.hpp"
@@ -107,6 +112,10 @@ class CfgGradBuymenu {
 
     class opf_ind_eastern_nationalists {
         #include "defenses\ind_eastern_nationalists.hpp"
+    };
+
+    class opf_ind_eastern_peasants {
+        #include "defenses\ind_eastern_peasants.hpp"
     };
 
     class opf_ind_pmc_special {

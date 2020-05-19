@@ -85,6 +85,15 @@ class cfgFactions {
         BFT = 0;
     };
 
+    class ind_eastern_peasants {
+        commandVehicles[] = {"rhsgref_nat_uaz", "rhsgref_nat_uaz"};
+        onCommandVehicleCreate = "if (isServer) then {_this addBackpackCargoGlobal ['rhs_sidor',8]}";
+        onBarrelCaseCreate = "if (isServer) then {_this addBackpackCargoGlobal ['rhs_sidor',8]}";
+        loadoutWood = "ind_eastern_peasants";
+        loadoutDes = "ind_eastern_peasants";
+        BFT = 0;
+    };
+
     class ind_pmc_special {
         commandVehicles[] = {"CUP_C_SUV_TK","CUP_C_SUV_TK"};
         onCommandVehicleCreate = "";

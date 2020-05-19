@@ -19,7 +19,7 @@ class Params
     class BluforFaction
     {
         title = "Blufor Faction";
-        values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12};
+        values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13};
         texts[] = {
             "USA - Army - [RHS:USAF]",
             "USA - Marines - [RHS:USAF]",
@@ -32,8 +32,9 @@ class Params
             "Misc - Nationalists (Eastern European) - [RHS:AFRF, RHS:GREF]",
             "Misc - Special Forces (Western) - [RHS:USAF, NIArms, CUP Vehicles]",
             "Misc - PMC (Western) - [RHS:USAF, Project Opfor]",
-            "Misc - Rural Mob (Middle Eastern, disadvantaged) - [RHS:AFRF, Project Opfor]",
-            "Misc - Paramilitary Forces (Middle Eastern) - [RHS:AFRF, Project Opfor]"
+            "Misc - Paramilitary Forces (Middle Eastern) - [RHS:AFRF, Project Opfor]",
+            "Misc - Rural Mob (Middle Eastern, disadvantaged) - [RHS:GREF, Project Opfor]",
+            "Misc - Rural Mob (Eastern European, disadvantaged) - [RHS:GREF, Project Opfor]"
         };
         default = 0;
     };
@@ -41,7 +42,7 @@ class Params
     class OpforFaction
     {
         title = "Opfor Faction";
-        values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12};
+        values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13};
         texts[] = {
             "USA - Army - [RHS:USAF]",
             "USA - Marines - [RHS:USAF]",
@@ -54,8 +55,9 @@ class Params
             "Misc - Nationalists (Eastern European) - [RHS:AFRF, RHS:GREF]",
             "Misc - Special Forces (Western) - [RHS:USAF, NIArms, CUP Vehicles]",
             "Misc - PMC (Western) - [RHS:USAF, Project Opfor]",
+            "Misc - Paramilitary Forces (Middle Eastern) - [RHS:AFRF, Project Opfor]",
             "Misc - Rural Mob (Middle Eastern, disadvantaged) - [RHS:AFRF, Project Opfor]",
-            "Misc - Paramilitary Forces (Middle Eastern) - [RHS:AFRF, Project Opfor]"
+            "Misc - Rural Mob (Eastern European, disadvantaged) - [RHS:GREF, Project Opfor]"
         };
         default = 2;
     };
