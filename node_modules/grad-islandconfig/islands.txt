@@ -3,6 +3,7 @@ Bootcamp_ACR
 Woodland_ACR
 tem_cham
 Enoch
+tem_kujari
 lythium
 Malden
 prei_khmaoch_luong
