@@ -1,9 +1,9 @@
 class us_army {
 	class AllUnits {
-        primaryWeapon = "rhs_weap_m4a1_carryhandle";
+		primaryWeapon = "rhs_weap_m4a1_carryhandle";
 		primaryWeaponMagazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
 		primaryWeaponMuzzle = "";
-        primaryWeaponOptics = "";
+		primaryWeaponOptics = "";
 		primaryWeaponPointer = "";
 		primaryWeaponUnderbarrel = "";
 		primaryWeaponUnderbarrelMagazine = "";
@@ -12,7 +12,7 @@ class us_army {
 		handgunWeapon = "rhsusf_weap_m9";
 		handgunWeaponMagazine = "rhsusf_mag_15Rnd_9x19_JHP";
 		uniform = "rhs_uniform_cu_ocp";
-        vest = "rhsusf_iotv_ocp_Rifleman";
+		vest = "rhsusf_iotv_ocp_Rifleman";
 		backpack = "";
 		headgear = "rhsusf_ach_helmet_ocp";
 		nvgoggles = "";
@@ -21,17 +21,17 @@ class us_army {
 		map = "ItemMap";
 		gps = "ItemGPS";
 		compass = "ItemCompass";
-        addItemsToUniform[] = {
-            MEDICITEMS_BASE,
-            LIST_2("ACE_Chemlight_HiWhite"),
+		addItemsToUniform[] = {
+			MEDICITEMS_BASE,
+			LIST_2("ACE_Chemlight_HiWhite"),
 			"ACE_Flashlight_MX991",
 			"ACE_MapTools"
-	  	};
-        addItemsToBackpack[] = {};
+		};
+		addItemsToBackpack[] = {};
 	};
 
 	class Type {
-        //rifleman
+		//rifleman
 		class Soldier_F {
 			addItemsToVest[] = {
 				LIST_7("rhs_mag_30Rnd_556x45_M855A1_Stanag"),
@@ -41,7 +41,7 @@ class us_army {
 			};
 		};
 
-        //autorifleman
+		//autorifleman
 		class Soldier_AR_F: Soldier_F {
 			primaryWeapon = "rhs_weap_m249_pip_S";
 			primaryWeaponMagazine = "rhsusf_200rnd_556x45_mixed_box";
@@ -60,12 +60,12 @@ class us_army {
 			};
 		};
 
-        //light AT
+		//light AT
 		class Soldier_LAT_F: Soldier_F {
 			secondaryWeapon = "rhs_weap_M136";
 		};
 
-        //ammo bearer
+		//ammo bearer
 		class Soldier_A_F: Soldier_F {
 			backpack = "rhsusf_assault_eagleaiii_ocp";
 			addItemsToBackpack[] = {
@@ -81,7 +81,7 @@ class us_army {
 			};
 		};
 
-        //medic
+		//medic
 		class Medic_F: Soldier_F {
 			vest = "rhsusf_iotv_ocp_Medic";
 			backpack = "rhsusf_assault_eagleaiii_ocp";
@@ -94,13 +94,13 @@ class us_army {
 			};
 		};
 
-        //squad leader
-        class Soldier_SL_F: Soldier_F {
+		//squad leader
+		class Soldier_SL_F: Soldier_F {
 			primaryWeaponOptics[] = {
-                "rhsusf_acc_compm4",
-                "rhsusf_acc_mrds",
-                "rhsusf_acc_T1_high"
-            };
+				"rhsusf_acc_compm4",
+				"rhsusf_acc_mrds",
+				"rhsusf_acc_T1_high"
+			};
 			vest = "rhsusf_iotv_ocp_Squadleader";
 			backpack = "TFAR_rt1523g_rhs";
 			headgear = "rhsusf_ach_helmet_headset_ess_ocp";
@@ -108,16 +108,16 @@ class us_army {
 				LIST_2("rhs_mag_m18_green"),
 				LIST_2("rhs_mag_m18_purple")
 			};
-        };
+		};
 
-        //team leader
+		//team leader
 		class Soldier_TL_F: Soldier_F {
 			primaryWeapon = "rhs_weap_m4a1_carryhandle_m203";
-            primaryWeaponOptics[] = {
-                "rhsusf_acc_compm4",
-                "rhsusf_acc_mrds",
-                "rhsusf_acc_T1_high"
-            };
+			primaryWeaponOptics[] = {
+				"rhsusf_acc_compm4",
+				"rhsusf_acc_mrds",
+				"rhsusf_acc_T1_high"
+			};
 			vest = "rhsusf_iotv_ocp_Teamleader";
 			backpack = "rhsusf_assault_eagleaiii_ocp";
 			headgear = "rhsusf_ach_helmet_headset_ocp";

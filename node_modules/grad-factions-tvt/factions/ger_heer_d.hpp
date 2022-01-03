@@ -1,27 +1,27 @@
 class ger_heer_d: ger_heer_w {
 	class AllUnits: AllUnits {
 		uniform = "SMM_Uniform_BW_TT";
-        vest = "SMM_Vest_BW_TT";
+		vest = "SMM_Vest_BW_TT";
 		headgear = "SMM_Helmet_A_BW_TT";
 	};
 
 	class Type: Type {
-        //rifleman
+		//rifleman
 		class Soldier_F: Soldier_F {
 
 		};
 
-        //autorifleman
+		//autorifleman
 		class Soldier_AR_F: Soldier_AR_F {
-
+			
 		};
 
-        //light AT
+		//light AT
 		class Soldier_LAT_F: Soldier_LAT_F {
 
 		};
 
-        //ammo bearer
+		//ammo bearer
 		class Soldier_A_F: Soldier_A_F {
 			backpack = "SMM_Kitbag_BW_TT";
 		};
@@ -31,17 +31,17 @@ class ger_heer_d: ger_heer_w {
 			backpack = "SMM_Kitbag_BW_TT";
 		};
 
-        //medic
+		//medic
 		class Medic_F: Medic_F {
 			backpack = "SMM_Kitbag_BW_TT";
 		};
 
-        //squad leader
-        class Soldier_SL_F: Soldier_SL_F {
+		//squad leader
+		class Soldier_SL_F: Soldier_SL_F {
 
-        };
+		};
 
-        //team leader
+		//team leader
 		class Soldier_TL_F: Soldier_TL_F {
 
 			backpack = "SMM_Kitbag_BW_TT";

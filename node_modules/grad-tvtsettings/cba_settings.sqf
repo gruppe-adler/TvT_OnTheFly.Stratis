@@ -16,7 +16,7 @@ force ace_map_BFT_Interval = 3;
 force ace_map_mapShowCursorCoordinates = true;
 
 force ace_medical_AIDamageThreshold = 0.8;
-force ace_medical_bleedingCoefficient = 1.3;
+force ace_medical_bleedingCoefficient = 1.0;
 force ace_medical_fractures = 0;
 force ace_medical_painCoefficient = 1;
 force ace_medical_playerDamageThreshold = 1.3;

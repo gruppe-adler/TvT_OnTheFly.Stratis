@@ -51,7 +51,7 @@ class ger_heer_s: ger_heer_w {
 	class Rank: Rank {
 		class LIEUTENANT: LIEUTENANT {
 			headgear = "SMM_MilCap_BW_ST";
-            
+
 		};
 	};
 };

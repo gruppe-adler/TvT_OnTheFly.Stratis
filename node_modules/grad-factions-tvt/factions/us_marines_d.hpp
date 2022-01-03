@@ -5,22 +5,22 @@ class us_marines_d: us_marines_w {
 	};
 
 	class Type: Type {
-        //rifleman
+		//rifleman
 		class Soldier_F: Soldier_F {
 
 		};
 
-        //autorifleman
+		//autorifleman
 		class Soldier_AR_F: Soldier_AR_F {
 
 		};
 
-        //light AT
+		//light AT
 		class Soldier_LAT_F: Soldier_LAT_F {
 
 		};
 
-        //ammo bearer
+		//ammo bearer
 		class Soldier_A_F: Soldier_A_F {
 
 		};
@@ -30,19 +30,19 @@ class us_marines_d: us_marines_w {
 
 		};
 
-        //medic
+		//medic
 		class Medic_F: Medic_F {
 
 		};
 
-        //squad leader
-        class Soldier_SL_F: Soldier_SL_F {
-            headgear = "rhsusf_lwh_helmet_marpatd_headset";
-        };
+		//squad leader
+		class Soldier_SL_F: Soldier_SL_F {
+			headgear = "rhsusf_lwh_helmet_marpatd_headset";
+		};
 
-        //team leader
+		//team leader
 		class Soldier_TL_F: Soldier_TL_F {
-            headgear = "rhsusf_lwh_helmet_marpatd_headset";
+			headgear = "rhsusf_lwh_helmet_marpatd_headset";
 		};
 	};
 

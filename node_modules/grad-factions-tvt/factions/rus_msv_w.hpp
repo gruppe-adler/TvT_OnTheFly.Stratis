@@ -1,6 +1,6 @@
 class rus_msv_w {
 	class AllUnits {
-        primaryWeapon = "rhs_weap_ak74m";
+		primaryWeapon = "rhs_weap_ak74m";
 		primaryWeaponMagazine = "rhs_30Rnd_545x39_AK";
 		primaryWeaponMuzzle = "";
 		primaryWeaponOptics = "";
@@ -11,7 +11,7 @@ class rus_msv_w {
 		secondaryWeaponMagazine = "";
 		handgunWeapon = "";
 		uniform = "rhs_uniform_flora";
-        vest = "rhs_6b23_rifleman";
+		vest = "rhs_6b23_rifleman";
 		backpack = "";
 		headgear = "rhs_6b26";
 		nvgoggles = "";
@@ -20,18 +20,18 @@ class rus_msv_w {
 		map = "ItemMap";
 		gps = "ItemGPS";
 		compass = "ItemCompass";
-        addItemsToUniform[] = {
-            MEDICITEMS_BASE,
+		addItemsToUniform[] = {
+			MEDICITEMS_BASE,
 			LIST_2("rhs_mag_rdg2_white"),
-            LIST_2("ACE_Chemlight_HiWhite"),
+			LIST_2("ACE_Chemlight_HiWhite"),
 			"ACE_Flashlight_KSF1",
 			"ACE_MapTools"
 		};
-        addItemsToBackpack[] = {};
+		addItemsToBackpack[] = {};
 	};
 
 	class Type {
-        //rifleman
+		//rifleman
 		class Soldier_F {
 			addItemsToVest[] = {
 				LIST_7("rhs_30Rnd_545x39_AK"),
@@ -39,7 +39,7 @@ class rus_msv_w {
 			};
 		};
 
-        //autorifleman
+		//autorifleman
 		class Soldier_AR_F: Soldier_F {
 			primaryWeapon = "rhs_weap_pkp";
 			primaryWeaponMagazine = "rhs_100Rnd_762x54mmR";
@@ -47,19 +47,19 @@ class rus_msv_w {
 			headgear = "rhs_6b26_ess";
 			addItemsToVest[] = {
 				LIST_2("rhs_mag_rgo"),
-                LIST_1("rhs_100Rnd_762x54mmR")
+				LIST_1("rhs_100Rnd_762x54mmR")
 			};
 			addItemsToBackpack[] = {
 				LIST_2("rhs_100Rnd_762x54mmR_green")
 			};
 		};
 
-        //light AT
+		//light AT
 		class Soldier_LAT_F: Soldier_F {
 			secondaryWeapon = "rhs_weap_rpg26";
 		};
 
-        //ammo bearer
+		//ammo bearer
 		class Soldier_A_F: Soldier_F {
 			backpack = "rhs_assault_umbts";
 			addItemsToBackpack[] = {
@@ -75,7 +75,7 @@ class rus_msv_w {
 			};
 		};
 
-        //medic
+		//medic
 		class Medic_F: Soldier_F {
 			backpack = "rhs_assault_umbts";
 			addItemsToBackpack[] = {
@@ -87,8 +87,8 @@ class rus_msv_w {
 			};
 		};
 
-        //squad leader
-        class Soldier_SL_F: Soldier_F {
+		//squad leader
+		class Soldier_SL_F: Soldier_F {
 			primaryWeaponOptics = "rhs_acc_1p63";
 			vest = "rhs_6b23_6sh92_headset_mapcase";
 			backpack = "TFAR_mr3000_rhs";
@@ -97,9 +97,9 @@ class rus_msv_w {
 				LIST_3("rhs_mag_rdg2_black"),
 				LIST_3("rhs_mag_rdg2_white")
 			};
-        };
+		};
 
-        //team leader
+		//team leader
 		class Soldier_TL_F: Soldier_F {
 			primaryWeapon = "rhs_weap_ak74m_gp25";
 			primaryWeaponOptics = "rhs_acc_1p63";
