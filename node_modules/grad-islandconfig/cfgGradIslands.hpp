@@ -351,6 +351,15 @@ class cfgGradIslands {
         spawnPosInd[] = {5293.89,5000,0}; // not tested
     };
 
+    class MontellaV3 {
+        displayName = "Montella";
+        type = "mediterranean";
+        isWoodland = "true";
+        spawnPosBlu[] = {3747.89,7930.39,0};
+        spawnPosOpf[] = {3988.49,7389.79,0};
+        spawnPosInd[] = {3731.58,7593.21,0};
+    };
+
     class pja310 {
         displayName = "GOS Al Rayak";
         type = "middle eastern";
