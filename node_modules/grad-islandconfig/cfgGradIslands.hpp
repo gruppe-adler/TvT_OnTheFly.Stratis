@@ -119,6 +119,7 @@ class cfgGradIslands {
 
     class Chernarus_Summer: Chernarus {};
     class Chernarus_winter: Chernarus {};
+    class cup_chernarus_a3: Chernarus {};
 
     class d41_ruegen {
         displayName = "Ruegen";

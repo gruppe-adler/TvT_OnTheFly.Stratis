@@ -1,6 +1,7 @@
 Altis
 Bootcamp_ACR
 Cam_Lao_Nam
+cup_chernarus_a3
 Woodland_ACR
 tem_cham
 Enoch
