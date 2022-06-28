@@ -1,3 +1,3 @@
 #include "component.hpp"
 
-OTF_ISWOODLAND = ["isWoodland"] call otf_common_fnc_getIslandCfgValue;
+OTF_ISWOODLAND = ["isWoodland", true] call otf_common_fnc_getIslandCfgValue;
