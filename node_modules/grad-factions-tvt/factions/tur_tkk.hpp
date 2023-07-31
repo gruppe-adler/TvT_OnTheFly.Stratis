@@ -11,13 +11,10 @@ class tur_tkk {
 		secondaryWeaponMagazine = "";
 		handgunWeapon = "";
 		handgunWeaponMagazine = "";
-		uniform = "UK3CB_CW_SOV_O_Late_U_VDV_CombatUniform_03_TTSKO";
-		vest[] = {
-			"PO_V_SPCS_TUB_RIF",
-			"PO_V_SPCS_TUB_RIF2"
-		};
+		uniform[] = {"UK3CB_FIA_B_U_M10_CombatUniform_TRK01_01", "UK3CB_FIA_B_U_M10_CombatUniform_TRK01_01"};
+		vest = "UK3CB_MD12_VEST_Rifleman_OLI";
 		backpack = "";
-		headgear = "PO_H_PASGT_TUB";
+		headgear = "rhsusf_ach_bare";
 		nvgoggles = "";
 		radio = "TFAR_anprc152";
 		binoculars = "Binocular";
@@ -51,7 +48,7 @@ class tur_tkk {
 			primaryWeaponMagazine = "hlc_50Rnd_762x51_M_MG3";
 			handgunWeapon = "";
 			handgunWeaponMagazine = "";
-			vest = "PO_V_SPCS_TUB_MG";
+			vest = "UK3CB_MD12_VEST_OLI";
 			backpack = "B_FieldPack_taiga_F";
 			addItemsToVest[] = {
 				LIST_2("hlc_50Rnd_762x51_M_MG3"),
@@ -98,7 +95,7 @@ class tur_tkk {
 
 		//squad leader
 		class Soldier_SL_F: Soldier_F {
-			vest = "PO_V_SPCS_TUB_SL";
+			vest = "UK3CB_MD12_VEST_OLI";
 			backpack = "TFAR_rt1523g_bwmod";
 			addItemsToBackpack[] =  {
 				LIST_2("rhs_mag_m18_green"),
@@ -108,14 +105,14 @@ class tur_tkk {
 
 		//team leader
 		class Soldier_TL_F: Soldier_F {
-			vest = "PO_V_SPCS_TUB_TL";
+			vest = "UK3CB_MD12_VEST_OLI";
 		};
 	};
 
 	class Rank {
 		class LIEUTENANT {
 			backpack = "TFAR_rt1523g_big_bwmod";
-			headgear = "PO_H_cap_tub";
+			headgear = "rhsusf_ach_bare_headset";
 		};
 	};
 };

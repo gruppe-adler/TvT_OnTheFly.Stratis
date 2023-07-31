@@ -27,3 +27,6 @@
 #include "factions\us_army.hpp"
 #include "factions\us_marines_w.hpp"
 #include "factions\us_marines_d.hpp"
+
+#include "factions\spe_us.hpp"
+#include "factions\spe_wehrmacht.hpp"
