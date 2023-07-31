@@ -75,6 +75,16 @@ class CfgGradBuymenu {
         #include "explosives_base.hpp"
     };
 
+    class blu_spe_us {
+        #include "vehicles\spe_us.hpp"
+        #include "explosives_base.hpp"
+    };
+
+    class blu_spe_wehrmacht {
+        #include "vehicles\spe_wehrmacht.hpp"
+        #include "explosives_base.hpp"
+    };
+
 
 
 
@@ -132,5 +142,13 @@ class CfgGradBuymenu {
 
     class opf_ind_me_para {
         #include "defenses\ind_me_para.hpp"
+    };
+
+    class opf_spe_us {
+        #include "defenses\spe_us.hpp"
+    };
+
+    class opf_spe_wehrmacht {
+        #include "defenses\spe_wehrmacht.hpp"
     };
 };
