@@ -597,6 +597,15 @@ class cfgGradIslands {
         };
     };
 
+    class SPE_Normandy {
+        displayName = "SPE Normandy";
+        type = "russian";
+        isWoodland = true;
+        spawnPosBlu[] = {11035,10084.8,0};
+        spawnPosOpf[] = {10301,10220.1,0};
+        spawnPosInd[] = {10294.9,9054.83,0};
+    };
+
     class Stratis {
         displayName = "Stratis";
         type = "mediterranean";

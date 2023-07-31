@@ -43,6 +43,7 @@ saralite
 sara_dbe1
 SefrouRamal
 Shapur_BAF
+SPE_Normandy
 Stratis
 brf_sumava
 swu_public_rhode_map
