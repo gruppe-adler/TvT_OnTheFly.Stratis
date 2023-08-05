@@ -1,7 +1,7 @@
 {
     "name": "tvt-onthefly",
     "description": "A dynamic capture/defend mission for all maps.",
-    "version": "3.6.1",
+    "version": "3.6.2",
     "contributors": [
         {
             "name": "Nomisum"
@@ -11,15 +11,15 @@
         }
     ],
     "dependencies": {
-        "@gruppe-adler/replay": ">=0.0.1",
-        "grad-factions-tvt": ">=0.0.1",
-        "grad-fortifications": ">=0.0.1",
-        "grad-islandconfig": ">=0.0.1",
-        "grad-listbuymenu": ">=0.0.3",
-        "grad-loadout": "4.x",
-        "grad-moneymenu": ">=0.0.1",
-        "grad-scoreboard": ">=0.0.1",
-        "grad-tvtsettings": ">=0.0.1",
-        "grad-winratetracker": ">=0.0.1"
+        "@gruppe-adler/replay": "^1.6.0",
+        "grad-factions-tvt": "^1.0.4",
+        "grad-fortifications": "^0.9.4",
+        "grad-islandconfig": "^0.4.3",
+        "grad-listbuymenu": "^0.9.0",
+        "grad-loadout": "^4.11.7",
+        "grad-moneymenu": "^0.3.2",
+        "grad-scoreboard": "^0.1.1",
+        "grad-tvtsettings": "^0.0.3",
+        "grad-winratetracker": "^0.0.2"
     }
 }

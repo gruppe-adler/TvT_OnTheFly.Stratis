@@ -130,21 +130,39 @@ class cfgFactions {
         BFT = 0;
     };
 
-    class spe_wehrmacht {
+    class spe_wehrmacht_early {
         commandVehicles[] = {"SPE_OpelBlitz","SPE_OpelBlitz"};
         onCommandVehicleCreate = "if (isServer) then {_this addBackpackCargoGlobal ['rhs_sidor',8]}";
         onBarrelCaseCreate = "if (isServer) then {_this addBackpackCargoGlobal ['rhs_sidor',8]}";
-        loadoutWood = "spe_wehrmacht";
-        loadoutDes = "spe_wehrmacht";
+        loadoutWood = "spe_wehrmacht_early";
+        loadoutDes = "spe_wehrmacht_early";
         BFT = 0;
     };
 
-     class spe_us {
+    class spe_wehrmacht_late {
+        commandVehicles[] = {"SPE_OpelBlitz","SPE_OpelBlitz"};
+        onCommandVehicleCreate = "if (isServer) then {_this addBackpackCargoGlobal ['rhs_sidor',8]}";
+        onBarrelCaseCreate = "if (isServer) then {_this addBackpackCargoGlobal ['rhs_sidor',8]}";
+        loadoutWood = "spe_wehrmacht_late";
+        loadoutDes = "spe_wehrmacht_late";
+        BFT = 0;
+    };
+
+    class spe_us_early {
         commandVehicles[] = {"SPE_US_M3_Halftrack_Unarmed_Open","SPE_US_M3_Halftrack_Unarmed_Open"};
         onCommandVehicleCreate = "if (isServer) then {_this addBackpackCargoGlobal ['rhs_sidor',8]}";
         onBarrelCaseCreate = "if (isServer) then {_this addBackpackCargoGlobal ['rhs_sidor',8]}";
-        loadoutWood = "spe_us";
-        loadoutDes = "spe_us";
+        loadoutWood = "spe_us_early";
+        loadoutDes = "spe_us_early";
+        BFT = 0;
+    };
+
+    class spe_us_late {
+        commandVehicles[] = {"SPE_US_M3_Halftrack_Unarmed_Open","SPE_US_M3_Halftrack_Unarmed_Open"};
+        onCommandVehicleCreate = "if (isServer) then {_this addBackpackCargoGlobal ['rhs_sidor',8]}";
+        onBarrelCaseCreate = "if (isServer) then {_this addBackpackCargoGlobal ['rhs_sidor',8]}";
+        loadoutWood = "spe_us_late";
+        loadoutDes = "spe_us_late";
         BFT = 0;
     };
 };

@@ -75,13 +75,23 @@ class CfgGradBuymenu {
         #include "explosives_base.hpp"
     };
 
-    class blu_spe_us {
-        #include "vehicles\spe_us.hpp"
+    class blu_spe_wehrmacht_early {
+        #include "vehicles\spe_wehrmacht_early.hpp"
         #include "explosives_base.hpp"
     };
 
-    class blu_spe_wehrmacht {
-        #include "vehicles\spe_wehrmacht.hpp"
+    class blu_spe_wehrmacht_late {
+        #include "vehicles\spe_wehrmacht_late.hpp"
+        #include "explosives_base.hpp"
+    };
+
+    class blu_spe_us_early {
+        #include "vehicles\spe_us_early.hpp"
+        #include "explosives_base.hpp"
+    };
+
+    class blu_spe_us_late {
+        #include "vehicles\spe_us_late.hpp"
         #include "explosives_base.hpp"
     };
 
@@ -144,11 +154,19 @@ class CfgGradBuymenu {
         #include "defenses\ind_me_para.hpp"
     };
 
-    class opf_spe_us {
-        #include "defenses\spe_us.hpp"
+    class opf_spe_wehrmacht_early {
+        #include "defenses\spe_wehrmacht_early.hpp"
     };
 
-    class opf_spe_wehrmacht {
-        #include "defenses\spe_wehrmacht.hpp"
+    class opf_spe_wehrmacht_late {
+        #include "defenses\spe_wehrmacht_late.hpp"
+    };
+
+    class opf_spe_us_early {
+        #include "defenses\spe_us_early.hpp"
+    };
+
+    class opf_spe_us_late {
+        #include "defenses\spe_us_late.hpp"
     };
 };

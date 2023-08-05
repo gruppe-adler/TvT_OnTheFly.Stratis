@@ -19,7 +19,7 @@ class Params
     class BluforFaction
     {
         title = "Blufor Faction";
-        values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
+        values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17};
         texts[] = {
             "USA - Army - [RHS:USAF]",
             "USA - Marines - [RHS:USAF]",
@@ -35,8 +35,10 @@ class Params
             "Misc - Paramilitary Forces (Middle Eastern) - [RHS:AFRF, Project Opfor]",
             "Misc - Rural Mob (Middle Eastern, disadvantaged) - [RHS:GREF, Project Opfor]",
             "Misc - Rural Mob (Eastern European, disadvantaged) - [RHS:GREF, Project Opfor]",
-            "WW2 Wehrmacht - [SPE CDLC]",
-            "WW2 US - [SPE CDLC]"
+            "WW2 Wehrmacht Early - [SPE CDLC]",
+            "WW2 Wehrmacht Late - [SPE CDLC]",
+            "WW2 US Early - [SPE CDLC]",
+            "WW2 US Late - [SPE CDLC]"
         };
         default = 0;
     };
@@ -44,7 +46,7 @@ class Params
     class OpforFaction
     {
         title = "Opfor Faction";
-        values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
+        values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17};
         texts[] = {
             "USA - Army - [RHS:USAF]",
             "USA - Marines - [RHS:USAF]",
@@ -60,8 +62,10 @@ class Params
             "Misc - Paramilitary Forces (Middle Eastern) - [RHS:AFRF, Project Opfor]",
             "Misc - Rural Mob (Middle Eastern, disadvantaged) - [RHS:AFRF, Project Opfor]",
             "Misc - Rural Mob (Eastern European, disadvantaged) - [RHS:GREF, Project Opfor]",
-            "WW2 Wehrmacht - [SPE CDLC]",
-            "WW2 US - [SPE CDLC]"
+            "WW2 Wehrmacht Early - [SPE CDLC]",
+            "WW2 Wehrmacht Late - [SPE CDLC]",
+            "WW2 US Early - [SPE CDLC]",
+            "WW2 US Late - [SPE CDLC]"
         };
         default = 2;
     };
