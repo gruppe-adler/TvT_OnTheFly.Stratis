@@ -14,7 +14,7 @@ class Vehicles: vehicles_base {
         stock = 10;
     };
 
-    class SPE_PzKpfwIV_H1 {
+    class SPE_PzKpfwVI_H1 {
         condition = "true";
         price = 5500;
         stock = 10;
