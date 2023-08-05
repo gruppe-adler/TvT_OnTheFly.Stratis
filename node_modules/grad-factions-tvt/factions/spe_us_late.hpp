@@ -70,7 +70,7 @@ class spe_us_late {
             addItemsToVest[] = {
                 LIST_7("SPE_20Rnd_762x63"),
                 LIST_1("SPE_M39"),
-                LIST_2("SPE_US_M18"),
+                LIST_2("SPE_US_M18")
             };
             addItemsToBackpack[] = {
                 LIST_1("ACE_EntrenchingTool"),

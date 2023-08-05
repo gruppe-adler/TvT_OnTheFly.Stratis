@@ -56,7 +56,7 @@ class spe_wehrmacht_early {
             };
             addItemsToBackpack[] = {
                 LIST_1("ACE_EntrenchingTool"),
-                LIST_2("SPE_NB39"),
+                LIST_2("SPE_NB39")
             };
 		};
 

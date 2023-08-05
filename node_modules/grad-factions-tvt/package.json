@@ -12,7 +12,7 @@
         }
     ],
     "description": "Various faction tvt loadouts for grad-loadout",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "dependencies": {
         "grad-loadout": ">=4.10.0"
     }

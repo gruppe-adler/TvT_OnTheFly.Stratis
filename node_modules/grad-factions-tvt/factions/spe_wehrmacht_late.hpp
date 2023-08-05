@@ -55,7 +55,7 @@ class spe_wehrmacht_late {
             };
             addItemsToBackpack[] = {
                 LIST_1("ACE_EntrenchingTool"),
-                LIST_2("rhs_grenade_sthgr43_heerfrag_mag"),
+                LIST_2("rhs_grenade_sthgr43_heerfrag_mag")
             };
 		};
 
