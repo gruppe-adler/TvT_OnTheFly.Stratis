@@ -94,7 +94,7 @@ class spe_us_late {
 
 		//MG - M1919A6
 		class Soldier_A_F: Soldier_F {
-            backpack = "B_SPE_US_Backpack_pick"
+            backpack = "B_SPE_US_Backpack_pick";
 			primaryWeapon = "SPE_M1919A6";
             primaryWeaponMagazine = "SPE_50Rnd_762x63";
             handgunWeapon = "SPE_M1911";

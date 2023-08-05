@@ -148,7 +148,7 @@ class spe_wehrmacht_early {
             backpack = "B_SPE_GER_Radio";
             primaryWeapon = "SPE_K98_GW";
             primaryWeaponMagazine = "SPE_5Rnd_792x57";
-            primaryWeaponMuzzle = "SPE_ACC_GW_SB_Empty"
+            primaryWeaponMuzzle = "SPE_ACC_GW_SB_Empty";
             addItemsToVest[] = {
                 LIST_2("SPE_Shg24"),
                 LIST_15("SPE_5Rnd_792x57")

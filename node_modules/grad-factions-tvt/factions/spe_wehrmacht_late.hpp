@@ -146,7 +146,6 @@ class spe_wehrmacht_late {
             backpack = "B_SPE_GER_Radio";
             primaryWeapon = "SPE_MP40";
             primaryWeaponMagazine = "SPE_32Rnd_9x19";
-            primaryWeaponMuzzle = "SPE_ACC_GW_SB_Empty"
             addItemsToVest[] = {
                 LIST_2("SPE_NB39"),
                 LIST_11("SPE_32Rnd_9x19")
