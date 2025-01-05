@@ -7,7 +7,7 @@ class Vehicles: vehicles_base {
         price = 250;
         stock = 2;
     };
-    
+
     class SPE_ST_R200_Hood {
         condition = "true";
         price = 500;
@@ -22,19 +22,19 @@ class Vehicles: vehicles_base {
 
     class SPE_SdKfz250_1 {
         condition = "true";
-        price = 4500;
+        price = 2000;
         stock = 2;
     };
 
     class SPE_PzKpfwVI_H1 {
         condition = "true";
-        price = 5500;
+        price = 2500;
         stock = 2;
     };
 
     class SPE_ST_Jagdpanther_G1 {
         condition = "true";
-        price = 7500;
+        price = 3000;
         stock = 1;
     }
 };

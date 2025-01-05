@@ -22,19 +22,19 @@ class Vehicles: vehicles_base {
 
     class SPE_US_M3_Halftrack {
         condition = "true";
-        price = 3500;
+        price = 2000;
         stock = 2;
     };
 
     class SPE_M4A1_76_DLV {
         condition = "true";
-        price = 5500;
+        price = 2500;
         stock = 2;
     };
 
     class SPE_M4A3_76 {
         condition = "true";
-        price = 6500;
+        price = 3000;
         stock = 1;
     }
 };
